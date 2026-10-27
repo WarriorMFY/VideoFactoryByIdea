@@ -1,0 +1,89 @@
+{
+  "generated_at": "2026-10-27T05:54:14.784Z",
+  "source": "Tool/make_bench_source.mjs",
+  "duration_s": 42,
+  "spec_note": "真值 = 本合成素材的设计意图（可接受剪辑行为规格），不是人工剪辑师标注。",
+  "sections": [
+    {
+      "id": "A",
+      "start": 0,
+      "end": 8,
+      "expect": "keep",
+      "why": "画面运动+音轨"
+    },
+    {
+      "id": "B",
+      "start": 8,
+      "end": 14,
+      "expect": "keep",
+      "why": "画面运动+音轨"
+    },
+    {
+      "id": "C",
+      "start": 14,
+      "end": 20,
+      "expect": "drop",
+      "why": "纯黑+静音"
+    },
+    {
+      "id": "D",
+      "start": 20,
+      "end": 24,
+      "expect": "drop",
+      "why": "冻帧+静音（两路都无信息）"
+    },
+    {
+      "id": "E",
+      "start": 24,
+      "end": 30,
+      "expect": "keep",
+      "why": "画面运动+音轨"
+    },
+    {
+      "id": "F",
+      "start": 30,
+      "end": 36,
+      "expect": "keep",
+      "why": "冻帧但有音轨（口播类镜头），不得误切"
+    },
+    {
+      "id": "G",
+      "start": 36,
+      "end": 42,
+      "expect": "keep",
+      "why": "静音但有画面信息（动作镜头），不得误切"
+    }
+  ],
+  "kept": [
+    [
+      0,
+      8
+    ],
+    [
+      8,
+      14
+    ],
+    [
+      24,
+      30
+    ],
+    [
+      30,
+      36
+    ],
+    [
+      36,
+      42
+    ]
+  ],
+  "dropped": [
+    [
+      14,
+      20
+    ],
+    [
+      20,
+      24
+    ]
+  ]
+}

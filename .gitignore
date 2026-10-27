@@ -1,0 +1,15 @@
+# 第三方与临时工作区（可随时清理重建，不入库）
+Workspace/
+
+# 每步 ffmpeg 原始日志/中间文件（体积大、可由脚本重建）
+History/**/.work/
+History/**/.qa/
+
+# 可再生的中间视频（成品/交付物在 Prototype/ 下入库）
+History/bench/**/*.mp4
+History/runs/**/*.mp4
+
+# 系统杂项
+Thumbs.db
+desktop.ini
+*.tmp

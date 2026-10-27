@@ -1,0 +1,17 @@
+[probe] D:\Data\DeepseekHarness\IdeaDrivenLoop\VideoFactory\History\bench\synth\source.mp4
+[probe] 42.00s 1280x720 audio=true
+[analyze] blackdetect / freezedetect / scdet / silencedetect ...
+[analyze] black=1 freeze=3 silence=2 scenes=6
+[decide] 应用剪辑规则 ...
+[render] 提取 2 段 ...
+[render] 合并 (fade) ...
+[render] 收尾(响度归一/淡入淡出/标题) ...
+[done] 7.1s -> D:\Data\DeepseekHarness\IdeaDrivenLoop\VideoFactory\History\runs\bench01
+[done] final=31.62s kept=2 cut=1 transition=xfade(fade,0.4s)
+  - final.mp4 6985KB
+  - edits.json 2KB
+  - signals.json 0KB
+  - probe.json 0KB
+  - report.md 2KB
+  - contact_sheet.jpg 111KB
+  - runlog.jsonl 4KB

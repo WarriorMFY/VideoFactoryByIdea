@@ -1,0 +1,76 @@
+{
+  "generated_at": "2026-10-27T05:54:25.545Z",
+  "source": "Tool/make_real_bench.mjs",
+  "clip": {
+    "file": "D:\\Data\\DeepseekHarness\\IdeaDrivenLoop\\VideoFactory\\Workspace\\assets\\Big_Buck_Bunny_1080_10s_5MB.mp4",
+    "duration": 10,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60,
+    "has_audio": false,
+    "license": "Big Buck Bunny © Blender Foundation, CC-BY 3.0"
+  },
+  "duration_s": 17,
+  "spec_note": "真值 = 脚本人为插入的黑场+静音段（机器可读）；真实片段本身应全部保留。素材本身无音轨时音频路径不覆盖。",
+  "sections": [
+    {
+      "id": "HEAD_BLACK",
+      "start": 0,
+      "end": 3,
+      "expect": "drop",
+      "why": "片头黑场+静音"
+    },
+    {
+      "id": "REAL_A",
+      "start": 3,
+      "end": 6.5,
+      "expect": "keep",
+      "why": "真实素材前段，不得误切"
+    },
+    {
+      "id": "MID_BLACK",
+      "start": 6.5,
+      "end": 8.5,
+      "expect": "drop",
+      "why": "中插黑场+静音（转场残留）"
+    },
+    {
+      "id": "REAL_B",
+      "start": 8.5,
+      "end": 15,
+      "expect": "keep",
+      "why": "真实素材后段，不得误切"
+    },
+    {
+      "id": "TAIL_BLACK",
+      "start": 15,
+      "end": 17,
+      "expect": "drop",
+      "why": "片尾黑场+静音"
+    }
+  ],
+  "kept": [
+    [
+      3,
+      6.5
+    ],
+    [
+      8.5,
+      15
+    ]
+  ],
+  "dropped": [
+    [
+      0,
+      3
+    ],
+    [
+      6.5,
+      8.5
+    ],
+    [
+      15,
+      17
+    ]
+  ]
+}

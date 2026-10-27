@@ -1,0 +1,87 @@
+{
+  "generated_at": "2026-10-27T05:54:21.973Z",
+  "tool": "vfactory v0.1",
+  "source": {
+    "file": "D:\\Data\\DeepseekHarness\\IdeaDrivenLoop\\VideoFactory\\History\\bench\\synth\\source.mp4",
+    "duration": 42,
+    "video": {
+      "codec": "h264",
+      "width": 1280,
+      "height": 720,
+      "fps": "30/1",
+      "pix_fmt": "yuv420p",
+      "nb_frames": "1260"
+    },
+    "audio": {
+      "codec": "aac",
+      "sample_rate": "48000",
+      "channels": 2,
+      "bitrate": "119833"
+    }
+  },
+  "output": {
+    "file": "D:\\Data\\DeepseekHarness\\IdeaDrivenLoop\\VideoFactory\\History\\runs\\bench01\\final.mp4",
+    "duration": 31.621,
+    "width": 1280,
+    "height": 720,
+    "fps": 30,
+    "transition": "xfade(fade,0.4s)"
+  },
+  "decision": {
+    "params": {
+      "blackPixTh": 0.1,
+      "blackMinDur": 0.12,
+      "freezeNoise": 0.003,
+      "freezeMinDur": 0.35,
+      "silenceDb": -35,
+      "silenceMinDur": 0.5,
+      "sceneTh": 8,
+      "snapWindow": 0.6,
+      "minGap": 0.4,
+      "minKeep": 1.2,
+      "headroom": 0
+    },
+    "rule": "black→cut; freeze∧silence→cut; freeze-only or silence-only→keep; snap to scene cuts; drop keeps<minKeep; guard maxCutRatio"
+  },
+  "kept": [
+    {
+      "start": 0,
+      "end": 14,
+      "dur": 14,
+      "signals": {
+        "black": false,
+        "freeze": false,
+        "silence": false
+      }
+    },
+    {
+      "start": 24,
+      "end": 42,
+      "dur": 18,
+      "signals": {
+        "black": false,
+        "freeze": true,
+        "silence": true
+      }
+    }
+  ],
+  "cut": [
+    {
+      "start": 14,
+      "end": 24
+    }
+  ],
+  "cut_reasons": [
+    {
+      "start": 14,
+      "end": 20,
+      "why": "black（无画面）"
+    },
+    {
+      "start": 20,
+      "end": 24,
+      "why": "freeze∧silence（两路都无信息）"
+    }
+  ],
+  "guard": null
+}
