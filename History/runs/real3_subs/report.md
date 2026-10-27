@@ -72,7 +72,7 @@
 ## 复现
 
 ```powershell
-node Tool\vfactory.mjs "D:\Data\DeepseekHarness\IdeaDrivenLoop\VideoFactory\Workspace\assets\realspeech\sintel-trailer.mp4" --out out --title "..."
+node Tool\edit\vfactory.mjs "D:\Data\DeepseekHarness\IdeaDrivenLoop\VideoFactory\Workspace\assets\realspeech\sintel-trailer.mp4" --out out --title "..."
 ```
 
 每步 ffmpeg 命令见 `runlog.jsonl`。

@@ -11,15 +11,15 @@ try {
   if (-not (Get-Command node -ErrorAction SilentlyContinue)) { throw "node not found; install Node.js 20+" }
 
   Write-Host "`n== 1/3 prepare FFmpeg (about 160MB, first run only)" -ForegroundColor Cyan
-  node Tool\bootstrap_ffmpeg.mjs
+  node Tool\setup/bootstrap_ffmpeg.mjs
   if ($LASTEXITCODE -ne 0) { throw "ffmpeg bootstrap failed" }
 
   Write-Host "`n== 2/3 prepare real public footage (skips case B on failure)" -ForegroundColor Cyan
-  node Tool\fetch_real_footage.mjs
+  node Tool\setup/fetch_real_footage.mjs
   if ($LASTEXITCODE -ne 0) { Write-Host "  (footage download failed, case B will be skipped)" -ForegroundColor Yellow }
 
   Write-Host "`n== 3/3 end-to-end acceptance (build cases -> run factory -> verify vs ground truth -> QA)" -ForegroundColor Cyan
-  node Tool\run_acceptance.mjs
+  node Tool\acceptance/run_acceptance.mjs
   $code = $LASTEXITCODE
 
   Write-Host "`n---- outputs ----" -ForegroundColor Cyan

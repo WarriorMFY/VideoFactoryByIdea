@@ -1,6 +1,6 @@
 {
   "reference_free": true,
-  "generated_at": "2026-10-27T08:12:06.805Z",
+  "generated_at": "2026-10-27T09:29:00.568Z",
   "note": "真实影视素材（Sintel trailer），没有官方逐句讲稿，因此 WER/真值时间轴不可测；本文件只用于标识\"无真值\"。",
   "clip": {
     "file": "Workspace\\assets\\realspeech\\sintel-trailer.mp4",

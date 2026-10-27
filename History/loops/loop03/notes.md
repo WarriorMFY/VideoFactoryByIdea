@@ -67,3 +67,23 @@ node Tool\run_real_acceptance.mjs                      # 一键全量（含对�
 ## 未做（边界）
 
 Whisper 级 ASR（下载通道不通）、标点恢复、中置声道提取、音画分离式的"保音频换画面"、多语种真实素材。
+
+## Tool/ 目录重构（17:30，按"渐进式披露"要求）
+
+原先把 23 个脚本平铺在 `Tool/` 下，顶层信息量过大。重构为"薄入口 + 分层目录 + 每层一个 md"：
+
+```
+Tool/
+├── Tool.md        # 入口：三条最短路径 + 目录地图 + 三条铁律（30 秒看完）
+├── env.md         # 环境约束与 14 条实测坑（跨脚本，详细）
+├── setup/  {setup.md,  bootstrap_ffmpeg/asr, npm_fetch, fetch_vosk_model, fetch_real_footage, fetch_realspeech}
+├── bench/  {bench.md,  make_bench_source, make_real_bench, make_l2_bench, tts_sapi.ps1}
+├── edit/   {edit.md,   vfactory, make_timeline}
+├── subtitle/{subtitle.md, asr_vosk, make_subs, remap_subs, verify_subs, glossary_zh.json}
+├── acceptance/{acceptance.md, run_acceptance, run_subs_acceptance, run_real_acceptance, verify_edl, qa_report}
+└── lib/    {lib.md,    ff.mjs}
+```
+
+迁移中修的连带问题：所有脚本 import 改 `../lib/ff.mjs`；`setup/` 下三个用 `import.meta.dirname` 定位仓库根的脚本各上跳一级；三个验收脚本里子脚本/术语表路径改为子目录相对路径；Prototype 三份 `reproduce.ps1` 与各 README 的 `Tool\xxx` 路径全部同步（用 Node 脚本批量改，避免 PowerShell 批量替换把文件写坏——本轮实测踩过 `c`→`o` 的字符损坏）。
+
+回归：`run_acceptance` / `run_subs_acceptance` / `run_real_acceptance` 三条链路全部重跑 PASS，三份 `reproduce.ps1` 实跑 PASS。

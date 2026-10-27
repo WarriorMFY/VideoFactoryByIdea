@@ -16,29 +16,29 @@ try {
   if (-not (Get-Command node -ErrorAction SilentlyContinue)) { throw "node not found; install Node.js 20+" }
 
   Write-Host "`n== 1/4 prepare dirs (ffmpeg + ASR deps, first run only)" -ForegroundColor Cyan
-  node Tool\bootstrap_ffmpeg.mjs
+  node Tool\setup/bootstrap_ffmpeg.mjs
   if ($LASTEXITCODE -ne 0) { throw "ffmpeg bootstrap failed" }
-  node Tool\bootstrap_asr.mjs
+  node Tool\setup/bootstrap_asr.mjs
   if ($LASTEXITCODE -ne 0) { throw "asr bootstrap failed" }
 
   if (-not $SkipModel) {
     Write-Host "`n== 2/4 fetch Vosk English model (39MB, source throttled: ~15 min)" -ForegroundColor Cyan
-    node Tool\fetch_vosk_model.mjs
+    node Tool\setup/fetch_vosk_model.mjs
     if ($LASTEXITCODE -ne 0) { throw "model fetch failed" }
   } else { Write-Host "`n== 2/4 skipped model fetch (-SkipModel)" -ForegroundColor Yellow }
 
   Write-Host "`n== 3/4 build test material (Edge TTS English script + real footage)" -ForegroundColor Cyan
-  node Tool\make_l2_bench.mjs
+  node Tool\bench/make_l2_bench.mjs
   if ($LASTEXITCODE -ne 0) { throw "material build failed" }
 
   Write-Host "`n== 4/4 full chain: ASR -> cut -> subtitles -> remap -> burn -> verify" -ForegroundColor Cyan
-  node Tool\run_subs_acceptance.mjs --skip-build --mt mymemory
+  node Tool\acceptance/run_subs_acceptance.mjs --skip-build --mt mymemory
   $code = $LASTEXITCODE
 
   if ($Polished) {
     Write-Host "`n== extra: polished (human-level) translation variant" -ForegroundColor Cyan
     node History\probe\make_zh_agent.mjs History\subs\l2\cues.json History\bench\l2_en\ground_truth.json History\subs\l2\zh_agent.json
-    node Tool\run_subs_acceptance.mjs --skip-build --mt agent --zh-file History\subs\l2\zh_agent.json
+    node Tool\acceptance/run_subs_acceptance.mjs --skip-build --mt agent --zh-file History\subs\l2\zh_agent.json
   }
 
   Write-Host "`n---- outputs ----" -ForegroundColor Cyan
