@@ -77,3 +77,31 @@ child.kill(SIGKILL): exit code=null signal=SIGKILL 存活 3017ms（kill 请求�
 - `History/probe/gitnet_killtest.mjs` / `.log` — 杀进程机制验证
 - `History/probe/gitnet_acceptance.log` — 脚本四条验收的复跑输出
 - `Workspace/cache/gitnet/state.json` — 端点学习状态（临时区，可删）
+
+## 六、推送：凭据链路的实测（2026-10-27 21:30–21:45）
+
+用户指令"推送到远端"。`node Tool\Git\gitnet.mjs push` 首跑的原始报错（两个端点都是凭据问题，不是网络）：
+
+```
+→ ghproxy    FAIL 22.7s  fatal: could not read Username for 'https://ghproxy.net': terminal prompts disabled
+→ direct     FAIL  4.7s  fatal: could not read Username for 'https://github.com': terminal prompts disabled
+```
+
+排查（全部实测）：
+
+| # | 尝试 | 结果 |
+| --- | --- | --- |
+| 1 | `git config --get-all credential.helper` | `manager-core`（但 `C:\Program Files\Git\mingw64\bin\git-credential-manager.exe` **不存在**：本机 git 在 `E:\SoftWare\Git\Git`） |
+| 2 | `cmdkey /list` | 有 `LegacyGeneric:target=git:https://github.com`，user `WarriorMFY` |
+| 3 | `git -c credential.helper= -c credential.helper=wincred credential fill`（stdin 文件重定向） | ❌ `sh.exe: *** fatal error - couldn't create signal pipe, Win32 error 5` — **换 helper 也没用，git 仍经 sh.exe** |
+| 4 | 直调 `E:/SoftWare/Git/Git/mingw32/libexec/git-core/git-credential-wincred.exe get`（stdin/stdout 文件重定向） | ✅ `username=WarriorMFY`、`password=<40 字符>` |
+| 5 | `gitnet.mjs push --helper wincred`（第 4 步取凭据 → `GIT_CONFIG_*` 注入 `http.extraheader`） | ✅ direct 2.3s 成功 |
+| 6 | 复核 `git rev-parse HEAD` vs `refs/remotes/origin/main` | 首次不等（URL 推送不会前进跟踪引用）→ 脚本加 `update-ref` 后一致 |
+| 7 | 再跑一次 push（对齐后） | ✅ 867ms，`main...origin/main`，无 `[ahead]` |
+
+结论与沉淀：
+
+- **`--helper wincred` 成了 push 的必要参数**（不是可选加速），已写进脚本 `--helper` + `Git.md` §8 + `env.md` §〇。
+- push 默认**只打 direct**：公共镜像无法代我们鉴权，试镜像只会多花一次 20s 的失败。
+- 口令全程只存在于内存：文件重定向取回后立刻拼 base64 → 环境变量注入 → 删除临时文件 → 只打印长度。
+- 推送结果：`refs/heads/main = 60e84167`（与本地 HEAD 一致）。

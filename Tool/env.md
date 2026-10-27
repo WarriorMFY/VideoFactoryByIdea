@@ -12,12 +12,18 @@
    本仓库已固定：`git config --local http.sslBackend openssl`（换成 OpenSSL 后 `ls-remote` 直接成功）。
 2. **凭据助手会挂**：git 调 `git-credential-manager` 时经过 `sh.exe`，本沙箱禁止创建管道 →
    `sh.exe: *** fatal error - couldn't create signal pipe, Win32 error 5`。
-   绕法：直接运行 GCM 取凭据（`cmd /c "gcm.exe get < in.txt > out.txt"`，用文件重定向而非管道），
-   再用 `git -c credential.helper= -c "http.extraheader=Authorization: Basic <base64>" push`。
-   参考脚本：`Workspace/cache/push_with_gcm.ps1`（临时区，可随时重建；**凭据不打印、不落盘、不写入 git 配置**）。
-3. **凭据本来就有**：Windows 凭据管理器里有 `LegacyGeneric:target=git:https://github.com`（GCM 2.9.0 已装，
-   `C:\Program Files\Git\mingw64\bin\git-credential-manager.exe`），用户名是数字 ID、口令 40 位（PAT）。
-   注意：`cmdkey /list` 能看到条目名但看不到口令；读口令要靠 GCM。
+   **注意（2026-10-27 复测）**：`-c credential.helper=wincred` 也救不了（git 仍然经 `sh.exe` 起 helper），
+   症状是 `fatal: could not read Username for 'https://github.com': terminal prompts disabled`。
+   → 唯一可行路径：**脚本自己直调 helper 可执行文件**（stdin/stdout 用文件重定向，不走管道），
+   拿到 username + 口令后再用 `GIT_CONFIG_COUNT/GIT_CONFIG_KEY_0/GIT_CONFIG_VALUE_0` 环境变量注入
+   `http.extraheader=Authorization: Basic <base64>`（**不进命令行、不落盘、不打印**）。
+   已沉淀：`node Tool\Git\gitnet.mjs push --helper wincred`（细节见 [`Git/Git.md`](Git/Git.md) §8）。
+   旧的临时脚本 `Workspace/cache/push_with_gcm.ps1` 已随 Workspace 清空，不必再依赖。
+3. **凭据本来就有**：Windows 凭据管理器里有 `LegacyGeneric:target=git:https://github.com`
+   （user `WarriorMFY`、口令 40 位 PAT）。`cmdkey /list` 只看得到条目名，读口令靠 helper。
+   **路径纠正**：本机 git 装在 `E:\SoftWare\Git\Git`（不是 `C:\Program Files\Git`），helper 都在
+   `E:/SoftWare/Git/Git/mingw32/libexec/git-core/`（`git-credential-wincred.exe` 实测好用，
+   `git-credential-manager[-core].exe` 也在同处）。
 
 4. **出网本身会漂（2026-10-27 21:00 复测，补充）**：`github.com:443` 的 TCP 有时 145ms 通、有时 2.5s 超时；
    真实 git 请求在 **1.2s 成功**与 **21–56s 失败**（`Failed to connect ... 21026 ms` / `errno 10053`）之间来回跳；
@@ -26,7 +32,9 @@
    → **别手工 `git clone/pull` 干等**，统一走 [`Git/gitnet.mjs`](Git/Git.md)（端点学习 + 无进展看门狗 + 硬超时 + 镜像回退）。
 
 远端：`origin` = `https://github.com/WarriorMFY/VideoFactoryByIdea.git`（公开，默认分支 `main`）。
-验证推送是否成功：`git ls-remote origin` 应出现 `refs/heads/main`，`git status -sb` 应显示 `main...origin/main` 且无 `[ahead]`。
+验证推送是否成功：`git ls-remote origin` 应出现与本地 `git rev-parse HEAD` 相同的 sha，`git status -sb` 应显示
+`main...origin/main` 且无 `[ahead]`。**注意**：按 URL 推送（`git push <url> HEAD:main`）不会自动更新
+`refs/remotes/origin/main`，`status` 会假显示 `[ahead N]` → `gitnet.mjs push` 已自动 `update-ref` 对齐。
 
 ## 一、出网（最影响方案选型）
 
