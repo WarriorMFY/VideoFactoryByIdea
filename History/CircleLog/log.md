@@ -65,3 +65,16 @@
 - **机翻质量**：MyMemory 只能"看懂"，不宜直发；需 LLM 精译或自建 MT。
 - **音画绑定**：语音保护会连带保住"对白压在黑屏/字幕卡"上的黑屏，暂时无法"保音频换画面"。
 - 模型下载通道：本机只有 alphacephei 与 npmmirror 可用。
+
+---
+
+## 维护记录 · 2026-10-27 20:50–21:10 · Git 出网避坑（用户指令，非小循环）
+
+| 项 | 内容 |
+| --- | --- |
+| 触发 | 用户要求把 `https://github.com/WarriorMFY/VideoFactoryByIdea.git` 下载到本地：直连 clone 连续 2 次 `errno 10053`；随后指令"在 `Tool\` 新建 Git 目录，说明这次避坑并新建脚本，避免以后长时间 pull 失败" |
+| 做了什么 | ① 分层实测出网（TCP / HTTP / git 协议三层，共 15 组数据）→ 结论：**前两层探针都会骗人**，只有 `git ls-remote` 可信但很慢；② 新增 `Tool/Git/gitnet.mjs`（端点学习 + 无进展看门狗 + 硬超时 + 镜像回退）；③ 新增 `Tool/Git/Git.md`（现象/根因/实测/用法/验收/限制）；④ 更新 `Tool/Tool.md`（目录地图 + 第 4 条规则）与 `Tool/env.md`（§〇 出网会漂、§二 杀进程） |
+| 关键数据 | 直连失败 21.3s / 56.1s，网络好时 1.2s 成功；镜像成功 25.9–46.3s，偶发 500/502（2.3–17.3s）；杀子进程只能 `child.kill('SIGKILL')`（3ms 生效），`taskkill /T /F` 被沙箱拒（exit 1）；`http.lowSpeedTime=20` 会误杀慢镜像，已改 90s |
+| 验证 | 四条验收全过：`state` 可读 · `pull --check` 在 78s/38s 内给结论（直连失败自动切镜像）· `run --stall 4` 打黑洞地址 4.0s 被看门狗杀掉 · `clone octocat/Hello-World` 成功且 origin 为规范地址。留痕：`History/probe/gitnet.md`、`History/probe/gitnet_killtest.log`、`History/probe/gitnet_acceptance.log` |
+| 状态 | 新增文件**未提交、未推送**（`Tool/Git/`、`History/probe/gitnet*`，以及对 `Tool/Tool.md`、`Tool/env.md` 的改动）。仓库仍在等"人对小循环 3 的反馈"，本轮不改变大循环状态与时间窗口 |
+| 人工反馈 | （待填） |

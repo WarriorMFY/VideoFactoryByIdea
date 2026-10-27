@@ -19,6 +19,12 @@
    `C:\Program Files\Git\mingw64\bin\git-credential-manager.exe`），用户名是数字 ID、口令 40 位（PAT）。
    注意：`cmdkey /list` 能看到条目名但看不到口令；读口令要靠 GCM。
 
+4. **出网本身会漂（2026-10-27 21:00 复测，补充）**：`github.com:443` 的 TCP 有时 145ms 通、有时 2.5s 超时；
+   真实 git 请求在 **1.2s 成功**与 **21–56s 失败**（`Failed to connect ... 21026 ms` / `errno 10053`）之间来回跳；
+   `ghproxy.net` 可用但**首字节 26–34s**，偶发 500/502。
+   → 所以 **TCP、HTTP 探针都会骗人**（TCP 通 ≠ git 能跑），只有 `git ls-remote` 可信但慢。
+   → **别手工 `git clone/pull` 干等**，统一走 [`Git/gitnet.mjs`](Git/Git.md)（端点学习 + 无进展看门狗 + 硬超时 + 镜像回退）。
+
 远端：`origin` = `https://github.com/WarriorMFY/VideoFactoryByIdea.git`（公开，默认分支 `main`）。
 验证推送是否成功：`git ls-remote origin` 应出现 `refs/heads/main`，`git status -sb` 应显示 `main...origin/main` 且无 `[ahead]`。
 
@@ -40,6 +46,9 @@
 ## 二、子进程与 I/O
 
 - **管道被禁**：`spawnSync` 默认 `stdio:'pipe'` → `EPERM`。必须把 stdout/stderr 重定向到**普通文件描述符**再读回（`lib/ff.mjs` 的 `run()` 已封装）。
+- **杀进程**：`taskkill /PID <pid> /T /F` 在本沙箱**退出码 1（被拒）**；能生效的是 `child.kill('SIGKILL')`（实测 3ms）。
+  代价是孙子进程（如 `git-remote-https`）杀不掉，会残留约 21s 后自行退出 → 超时看门狗只能保证"主进程立刻停"，不能保证"整树干净"。
+  实测记录：`History/probe/gitnet_killtest.log`；封装在 `Tool/Git/gitnet.mjs`。
 - **可写范围**：仅工作区 + 一个沙箱临时目录；`C:\Program Files`、`%LOCALAPPDATA%`、`%APPDATA%` 全部拒绝 → **装不了任何系统级软件**（剪映/Resolve/Shotcut/VLC 都装不上），也无法点 GUI。
 
 ## 三、字体与字幕渲染

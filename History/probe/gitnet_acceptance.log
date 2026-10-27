@@ -1,0 +1,30 @@
+# gitnet.mjs 验收复跑 2026-10-27 21:05:20
+状态文件：F:\AgentWorkArea\DeepseekHarness\IdeaDrivenAigc\VideoFactory\Workspace\cache\gitnet\state.json
+  direct         连续失败 0  最近成功 1m34s前       最近失败 5m18s前       
+  ghproxy        连续失败 2  最近成功 4m34s前       最近失败 3m46s前       「fatal: unable to access 'https://ghproxy.net/https://github.」
+
+总用时 2ms
+仓库 F:/AgentWorkArea/DeepseekHarness/IdeaDrivenAigc/VideoFactory
+分支 main  远端 https://github.com/WarriorMFY/VideoFactoryByIdea.git
+端点顺序：direct(曾成功) → ghproxy(曾成功,连败2→降级5min)
+→ direct  
+  FAIL 41.0s  fatal: expected flush after ref listing
+→ ghproxy  (镜像)
+  OK  37.0s
+落后 0 个提交 · 领先 0 个提交
+（--check：只看差距，不合并）
+
+总用时 1m18s
+$ git ls-remote https://10.255.255.1/foo.git
+
+FAIL  退出码 null  用时 4.0s  无进展，已杀进程树
+
+总用时 4.0s
+端点顺序：ghproxy(曾成功) → direct(曾成功)
+→ ghproxy  (镜像)
+  OK  46.3s
+origin 已置为规范地址：https://github.com/octocat/Hello-World.git
+HEAD 7fd1a60 2012-03-06 15:06:50 -0800 Merge pull request #6 from Spaceghost/patch-1
+位置 F:\AgentWorkArea\DeepseekHarness\IdeaDrivenAigc\VideoFactory\Workspace\cache\_t
+
+总用时 46.5s
