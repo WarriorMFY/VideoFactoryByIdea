@@ -1,0 +1,7 @@
+Welcome back to the workshop, where we turn raw footage into finished films.
+Today I will show you three simple tricks that save about two hours of editing time.
+First, always cut on the beat, because rhythm is what keeps the audience awake.
+Second, remove the silent gaps longer than half a second before you touch the colors.
+Third, normalize the audio to minus sixteen LUFS, which is the standard for online video platforms.
+Finally, export at fifteen megabits per second, and never trust the first render.
+That is it for this episode, see you in the next one.

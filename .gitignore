@@ -4,10 +4,15 @@ Workspace/
 # 每步 ffmpeg 原始日志/中间文件（体积大、可由脚本重建）
 History/**/.work/
 History/**/.qa/
+History/asr/.asr_work/
 
-# 可再生的中间视频（成品/交付物在 Prototype/ 下入库）
+# 可再生的音视频产物（成品在 Prototype/ 下保留在本地磁盘，但为避免仓库膨胀不入库；
+# 重建命令见 Prototype/README*.md 与 History/CircleLog/log.md）
 History/bench/**/*.mp4
+History/bench/**/tts/
+History/bench/**/*.wav
 History/runs/**/*.mp4
+Prototype/**/*.mp4
 
 # 系统杂项
 Thumbs.db

@@ -1,0 +1,163 @@
+{
+  "verdict": "PASS",
+  "thresholds": {
+    "wer": 0.25,
+    "cover": 0.95,
+    "boundMean": 0.8,
+    "boundMax": 1.5,
+    "cps_zh": 20,
+    "cps_en": 25
+  },
+  "wer": {
+    "refWords": 99,
+    "hypWords": 101,
+    "dist": 6,
+    "rate": 0.0606
+  },
+  "timing": {
+    "coverage_ratio": 0.9978,
+    "mean_boundary_err_s": 0.016,
+    "max_boundary_err_s": 0.045,
+    "sentences": [
+      {
+        "idx": 0,
+        "start": 0,
+        "end": 4.084,
+        "covered_ratio": 0.992,
+        "start_err": 0.03,
+        "end_err": 0.004
+      },
+      {
+        "idx": 1,
+        "start": 4.434,
+        "end": 8.778,
+        "covered_ratio": 1,
+        "start_err": 0.024,
+        "end_err": 0.012
+      },
+      {
+        "idx": 2,
+        "start": 9.128,
+        "end": 13.403,
+        "covered_ratio": 1,
+        "start_err": 0.008,
+        "end_err": 0.007
+      },
+      {
+        "idx": 3,
+        "start": 13.753,
+        "end": 18.475,
+        "covered_ratio": 1,
+        "start_err": 0.013,
+        "end_err": 0.005
+      },
+      {
+        "idx": 4,
+        "start": 18.825,
+        "end": 25.598,
+        "covered_ratio": 1,
+        "start_err": 0.045,
+        "end_err": 0.022
+      },
+      {
+        "idx": 5,
+        "start": 25.948,
+        "end": 30.772,
+        "covered_ratio": 1,
+        "start_err": 0.002,
+        "end_err": 0.008
+      },
+      {
+        "idx": 6,
+        "start": 31.122,
+        "end": 33.878,
+        "covered_ratio": 0.986,
+        "start_err": 0.012,
+        "end_err": 0.038
+      }
+    ]
+  },
+  "translate": {
+    "cues": 13,
+    "translated": 13,
+    "missing": 0,
+    "missing_samples": []
+  },
+  "readability": {
+    "max_zh_cps": 8.89,
+    "mean_zh_cps": 5.68,
+    "max_en_cps": 28.64
+  },
+  "remap": {
+    "cues_in": 13,
+    "cues_out": 13,
+    "dropped": 0,
+    "output_duration": 33.878,
+    "overflow": 0,
+    "overlaps": 0,
+    "min_dur": 2.025,
+    "max_dur": 3.42
+  },
+  "quality": {
+    "mean_char_sim": 0.857,
+    "per_sentence": [
+      {
+        "idx": 0,
+        "sim": 1,
+        "machine": "欢迎回到工作坊，我们在这里把原始素材变成成片。今天我会演示三个简单的小技巧，",
+        "reference": "欢迎回到工作坊，我们在这里把原始素材变成成片。"
+      },
+      {
+        "idx": 1,
+        "sim": 1,
+        "machine": "今天我会演示三个简单的小技巧，能省下大约两个小时的剪辑时间。第一，永远在节拍上剪，",
+        "reference": "今天我会演示三个简单的小技巧，能省下大约两个小时的剪辑时间。"
+      },
+      {
+        "idx": 2,
+        "sim": 1,
+        "machine": "第一，永远在节拍上剪，因为节奏才能让观众保持清醒。第二，在碰调色之前，",
+        "reference": "第一，永远在节拍上剪，因为节奏才能让观众保持清醒。"
+      },
+      {
+        "idx": 3,
+        "sim": 0,
+        "machine": "第二，在碰调色之前，先把长度超过半秒的静音空隙去掉。第三，把音频响度归一到负十六 LUF",
+        "reference": "第二，在碰调色之前，先把长度超过半秒的静音空隙去掉。"
+      },
+      {
+        "idx": 4,
+        "sim": 1,
+        "machine": "第三，把音频响度归一到负十六 LUFS，这是在线视频平台的标准。最后，以每秒十五兆的码率导出，",
+        "reference": "第三，把音频响度归一到负十六 LUFS，这是在线视频平台的标准。"
+      },
+      {
+        "idx": 5,
+        "sim": 1,
+        "machine": "最后，以每秒十五兆的码率导出，而且永远不要相信第一次渲染。本期就到这里，我们下期见。",
+        "reference": "最后，以每秒十五兆的码率导出，而且永远不要相信第一次渲染。"
+      },
+      {
+        "idx": 6,
+        "sim": 1,
+        "machine": "本期就到这里，我们下期见。",
+        "reference": "本期就到这里，我们下期见。"
+      }
+    ]
+  },
+  "pass": {
+    "wer": true,
+    "coverage": true,
+    "boundary_mean": true,
+    "boundary_max": true,
+    "translated": true,
+    "readability": true,
+    "remap": true
+  },
+  "source": {
+    "transcript": "D:\\Data\\DeepseekHarness\\IdeaDrivenLoop\\VideoFactory\\History\\asr\\transcript.json",
+    "ground_truth": "D:\\Data\\DeepseekHarness\\IdeaDrivenLoop\\VideoFactory\\History\\bench\\l2_en\\ground_truth.json",
+    "cues": "D:\\Data\\DeepseekHarness\\IdeaDrivenLoop\\VideoFactory\\History\\subs\\l2\\cues.json",
+    "remap": "D:\\Data\\DeepseekHarness\\IdeaDrivenLoop\\VideoFactory\\History\\subs\\l2\\remapped\\remap.json"
+  }
+}

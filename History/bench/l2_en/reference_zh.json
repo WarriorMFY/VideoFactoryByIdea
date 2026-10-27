@@ -1,0 +1,40 @@
+{
+  "note": "人工精译参考（用于对比机翻质量）",
+  "sentences": [
+    {
+      "idx": 0,
+      "en": "Welcome back to the workshop, where we turn raw footage into finished films.",
+      "zh": "欢迎回到工作坊，我们在这里把原始素材变成成片。"
+    },
+    {
+      "idx": 1,
+      "en": "Today I will show you three simple tricks that save about two hours of editing time.",
+      "zh": "今天我会演示三个简单的小技巧，能省下大约两个小时的剪辑时间。"
+    },
+    {
+      "idx": 2,
+      "en": "First, always cut on the beat, because rhythm is what keeps the audience awake.",
+      "zh": "第一，永远在节拍上剪，因为节奏才能让观众保持清醒。"
+    },
+    {
+      "idx": 3,
+      "en": "Second, remove the silent gaps longer than half a second before you touch the colors.",
+      "zh": "第二，在碰调色之前，先把长度超过半秒的静音空隙去掉。"
+    },
+    {
+      "idx": 4,
+      "en": "Third, normalize the audio to minus sixteen LUFS, which is the standard for online video platforms.",
+      "zh": "第三，把音频响度归一到负十六 LUFS，这是在线视频平台的标准。"
+    },
+    {
+      "idx": 5,
+      "en": "Finally, export at fifteen megabits per second, and never trust the first render.",
+      "zh": "最后，以每秒十五兆的码率导出，而且永远不要相信第一次渲染。"
+    },
+    {
+      "idx": 6,
+      "en": "That is it for this episode, see you in the next one.",
+      "zh": "本期就到这里，我们下期见。"
+    }
+  ]
+}

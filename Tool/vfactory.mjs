@@ -243,6 +243,19 @@ function decide(sig, dur) {
 }
 
 // ---------------- 4. 渲染 ----------------
+/** 判断 SRT 是否双语（同一时间轴下每块两行文本）——双语字幕要缩小字号 */
+function bilingualSrt(file) {
+  try {
+    const txt = fs.readFileSync(file, 'utf8');
+    const blocks = txt.split(/\n\s*\n/).filter((b) => b.includes('-->'));
+    if (!blocks.length) return false;
+    const twoLine = blocks.filter((b) => {
+      const lines = b.trim().split(/\r?\n/);
+      return lines.length >= 4; // idx + 时间 + 2 行文本
+    }).length;
+    return twoLine / blocks.length > 0.5;
+  } catch { return false; }
+}
 const VF_NORM = (w, h, fps) => `scale=${w}:${h}:force_original_aspect_ratio=decrease,pad=${w}:${h}:(ow-iw)/2:(oh-ih)/2,fps=${fps},setsar=1,format=yuv420p`;
 const AF_NORM = 'aresample=48000:async=1,aformat=sample_fmts=fltp:channel_layouts=stereo';
 
@@ -320,7 +333,9 @@ function polish(mergedFile, outFile, hasAudio, totalDur) {
   }
   if (OPT.srt && fs.existsSync(OPT.srt)) {
     const p = OPT.srt.replace(/\\/g, '/').replace(/:/g, '\\:');
-    vf.push(`subtitles='${p}':force_style='Fontsize=22,Outline=1.4,Shadow=0,BorderStyle=1'`);
+    // FontName 必须指定含 CJK 的字体（否则中文变方块）；Fontsize 以 libass 默认 PlayResY=288 为基准。
+    const fs2 = bilingualSrt(OPT.srt) ? 15 : 20;
+    vf.push(`subtitles='${p}':force_style='FontName=SimHei,Fontsize=${fs2},PrimaryColour=&H00FFFFFF,OutlineColour=&H80000000,BorderStyle=1,Outline=1.2,Shadow=0.6,MarginV=18,Alignment=2'`);
   }
   vf.push(`fade=t=in:st=0:d=0.5`);
   vf.push(`fade=t=out:st=${r2(fadeOutStart)}:d=0.8`);
