@@ -1,0 +1,199 @@
+{
+  "generated_at": "2026-10-27T08:28:06.351Z",
+  "engine": "vosk",
+  "model": "vosk-model-small-en-us-0.15",
+  "model_license": "Apache-2.0",
+  "audio_filter": "afftdn=nf=-25",
+  "input": "D:\\Data\\DeepseekHarness\\IdeaDrivenLoop\\VideoFactory\\Workspace\\assets\\realspeech\\sintel-trailer.mp4",
+  "audio_duration_s": 51.925,
+  "text": "what brings you to the land of the gatekeepers i'm searching for so dangerous quest for a moment you don't raise long as i can remember",
+  "words": [
+    {
+      "word": "what",
+      "start": 12.18,
+      "end": 12.42,
+      "conf": 1
+    },
+    {
+      "word": "brings",
+      "start": 12.42,
+      "end": 12.72,
+      "conf": 1
+    },
+    {
+      "word": "you",
+      "start": 12.72,
+      "end": 12.87,
+      "conf": 1
+    },
+    {
+      "word": "to",
+      "start": 12.87,
+      "end": 12.99,
+      "conf": 1
+    },
+    {
+      "word": "the",
+      "start": 12.99,
+      "end": 13.08,
+      "conf": 1
+    },
+    {
+      "word": "land",
+      "start": 13.08,
+      "end": 13.5,
+      "conf": 1
+    },
+    {
+      "word": "of",
+      "start": 13.5,
+      "end": 13.59,
+      "conf": 1
+    },
+    {
+      "word": "the",
+      "start": 13.59,
+      "end": 13.71,
+      "conf": 1
+    },
+    {
+      "word": "gatekeepers",
+      "start": 13.71,
+      "end": 14.37,
+      "conf": 0.637413
+    },
+    {
+      "word": "i'm",
+      "start": 18.66,
+      "end": 18.81,
+      "conf": 1
+    },
+    {
+      "word": "searching",
+      "start": 18.81,
+      "end": 19.32,
+      "conf": 1
+    },
+    {
+      "word": "for",
+      "start": 19.32,
+      "end": 19.47,
+      "conf": 1
+    },
+    {
+      "word": "so",
+      "start": 19.47,
+      "end": 19.59,
+      "conf": 0.679321
+    },
+    {
+      "word": "dangerous",
+      "start": 36.99,
+      "end": 37.5,
+      "conf": 1
+    },
+    {
+      "word": "quest",
+      "start": 37.5,
+      "end": 37.92,
+      "conf": 1
+    },
+    {
+      "word": "for",
+      "start": 37.98,
+      "end": 38.13,
+      "conf": 1
+    },
+    {
+      "word": "a",
+      "start": 38.13,
+      "end": 38.243771,
+      "conf": 1
+    },
+    {
+      "word": "moment",
+      "start": 38.25,
+      "end": 38.76,
+      "conf": 0.792393
+    },
+    {
+      "word": "you",
+      "start": 41.97,
+      "end": 42.15,
+      "conf": 0.868434
+    },
+    {
+      "word": "don't",
+      "start": 42.15,
+      "end": 42.447946,
+      "conf": 1
+    },
+    {
+      "word": "raise",
+      "start": 42.45,
+      "end": 42.72,
+      "conf": 0.565542
+    },
+    {
+      "word": "long",
+      "start": 42.72,
+      "end": 42.96,
+      "conf": 1
+    },
+    {
+      "word": "as",
+      "start": 42.96,
+      "end": 43.05,
+      "conf": 1
+    },
+    {
+      "word": "i",
+      "start": 43.05,
+      "end": 43.17,
+      "conf": 1
+    },
+    {
+      "word": "can",
+      "start": 43.17,
+      "end": 43.35,
+      "conf": 1
+    },
+    {
+      "word": "remember",
+      "start": 43.35,
+      "end": 43.8,
+      "conf": 1
+    }
+  ],
+  "sentences": [
+    {
+      "start": 12.18,
+      "end": 14.37,
+      "text": "what brings you to the land of the gatekeepers",
+      "n": 9
+    },
+    {
+      "start": 18.66,
+      "end": 19.59,
+      "text": "i'm searching for so",
+      "n": 4
+    },
+    {
+      "start": 36.99,
+      "end": 38.76,
+      "text": "dangerous quest for a moment",
+      "n": 5
+    },
+    {
+      "start": 41.97,
+      "end": 43.8,
+      "text": "you don't raise long as i can remember",
+      "n": 8
+    }
+  ],
+  "stats": {
+    "words": 26,
+    "sentences": 4,
+    "avg_conf": 0.944
+  }
+}

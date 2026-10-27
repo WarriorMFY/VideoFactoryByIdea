@@ -1,0 +1,139 @@
+{
+  "generated_at": "2026-10-27T08:27:21.151Z",
+  "engine": "vosk",
+  "model": "vosk-model-en-us-0.22-lgraph",
+  "model_license": "Apache-2.0",
+  "audio_filter": null,
+  "input": "D:\\Data\\DeepseekHarness\\IdeaDrivenLoop\\VideoFactory\\Workspace\\assets\\realspeech\\sintel-trailer.mp4",
+  "audio_duration_s": 51.925,
+  "text": "the what brings you to the land are the gatekeepers am search the the dangerous quest for the",
+  "words": [
+    {
+      "word": "the",
+      "start": 0.27,
+      "end": 12.149872,
+      "conf": 1
+    },
+    {
+      "word": "what",
+      "start": 12.15,
+      "end": 12.39,
+      "conf": 1
+    },
+    {
+      "word": "brings",
+      "start": 12.39,
+      "end": 12.72,
+      "conf": 1
+    },
+    {
+      "word": "you",
+      "start": 12.72,
+      "end": 12.84,
+      "conf": 1
+    },
+    {
+      "word": "to",
+      "start": 12.84,
+      "end": 12.960081,
+      "conf": 1
+    },
+    {
+      "word": "the",
+      "start": 12.960081,
+      "end": 13.080247,
+      "conf": 0.994052
+    },
+    {
+      "word": "land",
+      "start": 13.080247,
+      "end": 13.47,
+      "conf": 0.949116
+    },
+    {
+      "word": "are",
+      "start": 13.471169,
+      "end": 13.589158,
+      "conf": 0.727073
+    },
+    {
+      "word": "the",
+      "start": 13.589158,
+      "end": 13.68,
+      "conf": 0.996032
+    },
+    {
+      "word": "gatekeepers",
+      "start": 13.68,
+      "end": 14.34,
+      "conf": 0.955131
+    },
+    {
+      "word": "am",
+      "start": 16.475486,
+      "end": 18.779962,
+      "conf": 0.771921
+    },
+    {
+      "word": "search",
+      "start": 18.782126,
+      "end": 19.229326,
+      "conf": 0.490831
+    },
+    {
+      "word": "the",
+      "start": 19.436147,
+      "end": 35.52,
+      "conf": 1
+    },
+    {
+      "word": "the",
+      "start": 35.540713,
+      "end": 36.929341,
+      "conf": 1
+    },
+    {
+      "word": "dangerous",
+      "start": 36.99,
+      "end": 37.47,
+      "conf": 0.989286
+    },
+    {
+      "word": "quest",
+      "start": 37.47022,
+      "end": 37.89,
+      "conf": 0.907241
+    },
+    {
+      "word": "for",
+      "start": 37.950765,
+      "end": 38.272064,
+      "conf": 0.917311
+    },
+    {
+      "word": "the",
+      "start": 38.326501,
+      "end": 49.32,
+      "conf": 1
+    }
+  ],
+  "sentences": [
+    {
+      "start": 0.27,
+      "end": 14.34,
+      "text": "the what brings you to the land are the gatekeepers",
+      "n": 10
+    },
+    {
+      "start": 16.475,
+      "end": 49.32,
+      "text": "am search the the dangerous quest for the",
+      "n": 8
+    }
+  ],
+  "stats": {
+    "words": 18,
+    "sentences": 2,
+    "avg_conf": 0.9277
+  }
+}

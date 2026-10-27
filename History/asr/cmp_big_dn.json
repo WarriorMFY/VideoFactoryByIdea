@@ -1,0 +1,193 @@
+{
+  "generated_at": "2026-10-27T08:28:01.647Z",
+  "engine": "vosk",
+  "model": "vosk-model-en-us-0.22-lgraph",
+  "model_license": "Apache-2.0",
+  "audio_filter": "afftdn=nf=-25",
+  "input": "D:\\Data\\DeepseekHarness\\IdeaDrivenLoop\\VideoFactory\\Workspace\\assets\\realspeech\\sintel-trailer.mp4",
+  "audio_duration_s": 51.925,
+  "text": "the what brings you to the land are the gatekeepers am search the dangerous quest from the the long as i can remember the",
+  "words": [
+    {
+      "word": "the",
+      "start": 0.322004,
+      "end": 10.649544,
+      "conf": 1
+    },
+    {
+      "word": "what",
+      "start": 12.18,
+      "end": 12.42,
+      "conf": 1
+    },
+    {
+      "word": "brings",
+      "start": 12.42,
+      "end": 12.75045,
+      "conf": 1
+    },
+    {
+      "word": "you",
+      "start": 12.75045,
+      "end": 12.839028,
+      "conf": 0.926433
+    },
+    {
+      "word": "to",
+      "start": 12.841414,
+      "end": 12.989819,
+      "conf": 0.937463
+    },
+    {
+      "word": "the",
+      "start": 12.989819,
+      "end": 13.082833,
+      "conf": 0.979273
+    },
+    {
+      "word": "land",
+      "start": 13.082833,
+      "end": 13.489681,
+      "conf": 0.578281
+    },
+    {
+      "word": "are",
+      "start": 13.489681,
+      "end": 13.597961,
+      "conf": 0.806293
+    },
+    {
+      "word": "the",
+      "start": 13.597961,
+      "end": 13.70884,
+      "conf": 0.988662
+    },
+    {
+      "word": "gatekeepers",
+      "start": 13.71,
+      "end": 14.369645,
+      "conf": 0.950223
+    },
+    {
+      "word": "am",
+      "start": 16.248779,
+      "end": 18.81,
+      "conf": 0.917282
+    },
+    {
+      "word": "search",
+      "start": 18.811355,
+      "end": 19.23,
+      "conf": 0.419929
+    },
+    {
+      "word": "the",
+      "start": 20.696453,
+      "end": 36.883773,
+      "conf": 0.814806
+    },
+    {
+      "word": "dangerous",
+      "start": 37.02,
+      "end": 37.49981,
+      "conf": 0.990043
+    },
+    {
+      "word": "quest",
+      "start": 37.500088,
+      "end": 37.92,
+      "conf": 0.517483
+    },
+    {
+      "word": "from",
+      "start": 37.984343,
+      "end": 38.316431,
+      "conf": 0.543693
+    },
+    {
+      "word": "the",
+      "start": 38.356721,
+      "end": 40.477031,
+      "conf": 0.802007
+    },
+    {
+      "word": "the",
+      "start": 40.606593,
+      "end": 42.465952,
+      "conf": 0.913183
+    },
+    {
+      "word": "long",
+      "start": 42.740742,
+      "end": 42.93,
+      "conf": 0.866071
+    },
+    {
+      "word": "as",
+      "start": 42.930524,
+      "end": 43.05,
+      "conf": 0.902041
+    },
+    {
+      "word": "i",
+      "start": 43.050125,
+      "end": 43.169059,
+      "conf": 0.997321
+    },
+    {
+      "word": "can",
+      "start": 43.169883,
+      "end": 43.35,
+      "conf": 0.999797
+    },
+    {
+      "word": "remember",
+      "start": 43.35,
+      "end": 43.71,
+      "conf": 0.947987
+    },
+    {
+      "word": "the",
+      "start": 44.932174,
+      "end": 48.9,
+      "conf": 0.992759
+    }
+  ],
+  "sentences": [
+    {
+      "start": 0.322,
+      "end": 10.65,
+      "text": "the",
+      "n": 1
+    },
+    {
+      "start": 12.18,
+      "end": 14.37,
+      "text": "what brings you to the land are the gatekeepers",
+      "n": 9
+    },
+    {
+      "start": 16.249,
+      "end": 19.23,
+      "text": "am search",
+      "n": 2
+    },
+    {
+      "start": 20.696,
+      "end": 43.71,
+      "text": "the dangerous quest from the the long as i can remember",
+      "n": 11
+    },
+    {
+      "start": 44.932,
+      "end": 48.9,
+      "text": "the",
+      "n": 1
+    }
+  ],
+  "stats": {
+    "words": 24,
+    "sentences": 5,
+    "avg_conf": 0.8663
+  }
+}
