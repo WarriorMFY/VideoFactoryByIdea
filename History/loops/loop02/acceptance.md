@@ -1,6 +1,6 @@
 # 小循环 2 验收记录（自动生成）
 
-生成时间：2026-10-27T07:04:45.292Z　用例：`History\bench\l2_en`　MT 后端：**mymemory**
+生成时间：2026-10-27T07:25:50.447Z　用例：`History\bench\l2_en`　MT 后端：**mymemory**
 
 ## 结论
 
@@ -47,14 +47,14 @@
 
 ## 耗时
 
-- material: 8s
-- asr: 12s
-- cut: 22s
-- subs: 28s
-- remap: 28s
-- render: 40s
-- verify: 41s
-- 合计: 41s
+- material: 0s
+- asr: 4s
+- cut: 16s
+- subs: 16s
+- remap: 17s
+- render: 30s
+- verify: 32s
+- 合计: 32s
 
 ## 产物
 

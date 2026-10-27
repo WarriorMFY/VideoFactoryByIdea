@@ -18,7 +18,7 @@
 | 15:02 | 首次端到端验收 | WER 6.1%，但覆盖率 82.9% → 定位为 TTS 尾静音污染真值 |
 | 15:04 | 修素材（逐句 silenceremove）后复跑 | 覆盖率 99.8%，句界误差 0.016s → **PASS** |
 | 15:05 | 精译版（agent 后端）复跑 | 同时间轴换人工级译文，字相似度 85.7% → PASS |
-| 15:10 | 组装 Prototype/case_C_l2_en + 文档 + 提交 | 交付 |
+| 15:10 | 组装 Prototype/loop2_subtitles/case_C_en2zh + 文档 + 提交 | 交付 |
 
 ## 关键命令
 
@@ -67,7 +67,7 @@ node Tool\verify_subs.mjs History\asr\transcript.json History\bench\l2_en\ground
 - 精译版：`History/subs/l2_agent/`
 - 运行产物：`History/runs/l2_cut`、`History/runs/l2_subs_mymemory`、`History/runs/l2_subs_agent`
 - 验收：`History/loops/loop02/acceptance.md`、`acceptance_agent.md`
-- 交付包：`Prototype/case_C_l2_en/`（成片 ×2、双语 SRT、识别稿、验收数据、抽帧）
+- 交付包：`Prototype/loop2_subtitles/case_C_en2zh/`（成片 ×2、双语 SRT、识别稿、验收数据、抽帧）
 
 ## 未做（边界）
 

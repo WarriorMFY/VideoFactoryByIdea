@@ -6,9 +6,9 @@
 [render] 提取 1 段 ...
 [render] 合并 (fade) ...
 [render] 收尾(响度归一/淡入淡出/标题/字幕) ...
-[done] 11.7s -> D:\Data\DeepseekHarness\IdeaDrivenLoop\VideoFactory\History\runs\l2_subs_agent
+[done] 13.5s -> D:\Data\DeepseekHarness\IdeaDrivenLoop\VideoFactory\History\runs\l2_subs_mymemory
 [done] final=33.88s kept=1 cut=0 transition=single
-  - final.mp4 19936KB
+  - final.mp4 19923KB
   - edits.json 1KB
   - signals.json 0KB
   - probe.json 0KB

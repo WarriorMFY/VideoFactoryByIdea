@@ -1,9 +1,9 @@
 
 === 成片质检: PASS ===
-文件 final.mp4  19.469MB  33.878s
+文件 final.mp4  19.457MB  33.878s
 视频 h264/High/yuv420p 1280x720 30/1
 音频 aac 48000Hz 2ch 183kbps
 响度 -16.2 LUFS / 峰值 -1.5 dBTP / LRA 2.6 LU
 残留缺陷 黑场=0 冻帧=0 静音=0   音画时长差=0.045s
 检查项: has_video=ok h264=ok yuv420p=ok cfr=ok audio_aac_48k=ok loudness_ok=ok no_residual_black=ok av_synced=ok
-明细: D:\Data\DeepseekHarness\IdeaDrivenLoop\VideoFactory\History\runs\l2_subs_agent\qa.json
+明细: D:\Data\DeepseekHarness\IdeaDrivenLoop\VideoFactory\History\runs\l2_subs_mymemory\qa.json

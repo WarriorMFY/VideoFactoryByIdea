@@ -10,7 +10,7 @@
 | --- | --- |
 | `node Tool/run_acceptance.mjs` | **小循环 1 验收**：剪辑用例 → 真值对比 → 成片质检 → `History/loops/loop01/acceptance.md` |
 | `node Tool/run_subs_acceptance.mjs` | **小循环 2 验收**：造外语素材 → ASR → 剪辑 → 字幕 → 重映射 → 烧入 → 验收 → `History/loops/loop02/acceptance.md` |
-| `.\Prototype\reproduce.ps1` | 从零复现小循环 1（装 ffmpeg → 拉素材 → 验收） |
+| `.\Prototype\loop1_autocut\reproduce.ps1` | 从零复现小循环 1（装 ffmpeg → 拉素材 → 验收） |
 
 ## 环境引导（第三方依赖，落 Workspace）
 
@@ -92,7 +92,7 @@ node Tool\vfactory.mjs <源视频> --out <输出目录> [选项]
 3. **drawtext 字体**：`fontfile=C\:/Windows/...` 会静默回退默认衬线（中文变方块），必须写 `font=SimHei`；且需自建 `fonts.conf`（本机 ffmpeg 找不到默认配置、缓存目录不可写）。
 4. **日志格式**：`lavfi.scd.time:` 用冒号；`freezedetect` 在静帧黑场也会触发，黑场段须由 blackdetect 优先归属。
 5. **CJK 标题**：`SimHei` 可用；`arialbd` 无 CJK glyph。
-6. **PowerShell 是 5.1**（`$PSVersionTable.PSVersion` = 5.1.26100）：含中文的 `.ps1` 必须存成 **UTF-8 with BOM**，否则被按 ANSI 解析导致语法错误（`Prototype/reproduce.ps1` 已带 BOM；`.ps1` 里尽量只写 ASCII 注释）。
+6. **PowerShell 是 5.1**（`$PSVersionTable.PSVersion` = 5.1.26100）：含中文的 `.ps1` 必须存成 **UTF-8 with BOM**，否则被按 ANSI 解析导致语法错误（`Prototype/**/reproduce.ps1` 均为纯 ASCII；若确实要写中文，必须存成 UTF-8 with BOM）。
 7. **npm 在本沙箱不可靠**：npm install 会因 cache 目录越界/大包 ECONNRESET/"operation was rejected" 失败 → 用 `Tool/npm_fetch.mjs`（tarball + bsdtar）或 `Tool/bootstrap_asr.mjs`。
 8. **模型站点限制**：HuggingFace / ModelScope / hf-mirror 全域不可达（拿不到 Whisper 系模型）；alphacephei（Vosk 模型）可达但单连接 ~15KB/s 且会断 → 必须多线程分段 + 续传。
 9. **Windows SAPI TTS 被拒**：`SpVoice.Speak` 抛 `E_ACCESSDENIED`（沙箱限制），造测试语音改用 Edge 神经 TTS（`@andresaya/edge-tts`，需外网，实测可用）。

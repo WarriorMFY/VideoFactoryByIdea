@@ -46,7 +46,7 @@
 
 ---
 
-## 3. 交付物（`Prototype/case_C_l2_en/`）
+## 3. 交付物（`Prototype/loop2_subtitles/case_C_en2zh/`）
 
 | 文件 | 是什么 |
 | --- | --- |
@@ -58,19 +58,26 @@
 | `transcript.json` | 词级识别结果（词、起止、置信度） |
 | `cues.json` | 句子 + 译文 + 显示行（机器可读的字幕决策单） |
 | `script.txt` / `ground_truth.json` / `reference_zh.json` | 讲稿、真值（逐句时间）、人工精译参考 |
-| `acceptance_mt.md` / `acceptance_polished.md` | 两版验收记录（自动生成） |
 | `verify_subs.json` / `qa.json` / `timeline.png` / `contact_sheet.jpg` | 验收数据、质检数据、决策时间轴、抽帧拼图 |
+
+本级目录另有：`acceptance_mt.md` / `acceptance_polished.md`（两版验收记录，自动生成）、`reproduce.ps1`（一键复现）。
 
 > 源视频未随包（26MB），用 `node Tool/make_l2_bench.mjs` 一条命令即可重建（讲稿+语音+画面全自动生成）。
 
 ---
 
-## 4. 怎么用到你自己的视频上
+## 4. 复现 / 怎么用到你自己的视频上
 
 ```powershell
-# 0) 首次准备（本机只有 Node 能出网；npm install 大包会失败，故用 tarball 解包）
+# 一键复现本轮全部结论（在仓库根执行；幂等，已下的依赖/模型会复用）
+.\Prototype\loop2_subtitles\reproduce.ps1              # 机翻版全链路
+.\Prototype\loop2_subtitles\reproduce.ps1 -Polished    # 额外产出人工精译版
+```
+
+```powershell
+# 分步（首次准备）
 node Tool\bootstrap_asr.mjs            # koffi + libvosk + edge-tts（约 82MB，2 分钟）
-node Tool\fetch_vosk_model.mjs         # 英语模型 39MB（该主机很慢，脚本用 6 线程分段拉，约 15 分钟）
+node Tool\fetch_vosk_model.mjs         # 英语模型 39MB（源站限速，脚本用 6 线程分段拉，约 15 分钟）
 
 # 1) 跑一条外语视频
 node Tool\asr_vosk.mjs "你的外语视频.mp4" --out work\transcript.json
