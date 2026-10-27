@@ -1,64 +1,64 @@
 1
 00:00:00,030 --> 00:00:02,055
-欢迎回到工作坊，我们在这里把原始素材
+欢迎回到工作坊，将原始镜头放回成品胶
 welcome back to the workshop where return raw footage into
 
 2
 00:00:02,055 --> 00:00:04,080
-变成成片。
+片中
 finished films
 
 3
 00:00:04,410 --> 00:00:06,600
-今天我会演示三个简单的小技巧，
+今天我将向您展示三个简单的技巧，
 today i will show you three simple tricks that save about two
 
 4
 00:00:06,600 --> 00:00:08,790
-能省下大约两个小时的剪辑时间。
+可以节省大约两个小时的编辑时间
 hours of editing time
 
 5
 00:00:09,120 --> 00:00:11,265
-第一，永远在节拍上剪，
+首先，总是节拍，因为节奏是让观众保持
 first always cut on the beat because rhythm is what keeps the
 
 6
 00:00:11,265 --> 00:00:13,410
-因为节奏才能让观众保持清醒。
+清醒的原因
 audience awake
 
 7
 00:00:13,740 --> 00:00:16,110
-第二，在碰调色之前，
+在触摸颜色之前，将静音间隙移除超过半
 second remove the silent gaps longer than half a second before
 
 8
 00:00:16,110 --> 00:00:18,480
-先把长度超过半秒的静音空隙去掉。
+秒
 you touch the colors
 
 9
 00:00:18,780 --> 00:00:22,200
-第三，把音频响度归一到负十六 LUF
+第三，将音频标准化为负六十六l u 
 third normalize the audio to minus sixty sixteen l u fs which is
 
 10
 00:00:22,200 --> 00:00:25,620
-S，这是在线视频平台的标准。
+fs ，这是在线视频平台的标准
 the standard for online video platforms
 
 11
 00:00:25,950 --> 00:00:28,365
-最后，以每秒十五兆的码率导出，
+最终以每秒 15 Mbps的速度导出
 finally export at fifteen megabits per second and never trust
 
 12
 00:00:28,365 --> 00:00:30,780
-而且永远不要相信第一次渲染。
+，永远不要相信第一个渲染
 the first render
 
 13
 00:00:31,110 --> 00:00:33,840
-本期就到这里，我们下期见。
+就是这一集了，下集见
 that is it for this episode see you in the next one

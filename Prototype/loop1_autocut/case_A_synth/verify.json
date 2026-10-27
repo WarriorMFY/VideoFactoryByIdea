@@ -1,0 +1,123 @@
+{
+  "verdict": "PASS",
+  "criteria": {
+    "iou_min": 0.9,
+    "max_overcut_s": 0.6,
+    "max_undercut_s": 0.6,
+    "seg_survive_tol": 0.05,
+    "boundary_tol": 0.6
+  },
+  "measured": {
+    "gt_dropped_s": 10,
+    "actual_dropped_s": 10,
+    "tp_s": 10,
+    "overcut_s": 0,
+    "undercut_s": 0,
+    "iou": 1,
+    "precision": 1,
+    "recall": 1,
+    "max_boundary_err_s": 0,
+    "gt_kept_s": 32,
+    "actual_kept_s": 32
+  },
+  "pass": {
+    "iou": true,
+    "overcut": true,
+    "undercut": true,
+    "sections": true,
+    "boundary": true
+  },
+  "sections": [
+    {
+      "id": "A",
+      "start": 0,
+      "end": 8,
+      "expect": "keep",
+      "survive": 1,
+      "ok": true,
+      "why": "画面运动+音轨"
+    },
+    {
+      "id": "B",
+      "start": 8,
+      "end": 14,
+      "expect": "keep",
+      "survive": 1,
+      "ok": true,
+      "why": "画面运动+音轨"
+    },
+    {
+      "id": "C",
+      "start": 14,
+      "end": 20,
+      "expect": "drop",
+      "survive": 0,
+      "ok": true,
+      "why": "纯黑+静音"
+    },
+    {
+      "id": "D",
+      "start": 20,
+      "end": 24,
+      "expect": "drop",
+      "survive": 0,
+      "ok": true,
+      "why": "冻帧+静音（两路都无信息）"
+    },
+    {
+      "id": "E",
+      "start": 24,
+      "end": 30,
+      "expect": "keep",
+      "survive": 1,
+      "ok": true,
+      "why": "画面运动+音轨"
+    },
+    {
+      "id": "F",
+      "start": 30,
+      "end": 36,
+      "expect": "keep",
+      "survive": 1,
+      "ok": true,
+      "why": "冻帧但有音轨（口播类镜头），不得误切"
+    },
+    {
+      "id": "G",
+      "start": 36,
+      "end": 42,
+      "expect": "keep",
+      "survive": 1,
+      "ok": true,
+      "why": "静音但有画面信息（动作镜头），不得误切"
+    }
+  ],
+  "boundaries": [
+    {
+      "side": "gt",
+      "gt": 14,
+      "err": 0
+    },
+    {
+      "side": "gt",
+      "gt": 24,
+      "err": 0
+    },
+    {
+      "side": "actual",
+      "actual": 14,
+      "err": 0
+    },
+    {
+      "side": "actual",
+      "actual": 24,
+      "err": 0
+    }
+  ],
+  "source": {
+    "edl": "D:\\Data\\DeepseekHarness\\IdeaDrivenLoop\\VideoFactory\\History\\runs\\bench01\\edits.json",
+    "gt": "D:\\Data\\DeepseekHarness\\IdeaDrivenLoop\\VideoFactory\\History\\bench\\synth\\ground_truth.json",
+    "output_file": "D:\\Data\\DeepseekHarness\\IdeaDrivenLoop\\VideoFactory\\History\\runs\\bench01\\final.mp4",
+    "output_duration": 31.621
+  }
+}

@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-27T07:05:07.645Z",
+  "generated_at": "2026-10-27T07:25:35.148Z",
   "transcript": "D:\\Data\\DeepseekHarness\\IdeaDrivenLoop\\VideoFactory\\History\\asr\\transcript.json",
-  "mt_backend": "agent",
+  "mt_backend": "mymemory",
   "params": {
     "pause": 0.3,
     "maxSent": 110,
@@ -94,7 +94,7 @@
         }
       ],
       "en": "welcome back to the workshop where return raw footage into finished films",
-      "zh": "欢迎回到工作坊，我们在这里把原始素材变成成片。"
+      "zh": "欢迎回到工作坊，将原始镜头放回成品胶片中"
     },
     {
       "start": 4.41,
@@ -198,7 +198,7 @@
         }
       ],
       "en": "today i will show you three simple tricks that save about two hours of editing time",
-      "zh": "今天我会演示三个简单的小技巧，能省下大约两个小时的剪辑时间。"
+      "zh": "今天我将向您展示三个简单的技巧，可以节省大约两个小时的编辑时间"
     },
     {
       "start": 9.12,
@@ -290,7 +290,7 @@
         }
       ],
       "en": "first always cut on the beat because rhythm is what keeps the audience awake",
-      "zh": "第一，永远在节拍上剪，因为节奏才能让观众保持清醒。"
+      "zh": "首先，总是节拍，因为节奏是让观众保持清醒的原因"
     },
     {
       "start": 13.74,
@@ -388,7 +388,7 @@
         }
       ],
       "en": "second remove the silent gaps longer than half a second before you touch the colors",
-      "zh": "第二，在碰调色之前，先把长度超过半秒的静音空隙去掉。"
+      "zh": "在触摸颜色之前，将静音间隙移除超过半秒"
     },
     {
       "start": 18.78,
@@ -510,7 +510,7 @@
         }
       ],
       "en": "third normalize the audio to minus sixty sixteen l u fs which is the standard for online video platforms",
-      "zh": "第三，把音频响度归一到负十六 LUFS，这是在线视频平台的标准。"
+      "zh": "第三，将音频标准化为负六十六l u fs ，这是在线视频平台的标准"
     },
     {
       "start": 25.95,
@@ -596,7 +596,7 @@
         }
       ],
       "en": "finally export at fifteen megabits per second and never trust the first render",
-      "zh": "最后，以每秒十五兆的码率导出，而且永远不要相信第一次渲染。"
+      "zh": "最终以每秒 15 Mbps的速度导出，永远不要相信第一个渲染"
     },
     {
       "start": 31.11,
@@ -676,7 +676,7 @@
         }
       ],
       "en": "that is it for this episode see you in the next one",
-      "zh": "本期就到这里，我们下期见。"
+      "zh": "就是这一集了，下集见"
     }
   ],
   "cues": [
@@ -684,7 +684,7 @@
       "start": 0.03,
       "end": 2.055,
       "en": "welcome back to the workshop where return raw footage into",
-      "zh": "欢迎回到工作坊，我们在这里把原始素材",
+      "zh": "欢迎回到工作坊，将原始镜头放回成品胶",
       "conf": 0.936,
       "sent_en": "welcome back to the workshop where return raw footage into finished films"
     },
@@ -692,7 +692,7 @@
       "start": 2.055,
       "end": 4.08,
       "en": "finished films",
-      "zh": "变成成片。",
+      "zh": "片中",
       "conf": 0.936,
       "sent_en": "welcome back to the workshop where return raw footage into finished films"
     },
@@ -700,7 +700,7 @@
       "start": 4.41,
       "end": 6.6,
       "en": "today i will show you three simple tricks that save about two",
-      "zh": "今天我会演示三个简单的小技巧，",
+      "zh": "今天我将向您展示三个简单的技巧，",
       "conf": 1,
       "sent_en": "today i will show you three simple tricks that save about two hours of editing time"
     },
@@ -708,7 +708,7 @@
       "start": 6.6,
       "end": 8.79,
       "en": "hours of editing time",
-      "zh": "能省下大约两个小时的剪辑时间。",
+      "zh": "可以节省大约两个小时的编辑时间",
       "conf": 1,
       "sent_en": "today i will show you three simple tricks that save about two hours of editing time"
     },
@@ -716,7 +716,7 @@
       "start": 9.12,
       "end": 11.265,
       "en": "first always cut on the beat because rhythm is what keeps the",
-      "zh": "第一，永远在节拍上剪，",
+      "zh": "首先，总是节拍，因为节奏是让观众保持",
       "conf": 1,
       "sent_en": "first always cut on the beat because rhythm is what keeps the audience awake"
     },
@@ -724,7 +724,7 @@
       "start": 11.265,
       "end": 13.41,
       "en": "audience awake",
-      "zh": "因为节奏才能让观众保持清醒。",
+      "zh": "清醒的原因",
       "conf": 1,
       "sent_en": "first always cut on the beat because rhythm is what keeps the audience awake"
     },
@@ -732,7 +732,7 @@
       "start": 13.74,
       "end": 16.11,
       "en": "second remove the silent gaps longer than half a second before",
-      "zh": "第二，在碰调色之前，",
+      "zh": "在触摸颜色之前，将静音间隙移除超过半",
       "conf": 1,
       "sent_en": "second remove the silent gaps longer than half a second before you touch the colors"
     },
@@ -740,7 +740,7 @@
       "start": 16.11,
       "end": 18.48,
       "en": "you touch the colors",
-      "zh": "先把长度超过半秒的静音空隙去掉。",
+      "zh": "秒",
       "conf": 1,
       "sent_en": "second remove the silent gaps longer than half a second before you touch the colors"
     },
@@ -748,7 +748,7 @@
       "start": 18.78,
       "end": 22.2,
       "en": "third normalize the audio to minus sixty sixteen l u fs which is",
-      "zh": "第三，把音频响度归一到负十六 LUF",
+      "zh": "第三，将音频标准化为负六十六l u ",
       "conf": 0.877,
       "sent_en": "third normalize the audio to minus sixty sixteen l u fs which is the standard for online video platforms"
     },
@@ -756,7 +756,7 @@
       "start": 22.2,
       "end": 25.62,
       "en": "the standard for online video platforms",
-      "zh": "S，这是在线视频平台的标准。",
+      "zh": "fs ，这是在线视频平台的标准",
       "conf": 0.877,
       "sent_en": "third normalize the audio to minus sixty sixteen l u fs which is the standard for online video platforms"
     },
@@ -764,7 +764,7 @@
       "start": 25.95,
       "end": 28.365,
       "en": "finally export at fifteen megabits per second and never trust",
-      "zh": "最后，以每秒十五兆的码率导出，",
+      "zh": "最终以每秒 15 Mbps的速度导出",
       "conf": 0.98,
       "sent_en": "finally export at fifteen megabits per second and never trust the first render"
     },
@@ -772,7 +772,7 @@
       "start": 28.365,
       "end": 30.78,
       "en": "the first render",
-      "zh": "而且永远不要相信第一次渲染。",
+      "zh": "，永远不要相信第一个渲染",
       "conf": 0.98,
       "sent_en": "finally export at fifteen megabits per second and never trust the first render"
     },
@@ -780,7 +780,7 @@
       "start": 31.11,
       "end": 33.84,
       "en": "that is it for this episode see you in the next one",
-      "zh": "本期就到这里，我们下期见。",
+      "zh": "就是这一集了，下集见",
       "conf": 1,
       "sent_en": "that is it for this episode see you in the next one"
     }

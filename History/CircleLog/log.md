@@ -25,8 +25,8 @@
 | 开始时间 | 2026-10-27 13:56 |
 | 结束时间 | 2026-10-27 15:10（约 75 分钟；其中约 18 分钟耗在语音模型下载） |
 | 初始目标 | 外语（首个语种=英语）视频 → 自动识别 → 翻译成中文 → 生成字幕 → **按剪辑后时间轴对齐** → 烧入成片交付。素材与判据由 LLM 自主定义 |
-| 结束结果 | **连通，且每个环节都有数字验收**。新增字幕链路：`asr_vosk.mjs`（Vosk 离线 + koffi 直连 libvosk，词级时间戳）、`make_subs.mjs`（句子级翻译→显示行→SRT）、`remap_subs.mjs`（字幕随删减重映射，跨切点拆分）、`verify_subs.mjs`（WER/覆盖/句界/可读性/自检）、`run_subs_acceptance.mjs`（一键）。实测：**WER 6.1%**、语音覆盖 **99.8%**、句界误差 **0.016s（均）/0.045s（最大）**、13/13 条有中文、重映射无越界无重叠、成片 33.88s/720p/−16.2 LUFS 质检 PASS。另出**机翻 vs 人工精译**双版本对照（字相似度 62.9% → 85.7%），暴露"能看但不宜直接发布"的质量缺口。两条硬约束记录：HuggingFace/ModelScope 全域不可达（拿不到 Whisper 系模型）、Windows SAPI TTS 被沙箱拒（E_ACCESSDENIED）。交付在 `Prototype/case_C_l2_en/`（39.4MB） |
-| 人工反馈 | （待填 —— 等你看完成片与 `README_loop2_subtitles.md` 后回复） |
+| 结束结果 | **连通，且每个环节都有数字验收**。新增字幕链路：`asr_vosk.mjs`（Vosk 离线 + koffi 直连 libvosk，词级时间戳）、`make_subs.mjs`（句子级翻译→显示行→SRT）、`remap_subs.mjs`（字幕随删减重映射，跨切点拆分）、`verify_subs.mjs`（WER/覆盖/句界/可读性/自检）、`run_subs_acceptance.mjs`（一键）。实测：**WER 6.1%**、语音覆盖 **99.8%**、句界误差 **0.016s（均）/0.045s（最大）**、13/13 条有中文、重映射无越界无重叠、成片 33.88s/720p/−16.2 LUFS 质检 PASS。另出**机翻 vs 人工精译**双版本对照（字相似度 62.9% → 85.7%），暴露"能看但不宜直接发布"的质量缺口。两条硬约束记录：HuggingFace/ModelScope 全域不可达（拿不到 Whisper 系模型）、Windows SAPI TTS 被沙箱拒（E_ACCESSDENIED）。交付在 `Prototype/loop2_subtitles/case_C_en2zh/`（39.4MB） |
+| 人工反馈 | （待填 —— 等你看完成片与 `loop2_subtitles/README.md` 后回复） |
 
 ---
 
