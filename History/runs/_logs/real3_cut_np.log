@@ -1,4 +1,4 @@
-[probe] D:\Data\DeepseekHarness\IdeaDrivenLoop\VideoFactory\Workspace\assets\realspeech\sintel-trailer.mp4
+[probe] F:\AgentWorkArea\DeepseekHarness\IdeaDrivenAigc\VideoFactory\Workspace\assets\realspeech\sintel-trailer.mp4
 [probe] 52.21s 854x480 audio=true
 [analyze] blackdetect / freezedetect / scdet / silencedetect ...
 [analyze] black=8 freeze=14 silence=2 scenes=6
@@ -6,9 +6,9 @@
 [render] 提取 6 段 ...
 [render] 合并 (fade) ...
 [render] 收尾(响度归一/淡入淡出/标题) ...
-[done] 15.0s -> D:\Data\DeepseekHarness\IdeaDrivenLoop\VideoFactory\History\runs\real3_cut_noprotect
+[done] 22.6s -> F:\AgentWorkArea\DeepseekHarness\IdeaDrivenAigc\VideoFactory\History\runs\real3_cut_noprotect
 [done] final=36.76s kept=6 cut=7 transition=xfade(fade,0.4s)
-  - final.mp4 9423KB
+  - final.mp4 9428KB
   - edits.json 4KB
   - signals.json 2KB
   - probe.json 0KB

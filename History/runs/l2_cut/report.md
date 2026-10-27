@@ -2,7 +2,7 @@
 
 | 项 | 值 |
 | --- | --- |
-| 源文件 | `source.mp4` (26.3 MB, mov,mp4,m4a,3gp,3g2,mj2) |
+| 源文件 | `source.mp4` (27.5 MB, mov,mp4,m4a,3gp,3g2,mj2) |
 | 源时长 | 0:33.9 (33.88s) |
 | 源规格 | 1920x1080 h264 @ 60/1 / aac 48000Hz 2ch |
 | 成片时长 | 33.88s（切除 0.00s / 0.0%） |
@@ -11,7 +11,7 @@
 
 ## 输入信号（自动探测）
 
-- 黑场 0 段，冻帧 0 段，静音 1 段，场景切点 3 个
+- 黑场 0 段，冻帧 0 段，静音 1 段，场景切点 12 个
 
 ## 剪辑决策（1 个保留段）
 
@@ -57,7 +57,7 @@
 ## 复现
 
 ```powershell
-node Tool\edit\vfactory.mjs "D:\Data\DeepseekHarness\IdeaDrivenLoop\VideoFactory\History\bench\l2_en\source.mp4" --out out --title "..."
+node Tool\edit\vfactory.mjs "F:\AgentWorkArea\DeepseekHarness\IdeaDrivenAigc\VideoFactory\History\bench\l2_en\source.mp4" --out out --title "..."
 ```
 
 每步 ffmpeg 命令见 `runlog.jsonl`。

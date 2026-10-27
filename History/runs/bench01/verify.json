@@ -115,9 +115,9 @@
     }
   ],
   "source": {
-    "edl": "D:\\Data\\DeepseekHarness\\IdeaDrivenLoop\\VideoFactory\\History\\runs\\bench01\\edits.json",
-    "gt": "D:\\Data\\DeepseekHarness\\IdeaDrivenLoop\\VideoFactory\\History\\bench\\synth\\ground_truth.json",
-    "output_file": "D:\\Data\\DeepseekHarness\\IdeaDrivenLoop\\VideoFactory\\History\\runs\\bench01\\final.mp4",
+    "edl": "F:\\AgentWorkArea\\DeepseekHarness\\IdeaDrivenAigc\\VideoFactory\\History\\runs\\bench01\\edits.json",
+    "gt": "F:\\AgentWorkArea\\DeepseekHarness\\IdeaDrivenAigc\\VideoFactory\\History\\bench\\synth\\ground_truth.json",
+    "output_file": "F:\\AgentWorkArea\\DeepseekHarness\\IdeaDrivenAigc\\VideoFactory\\History\\runs\\bench01\\final.mp4",
     "output_duration": 31.621
   }
 }

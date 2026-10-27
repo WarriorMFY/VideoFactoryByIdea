@@ -48,9 +48,9 @@
     "remap": true
   },
   "source": {
-    "transcript": "D:\\Data\\DeepseekHarness\\IdeaDrivenLoop\\VideoFactory\\History\\asr\\transcript_real.json",
-    "ground_truth": "D:\\Data\\DeepseekHarness\\IdeaDrivenLoop\\VideoFactory\\History\\bench\\real_en\\ground_truth.json",
-    "cues": "D:\\Data\\DeepseekHarness\\IdeaDrivenLoop\\VideoFactory\\History\\subs\\real3\\cues.json",
-    "remap": "D:\\Data\\DeepseekHarness\\IdeaDrivenLoop\\VideoFactory\\History\\subs\\real3\\remapped\\remap.json"
+    "transcript": "F:\\AgentWorkArea\\DeepseekHarness\\IdeaDrivenAigc\\VideoFactory\\History\\asr\\transcript_real.json",
+    "ground_truth": "F:\\AgentWorkArea\\DeepseekHarness\\IdeaDrivenAigc\\VideoFactory\\History\\bench\\real_en\\ground_truth.json",
+    "cues": "F:\\AgentWorkArea\\DeepseekHarness\\IdeaDrivenAigc\\VideoFactory\\History\\subs\\real3\\cues.json",
+    "remap": "F:\\AgentWorkArea\\DeepseekHarness\\IdeaDrivenAigc\\VideoFactory\\History\\subs\\real3\\remapped\\remap.json"
   }
 }

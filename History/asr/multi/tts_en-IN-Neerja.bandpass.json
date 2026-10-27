@@ -1,0 +1,559 @@
+{
+  "generated_at": "2026-10-27T14:06:08.346Z",
+  "engine": "vosk",
+  "model": "vosk-model-small-en-us-0.15",
+  "model_license": "Apache-2.0",
+  "audio_filter": "afftdn=nf=-25,highpass=f=300,lowpass=f=3400",
+  "input": "F:\\AgentWorkArea\\DeepseekHarness\\IdeaDrivenAigc\\VideoFactory\\Workspace\\assets\\speech4tts\\en-IN-Neerja\\source.mp4",
+  "audio_duration_s": 30.293,
+  "text": "good evening and welcome to the second half of our factory tour in the next five minutes you will see how a rock club becomes a finished food the robot arm picks up twelve small boxes and stacks them beside the conveyor belt notice that the a never touches the color wheel before the sound is balanced if the dial org louder than the music by more than six decibels the audience will complain that is all for tonight thank you for watching and see you tomorrow at it",
+  "words": [
+    {
+      "word": "good",
+      "start": 0.06,
+      "end": 0.24,
+      "conf": 1
+    },
+    {
+      "word": "evening",
+      "start": 0.24,
+      "end": 0.72,
+      "conf": 1
+    },
+    {
+      "word": "and",
+      "start": 0.93,
+      "end": 1.14,
+      "conf": 1
+    },
+    {
+      "word": "welcome",
+      "start": 1.14,
+      "end": 1.65,
+      "conf": 1
+    },
+    {
+      "word": "to",
+      "start": 1.65,
+      "end": 1.77,
+      "conf": 1
+    },
+    {
+      "word": "the",
+      "start": 1.77,
+      "end": 1.86,
+      "conf": 1
+    },
+    {
+      "word": "second",
+      "start": 1.86,
+      "end": 2.31,
+      "conf": 1
+    },
+    {
+      "word": "half",
+      "start": 2.31,
+      "end": 2.64,
+      "conf": 1
+    },
+    {
+      "word": "of",
+      "start": 2.64,
+      "end": 2.79,
+      "conf": 1
+    },
+    {
+      "word": "our",
+      "start": 2.79,
+      "end": 2.91,
+      "conf": 0.629299
+    },
+    {
+      "word": "factory",
+      "start": 2.91,
+      "end": 3.39,
+      "conf": 1
+    },
+    {
+      "word": "tour",
+      "start": 3.39,
+      "end": 3.75,
+      "conf": 1
+    },
+    {
+      "word": "in",
+      "start": 4.08,
+      "end": 4.26,
+      "conf": 1
+    },
+    {
+      "word": "the",
+      "start": 4.26,
+      "end": 4.35,
+      "conf": 1
+    },
+    {
+      "word": "next",
+      "start": 4.35,
+      "end": 4.74,
+      "conf": 1
+    },
+    {
+      "word": "five",
+      "start": 4.74,
+      "end": 5.07,
+      "conf": 1
+    },
+    {
+      "word": "minutes",
+      "start": 5.07,
+      "end": 5.52,
+      "conf": 1
+    },
+    {
+      "word": "you",
+      "start": 5.82,
+      "end": 6,
+      "conf": 1
+    },
+    {
+      "word": "will",
+      "start": 6,
+      "end": 6.15,
+      "conf": 1
+    },
+    {
+      "word": "see",
+      "start": 6.15,
+      "end": 6.39,
+      "conf": 1
+    },
+    {
+      "word": "how",
+      "start": 6.39,
+      "end": 6.72,
+      "conf": 1
+    },
+    {
+      "word": "a",
+      "start": 6.72,
+      "end": 6.78,
+      "conf": 0.784377
+    },
+    {
+      "word": "rock",
+      "start": 6.78,
+      "end": 7.11,
+      "conf": 0.784377
+    },
+    {
+      "word": "club",
+      "start": 7.11,
+      "end": 7.35,
+      "conf": 0.784377
+    },
+    {
+      "word": "becomes",
+      "start": 7.35,
+      "end": 7.86,
+      "conf": 1
+    },
+    {
+      "word": "a",
+      "start": 7.86,
+      "end": 7.92,
+      "conf": 0.379859
+    },
+    {
+      "word": "finished",
+      "start": 7.957209,
+      "end": 8.4,
+      "conf": 1
+    },
+    {
+      "word": "food",
+      "start": 8.4,
+      "end": 8.73,
+      "conf": 0.82074
+    },
+    {
+      "word": "the",
+      "start": 9.12,
+      "end": 9.27,
+      "conf": 1
+    },
+    {
+      "word": "robot",
+      "start": 9.27,
+      "end": 9.75,
+      "conf": 1
+    },
+    {
+      "word": "arm",
+      "start": 9.75,
+      "end": 9.93,
+      "conf": 1
+    },
+    {
+      "word": "picks",
+      "start": 9.93,
+      "end": 10.26,
+      "conf": 0.555029
+    },
+    {
+      "word": "up",
+      "start": 10.26,
+      "end": 10.47,
+      "conf": 1
+    },
+    {
+      "word": "twelve",
+      "start": 10.47,
+      "end": 10.86,
+      "conf": 1
+    },
+    {
+      "word": "small",
+      "start": 10.86,
+      "end": 11.28,
+      "conf": 1
+    },
+    {
+      "word": "boxes",
+      "start": 11.28,
+      "end": 11.82,
+      "conf": 1
+    },
+    {
+      "word": "and",
+      "start": 11.82,
+      "end": 12.06,
+      "conf": 1
+    },
+    {
+      "word": "stacks",
+      "start": 12.06,
+      "end": 12.51,
+      "conf": 1
+    },
+    {
+      "word": "them",
+      "start": 12.51,
+      "end": 12.78,
+      "conf": 1
+    },
+    {
+      "word": "beside",
+      "start": 12.78,
+      "end": 13.26,
+      "conf": 1
+    },
+    {
+      "word": "the",
+      "start": 13.26,
+      "end": 13.38,
+      "conf": 1
+    },
+    {
+      "word": "conveyor",
+      "start": 13.38,
+      "end": 13.8,
+      "conf": 0.855928
+    },
+    {
+      "word": "belt",
+      "start": 13.8,
+      "end": 14.25,
+      "conf": 1
+    },
+    {
+      "word": "notice",
+      "start": 14.61,
+      "end": 15.09,
+      "conf": 0.762756
+    },
+    {
+      "word": "that",
+      "start": 15.097117,
+      "end": 15.27,
+      "conf": 1
+    },
+    {
+      "word": "the",
+      "start": 15.27,
+      "end": 15.42,
+      "conf": 1
+    },
+    {
+      "word": "a",
+      "start": 15.42,
+      "end": 15.54,
+      "conf": 0.664343
+    },
+    {
+      "word": "never",
+      "start": 15.863996,
+      "end": 16.2,
+      "conf": 1
+    },
+    {
+      "word": "touches",
+      "start": 16.2,
+      "end": 16.65,
+      "conf": 1
+    },
+    {
+      "word": "the",
+      "start": 16.65,
+      "end": 16.77,
+      "conf": 1
+    },
+    {
+      "word": "color",
+      "start": 16.77,
+      "end": 17.1,
+      "conf": 0.552769
+    },
+    {
+      "word": "wheel",
+      "start": 17.1,
+      "end": 17.37,
+      "conf": 0.552769
+    },
+    {
+      "word": "before",
+      "start": 17.37,
+      "end": 17.76,
+      "conf": 1
+    },
+    {
+      "word": "the",
+      "start": 17.76,
+      "end": 17.88,
+      "conf": 1
+    },
+    {
+      "word": "sound",
+      "start": 17.88,
+      "end": 18.33,
+      "conf": 1
+    },
+    {
+      "word": "is",
+      "start": 18.33,
+      "end": 18.48,
+      "conf": 1
+    },
+    {
+      "word": "balanced",
+      "start": 18.48,
+      "end": 19.11,
+      "conf": 1
+    },
+    {
+      "word": "if",
+      "start": 19.47,
+      "end": 19.62,
+      "conf": 1
+    },
+    {
+      "word": "the",
+      "start": 19.62,
+      "end": 19.77,
+      "conf": 1
+    },
+    {
+      "word": "dial",
+      "start": 19.77,
+      "end": 20.16,
+      "conf": 0.526934
+    },
+    {
+      "word": "org",
+      "start": 20.16,
+      "end": 20.34,
+      "conf": 0.410743
+    },
+    {
+      "word": "louder",
+      "start": 20.49,
+      "end": 20.91,
+      "conf": 1
+    },
+    {
+      "word": "than",
+      "start": 20.91,
+      "end": 21.21,
+      "conf": 1
+    },
+    {
+      "word": "the",
+      "start": 21.21,
+      "end": 21.3,
+      "conf": 1
+    },
+    {
+      "word": "music",
+      "start": 21.3,
+      "end": 21.78,
+      "conf": 1
+    },
+    {
+      "word": "by",
+      "start": 21.78,
+      "end": 21.96,
+      "conf": 1
+    },
+    {
+      "word": "more",
+      "start": 21.96,
+      "end": 22.23,
+      "conf": 1
+    },
+    {
+      "word": "than",
+      "start": 22.23,
+      "end": 22.5,
+      "conf": 1
+    },
+    {
+      "word": "six",
+      "start": 22.5,
+      "end": 22.86,
+      "conf": 1
+    },
+    {
+      "word": "decibels",
+      "start": 22.86,
+      "end": 23.49,
+      "conf": 1
+    },
+    {
+      "word": "the",
+      "start": 23.67,
+      "end": 23.82,
+      "conf": 1
+    },
+    {
+      "word": "audience",
+      "start": 23.82,
+      "end": 24.39,
+      "conf": 1
+    },
+    {
+      "word": "will",
+      "start": 24.39,
+      "end": 24.6,
+      "conf": 1
+    },
+    {
+      "word": "complain",
+      "start": 24.6,
+      "end": 25.23,
+      "conf": 1
+    },
+    {
+      "word": "that",
+      "start": 25.62,
+      "end": 25.92,
+      "conf": 1
+    },
+    {
+      "word": "is",
+      "start": 25.92,
+      "end": 26.04,
+      "conf": 0.830686
+    },
+    {
+      "word": "all",
+      "start": 26.04,
+      "end": 26.28,
+      "conf": 0.556802
+    },
+    {
+      "word": "for",
+      "start": 26.28,
+      "end": 26.43,
+      "conf": 1
+    },
+    {
+      "word": "tonight",
+      "start": 26.43,
+      "end": 26.97,
+      "conf": 1
+    },
+    {
+      "word": "thank",
+      "start": 27.21,
+      "end": 27.54,
+      "conf": 1
+    },
+    {
+      "word": "you",
+      "start": 27.54,
+      "end": 27.66,
+      "conf": 1
+    },
+    {
+      "word": "for",
+      "start": 27.66,
+      "end": 27.81,
+      "conf": 1
+    },
+    {
+      "word": "watching",
+      "start": 27.81,
+      "end": 28.32,
+      "conf": 1
+    },
+    {
+      "word": "and",
+      "start": 28.59,
+      "end": 28.77,
+      "conf": 1
+    },
+    {
+      "word": "see",
+      "start": 28.77,
+      "end": 28.98,
+      "conf": 1
+    },
+    {
+      "word": "you",
+      "start": 28.98,
+      "end": 29.13,
+      "conf": 1
+    },
+    {
+      "word": "tomorrow",
+      "start": 29.13,
+      "end": 29.7,
+      "conf": 1
+    },
+    {
+      "word": "at",
+      "start": 29.73,
+      "end": 29.97,
+      "conf": 1
+    },
+    {
+      "word": "it",
+      "start": 29.97,
+      "end": 30.27,
+      "conf": 1
+    }
+  ],
+  "sentences": [
+    {
+      "start": 0.06,
+      "end": 30.27,
+      "text": "good evening and welcome to the second half of our factory tour in the next five minutes you will see how a rock club becomes a finished food the robot arm picks up twelve small boxes and stacks them beside the conveyor belt notice that the a never touches the color wheel before the sound is balanced if the dial org louder than the music by more than six decibels the audience will complain that is all for tonight thank you for watching and see you tomorrow at it",
+      "n": 89
+    }
+  ],
+  "stats": {
+    "words": 89,
+    "sentences": 1,
+    "avg_conf": 0.9377
+  }
+}

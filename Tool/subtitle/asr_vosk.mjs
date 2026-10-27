@@ -22,7 +22,10 @@ const MODEL = path.resolve(getOpt('--model', path.join(ROOT, 'Workspace', 'asr',
 const OUT = path.resolve(getOpt('--out', path.join(ROOT, 'History', 'asr', 'transcript.json')));
 const AF = getOpt('--af', '');   // 可选音频预处理链，例如 "highpass=f=200,loudnorm=I=-16"
 const ASRDIR = path.join(ROOT, 'Workspace', 'asr');
-const WORK = path.join(path.dirname(OUT), '.asr_work');
+// 工作目录必须**每次独立**：曾经用固定的 .asr_work，结果同一目录被两个识别进程共用
+// （上一个被 kill 的 job 留下的孤儿进程 + 新进程），读回来的 PCM 是别人的音频，
+// 于是"33 秒的片子"识别出 262 秒的词、字幕时间码全错位。用 pid + 输出名隔离。
+const WORK = path.join(path.dirname(OUT), '.asr_work', `${path.basename(OUT, '.json')}_${process.pid}`);
 fs.mkdirSync(WORK, { recursive: true });
 
 const require = createRequire(path.join(ASRDIR, 'index.cjs'));
@@ -48,6 +51,12 @@ const r = ffmpeg(extractArgs, path.join(WORK, 'extract.log'));
 if (r.status !== 0) { console.error('抽音频失败:', r.text.split('\n').slice(-6).join(' | ')); process.exit(1); }
 const pcm = fs.readFileSync(pcmFile);
 const audioDur = pcm.length / (16000 * 2);
+// 自检：抽出来的音频时长必须和输入对得上（防"读到别人的 PCM"这类静默错误）
+const srcDur = durationOf(input, path.join(WORK, 'src_dur.log'));
+if (srcDur > 1 && Math.abs(audioDur - srcDur) > Math.max(1.0, srcDur * 0.02)) {
+  console.error(`抽音频时长与输入不符：PCM ${audioDur.toFixed(2)}s vs 输入 ${srcDur.toFixed(2)}s（${WORK}）`);
+  process.exit(1);
+}
 
 // ---- 2. 识别 ----
 if (!fs.existsSync(MODEL)) { console.error('模型不存在:', MODEL, '（先跑 node Tool/fetch_vosk_model.mjs）'); process.exit(1); }
@@ -118,6 +127,7 @@ const out = {
 };
 fs.mkdirSync(path.dirname(OUT), { recursive: true });
 fs.writeFileSync(OUT, JSON.stringify(out, null, 2));
+fs.rmSync(WORK, { recursive: true, force: true }); // 临时 PCM 占空间（16k 单声道 ≈ 32KB/s），用完即删
 console.log(`[asr] ${path.basename(input)} -> ${words.length} words / ${sentences.length} sentences / audio ${audioDur.toFixed(2)}s / avg conf ${out.stats.avg_conf}`);
 console.log(`[asr] text: ${text.slice(0, 220)}${text.length > 220 ? '…' : ''}`);
 console.log(`[asr] -> ${OUT}`);

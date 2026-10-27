@@ -1,0 +1,700 @@
+{
+  "generated_at": "2026-10-27T14:06:18.786Z",
+  "transcript": "F:\\AgentWorkArea\\DeepseekHarness\\IdeaDrivenAigc\\VideoFactory\\History\\asr\\multi\\tts_en-IN-Neerja.json",
+  "mt_backend": "mymemory",
+  "params": {
+    "pause": 0.3,
+    "maxSent": 110,
+    "minSentChars": 12,
+    "maxZh": 18,
+    "maxEn": 64,
+    "minCue": 0.8
+  },
+  "stats": {
+    "sentences": 6,
+    "cues": 12,
+    "words": 89
+  },
+  "sentences": [
+    {
+      "start": 0.03,
+      "end": 3.72,
+      "words": [
+        {
+          "word": "good",
+          "start": 0.03,
+          "end": 0.21,
+          "conf": 1
+        },
+        {
+          "word": "evening",
+          "start": 0.21,
+          "end": 0.72,
+          "conf": 1
+        },
+        {
+          "word": "and",
+          "start": 0.9,
+          "end": 1.11,
+          "conf": 1
+        },
+        {
+          "word": "welcome",
+          "start": 1.11,
+          "end": 1.62,
+          "conf": 1
+        },
+        {
+          "word": "to",
+          "start": 1.62,
+          "end": 1.74,
+          "conf": 1
+        },
+        {
+          "word": "the",
+          "start": 1.74,
+          "end": 1.83,
+          "conf": 1
+        },
+        {
+          "word": "second",
+          "start": 1.83,
+          "end": 2.28,
+          "conf": 1
+        },
+        {
+          "word": "half",
+          "start": 2.28,
+          "end": 2.61,
+          "conf": 1
+        },
+        {
+          "word": "of",
+          "start": 2.61,
+          "end": 2.76,
+          "conf": 1
+        },
+        {
+          "word": "all",
+          "start": 2.76,
+          "end": 2.88,
+          "conf": 0.592435
+        },
+        {
+          "word": "factory",
+          "start": 2.88,
+          "end": 3.36,
+          "conf": 1
+        },
+        {
+          "word": "tour",
+          "start": 3.36,
+          "end": 3.72,
+          "conf": 1
+        }
+      ],
+      "en": "good evening and welcome to the second half of all factory tour",
+      "zh": "晚上好，欢迎来到所有工厂参观的下半场"
+    },
+    {
+      "start": 4.08,
+      "end": 8.73,
+      "words": [
+        {
+          "word": "in",
+          "start": 4.08,
+          "end": 4.23,
+          "conf": 1
+        },
+        {
+          "word": "the",
+          "start": 4.23,
+          "end": 4.32,
+          "conf": 1
+        },
+        {
+          "word": "next",
+          "start": 4.32,
+          "end": 4.71,
+          "conf": 1
+        },
+        {
+          "word": "five",
+          "start": 4.71,
+          "end": 5.04,
+          "conf": 1
+        },
+        {
+          "word": "minutes",
+          "start": 5.04,
+          "end": 5.52,
+          "conf": 1
+        },
+        {
+          "word": "you",
+          "start": 5.79,
+          "end": 5.97,
+          "conf": 1
+        },
+        {
+          "word": "will",
+          "start": 5.97,
+          "end": 6.15,
+          "conf": 1
+        },
+        {
+          "word": "see",
+          "start": 6.15,
+          "end": 6.39,
+          "conf": 1
+        },
+        {
+          "word": "how",
+          "start": 6.39,
+          "end": 6.69,
+          "conf": 1
+        },
+        {
+          "word": "iraq",
+          "start": 6.69,
+          "end": 7.14,
+          "conf": 0.615474
+        },
+        {
+          "word": "live",
+          "start": 7.14,
+          "end": 7.32,
+          "conf": 0.742677
+        },
+        {
+          "word": "becomes",
+          "start": 7.32772,
+          "end": 7.828472,
+          "conf": 1
+        },
+        {
+          "word": "a",
+          "start": 7.83,
+          "end": 7.89,
+          "conf": 0.408804
+        },
+        {
+          "word": "finished",
+          "start": 7.922416,
+          "end": 8.37,
+          "conf": 1
+        },
+        {
+          "word": "film",
+          "start": 8.37,
+          "end": 8.73,
+          "conf": 0.844173
+        }
+      ],
+      "en": "in the next five minutes you will see how iraq live becomes a finished film",
+      "zh": "在接下来的五分钟内，您将看到伊拉克现场如何成为一部成品电影"
+    },
+    {
+      "start": 9.09,
+      "end": 14.25,
+      "words": [
+        {
+          "word": "the",
+          "start": 9.09,
+          "end": 9.24,
+          "conf": 1
+        },
+        {
+          "word": "robot",
+          "start": 9.24,
+          "end": 9.72,
+          "conf": 1
+        },
+        {
+          "word": "arm",
+          "start": 9.72,
+          "end": 9.9,
+          "conf": 1
+        },
+        {
+          "word": "picks",
+          "start": 9.9,
+          "end": 10.23,
+          "conf": 1
+        },
+        {
+          "word": "up",
+          "start": 10.23,
+          "end": 10.44,
+          "conf": 1
+        },
+        {
+          "word": "twelve",
+          "start": 10.44,
+          "end": 10.83,
+          "conf": 1
+        },
+        {
+          "word": "small",
+          "start": 10.83,
+          "end": 11.25,
+          "conf": 1
+        },
+        {
+          "word": "boxes",
+          "start": 11.28,
+          "end": 11.82,
+          "conf": 1
+        },
+        {
+          "word": "and",
+          "start": 11.82,
+          "end": 12.03,
+          "conf": 1
+        },
+        {
+          "word": "stacks",
+          "start": 12.03,
+          "end": 12.51,
+          "conf": 1
+        },
+        {
+          "word": "them",
+          "start": 12.51,
+          "end": 12.75,
+          "conf": 1
+        },
+        {
+          "word": "beside",
+          "start": 12.75,
+          "end": 13.23,
+          "conf": 1
+        },
+        {
+          "word": "the",
+          "start": 13.23,
+          "end": 13.35,
+          "conf": 1
+        },
+        {
+          "word": "conveyor",
+          "start": 13.35,
+          "end": 13.77,
+          "conf": 0.855927
+        },
+        {
+          "word": "belt",
+          "start": 13.77,
+          "end": 14.25,
+          "conf": 1
+        }
+      ],
+      "en": "the robot arm picks up twelve small boxes and stacks them beside the conveyor belt",
+      "zh": "机械臂拿起十二个小盒子，堆放在传送带旁边"
+    },
+    {
+      "start": 14.58,
+      "end": 19.11,
+      "words": [
+        {
+          "word": "notice",
+          "start": 14.58,
+          "end": 15.06,
+          "conf": 1
+        },
+        {
+          "word": "that",
+          "start": 15.06,
+          "end": 15.27,
+          "conf": 1
+        },
+        {
+          "word": "the",
+          "start": 15.27,
+          "end": 15.39,
+          "conf": 1
+        },
+        {
+          "word": "editor",
+          "start": 15.39,
+          "end": 15.81,
+          "conf": 1
+        },
+        {
+          "word": "never",
+          "start": 15.81,
+          "end": 16.17,
+          "conf": 1
+        },
+        {
+          "word": "touches",
+          "start": 16.17,
+          "end": 16.62,
+          "conf": 1
+        },
+        {
+          "word": "the",
+          "start": 16.62,
+          "end": 16.74,
+          "conf": 1
+        },
+        {
+          "word": "color",
+          "start": 16.74,
+          "end": 17.07,
+          "conf": 1
+        },
+        {
+          "word": "wheel",
+          "start": 17.07,
+          "end": 17.37,
+          "conf": 1
+        },
+        {
+          "word": "before",
+          "start": 17.37,
+          "end": 17.76,
+          "conf": 1
+        },
+        {
+          "word": "the",
+          "start": 17.76,
+          "end": 17.88,
+          "conf": 1
+        },
+        {
+          "word": "sound",
+          "start": 17.88,
+          "end": 18.3,
+          "conf": 1
+        },
+        {
+          "word": "is",
+          "start": 18.3,
+          "end": 18.45,
+          "conf": 1
+        },
+        {
+          "word": "balanced",
+          "start": 18.45,
+          "end": 19.11,
+          "conf": 1
+        }
+      ],
+      "en": "notice that the editor never touches the color wheel before the sound is balanced",
+      "zh": "请注意，在平衡声音之前，编辑器从未触摸过色轮"
+    },
+    {
+      "start": 19.44,
+      "end": 25.2,
+      "words": [
+        {
+          "word": "if",
+          "start": 19.44,
+          "end": 19.59,
+          "conf": 1
+        },
+        {
+          "word": "the",
+          "start": 19.59,
+          "end": 19.74,
+          "conf": 1
+        },
+        {
+          "word": "dialogue",
+          "start": 19.74,
+          "end": 20.16,
+          "conf": 0.466217
+        },
+        {
+          "word": "org",
+          "start": 20.16,
+          "end": 20.308526,
+          "conf": 0.49228
+        },
+        {
+          "word": "is",
+          "start": 20.308526,
+          "end": 20.46,
+          "conf": 0.831425
+        },
+        {
+          "word": "louder",
+          "start": 20.46,
+          "end": 20.88,
+          "conf": 1
+        },
+        {
+          "word": "than",
+          "start": 20.88,
+          "end": 21.18,
+          "conf": 1
+        },
+        {
+          "word": "the",
+          "start": 21.18,
+          "end": 21.27,
+          "conf": 1
+        },
+        {
+          "word": "music",
+          "start": 21.27,
+          "end": 21.75,
+          "conf": 1
+        },
+        {
+          "word": "by",
+          "start": 21.75,
+          "end": 21.93,
+          "conf": 1
+        },
+        {
+          "word": "more",
+          "start": 21.93,
+          "end": 22.2,
+          "conf": 1
+        },
+        {
+          "word": "than",
+          "start": 22.2,
+          "end": 22.47,
+          "conf": 1
+        },
+        {
+          "word": "six",
+          "start": 22.47,
+          "end": 22.83,
+          "conf": 1
+        },
+        {
+          "word": "decibels",
+          "start": 22.83,
+          "end": 23.49,
+          "conf": 1
+        },
+        {
+          "word": "the",
+          "start": 23.64,
+          "end": 23.79,
+          "conf": 1
+        },
+        {
+          "word": "audience",
+          "start": 23.79,
+          "end": 24.39,
+          "conf": 1
+        },
+        {
+          "word": "will",
+          "start": 24.39,
+          "end": 24.6,
+          "conf": 1
+        },
+        {
+          "word": "complain",
+          "start": 24.6,
+          "end": 25.2,
+          "conf": 1
+        }
+      ],
+      "en": "if the dialogue org is louder than the music by more than six decibels the audience will complain",
+      "zh": "如果对话组织比音乐响亮超过六分贝，观众会抱怨"
+    },
+    {
+      "start": 25.59,
+      "end": 30.24,
+      "words": [
+        {
+          "word": "that",
+          "start": 25.59,
+          "end": 25.89,
+          "conf": 1
+        },
+        {
+          "word": "is",
+          "start": 25.89,
+          "end": 26.04,
+          "conf": 0.879578
+        },
+        {
+          "word": "all",
+          "start": 26.04,
+          "end": 26.25,
+          "conf": 0.619791
+        },
+        {
+          "word": "for",
+          "start": 26.25,
+          "end": 26.43,
+          "conf": 1
+        },
+        {
+          "word": "tonight",
+          "start": 26.43,
+          "end": 26.97,
+          "conf": 1
+        },
+        {
+          "word": "thank",
+          "start": 27.18,
+          "end": 27.51,
+          "conf": 1
+        },
+        {
+          "word": "you",
+          "start": 27.51,
+          "end": 27.63,
+          "conf": 1
+        },
+        {
+          "word": "for",
+          "start": 27.63,
+          "end": 27.78,
+          "conf": 1
+        },
+        {
+          "word": "watching",
+          "start": 27.78,
+          "end": 28.32,
+          "conf": 1
+        },
+        {
+          "word": "and",
+          "start": 28.56,
+          "end": 28.74,
+          "conf": 1
+        },
+        {
+          "word": "see",
+          "start": 28.74,
+          "end": 28.98,
+          "conf": 1
+        },
+        {
+          "word": "you",
+          "start": 28.98,
+          "end": 29.1,
+          "conf": 1
+        },
+        {
+          "word": "tomorrow",
+          "start": 29.1,
+          "end": 29.7,
+          "conf": 1
+        },
+        {
+          "word": "at",
+          "start": 29.7,
+          "end": 29.94,
+          "conf": 1
+        },
+        {
+          "word": "it",
+          "start": 29.94,
+          "end": 30.24,
+          "conf": 1
+        }
+      ],
+      "en": "that is all for tonight thank you for watching and see you tomorrow at it",
+      "zh": "今晚到此结束，感谢您的收看，明天见"
+    }
+  ],
+  "cues": [
+    {
+      "start": 0.03,
+      "end": 3.72,
+      "en": "good evening and welcome to the second half of all factory tour",
+      "zh": "晚上好，欢迎来到所有工厂参观的下半场",
+      "conf": 0.966,
+      "sent_en": "good evening and welcome to the second half of all factory tour"
+    },
+    {
+      "start": 4.08,
+      "end": 5.63,
+      "en": "in the next five minutes you will see how iraq live becomes a",
+      "zh": "在接下来的五分钟内，",
+      "conf": 0.907,
+      "sent_en": "in the next five minutes you will see how iraq live becomes a finished film"
+    },
+    {
+      "start": 5.63,
+      "end": 7.18,
+      "en": "in the next five minutes you will see how iraq live becomes a",
+      "zh": "您将看到伊拉克现场如何成为一部成品电",
+      "conf": 0.907,
+      "sent_en": "in the next five minutes you will see how iraq live becomes a finished film"
+    },
+    {
+      "start": 7.18,
+      "end": 8.73,
+      "en": "in the next five minutes you will see how iraq live becomes afinished film",
+      "zh": "影",
+      "conf": 0.907,
+      "sent_en": "in the next five minutes you will see how iraq live becomes a finished film"
+    },
+    {
+      "start": 9.09,
+      "end": 11.67,
+      "en": "the robot arm picks up twelve small boxes and stacks them beside",
+      "zh": "机械臂拿起十二个小盒子，",
+      "conf": 0.99,
+      "sent_en": "the robot arm picks up twelve small boxes and stacks them beside the conveyor belt"
+    },
+    {
+      "start": 11.67,
+      "end": 14.25,
+      "en": "the conveyor belt",
+      "zh": "堆放在传送带旁边",
+      "conf": 0.99,
+      "sent_en": "the robot arm picks up twelve small boxes and stacks them beside the conveyor belt"
+    },
+    {
+      "start": 14.58,
+      "end": 16.845,
+      "en": "notice that the editor never touches the color wheel before the",
+      "zh": "请注意，在平衡声音之前，",
+      "conf": 1,
+      "sent_en": "notice that the editor never touches the color wheel before the sound is balanced"
+    },
+    {
+      "start": 16.845,
+      "end": 19.11,
+      "en": "sound is balanced",
+      "zh": "编辑器从未触摸过色轮",
+      "conf": 1,
+      "sent_en": "notice that the editor never touches the color wheel before the sound is balanced"
+    },
+    {
+      "start": 19.44,
+      "end": 22.32,
+      "en": "if the dialogue org is louder than the music by more than six",
+      "zh": "如果对话组织比音乐响亮超过六分贝，",
+      "conf": 0.933,
+      "sent_en": "if the dialogue org is louder than the music by more than six decibels the audience will complain"
+    },
+    {
+      "start": 22.32,
+      "end": 25.2,
+      "en": "decibels the audience will complain",
+      "zh": "观众会抱怨",
+      "conf": 0.933,
+      "sent_en": "if the dialogue org is louder than the music by more than six decibels the audience will complain"
+    },
+    {
+      "start": 25.59,
+      "end": 27.915,
+      "en": "that is all for tonight thank you for watching and see you",
+      "zh": "今晚到此结束，感谢您的收看，明天见",
+      "conf": 0.967,
+      "sent_en": "that is all for tonight thank you for watching and see you tomorrow at it"
+    },
+    {
+      "start": 27.915,
+      "end": 30.24,
+      "en": "tomorrow at it",
+      "zh": "今晚到此结束，感谢您的收看，明天见",
+      "conf": 0.967,
+      "sent_en": "that is all for tonight thank you for watching and see you tomorrow at it"
+    }
+  ]
+}

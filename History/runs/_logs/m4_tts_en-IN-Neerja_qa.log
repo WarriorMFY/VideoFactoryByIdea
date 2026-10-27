@@ -1,0 +1,9 @@
+
+=== 成片质检: PASS ===
+文件 final.mp4  6.521MB  30.282s
+视频 h264/High/yuv420p 1280x720 30/1
+音频 aac 48000Hz 2ch 184kbps
+响度 -16.1 LUFS / 峰值 -2.4 dBTP / LRA 1.8 LU
+残留缺陷 黑场=0 冻帧=11 静音=0   音画时长差=0.049s
+检查项: has_video=ok h264=ok yuv420p=ok cfr=ok audio_aac_48k=ok loudness_ok=ok no_residual_black=ok av_synced=ok
+明细: F:\AgentWorkArea\DeepseekHarness\IdeaDrivenAigc\VideoFactory\History\runs\multi\tts_en-IN-Neerja\qa.json

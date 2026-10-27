@@ -1,0 +1,17 @@
+[probe] F:\AgentWorkArea\DeepseekHarness\IdeaDrivenAigc\VideoFactory\Workspace\assets\speech4\sintel_trailer\sintel_trailer.mp4
+[probe] 52.21s 854x480 audio=true
+[analyze] blackdetect / freezedetect / scdet / silencedetect ...
+[analyze] black=8 freeze=14 silence=2 scenes=6
+[decide] 应用剪辑规则 ...
+[render] 提取 5 段 ...
+[render] 合并 (fade) ...
+[render] 收尾(响度归一/淡入淡出/标题/字幕) ...
+[done] 21.7s -> F:\AgentWorkArea\DeepseekHarness\IdeaDrivenAigc\VideoFactory\History\runs\multi\sintel_trailer
+[done] final=39.10s kept=5 cut=6 transition=xfade(fade,0.4s)
+  - final.mp4 9577KB
+  - edits.json 4KB
+  - signals.json 2KB
+  - probe.json 0KB
+  - report.md 3KB
+  - contact_sheet.jpg 70KB
+  - runlog.jsonl 15KB

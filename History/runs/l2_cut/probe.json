@@ -1,9 +1,9 @@
 {
-  "file": "D:\\Data\\DeepseekHarness\\IdeaDrivenLoop\\VideoFactory\\History\\bench\\l2_en\\source.mp4",
+  "file": "F:\\AgentWorkArea\\DeepseekHarness\\IdeaDrivenAigc\\VideoFactory\\History\\bench\\l2_en\\source.mp4",
   "duration": 33.878,
   "format": "mov,mp4,m4a,3gp,3g2,mj2",
-  "size": 27539535,
-  "bitrate": 6503225,
+  "size": 28783764,
+  "bitrate": 6797039,
   "video": {
     "codec": "h264",
     "width": 1920,
@@ -16,6 +16,6 @@
     "codec": "aac",
     "sample_rate": "48000",
     "channels": 2,
-    "bitrate": "182463"
+    "bitrate": "182548"
   }
 }

@@ -1,0 +1,17 @@
+[probe] F:\AgentWorkArea\DeepseekHarness\IdeaDrivenAigc\VideoFactory\Workspace\assets\speech4\bbb_movie_full\bbb_movie_full.mp4
+[probe] 596.48s 853x480 audio=true
+[analyze] blackdetect / freezedetect / scdet / silencedetect ...
+[analyze] black=5 freeze=119 silence=60 scenes=128
+[decide] 应用剪辑规则 ...
+[render] 提取 23 段 ...
+[render] 合并 (fade) ...
+[render] 收尾(响度归一/淡入淡出/标题/字幕) ...
+[done] 376.3s -> F:\AgentWorkArea\DeepseekHarness\IdeaDrivenAigc\VideoFactory\History\runs\multi\bbb_movie_full
+[done] final=563.87s kept=23 cut=23 transition=xfade(fade,0.4s)
+  - final.mp4 172661KB
+  - edits.json 11KB
+  - signals.json 12KB
+  - probe.json 0KB
+  - report.md 6KB
+  - contact_sheet.jpg 138KB
+  - runlog.jsonl 51KB

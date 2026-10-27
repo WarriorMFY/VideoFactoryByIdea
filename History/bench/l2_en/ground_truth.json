@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-27T09:28:27.962Z",
+  "generated_at": "2026-10-27T14:21:45.924Z",
   "source": "Tool/make_l2_bench.mjs",
   "note": "语音为 SAPI Zira 离线合成（en-US），逐句合成后按固定静音间隔拼接，因此每句起止时间即真值；画面为 Big Buck Bunny（CC-BY 3.0）循环铺底。",
   "language": "en",

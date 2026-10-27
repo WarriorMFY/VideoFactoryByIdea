@@ -1,0 +1,55 @@
+{
+  "generated_at": "2026-10-27T14:04:30.637Z",
+  "cues_in": 4,
+  "cues_out": 4,
+  "dropped": [],
+  "output_duration": 40.638,
+  "style": "bilingual",
+  "sanity": {
+    "overflow_cues": 0,
+    "overlaps": 0,
+    "min_dur": 0.81
+  },
+  "cues": [
+    {
+      "idx": 0,
+      "src_cue": 0,
+      "start": 8.75,
+      "end": 10.94,
+      "en": "what brings you to the land of the gatekeepers",
+      "zh": "是什么让你来到守门人的国度",
+      "conf": 0.958,
+      "split_from_cut": false
+    },
+    {
+      "idx": 1,
+      "src_cue": 1,
+      "start": 13.563,
+      "end": 14.373,
+      "en": "i'm searching for",
+      "zh": "我正在寻找",
+      "conf": 0.974,
+      "split_from_cut": false
+    },
+    {
+      "idx": 2,
+      "src_cue": 2,
+      "start": 31.477,
+      "end": 33.457,
+      "en": "dangerous quest for a number two",
+      "zh": "危险的追求二号",
+      "conf": 0.952,
+      "split_from_cut": false
+    },
+    {
+      "idx": 3,
+      "src_cue": 3,
+      "start": 36.457,
+      "end": 38.287,
+      "en": "you don't long as i can remember",
+      "zh": "你不会只要我记得",
+      "conf": 0.812,
+      "split_from_cut": false
+    }
+  ]
+}

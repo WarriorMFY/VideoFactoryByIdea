@@ -1,0 +1,700 @@
+{
+  "generated_at": "2026-10-27T14:07:51.588Z",
+  "transcript": "F:\\AgentWorkArea\\DeepseekHarness\\IdeaDrivenAigc\\VideoFactory\\History\\asr\\multi\\tos_90s.json",
+  "mt_backend": "mymemory",
+  "params": {
+    "pause": 0.3,
+    "maxSent": 110,
+    "minSentChars": 12,
+    "maxZh": 18,
+    "maxEn": 64,
+    "minCue": 0.8
+  },
+  "stats": {
+    "sentences": 13,
+    "cues": 14,
+    "words": 77
+  },
+  "sentences": [
+    {
+      "start": 6.03,
+      "end": 6.75,
+      "words": [
+        {
+          "word": "look",
+          "start": 6.03,
+          "end": 6.24,
+          "conf": 0.675692
+        },
+        {
+          "word": "celia",
+          "start": 6.249064,
+          "end": 6.75,
+          "conf": 1
+        }
+      ],
+      "en": "look celia",
+      "zh": "看起来Celia"
+    },
+    {
+      "start": 8.387518,
+      "end": 10.35,
+      "words": [
+        {
+          "word": "we",
+          "start": 8.387518,
+          "end": 8.52,
+          "conf": 1
+        },
+        {
+          "word": "have",
+          "start": 8.52,
+          "end": 8.79,
+          "conf": 1
+        },
+        {
+          "word": "to",
+          "start": 8.79,
+          "end": 8.91,
+          "conf": 1
+        },
+        {
+          "word": "follow",
+          "start": 8.91,
+          "end": 9.36,
+          "conf": 1
+        },
+        {
+          "word": "our",
+          "start": 9.36,
+          "end": 9.51,
+          "conf": 1
+        },
+        {
+          "word": "passions",
+          "start": 9.51,
+          "end": 10.35,
+          "conf": 1
+        }
+      ],
+      "en": "we have to follow our passions",
+      "zh": "我们必须追随我们的激情"
+    },
+    {
+      "start": 11.4,
+      "end": 12.81,
+      "words": [
+        {
+          "word": "you",
+          "start": 11.4,
+          "end": 11.58,
+          "conf": 1
+        },
+        {
+          "word": "have",
+          "start": 11.58,
+          "end": 11.79,
+          "conf": 1
+        },
+        {
+          "word": "your",
+          "start": 11.79,
+          "end": 11.97,
+          "conf": 1
+        },
+        {
+          "word": "robotics",
+          "start": 11.97,
+          "end": 12.81,
+          "conf": 1
+        }
+      ],
+      "en": "you have your robotics",
+      "zh": "你有你的机器人"
+    },
+    {
+      "start": 15.9,
+      "end": 29.866181,
+      "words": [
+        {
+          "word": "i",
+          "start": 15.9,
+          "end": 16.05,
+          "conf": 1
+        },
+        {
+          "word": "just",
+          "start": 16.05,
+          "end": 16.26,
+          "conf": 1
+        },
+        {
+          "word": "want",
+          "start": 16.26,
+          "end": 16.47,
+          "conf": 0.600866
+        },
+        {
+          "word": "to",
+          "start": 16.47,
+          "end": 16.53,
+          "conf": 0.600866
+        },
+        {
+          "word": "be",
+          "start": 16.53,
+          "end": 16.71,
+          "conf": 1
+        },
+        {
+          "word": "awesome",
+          "start": 16.71,
+          "end": 17.13,
+          "conf": 1
+        },
+        {
+          "word": "in",
+          "start": 17.13,
+          "end": 17.22,
+          "conf": 1
+        },
+        {
+          "word": "space",
+          "start": 17.22,
+          "end": 17.79,
+          "conf": 1
+        },
+        {
+          "word": "come",
+          "start": 29.46,
+          "end": 29.67,
+          "conf": 0.620321
+        },
+        {
+          "word": "in",
+          "start": 29.718543,
+          "end": 29.866181,
+          "conf": 0.849385
+        }
+      ],
+      "en": "i just want to be awesome in space come in",
+      "zh": "我只想在太空中表现出色"
+    },
+    {
+      "start": 30.36,
+      "end": 31.11,
+      "words": [
+        {
+          "word": "two",
+          "start": 30.36,
+          "end": 30.54,
+          "conf": 1
+        },
+        {
+          "word": "minutes",
+          "start": 30.54,
+          "end": 30.81,
+          "conf": 1
+        },
+        {
+          "word": "left",
+          "start": 30.81,
+          "end": 31.11,
+          "conf": 1
+        }
+      ],
+      "en": "two minutes left",
+      "zh": "两分钟"
+    },
+    {
+      "start": 37.05,
+      "end": 39.99,
+      "words": [
+        {
+          "word": "financial",
+          "start": 37.05,
+          "end": 37.53,
+          "conf": 0.504053
+        },
+        {
+          "word": "just",
+          "start": 37.53,
+          "end": 37.8,
+          "conf": 0.726527
+        },
+        {
+          "word": "admit",
+          "start": 37.8,
+          "end": 38.080393,
+          "conf": 0.342508
+        },
+        {
+          "word": "that",
+          "start": 38.080393,
+          "end": 38.22,
+          "conf": 0.670926
+        },
+        {
+          "word": "your",
+          "start": 38.22,
+          "end": 38.37,
+          "conf": 0.506498
+        },
+        {
+          "word": "freaked",
+          "start": 38.37,
+          "end": 38.76,
+          "conf": 1
+        },
+        {
+          "word": "out",
+          "start": 38.76,
+          "end": 38.91,
+          "conf": 1
+        },
+        {
+          "word": "by",
+          "start": 38.91,
+          "end": 39.06,
+          "conf": 1
+        },
+        {
+          "word": "my",
+          "start": 39.06,
+          "end": 39.24,
+          "conf": 1
+        },
+        {
+          "word": "robot",
+          "start": 39.24,
+          "end": 39.66,
+          "conf": 0.856203
+        },
+        {
+          "word": "him",
+          "start": 39.66,
+          "end": 39.99,
+          "conf": 0.681473
+        }
+      ],
+      "en": "financial just admit that your freaked out by my robot him",
+      "zh": "财务只是承认你被我的机器人他吓坏了"
+    },
+    {
+      "start": 46.92,
+      "end": 50.79,
+      "words": [
+        {
+          "word": "this",
+          "start": 46.92,
+          "end": 47.1,
+          "conf": 1
+        },
+        {
+          "word": "is",
+          "start": 47.1,
+          "end": 47.215466,
+          "conf": 0.57552
+        },
+        {
+          "word": "celia",
+          "start": 47.215466,
+          "end": 47.67,
+          "conf": 0.917763
+        },
+        {
+          "word": "i",
+          "start": 48.24,
+          "end": 48.27,
+          "conf": 1
+        },
+        {
+          "word": "was",
+          "start": 48.27,
+          "end": 48.51,
+          "conf": 1
+        },
+        {
+          "word": "young",
+          "start": 48.51,
+          "end": 48.87,
+          "conf": 1
+        },
+        {
+          "word": "and",
+          "start": 50.04,
+          "end": 50.19,
+          "conf": 0.711101
+        },
+        {
+          "word": "a",
+          "start": 50.19,
+          "end": 50.22,
+          "conf": 1
+        },
+        {
+          "word": "dick",
+          "start": 50.22,
+          "end": 50.79,
+          "conf": 1
+        }
+      ],
+      "en": "this is celia i was young and a dick",
+      "zh": "这是Celia ，我当时很年轻，还是个鸡巴"
+    },
+    {
+      "start": 51.27,
+      "end": 53.04,
+      "words": [
+        {
+          "word": "but",
+          "start": 51.27,
+          "end": 51.36,
+          "conf": 1
+        },
+        {
+          "word": "there's",
+          "start": 51.36,
+          "end": 51.51,
+          "conf": 1
+        },
+        {
+          "word": "no",
+          "start": 51.51,
+          "end": 51.66,
+          "conf": 1
+        },
+        {
+          "word": "reason",
+          "start": 51.66,
+          "end": 51.9,
+          "conf": 1
+        },
+        {
+          "word": "to",
+          "start": 51.9,
+          "end": 51.99,
+          "conf": 1
+        },
+        {
+          "word": "destroy",
+          "start": 51.99,
+          "end": 52.41,
+          "conf": 1
+        },
+        {
+          "word": "the",
+          "start": 52.41,
+          "end": 52.53,
+          "conf": 1
+        },
+        {
+          "word": "world",
+          "start": 52.53,
+          "end": 53.04,
+          "conf": 1
+        }
+      ],
+      "en": "but there's no reason to destroy the world",
+      "zh": "但没有理由毁灭这个世界"
+    },
+    {
+      "start": 55.08,
+      "end": 55.86,
+      "words": [
+        {
+          "word": "why",
+          "start": 55.08,
+          "end": 55.23,
+          "conf": 1
+        },
+        {
+          "word": "does",
+          "start": 55.23,
+          "end": 55.35,
+          "conf": 1
+        },
+        {
+          "word": "he",
+          "start": 55.35,
+          "end": 55.44,
+          "conf": 0.850162
+        },
+        {
+          "word": "do",
+          "start": 55.44,
+          "end": 55.59,
+          "conf": 1
+        },
+        {
+          "word": "this",
+          "start": 55.59,
+          "end": 55.86,
+          "conf": 1
+        }
+      ],
+      "en": "why does he do this",
+      "zh": "他为什么要这么做"
+    },
+    {
+      "start": 57.09,
+      "end": 58.53,
+      "words": [
+        {
+          "word": "we",
+          "start": 57.09,
+          "end": 57.27,
+          "conf": 1
+        },
+        {
+          "word": "already",
+          "start": 57.27,
+          "end": 57.66,
+          "conf": 1
+        },
+        {
+          "word": "tried",
+          "start": 57.72,
+          "end": 58.052772,
+          "conf": 1
+        },
+        {
+          "word": "that",
+          "start": 58.052772,
+          "end": 58.2,
+          "conf": 0.40822
+        },
+        {
+          "word": "one",
+          "start": 58.2,
+          "end": 58.53,
+          "conf": 1
+        }
+      ],
+      "en": "we already tried that one",
+      "zh": "我们已经试过那个"
+    },
+    {
+      "start": 73.56,
+      "end": 74.85,
+      "words": [
+        {
+          "word": "you",
+          "start": 73.56,
+          "end": 73.86,
+          "conf": 0.838706
+        },
+        {
+          "word": "broke",
+          "start": 73.86,
+          "end": 74.28,
+          "conf": 0.838706
+        },
+        {
+          "word": "my",
+          "start": 74.28,
+          "end": 74.49,
+          "conf": 0.838706
+        },
+        {
+          "word": "heart",
+          "start": 74.49,
+          "end": 74.85,
+          "conf": 0.838706
+        }
+      ],
+      "en": "you broke my heart",
+      "zh": "扎心了，老铁"
+    },
+    {
+      "start": 77.16,
+      "end": 78.72,
+      "words": [
+        {
+          "word": "you",
+          "start": 77.16,
+          "end": 77.37,
+          "conf": 1
+        },
+        {
+          "word": "forgot",
+          "start": 77.37,
+          "end": 77.88,
+          "conf": 1
+        },
+        {
+          "word": "me",
+          "start": 77.88,
+          "end": 78.12,
+          "conf": 1
+        },
+        {
+          "word": "on",
+          "start": 78.12,
+          "end": 78.3,
+          "conf": 1
+        },
+        {
+          "word": "earth",
+          "start": 78.3,
+          "end": 78.72,
+          "conf": 1
+        }
+      ],
+      "en": "you forgot me on earth",
+      "zh": "你把我忘在地球上"
+    },
+    {
+      "start": 80.52,
+      "end": 87.36,
+      "words": [
+        {
+          "word": "i",
+          "start": 80.52,
+          "end": 80.7,
+          "conf": 1
+        },
+        {
+          "word": "should",
+          "start": 80.7,
+          "end": 81,
+          "conf": 0.838097
+        },
+        {
+          "word": "just",
+          "start": 81.004856,
+          "end": 81.45,
+          "conf": 1
+        },
+        {
+          "word": "trash",
+          "start": 81.54,
+          "end": 81.93,
+          "conf": 0.675959
+        },
+        {
+          "word": "on",
+          "start": 87.15,
+          "end": 87.36,
+          "conf": 0.340342
+        }
+      ],
+      "en": "i should just trash on",
+      "zh": "我应该直接倒垃圾"
+    }
+  ],
+  "cues": [
+    {
+      "start": 6.03,
+      "end": 6.79,
+      "en": "look celia",
+      "zh": "看起来Celia",
+      "conf": 0.838,
+      "sent_en": "look celia"
+    },
+    {
+      "start": 8.388,
+      "end": 10.35,
+      "en": "we have to follow our passions",
+      "zh": "我们必须追随我们的激情",
+      "conf": 1,
+      "sent_en": "we have to follow our passions"
+    },
+    {
+      "start": 11.4,
+      "end": 12.81,
+      "en": "you have your robotics",
+      "zh": "你有你的机器人",
+      "conf": 1,
+      "sent_en": "you have your robotics"
+    },
+    {
+      "start": 15.9,
+      "end": 29.866,
+      "en": "i just want to be awesome in space come in",
+      "zh": "我只想在太空中表现出色",
+      "conf": 0.867,
+      "sent_en": "i just want to be awesome in space come in"
+    },
+    {
+      "start": 30.36,
+      "end": 31.135,
+      "en": "two minutes left",
+      "zh": "两分钟",
+      "conf": 1,
+      "sent_en": "two minutes left"
+    },
+    {
+      "start": 37.05,
+      "end": 39.99,
+      "en": "financial just admit that your freaked out by my robot him",
+      "zh": "财务只是承认你被我的机器人他吓坏了",
+      "conf": 0.753,
+      "sent_en": "financial just admit that your freaked out by my robot him"
+    },
+    {
+      "start": 46.92,
+      "end": 48.855,
+      "en": "this is celia i was young and a dick",
+      "zh": "这是Celia ，我当时很年轻，",
+      "conf": 0.912,
+      "sent_en": "this is celia i was young and a dick"
+    },
+    {
+      "start": 48.855,
+      "end": 50.79,
+      "en": "this is celia i was young and a dick",
+      "zh": "还是个鸡巴",
+      "conf": 0.912,
+      "sent_en": "this is celia i was young and a dick"
+    },
+    {
+      "start": 51.27,
+      "end": 53.04,
+      "en": "but there's no reason to destroy the world",
+      "zh": "但没有理由毁灭这个世界",
+      "conf": 1,
+      "sent_en": "but there's no reason to destroy the world"
+    },
+    {
+      "start": 55.08,
+      "end": 55.87,
+      "en": "why does he do this",
+      "zh": "他为什么要这么做",
+      "conf": 0.97,
+      "sent_en": "why does he do this"
+    },
+    {
+      "start": 57.09,
+      "end": 58.53,
+      "en": "we already tried that one",
+      "zh": "我们已经试过那个",
+      "conf": 0.882,
+      "sent_en": "we already tried that one"
+    },
+    {
+      "start": 73.56,
+      "end": 74.85,
+      "en": "you broke my heart",
+      "zh": "扎心了，老铁",
+      "conf": 0.839,
+      "sent_en": "you broke my heart"
+    },
+    {
+      "start": 77.16,
+      "end": 78.72,
+      "en": "you forgot me on earth",
+      "zh": "你把我忘在地球上",
+      "conf": 1,
+      "sent_en": "you forgot me on earth"
+    },
+    {
+      "start": 80.52,
+      "end": 87.36,
+      "en": "i should just trash on",
+      "zh": "我应该直接倒垃圾",
+      "conf": 0.771,
+      "sent_en": "i should just trash on"
+    }
+  ]
+}

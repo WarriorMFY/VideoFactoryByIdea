@@ -1,0 +1,135 @@
+{
+  "generated_at": "2026-10-27T14:05:46.065Z",
+  "cues_in": 12,
+  "cues_out": 12,
+  "dropped": [],
+  "output_duration": 28.618,
+  "style": "bilingual",
+  "sanity": {
+    "overflow_cues": 0,
+    "overlaps": 0,
+    "min_dur": 1.785
+  },
+  "cues": [
+    {
+      "idx": 0,
+      "src_cue": 0,
+      "start": 0.03,
+      "end": 1.815,
+      "en": "good evening and welcome to the second half of our factory tour",
+      "zh": "晚上好，欢迎来到我们工厂参观的后半部",
+      "conf": 0.988,
+      "split_from_cut": false
+    },
+    {
+      "idx": 1,
+      "src_cue": 1,
+      "start": 1.815,
+      "end": 3.6,
+      "en": "good evening and welcome to the second half of our factory tour",
+      "zh": "分",
+      "conf": 0.988,
+      "split_from_cut": false
+    },
+    {
+      "idx": 2,
+      "src_cue": 2,
+      "start": 3.93,
+      "end": 6.12,
+      "en": "in the next five minutes you will see how a roar clip becomes a",
+      "zh": "在接下来的五分钟内，",
+      "conf": 0.951,
+      "split_from_cut": false
+    },
+    {
+      "idx": 3,
+      "src_cue": 3,
+      "start": 6.12,
+      "end": 8.31,
+      "en": "finished film",
+      "zh": "您将看到咆哮剪辑如何成为成品电影",
+      "conf": 0.951,
+      "split_from_cut": false
+    },
+    {
+      "idx": 4,
+      "src_cue": 4,
+      "start": 8.64,
+      "end": 11.01,
+      "en": "the robot arm picks up twelve small boxes and stacks them beside",
+      "zh": "机械臂拿起十二个小盒子，",
+      "conf": 0.963,
+      "split_from_cut": false
+    },
+    {
+      "idx": 5,
+      "src_cue": 5,
+      "start": 11.01,
+      "end": 13.38,
+      "en": "the conveyor belt",
+      "zh": "堆放在传送带旁边",
+      "conf": 0.963,
+      "split_from_cut": false
+    },
+    {
+      "idx": 6,
+      "src_cue": 6,
+      "start": 13.74,
+      "end": 15.96,
+      "en": "notice that the editor never touches the color wheel before the",
+      "zh": "请注意，在平衡声音之前，",
+      "conf": 1,
+      "split_from_cut": false
+    },
+    {
+      "idx": 7,
+      "src_cue": 7,
+      "start": 15.96,
+      "end": 18.18,
+      "en": "sound is balanced",
+      "zh": "编辑器从未触摸过色轮",
+      "conf": 1,
+      "split_from_cut": false
+    },
+    {
+      "idx": 8,
+      "src_cue": 8,
+      "start": 18.54,
+      "end": 21.21,
+      "en": "if the dialogue is louder than the music by more than six",
+      "zh": "如果对话声音比音乐大6分贝以上，",
+      "conf": 0.989,
+      "split_from_cut": false
+    },
+    {
+      "idx": 9,
+      "src_cue": 9,
+      "start": 21.21,
+      "end": 23.88,
+      "en": "decibels the audience will complain",
+      "zh": "观众会抱怨",
+      "conf": 0.989,
+      "split_from_cut": false
+    },
+    {
+      "idx": 10,
+      "src_cue": 10,
+      "start": 24.21,
+      "end": 26.4,
+      "en": "that is all for tonight thank you for watching and see you",
+      "zh": "今晚到此结束，感谢大家收看，",
+      "conf": 1,
+      "split_from_cut": false
+    },
+    {
+      "idx": 11,
+      "src_cue": 11,
+      "start": 26.4,
+      "end": 28.59,
+      "en": "tomorrow at eight",
+      "zh": "明天八点见",
+      "conf": 1,
+      "split_from_cut": false
+    }
+  ]
+}

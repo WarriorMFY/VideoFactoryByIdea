@@ -1,0 +1,17 @@
+{
+  "generated_at": "2026-10-27T13:39:10.662Z",
+  "engine": "vosk",
+  "model": "vosk-model-small-en-us-0.15",
+  "model_license": "Apache-2.0",
+  "audio_filter": "afftdn=nf=-25,highpass=f=300,lowpass=f=3400",
+  "input": "F:\\AgentWorkArea\\DeepseekHarness\\IdeaDrivenAigc\\VideoFactory\\Workspace\\assets\\speech4\\toS_movie300\\toS_movie300.mp4",
+  "audio_duration_s": 300.141,
+  "text": "",
+  "words": [],
+  "sentences": [],
+  "stats": {
+    "words": 0,
+    "sentences": 0,
+    "avg_conf": 0
+  }
+}

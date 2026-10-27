@@ -366,7 +366,13 @@ function polish(mergedFile, outFile, hasAudio, totalDur) {
     const alpha = "if(lt(t,0.6),t/0.6,if(lt(t,3.4),1,max(0,(4.0-t)/0.6)))";
     vf.push(`drawtext=font=${font}:text='${esc}':fontsize=${Math.round(H * 0.072)}:fontcolor=white:shadowcolor=black@0.7:shadowx=2:shadowy=2:box=1:boxcolor=black@0.45:boxborderw=22:alpha='${alpha}':x=(w-text_w)/2:y=h*0.74:enable='between(t,0.2,4.0)'`);
   }
-  if (OPT.srt && fs.existsSync(OPT.srt)) {
+  // 空/无字幕的 SRT 会让 libass 直接报 "Unable to open ...srt" 并让整条渲染失败
+  // （实测：素材只有 1 个噪声词时，重映射把唯一一行丢掉 → 0 字节 SRT）。所以先判空再拼滤镜。
+  const srtOk = OPT.srt && fs.existsSync(OPT.srt) && fs.statSync(OPT.srt).size > 0 && /\d+\s*\r?\n\d+:\d+:\d+/.test(fs.readFileSync(OPT.srt, 'utf8'));
+  if (OPT.srt && !srtOk) {
+    console.log(`[warn] 字幕文件为空或不是合法 SRT，跳过烧入：${OPT.srt}`);
+  }
+  if (srtOk) {
     const p = OPT.srt.replace(/\\/g, '/').replace(/:/g, '\\:');
     // FontName 必须指定含 CJK 的字体（否则中文变方块）；Fontsize 以 libass 默认 PlayResY=288 为基准。
     const fs2 = bilingualSrt(OPT.srt) ? 15 : 20;
@@ -469,8 +475,7 @@ function main() {
   const mergeInfo = mergeSegments(segs, work, hasAudio);
   const mergedDur = durOf(mergeInfo.file);
   const finalFile = path.join(OUT, 'final.mp4');
-  console.log(`[render] 收尾(响度归一/淡入淡出${OPT.title ? '/标题' : ''}${OPT.srt ? '/字幕' : ''}) ...`);
-  polish(mergeInfo.file, finalFile, hasAudio, mergedDur);
+  console.log(`[render] 收尾(响度归一/淡入淡出${OPT.title ? '/标题' : ''}${OPT.srt ? '/字幕' : ''}) ...`);  polish(mergeInfo.file, finalFile, hasAudio, mergedDur);
   const outDur = durOf(finalFile);
 
   const sheet = path.join(OUT, 'contact_sheet.jpg');

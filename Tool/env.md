@@ -47,9 +47,21 @@
 | `pip` | ❌ 超时（Python 侧出网受堵） |
 | `winget` | ❌ 失败（exit -1978335231） |
 
-**可用站点（实测）**：`registry.npmmirror.com`（~2MB/s，npm 包与 ffmpeg 二进制）、`media.w3.org`（0.5–5MB/s）、`test-videos.co.uk`、`alphacephei.com`（很慢，~15KB/s 且会断）、`api.mymemory.translated.net`、`speech.platform.bing.com`（Edge TTS）。
+**可用站点（实测）**：`registry.npmmirror.com`（~2MB/s，npm 包与 ffmpeg 二进制）、`media.w3.org`（0.5–5MB/s）、`test-videos.co.uk`、`alphacephei.com`（很慢，~15KB/s 且会断）、`api.mymemory.translated.net`、`speech.platform.bing.com`（Edge TTS）、
+`ftp.nluug.nl` / `mirrors.dotsrc.org` 的 Blender 镜像（开放电影整片，支持 HTTP Range）。
 
-**不可用站点**：HuggingFace / hf-mirror / ModelScope / Wikimedia（含 Commons API）/ Internet Archive / GitHub Release 资产 / SourceForge / gyan.dev（~13KB/s）。
+**不可用站点**：HuggingFace / hf-mirror / ModelScope / Wikimedia（含 Commons API）/ Internet Archive / GitHub Release 资产 / SourceForge / gyan.dev（~13KB/s）/ `download.blender.org`（403）。
+
+**下载通道的两个新坑（2026-10-27 小循环 4 实测）**：
+
+- **`test-videos.co.uk` 会"给一半再断"**：同一 URL 交替出现 200/404/超时，且断流时**已经写了一半文件**。
+  只要下载脚本按"文件 >100KB 就跳过"，就会拿到**截断的 mp4**，下游表现为"素材只有 17s、切点全错"，
+  看起来像代码回归。→ 现在 `setup/fetch_real_footage.mjs` 会先问 `content-range` 要真实长度，
+  落盘后比对（不符就删掉重试 5 次），本地已有文件也会校验。
+- **整片镜像要挑，且要并行**：`download.blender.org` 403；`ftp.nluug.nl` 单连接仅 0.06–0.07MB/s；
+  `mirrors.dotsrc.org` 单连接 0.47MB/s。→ `setup/fetch_tos_movie.mjs` 先测速选镜像，
+  再 **8 线程 × 4MB 分段 Range 写同一文件**：355MB **1.9 分钟（3.0MB/s）**。
+  注意预分配会把文件撑到最终大小，所以"是否下完"只能看 `.complete` 标记，不能只看 size。
 
 ## 二、子进程与 I/O
 

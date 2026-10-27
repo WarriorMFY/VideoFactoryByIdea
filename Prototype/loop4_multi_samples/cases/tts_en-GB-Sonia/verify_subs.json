@@ -1,0 +1,110 @@
+{
+  "verdict": "PASS",
+  "mode": "with-reference（有讲稿真值）",
+  "thresholds": {
+    "wer": 0.25,
+    "cover": 0.95,
+    "boundMean": 0.8,
+    "boundMax": 1.5,
+    "cps_zh": 20,
+    "cps_en": 25
+  },
+  "wer": {
+    "refWords": 89,
+    "hypWords": 89,
+    "dist": 1,
+    "rate": 0.0112
+  },
+  "timing": {
+    "coverage_ratio": 0.9967,
+    "mean_boundary_err_s": 0.013,
+    "max_boundary_err_s": 0.03,
+    "sentences": [
+      {
+        "idx": 0,
+        "start": 0,
+        "end": 3.6,
+        "covered_ratio": 0.992,
+        "start_err": 0.03,
+        "end_err": 0
+      },
+      {
+        "idx": 1,
+        "start": 3.95,
+        "end": 8.315,
+        "covered_ratio": 0.999,
+        "start_err": 0.02,
+        "end_err": 0.005
+      },
+      {
+        "idx": 2,
+        "start": 8.665,
+        "end": 13.385,
+        "covered_ratio": 0.999,
+        "start_err": 0.025,
+        "end_err": 0.005
+      },
+      {
+        "idx": 3,
+        "start": 13.735,
+        "end": 18.176,
+        "covered_ratio": 0.999,
+        "start_err": 0.005,
+        "end_err": 0.004
+      },
+      {
+        "idx": 4,
+        "start": 18.526,
+        "end": 23.876,
+        "covered_ratio": 0.997,
+        "start_err": 0.014,
+        "end_err": 0.004
+      },
+      {
+        "idx": 5,
+        "start": 24.226,
+        "end": 28.619,
+        "covered_ratio": 0.993,
+        "start_err": 0.016,
+        "end_err": 0.029
+      }
+    ]
+  },
+  "translate": {
+    "cues": 12,
+    "translated": 12,
+    "missing": 0,
+    "missing_samples": []
+  },
+  "readability": {
+    "max_zh_cps": 10.08,
+    "mean_zh_cps": 4.78,
+    "max_en_cps": 35.29
+  },
+  "remap": {
+    "cues_in": 12,
+    "cues_out": 12,
+    "dropped": 0,
+    "output_duration": 28.618,
+    "overflow": 0,
+    "overlaps": 0,
+    "min_dur": 1.785,
+    "max_dur": 2.67
+  },
+  "quality": null,
+  "pass": {
+    "wer": true,
+    "coverage": true,
+    "boundary_mean": true,
+    "boundary_max": true,
+    "translated": true,
+    "readability": true,
+    "remap": true
+  },
+  "source": {
+    "transcript": "F:\\AgentWorkArea\\DeepseekHarness\\IdeaDrivenAigc\\VideoFactory\\History\\asr\\multi\\tts_en-GB-Sonia.json",
+    "ground_truth": "F:\\AgentWorkArea\\DeepseekHarness\\IdeaDrivenAigc\\VideoFactory\\Workspace\\assets\\speech4tts\\en-GB-Sonia\\ground_truth.json",
+    "cues": "F:\\AgentWorkArea\\DeepseekHarness\\IdeaDrivenAigc\\VideoFactory\\History\\subs\\multi\\tts_en-GB-Sonia\\cues.json",
+    "remap": "F:\\AgentWorkArea\\DeepseekHarness\\IdeaDrivenAigc\\VideoFactory\\History\\subs\\multi\\tts_en-GB-Sonia\\remapped\\remap.json"
+  }
+}

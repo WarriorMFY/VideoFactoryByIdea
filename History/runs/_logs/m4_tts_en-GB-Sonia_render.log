@@ -1,0 +1,17 @@
+[probe] F:\AgentWorkArea\DeepseekHarness\IdeaDrivenAigc\VideoFactory\Workspace\assets\speech4tts\en-GB-Sonia\source.mp4
+[probe] 28.62s 854x480 audio=true
+[analyze] blackdetect / freezedetect / scdet / silencedetect ...
+[analyze] black=0 freeze=15 silence=0 scenes=15
+[decide] 应用剪辑规则 ...
+[render] 提取 1 段 ...
+[render] 合并 (fade) ...
+[render] 收尾(响度归一/淡入淡出/标题/字幕) ...
+[done] 10.6s -> F:\AgentWorkArea\DeepseekHarness\IdeaDrivenAigc\VideoFactory\History\runs\multi\tts_en-GB-Sonia
+[done] final=28.62s kept=1 cut=0 transition=single
+  - final.mp4 6419KB
+  - edits.json 2KB
+  - signals.json 1KB
+  - probe.json 0KB
+  - report.md 2KB
+  - contact_sheet.jpg 134KB
+  - runlog.jsonl 6KB

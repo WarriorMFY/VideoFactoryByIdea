@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-27T09:29:29.008Z",
+  "generated_at": "2026-10-27T14:11:02.141Z",
   "engine": "vosk",
   "model": "vosk-model-small-en-us-0.15",
   "model_license": "Apache-2.0",
   "audio_filter": "afftdn=nf=-25,highpass=f=300,lowpass=f=3400",
-  "input": "D:\\Data\\DeepseekHarness\\IdeaDrivenLoop\\VideoFactory\\Workspace\\assets\\realspeech\\sintel-trailer.mp4",
+  "input": "F:\\AgentWorkArea\\DeepseekHarness\\IdeaDrivenAigc\\VideoFactory\\Workspace\\assets\\realspeech\\sintel-trailer.mp4",
   "audio_duration_s": 51.925,
   "text": "what brings you to the land of the gatekeepers i'm searching for dangerous quest for a number two you don't long as i can remember",
   "words": [

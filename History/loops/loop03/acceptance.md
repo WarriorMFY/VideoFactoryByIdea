@@ -1,6 +1,6 @@
 # 小循环 3 验收记录：真实外语素材（真人说话）→ 中文字幕
 
-生成时间：2026-10-27T09:30:13.996Z　素材：`Workspace\assets\realspeech\sintel-trailer.mp4`（52.2s，Sintel © Blender Foundation, CC-BY 3.0）
+生成时间：2026-10-27T14:12:13.597Z　素材：`Workspace\assets\realspeech\sintel-trailer.mp4`（52.2s，Sintel © Blender Foundation, CC-BY 3.0）
 
 ## 结论
 
@@ -50,4 +50,4 @@
 - 识别稿：`History\asr\transcript_real.json`（音频预处理：`afftdn=nf=-25,highpass=f=300,lowpass=f=3400`）
 - 预处理对比：`History/asr/variant_*.json`
 - 剪辑/质检产物：`History\runs\real3_subs`
-- 耗时：73s
+- 耗时：104s

@@ -1,0 +1,125 @@
+{
+  "generated_at": "2026-10-27T14:05:14.127Z",
+  "cues_in": 11,
+  "cues_out": 11,
+  "dropped": [],
+  "output_duration": 28.399,
+  "style": "bilingual",
+  "sanity": {
+    "overflow_cues": 0,
+    "overlaps": 0,
+    "min_dur": 2.07
+  },
+  "cues": [
+    {
+      "idx": 0,
+      "src_cue": 0,
+      "start": 0.03,
+      "end": 3.78,
+      "en": "good evening and welcome to the second half of our factory to",
+      "zh": "晚上好，欢迎来到我们工厂的下半部分，",
+      "conf": 0.987,
+      "split_from_cut": false
+    },
+    {
+      "idx": 1,
+      "src_cue": 1,
+      "start": 4.11,
+      "end": 6.27,
+      "en": "in the next five minutes you will see how role clip becomes the",
+      "zh": "在接下来的五分钟内，",
+      "conf": 0.952,
+      "split_from_cut": false
+    },
+    {
+      "idx": 2,
+      "src_cue": 2,
+      "start": 6.27,
+      "end": 8.43,
+      "en": "finished film",
+      "zh": "您将看到角色剪辑如何成为",
+      "conf": 0.952,
+      "split_from_cut": false
+    },
+    {
+      "idx": 3,
+      "src_cue": 3,
+      "start": 8.79,
+      "end": 11.265,
+      "en": "the robot arm picks up twelve small boxes and stacks them beside",
+      "zh": "机械臂拿起十二个小盒子，",
+      "conf": 0.963,
+      "split_from_cut": false
+    },
+    {
+      "idx": 4,
+      "src_cue": 4,
+      "start": 11.265,
+      "end": 13.74,
+      "en": "the conveyor belt",
+      "zh": "堆放在传送带旁边",
+      "conf": 0.963,
+      "split_from_cut": false
+    },
+    {
+      "idx": 5,
+      "src_cue": 5,
+      "start": 14.07,
+      "end": 16.14,
+      "en": "notice that the editor never touches the color wheel before the",
+      "zh": "请注意，在平衡声音之前，",
+      "conf": 0.964,
+      "split_from_cut": false
+    },
+    {
+      "idx": 6,
+      "src_cue": 6,
+      "start": 16.14,
+      "end": 18.21,
+      "en": "sound is balanced",
+      "zh": "编辑器从未触摸过色轮",
+      "conf": 0.964,
+      "split_from_cut": false
+    },
+    {
+      "idx": 7,
+      "src_cue": 7,
+      "start": 18.51,
+      "end": 21.06,
+      "en": "if the dialogue is louder than them music by more than six",
+      "zh": "如果对话声音比音乐大6分贝以上，",
+      "conf": 0.982,
+      "split_from_cut": false
+    },
+    {
+      "idx": 8,
+      "src_cue": 8,
+      "start": 21.06,
+      "end": 23.61,
+      "en": "decibels the audience will complain",
+      "zh": "观众会抱怨",
+      "conf": 0.982,
+      "split_from_cut": false
+    },
+    {
+      "idx": 9,
+      "src_cue": 9,
+      "start": 23.97,
+      "end": 26.175,
+      "en": "that is all for tonight thank you for watching and see you",
+      "zh": "今晚到此结束，感谢大家收看，",
+      "conf": 1,
+      "split_from_cut": false
+    },
+    {
+      "idx": 10,
+      "src_cue": 10,
+      "start": 26.175,
+      "end": 28.38,
+      "en": "tomorrow at eight",
+      "zh": "明天八点见",
+      "conf": 1,
+      "split_from_cut": false
+    }
+  ]
+}

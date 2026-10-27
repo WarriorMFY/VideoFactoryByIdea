@@ -1,0 +1,553 @@
+{
+  "generated_at": "2026-10-27T14:05:03.437Z",
+  "engine": "vosk",
+  "model": "vosk-model-small-en-us-0.15",
+  "model_license": "Apache-2.0",
+  "audio_filter": "afftdn=nf=-25,highpass=f=300,lowpass=f=3400",
+  "input": "F:\\AgentWorkArea\\DeepseekHarness\\IdeaDrivenAigc\\VideoFactory\\Workspace\\assets\\speech4tts\\en-AU-Natasha\\source.mp4",
+  "audio_duration_s": 28.416,
+  "text": "good evening and welcome to the second half of our factory to in the next five minutes you will see how role clip becomes the finished film the robot arm picks up twelve small boxes and stacks them beside the conveyor belt notice that the editor never touches the color wheel before the sound is balanced if the dialogue is louder than the music by more than six decibels the audience will complain that is all for tonight thank you for watching and see you tomorrow at eight",
+  "words": [
+    {
+      "word": "good",
+      "start": 0.06,
+      "end": 0.3,
+      "conf": 1
+    },
+    {
+      "word": "evening",
+      "start": 0.33,
+      "end": 0.81,
+      "conf": 1
+    },
+    {
+      "word": "and",
+      "start": 1.05,
+      "end": 1.23,
+      "conf": 1
+    },
+    {
+      "word": "welcome",
+      "start": 1.23,
+      "end": 1.71,
+      "conf": 1
+    },
+    {
+      "word": "to",
+      "start": 1.71,
+      "end": 1.83,
+      "conf": 1
+    },
+    {
+      "word": "the",
+      "start": 1.83,
+      "end": 1.95,
+      "conf": 1
+    },
+    {
+      "word": "second",
+      "start": 1.95,
+      "end": 2.31,
+      "conf": 1
+    },
+    {
+      "word": "half",
+      "start": 2.31,
+      "end": 2.64,
+      "conf": 1
+    },
+    {
+      "word": "of",
+      "start": 2.64,
+      "end": 2.73,
+      "conf": 1
+    },
+    {
+      "word": "our",
+      "start": 2.73,
+      "end": 2.91,
+      "conf": 1
+    },
+    {
+      "word": "factory",
+      "start": 2.94,
+      "end": 3.42,
+      "conf": 1
+    },
+    {
+      "word": "to",
+      "start": 3.42,
+      "end": 3.81,
+      "conf": 0.839278
+    },
+    {
+      "word": "in",
+      "start": 4.14,
+      "end": 4.32,
+      "conf": 1
+    },
+    {
+      "word": "the",
+      "start": 4.32,
+      "end": 4.41,
+      "conf": 1
+    },
+    {
+      "word": "next",
+      "start": 4.41,
+      "end": 4.71,
+      "conf": 1
+    },
+    {
+      "word": "five",
+      "start": 4.71,
+      "end": 5.01,
+      "conf": 1
+    },
+    {
+      "word": "minutes",
+      "start": 5.01,
+      "end": 5.52,
+      "conf": 1
+    },
+    {
+      "word": "you",
+      "start": 5.76,
+      "end": 5.94,
+      "conf": 1
+    },
+    {
+      "word": "will",
+      "start": 5.94,
+      "end": 6.06,
+      "conf": 1
+    },
+    {
+      "word": "see",
+      "start": 6.06,
+      "end": 6.3,
+      "conf": 1
+    },
+    {
+      "word": "how",
+      "start": 6.3,
+      "end": 6.57,
+      "conf": 1
+    },
+    {
+      "word": "role",
+      "start": 6.57,
+      "end": 6.84,
+      "conf": 0.458274
+    },
+    {
+      "word": "clip",
+      "start": 6.84,
+      "end": 7.2,
+      "conf": 1
+    },
+    {
+      "word": "becomes",
+      "start": 7.2,
+      "end": 7.59,
+      "conf": 1
+    },
+    {
+      "word": "the",
+      "start": 7.59,
+      "end": 7.65,
+      "conf": 0.668895
+    },
+    {
+      "word": "finished",
+      "start": 7.65,
+      "end": 8.07,
+      "conf": 1
+    },
+    {
+      "word": "film",
+      "start": 8.07,
+      "end": 8.46,
+      "conf": 1
+    },
+    {
+      "word": "the",
+      "start": 8.82,
+      "end": 8.97,
+      "conf": 1
+    },
+    {
+      "word": "robot",
+      "start": 8.97,
+      "end": 9.39,
+      "conf": 1
+    },
+    {
+      "word": "arm",
+      "start": 9.39,
+      "end": 9.63,
+      "conf": 1
+    },
+    {
+      "word": "picks",
+      "start": 9.63,
+      "end": 9.9,
+      "conf": 1
+    },
+    {
+      "word": "up",
+      "start": 9.9,
+      "end": 10.05,
+      "conf": 1
+    },
+    {
+      "word": "twelve",
+      "start": 10.05,
+      "end": 10.41,
+      "conf": 1
+    },
+    {
+      "word": "small",
+      "start": 10.41,
+      "end": 10.71,
+      "conf": 1
+    },
+    {
+      "word": "boxes",
+      "start": 10.71,
+      "end": 11.31,
+      "conf": 1
+    },
+    {
+      "word": "and",
+      "start": 11.61,
+      "end": 11.79,
+      "conf": 1
+    },
+    {
+      "word": "stacks",
+      "start": 11.79,
+      "end": 12.18,
+      "conf": 0.392569
+    },
+    {
+      "word": "them",
+      "start": 12.18,
+      "end": 12.33,
+      "conf": 1
+    },
+    {
+      "word": "beside",
+      "start": 12.33,
+      "end": 12.78,
+      "conf": 1
+    },
+    {
+      "word": "the",
+      "start": 12.78,
+      "end": 12.87,
+      "conf": 1
+    },
+    {
+      "word": "conveyor",
+      "start": 12.87,
+      "end": 13.32,
+      "conf": 0.855923
+    },
+    {
+      "word": "belt",
+      "start": 13.32,
+      "end": 13.74,
+      "conf": 1
+    },
+    {
+      "word": "notice",
+      "start": 14.1,
+      "end": 14.55,
+      "conf": 0.728971
+    },
+    {
+      "word": "that",
+      "start": 14.558131,
+      "end": 14.67,
+      "conf": 1
+    },
+    {
+      "word": "the",
+      "start": 14.67,
+      "end": 14.82,
+      "conf": 1
+    },
+    {
+      "word": "editor",
+      "start": 14.82,
+      "end": 15.15,
+      "conf": 1
+    },
+    {
+      "word": "never",
+      "start": 15.15,
+      "end": 15.42,
+      "conf": 1
+    },
+    {
+      "word": "touches",
+      "start": 15.42,
+      "end": 15.87,
+      "conf": 1
+    },
+    {
+      "word": "the",
+      "start": 15.87,
+      "end": 15.96,
+      "conf": 1
+    },
+    {
+      "word": "color",
+      "start": 15.96,
+      "end": 16.29,
+      "conf": 1
+    },
+    {
+      "word": "wheel",
+      "start": 16.29,
+      "end": 16.62,
+      "conf": 1
+    },
+    {
+      "word": "before",
+      "start": 16.62,
+      "end": 16.98,
+      "conf": 1
+    },
+    {
+      "word": "the",
+      "start": 16.98,
+      "end": 17.07,
+      "conf": 1
+    },
+    {
+      "word": "sound",
+      "start": 17.07,
+      "end": 17.49,
+      "conf": 1
+    },
+    {
+      "word": "is",
+      "start": 17.49,
+      "end": 17.64,
+      "conf": 1
+    },
+    {
+      "word": "balanced",
+      "start": 17.64,
+      "end": 18.21,
+      "conf": 1
+    },
+    {
+      "word": "if",
+      "start": 18.54,
+      "end": 18.72,
+      "conf": 1
+    },
+    {
+      "word": "the",
+      "start": 18.72,
+      "end": 18.84,
+      "conf": 1
+    },
+    {
+      "word": "dialogue",
+      "start": 18.84,
+      "end": 19.41,
+      "conf": 1
+    },
+    {
+      "word": "is",
+      "start": 19.44,
+      "end": 19.56,
+      "conf": 1
+    },
+    {
+      "word": "louder",
+      "start": 19.56,
+      "end": 19.92,
+      "conf": 1
+    },
+    {
+      "word": "than",
+      "start": 19.92,
+      "end": 20.07,
+      "conf": 1
+    },
+    {
+      "word": "the",
+      "start": 20.07,
+      "end": 20.16,
+      "conf": 0.744919
+    },
+    {
+      "word": "music",
+      "start": 20.16,
+      "end": 20.55,
+      "conf": 1
+    },
+    {
+      "word": "by",
+      "start": 20.55,
+      "end": 20.7,
+      "conf": 1
+    },
+    {
+      "word": "more",
+      "start": 20.7,
+      "end": 20.97,
+      "conf": 1
+    },
+    {
+      "word": "than",
+      "start": 20.97,
+      "end": 21.12,
+      "conf": 1
+    },
+    {
+      "word": "six",
+      "start": 21.12,
+      "end": 21.42,
+      "conf": 1
+    },
+    {
+      "word": "decibels",
+      "start": 21.42,
+      "end": 22.08,
+      "conf": 1
+    },
+    {
+      "word": "the",
+      "start": 22.26,
+      "end": 22.44,
+      "conf": 1
+    },
+    {
+      "word": "audience",
+      "start": 22.44,
+      "end": 22.92,
+      "conf": 1
+    },
+    {
+      "word": "will",
+      "start": 22.92,
+      "end": 23.07,
+      "conf": 1
+    },
+    {
+      "word": "complain",
+      "start": 23.07,
+      "end": 23.61,
+      "conf": 1
+    },
+    {
+      "word": "that",
+      "start": 24,
+      "end": 24.21,
+      "conf": 1
+    },
+    {
+      "word": "is",
+      "start": 24.21,
+      "end": 24.36,
+      "conf": 1
+    },
+    {
+      "word": "all",
+      "start": 24.36,
+      "end": 24.6,
+      "conf": 1
+    },
+    {
+      "word": "for",
+      "start": 24.6,
+      "end": 24.72,
+      "conf": 1
+    },
+    {
+      "word": "tonight",
+      "start": 24.72,
+      "end": 25.29,
+      "conf": 1
+    },
+    {
+      "word": "thank",
+      "start": 25.56,
+      "end": 25.86,
+      "conf": 1
+    },
+    {
+      "word": "you",
+      "start": 25.86,
+      "end": 25.95,
+      "conf": 1
+    },
+    {
+      "word": "for",
+      "start": 25.95,
+      "end": 26.1,
+      "conf": 1
+    },
+    {
+      "word": "watching",
+      "start": 26.1,
+      "end": 26.64,
+      "conf": 1
+    },
+    {
+      "word": "and",
+      "start": 26.82,
+      "end": 27,
+      "conf": 1
+    },
+    {
+      "word": "see",
+      "start": 27,
+      "end": 27.18,
+      "conf": 1
+    },
+    {
+      "word": "you",
+      "start": 27.18,
+      "end": 27.3,
+      "conf": 1
+    },
+    {
+      "word": "tomorrow",
+      "start": 27.3,
+      "end": 27.81,
+      "conf": 1
+    },
+    {
+      "word": "at",
+      "start": 27.84,
+      "end": 28.02,
+      "conf": 1
+    },
+    {
+      "word": "eight",
+      "start": 28.05,
+      "end": 28.41,
+      "conf": 1
+    }
+  ],
+  "sentences": [
+    {
+      "start": 0.06,
+      "end": 28.41,
+      "text": "good evening and welcome to the second half of our factory to in the next five minutes you will see how role clip becomes the finished film the robot arm picks up twelve small boxes and stacks them beside the conveyor belt notice that the editor never touches the color wheel before the sound is balanced if the dialogue is louder than the music by more than six decibels the audience will complain that is all for tonight thank you for watching and see you tomorrow at eight",
+      "n": 88
+    }
+  ],
+  "stats": {
+    "words": 88,
+    "sentences": 1,
+    "avg_conf": 0.9737
+  }
+}

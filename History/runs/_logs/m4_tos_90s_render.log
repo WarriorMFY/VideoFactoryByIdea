@@ -1,0 +1,17 @@
+[probe] F:\AgentWorkArea\DeepseekHarness\IdeaDrivenAigc\VideoFactory\Workspace\assets\tos_excerpts\tos_90s.mp4
+[probe] 90.00s 1150x480 audio=true
+[analyze] blackdetect / freezedetect / scdet / silencedetect ...
+[analyze] black=0 freeze=0 silence=0 scenes=33
+[decide] 应用剪辑规则 ...
+[render] 提取 1 段 ...
+[render] 合并 (fade) ...
+[render] 收尾(响度归一/淡入淡出/标题/字幕) ...
+[done] 31.0s -> F:\AgentWorkArea\DeepseekHarness\IdeaDrivenAigc\VideoFactory\History\runs\multi\tos_90s
+[done] final=90.00s kept=1 cut=0 transition=single
+  - final.mp4 21510KB
+  - edits.json 3KB
+  - signals.json 0KB
+  - probe.json 0KB
+  - report.md 2KB
+  - contact_sheet.jpg 123KB
+  - runlog.jsonl 6KB
