@@ -1,0 +1,15 @@
+
+=== 验收: PASS ===
+真值应切 7s / 实际切 6.983s
+命中 6.983s  过切 0s  漏切 0.017s
+IoU 0.998  precision 1  recall 0.998
+最大边界误差 0.017s
+
+分段存活率:
+  HEAD_BLACK [0-3] 期望=drop 存活=0.0% OK  (片头黑场+静音)
+  REAL_A [3-6.5] 期望=keep 存活=100.0% OK  (真实素材前段，不得误切)
+  MID_BLACK [6.5-8.5] 期望=drop 存活=0.0% OK  (中插黑场+静音（转场残留）)
+  REAL_B [8.5-15] 期望=keep 存活=100.0% OK  (真实素材后段，不得误切)
+  TAIL_BLACK [15-17] 期望=drop 存活=0.0% OK  (片尾黑场+静音)
+
+判定: iou=ok overcut=ok undercut=ok sections=ok boundary=ok

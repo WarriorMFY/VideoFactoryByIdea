@@ -1,0 +1,145 @@
+{
+  "verdict": "PASS",
+  "criteria": {
+    "iou_min": 0.9,
+    "max_overcut_s": 0.6,
+    "max_undercut_s": 0.6,
+    "seg_survive_tol": 0.05,
+    "boundary_tol": 0.6
+  },
+  "measured": {
+    "gt_dropped_s": 7,
+    "actual_dropped_s": 6.983,
+    "tp_s": 6.983,
+    "overcut_s": 0,
+    "undercut_s": 0.017,
+    "iou": 0.998,
+    "precision": 1,
+    "recall": 0.998,
+    "max_boundary_err_s": 0.017,
+    "gt_kept_s": 10,
+    "actual_kept_s": 10
+  },
+  "pass": {
+    "iou": true,
+    "overcut": true,
+    "undercut": true,
+    "sections": true,
+    "boundary": true
+  },
+  "sections": [
+    {
+      "id": "HEAD_BLACK",
+      "start": 0,
+      "end": 3,
+      "expect": "drop",
+      "survive": 0,
+      "ok": true,
+      "why": "片头黑场+静音"
+    },
+    {
+      "id": "REAL_A",
+      "start": 3,
+      "end": 6.5,
+      "expect": "keep",
+      "survive": 1,
+      "ok": true,
+      "why": "真实素材前段，不得误切"
+    },
+    {
+      "id": "MID_BLACK",
+      "start": 6.5,
+      "end": 8.5,
+      "expect": "drop",
+      "survive": 0,
+      "ok": true,
+      "why": "中插黑场+静音（转场残留）"
+    },
+    {
+      "id": "REAL_B",
+      "start": 8.5,
+      "end": 15,
+      "expect": "keep",
+      "survive": 1,
+      "ok": true,
+      "why": "真实素材后段，不得误切"
+    },
+    {
+      "id": "TAIL_BLACK",
+      "start": 15,
+      "end": 17,
+      "expect": "drop",
+      "survive": 0,
+      "ok": true,
+      "why": "片尾黑场+静音"
+    }
+  ],
+  "boundaries": [
+    {
+      "side": "gt",
+      "gt": 0,
+      "err": 0
+    },
+    {
+      "side": "gt",
+      "gt": 3,
+      "err": 0
+    },
+    {
+      "side": "gt",
+      "gt": 6.5,
+      "err": 0
+    },
+    {
+      "side": "gt",
+      "gt": 8.5,
+      "err": 0
+    },
+    {
+      "side": "gt",
+      "gt": 15,
+      "err": 0
+    },
+    {
+      "side": "gt",
+      "gt": 17,
+      "err": 0.017
+    },
+    {
+      "side": "actual",
+      "actual": 0,
+      "err": 0
+    },
+    {
+      "side": "actual",
+      "actual": 3,
+      "err": 0
+    },
+    {
+      "side": "actual",
+      "actual": 6.5,
+      "err": 0
+    },
+    {
+      "side": "actual",
+      "actual": 8.5,
+      "err": 0
+    },
+    {
+      "side": "actual",
+      "actual": 15,
+      "err": 0
+    },
+    {
+      "side": "actual",
+      "actual": 16.983,
+      "err": 0.017
+    }
+  ],
+  "source": {
+    "edl": "D:\\Data\\DeepseekHarness\\IdeaDrivenLoop\\VideoFactory\\History\\runs\\real01\\edits.json",
+    "gt": "D:\\Data\\DeepseekHarness\\IdeaDrivenLoop\\VideoFactory\\History\\bench\\real\\ground_truth.json",
+    "output_file": "D:\\Data\\DeepseekHarness\\IdeaDrivenLoop\\VideoFactory\\History\\runs\\real01\\final.mp4",
+    "output_duration": 9.626
+  }
+}

@@ -1,0 +1,4 @@
+[bench] drawtext = true
+[bench] ffmpeg -> D:\Data\DeepseekHarness\IdeaDrivenLoop\VideoFactory\History\bench\synth\source.mp4
+[bench] ok 2745ms duration=42.00s size=7.85MB
+[bench] ground_truth.json -> D:\Data\DeepseekHarness\IdeaDrivenLoop\VideoFactory\History\bench\synth\ground_truth.json

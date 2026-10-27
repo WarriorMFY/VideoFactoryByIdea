@@ -1,0 +1,21 @@
+{
+  "file": "D:\\Data\\DeepseekHarness\\IdeaDrivenLoop\\VideoFactory\\History\\bench\\real\\source.mp4",
+  "duration": 17,
+  "format": "mov,mp4,m4a,3gp,3g2,mj2",
+  "size": 8195465,
+  "bitrate": 3856689,
+  "video": {
+    "codec": "h264",
+    "width": 1920,
+    "height": 1080,
+    "fps": "60/1",
+    "pix_fmt": "yuv420p",
+    "nb_frames": "1020"
+  },
+  "audio": {
+    "codec": "aac",
+    "sample_rate": "48000",
+    "channels": 2,
+    "bitrate": "2282"
+  }
+}
