@@ -1,0 +1,4 @@
+  taskkill exit=1
+taskkill /T /F: exit code=128 signal=null 存活 21169ms（kill 请求后 18148ms 落地）
+  child.kill 返回 true
+child.kill(SIGKILL): exit code=null signal=SIGKILL 存活 3017ms（kill 请求后 3ms 落地）
