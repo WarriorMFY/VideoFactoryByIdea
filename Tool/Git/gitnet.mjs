@@ -22,7 +22,7 @@
  *
  * 铁律：只操作本地仓库；push 只在人明确要求时用。
  */
-import { spawn } from 'node:child_process';
+import { spawn, spawnSync } from 'node:child_process';
 import net from 'node:net';
 import fs from 'node:fs';
 import path from 'node:path';
@@ -169,7 +169,7 @@ function killTree(child) {
  * 执行 git：stdout/stderr 落文件（禁管道），带「硬超时 + 无进展看门狗」。
  * @returns Promise<{ok,status,ms,text,reason:'ok'|'exit'|'timeout'|'stall',error}>
  */
-function git(args, { hardMs = 60000, stallMs = 0, tag = 'git', cwd = process.cwd(), echo = false } = {}) {
+function git(args, { hardMs = 60000, stallMs = 0, tag = 'git', cwd = process.cwd(), echo = false, extraEnv = null } = {}) {
   fs.mkdirSync(CACHE, { recursive: true });
   const outFile = path.join(CACHE, `${process.pid}_${String(tag).replace(/[^\w.-]+/g, '_').slice(0, 40)}.log`);
   const fd = fs.openSync(outFile, 'w');
@@ -180,6 +180,7 @@ function git(args, { hardMs = 60000, stallMs = 0, tag = 'git', cwd = process.cwd
     windowsHide: true,
     env: {
       ...process.env,
+      ...(extraEnv || {}),
       GIT_TERMINAL_PROMPT: '0', // 凭据缺失 → 立刻失败，绝不挂起等输入
       GCM_INTERACTIVE: 'never',
       LC_ALL: 'C',
@@ -250,7 +251,7 @@ function seconds(args, name = '--timeout') {
   return Number.isFinite(n) && n > 0 ? Math.round(n * 1000) : 0;
 }
 function positionals(args) {
-  const takesValue = new Set(['--endpoint', '--timeout', '--repo', '--mirror', '--stall']);
+  const takesValue = new Set(['--endpoint', '--timeout', '--repo', '--mirror', '--stall', '--helper']);
   const out = [];
   for (let i = 1; i < args.length; i++) {
     const a = args[i];
@@ -279,9 +280,10 @@ function buildEndpoints(args) {
  * 依次尝试端点执行 fn(epUrl)，成功即返回；失败换下一个。
  * 每个端点都受 hardMs/stallMs 约束，所以总等待有上界。
  */
-async function tryEachEndpoint({ args, url, hardMs, stallMs, tag, run }) {
+async function tryEachEndpoint({ args, url, hardMs, stallMs, tag, run, endpointFilter = null }) {
   const state = loadState();
-  const eps = orderEndpoints(buildEndpoints(args), { forced: flagValue(args, '--endpoint'), state });
+  const list = endpointFilter ? buildEndpoints(args).filter(endpointFilter) : buildEndpoints(args);
+  const eps = orderEndpoints(list, { forced: flagValue(args, '--endpoint'), state });
   say(`端点顺序：${describeOrder(eps, state)}`);
   for (const ep of eps) {
     const epUrl = ep.wrap(url);
@@ -438,25 +440,115 @@ async function cmdPull(args) {
 
 // ---------------------------------------------------------------- push（仅人要求时）
 
+/**
+ * 凭据桥：本沙箱下 git 调 credential helper 会经过 sh.exe，创建管道被拒
+ * （`sh.exe: *** fatal error - couldn't create signal pipe, Win32 error 5`）→
+ * 必须**直接调用 helper 可执行文件**，stdin/stdout 一律用文件重定向。
+ * 凭据只在内存中拼成 http.extraheader（经 GIT_CONFIG_* 环境变量传入，不进命令行、不落盘、不打印）。
+ */
+async function resolveHelper(spec) {
+  if (/[\\/]/.test(spec)) return spec;
+  const base = spec.startsWith('git-credential-') ? spec : `git-credential-${spec}`;
+  const file = base.endsWith('.exe') ? base : `${base}.exe`;
+  const ep = await git(['--exec-path'], { hardMs: 8000, tag: 'execpath' });
+  const dir = ep.ok ? String(ep.text).trim().split('\n')[0] : '';
+  if (dir) {
+    const p = path.join(dir, file);
+    if (fs.existsSync(p)) return p;
+  }
+  return file; // 退化为按 PATH 查找
+}
+
+function readCredential(helperPath, host = 'github.com') {
+  fs.mkdirSync(CACHE, { recursive: true });
+  const stamp = `${process.pid}_${Date.now()}`;
+  const inF = path.join(CACHE, `${stamp}_cred_in.txt`);
+  const outF = path.join(CACHE, `${stamp}_cred_out.txt`);
+  const errF = path.join(CACHE, `${stamp}_cred_err.txt`);
+  fs.writeFileSync(inF, `protocol=https\nhost=${host}\n\n`);
+  const fds = [fs.openSync(inF, 'r'), fs.openSync(outF, 'w'), fs.openSync(errF, 'w')];
+  let r;
+  try {
+    r = spawnSync(helperPath, ['get'], { stdio: fds, timeout: 30000, killSignal: 'SIGKILL', windowsHide: true });
+  } finally {
+    for (const fd of fds) { try { fs.closeSync(fd); } catch { /* ignore */ } }
+  }
+  const read = (p) => { try { return fs.readFileSync(p, 'utf8'); } catch { return ''; } };
+  const out = read(outF);
+  const err = read(errF);
+  for (const p of [inF, outF, errF]) { try { fs.unlinkSync(p); } catch { /* ignore */ } }
+  const kv = {};
+  for (const line of out.split('\n')) {
+    const i = line.indexOf('=');
+    if (i > 0) kv[line.slice(0, i).trim()] = line.slice(i + 1).trim();
+  }
+  return {
+    ok: !!r && r.status === 0 && !!kv.password,
+    username: kv.username || '',
+    password: kv.password || '',
+    err: (err || '').trim().slice(0, 160) || (r && r.status !== 0 ? `退出码 ${r.status}` : ''),
+  };
+}
+
 async function cmdPush(args) {
   const ctx = await repoCtx(args);
   if (!ctx) return 2;
   const { root, branch, url } = ctx;
   const dry = has(args, '--dry-run');
+
+  // 鉴权推送走公共镜像没有意义（镜像无法代我们鉴权），默认只打规范地址
+  const explicit = has(args, '--endpoint') || has(args, '--mirror');
+  const endpointFilter = explicit ? null : (ep) => ep.id === 'direct';
+
+  let extraEnv = null;
+  const helperSpec = flagValue(args, '--helper');
+  if (helperSpec) {
+    const helperPath = await resolveHelper(helperSpec);
+    const cred = readCredential(helperPath, 'github.com');
+    if (!cred.ok) {
+      say(`凭据读取失败（${helperSpec} → ${helperPath}）：${cred.err || '没有 password 字段'}`);
+      return 1;
+    }
+    const basic = Buffer.from(`${cred.username}:${cred.password}`).toString('base64');
+    extraEnv = { GIT_CONFIG_COUNT: '1', GIT_CONFIG_KEY_0: 'http.extraheader', GIT_CONFIG_VALUE_0: `Authorization: Basic ${basic}` };
+    say(`凭据来源 ${path.basename(helperPath)}：username=${cred.username}，password=<${cred.password.length} 字符，不打印>`);
+  }
+
   say(`推送 ${branch} → ${url}${dry ? '（dry-run，不真推）' : ''}`);
   const res = await tryEachEndpoint({
-    args, url,
+    args, url, endpointFilter,
     hardMs: seconds(args) || O.pushMs,
     stallMs: seconds(args, '--stall') || O.stallMs,
     tag: 'push',
     run: (epUrl, opt) => git(
       [...baseGitConfig(), '-C', root, 'push', '--progress', epUrl, `HEAD:${branch}`, ...(dry ? ['--dry-run'] : [])],
-      opt,
+      { ...opt, extraEnv: { ...(opt.extraEnv || {}), ...(extraEnv || {}) } },
     ),
   });
   if (!res.ok) {
-    say('\n推送失败。若是凭据问题（401/403/denied），见 Tool/Git/Git.md §6 的 GCM 绕法；本项目规则：只在人明确要求时推送。');
+    say('\n推送失败。凭据问题见 Tool/Git/Git.md §8（本沙箱必须 `--helper wincred`：git 经 sh.exe 调 helper 会被拒）；'
+      + '本项目规则：只在人明确要求时推送。');
     return 1;
+  }
+  // 复核：远端 refs 的 sha 应与本地 HEAD 一致
+  const head = await git(['-C', root, 'rev-parse', 'HEAD'], { hardMs: 10000, tag: 'headsha' });
+  const localSha = String(head.text).trim().split('\n')[0];
+  // 我们是按 URL 推送（不是按 remote 名），origin/<branch> 跟踪引用不会自动前进 → 手动对齐，
+  // 否则 `git status -sb` 会一直显示 [ahead N]（误导人以为没推上去）。
+  if (!dry && localSha) {
+    const ur = await git(['-C', root, 'update-ref', `refs/remotes/origin/${branch}`, localSha], { hardMs: 10000, tag: 'updateref' });
+    if (!ur.ok) say(`（本地跟踪引用 origin/${branch} 未能更新：${tailErr(ur.text)}）`);
+  }
+  const remote = await git([...baseGitConfig(), 'ls-remote', url, `refs/heads/${branch}`], {
+    hardMs: 60000, tag: 'verify', extraEnv,
+  });
+  const remoteSha = String(remote.text).trim().split('\n')[0].split(/\s+/)[0] || '';
+  if (!remote.ok) {
+    say(`已推送，但远端复核失败（${tailErr(remote.text)}）→ 稍后用 git ls-remote origin 手动确认。`);
+  } else if (remoteSha === localSha) {
+    say(`远端已对齐：refs/heads/${branch} = ${localSha.slice(0, 8)}`);
+  } else {
+    say(`注意：远端 ${branch} = ${remoteSha.slice(0, 8)}，本地 HEAD = ${localSha.slice(0, 8)}（不一致，请核对）`);
   }
   const st = await git(['-C', root, 'status', '-sb'], { hardMs: 15000, tag: 'status' });
   say(String(st.text).trim().split('\n')[0] || '');
@@ -500,12 +592,15 @@ const USAGE = `Tool/Git/gitnet.mjs — git 网络操作「短失败 + 自动换�
   node Tool/Git/gitnet.mjs probe [--deep] [--repo owner/repo]   # --deep 才做真实协议实测
   node Tool/Git/gitnet.mjs clone <owner/repo|URL> [目录]         # 逐端点克隆，成功后 origin 置回规范地址
   node Tool/Git/gitnet.mjs pull  [--check]                       # fetch + 快进合并（分叉则不动手）
-  node Tool/Git/gitnet.mjs push  [--dry-run]                     # 只在人明确要求时用
+  node Tool/Git/gitnet.mjs push  [--dry-run] [--helper wincred]  # 只在人明确要求时用；本沙箱要 --helper
   node Tool/Git/gitnet.mjs state [--reset]                       # 看/清端点学习结果
   node Tool/Git/gitnet.mjs run -- <git 参数...>                   # 带硬超时地跑任意 git 命令
 
 通用参数：--endpoint <direct|ghproxy|mirror:host>  --mirror <https://镜像前缀/>
           --timeout <秒>（单端点硬超时）  --stall <秒>（无进展判定，默认 45s）
+
+推送注意：git 经 sh.exe 调 credential helper 在本沙箱会被拒（Win32 error 5），
+必须用 --helper wincred 让脚本直接调 helper 可执行文件取凭据（凭据不打印、不落盘）。
 
 设计前提（实测）：TCP 通不代表 git 能跑；镜像首字节可慢到 34s。
 所以不做"短预探测判死"，改为：端点学习 + 无进展看门狗 + 硬超时。`;
