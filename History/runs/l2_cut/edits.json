@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-27T07:25:35.069Z",
+  "generated_at": "2026-10-27T08:11:49.741Z",
   "tool": "vfactory v0.1",
   "source": {
     "file": "D:\\Data\\DeepseekHarness\\IdeaDrivenLoop\\VideoFactory\\History\\bench\\l2_en\\source.mp4",
@@ -29,8 +29,9 @@
   },
   "decision": {
     "params": {
-      "blackPixTh": 0.1,
-      "blackMinDur": 0.12,
+      "blackPixTh": 0.04,
+      "blackPicTh": 0.98,
+      "blackMinDur": 0.3,
       "freezeNoise": 0.003,
       "freezeMinDur": 0.35,
       "silenceDb": -35,
@@ -41,7 +42,11 @@
       "minKeep": 1.2,
       "headroom": 0
     },
-    "rule": "black→cut; freeze∧silence→cut; freeze-only or silence-only→keep; snap to scene cuts; drop keeps<minKeep; guard maxCutRatio"
+    "rule": "black→cut; freeze∧silence→cut; freeze-only or silence-only→keep; snap to scene cuts; drop keeps<minKeep; speech-protection(no cut where ASR found words); guard maxCutRatio",
+    "protect": null,
+    "protect_pad": 0.25,
+    "protect_conf": 0.5,
+    "protected_spans": []
   },
   "kept": [
     {
@@ -51,7 +56,8 @@
       "signals": {
         "black": false,
         "freeze": false,
-        "silence": true
+        "silence": true,
+        "speech": false
       }
     }
   ],

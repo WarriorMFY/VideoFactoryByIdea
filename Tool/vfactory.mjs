@@ -9,6 +9,7 @@
  * 用法：
  *   node Tool/vfactory.mjs <source> --out <dir> [--fps 30] [--width 1280] [--transition fade|none]
  *                                 [--title "标题"] [--srt sub.srt] [--fill] [--max-cut 20]
+ *                                 [--protect transcript.json] [--protect-pad 0.25] [--black-pix 0.04] [--black-pic 0.98] [--black-dur 0.30]
  * 设计要点：
  *   - 纯 ffmpeg + Node 标准库，无第三方运行时依赖（本机 pip/curl 出网受限，node 可出网）。
  *   - 每一步的 ffmpeg 命令都写入 runlog.jsonl，保证可复现、可审计。
@@ -47,11 +48,18 @@ const OPT = {
   fill: !!args.fill,                 // 是否用黑边填充到固定画幅（默认按比例缩放+pad）
   preset: args.preset || 'balanced',
   maxCutRatio: Number(args['max-cut'] || 60),   // 最多切除百分比，防病态素材被切空
+  protect: args.protect ? path.resolve(args.protect) : '', // ASR transcript.json：有语音的区间禁止切除
+  protectPad: Number(args['protect-pad'] || 0.25),         // 语音保护的两侧余量（秒）
+  protectConf: Number(args['protect-conf'] || 0.5),       // 只有置信度 ≥ 该值的词才用于保护（防 ASR 噪声误保护）
 };
 
 // ---------------- 决策参数（剪辑规则） ----------------
+// 注意：黑场判定在真实影视素材上很容易误伤"暗场景"（实测 Sintel trailer 的对白段被当黑场剪掉）。
+// 因此把 pix_th 收紧（0.10→0.04）、pic_th 提高（默认 0.98 显式写明）、最短时长提高（0.12→0.30）。
 const DECISION = {
-  blackPixTh: 0.10, blackMinDur: 0.12,
+  blackPixTh: Number(args['black-pix'] || 0.04),
+  blackPicTh: Number(args['black-pic'] || 0.98),
+  blackMinDur: Number(args['black-dur'] || 0.30),
   freezeNoise: 0.003, freezeMinDur: 0.35,
   silenceDb: -35, silenceMinDur: 0.5,
   sceneTh: 8,
@@ -97,7 +105,7 @@ function probe(file) {
 // ---------------- 2. 信号分析 ----------------
 function analyze(file, hasAudio) {
   // 一次视频 pass 同时拿到 黑场/冻帧/场景切点 日志
-  const vf = `blackdetect=d=${DECISION.blackMinDur}:pix_th=${DECISION.blackPixTh},` +
+  const vf = `blackdetect=d=${DECISION.blackMinDur}:pix_th=${DECISION.blackPixTh}:pic_th=${DECISION.blackPicTh},` +
              `freezedetect=n=${DECISION.freezeNoise}:d=${DECISION.freezeMinDur},` +
              `scdet=threshold=${DECISION.sceneTh}`;
   const vArgs = ['-hide_banner', '-nostats', '-i', file, '-an', '-vf', vf, '-f', 'null', 'NUL'];
@@ -222,7 +230,33 @@ function decide(sig, dur) {
     }
   }
 
-  // 规则5：硬上限保护（病态素材不得切空）
+  // 规则5：语音保护 —— 有对白/讲话的区间一律不剪
+  // 为什么需要：真实影视素材里"暗场景"会被黑场检测误判、静音处可能夹着台词（实测 Sintel trailer
+  // 的对白段被黑场规则整段剪掉）。只要有 ASR 词级时间戳，就用它给语音区间上锁。
+  let protectedSpans = [];
+  if (OPT.protect && fs.existsSync(OPT.protect)) {
+    const tr = JSON.parse(fs.readFileSync(OPT.protect, 'utf8'));
+    const words = (tr.words || []).filter((w) => w && Number.isFinite(w.start) && Number.isFinite(w.end) && (w.conf ?? 1) >= OPT.protectConf);
+    // 相邻词间隔 < 0.8s 视为同一句连续语音，合并成区间
+    const spans = [];
+    for (const w of words) {
+      const last = spans[spans.length - 1];
+      if (last && w.start - last.end < 0.8) last.end = Math.max(last.end, w.end);
+      else spans.push({ start: w.start, end: w.end });
+    }
+    protectedSpans = spans
+      .map((s) => ({ start: Math.max(0, s.start - OPT.protectPad), end: Math.min(dur, s.end + OPT.protectPad) }))
+      .filter((s) => s.end - s.start > 0.1);
+    const before = cut.reduce((a, c) => a + (c.end - c.start), 0);
+    const kept0 = [];
+    for (const c of cut) for (const piece of subtract(c, protectedSpans)) kept0.push(piece);
+    cut = merge(kept0, DECISION.minGap);
+    keep = complement(cut, dur);
+    const after = cut.reduce((a, c) => a + (c.end - c.start), 0);
+    reasons.push({ start: r3(0), end: r3(dur), why: `语音保护：${protectedSpans.length} 段语音区间已锁定，切除量 ${before.toFixed(2)}s → ${after.toFixed(2)}s（恢复 ${(before - after).toFixed(2)}s）` });
+  }
+
+  // 规则6：硬上限保护（病态素材不得切空）
   const keepDur = keep.reduce((a, k) => a + (k.end - k.start), 0);
   let guard = null;
   if (dur > 0 && (keepDur / dur) * 100 < 100 - OPT.maxCutRatio) {
@@ -237,9 +271,10 @@ function decide(sig, dur) {
       black: black.some((x) => overlap(x, k)),
       freeze: freeze.some((x) => overlap(x, k)),
       silence: silence.some((x) => overlap(x, k)),
+      speech: protectedSpans.some((x) => overlap(x, k)),
     },
   }));
-  return { kept, cut: merge(cut, 0.001).map((c) => ({ start: r3(c.start), end: r3(c.end) })), reasons, guard, signals: { black, freeze, scenes: sc, silence } };
+  return { kept, cut: merge(cut, 0.001).map((c) => ({ start: r3(c.start), end: r3(c.end) })), reasons, guard, protectedSpans, signals: { black, freeze, scenes: sc, silence } };
 }
 
 // ---------------- 4. 渲染 ----------------
@@ -384,7 +419,7 @@ function report(d) {
   L.push(`## 剪辑决策（${dec.kept.length} 个保留段）`, '');
   L.push(`| # | 入点 | 出点 | 时长 | 信号标记 |`, `| --- | --- | --- | --- | --- |`);
   dec.kept.forEach((k, i) => {
-    const mark = [k.signals.black && 'black', k.signals.freeze && 'freeze', k.signals.silence && 'silence'].filter(Boolean).join(',') || '正常';
+    const mark = [k.signals.speech && 'speech(已保护)', k.signals.black && 'black', k.signals.freeze && 'freeze', k.signals.silence && 'silence'].filter(Boolean).join(',') || '正常';
     L.push(`| ${i + 1} | ${fmt(k.start)} (${k.start.toFixed(2)}s) | ${fmt(k.end)} (${k.end.toFixed(2)}s) | ${k.dur.toFixed(2)}s | ${mark} |`);
   });
   L.push('', `## 切除段`, '');
@@ -446,7 +481,7 @@ function main() {
     tool: 'vfactory v0.1',
     source: { file: path.resolve(SRC), duration: pr.duration, video: pr.video, audio: pr.audio },
     output: { file: finalFile, duration: outDur, width: OPT.width, height: OPT.height, fps: OPT.fps, transition: mergeInfo.mode },
-    decision: { params: DECISION, rule: 'black→cut; freeze∧silence→cut; freeze-only or silence-only→keep; snap to scene cuts; drop keeps<minKeep; guard maxCutRatio' },
+    decision: { params: DECISION, rule: 'black→cut; freeze∧silence→cut; freeze-only or silence-only→keep; snap to scene cuts; drop keeps<minKeep; speech-protection(no cut where ASR found words); guard maxCutRatio', protect: OPT.protect || null, protect_pad: OPT.protectPad, protect_conf: OPT.protectConf, protected_spans: dec.protectedSpans },
     kept: dec.kept,
     cut: dec.cut,
     cut_reasons: dec.reasons,

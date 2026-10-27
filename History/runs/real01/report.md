@@ -32,8 +32,9 @@
 
 ```json
 {
-  "blackPixTh": 0.1,
-  "blackMinDur": 0.12,
+  "blackPixTh": 0.04,
+  "blackPicTh": 0.98,
+  "blackMinDur": 0.3,
   "freezeNoise": 0.003,
   "freezeMinDur": 0.35,
   "silenceDb": -35,

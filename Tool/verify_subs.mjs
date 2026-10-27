@@ -27,6 +27,10 @@ const JSON_OUT = getOpt('--json', '');
 const REF_PATH = getOpt('--ref', '');
 const TH = { wer: Number(getOpt('--max-wer', 0.25)), cover: 0.95, boundMean: 0.8, boundMax: 1.5, cps_zh: 20, cps_en: 25 };
 
+// 真实素材可能没有讲稿真值（reference-free 模式）：此时跳过 WER 与真值时间轴比对，
+// 只做「字幕自身合理性」验收（覆盖/可读性/译文覆盖/重映射自检），并在报告里显式标注。
+const HAS_REFERENCE = !!(GT.script && Array.isArray(GT.sentences) && GT.sentences.length);
+
 const norm = (s) => String(s || '').toLowerCase().replace(/[^a-z0-9']+/g, ' ').replace(/\s+/g, ' ').trim();
 const tokenize = (s) => norm(s).split(' ').filter(Boolean);
 
@@ -59,29 +63,32 @@ function charSim(a, b) {
   return 1 - dp[A.length][B.length] / Math.max(A.length, B.length);
 }
 
-// ---------- 1. WER ----------
-const w = wer(GT.script, TR.text);
+// ---------- 1. WER（仅有讲稿真值时） ----------
+const w = HAS_REFERENCE ? wer(GT.script, TR.text) : null;
 
-// ---------- 2. 时间轴（对真值句子） ----------
+// ---------- 2. 时间轴（对真值句子；无真值时改用"自洽性"指标） ----------
 const cuesFile = CUES_PATH ? JSON.parse(fs.readFileSync(CUES_PATH, 'utf8')) : null;
 const sourceCues = cuesFile ? (cuesFile.cues || cuesFile) : (TR.sentences || []);
 const cover = (a, b) => sourceCues.reduce((s, c) => s + Math.max(0, Math.min(b, c.end) - Math.max(a, c.start)), 0);
-const timing = (GT.sentences || []).map((s) => {
-  const covered = cover(s.start, s.end);
-  const dur = s.end - s.start;
-  const starts = sourceCues.map((c) => c.start), ends = sourceCues.map((c) => c.end);
-  const near = (arr, t) => (arr.length ? arr.reduce((m, x) => (Math.abs(x - t) < Math.abs(m - t) ? x : m), arr[0]) : null);
-  return {
-    idx: s.idx, start: s.start, end: s.end,
-    covered_ratio: Number((covered / Math.max(1e-6, dur)).toFixed(3)),
-    start_err: Number(Math.abs(near(starts, s.start) - s.start).toFixed(3)),
-    end_err: Number(Math.abs(near(ends, s.end) - s.end).toFixed(3)),
-  };
-});
-const covRatio = timing.reduce((a, x) => a + x.covered_ratio * (x.end - x.start), 0) / timing.reduce((a, x) => a + (x.end - x.start), 0);
-const startErrs = timing.map((x) => x.start_err), endErrs = timing.map((x) => x.end_err);
-const meanBound = (startErrs.concat(endErrs)).reduce((a, b) => a + b, 0) / (startErrs.length + endErrs.length);
-const maxBound = Math.max(...startErrs, ...endErrs);
+let timing = [], covRatio = null, meanBound = null, maxBound = null;
+if (HAS_REFERENCE) {
+  timing = (GT.sentences || []).map((s) => {
+    const covered = cover(s.start, s.end);
+    const dur = s.end - s.start;
+    const starts = sourceCues.map((c) => c.start), ends = sourceCues.map((c) => c.end);
+    const near = (arr, t) => (arr.length ? arr.reduce((m, x) => (Math.abs(x - t) < Math.abs(m - t) ? x : m), arr[0]) : null);
+    return {
+      idx: s.idx, start: s.start, end: s.end,
+      covered_ratio: Number((covered / Math.max(1e-6, dur)).toFixed(3)),
+      start_err: Number(Math.abs(near(starts, s.start) - s.start).toFixed(3)),
+      end_err: Number(Math.abs(near(ends, s.end) - s.end).toFixed(3)),
+    };
+  });
+  covRatio = timing.reduce((a, x) => a + x.covered_ratio * (x.end - x.start), 0) / timing.reduce((a, x) => a + (x.end - x.start), 0);
+  const startErrs = timing.map((x) => x.start_err), endErrs = timing.map((x) => x.end_err);
+  meanBound = (startErrs.concat(endErrs)).reduce((a, b) => a + b, 0) / (startErrs.length + endErrs.length);
+  maxBound = Math.max(...startErrs, ...endErrs);
+}
 
 // ---------- 3. 译文覆盖 + 可读性（基于 cues） ----------
 let translate = null, readability = null;
@@ -115,15 +122,13 @@ if (REMAP_PATH) {
 
 // ---------- 5. 译文质量（对比人工精译，仅报告） ----------
 let quality = null;
-if (REF_PATH && sourceCues.length) {
+if (REF_PATH && sourceCues.length && HAS_REFERENCE) {
   const ref = JSON.parse(fs.readFileSync(REF_PATH, 'utf8'));
   const refBySentence = ref.sentences || [];
-  // 把每条 cue 归到覆盖最多的真值句，再与参考译文比较
   const sims = [];
   for (const r of refBySentence) {
-    const inSent = sourceCues.filter((c) => c.start < r.en.length * 0 + 999).filter((c) => c.zh);
-    // 用 cue 起始时间落在该句区间的 cue 合并译文
     const st = GT.sentences.find((s) => s.idx === r.idx);
+    if (!st) continue;
     const mine = sourceCues.filter((c) => c.zh && c.start >= st.start - 0.4 && c.start <= st.end + 0.4).map((c) => c.zh).join('');
     if (!mine) continue;
     sims.push({ idx: r.idx, sim: Number(charSim(mine, r.zh).toFixed(3)), machine: mine, reference: r.zh });
@@ -132,27 +137,36 @@ if (REF_PATH && sourceCues.length) {
 }
 
 const pass = {
-  wer: w.rate <= TH.wer,
-  coverage: covRatio >= TH.cover,
-  boundary_mean: meanBound <= TH.boundMean,
-  boundary_max: maxBound <= TH.boundMax,
+  wer: w ? w.rate <= TH.wer : null,
+  coverage: covRatio === null ? null : covRatio >= TH.cover,
+  boundary_mean: meanBound === null ? null : meanBound <= TH.boundMean,
+  boundary_max: maxBound === null ? null : maxBound <= TH.boundMax,
   translated: translate ? translate.missing === 0 : null,
   readability: readability ? readability.max_zh_cps <= TH.cps_zh : null,
   remap: remapPass,
 };
 const verdict = Object.entries(pass).filter(([, v]) => v !== null).every(([, v]) => v) ? 'PASS' : 'FAIL';
 const result = {
-  verdict, thresholds: TH,
-  wer: { ...w, rate: Number(w.rate.toFixed(4)) },
-  timing: { coverage_ratio: Number(covRatio.toFixed(4)), mean_boundary_err_s: Number(meanBound.toFixed(3)), max_boundary_err_s: Number(maxBound.toFixed(3)), sentences: timing },
+  verdict,
+  mode: HAS_REFERENCE ? 'with-reference（有讲稿真值）' : 'reference-free（真实素材无讲稿，WER/真值时间轴不可测）',
+  thresholds: TH,
+  wer: w ? { ...w, rate: Number(w.rate.toFixed(4)) } : null,
+  timing: {
+    coverage_ratio: covRatio === null ? null : Number(covRatio.toFixed(4)),
+    mean_boundary_err_s: meanBound === null ? null : Number(meanBound.toFixed(3)),
+    max_boundary_err_s: maxBound === null ? null : Number(maxBound.toFixed(3)),
+    sentences: timing,
+  },
   translate, readability, remap, quality, pass,
   source: { transcript: args[0], ground_truth: args[1], cues: CUES_PATH || null, remap: REMAP_PATH || null },
 };
 if (JSON_OUT) fs.writeFileSync(JSON_OUT, JSON.stringify(result, null, 2));
 
 console.log(`\n=== 字幕链路验收: ${verdict} ===`);
-console.log(`ASR: WER ${(w.rate * 100).toFixed(1)}%  (错 ${w.dist}/${w.refWords} 词；识别 ${w.hypWords} 词)`);
-console.log(`时间轴: 语音覆盖 ${(covRatio * 100).toFixed(1)}% / 句界平均误差 ${meanBound.toFixed(2)}s / 最大 ${maxBound.toFixed(2)}s`);
+console.log(`模式: ${result.mode}`);
+if (w) console.log(`ASR: WER ${(w.rate * 100).toFixed(1)}%  (错 ${w.dist}/${w.refWords} 词；识别 ${w.hypWords} 词)`);
+else console.log(`ASR: 识别 ${(TR.words || []).length} 词 / 平均置信度 ${TR.stats?.avg_conf ?? '-'}（无讲稿真值，WER 不可测）`);
+if (covRatio !== null) console.log(`时间轴: 语音覆盖 ${(covRatio * 100).toFixed(1)}% / 句界平均误差 ${meanBound.toFixed(2)}s / 最大 ${maxBound.toFixed(2)}s`);
 if (translate) console.log(`译文: ${translate.translated}/${translate.cues} 条有中文（缺 ${translate.missing}）`);
 if (readability) console.log(`可读性: 中文峰值 ${readability.max_zh_cps} 字/秒（均值 ${readability.mean_zh_cps}）/ 英文峰值 ${readability.max_en_cps} 字符/秒`);
 if (remap) console.log(`重映射: ${remap.cues_out} 条（原 ${remap.cues_in}，丢 ${remap.dropped}）/ 越界 ${remap.overflow} / 重叠 ${remap.overlaps} / 最短 ${remap.min_dur}s`);

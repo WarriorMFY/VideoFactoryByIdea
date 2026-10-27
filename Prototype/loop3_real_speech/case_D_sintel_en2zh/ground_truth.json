@@ -1,0 +1,11 @@
+{
+  "reference_free": true,
+  "generated_at": "2026-10-27T08:12:06.805Z",
+  "note": "真实影视素材（Sintel trailer），没有官方逐句讲稿，因此 WER/真值时间轴不可测；本文件只用于标识\"无真值\"。",
+  "clip": {
+    "file": "Workspace\\assets\\realspeech\\sintel-trailer.mp4",
+    "duration": 52.208333,
+    "license": "Sintel © Blender Foundation, CC-BY 3.0"
+  },
+  "duration_s": 52.208333
+}

@@ -30,7 +30,7 @@ const GLOSSARY = getOpt('--glossary', '');
 const TH = {
   pause: Number(getOpt('--pause', 0.3)),        // 句界停顿阈值（秒）
   maxSent: Number(getOpt('--max-sent', 110)),   // 单句最多字符
-  minSentChars: Number(getOpt('--min-sent', 24)),// 单句最少字符（过短则合并）
+  minSentChars: Number(getOpt('--min-sent', 12)),// 单句最少字符（过短则并到相邻句；真实对白常是短句，默认值调小）
   maxZh: Number(getOpt('--max-zh', 18)),        // 单行中文字数
   maxEn: Number(getOpt('--max-en', 64)),        // 单行英文字符
   minCue: Number(getOpt('--min-cue', 0.8)),     // 单行最短时长

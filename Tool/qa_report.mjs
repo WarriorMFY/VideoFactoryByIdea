@@ -43,8 +43,10 @@ if (hasAudio) {
 }
 
 // 2) 残留缺陷
+// 质检用的黑场判定与剪辑规则保持一致（d=0.30 / pix_th=0.04 / pic_th=0.98）；
+// 否则会把"剪辑时够不上黑场"的暗场闪一下误报成缺陷（实测 0.3s 阈值边缘会反复报警）。
 const vres = ffmpeg(['-hide_banner', '-nostats', '-i', file, '-an', '-vf',
-  'blackdetect=d=0.12:pix_th=0.10,freezedetect=n=0.003:d=0.35', '-f', 'null', 'NUL'], lf('vdefects'));
+  'blackdetect=d=0.30:pix_th=0.04:pic_th=0.98,freezedetect=n=0.003:d=0.35', '-f', 'null', 'NUL'], lf('vdefects'));
 const vt = vres.text;
 const blackN = [...vt.matchAll(/black_start:/g)].length;
 const freezeN = [...vt.matchAll(/freeze_start:/g)].length;

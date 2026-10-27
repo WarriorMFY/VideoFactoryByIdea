@@ -20,6 +20,7 @@ if (!input) { console.error('用法: node Tool/asr_vosk.mjs <audio|video> [--mod
 const getOpt = (k, d) => (args.includes(k) ? args[args.indexOf(k) + 1] : d);
 const MODEL = path.resolve(getOpt('--model', path.join(ROOT, 'Workspace', 'asr', 'models', 'vosk-model-small-en-us-0.15')));
 const OUT = path.resolve(getOpt('--out', path.join(ROOT, 'History', 'asr', 'transcript.json')));
+const AF = getOpt('--af', '');   // 可选音频预处理链，例如 "highpass=f=200,loudnorm=I=-16"
 const ASRDIR = path.join(ROOT, 'Workspace', 'asr');
 const WORK = path.join(path.dirname(OUT), '.asr_work');
 fs.mkdirSync(WORK, { recursive: true });
@@ -40,7 +41,10 @@ const vosk_recognizer_set_words = lib.func('void vosk_recognizer_set_words(void 
 
 // ---- 1. 抽音频为 16k mono s16le 裸 PCM（不用 WAV，避免 WAV 头长度不一致导致的错位）----
 const pcmFile = path.join(WORK, 'asr_16k.pcm');
-const r = ffmpeg(['-hide_banner', '-loglevel', 'error', '-y', '-i', input, '-vn', '-ac', '1', '-ar', '16000', '-f', 's16le', '-acodec', 'pcm_s16le', pcmFile], path.join(WORK, 'extract.log'));
+const extractArgs = ['-hide_banner', '-loglevel', 'error', '-y', '-i', input, '-vn', '-ac', '1', '-ar', '16000'];
+if (AF) extractArgs.push('-af', AF);   // 真实素材常带音乐/音效，预处理能明显影响识别率
+extractArgs.push('-f', 's16le', '-acodec', 'pcm_s16le', pcmFile);
+const r = ffmpeg(extractArgs, path.join(WORK, 'extract.log'));
 if (r.status !== 0) { console.error('抽音频失败:', r.text.split('\n').slice(-6).join(' | ')); process.exit(1); }
 const pcm = fs.readFileSync(pcmFile);
 const audioDur = pcm.length / (16000 * 2);
@@ -104,6 +108,7 @@ const out = {
   engine: 'vosk',
   model: path.basename(MODEL),
   model_license: 'Apache-2.0',
+  audio_filter: AF || null,
   input: path.resolve(input),
   audio_duration_s: Number(audioDur.toFixed(3)),
   text,

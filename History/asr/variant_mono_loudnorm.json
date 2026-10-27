@@ -1,0 +1,217 @@
+{
+  "generated_at": "2026-10-27T08:12:17.836Z",
+  "engine": "vosk",
+  "model": "vosk-model-small-en-us-0.15",
+  "model_license": "Apache-2.0",
+  "audio_filter": "highpass=f=200,loudnorm=I=-16:TP=-1.5",
+  "input": "D:\\Data\\DeepseekHarness\\IdeaDrivenLoop\\VideoFactory\\Workspace\\assets\\realspeech\\sintel-trailer.mp4",
+  "audio_duration_s": 51.925,
+  "text": "what brings you to the land are the gatekeepers i'm searching for so dangerous quest for and know not too can don't for a long as i can remember",
+  "words": [
+    {
+      "word": "what",
+      "start": 12.15,
+      "end": 12.39,
+      "conf": 1
+    },
+    {
+      "word": "brings",
+      "start": 12.39,
+      "end": 12.72,
+      "conf": 1
+    },
+    {
+      "word": "you",
+      "start": 12.72,
+      "end": 12.84,
+      "conf": 1
+    },
+    {
+      "word": "to",
+      "start": 12.84,
+      "end": 12.96,
+      "conf": 1
+    },
+    {
+      "word": "the",
+      "start": 12.96,
+      "end": 13.05,
+      "conf": 1
+    },
+    {
+      "word": "land",
+      "start": 13.05,
+      "end": 13.47,
+      "conf": 0.949511
+    },
+    {
+      "word": "are",
+      "start": 13.47,
+      "end": 13.58914,
+      "conf": 0.512578
+    },
+    {
+      "word": "the",
+      "start": 13.58914,
+      "end": 13.68,
+      "conf": 1
+    },
+    {
+      "word": "gatekeepers",
+      "start": 13.68,
+      "end": 14.37,
+      "conf": 0.818297
+    },
+    {
+      "word": "i'm",
+      "start": 18.63,
+      "end": 18.78,
+      "conf": 1
+    },
+    {
+      "word": "searching",
+      "start": 18.78,
+      "end": 19.29,
+      "conf": 1
+    },
+    {
+      "word": "for",
+      "start": 19.29,
+      "end": 19.442983,
+      "conf": 1
+    },
+    {
+      "word": "so",
+      "start": 19.442983,
+      "end": 19.59,
+      "conf": 0.40175
+    },
+    {
+      "word": "dangerous",
+      "start": 36.956543,
+      "end": 37.47,
+      "conf": 1
+    },
+    {
+      "word": "quest",
+      "start": 37.47,
+      "end": 37.92,
+      "conf": 1
+    },
+    {
+      "word": "for",
+      "start": 37.95,
+      "end": 38.1,
+      "conf": 1
+    },
+    {
+      "word": "and",
+      "start": 38.1,
+      "end": 38.255618,
+      "conf": 0.856186
+    },
+    {
+      "word": "know",
+      "start": 38.255618,
+      "end": 38.427722,
+      "conf": 0.401638
+    },
+    {
+      "word": "not",
+      "start": 38.427722,
+      "end": 38.67,
+      "conf": 0.536957
+    },
+    {
+      "word": "too",
+      "start": 38.67,
+      "end": 38.91,
+      "conf": 0.521613
+    },
+    {
+      "word": "can",
+      "start": 41.88,
+      "end": 42.03,
+      "conf": 0.620636
+    },
+    {
+      "word": "don't",
+      "start": 42.116722,
+      "end": 42.390952,
+      "conf": 0.394358
+    },
+    {
+      "word": "for",
+      "start": 42.390952,
+      "end": 42.51,
+      "conf": 0.516125
+    },
+    {
+      "word": "a",
+      "start": 42.515317,
+      "end": 42.63,
+      "conf": 0.627358
+    },
+    {
+      "word": "long",
+      "start": 42.69,
+      "end": 42.93,
+      "conf": 0.826149
+    },
+    {
+      "word": "as",
+      "start": 42.93,
+      "end": 43.02,
+      "conf": 0.826149
+    },
+    {
+      "word": "i",
+      "start": 43.025215,
+      "end": 43.14,
+      "conf": 1
+    },
+    {
+      "word": "can",
+      "start": 43.14,
+      "end": 43.32,
+      "conf": 1
+    },
+    {
+      "word": "remember",
+      "start": 43.32,
+      "end": 43.86,
+      "conf": 1
+    }
+  ],
+  "sentences": [
+    {
+      "start": 12.15,
+      "end": 14.37,
+      "text": "what brings you to the land are the gatekeepers",
+      "n": 9
+    },
+    {
+      "start": 18.63,
+      "end": 19.59,
+      "text": "i'm searching for so",
+      "n": 4
+    },
+    {
+      "start": 36.957,
+      "end": 38.91,
+      "text": "dangerous quest for and know not too",
+      "n": 7
+    },
+    {
+      "start": 41.88,
+      "end": 43.86,
+      "text": "can don't for a long as i can remember",
+      "n": 9
+    }
+  ],
+  "stats": {
+    "words": 29,
+    "sentences": 4,
+    "avg_conf": 0.821
+  }
+}
