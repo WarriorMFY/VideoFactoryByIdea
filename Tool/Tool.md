@@ -10,6 +10,7 @@
 | --- | --- |
 | `node Tool/run_acceptance.mjs` | **小循环 1 验收**：剪辑用例 → 真值对比 → 成片质检 → `History/loops/loop01/acceptance.md` |
 | `node Tool/run_subs_acceptance.mjs` | **小循环 2 验收**：造外语素材 → ASR → 剪辑 → 字幕 → 重映射 → 烧入 → 验收 → `History/loops/loop02/acceptance.md` |
+| `node Tool/run_real_acceptance.mjs` | **小循环 3 验收**：真实素材（Sintel 预告片，CC-BY）→ 音频预处理对比 → 带语音保护剪辑 → 字幕 → reference-free 验收 → `History/loops/loop03/acceptance.md` |
 | `.\Prototype\loop1_autocut\reproduce.ps1` | 从零复现小循环 1（装 ffmpeg → 拉素材 → 验收） |
 
 ## 环境引导（第三方依赖，落 Workspace）
@@ -20,7 +21,8 @@
 | `bootstrap_asr.mjs` | 解包 koffi / @koromix/koffi-win32-x64 / vosk / @andresaya/edge-tts / ws 到 Workspace/asr（**替代 npm install**，写 DEPENDENCIES.md） |
 | `fetch_vosk_model.mjs` | 多线程分段下载 Vosk 模型（alphacephei 单连接仅 ~15KB/s，必须并行 + 续传） |
 | `npm_fetch.mjs <pkg> <dir>` | 从 npmmirror 拉任意 npm tarball 并解包（npm install 在本沙箱会失败时用） |
-| `fetch_real_footage.mjs` | 拉公开授权真实素材（Big Buck Bunny, CC-BY 3.0） |
+| `fetch_real_footage.mjs` | 拉公开授权真实素材（Big Buck Bunny, CC-BY 3.0，视频无音轨） |
+| `fetch_realspeech.mjs` | 拉**带真实人声**的公开授权素材（Sintel 预告片，CC-BY 3.0，media.w3.org 可达且快） |
 
 ## 剪辑链路（小循环 1）
 
@@ -39,12 +41,15 @@ lib/ff.mjs             子进程封装：fd 重定向捕获输出 + fontconfig �
 ```text
 make_l2_bench.mjs      ★造"外语视频"测试素材：Edge 神经 TTS 逐句合成（讲稿已知=真值）+ 真实画面
                        注意：逐句去首尾静音，否则真值句时长混入静音会让覆盖率指标虚低（实测尾静音 0.8s/句）
-asr_vosk.mjs           离线识别：koffi 直连 libvosk.dll，输出词级时间戳 transcript.json
+asr_vosk.mjs           离线识别：koffi 直连 libvosk.dll，输出词级时间戳 transcript.json；`--af` 指定音频预处理
                        坑：Vosk 每段结果由 result() 吐出（会清空内部缓冲），final_result() 常常是空 —— 必须逐段收集
+                       真实影视音轨上 `--af "afftdn=nf=-25,highpass=f=300,lowpass=f=3400"` 明显更好（置信度 0.816→0.918）
 make_subs.mjs          断句 → 句子级翻译（MyMemory/agent/none）→ 显示行 → SRT；术语表修正
 remap_subs.mjs         把原片时间轴字幕重映射到剪辑后时间轴（跨切点拆分、保留<35% 丢弃、过短补齐）
 verify_subs.mjs        字幕链路验收：WER / 语音覆盖 / 句界误差 / 译文覆盖 / 可读性 / 重映射自检
+                       真实素材无讲稿时自动切 reference-free 模式（跳过 WER，只验字幕自身合理性与重映射）
 run_subs_acceptance.mjs 小循环 2 一键验收（含"两次渲染 EDL 一致性"断言，防空错位）
+run_real_acceptance.mjs 小循环 3 一键验收：真实素材 + 音频预处理对比 + 语音保护剪辑 + reference-free 验收
 glossary_zh.json       机翻术语表（LUFS / Mbps 等）
 tts_sapi.ps1           备用方案：Windows SAPI 离线 TTS（本沙箱 Speak 被拒 E_ACCESSDENIED，仅留档）
 ```
@@ -59,6 +64,12 @@ node Tool\vfactory.mjs <源视频> --out <输出目录> [选项]
   --xfade-dur 0.4       转场时长（秒）
   --width/--height/--fps 输出规格（默认 1280x720@30）
   --max-cut 60          切除比例上限，超过则放弃自动切除（防病态素材剪空）
+  --protect t.json      语音保护：把 ASR transcript 里识别到的语音区间从切除集合中挖掉（真实素材必备）
+  --protect-pad 0.25    语音区间两侧余量（秒）
+  --protect-conf 0.5    只采信置信度 ≥ 该值的词（防 ASR 噪声误保护）
+  --black-pix 0.04      黑场像素阈值（越小越严格；0.10 会在暗场景误判）
+  --black-pic 0.98      黑场判定要求的"黑像素占比"
+  --black-dur 0.30      最短黑场时长（秒）
 ```
 
 输出交付包：`final.mp4`、`edits.json`（EDL）、`report.md`、`contact_sheet.jpg`、`probe.json`、`signals.json`、`runlog.jsonl`、`.work/logs/*.log`（每步 ffmpeg 原始日志）。
@@ -67,7 +78,8 @@ node Tool\vfactory.mjs <源视频> --out <输出目录> [选项]
 
 | 规则 | 默认值 | 含义 |
 | --- | --- | --- |
-| 黑场 → 切 | `blackMinDur 0.12s`, `pix_th 0.10` | 无画面即剪 |
+| 黑场 → 切 | `--black-dur 0.30` `--black-pix 0.04` `--black-pic 0.98` | 无画面即剪；参数在真实影视素材上调过（原 0.12/0.10 会把暗场景误判、剪掉对白） |
+| **语音保护** | `--protect <transcript.json>` `--protect-pad 0.25` `--protect-conf 0.5` | **识别到语音的区间一律不剪**（真实素材上救回被误剪的对白；只采信 conf≥0.5 的词） |
 | 冻帧 ∧ 静音 → 切 | `freezeNoise 0.003`, `freezeMinDur 0.35s`, `silenceDb −35`, `silenceMinDur 0.5s` | **两路都无信息才剪**；只有冻帧（口播）或只有静音（动作镜头）保留 |
 | 切点吸附镜头边界 | `snapWindow 0.6s`（scdet threshold 8） | 切在镜头切换处，不留半个镜头 |
 | 碎片归并 | `minGap 0.4s`, `minKeep 1.2s` | 相邻切除合并；过短的保留段并入切除 |
@@ -97,11 +109,16 @@ node Tool\vfactory.mjs <源视频> --out <输出目录> [选项]
 8. **模型站点限制**：HuggingFace / ModelScope / hf-mirror 全域不可达（拿不到 Whisper 系模型）；alphacephei（Vosk 模型）可达但单连接 ~15KB/s 且会断 → 必须多线程分段 + 续传。
 9. **Windows SAPI TTS 被拒**：`SpVoice.Speak` 抛 `E_ACCESSDENIED`（沙箱限制），造测试语音改用 Edge 神经 TTS（`@andresaya/edge-tts`，需外网，实测可用）。
 10. **Vosk 结果收集**：`vosk_recognizer_result()` 每段吐结果并清空内部缓冲，`vosk_recognizer_final_result()` 常为空；必须逐段收集 `result` 数组再按时间排序去重。
+11. **黑场检测在影视素材上会误伤暗场景**：`pix_th 0.10` 太松，实测把 Sintel 预告片的对白段判成黑场并剪掉；已收紧到 `0.04` + 显式 `pic_th=0.98` + 最短 0.30s，并加「语音保护」兜底。
+12. **质检阈值要与剪辑阈值一致**：QA 若用比剪辑更敏感的黑场阈值（0.12/0.10），会把"剪辑时够不上黑场"的暗场闪一下反复报成缺陷；已统一为 `0.30 / 0.04 / 0.98`。
+13. **短句别合并**：真实对白多是短句（"I'm searching for someone."），`--min-sent` 原默认 24 会把两句并成一句再机翻，译文直接串味；已改为 12。
+14. **语音保护的副作用**：对白压在黑屏/字幕卡上时，保护语音会连带保住那段黑屏（音画绑定，暂无法只保音频）；验收里按"已知取舍"单独标注，不当失败。
 
 ## 判定数据在哪
 
 - 剪辑决策正确性：`History/runs/*/verify.json`
 - 成片合格性：`History/runs/*/qa.json`
-- 字幕链路：`History/runs/l2_subs_*/verify_subs.json`（WER/覆盖/句界/可读性/重映射自检）
-- 汇总：`History/loops/loop01/acceptance.md`、`History/loops/loop02/acceptance*.md`
+- 字幕链路：`History/runs/l2_subs_*/verify_subs.json`、`History/runs/real3_subs/verify_subs.json`（WER 或 reference-free / 覆盖 / 句界 / 可读性 / 重映射自检）
+- 音频预处理对比：`History/asr/variant_*.json`
+- 汇总：`History/loops/loop01/acceptance.md`、`loop02/acceptance*.md`、`loop03/acceptance.md`
 - 循环摘要：`History/CircleLog/log.md`

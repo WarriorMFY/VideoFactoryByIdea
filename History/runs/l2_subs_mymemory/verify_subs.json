@@ -1,5 +1,6 @@
 {
   "verdict": "PASS",
+  "mode": "with-reference（有讲稿真值）",
   "thresholds": {
     "wer": 0.25,
     "cover": 0.95,

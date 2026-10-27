@@ -1,0 +1,16 @@
+{
+  "generated_at": "2026-10-27T08:02:10.274Z",
+  "engine": "vosk",
+  "model": "vosk-model-small-en-us-0.15",
+  "model_license": "Apache-2.0",
+  "input": "D:\\Data\\DeepseekHarness\\IdeaDrivenLoop\\VideoFactory\\Workspace\\assets\\realspeech\\w3c-bunny-trailer.mp4",
+  "audio_duration_s": 33.003,
+  "text": "",
+  "words": [],
+  "sentences": [],
+  "stats": {
+    "words": 0,
+    "sentences": 0,
+    "avg_conf": 0
+  }
+}

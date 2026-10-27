@@ -1,0 +1,16 @@
+{
+  "generated_at": "2026-10-27T08:02:28.646Z",
+  "engine": "vosk",
+  "model": "vosk-model-small-en-us-0.15",
+  "model_license": "Apache-2.0",
+  "input": "D:\\Data\\DeepseekHarness\\IdeaDrivenLoop\\VideoFactory\\Workspace\\assets\\realspeech\\movie300_head120.mp4",
+  "audio_duration_s": 120.001,
+  "text": "",
+  "words": [],
+  "sentences": [],
+  "stats": {
+    "words": 0,
+    "sentences": 0,
+    "avg_conf": 0
+  }
+}

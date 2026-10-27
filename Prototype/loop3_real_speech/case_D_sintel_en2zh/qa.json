@@ -1,0 +1,47 @@
+{
+  "checked_at": "2026-10-27T08:13:27.095Z",
+  "file": "D:\\Data\\DeepseekHarness\\IdeaDrivenLoop\\VideoFactory\\History\\runs\\real3_subs\\final.mp4",
+  "size_mb": 9.36,
+  "duration_s": 39.104,
+  "video": {
+    "codec": "h264",
+    "profile": "High",
+    "level": 31,
+    "w": 1280,
+    "h": 720,
+    "pix_fmt": "yuv420p",
+    "fps": "30/1",
+    "avg_fps": "30/1",
+    "sar": "1:1"
+  },
+  "audio": {
+    "codec": "aac",
+    "sample_rate": 48000,
+    "channels": 2,
+    "bitrate": 193525
+  },
+  "loudness": {
+    "integrated_lufs": -14.9,
+    "lra_lu": 11.9,
+    "true_peak_dbtp": -1.4
+  },
+  "silent_input_note": null,
+  "residual_defects": {
+    "black_segments": 3,
+    "freeze_segments": 3,
+    "silence_segments": 0,
+    "note": "冻帧/静音残留不一定是缺陷：本流水线规则明确保留「仅冻帧」或「仅静音」的镜头（口播/动作镜头）"
+  },
+  "av_duration_diff_s": 0.004,
+  "checks": {
+    "has_video": true,
+    "h264": true,
+    "yuv420p": true,
+    "cfr": true,
+    "audio_aac_48k": true,
+    "loudness_ok": true,
+    "no_residual_black": false,
+    "av_synced": true
+  },
+  "verdict": "WARN"
+}
