@@ -72,3 +72,17 @@ node Tool\verify_subs.mjs History\asr\transcript.json History\bench\l2_en\ground
 ## 未做（边界）
 
 Whisper 级 ASR、软字幕、多语种实测、字幕样式模板、长视频压测、真人素材验证。
+
+## 交付目录整理（15:20，用户要求）
+
+按 AGENTS.md「Prototype 放每小循环最终反馈」把交付目录从"平铺"改成"按循环分目录"：
+
+```text
+Prototype/
+├── README.md                     # 入口索引（两轮一览 + 结构图 + 怎么跑）
+├── loop1_autocut/                # README + reproduce.ps1 + acceptance.md + case_A_synth/ + case_B_real/
+└── loop2_subtitles/              # README + reproduce.ps1 + acceptance_mt.md + acceptance_polished.md + case_C_en2zh/
+```
+
+同步动作：两个 `reproduce.ps1` 改写为纯 ASCII（PS 5.1 无 BOM 也可执行）并改为从脚本位置向上两级定位仓库根；顶层 README 重写为索引，两个 loop 各留完整说明；`Tool/Tool.md`、`CircleLog`、本文件里的引用路径一并更新；两个 reproduce 脚本已实测 PASS。视频文件按 `.gitignore` 不入库（本地保留，可由脚本重建）。
+
