@@ -1,0 +1,9 @@
+[probe] F:\AgentWorkArea\DeepseekHarness\IdeaDrivenAigc\VideoFactory\Workspace\assets\speech4\bbb_trailer\bbb_trailer.mp4
+[probe] 33.00s 853x480 audio=true
+[analyze] blackdetect / freezedetect / scdet / silencedetect ...
+[analyze] black=0 freeze=14 silence=1 scenes=17
+[decide] 应用剪辑规则 ...
+[render] 提取 1 段 ...
+[render] 合并 (fade) ...
+[render] 收尾(响度归一/淡入淡出/标题/字幕) ...
+[error] final 渲染失败: [Parsed_subtitles_1 @ 000001aa3a2222c0] libass source: commit: 0.17.0-63-gc047dd2ea16f73abb4f448e6db3637158c1226d0 [Parsed_subtitles_1 @ 000001aa3a2222c0] Shaper: FriBidi 1.0.13 (SIMPLE) HarfBuzz-ng 8.3.0 (COMPLEX) [Parsed_subtitles_1 @ 000001aa3a2222c0] Unable to open F:/AgentWorkArea/DeepseekHarness/IdeaDrivenAigc/VideoFactory/History/subs/multi/bbb_trailer/remapped/out_bilingual.srt [AVFilterGraph @ 000001aa3a49cd00] Error initializing filters [vost#0:0/libx264 @ 000001aa3a1d9bc0] Error initializing a simple filtergraph Error opening output file F:\AgentWorkArea\DeepseekHarness\IdeaDrivenAigc\VideoFactory\History\runs\multi\bbb_trailer\final.mp4. Error opening output files: Invalid data found when processing input 

@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-27T09:29:23.636Z",
+  "generated_at": "2026-10-27T14:10:56.050Z",
   "engine": "vosk",
   "model": "vosk-model-small-en-us-0.15",
   "model_license": "Apache-2.0",
   "audio_filter": "afftdn=nf=-25,highpass=f=150,loudnorm=I=-16:TP=-1.5",
-  "input": "D:\\Data\\DeepseekHarness\\IdeaDrivenLoop\\VideoFactory\\Workspace\\assets\\realspeech\\sintel-trailer.mp4",
+  "input": "F:\\AgentWorkArea\\DeepseekHarness\\IdeaDrivenAigc\\VideoFactory\\Workspace\\assets\\realspeech\\sintel-trailer.mp4",
   "audio_duration_s": 51.925,
   "text": "what brings you to the land of the gatekeepers i'm searching for so dangerous quest for a number two peter learned from long as i can remember",
   "words": [

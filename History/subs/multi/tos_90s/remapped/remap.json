@@ -1,0 +1,155 @@
+{
+  "generated_at": "2026-10-27T14:07:51.671Z",
+  "cues_in": 14,
+  "cues_out": 14,
+  "dropped": [],
+  "output_duration": 90,
+  "style": "bilingual",
+  "sanity": {
+    "overflow_cues": 0,
+    "overlaps": 0,
+    "min_dur": 0.76
+  },
+  "cues": [
+    {
+      "idx": 0,
+      "src_cue": 0,
+      "start": 6.03,
+      "end": 6.79,
+      "en": "look celia",
+      "zh": "看起来Celia",
+      "conf": 0.838,
+      "split_from_cut": false
+    },
+    {
+      "idx": 1,
+      "src_cue": 1,
+      "start": 8.388,
+      "end": 10.35,
+      "en": "we have to follow our passions",
+      "zh": "我们必须追随我们的激情",
+      "conf": 1,
+      "split_from_cut": false
+    },
+    {
+      "idx": 2,
+      "src_cue": 2,
+      "start": 11.4,
+      "end": 12.81,
+      "en": "you have your robotics",
+      "zh": "你有你的机器人",
+      "conf": 1,
+      "split_from_cut": false
+    },
+    {
+      "idx": 3,
+      "src_cue": 3,
+      "start": 15.9,
+      "end": 29.866,
+      "en": "i just want to be awesome in space come in",
+      "zh": "我只想在太空中表现出色",
+      "conf": 0.867,
+      "split_from_cut": false
+    },
+    {
+      "idx": 4,
+      "src_cue": 4,
+      "start": 30.36,
+      "end": 31.135,
+      "en": "two minutes left",
+      "zh": "两分钟",
+      "conf": 1,
+      "split_from_cut": false
+    },
+    {
+      "idx": 5,
+      "src_cue": 5,
+      "start": 37.05,
+      "end": 39.99,
+      "en": "financial just admit that your freaked out by my robot him",
+      "zh": "财务只是承认你被我的机器人他吓坏了",
+      "conf": 0.753,
+      "split_from_cut": false
+    },
+    {
+      "idx": 6,
+      "src_cue": 6,
+      "start": 46.92,
+      "end": 48.855,
+      "en": "this is celia i was young and a dick",
+      "zh": "这是Celia ，我当时很年轻，",
+      "conf": 0.912,
+      "split_from_cut": false
+    },
+    {
+      "idx": 7,
+      "src_cue": 7,
+      "start": 48.855,
+      "end": 50.79,
+      "en": "this is celia i was young and a dick",
+      "zh": "还是个鸡巴",
+      "conf": 0.912,
+      "split_from_cut": false
+    },
+    {
+      "idx": 8,
+      "src_cue": 8,
+      "start": 51.27,
+      "end": 53.04,
+      "en": "but there's no reason to destroy the world",
+      "zh": "但没有理由毁灭这个世界",
+      "conf": 1,
+      "split_from_cut": false
+    },
+    {
+      "idx": 9,
+      "src_cue": 9,
+      "start": 55.08,
+      "end": 55.87,
+      "en": "why does he do this",
+      "zh": "他为什么要这么做",
+      "conf": 0.97,
+      "split_from_cut": false
+    },
+    {
+      "idx": 10,
+      "src_cue": 10,
+      "start": 57.09,
+      "end": 58.53,
+      "en": "we already tried that one",
+      "zh": "我们已经试过那个",
+      "conf": 0.882,
+      "split_from_cut": false
+    },
+    {
+      "idx": 11,
+      "src_cue": 11,
+      "start": 73.56,
+      "end": 74.85,
+      "en": "you broke my heart",
+      "zh": "扎心了，老铁",
+      "conf": 0.839,
+      "split_from_cut": false
+    },
+    {
+      "idx": 12,
+      "src_cue": 12,
+      "start": 77.16,
+      "end": 78.72,
+      "en": "you forgot me on earth",
+      "zh": "你把我忘在地球上",
+      "conf": 1,
+      "split_from_cut": false
+    },
+    {
+      "idx": 13,
+      "src_cue": 13,
+      "start": 80.52,
+      "end": 87.36,
+      "en": "i should just trash on",
+      "zh": "我应该直接倒垃圾",
+      "conf": 0.771,
+      "split_from_cut": false
+    }
+  ]
+}

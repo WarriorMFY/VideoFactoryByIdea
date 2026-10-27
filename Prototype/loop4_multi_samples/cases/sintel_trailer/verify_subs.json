@@ -1,0 +1,56 @@
+{
+  "verdict": "PASS",
+  "mode": "reference-free（真实素材无讲稿，WER/真值时间轴不可测）",
+  "thresholds": {
+    "wer": 0.25,
+    "cover": 0.95,
+    "boundMean": 0.8,
+    "boundMax": 1.5,
+    "cps_zh": 20,
+    "cps_en": 25
+  },
+  "wer": null,
+  "timing": {
+    "coverage_ratio": null,
+    "mean_boundary_err_s": null,
+    "max_boundary_err_s": null,
+    "sentences": []
+  },
+  "translate": {
+    "cues": 4,
+    "translated": 4,
+    "missing": 0,
+    "missing_samples": []
+  },
+  "readability": {
+    "max_zh_cps": 6.17,
+    "mean_zh_cps": 5,
+    "max_en_cps": 21
+  },
+  "remap": {
+    "cues_in": 4,
+    "cues_out": 4,
+    "dropped": 0,
+    "output_duration": 40.638,
+    "overflow": 0,
+    "overlaps": 0,
+    "min_dur": 0.81,
+    "max_dur": 2.19
+  },
+  "quality": null,
+  "pass": {
+    "wer": null,
+    "coverage": null,
+    "boundary_mean": null,
+    "boundary_max": null,
+    "translated": true,
+    "readability": true,
+    "remap": true
+  },
+  "source": {
+    "transcript": "F:\\AgentWorkArea\\DeepseekHarness\\IdeaDrivenAigc\\VideoFactory\\History\\asr\\multi\\sintel_trailer.json",
+    "ground_truth": "F:\\AgentWorkArea\\DeepseekHarness\\IdeaDrivenAigc\\VideoFactory\\History\\runs\\multi\\sintel_trailer\\_gt_stub.json",
+    "cues": "F:\\AgentWorkArea\\DeepseekHarness\\IdeaDrivenAigc\\VideoFactory\\History\\subs\\multi\\sintel_trailer\\cues.json",
+    "remap": "F:\\AgentWorkArea\\DeepseekHarness\\IdeaDrivenAigc\\VideoFactory\\History\\subs\\multi\\sintel_trailer\\remapped\\remap.json"
+  }
+}

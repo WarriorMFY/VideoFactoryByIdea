@@ -1,17 +1,17 @@
-[probe] D:\Data\DeepseekHarness\IdeaDrivenLoop\VideoFactory\History\bench\l2_en\source.mp4
+[probe] F:\AgentWorkArea\DeepseekHarness\IdeaDrivenAigc\VideoFactory\History\bench\l2_en\source.mp4
 [probe] 33.88s 1920x1080 audio=true
 [analyze] blackdetect / freezedetect / scdet / silencedetect ...
-[analyze] black=0 freeze=0 silence=1 scenes=3
+[analyze] black=0 freeze=0 silence=1 scenes=12
 [decide] 应用剪辑规则 ...
 [render] 提取 1 段 ...
 [render] 合并 (fade) ...
 [render] 收尾(响度归一/淡入淡出/标题) ...
-[done] 12.2s -> D:\Data\DeepseekHarness\IdeaDrivenLoop\VideoFactory\History\runs\l2_cut
+[done] 20.8s -> F:\AgentWorkArea\DeepseekHarness\IdeaDrivenAigc\VideoFactory\History\runs\l2_cut
 [done] final=33.88s kept=1 cut=0 transition=single
-  - final.mp4 19233KB
+  - final.mp4 18855KB
   - edits.json 2KB
   - signals.json 0KB
   - probe.json 0KB
   - report.md 2KB
-  - contact_sheet.jpg 214KB
+  - contact_sheet.jpg 213KB
   - runlog.jsonl 3KB

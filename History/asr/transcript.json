@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-27T09:28:32.427Z",
+  "generated_at": "2026-10-27T14:21:50.877Z",
   "engine": "vosk",
   "model": "vosk-model-small-en-us-0.15",
   "model_license": "Apache-2.0",
   "audio_filter": null,
-  "input": "D:\\Data\\DeepseekHarness\\IdeaDrivenLoop\\VideoFactory\\History\\bench\\l2_en\\source.mp4",
+  "input": "F:\\AgentWorkArea\\DeepseekHarness\\IdeaDrivenAigc\\VideoFactory\\History\\bench\\l2_en\\source.mp4",
   "audio_duration_s": 33.899,
   "text": "welcome back to the workshop where return raw footage into finished films today i will show you three simple tricks that save about two hours of editing time first always cut on the beat because rhythm is what keeps the audience awake second remove the silent gaps longer than half a second before you touch the colors third normalize the audio to minus sixty sixteen l u fs which is the standard for online video platforms finally export at fifteen megabits per second and never trust the first render that is it for this episode see you in the next one",
   "words": [
@@ -40,15 +40,15 @@
     },
     {
       "word": "where",
-      "start": 1.68,
+      "start": 1.71,
       "end": 1.86,
-      "conf": 0.883809
+      "conf": 0.882557
     },
     {
       "word": "return",
       "start": 1.86,
       "end": 2.31,
-      "conf": 0.531705
+      "conf": 0.514983
     },
     {
       "word": "raw",
@@ -269,12 +269,12 @@
     {
       "word": "remove",
       "start": 14.4,
-      "end": 14.82,
-      "conf": 1
+      "end": 14.819999,
+      "conf": 0.866192
     },
     {
       "word": "the",
-      "start": 14.82,
+      "start": 14.824015,
       "end": 14.91,
       "conf": 1
     },
@@ -360,11 +360,11 @@
       "word": "normalize",
       "start": 19.41,
       "end": 20.04,
-      "conf": 0.527277
+      "conf": 0.683066
     },
     {
       "word": "the",
-      "start": 20.054182,
+      "start": 20.049509,
       "end": 20.16,
       "conf": 1
     },
@@ -378,29 +378,29 @@
       "word": "to",
       "start": 20.58,
       "end": 20.73,
-      "conf": 0.943587
+      "conf": 0.942877
     },
     {
       "word": "minus",
       "start": 20.73,
       "end": 21.12,
-      "conf": 0.888026
+      "conf": 0.888523
     },
     {
       "word": "sixty",
       "start": 21.12,
-      "end": 21.349211,
-      "conf": 0.630493
+      "end": 21.349252,
+      "conf": 0.6245
     },
     {
       "word": "sixteen",
-      "start": 21.349211,
+      "start": 21.349252,
       "end": 21.63,
-      "conf": 0.369507
+      "conf": 0.3755
     },
     {
       "word": "l",
-      "start": 21.640734,
+      "start": 21.640353,
       "end": 21.84,
       "conf": 1
     },
@@ -408,13 +408,13 @@
       "word": "u",
       "start": 21.84,
       "end": 21.99,
-      "conf": 0.787508
+      "conf": 0.788147
     },
     {
       "word": "fs",
       "start": 21.99,
       "end": 22.53,
-      "conf": 0.523576
+      "conf": 0.521035
     },
     {
       "word": "which",
@@ -480,13 +480,13 @@
       "word": "at",
       "start": 27.18,
       "end": 27.27,
-      "conf": 0.826986
+      "conf": 0.800608
     },
     {
       "word": "fifteen",
       "start": 27.27,
       "end": 27.78,
-      "conf": 0.917619
+      "conf": 0.928889
     },
     {
       "word": "megabits",
@@ -626,6 +626,6 @@
   "stats": {
     "words": 101,
     "sentences": 1,
-    "avg_conf": 0.9668
+    "avg_conf": 0.9666
   }
 }

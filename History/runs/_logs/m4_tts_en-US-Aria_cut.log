@@ -1,0 +1,17 @@
+[probe] F:\AgentWorkArea\DeepseekHarness\IdeaDrivenAigc\VideoFactory\Workspace\assets\speech4tts\en-US-Aria\source.mp4
+[probe] 26.87s 854x480 audio=true
+[analyze] blackdetect / freezedetect / scdet / silencedetect ...
+[analyze] black=0 freeze=15 silence=0 scenes=14
+[decide] 应用剪辑规则 ...
+[render] 提取 1 段 ...
+[render] 合并 (fade) ...
+[render] 收尾(响度归一/淡入淡出/标题) ...
+[done] 9.7s -> F:\AgentWorkArea\DeepseekHarness\IdeaDrivenAigc\VideoFactory\History\runs\multi\tts_en-US-Aria
+[done] final=26.87s kept=1 cut=0 transition=single
+  - final.mp4 5854KB
+  - edits.json 2KB
+  - signals.json 1KB
+  - probe.json 0KB
+  - report.md 2KB
+  - contact_sheet.jpg 90KB
+  - runlog.jsonl 3KB

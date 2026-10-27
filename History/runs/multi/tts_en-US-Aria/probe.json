@@ -1,0 +1,21 @@
+{
+  "file": "F:\\AgentWorkArea\\DeepseekHarness\\IdeaDrivenAigc\\VideoFactory\\Workspace\\assets\\speech4tts\\en-US-Aria\\source.mp4",
+  "duration": 26.867,
+  "format": "mov,mp4,m4a,3gp,3g2,mj2",
+  "size": 2702304,
+  "bitrate": 804646,
+  "video": {
+    "codec": "h264",
+    "width": 854,
+    "height": 480,
+    "fps": "25/1",
+    "pix_fmt": "yuv420p",
+    "nb_frames": "671"
+  },
+  "audio": {
+    "codec": "aac",
+    "sample_rate": "48000",
+    "channels": 2,
+    "bitrate": "182513"
+  }
+}

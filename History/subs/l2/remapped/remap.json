@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-27T09:28:44.873Z",
+  "generated_at": "2026-10-27T14:22:12.049Z",
   "cues_in": 13,
   "cues_out": 13,
   "dropped": [],
@@ -18,7 +18,7 @@
       "end": 2.055,
       "en": "welcome back to the workshop where return raw footage into",
       "zh": "欢迎回到工作坊，将原始镜头放回成品胶",
-      "conf": 0.936,
+      "conf": 0.934,
       "split_from_cut": false
     },
     {
@@ -28,7 +28,7 @@
       "end": 4.08,
       "en": "finished films",
       "zh": "片中",
-      "conf": 0.936,
+      "conf": 0.934,
       "split_from_cut": false
     },
     {
@@ -78,7 +78,7 @@
       "end": 16.11,
       "en": "second remove the silent gaps longer than half a second before",
       "zh": "在触摸颜色之前，将静音间隙移除超过半",
-      "conf": 1,
+      "conf": 0.991,
       "split_from_cut": false
     },
     {
@@ -88,7 +88,7 @@
       "end": 18.48,
       "en": "you touch the colors",
       "zh": "秒",
-      "conf": 1,
+      "conf": 0.991,
       "split_from_cut": false
     },
     {
@@ -98,7 +98,7 @@
       "end": 22.2,
       "en": "third normalize the audio to minus sixty sixteen l u fs which is",
       "zh": "第三，将音频标准化为负六十六l u",
-      "conf": 0.877,
+      "conf": 0.885,
       "split_from_cut": false
     },
     {
@@ -108,7 +108,7 @@
       "end": 25.62,
       "en": "the standard for online video platforms",
       "zh": "fs ，这是在线视频平台的标准",
-      "conf": 0.877,
+      "conf": 0.885,
       "split_from_cut": false
     },
     {
@@ -118,7 +118,7 @@
       "end": 28.365,
       "en": "finally export at fifteen megabits per second and never trust",
       "zh": "最终以每秒 15 Mbps的速度导出",
-      "conf": 0.98,
+      "conf": 0.979,
       "split_from_cut": false
     },
     {
@@ -128,7 +128,7 @@
       "end": 30.78,
       "en": "the first render",
       "zh": "，永远不要相信第一个渲染",
-      "conf": 0.98,
+      "conf": 0.979,
       "split_from_cut": false
     },
     {

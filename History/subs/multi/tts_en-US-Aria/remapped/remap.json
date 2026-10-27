@@ -1,0 +1,145 @@
+{
+  "generated_at": "2026-10-27T14:06:50.741Z",
+  "cues_in": 13,
+  "cues_out": 13,
+  "dropped": [],
+  "output_duration": 26.867,
+  "style": "bilingual",
+  "sanity": {
+    "overflow_cues": 0,
+    "overlaps": 0,
+    "min_dur": 1.35
+  },
+  "cues": [
+    {
+      "idx": 0,
+      "src_cue": 0,
+      "start": 0.03,
+      "end": 1.68,
+      "en": "good evening and welcome to the second half of our factory tour",
+      "zh": "晚上好，欢迎来到我们工厂参观的后半部",
+      "conf": 1,
+      "split_from_cut": false
+    },
+    {
+      "idx": 1,
+      "src_cue": 1,
+      "start": 1.68,
+      "end": 3.33,
+      "en": "good evening and welcome to the second half of our factory tour",
+      "zh": "分",
+      "conf": 1,
+      "split_from_cut": false
+    },
+    {
+      "idx": 2,
+      "src_cue": 2,
+      "start": 3.66,
+      "end": 5.01,
+      "en": "in the next five minutes you will see how iraq lip becomes a",
+      "zh": "在接下来的五分钟内，",
+      "conf": 0.914,
+      "split_from_cut": false
+    },
+    {
+      "idx": 3,
+      "src_cue": 3,
+      "start": 5.01,
+      "end": 6.36,
+      "en": "in the next five minutes you will see how iraq lip becomes a",
+      "zh": "您将看到伊拉克LIP如何成为成品填充",
+      "conf": 0.914,
+      "split_from_cut": false
+    },
+    {
+      "idx": 4,
+      "src_cue": 4,
+      "start": 6.36,
+      "end": 7.71,
+      "en": "in the next five minutes you will see how iraq lip becomes afinished fill",
+      "zh": "物",
+      "conf": 0.914,
+      "split_from_cut": false
+    },
+    {
+      "idx": 5,
+      "src_cue": 5,
+      "start": 8.07,
+      "end": 10.395,
+      "en": "the robot arm picks up twelve small boxes and stacks them beside",
+      "zh": "机械臂拿起十二个小盒子，",
+      "conf": 0.976,
+      "split_from_cut": false
+    },
+    {
+      "idx": 6,
+      "src_cue": 6,
+      "start": 10.395,
+      "end": 12.72,
+      "en": "the conveyor belt",
+      "zh": "堆放在传送带旁边",
+      "conf": 0.976,
+      "split_from_cut": false
+    },
+    {
+      "idx": 7,
+      "src_cue": 7,
+      "start": 13.05,
+      "end": 15.06,
+      "en": "noticed that the editor never touches the color wheel before the",
+      "zh": "注意到编辑器在平衡声音之前从未触摸过",
+      "conf": 0.972,
+      "split_from_cut": false
+    },
+    {
+      "idx": 8,
+      "src_cue": 8,
+      "start": 15.06,
+      "end": 17.07,
+      "en": "sound is balanced",
+      "zh": "色轮",
+      "conf": 0.972,
+      "split_from_cut": false
+    },
+    {
+      "idx": 9,
+      "src_cue": 9,
+      "start": 17.4,
+      "end": 19.965,
+      "en": "if the dialogue is louder than the music by more than sick",
+      "zh": "如果对话比音乐响亮超过病态分贝，",
+      "conf": 0.984,
+      "split_from_cut": false
+    },
+    {
+      "idx": 10,
+      "src_cue": 10,
+      "start": 19.965,
+      "end": 22.53,
+      "en": "decibels the audience will complain",
+      "zh": "观众会抱怨",
+      "conf": 0.984,
+      "split_from_cut": false
+    },
+    {
+      "idx": 11,
+      "src_cue": 11,
+      "start": 22.89,
+      "end": 24.87,
+      "en": "that is all for tonight thank you for watching and see you",
+      "zh": "今晚到此结束，感谢大家收看，",
+      "conf": 1,
+      "split_from_cut": false
+    },
+    {
+      "idx": 12,
+      "src_cue": 12,
+      "start": 24.87,
+      "end": 26.85,
+      "en": "tomorrow at eight",
+      "zh": "明天八点见",
+      "conf": 1,
+      "split_from_cut": false
+    }
+  ]
+}

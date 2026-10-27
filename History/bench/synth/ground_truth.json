@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-27T09:27:57.961Z",
+  "generated_at": "2026-10-27T14:25:08.044Z",
   "source": "Tool/make_bench_source.mjs",
   "duration_s": 42,
   "spec_note": "真值 = 本合成素材的设计意图（可接受剪辑行为规格），不是人工剪辑师标注。",

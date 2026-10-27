@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-27T09:30:12.703Z",
+  "generated_at": "2026-10-27T14:12:11.108Z",
   "tool": "vfactory v0.1",
   "source": {
-    "file": "D:\\Data\\DeepseekHarness\\IdeaDrivenLoop\\VideoFactory\\Workspace\\assets\\realspeech\\sintel-trailer.mp4",
+    "file": "F:\\AgentWorkArea\\DeepseekHarness\\IdeaDrivenAigc\\VideoFactory\\Workspace\\assets\\realspeech\\sintel-trailer.mp4",
     "duration": 52.208333,
     "video": {
       "codec": "h264",
@@ -20,7 +20,7 @@
     }
   },
   "output": {
-    "file": "D:\\Data\\DeepseekHarness\\IdeaDrivenLoop\\VideoFactory\\History\\runs\\real3_subs\\final.mp4",
+    "file": "F:\\AgentWorkArea\\DeepseekHarness\\IdeaDrivenAigc\\VideoFactory\\History\\runs\\real3_subs\\final.mp4",
     "duration": 39.104,
     "width": 1280,
     "height": 720,
@@ -43,7 +43,7 @@
       "headroom": 0
     },
     "rule": "black→cut; freeze∧silence→cut; freeze-only or silence-only→keep; snap to scene cuts; drop keeps<minKeep; speech-protection(no cut where ASR found words); guard maxCutRatio",
-    "protect": "D:\\Data\\DeepseekHarness\\IdeaDrivenLoop\\VideoFactory\\History\\asr\\transcript_real.json",
+    "protect": "F:\\AgentWorkArea\\DeepseekHarness\\IdeaDrivenAigc\\VideoFactory\\History\\asr\\transcript_real.json",
     "protect_pad": 0.25,
     "protect_conf": 0.5,
     "protected_spans": [

@@ -1,0 +1,44 @@
+{
+  "generated_at": "2026-10-27T13:44:00.228Z",
+  "transcript": "F:\\AgentWorkArea\\DeepseekHarness\\IdeaDrivenAigc\\VideoFactory\\History\\asr\\multi\\bbb_trailer.json",
+  "mt_backend": "mymemory",
+  "params": {
+    "pause": 0.3,
+    "maxSent": 110,
+    "minSentChars": 12,
+    "maxZh": 18,
+    "maxEn": 64,
+    "minCue": 0.8
+  },
+  "stats": {
+    "sentences": 1,
+    "cues": 1,
+    "words": 1
+  },
+  "sentences": [
+    {
+      "start": 252.24,
+      "end": 254.55,
+      "words": [
+        {
+          "word": "why",
+          "start": 252.24,
+          "end": 254.55,
+          "conf": 0.646244
+        }
+      ],
+      "en": "why",
+      "zh": "为什么"
+    }
+  ],
+  "cues": [
+    {
+      "start": 252.24,
+      "end": 254.55,
+      "en": "why",
+      "zh": "为什么",
+      "conf": 0.646,
+      "sent_en": "why"
+    }
+  ]
+}

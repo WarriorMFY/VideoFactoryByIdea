@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-27T09:28:09.374Z",
+  "generated_at": "2026-10-27T14:25:28.882Z",
   "source": "Tool/make_real_bench.mjs",
   "clip": {
-    "file": "D:\\Data\\DeepseekHarness\\IdeaDrivenLoop\\VideoFactory\\Workspace\\assets\\Big_Buck_Bunny_1080_10s_5MB.mp4",
+    "file": "F:\\AgentWorkArea\\DeepseekHarness\\IdeaDrivenAigc\\VideoFactory\\Workspace\\assets\\Big_Buck_Bunny_1080_10s_5MB.mp4",
     "duration": 10,
     "width": 1920,
     "height": 1080,

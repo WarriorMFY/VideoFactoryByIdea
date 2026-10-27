@@ -1,9 +1,9 @@
 {
-  "file": "D:\\Data\\DeepseekHarness\\IdeaDrivenLoop\\VideoFactory\\History\\bench\\real\\source.mp4",
+  "file": "F:\\AgentWorkArea\\DeepseekHarness\\IdeaDrivenAigc\\VideoFactory\\History\\bench\\real\\source.mp4",
   "duration": 17,
   "format": "mov,mp4,m4a,3gp,3g2,mj2",
-  "size": 8195465,
-  "bitrate": 3856689,
+  "size": 8201732,
+  "bitrate": 3859638,
   "video": {
     "codec": "h264",
     "width": 1920,

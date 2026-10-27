@@ -1,4 +1,4 @@
-[real-bench] D:\Data\DeepseekHarness\IdeaDrivenLoop\VideoFactory\History\bench\real\source.mp4 dur=17.00s clip=10s clip_audio=false
+[real-bench] F:\AgentWorkArea\DeepseekHarness\IdeaDrivenAigc\VideoFactory\History\bench\real\source.mp4 dur=17.00s clip=10s clip_audio=false
    HEAD_BLACK  [0.00, 3.00] drop
    REAL_A      [3.00, 6.50] keep
    MID_BLACK   [6.50, 8.50] drop

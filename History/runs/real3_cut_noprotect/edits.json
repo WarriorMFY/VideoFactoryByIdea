@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-27T09:29:44.075Z",
+  "generated_at": "2026-10-27T14:11:24.910Z",
   "tool": "vfactory v0.1",
   "source": {
-    "file": "D:\\Data\\DeepseekHarness\\IdeaDrivenLoop\\VideoFactory\\Workspace\\assets\\realspeech\\sintel-trailer.mp4",
+    "file": "F:\\AgentWorkArea\\DeepseekHarness\\IdeaDrivenAigc\\VideoFactory\\Workspace\\assets\\realspeech\\sintel-trailer.mp4",
     "duration": 52.208333,
     "video": {
       "codec": "h264",
@@ -20,7 +20,7 @@
     }
   },
   "output": {
-    "file": "D:\\Data\\DeepseekHarness\\IdeaDrivenLoop\\VideoFactory\\History\\runs\\real3_cut_noprotect\\final.mp4",
+    "file": "F:\\AgentWorkArea\\DeepseekHarness\\IdeaDrivenAigc\\VideoFactory\\History\\runs\\real3_cut_noprotect\\final.mp4",
     "duration": 36.762,
     "width": 1280,
     "height": 720,

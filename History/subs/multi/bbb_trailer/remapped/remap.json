@@ -1,0 +1,22 @@
+{
+  "generated_at": "2026-10-27T13:44:00.380Z",
+  "cues_in": 1,
+  "cues_out": 0,
+  "dropped": [
+    {
+      "idx": 0,
+      "start": 252.24,
+      "end": 254.55,
+      "reason": "保留比例 0% < 35%，整行丢弃",
+      "en": "why"
+    }
+  ],
+  "output_duration": 33.003,
+  "style": "bilingual",
+  "sanity": {
+    "overflow_cues": 0,
+    "overlaps": 0,
+    "min_dur": null
+  },
+  "cues": []
+}

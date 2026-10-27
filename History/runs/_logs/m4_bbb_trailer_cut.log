@@ -1,0 +1,17 @@
+[probe] F:\AgentWorkArea\DeepseekHarness\IdeaDrivenAigc\VideoFactory\Workspace\assets\speech4\bbb_trailer\bbb_trailer.mp4
+[probe] 33.00s 853x480 audio=true
+[analyze] blackdetect / freezedetect / scdet / silencedetect ...
+[analyze] black=0 freeze=14 silence=1 scenes=17
+[decide] 应用剪辑规则 ...
+[render] 提取 1 段 ...
+[render] 合并 (fade) ...
+[render] 收尾(响度归一/淡入淡出/标题) ...
+[done] 12.2s -> F:\AgentWorkArea\DeepseekHarness\IdeaDrivenAigc\VideoFactory\History\runs\multi\bbb_trailer
+[done] final=33.00s kept=1 cut=0 transition=single
+  - final.mp4 7414KB
+  - edits.json 2KB
+  - signals.json 1KB
+  - probe.json 0KB
+  - report.md 2KB
+  - contact_sheet.jpg 102KB
+  - runlog.jsonl 3KB

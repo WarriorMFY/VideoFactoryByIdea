@@ -1,0 +1,21 @@
+{
+  "file": "F:\\AgentWorkArea\\DeepseekHarness\\IdeaDrivenAigc\\VideoFactory\\Workspace\\assets\\speech4\\sintel_trailer\\sintel_trailer.mp4",
+  "duration": 52.208333,
+  "format": "mov,mp4,m4a,3gp,3g2,mj2",
+  "size": 4372373,
+  "bitrate": 669988,
+  "video": {
+    "codec": "h264",
+    "width": 854,
+    "height": 480,
+    "fps": "24/1",
+    "pix_fmt": "yuv420p",
+    "nb_frames": "1253"
+  },
+  "audio": {
+    "codec": "aac",
+    "sample_rate": "48000",
+    "channels": 2,
+    "bitrate": "126694"
+  }
+}

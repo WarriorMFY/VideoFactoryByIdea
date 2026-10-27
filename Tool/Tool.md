@@ -21,6 +21,7 @@ node Tool\edit\vfactory.mjs "你的外语视频.mp4" --out out\final --protect w
 node Tool\acceptance\run_acceptance.mjs        # 小循环 1
 node Tool\acceptance\run_subs_acceptance.mjs   # 小循环 2
 node Tool\acceptance\run_real_acceptance.mjs   # 小循环 3
+node Tool\acceptance\run_multi_speech_acceptance.mjs   # 小循环 4：7 样本批量（真实影视 + 多口音 TTS）
 
 # ④ 同步/克隆仓库（网络时通时不通，交给脚本管超时与换端点）
 node Tool\Git\gitnet.mjs pull --check          # 只看差距

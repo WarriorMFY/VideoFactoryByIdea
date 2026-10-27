@@ -1,0 +1,204 @@
+{
+  "generated_at": "2026-10-27T14:04:52.408Z",
+  "tool": "vfactory v0.1",
+  "source": {
+    "file": "F:\\AgentWorkArea\\DeepseekHarness\\IdeaDrivenAigc\\VideoFactory\\Workspace\\assets\\speech4\\sintel_trailer\\sintel_trailer.mp4",
+    "duration": 52.208333,
+    "video": {
+      "codec": "h264",
+      "width": 854,
+      "height": 480,
+      "fps": "24/1",
+      "pix_fmt": "yuv420p",
+      "nb_frames": "1253"
+    },
+    "audio": {
+      "codec": "aac",
+      "sample_rate": "48000",
+      "channels": 2,
+      "bitrate": "126694"
+    }
+  },
+  "output": {
+    "file": "F:\\AgentWorkArea\\DeepseekHarness\\IdeaDrivenAigc\\VideoFactory\\History\\runs\\multi\\sintel_trailer\\final.mp4",
+    "duration": 39.104,
+    "width": 1280,
+    "height": 720,
+    "fps": 30,
+    "transition": "xfade(fade,0.4s)"
+  },
+  "decision": {
+    "params": {
+      "blackPixTh": 0.04,
+      "blackPicTh": 0.98,
+      "blackMinDur": 0.3,
+      "freezeNoise": 0.003,
+      "freezeMinDur": 0.35,
+      "silenceDb": -35,
+      "silenceMinDur": 0.5,
+      "sceneTh": 8,
+      "snapWindow": 0.6,
+      "minGap": 0.4,
+      "minKeep": 1.2,
+      "headroom": 0
+    },
+    "rule": "black→cut; freeze∧silence→cut; freeze-only or silence-only→keep; snap to scene cuts; drop keeps<minKeep; speech-protection(no cut where ASR found words); guard maxCutRatio",
+    "protect": "F:\\AgentWorkArea\\DeepseekHarness\\IdeaDrivenAigc\\VideoFactory\\History\\asr\\multi\\sintel_trailer.json",
+    "protect_pad": 0.25,
+    "protect_conf": 0.5,
+    "protected_spans": [
+      {
+        "start": 11.93,
+        "end": 14.62
+      },
+      {
+        "start": 18.41,
+        "end": 19.72
+      },
+      {
+        "start": 36.74,
+        "end": 39.22
+      },
+      {
+        "start": 41.72,
+        "end": 44.05
+      }
+    ]
+  },
+  "kept": [
+    {
+      "start": 0.792,
+      "end": 9.292,
+      "dur": 8.5,
+      "signals": {
+        "black": false,
+        "freeze": false,
+        "silence": true,
+        "speech": false
+      }
+    },
+    {
+      "start": 11.93,
+      "end": 16.5,
+      "dur": 4.57,
+      "signals": {
+        "black": true,
+        "freeze": true,
+        "silence": false,
+        "speech": true
+      }
+    },
+    {
+      "start": 18.167,
+      "end": 21.542,
+      "dur": 3.375,
+      "signals": {
+        "black": false,
+        "freeze": false,
+        "silence": false,
+        "speech": true
+      }
+    },
+    {
+      "start": 21.958,
+      "end": 44.05,
+      "dur": 22.092,
+      "signals": {
+        "black": true,
+        "freeze": true,
+        "silence": false,
+        "speech": true
+      }
+    },
+    {
+      "start": 48.458,
+      "end": 50.559,
+      "dur": 2.101,
+      "signals": {
+        "black": false,
+        "freeze": true,
+        "silence": false,
+        "speech": false
+      }
+    }
+  ],
+  "cut": [
+    {
+      "start": 0,
+      "end": 0.792
+    },
+    {
+      "start": 9.292,
+      "end": 11.93
+    },
+    {
+      "start": 16.5,
+      "end": 18.167
+    },
+    {
+      "start": 21.542,
+      "end": 21.958
+    },
+    {
+      "start": 44.05,
+      "end": 48.458
+    },
+    {
+      "start": 50.559,
+      "end": 52.208
+    }
+  ],
+  "cut_reasons": [
+    {
+      "start": 0,
+      "end": 0.791667,
+      "why": "black（无画面）"
+    },
+    {
+      "start": 9.29167,
+      "end": 11.9583,
+      "why": "black（无画面）"
+    },
+    {
+      "start": 16,
+      "end": 16.5,
+      "why": "black（无画面）"
+    },
+    {
+      "start": 17.5,
+      "end": 18.1667,
+      "why": "black（无画面）"
+    },
+    {
+      "start": 21.5417,
+      "end": 21.9583,
+      "why": "black（无画面）"
+    },
+    {
+      "start": 28,
+      "end": 28.3333,
+      "why": "black（无画面）"
+    },
+    {
+      "start": 42.125,
+      "end": 48.4583,
+      "why": "black（无画面）"
+    },
+    {
+      "start": 50.8333,
+      "end": 52.1667,
+      "why": "black（无画面）"
+    },
+    {
+      "start": 50.559,
+      "end": 50.833,
+      "why": "freeze∧silence（两路都无信息）"
+    },
+    {
+      "start": 0,
+      "end": 52.208,
+      "why": "语音保护：4 段语音区间已锁定，切除量 13.52s → 11.57s（恢复 1.95s）"
+    }
+  ],
+  "guard": null
+}

@@ -1,0 +1,1027 @@
+{
+  "generated_at": "2026-10-27T14:08:26.918Z",
+  "ok": 6,
+  "total": 7,
+  "rows": [
+    {
+      "id": "bbb_trailer",
+      "kind": "control",
+      "clip": "Workspace\\assets\\speech4\\bbb_trailer\\bbb_trailer.mp4",
+      "gt": null,
+      "ok": true,
+      "duration_s": 33,
+      "resolution": "853x480",
+      "audio": "48000Hz 6ch",
+      "asr_variants": [
+        {
+          "name": "baseline",
+          "words": 0,
+          "conf": 0,
+          "error": null
+        },
+        {
+          "name": "bandpass",
+          "words": 0,
+          "conf": 0,
+          "error": null
+        }
+      ],
+      "asr_chosen": "baseline",
+      "words": 0,
+      "conf": 0,
+      "asr_text": "",
+      "verify_verdict": "N/A（阴性对照：仅 0 个噪声词）",
+      "sec": 6.7
+    },
+    {
+      "id": "sintel_trailer",
+      "kind": "real",
+      "clip": "Workspace\\assets\\speech4\\sintel_trailer\\sintel_trailer.mp4",
+      "gt": null,
+      "ok": true,
+      "duration_s": 52.21,
+      "resolution": "854x480",
+      "audio": "48000Hz 2ch",
+      "asr_variants": [
+        {
+          "name": "baseline",
+          "words": 29,
+          "conf": 0.8162,
+          "error": null
+        },
+        {
+          "name": "bandpass",
+          "words": 25,
+          "conf": 0.9175,
+          "error": null
+        }
+      ],
+      "asr_chosen": "bandpass",
+      "words": 25,
+      "conf": 0.9175,
+      "asr_text": "what brings you to the land of the gatekeepers i'm searching for dangerous quest for a number two you don't long as i can remember",
+      "cut_s": 11.57,
+      "kept_s": 40.64,
+      "protected_spans": 4,
+      "cues": 4,
+      "final_mb": 9.4,
+      "verify_verdict": "PASS",
+      "has_reference": false,
+      "wer": null,
+      "coverage": null,
+      "bound_mean": null,
+      "translated": 4,
+      "cues_out": 4,
+      "max_zh_cps": 6.17,
+      "remap": {
+        "cues_out": 4,
+        "overflow": 0,
+        "overlaps": 0,
+        "min_dur": 0.81
+      },
+      "qa_verdict": "WARN",
+      "lufs": -14.9,
+      "qa_failed": [
+        "no_residual_black"
+      ],
+      "qa_black_only": true,
+      "sentences": [
+        {
+          "start": 12.18,
+          "end": 14.37,
+          "en": "what brings you to the land of the gatekeepers",
+          "zh": "是什么让你来到守门人的国度"
+        },
+        {
+          "start": 18.66,
+          "end": 19.47,
+          "en": "i'm searching for",
+          "zh": "我正在寻找"
+        },
+        {
+          "start": 36.99,
+          "end": 38.97,
+          "en": "dangerous quest for a number two",
+          "zh": "危险的追求二号"
+        },
+        {
+          "start": 41.97,
+          "end": 43.8,
+          "en": "you don't long as i can remember",
+          "zh": "你不会只要我记得"
+        }
+      ],
+      "sec": 56.3
+    },
+    {
+      "id": "tts_en-AU-Natasha",
+      "kind": "tts",
+      "clip": "Workspace\\assets\\speech4tts\\en-AU-Natasha\\source.mp4",
+      "gt": "Workspace\\assets\\speech4tts\\en-AU-Natasha\\ground_truth.json",
+      "ok": true,
+      "duration_s": 28.4,
+      "resolution": "854x480",
+      "audio": "48000Hz 2ch",
+      "asr_variants": [
+        {
+          "name": "baseline",
+          "words": 88,
+          "conf": 0.9746,
+          "error": null
+        },
+        {
+          "name": "bandpass",
+          "words": 88,
+          "conf": 0.9737,
+          "error": null
+        }
+      ],
+      "asr_chosen": "baseline",
+      "words": 88,
+      "conf": 0.9746,
+      "asr_text": "good evening and welcome to the second half of our factory to in the next five minutes you will see how role clip becomes the finished film the robot arm picks up twelve small boxes and stacks them beside the conveyor belt notice that the editor never touches the color wheel before the sound is balanced if the dialogue is louder than them music by more than six decibels the audience will complain ",
+      "cut_s": 0,
+      "kept_s": 28.4,
+      "protected_spans": 1,
+      "cues": 6,
+      "final_mb": 6.2,
+      "verify_verdict": "PASS",
+      "has_reference": true,
+      "wer": 0.0562,
+      "coverage": 0.9975,
+      "bound_mean": 0.013,
+      "translated": 11,
+      "cues_out": 11,
+      "max_zh_cps": 6.35,
+      "remap": {
+        "cues_out": 11,
+        "overflow": 0,
+        "overlaps": 0,
+        "min_dur": 2.07
+      },
+      "qa_verdict": "WARN",
+      "lufs": -16.2,
+      "qa_failed": [
+        "av_synced"
+      ],
+      "qa_black_only": false,
+      "sentences": [
+        {
+          "start": 0.03,
+          "end": 3.78,
+          "en": "good evening and welcome to the second half of our factory to",
+          "zh": "晚上好，欢迎来到我们工厂的下半部分，"
+        },
+        {
+          "start": 4.11,
+          "end": 8.43,
+          "en": "in the next five minutes you will see how role clip becomes the finished film",
+          "zh": "在接下来的五分钟内，您将看到角色剪辑如何成为"
+        },
+        {
+          "start": 8.79,
+          "end": 13.74,
+          "en": "the robot arm picks up twelve small boxes and stacks them beside the conveyor belt",
+          "zh": "机械臂拿起十二个小盒子，堆放在传送带旁边"
+        },
+        {
+          "start": 14.07,
+          "end": 18.21,
+          "en": "notice that the editor never touches the color wheel before the sound is balanced",
+          "zh": "请注意，在平衡声音之前，编辑器从未触摸过色轮"
+        },
+        {
+          "start": 18.51,
+          "end": 23.61,
+          "en": "if the dialogue is louder than them music by more than six decibels the audience will complain",
+          "zh": "如果对话声音比音乐大6分贝以上，观众会抱怨"
+        },
+        {
+          "start": 23.97,
+          "end": 28.38,
+          "en": "that is all for tonight thank you for watching and see you tomorrow at eight",
+          "zh": "今晚到此结束，感谢大家收看，明天八点见"
+        }
+      ],
+      "gt_lines": [
+        {
+          "words": 12,
+          "text": "Good evening, and welcome to the second half of our factory tour.",
+          "start": 0,
+          "covered": 0.992,
+          "boundary_err": 0.03
+        },
+        {
+          "words": 16,
+          "text": "In the next five minutes, you will see how a raw clip becomes a finished film.",
+          "start": 4.13,
+          "covered": 0.998,
+          "boundary_err": 0.02
+        },
+        {
+          "words": 15,
+          "text": "The robot arm picks up twelve small boxes and stacks them beside the conveyor belt.",
+          "start": 8.789,
+          "covered": 1,
+          "boundary_err": 0.021
+        },
+        {
+          "words": 14,
+          "text": "Notice that the editor never touches the color wheel before the sound is balanced.",
+          "start": 14.069,
+          "covered": 1,
+          "boundary_err": 0.03
+        },
+        {
+          "words": 17,
+          "text": "If the dialogue is louder than the music by more than six decibels, the audience will complain.",
+          "start": 18.53,
+          "covered": 1,
+          "boundary_err": 0.02
+        },
+        {
+          "words": 15,
+          "text": "That is all for tonight; thank you for watching, and see you tomorrow at eight.",
+          "start": 23.962,
+          "covered": 0.994,
+          "boundary_err": 0.019
+        }
+      ],
+      "coverage_buckets": {
+        "short": null,
+        "mid": null,
+        "long": {
+          "n": 6,
+          "cov": 0.997,
+          "missed": 0
+        }
+      },
+      "missed_lines": [],
+      "sec": 32.6
+    },
+    {
+      "id": "tts_en-GB-Sonia",
+      "kind": "tts",
+      "clip": "Workspace\\assets\\speech4tts\\en-GB-Sonia\\source.mp4",
+      "gt": "Workspace\\assets\\speech4tts\\en-GB-Sonia\\ground_truth.json",
+      "ok": true,
+      "duration_s": 28.62,
+      "resolution": "854x480",
+      "audio": "48000Hz 2ch",
+      "asr_variants": [
+        {
+          "name": "baseline",
+          "words": 89,
+          "conf": 0.9814,
+          "error": null
+        },
+        {
+          "name": "bandpass",
+          "words": 89,
+          "conf": 0.9777,
+          "error": null
+        }
+      ],
+      "asr_chosen": "baseline",
+      "words": 89,
+      "conf": 0.9814,
+      "asr_text": "good evening and welcome to the second half of our factory tour in the next five minutes you will see how a roar clip becomes a finished film the robot arm picks up twelve small boxes and stacks them beside the conveyor belt notice that the editor never touches the color wheel before the sound is balanced if the dialogue is louder than the music by more than six decibels the audience will complain",
+      "cut_s": 0,
+      "kept_s": 28.62,
+      "protected_spans": 1,
+      "cues": 6,
+      "final_mb": 6.3,
+      "verify_verdict": "PASS",
+      "has_reference": true,
+      "wer": 0.0112,
+      "coverage": 0.9967,
+      "bound_mean": 0.013,
+      "translated": 12,
+      "cues_out": 12,
+      "max_zh_cps": 10.08,
+      "remap": {
+        "cues_out": 12,
+        "overflow": 0,
+        "overlaps": 0,
+        "min_dur": 1.785
+      },
+      "qa_verdict": "PASS",
+      "lufs": -16.1,
+      "qa_failed": [],
+      "qa_black_only": false,
+      "sentences": [
+        {
+          "start": 0.03,
+          "end": 3.6,
+          "en": "good evening and welcome to the second half of our factory tour",
+          "zh": "晚上好，欢迎来到我们工厂参观的后半部分"
+        },
+        {
+          "start": 3.93,
+          "end": 8.31,
+          "en": "in the next five minutes you will see how a roar clip becomes a finished film",
+          "zh": "在接下来的五分钟内，您将看到咆哮剪辑如何成为成品电影"
+        },
+        {
+          "start": 8.64,
+          "end": 13.38,
+          "en": "the robot arm picks up twelve small boxes and stacks them beside the conveyor belt",
+          "zh": "机械臂拿起十二个小盒子，堆放在传送带旁边"
+        },
+        {
+          "start": 13.74,
+          "end": 18.18,
+          "en": "notice that the editor never touches the color wheel before the sound is balanced",
+          "zh": "请注意，在平衡声音之前，编辑器从未触摸过色轮"
+        },
+        {
+          "start": 18.54,
+          "end": 23.88,
+          "en": "if the dialogue is louder than the music by more than six decibels the audience will complain",
+          "zh": "如果对话声音比音乐大6分贝以上，观众会抱怨"
+        },
+        {
+          "start": 24.21,
+          "end": 28.59,
+          "en": "that is all for tonight thank you for watching and see you tomorrow at eight",
+          "zh": "今晚到此结束，感谢大家收看，明天八点见"
+        }
+      ],
+      "gt_lines": [
+        {
+          "words": 12,
+          "text": "Good evening, and welcome to the second half of our factory tour.",
+          "start": 0,
+          "covered": 0.992,
+          "boundary_err": 0.03
+        },
+        {
+          "words": 16,
+          "text": "In the next five minutes, you will see how a raw clip becomes a finished film.",
+          "start": 3.95,
+          "covered": 0.999,
+          "boundary_err": 0.02
+        },
+        {
+          "words": 15,
+          "text": "The robot arm picks up twelve small boxes and stacks them beside the conveyor belt.",
+          "start": 8.665,
+          "covered": 0.999,
+          "boundary_err": 0.025
+        },
+        {
+          "words": 14,
+          "text": "Notice that the editor never touches the color wheel before the sound is balanced.",
+          "start": 13.735,
+          "covered": 0.999,
+          "boundary_err": 0.005
+        },
+        {
+          "words": 17,
+          "text": "If the dialogue is louder than the music by more than six decibels, the audience will complain.",
+          "start": 18.526,
+          "covered": 0.997,
+          "boundary_err": 0.014
+        },
+        {
+          "words": 15,
+          "text": "That is all for tonight; thank you for watching, and see you tomorrow at eight.",
+          "start": 24.226,
+          "covered": 0.993,
+          "boundary_err": 0.029
+        }
+      ],
+      "coverage_buckets": {
+        "short": null,
+        "mid": null,
+        "long": {
+          "n": 6,
+          "cov": 0.997,
+          "missed": 0
+        }
+      },
+      "missed_lines": [],
+      "sec": 31.3
+    },
+    {
+      "id": "tts_en-IN-Neerja",
+      "kind": "tts",
+      "clip": "Workspace\\assets\\speech4tts\\en-IN-Neerja\\source.mp4",
+      "gt": "Workspace\\assets\\speech4tts\\en-IN-Neerja\\ground_truth.json",
+      "ok": true,
+      "duration_s": 30.28,
+      "resolution": "854x480",
+      "audio": "48000Hz 2ch",
+      "asr_variants": [
+        {
+          "name": "baseline",
+          "words": 89,
+          "conf": 0.959,
+          "error": null
+        },
+        {
+          "name": "bandpass",
+          "words": 89,
+          "conf": 0.9377,
+          "error": null
+        }
+      ],
+      "asr_chosen": "baseline",
+      "words": 89,
+      "conf": 0.959,
+      "asr_text": "good evening and welcome to the second half of all factory tour in the next five minutes you will see how iraq live becomes a finished film the robot arm picks up twelve small boxes and stacks them beside the conveyor belt notice that the editor never touches the color wheel before the sound is balanced if the dialogue org is louder than the music by more than six decibels the audience will compla",
+      "cut_s": 0,
+      "kept_s": 30.28,
+      "protected_spans": 1,
+      "cues": 6,
+      "final_mb": 6.5,
+      "verify_verdict": "PASS",
+      "has_reference": true,
+      "wer": 0.0674,
+      "coverage": 0.9951,
+      "bound_mean": 0.015,
+      "translated": 12,
+      "cues_out": 12,
+      "max_zh_cps": 11.61,
+      "remap": {
+        "cues_out": 12,
+        "overflow": 0,
+        "overlaps": 0,
+        "min_dur": 1.55
+      },
+      "qa_verdict": "PASS",
+      "lufs": -16.1,
+      "qa_failed": [],
+      "qa_black_only": false,
+      "sentences": [
+        {
+          "start": 0.03,
+          "end": 3.72,
+          "en": "good evening and welcome to the second half of all factory tour",
+          "zh": "晚上好，欢迎来到所有工厂参观的下半场"
+        },
+        {
+          "start": 4.08,
+          "end": 8.73,
+          "en": "in the next five minutes you will see how iraq live becomes a finished film",
+          "zh": "在接下来的五分钟内，您将看到伊拉克现场如何成为一部成品电影"
+        },
+        {
+          "start": 9.09,
+          "end": 14.25,
+          "en": "the robot arm picks up twelve small boxes and stacks them beside the conveyor belt",
+          "zh": "机械臂拿起十二个小盒子，堆放在传送带旁边"
+        },
+        {
+          "start": 14.58,
+          "end": 19.11,
+          "en": "notice that the editor never touches the color wheel before the sound is balanced",
+          "zh": "请注意，在平衡声音之前，编辑器从未触摸过色轮"
+        },
+        {
+          "start": 19.44,
+          "end": 25.2,
+          "en": "if the dialogue org is louder than the music by more than six decibels the audience will complain",
+          "zh": "如果对话组织比音乐响亮超过六分贝，观众会抱怨"
+        },
+        {
+          "start": 25.59,
+          "end": 30.24,
+          "en": "that is all for tonight thank you for watching and see you tomorrow at it",
+          "zh": "今晚到此结束，感谢您的收看，明天见"
+        }
+      ],
+      "gt_lines": [
+        {
+          "words": 12,
+          "text": "Good evening, and welcome to the second half of our factory tour.",
+          "start": 0,
+          "covered": 0.992,
+          "boundary_err": 0.03
+        },
+        {
+          "words": 16,
+          "text": "In the next five minutes, you will see how a raw clip becomes a finished film.",
+          "start": 4.071,
+          "covered": 0.996,
+          "boundary_err": 0.01
+        },
+        {
+          "words": 15,
+          "text": "The robot arm picks up twelve small boxes and stacks them beside the conveyor belt.",
+          "start": 9.09,
+          "covered": 1,
+          "boundary_err": 0.016
+        },
+        {
+          "words": 14,
+          "text": "Notice that the editor never touches the color wheel before the sound is balanced.",
+          "start": 14.584,
+          "covered": 1,
+          "boundary_err": 0.027
+        },
+        {
+          "words": 17,
+          "text": "If the dialogue is louder than the music by more than six decibels, the audience will complain.",
+          "start": 19.433,
+          "covered": 0.995,
+          "boundary_err": 0.022
+        },
+        {
+          "words": 15,
+          "text": "That is all for tonight; thank you for watching, and see you tomorrow at eight.",
+          "start": 25.572,
+          "covered": 0.987,
+          "boundary_err": 0.042
+        }
+      ],
+      "coverage_buckets": {
+        "short": null,
+        "mid": null,
+        "long": {
+          "n": 6,
+          "cov": 0.995,
+          "missed": 0
+        }
+      },
+      "missed_lines": [],
+      "sec": 33.5
+    },
+    {
+      "id": "tts_en-US-Aria",
+      "kind": "tts",
+      "clip": "Workspace\\assets\\speech4tts\\en-US-Aria\\source.mp4",
+      "gt": "Workspace\\assets\\speech4tts\\en-US-Aria\\ground_truth.json",
+      "ok": true,
+      "duration_s": 26.87,
+      "resolution": "854x480",
+      "audio": "48000Hz 2ch",
+      "asr_variants": [
+        {
+          "name": "baseline",
+          "words": 88,
+          "conf": 0.9736,
+          "error": null
+        },
+        {
+          "name": "bandpass",
+          "words": 88,
+          "conf": 0.9673,
+          "error": null
+        }
+      ],
+      "asr_chosen": "baseline",
+      "words": 88,
+      "conf": 0.9736,
+      "asr_text": "good evening and welcome to the second half of our factory tour in the next five minutes you will see how iraq lip becomes a finished fill the robot arm picks up twelve small boxes and stacks them beside the conveyor belt noticed that the editor never touches the color wheel before the sound is balanced if the dialogue is louder than the music by more than sick decibels the audience will complain ",
+      "cut_s": 0,
+      "kept_s": 26.87,
+      "protected_spans": 1,
+      "cues": 6,
+      "final_mb": 6,
+      "verify_verdict": "PASS",
+      "has_reference": true,
+      "wer": 0.0674,
+      "coverage": 0.9971,
+      "bound_mean": 0.012,
+      "translated": 13,
+      "cues_out": 13,
+      "max_zh_cps": 13.33,
+      "remap": {
+        "cues_out": 13,
+        "overflow": 0,
+        "overlaps": 0,
+        "min_dur": 1.35
+      },
+      "qa_verdict": "PASS",
+      "lufs": -16.3,
+      "qa_failed": [],
+      "qa_black_only": false,
+      "sentences": [
+        {
+          "start": 0.03,
+          "end": 3.33,
+          "en": "good evening and welcome to the second half of our factory tour",
+          "zh": "晚上好，欢迎来到我们工厂参观的后半部分"
+        },
+        {
+          "start": 3.66,
+          "end": 7.71,
+          "en": "in the next five minutes you will see how iraq lip becomes a finished fill",
+          "zh": "在接下来的五分钟内，您将看到伊拉克LIP如何成为成品填充物"
+        },
+        {
+          "start": 8.07,
+          "end": 12.72,
+          "en": "the robot arm picks up twelve small boxes and stacks them beside the conveyor belt",
+          "zh": "机械臂拿起十二个小盒子，堆放在传送带旁边"
+        },
+        {
+          "start": 13.05,
+          "end": 17.07,
+          "en": "noticed that the editor never touches the color wheel before the sound is balanced",
+          "zh": "注意到编辑器在平衡声音之前从未触摸过色轮"
+        },
+        {
+          "start": 17.4,
+          "end": 22.53,
+          "en": "if the dialogue is louder than the music by more than sick decibels the audience will complain",
+          "zh": "如果对话比音乐响亮超过病态分贝，观众会抱怨"
+        },
+        {
+          "start": 22.89,
+          "end": 26.85,
+          "en": "that is all for tonight thank you for watching and see you tomorrow at eight",
+          "zh": "今晚到此结束，感谢大家收看，明天八点见"
+        }
+      ],
+      "gt_lines": [
+        {
+          "words": 12,
+          "text": "Good evening, and welcome to the second half of our factory tour.",
+          "start": 0,
+          "covered": 0.991,
+          "boundary_err": 0.03
+        },
+        {
+          "words": 16,
+          "text": "In the next five minutes, you will see how a raw clip becomes a finished film.",
+          "start": 3.661,
+          "covered": 0.997,
+          "boundary_err": 0.012
+        },
+        {
+          "words": 15,
+          "text": "The robot arm picks up twelve small boxes and stacks them beside the conveyor belt.",
+          "start": 8.072,
+          "covered": 1,
+          "boundary_err": 0.018
+        },
+        {
+          "words": 14,
+          "text": "Notice that the editor never touches the color wheel before the sound is balanced.",
+          "start": 13.052,
+          "covered": 1,
+          "boundary_err": 0.021
+        },
+        {
+          "words": 17,
+          "text": "If the dialogue is louder than the music by more than six decibels, the audience will complain.",
+          "start": 17.399,
+          "covered": 0.997,
+          "boundary_err": 0.017
+        },
+        {
+          "words": 15,
+          "text": "That is all for tonight; thank you for watching, and see you tomorrow at eight.",
+          "start": 22.897,
+          "covered": 0.996,
+          "boundary_err": 0.017
+        }
+      ],
+      "coverage_buckets": {
+        "short": null,
+        "mid": null,
+        "long": {
+          "n": 6,
+          "cov": 0.997,
+          "missed": 0
+        }
+      },
+      "missed_lines": [],
+      "sec": 31.1
+    },
+    {
+      "id": "tos_90s",
+      "kind": "real",
+      "clip": "Workspace\\assets\\tos_excerpts\\tos_90s.mp4",
+      "gt": "Workspace\\assets\\tos_excerpts\\tos_90s.ground_truth.json",
+      "ok": false,
+      "duration_s": 90,
+      "resolution": "1150x480",
+      "audio": "44100Hz 2ch",
+      "asr_variants": [
+        {
+          "name": "baseline",
+          "words": 82,
+          "conf": 0.8788,
+          "error": null
+        },
+        {
+          "name": "bandpass",
+          "words": 77,
+          "conf": 0.9001,
+          "error": null
+        }
+      ],
+      "asr_chosen": "bandpass",
+      "words": 77,
+      "conf": 0.9001,
+      "asr_text": "look celia we have to follow our passions you have your robotics i just want to be awesome in space come in two minutes left financial just admit that your freaked out by my robot him this is celia i was young and a dick but there's no reason to destroy the world why does he do this we already tried that one you broke my heart you forgot me on earth i should just trash on",
+      "cut_s": 0,
+      "kept_s": 90,
+      "protected_spans": 13,
+      "cues": 13,
+      "final_mb": 21,
+      "verify_verdict": "FAIL",
+      "has_reference": true,
+      "wer": 0.3053,
+      "coverage": 0.5989,
+      "bound_mean": 1.828,
+      "translated": 14,
+      "cues_out": 14,
+      "max_zh_cps": 10.53,
+      "remap": {
+        "cues_out": 14,
+        "overflow": 0,
+        "overlaps": 0,
+        "min_dur": 0.76
+      },
+      "qa_verdict": "WARN",
+      "lufs": -14.2,
+      "qa_failed": [
+        "loudness_ok"
+      ],
+      "qa_black_only": false,
+      "sentences": [
+        {
+          "start": 6.03,
+          "end": 6.75,
+          "en": "look celia",
+          "zh": "看起来Celia"
+        },
+        {
+          "start": 8.387518,
+          "end": 10.35,
+          "en": "we have to follow our passions",
+          "zh": "我们必须追随我们的激情"
+        },
+        {
+          "start": 11.4,
+          "end": 12.81,
+          "en": "you have your robotics",
+          "zh": "你有你的机器人"
+        },
+        {
+          "start": 15.9,
+          "end": 29.866181,
+          "en": "i just want to be awesome in space come in",
+          "zh": "我只想在太空中表现出色"
+        },
+        {
+          "start": 30.36,
+          "end": 31.11,
+          "en": "two minutes left",
+          "zh": "两分钟"
+        },
+        {
+          "start": 37.05,
+          "end": 39.99,
+          "en": "financial just admit that your freaked out by my robot him",
+          "zh": "财务只是承认你被我的机器人他吓坏了"
+        },
+        {
+          "start": 46.92,
+          "end": 50.79,
+          "en": "this is celia i was young and a dick",
+          "zh": "这是Celia ，我当时很年轻，还是个鸡巴"
+        },
+        {
+          "start": 51.27,
+          "end": 53.04,
+          "en": "but there's no reason to destroy the world",
+          "zh": "但没有理由毁灭这个世界"
+        },
+        {
+          "start": 55.08,
+          "end": 55.86,
+          "en": "why does he do this",
+          "zh": "他为什么要这么做"
+        },
+        {
+          "start": 57.09,
+          "end": 58.53,
+          "en": "we already tried that one",
+          "zh": "我们已经试过那个"
+        },
+        {
+          "start": 73.56,
+          "end": 74.85,
+          "en": "you broke my heart",
+          "zh": "扎心了，老铁"
+        },
+        {
+          "start": 77.16,
+          "end": 78.72,
+          "en": "you forgot me on earth",
+          "zh": "你把我忘在地球上"
+        },
+        {
+          "start": 80.52,
+          "end": 87.36,
+          "en": "i should just trash on",
+          "zh": "我应该直接倒垃圾"
+        }
+      ],
+      "gt_lines": [
+        {
+          "words": 2,
+          "text": "Look Celia.",
+          "start": 6,
+          "covered": 0.76,
+          "boundary_err": 0.21
+        },
+        {
+          "words": 6,
+          "text": "We have to follow our passions.",
+          "start": 8,
+          "covered": 0.806,
+          "boundary_err": 0.388
+        },
+        {
+          "words": 4,
+          "text": "You have your robotics...",
+          "start": 11,
+          "covered": 0.705,
+          "boundary_err": 0.4
+        },
+        {
+          "words": 9,
+          "text": "...and I just want to be awesome in space.",
+          "start": 15,
+          "covered": 0.7,
+          "boundary_err": 5.19
+        },
+        {
+          "words": 6,
+          "text": "Okay, they're coming. Two minutes left!",
+          "start": 29,
+          "covered": 0.753,
+          "boundary_err": 1.36
+        },
+        {
+          "words": 4,
+          "text": "Speed it up, Thom!",
+          "start": 33,
+          "covered": 0,
+          "boundary_err": 2.865
+        },
+        {
+          "words": 1,
+          "text": "Vivacissimo!",
+          "start": 35,
+          "covered": 0,
+          "boundary_err": 3.99
+        },
+        {
+          "words": 13,
+          "text": "Why don't you just admit that you're freaked out by my robot hand?",
+          "start": 37,
+          "covered": 0.98,
+          "boundary_err": 0.05
+        },
+        {
+          "words": 5,
+          "text": "Listen Celia, I was young...",
+          "start": 46,
+          "covered": 0.693,
+          "boundary_err": 0.92
+        },
+        {
+          "words": 3,
+          "text": "...and a dick.",
+          "start": 49.5,
+          "covered": 0.86,
+          "boundary_err": 0.645
+        },
+        {
+          "words": 8,
+          "text": "But that's no reason to destroy the world.",
+          "start": 51,
+          "covered": 0.865,
+          "boundary_err": 0.27
+        },
+        {
+          "words": 5,
+          "text": "Why does he do this?",
+          "start": 55,
+          "covered": 0.79,
+          "boundary_err": 0.13
+        },
+        {
+          "words": 5,
+          "text": "We already tried that one!",
+          "start": 56.5,
+          "covered": 0.705,
+          "boundary_err": 0.59
+        },
+        {
+          "words": 1,
+          "text": "Abort!",
+          "start": 61.5,
+          "covered": 0,
+          "boundary_err": 4.41
+        },
+        {
+          "words": 1,
+          "text": "Cut!",
+          "start": 63,
+          "covered": 0,
+          "boundary_err": 5.91
+        },
+        {
+          "words": 1,
+          "text": "Whoaaa!",
+          "start": 64,
+          "covered": 0,
+          "boundary_err": 6.91
+        },
+        {
+          "words": 1,
+          "text": "Whoaaa!",
+          "start": 69,
+          "covered": 0,
+          "boundary_err": 4.85
+        },
+        {
+          "words": 1,
+          "text": "Nooooo!",
+          "start": 71,
+          "covered": 0,
+          "boundary_err": 2.56
+        },
+        {
+          "words": 4,
+          "text": "You broke my heart.",
+          "start": 73,
+          "covered": 0.645,
+          "boundary_err": 0.56
+        },
+        {
+          "words": 2,
+          "text": "I know.",
+          "start": 76,
+          "covered": 0,
+          "boundary_err": 1.72
+        },
+        {
+          "words": 5,
+          "text": "You forgot me on earth.",
+          "start": 77,
+          "covered": 0.78,
+          "boundary_err": 0.28
+        },
+        {
+          "words": 2,
+          "text": "I know.",
+          "start": 79,
+          "covered": 0,
+          "boundary_err": 1.52
+        },
+        {
+          "words": 5,
+          "text": "I should just crush you.",
+          "start": 80.5,
+          "covered": 0.992,
+          "boundary_err": 4.28
+        },
+        {
+          "words": 1,
+          "text": "I'm-",
+          "start": 86,
+          "covered": 1,
+          "boundary_err": 5.48
+        }
+      ],
+      "coverage_buckets": {
+        "short": {
+          "n": 11,
+          "cov": 0.238,
+          "missed": 8
+        },
+        "mid": {
+          "n": 11,
+          "cov": 0.703,
+          "missed": 1
+        },
+        "long": {
+          "n": 2,
+          "cov": 0.84,
+          "missed": 0
+        }
+      },
+      "missed_lines": [
+        "Speed it up, Thom!",
+        "Vivacissimo!",
+        "Abort!",
+        "Cut!",
+        "Whoaaa!",
+        "Whoaaa!",
+        "Nooooo!",
+        "I know.",
+        "I know."
+      ],
+      "sec": 83.9
+    }
+  ]
+}

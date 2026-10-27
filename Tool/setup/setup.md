@@ -12,6 +12,11 @@
 | `fetch_vosk_model.mjs` | 下载 Vosk 离线模型（默认 `vosk-model-small-en-us-0.15`，39MB）→ `Workspace/asr/models/`；**6 线程分段 + 续传** | 39MB / 约 15 分钟（源站限速） |
 | `fetch_real_footage.mjs` | 真实素材 A：Big Buck Bunny 片段（CC-BY 3.0，**无音轨**）→ `Workspace/assets/` | 5MB / 15 秒 |
 | `fetch_realspeech.mjs` | 真实素材 B：**带真人说话**的 Sintel 预告片（CC-BY 3.0）→ `Workspace/assets/realspeech/` | 4MB / 2 秒 |
+| `fetch_more_speech.mjs` | **小循环 4**：多下几个带英文人声的公开素材（Sintel / BBB 预告与整片 / W3C 片段）→ `Workspace/assets/speech4/` | 约 260MB / 约 3 分钟 |
+| `make_speech4_tts.mjs` | **小循环 4**：同一段讲稿换 4 种口音（US/GB/AU/IN）合成，**带逐句真值** → `Workspace/assets/speech4tts/` | 4×30s / 约 2 分钟 |
+| `select_speech4_excerpts.mjs` | **小循环 4**：整片先识别 → 按 15s 步长滑 90s 窗 → 截取对白最密的片段 | 16–28× 实时（596s 片约 37s） |
+| `fetch_tos_movie.mjs` | **小循环 4**：Tears of Steel 720p（真人实拍电影，**带官方英/中文字幕**，可算真实素材 WER）；6 线程分段 + 断点 | 355MB / 30–60 分钟（镜像限速 0.1–0.2MB/s） |
+| `make_tos_excerpt.mjs` | **小循环 4**：按官方字幕密度选 90s 片段，并把字幕行平移成**真值** + 中文参考 | 几秒 |
 | `npm_fetch.mjs` | 通用兜底：给包名就从 npmmirror 拉 tarball 并解包到指定目录（`npm install` 失败时用） | 按包大小 |
 
 ## 一次性安装顺序
@@ -21,6 +26,12 @@ node Tool\setup\bootstrap_ffmpeg.mjs     # 必须最先（后面全依赖 ffmpeg
 node Tool\setup\bootstrap_asr.mjs        # 只有做字幕/识别才需要
 node Tool\setup\fetch_vosk_model.mjs     # 只有做识别才需要（可换语种模型）
 node Tool\setup\fetch_realspeech.mjs     # 只有要复现小循环 3 才需要
+
+# 小循环 4（多样本英译中）：素材与真值
+node Tool\setup\fetch_more_speech.mjs        # 4 段真实素材（含 237MB 整片；--small 跳过）
+node Tool\setup\make_speech4_tts.mjs         # 4 种口音 TTS（带逐句真值）
+node Tool\setup\fetch_tos_movie.mjs          # Tears of Steel 355MB（慢，30-60 分钟，可后台）
+node Tool\setup\make_tos_excerpt.mjs         # 用官方字幕挑 90s 并生成真值（依赖上一步）
 ```
 
 ## 注意

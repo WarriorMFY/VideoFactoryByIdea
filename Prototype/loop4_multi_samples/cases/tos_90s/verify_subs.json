@@ -1,0 +1,254 @@
+{
+  "verdict": "FAIL",
+  "mode": "with-reference（有讲稿真值）",
+  "thresholds": {
+    "wer": 0.25,
+    "cover": 0.95,
+    "boundMean": 0.8,
+    "boundMax": 1.5,
+    "cps_zh": 20,
+    "cps_en": 25
+  },
+  "wer": {
+    "refWords": 95,
+    "hypWords": 77,
+    "dist": 29,
+    "rate": 0.3053
+  },
+  "timing": {
+    "coverage_ratio": 0.5989,
+    "mean_boundary_err_s": 1.828,
+    "max_boundary_err_s": 6.91,
+    "sentences": [
+      {
+        "idx": 0,
+        "start": 6,
+        "end": 7,
+        "covered_ratio": 0.76,
+        "start_err": 0.03,
+        "end_err": 0.21
+      },
+      {
+        "idx": 1,
+        "start": 8,
+        "end": 10,
+        "covered_ratio": 0.806,
+        "start_err": 0.388,
+        "end_err": 0.35
+      },
+      {
+        "idx": 2,
+        "start": 11,
+        "end": 13,
+        "covered_ratio": 0.705,
+        "start_err": 0.4,
+        "end_err": 0.19
+      },
+      {
+        "idx": 3,
+        "start": 15,
+        "end": 18,
+        "covered_ratio": 0.7,
+        "start_err": 0.9,
+        "end_err": 5.19
+      },
+      {
+        "idx": 4,
+        "start": 29,
+        "end": 31,
+        "covered_ratio": 0.753,
+        "start_err": 1.36,
+        "end_err": 0.135
+      },
+      {
+        "idx": 5,
+        "start": 33,
+        "end": 34,
+        "covered_ratio": 0,
+        "start_err": 2.64,
+        "end_err": 2.865
+      },
+      {
+        "idx": 6,
+        "start": 35,
+        "end": 36,
+        "covered_ratio": 0,
+        "start_err": 2.05,
+        "end_err": 3.99
+      },
+      {
+        "idx": 7,
+        "start": 37,
+        "end": 40,
+        "covered_ratio": 0.98,
+        "start_err": 0.05,
+        "end_err": 0.01
+      },
+      {
+        "idx": 8,
+        "start": 46,
+        "end": 49,
+        "covered_ratio": 0.693,
+        "start_err": 0.92,
+        "end_err": 0.145
+      },
+      {
+        "idx": 9,
+        "start": 49.5,
+        "end": 51,
+        "covered_ratio": 0.86,
+        "start_err": 0.645,
+        "end_err": 0.21
+      },
+      {
+        "idx": 10,
+        "start": 51,
+        "end": 53,
+        "covered_ratio": 0.865,
+        "start_err": 0.27,
+        "end_err": 0.04
+      },
+      {
+        "idx": 11,
+        "start": 55,
+        "end": 56,
+        "covered_ratio": 0.79,
+        "start_err": 0.08,
+        "end_err": 0.13
+      },
+      {
+        "idx": 12,
+        "start": 56.5,
+        "end": 58.5,
+        "covered_ratio": 0.705,
+        "start_err": 0.59,
+        "end_err": 0.03
+      },
+      {
+        "idx": 13,
+        "start": 61.5,
+        "end": 62.5,
+        "covered_ratio": 0,
+        "start_err": 4.41,
+        "end_err": 3.97
+      },
+      {
+        "idx": 14,
+        "start": 63,
+        "end": 64,
+        "covered_ratio": 0,
+        "start_err": 5.91,
+        "end_err": 5.47
+      },
+      {
+        "idx": 15,
+        "start": 64,
+        "end": 65,
+        "covered_ratio": 0,
+        "start_err": 6.91,
+        "end_err": 6.47
+      },
+      {
+        "idx": 16,
+        "start": 69,
+        "end": 70,
+        "covered_ratio": 0,
+        "start_err": 4.56,
+        "end_err": 4.85
+      },
+      {
+        "idx": 17,
+        "start": 71,
+        "end": 73,
+        "covered_ratio": 0,
+        "start_err": 2.56,
+        "end_err": 1.85
+      },
+      {
+        "idx": 18,
+        "start": 73,
+        "end": 75,
+        "covered_ratio": 0.645,
+        "start_err": 0.56,
+        "end_err": 0.15
+      },
+      {
+        "idx": 19,
+        "start": 76,
+        "end": 77,
+        "covered_ratio": 0,
+        "start_err": 1.16,
+        "end_err": 1.72
+      },
+      {
+        "idx": 20,
+        "start": 77,
+        "end": 79,
+        "covered_ratio": 0.78,
+        "start_err": 0.16,
+        "end_err": 0.28
+      },
+      {
+        "idx": 21,
+        "start": 79,
+        "end": 80,
+        "covered_ratio": 0,
+        "start_err": 1.52,
+        "end_err": 1.28
+      },
+      {
+        "idx": 22,
+        "start": 80.5,
+        "end": 83,
+        "covered_ratio": 0.992,
+        "start_err": 0.02,
+        "end_err": 4.28
+      },
+      {
+        "idx": 23,
+        "start": 86,
+        "end": 87,
+        "covered_ratio": 1,
+        "start_err": 5.48,
+        "end_err": 0.36
+      }
+    ]
+  },
+  "translate": {
+    "cues": 14,
+    "translated": 14,
+    "missing": 0,
+    "missing_samples": []
+  },
+  "readability": {
+    "max_zh_cps": 10.53,
+    "mean_zh_cps": 5.37,
+    "max_en_cps": 24.05
+  },
+  "remap": {
+    "cues_in": 14,
+    "cues_out": 14,
+    "dropped": 0,
+    "output_duration": 90,
+    "overflow": 0,
+    "overlaps": 0,
+    "min_dur": 0.76,
+    "max_dur": 13.966
+  },
+  "quality": null,
+  "pass": {
+    "wer": false,
+    "coverage": false,
+    "boundary_mean": false,
+    "boundary_max": false,
+    "translated": true,
+    "readability": true,
+    "remap": true
+  },
+  "source": {
+    "transcript": "F:\\AgentWorkArea\\DeepseekHarness\\IdeaDrivenAigc\\VideoFactory\\History\\asr\\multi\\tos_90s.json",
+    "ground_truth": "F:\\AgentWorkArea\\DeepseekHarness\\IdeaDrivenAigc\\VideoFactory\\Workspace\\assets\\tos_excerpts\\tos_90s.ground_truth.json",
+    "cues": "F:\\AgentWorkArea\\DeepseekHarness\\IdeaDrivenAigc\\VideoFactory\\History\\subs\\multi\\tos_90s\\cues.json",
+    "remap": "F:\\AgentWorkArea\\DeepseekHarness\\IdeaDrivenAigc\\VideoFactory\\History\\subs\\multi\\tos_90s\\remapped\\remap.json"
+  }
+}
