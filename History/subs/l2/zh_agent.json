@@ -1,0 +1,56 @@
+{
+  "note": "人工精译（按真值参考译文对齐到 ASR 断句）",
+  "map": {
+    "welcome back to the workshop where return raw footage into finished films": "欢迎回到工作坊，我们在这里把原始素材变成成片。",
+    "today i will show you three simple tricks that save about two hours of editing time": "今天我会演示三个简单的小技巧，能省下大约两个小时的剪辑时间。",
+    "first always cut on the beat because rhythm is what keeps the audience awake": "第一，永远在节拍上剪，因为节奏才能让观众保持清醒。",
+    "second remove the silent gaps longer than half a second before you touch the colors": "第二，在碰调色之前，先把长度超过半秒的静音空隙去掉。",
+    "third normalize the audio to minus sixty sixteen l u fs which is the standard for online video platforms": "第三，把音频响度归一到负十六 LUFS，这是在线视频平台的标准。",
+    "finally export at fifteen megabits per second and never trust the first render": "最后，以每秒十五兆的码率导出，而且永远不要相信第一次渲染。",
+    "that is it for this episode see you in the next one": "本期就到这里，我们下期见。"
+  },
+  "rows": [
+    {
+      "en": "welcome back to the workshop where return raw footage into finished films",
+      "matched_gt": 0,
+      "sim": 0.88,
+      "zh": "欢迎回到工作坊，我们在这里把原始素材变成成片。"
+    },
+    {
+      "en": "today i will show you three simple tricks that save about two hours of editing time",
+      "matched_gt": 1,
+      "sim": 1,
+      "zh": "今天我会演示三个简单的小技巧，能省下大约两个小时的剪辑时间。"
+    },
+    {
+      "en": "first always cut on the beat because rhythm is what keeps the audience awake",
+      "matched_gt": 2,
+      "sim": 1,
+      "zh": "第一，永远在节拍上剪，因为节奏才能让观众保持清醒。"
+    },
+    {
+      "en": "second remove the silent gaps longer than half a second before you touch the colors",
+      "matched_gt": 3,
+      "sim": 1,
+      "zh": "第二，在碰调色之前，先把长度超过半秒的静音空隙去掉。"
+    },
+    {
+      "en": "third normalize the audio to minus sixty sixteen l u fs which is the standard for online video platforms",
+      "matched_gt": 4,
+      "sim": 0.85,
+      "zh": "第三，把音频响度归一到负十六 LUFS，这是在线视频平台的标准。"
+    },
+    {
+      "en": "finally export at fifteen megabits per second and never trust the first render",
+      "matched_gt": 5,
+      "sim": 1,
+      "zh": "最后，以每秒十五兆的码率导出，而且永远不要相信第一次渲染。"
+    },
+    {
+      "en": "that is it for this episode see you in the next one",
+      "matched_gt": 6,
+      "sim": 1,
+      "zh": "本期就到这里，我们下期见。"
+    }
+  ]
+}

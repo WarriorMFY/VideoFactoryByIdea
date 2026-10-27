@@ -1,0 +1,776 @@
+{
+  "generated_at": "2026-10-27T06:45:11.017Z",
+  "transcript": "D:\\Data\\DeepseekHarness\\IdeaDrivenLoop\\VideoFactory\\History\\asr\\transcript_stub.json",
+  "mt_backend": "agent",
+  "params": {
+    "pause": 0.3,
+    "maxSent": 110,
+    "minSentChars": 24,
+    "maxZh": 18,
+    "maxEn": 64,
+    "minCue": 0.8
+  },
+  "stats": {
+    "sentences": 7,
+    "cues": 13,
+    "words": 99
+  },
+  "sentences": [
+    {
+      "start": 0,
+      "end": 5.033,
+      "words": [
+        {
+          "word": "welcome",
+          "start": 0,
+          "end": 0.358,
+          "conf": 1
+        },
+        {
+          "word": "back",
+          "start": 0.39,
+          "end": 0.748,
+          "conf": 1
+        },
+        {
+          "word": "to",
+          "start": 0.779,
+          "end": 1.137,
+          "conf": 1
+        },
+        {
+          "word": "the",
+          "start": 1.169,
+          "end": 1.527,
+          "conf": 1
+        },
+        {
+          "word": "workshop",
+          "start": 1.558,
+          "end": 1.917,
+          "conf": 1
+        },
+        {
+          "word": "where",
+          "start": 1.948,
+          "end": 2.306,
+          "conf": 1
+        },
+        {
+          "word": "we",
+          "start": 2.337,
+          "end": 2.696,
+          "conf": 1
+        },
+        {
+          "word": "turn",
+          "start": 2.727,
+          "end": 3.085,
+          "conf": 1
+        },
+        {
+          "word": "raw",
+          "start": 3.116,
+          "end": 3.475,
+          "conf": 1
+        },
+        {
+          "word": "footage",
+          "start": 3.506,
+          "end": 3.864,
+          "conf": 1
+        },
+        {
+          "word": "into",
+          "start": 3.895,
+          "end": 4.254,
+          "conf": 1
+        },
+        {
+          "word": "finished",
+          "start": 4.285,
+          "end": 4.643,
+          "conf": 1
+        },
+        {
+          "word": "films",
+          "start": 4.674,
+          "end": 5.033,
+          "conf": 1
+        }
+      ],
+      "en": "welcome back to the workshop where we turn raw footage into finished films",
+      "zh": "欢迎回到工作坊，我们在这里把原始素材变成成片。"
+    },
+    {
+      "start": 5.414,
+      "end": 10.691,
+      "words": [
+        {
+          "word": "today",
+          "start": 5.414,
+          "end": 5.719,
+          "conf": 1
+        },
+        {
+          "word": "i",
+          "start": 5.745,
+          "end": 6.05,
+          "conf": 1
+        },
+        {
+          "word": "will",
+          "start": 6.077,
+          "end": 6.382,
+          "conf": 1
+        },
+        {
+          "word": "show",
+          "start": 6.409,
+          "end": 6.713,
+          "conf": 1
+        },
+        {
+          "word": "you",
+          "start": 6.74,
+          "end": 7.045,
+          "conf": 1
+        },
+        {
+          "word": "three",
+          "start": 7.072,
+          "end": 7.376,
+          "conf": 1
+        },
+        {
+          "word": "simple",
+          "start": 7.403,
+          "end": 7.708,
+          "conf": 1
+        },
+        {
+          "word": "tricks",
+          "start": 7.734,
+          "end": 8.039,
+          "conf": 1
+        },
+        {
+          "word": "that",
+          "start": 8.066,
+          "end": 8.371,
+          "conf": 1
+        },
+        {
+          "word": "save",
+          "start": 8.398,
+          "end": 8.702,
+          "conf": 1
+        },
+        {
+          "word": "about",
+          "start": 8.729,
+          "end": 9.034,
+          "conf": 1
+        },
+        {
+          "word": "two",
+          "start": 9.06,
+          "end": 9.365,
+          "conf": 1
+        },
+        {
+          "word": "hours",
+          "start": 9.392,
+          "end": 9.697,
+          "conf": 1
+        },
+        {
+          "word": "of",
+          "start": 9.723,
+          "end": 10.028,
+          "conf": 1
+        },
+        {
+          "word": "editing",
+          "start": 10.055,
+          "end": 10.36,
+          "conf": 1
+        },
+        {
+          "word": "time",
+          "start": 10.386,
+          "end": 10.691,
+          "conf": 1
+        }
+      ],
+      "en": "today i will show you three simple tricks that save about two hours of editing time",
+      "zh": "今天我会演示三个简单的小技巧，能省下大约两个小时的剪辑时间。"
+    },
+    {
+      "start": 11.068,
+      "end": 16.318,
+      "words": [
+        {
+          "word": "first",
+          "start": 11.068,
+          "end": 11.415,
+          "conf": 1
+        },
+        {
+          "word": "always",
+          "start": 11.445,
+          "end": 11.792,
+          "conf": 1
+        },
+        {
+          "word": "cut",
+          "start": 11.822,
+          "end": 12.169,
+          "conf": 1
+        },
+        {
+          "word": "on",
+          "start": 12.199,
+          "end": 12.546,
+          "conf": 1
+        },
+        {
+          "word": "the",
+          "start": 12.577,
+          "end": 12.924,
+          "conf": 1
+        },
+        {
+          "word": "beat",
+          "start": 12.954,
+          "end": 13.301,
+          "conf": 1
+        },
+        {
+          "word": "because",
+          "start": 13.331,
+          "end": 13.678,
+          "conf": 1
+        },
+        {
+          "word": "rhythm",
+          "start": 13.708,
+          "end": 14.055,
+          "conf": 1
+        },
+        {
+          "word": "is",
+          "start": 14.085,
+          "end": 14.432,
+          "conf": 1
+        },
+        {
+          "word": "what",
+          "start": 14.462,
+          "end": 14.809,
+          "conf": 1
+        },
+        {
+          "word": "keeps",
+          "start": 14.839,
+          "end": 15.186,
+          "conf": 1
+        },
+        {
+          "word": "the",
+          "start": 15.217,
+          "end": 15.564,
+          "conf": 1
+        },
+        {
+          "word": "audience",
+          "start": 15.594,
+          "end": 15.941,
+          "conf": 1
+        },
+        {
+          "word": "awake",
+          "start": 15.971,
+          "end": 16.318,
+          "conf": 1
+        }
+      ],
+      "en": "first always cut on the beat because rhythm is what keeps the audience awake",
+      "zh": "第一，永远在节拍上剪，因为节奏才能让观众保持清醒。"
+    },
+    {
+      "start": 16.698,
+      "end": 22.38,
+      "words": [
+        {
+          "word": "second",
+          "start": 16.698,
+          "end": 17.048,
+          "conf": 1
+        },
+        {
+          "word": "remove",
+          "start": 17.079,
+          "end": 17.429,
+          "conf": 1
+        },
+        {
+          "word": "the",
+          "start": 17.46,
+          "end": 17.81,
+          "conf": 1
+        },
+        {
+          "word": "silent",
+          "start": 17.84,
+          "end": 18.191,
+          "conf": 1
+        },
+        {
+          "word": "gaps",
+          "start": 18.221,
+          "end": 18.572,
+          "conf": 1
+        },
+        {
+          "word": "longer",
+          "start": 18.602,
+          "end": 18.952,
+          "conf": 1
+        },
+        {
+          "word": "than",
+          "start": 18.983,
+          "end": 19.333,
+          "conf": 1
+        },
+        {
+          "word": "half",
+          "start": 19.364,
+          "end": 19.714,
+          "conf": 1
+        },
+        {
+          "word": "a",
+          "start": 19.744,
+          "end": 20.095,
+          "conf": 1
+        },
+        {
+          "word": "second",
+          "start": 20.125,
+          "end": 20.476,
+          "conf": 1
+        },
+        {
+          "word": "before",
+          "start": 20.506,
+          "end": 20.856,
+          "conf": 1
+        },
+        {
+          "word": "you",
+          "start": 20.887,
+          "end": 21.237,
+          "conf": 1
+        },
+        {
+          "word": "touch",
+          "start": 21.268,
+          "end": 21.618,
+          "conf": 1
+        },
+        {
+          "word": "the",
+          "start": 21.648,
+          "end": 21.999,
+          "conf": 1
+        },
+        {
+          "word": "colors",
+          "start": 22.029,
+          "end": 22.38,
+          "conf": 1
+        }
+      ],
+      "en": "second remove the silent gaps longer than half a second before you touch the colors",
+      "zh": "第二，在碰调色之前，先把长度超过半秒的静音空隙去掉。"
+    },
+    {
+      "start": 22.76,
+      "end": 30.521,
+      "words": [
+        {
+          "word": "third",
+          "start": 22.76,
+          "end": 23.209,
+          "conf": 1
+        },
+        {
+          "word": "normalize",
+          "start": 23.248,
+          "end": 23.696,
+          "conf": 1
+        },
+        {
+          "word": "the",
+          "start": 23.735,
+          "end": 24.184,
+          "conf": 1
+        },
+        {
+          "word": "audio",
+          "start": 24.223,
+          "end": 24.671,
+          "conf": 1
+        },
+        {
+          "word": "to",
+          "start": 24.71,
+          "end": 25.159,
+          "conf": 1
+        },
+        {
+          "word": "minus",
+          "start": 25.198,
+          "end": 25.646,
+          "conf": 1
+        },
+        {
+          "word": "sixteen",
+          "start": 25.685,
+          "end": 26.134,
+          "conf": 1
+        },
+        {
+          "word": "lufs",
+          "start": 26.172,
+          "end": 26.621,
+          "conf": 1
+        },
+        {
+          "word": "which",
+          "start": 26.66,
+          "end": 27.108,
+          "conf": 1
+        },
+        {
+          "word": "is",
+          "start": 27.148,
+          "end": 27.596,
+          "conf": 1
+        },
+        {
+          "word": "the",
+          "start": 27.635,
+          "end": 28.084,
+          "conf": 1
+        },
+        {
+          "word": "standard",
+          "start": 28.122,
+          "end": 28.571,
+          "conf": 1
+        },
+        {
+          "word": "for",
+          "start": 28.61,
+          "end": 29.058,
+          "conf": 1
+        },
+        {
+          "word": "online",
+          "start": 29.098,
+          "end": 29.546,
+          "conf": 1
+        },
+        {
+          "word": "video",
+          "start": 29.585,
+          "end": 30.034,
+          "conf": 1
+        },
+        {
+          "word": "platforms",
+          "start": 30.072,
+          "end": 30.521,
+          "conf": 1
+        }
+      ],
+      "en": "third normalize the audio to minus sixteen lufs which is the standard for online video platforms",
+      "zh": "第三，把音频响度归一到负十六 LUFS，这是在线视频平台的标准。"
+    },
+    {
+      "start": 30.91,
+      "end": 36.682,
+      "words": [
+        {
+          "word": "finally",
+          "start": 30.91,
+          "end": 31.321,
+          "conf": 1
+        },
+        {
+          "word": "export",
+          "start": 31.357,
+          "end": 31.768,
+          "conf": 1
+        },
+        {
+          "word": "at",
+          "start": 31.804,
+          "end": 32.215,
+          "conf": 1
+        },
+        {
+          "word": "fifteen",
+          "start": 32.25,
+          "end": 32.661,
+          "conf": 1
+        },
+        {
+          "word": "megabits",
+          "start": 32.697,
+          "end": 33.108,
+          "conf": 1
+        },
+        {
+          "word": "per",
+          "start": 33.144,
+          "end": 33.555,
+          "conf": 1
+        },
+        {
+          "word": "second",
+          "start": 33.591,
+          "end": 34.002,
+          "conf": 1
+        },
+        {
+          "word": "and",
+          "start": 34.037,
+          "end": 34.448,
+          "conf": 1
+        },
+        {
+          "word": "never",
+          "start": 34.484,
+          "end": 34.895,
+          "conf": 1
+        },
+        {
+          "word": "trust",
+          "start": 34.931,
+          "end": 35.342,
+          "conf": 1
+        },
+        {
+          "word": "the",
+          "start": 35.378,
+          "end": 35.789,
+          "conf": 1
+        },
+        {
+          "word": "first",
+          "start": 35.824,
+          "end": 36.235,
+          "conf": 1
+        },
+        {
+          "word": "render",
+          "start": 36.271,
+          "end": 36.682,
+          "conf": 1
+        }
+      ],
+      "en": "finally export at fifteen megabits per second and never trust the first render",
+      "zh": "最后，以每秒十五兆的码率导出，而且永远不要相信第一次渲染。"
+    },
+    {
+      "start": 37.068,
+      "end": 40.739,
+      "words": [
+        {
+          "word": "that",
+          "start": 37.068,
+          "end": 37.351,
+          "conf": 1
+        },
+        {
+          "word": "is",
+          "start": 37.376,
+          "end": 37.659,
+          "conf": 1
+        },
+        {
+          "word": "it",
+          "start": 37.684,
+          "end": 37.967,
+          "conf": 1
+        },
+        {
+          "word": "for",
+          "start": 37.992,
+          "end": 38.275,
+          "conf": 1
+        },
+        {
+          "word": "this",
+          "start": 38.3,
+          "end": 38.583,
+          "conf": 1
+        },
+        {
+          "word": "episode",
+          "start": 38.608,
+          "end": 38.891,
+          "conf": 1
+        },
+        {
+          "word": "see",
+          "start": 38.916,
+          "end": 39.199,
+          "conf": 1
+        },
+        {
+          "word": "you",
+          "start": 39.224,
+          "end": 39.507,
+          "conf": 1
+        },
+        {
+          "word": "in",
+          "start": 39.532,
+          "end": 39.815,
+          "conf": 1
+        },
+        {
+          "word": "the",
+          "start": 39.84,
+          "end": 40.123,
+          "conf": 1
+        },
+        {
+          "word": "next",
+          "start": 40.148,
+          "end": 40.431,
+          "conf": 1
+        },
+        {
+          "word": "one",
+          "start": 40.456,
+          "end": 40.739,
+          "conf": 1
+        }
+      ],
+      "en": "that is it for this episode see you in the next one",
+      "zh": "本期就到这里，我们下期见。"
+    }
+  ],
+  "cues": [
+    {
+      "start": 0,
+      "end": 2.517,
+      "en": "welcome back to the workshop where we turn raw footage into",
+      "zh": "欢迎回到工作坊，我们在这里把原始素材",
+      "conf": 1,
+      "sent_en": "welcome back to the workshop where we turn raw footage into finished films"
+    },
+    {
+      "start": 2.517,
+      "end": 5.033,
+      "en": "finished films",
+      "zh": "变成成片。",
+      "conf": 1,
+      "sent_en": "welcome back to the workshop where we turn raw footage into finished films"
+    },
+    {
+      "start": 5.414,
+      "end": 8.053,
+      "en": "today i will show you three simple tricks that save about two",
+      "zh": "今天我会演示三个简单的小技巧，",
+      "conf": 1,
+      "sent_en": "today i will show you three simple tricks that save about two hours of editing time"
+    },
+    {
+      "start": 8.053,
+      "end": 10.691,
+      "en": "hours of editing time",
+      "zh": "能省下大约两个小时的剪辑时间。",
+      "conf": 1,
+      "sent_en": "today i will show you three simple tricks that save about two hours of editing time"
+    },
+    {
+      "start": 11.068,
+      "end": 13.693,
+      "en": "first always cut on the beat because rhythm is what keeps the",
+      "zh": "第一，永远在节拍上剪，",
+      "conf": 1,
+      "sent_en": "first always cut on the beat because rhythm is what keeps the audience awake"
+    },
+    {
+      "start": 13.693,
+      "end": 16.318,
+      "en": "audience awake",
+      "zh": "因为节奏才能让观众保持清醒。",
+      "conf": 1,
+      "sent_en": "first always cut on the beat because rhythm is what keeps the audience awake"
+    },
+    {
+      "start": 16.698,
+      "end": 19.539,
+      "en": "second remove the silent gaps longer than half a second before",
+      "zh": "第二，在碰调色之前，",
+      "conf": 1,
+      "sent_en": "second remove the silent gaps longer than half a second before you touch the colors"
+    },
+    {
+      "start": 19.539,
+      "end": 22.38,
+      "en": "you touch the colors",
+      "zh": "先把长度超过半秒的静音空隙去掉。",
+      "conf": 1,
+      "sent_en": "second remove the silent gaps longer than half a second before you touch the colors"
+    },
+    {
+      "start": 22.76,
+      "end": 26.641,
+      "en": "third normalize the audio to minus sixteen lufs which is the",
+      "zh": "第三，把音频响度归一到负十六 LUF",
+      "conf": 1,
+      "sent_en": "third normalize the audio to minus sixteen lufs which is the standard for online video platforms"
+    },
+    {
+      "start": 26.641,
+      "end": 30.521,
+      "en": "standard for online video platforms",
+      "zh": "S，这是在线视频平台的标准。",
+      "conf": 1,
+      "sent_en": "third normalize the audio to minus sixteen lufs which is the standard for online video platforms"
+    },
+    {
+      "start": 30.91,
+      "end": 33.796,
+      "en": "finally export at fifteen megabits per second and never trust",
+      "zh": "最后，以每秒十五兆的码率导出，",
+      "conf": 1,
+      "sent_en": "finally export at fifteen megabits per second and never trust the first render"
+    },
+    {
+      "start": 33.796,
+      "end": 36.682,
+      "en": "the first render",
+      "zh": "而且永远不要相信第一次渲染。",
+      "conf": 1,
+      "sent_en": "finally export at fifteen megabits per second and never trust the first render"
+    },
+    {
+      "start": 37.068,
+      "end": 40.739,
+      "en": "that is it for this episode see you in the next one",
+      "zh": "本期就到这里，我们下期见。",
+      "conf": 1,
+      "sent_en": "that is it for this episode see you in the next one"
+    }
+  ]
+}

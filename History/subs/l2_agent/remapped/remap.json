@@ -1,0 +1,145 @@
+{
+  "generated_at": "2026-10-27T06:45:11.070Z",
+  "cues_in": 13,
+  "cues_out": 13,
+  "dropped": [],
+  "output_duration": 40.764,
+  "style": "bilingual",
+  "sanity": {
+    "overflow_cues": 0,
+    "overlaps": 0,
+    "min_dur": 2.516
+  },
+  "cues": [
+    {
+      "idx": 0,
+      "src_cue": 0,
+      "start": 0,
+      "end": 2.517,
+      "en": "welcome back to the workshop where we turn raw footage into",
+      "zh": "欢迎回到工作坊，我们在这里把原始素材",
+      "conf": 1,
+      "split_from_cut": false
+    },
+    {
+      "idx": 1,
+      "src_cue": 1,
+      "start": 2.517,
+      "end": 5.033,
+      "en": "finished films",
+      "zh": "变成成片。",
+      "conf": 1,
+      "split_from_cut": false
+    },
+    {
+      "idx": 2,
+      "src_cue": 2,
+      "start": 5.414,
+      "end": 8.053,
+      "en": "today i will show you three simple tricks that save about two",
+      "zh": "今天我会演示三个简单的小技巧，",
+      "conf": 1,
+      "split_from_cut": false
+    },
+    {
+      "idx": 3,
+      "src_cue": 3,
+      "start": 8.053,
+      "end": 10.691,
+      "en": "hours of editing time",
+      "zh": "能省下大约两个小时的剪辑时间。",
+      "conf": 1,
+      "split_from_cut": false
+    },
+    {
+      "idx": 4,
+      "src_cue": 4,
+      "start": 11.068,
+      "end": 13.693,
+      "en": "first always cut on the beat because rhythm is what keeps the",
+      "zh": "第一，永远在节拍上剪，",
+      "conf": 1,
+      "split_from_cut": false
+    },
+    {
+      "idx": 5,
+      "src_cue": 5,
+      "start": 13.693,
+      "end": 16.318,
+      "en": "audience awake",
+      "zh": "因为节奏才能让观众保持清醒。",
+      "conf": 1,
+      "split_from_cut": false
+    },
+    {
+      "idx": 6,
+      "src_cue": 6,
+      "start": 16.698,
+      "end": 19.539,
+      "en": "second remove the silent gaps longer than half a second before",
+      "zh": "第二，在碰调色之前，",
+      "conf": 1,
+      "split_from_cut": false
+    },
+    {
+      "idx": 7,
+      "src_cue": 7,
+      "start": 19.539,
+      "end": 22.38,
+      "en": "you touch the colors",
+      "zh": "先把长度超过半秒的静音空隙去掉。",
+      "conf": 1,
+      "split_from_cut": false
+    },
+    {
+      "idx": 8,
+      "src_cue": 8,
+      "start": 22.76,
+      "end": 26.641,
+      "en": "third normalize the audio to minus sixteen lufs which is the",
+      "zh": "第三，把音频响度归一到负十六 LUF",
+      "conf": 1,
+      "split_from_cut": false
+    },
+    {
+      "idx": 9,
+      "src_cue": 9,
+      "start": 26.641,
+      "end": 30.521,
+      "en": "standard for online video platforms",
+      "zh": "S，这是在线视频平台的标准。",
+      "conf": 1,
+      "split_from_cut": false
+    },
+    {
+      "idx": 10,
+      "src_cue": 10,
+      "start": 30.91,
+      "end": 33.796,
+      "en": "finally export at fifteen megabits per second and never trust",
+      "zh": "最后，以每秒十五兆的码率导出，",
+      "conf": 1,
+      "split_from_cut": false
+    },
+    {
+      "idx": 11,
+      "src_cue": 11,
+      "start": 33.796,
+      "end": 36.682,
+      "en": "the first render",
+      "zh": "而且永远不要相信第一次渲染。",
+      "conf": 1,
+      "split_from_cut": false
+    },
+    {
+      "idx": 12,
+      "src_cue": 12,
+      "start": 37.068,
+      "end": 40.739,
+      "en": "that is it for this episode see you in the next one",
+      "zh": "本期就到这里，我们下期见。",
+      "conf": 1,
+      "split_from_cut": false
+    }
+  ]
+}
