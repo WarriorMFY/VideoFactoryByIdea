@@ -6,7 +6,7 @@
  */
 import path from 'node:path';
 import fs from 'node:fs';
-import { ffmpeg, ROOT } from './lib/ff.mjs';
+import { ffmpeg, ROOT } from '../lib/ff.mjs';
 
 const args = process.argv.slice(2);
 const edlPath = args[0], outPath = args[1];

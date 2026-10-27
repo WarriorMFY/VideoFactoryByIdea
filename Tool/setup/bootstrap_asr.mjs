@@ -22,7 +22,7 @@ import path from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { Readable } from 'node:stream';
 import { pipeline } from 'node:stream/promises';
-import { ROOT } from './lib/ff.mjs';
+import { ROOT } from '../lib/ff.mjs';
 
 const REG = 'https://registry.npmmirror.com';
 const DEST = path.join(ROOT, 'Workspace', 'asr');

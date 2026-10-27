@@ -21,7 +21,7 @@
 | 素材 | **Sintel 预告片**（Blender Foundation 开放电影，**CC-BY 3.0**） |
 | 来源 | `https://media.w3.org/2010/05/sintel/trailer.mp4`（W3C 测试媒体，实测 0.5~5MB/s） |
 | 规格 | 52.2s / 854×480 / H.264 / AAC 48k 立体声，**真人英语对白** + 音乐 + 音效 |
-| 下载脚本 | `Tool/fetch_realspeech.mjs`（幂等，含失败候选） |
+| 下载脚本 | `Tool/setup/fetch_realspeech.mjs`（幂等，含失败候选） |
 
 为什么选它：真实人声、真实混音、有镜头切换与黑场卡（正好考验剪辑规则），且许可允许测试使用。测试过的其它候选都被否掉：`bunny-trailer` 无对白（纯音乐）；`test-videos.co.uk` 的片段无音轨；`movie_300` 前 120s 无人声；GitHub Release / Wikimedia / Internet Archive 全域不可达。
 

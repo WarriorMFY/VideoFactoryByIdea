@@ -13,7 +13,7 @@ import path from 'node:path';
 import { createWriteStream } from 'node:fs';
 import { Readable } from 'node:stream';
 import { pipeline } from 'node:stream/promises';
-import { ffprobeJson, ROOT } from './lib/ff.mjs';
+import { ffprobeJson, ROOT } from '../lib/ff.mjs';
 
 const OUT = path.join(ROOT, 'Workspace', 'assets', 'realspeech');
 fs.mkdirSync(OUT, { recursive: true });

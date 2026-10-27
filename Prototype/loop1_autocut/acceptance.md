@@ -1,7 +1,7 @@
 # 验收记录（自动生成）
 
 生成时间：2026-10-27T07:25:06.895Z  
-命令：`node Tool/run_acceptance.mjs`
+命令：`node Tool/acceptance/run_acceptance.mjs`
 
 ## 结论
 

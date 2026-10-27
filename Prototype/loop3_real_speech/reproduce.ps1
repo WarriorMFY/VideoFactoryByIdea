@@ -14,23 +14,23 @@ try {
   if (-not (Get-Command node -ErrorAction SilentlyContinue)) { throw "node not found; install Node.js 20+" }
 
   Write-Host "`n== 1/4 prepare deps (ffmpeg + ASR libs, first run only)" -ForegroundColor Cyan
-  node Tool\bootstrap_ffmpeg.mjs
+  node Tool\setup/bootstrap_ffmpeg.mjs
   if ($LASTEXITCODE -ne 0) { throw "ffmpeg bootstrap failed" }
-  node Tool\bootstrap_asr.mjs
+  node Tool\setup/bootstrap_asr.mjs
   if ($LASTEXITCODE -ne 0) { throw "asr bootstrap failed" }
 
   if (-not $SkipModel) {
     Write-Host "`n== 2/4 fetch Vosk English model (39MB, throttled source: ~15 min)" -ForegroundColor Cyan
-    node Tool\fetch_vosk_model.mjs
+    node Tool\setup/fetch_vosk_model.mjs
     if ($LASTEXITCODE -ne 0) { throw "model fetch failed" }
   } else { Write-Host "`n== 2/4 skipped model fetch (-SkipModel)" -ForegroundColor Yellow }
 
   Write-Host "`n== 3/4 download real footage (Sintel trailer, CC-BY 3.0)" -ForegroundColor Cyan
-  node Tool\fetch_realspeech.mjs
+  node Tool\setup/fetch_realspeech.mjs
   if ($LASTEXITCODE -ne 0) { throw "footage fetch failed" }
 
   Write-Host "`n== 4/4 full chain: ASR(+preprocess) -> cut(+speech protection) -> subs -> remap -> burn -> verify" -ForegroundColor Cyan
-  node Tool\run_real_acceptance.mjs
+  node Tool\acceptance/run_real_acceptance.mjs
   $code = $LASTEXITCODE
 
   Write-Host "`n---- outputs ----" -ForegroundColor Cyan

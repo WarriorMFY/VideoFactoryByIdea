@@ -16,7 +16,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { spawnSync } from 'node:child_process';
-import { ROOT } from './lib/ff.mjs';
+import { ROOT } from '../lib/ff.mjs';
 
 const args = process.argv.slice(2);
 const getOpt = (k, d) => (args.includes(k) ? args[args.indexOf(k) + 1] : d);
@@ -54,31 +54,31 @@ const mark = (label) => { marks.push({ label, at: new Date().toISOString(), sec:
 
 // 1) 素材
 if (!SKIP_BUILD || !fs.existsSync(path.join(BENCH, 'source.mp4'))) {
-  step('1/7 造素材（Edge TTS 英文语音 + 真实画面）', 'make_l2_bench.mjs', [], 'l2_make');
+  step('1/7 造素材（Edge TTS 英文语音 + 真实画面）', 'bench/make_l2_bench.mjs', [], 'l2_make');
 } else console.log('[skip] 素材已存在');
 mark('material');
 
 // 2) 识别
 const trFile = path.join(ROOT, 'History', 'asr', 'transcript.json');
-step('2/7 离线语音识别（Vosk）', 'asr_vosk.mjs', [path.join(BENCH, 'source.mp4'), '--out', trFile], 'l2_asr');
+step('2/7 离线语音识别（Vosk）', 'subtitle/asr_vosk.mjs', [path.join(BENCH, 'source.mp4'), '--out', trFile], 'l2_asr');
 mark('asr');
 
 // 3) 剪辑（先出 EDL，用于字幕重映射）
 fs.rmSync(RUNBASE, { recursive: true, force: true });
-step('3/7 剪辑（出 EDL）', 'vfactory.mjs', [path.join(BENCH, 'source.mp4'), '--out', RUNBASE, '--title', '外语视频 · 中文字幕'], 'l2_cut');
+step('3/7 剪辑（出 EDL）', 'edit/vfactory.mjs', [path.join(BENCH, 'source.mp4'), '--out', RUNBASE, '--title', '外语视频 · 中文字幕'], 'l2_cut');
 mark('cut');
 
 // 4) 字幕（句子级翻译 → 显示行）
-step(`4/7 生成字幕（MT=${MT}）`, 'make_subs.mjs', [trFile, '--out', SUBS, '--mt', MT, ...(MT === 'agent' ? ['--zh-file', ZHFILE] : []), '--glossary', path.join(ROOT, 'Tool', 'glossary_zh.json')], 'l2_subs');
+step(`4/7 生成字幕（MT=${MT}）`, 'subtitle/make_subs.mjs', [trFile, '--out', SUBS, '--mt', MT, ...(MT === 'agent' ? ['--zh-file', ZHFILE] : []), '--glossary', path.join(ROOT, 'Tool', 'subtitle', 'glossary_zh.json')], 'l2_subs');
 mark('subs');
 
 // 5) 重映射到剪辑后时间轴
-step('5/7 字幕时间轴重映射', 'remap_subs.mjs', [path.join(SUBS, 'cues.json'), path.join(RUNBASE, 'edits.json'), '--out', REMAP, '--style', 'bilingual'], 'l2_remap');
+step('5/7 字幕时间轴重映射', 'subtitle/remap_subs.mjs', [path.join(SUBS, 'cues.json'), path.join(RUNBASE, 'edits.json'), '--out', REMAP, '--style', 'bilingual'], 'l2_remap');
 mark('remap');
 
 // 6) 烧入字幕出成片
 fs.rmSync(RUNSUB, { recursive: true, force: true });
-step('6/7 渲染成片（烧入双语字幕）', 'vfactory.mjs', [path.join(BENCH, 'source.mp4'), '--out', RUNSUB, '--title', '外语视频 · 中文字幕', '--srt', path.join(REMAP, 'out_bilingual.srt')], 'l2_render');
+step('6/7 渲染成片（烧入双语字幕）', 'edit/vfactory.mjs', [path.join(BENCH, 'source.mp4'), '--out', RUNSUB, '--title', '外语视频 · 中文字幕', '--srt', path.join(REMAP, 'out_bilingual.srt')], 'l2_render');
 mark('render');
 
 // 剪辑一致性断言：两次渲染的 EDL 必须一致，否则字幕与画面会错位
@@ -88,9 +88,9 @@ const sameKept = JSON.stringify(edlA.kept.map((k) => [k.start, k.end])) === JSON
 if (!sameKept) throw new Error('两次渲染的剪辑点不一致（EDL 漂移），字幕会错位');
 
 // 7) 验收 + 质检 + 时间轴图
-const ver = step('7/7 字幕链路验收', 'verify_subs.mjs', [trFile, path.join(BENCH, 'ground_truth.json'), '--cues', path.join(SUBS, 'cues.json'), '--remap', path.join(REMAP, 'remap.json'), '--ref', path.join(BENCH, 'reference_zh.json'), '--json', path.join(RUNSUB, 'verify_subs.json')], 'l2_verify', { allowFail: true });
-const qa = step('成片质检', 'qa_report.mjs', [path.join(RUNSUB, 'final.mp4'), '--json', path.join(RUNSUB, 'qa.json')], 'l2_qa', { allowFail: true });
-step('决策时间轴图', 'make_timeline.mjs', [path.join(RUNSUB, 'edits.json'), path.join(RUNSUB, 'timeline.png'), '--label', '外语视频 · 中文字幕'], 'l2_timeline');
+const ver = step('7/7 字幕链路验收', 'subtitle/verify_subs.mjs', [trFile, path.join(BENCH, 'ground_truth.json'), '--cues', path.join(SUBS, 'cues.json'), '--remap', path.join(REMAP, 'remap.json'), '--ref', path.join(BENCH, 'reference_zh.json'), '--json', path.join(RUNSUB, 'verify_subs.json')], 'l2_verify', { allowFail: true });
+const qa = step('成片质检', 'acceptance/qa_report.mjs', [path.join(RUNSUB, 'final.mp4'), '--json', path.join(RUNSUB, 'qa.json')], 'l2_qa', { allowFail: true });
+step('决策时间轴图', 'edit/make_timeline.mjs', [path.join(RUNSUB, 'edits.json'), path.join(RUNSUB, 'timeline.png'), '--label', '外语视频 · 中文字幕'], 'l2_timeline');
 mark('verify');
 
 const verify = JSON.parse(fs.readFileSync(path.join(RUNSUB, 'verify_subs.json'), 'utf8'));

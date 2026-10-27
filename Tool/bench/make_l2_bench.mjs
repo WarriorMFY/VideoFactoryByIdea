@@ -13,7 +13,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { createRequire } from 'node:module';
-import { ffmpeg, ffprobeJson, durationOf, ROOT } from './lib/ff.mjs';
+import { ffmpeg, ffprobeJson, durationOf, ROOT } from '../lib/ff.mjs';
 
 const args = process.argv.slice(2);
 const getOpt = (k, d) => (args.includes(k) ? args[args.indexOf(k) + 1] : d);

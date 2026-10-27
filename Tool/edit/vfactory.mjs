@@ -17,7 +17,7 @@
  */
 import fs from 'node:fs';
 import path from 'node:path';
-import { ffmpeg as ffRaw, ffprobeJson, durationOf, hasFilter, ROOT } from './lib/ff.mjs';
+import { ffmpeg as ffRaw, ffprobeJson, durationOf, hasFilter, ROOT } from '../lib/ff.mjs';
 
 // ---------------- 参数 ----------------
 function parseArgs(argv) {
@@ -436,7 +436,7 @@ function report(d) {
   for (const f of files) L.push(`- \`${path.basename(f.name)}\` — ${f.desc}`);
   L.push('', `## 复现`, '');
   L.push('```powershell');
-  L.push(`node Tool\\vfactory.mjs "${SRC}" --out out --title "..."`);
+  L.push(`node Tool\\edit\\vfactory.mjs "${SRC}" --out out --title "..."`);
   L.push('```');
   L.push('', `每步 ffmpeg 命令见 \`runlog.jsonl\`。`);
   fs.writeFileSync(path.join(OUT, 'report.md'), L.join('\n'));

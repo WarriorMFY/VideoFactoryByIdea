@@ -20,7 +20,7 @@ import { Readable } from 'node:stream';
 import { pipeline } from 'node:stream/promises';
 
 const BASE = 'https://registry.npmmirror.com/-/binary/ffmpeg-static/b6.1.1/';
-const root = path.resolve(import.meta.dirname, '..');
+const root = path.resolve(import.meta.dirname, '..', '..');
 const binDir = path.join(root, 'Workspace', 'bin', 'ffmpeg');
 
 async function exists(p) { try { await fs.access(p); return true; } catch { return false; } }

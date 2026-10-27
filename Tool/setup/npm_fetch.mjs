@@ -6,7 +6,7 @@ import { spawnSync } from 'node:child_process';
 import { Readable } from 'node:stream';
 import { pipeline } from 'node:stream/promises';
 
-const ROOT = path.resolve(import.meta.dirname, '..');
+const ROOT = path.resolve(import.meta.dirname, '..', '..');
 const [pkg, destParent] = process.argv.slice(2);
 const REG = 'https://registry.npmmirror.com';
 

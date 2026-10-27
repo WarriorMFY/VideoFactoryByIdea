@@ -14,7 +14,7 @@
  */
 import fs from 'node:fs';
 import path from 'node:path';
-import { ROOT } from './lib/ff.mjs';
+import { ROOT } from '../lib/ff.mjs';
 
 const args = process.argv.slice(2);
 if (args.length < 2) { console.error('用法: node Tool/remap_subs.mjs <cues.json> <edits.json> --out <dir> [--style bilingual|zh|en]'); process.exit(2); }

@@ -22,7 +22,7 @@
 | 机翻 vs 人工精译（参考） | 62.9% 字符相似度 | 仅报告（见 §5） |
 | 成片质检 | 33.88s / 1280×720 / −16.2 LUFS / PASS | — |
 
-一键复跑：`node Tool/run_subs_acceptance.mjs`（记录写进 `History/loops/loop02/acceptance.md`）。
+一键复跑：`node Tool/acceptance/run_subs_acceptance.mjs`（记录写进 `History/loops/loop02/acceptance.md`）。
 
 ---
 
@@ -62,7 +62,7 @@
 
 本级目录另有：`acceptance_mt.md` / `acceptance_polished.md`（两版验收记录，自动生成）、`reproduce.ps1`（一键复现）。
 
-> 源视频未随包（26MB），用 `node Tool/make_l2_bench.mjs` 一条命令即可重建（讲稿+语音+画面全自动生成）。
+> 源视频未随包（26MB），用 `node Tool/bench/make_l2_bench.mjs` 一条命令即可重建（讲稿+语音+画面全自动生成）。
 
 ---
 
@@ -76,22 +76,22 @@
 
 ```powershell
 # 分步（首次准备）
-node Tool\bootstrap_asr.mjs            # koffi + libvosk + edge-tts（约 82MB，2 分钟）
-node Tool\fetch_vosk_model.mjs         # 英语模型 39MB（源站限速，脚本用 6 线程分段拉，约 15 分钟）
+node Tool\setup/bootstrap_asr.mjs            # koffi + libvosk + edge-tts（约 82MB，2 分钟）
+node Tool\setup/fetch_vosk_model.mjs         # 英语模型 39MB（源站限速，脚本用 6 线程分段拉，约 15 分钟）
 
 # 1) 跑一条外语视频
-node Tool\asr_vosk.mjs "你的外语视频.mp4" --out work\transcript.json
-node Tool\vfactory.mjs  "你的外语视频.mp4" --out out\cut            # 先剪辑，拿到 EDL
-node Tool\make_subs.mjs  work\transcript.json --out work\subs --mt mymemory --glossary Tool\glossary_zh.json
-node Tool\remap_subs.mjs work\subs\cues.json out\cut\edits.json --out work\subs\remap --style bilingual
-node Tool\vfactory.mjs  "你的外语视频.mp4" --out out\final --srt work\subs\remap\out_bilingual.srt
+node Tool\subtitle/asr_vosk.mjs "你的外语视频.mp4" --out work\transcript.json
+node Tool\edit/vfactory.mjs  "你的外语视频.mp4" --out out\cut            # 先剪辑，拿到 EDL
+node Tool\subtitle/make_subs.mjs  work\transcript.json --out work\subs --mt mymemory --glossary Tool\subtitle/glossary_zh.json
+node Tool\subtitle/remap_subs.mjs work\subs\cues.json out\cut\edits.json --out work\subs\remap --style bilingual
+node Tool\edit/vfactory.mjs  "你的外语视频.mp4" --out out\final --srt work\subs\remap\out_bilingual.srt
 
 # 只想出字幕不烧画面：直接用 work\subs\bilingual.srt（原时间轴）或 remap 版（剪辑后时间轴）
 ```
 
 常用开关：`--mt none`（只出外文字幕）、`--mt agent --zh-file 精译.json`（用人工/LLM 译文）、`--style zh|en|bilingual`（烧入样式）。
 
-**换语种**：`Tool/asr_vosk.mjs` 的 `--model` 指向对应 Vosk 模型目录即可（德语/法语/日语/西语等 Vosk 都有小模型）；`make_subs.mjs` 目前 `langpair` 固定 `en|zh-CN`，换语种改一行；断句/行长参数在 `TH` 里。
+**换语种**：`Tool/subtitle/asr_vosk.mjs` 的 `--model` 指向对应 Vosk 模型目录即可（德语/法语/日语/西语等 Vosk 都有小模型）；`make_subs.mjs` 目前 `langpair` 固定 `en|zh-CN`，换语种改一行；断句/行长参数在 `TH` 里。
 
 ---
 
@@ -108,7 +108,7 @@ node Tool\vfactory.mjs  "你的外语视频.mp4" --out out\final --srt work\subs
 
 - 字符相似度均值 **62.9%**（精译版自比 85.7%，差值就是"机翻天花板"）。
 - 机翻的问题很集中：**无标点的 ASR 文本**导致专有词被拆开（LUFS → "l u fs"）、语序直译、术语（LUFS/Mbps）被译坏。
-- 结论：**能出可看的字幕，但正式交付建议过一遍人工/LLM 润色**。术语表（`Tool/glossary_zh.json`）能修掉一部分，但修不了语序。
+- 结论：**能出可看的字幕，但正式交付建议过一遍人工/LLM 润色**。术语表（`Tool/subtitle/glossary_zh.json`）能修掉一部分，但修不了语序。
 
 ---
 

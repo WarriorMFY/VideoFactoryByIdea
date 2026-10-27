@@ -14,7 +14,7 @@
  */
 import fs from 'node:fs';
 import path from 'node:path';
-import { ffmpeg, ffprobeJson, durationOf, ROOT } from './lib/ff.mjs';
+import { ffmpeg, ffprobeJson, durationOf, ROOT } from '../lib/ff.mjs';
 
 const clip = process.argv[2] || path.join(ROOT, 'Workspace', 'assets', 'Big_Buck_Bunny_1080_10s_5MB.mp4');
 const outDir = process.argv[3] || path.join(ROOT, 'History', 'bench', 'real');

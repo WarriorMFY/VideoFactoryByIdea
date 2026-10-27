@@ -20,7 +20,7 @@
  */
 import fs from 'node:fs';
 import path from 'node:path';
-import { ffmpeg, durationOf, hasFilter, ROOT } from './lib/ff.mjs';
+import { ffmpeg, durationOf, hasFilter, ROOT } from '../lib/ff.mjs';
 
 const outDir = process.argv[2] || path.join(ROOT, 'History', 'bench', 'synth');
 fs.mkdirSync(outDir, { recursive: true });

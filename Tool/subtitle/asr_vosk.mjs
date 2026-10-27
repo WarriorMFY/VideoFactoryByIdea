@@ -12,7 +12,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { createRequire } from 'node:module';
-import { ffmpeg, durationOf, ROOT } from './lib/ff.mjs';
+import { ffmpeg, durationOf, ROOT } from '../lib/ff.mjs';
 
 const args = process.argv.slice(2);
 const input = args[0];

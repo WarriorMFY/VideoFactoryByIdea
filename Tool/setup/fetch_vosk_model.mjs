@@ -11,7 +11,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { spawnSync } from 'node:child_process';
-import { ROOT } from './lib/ff.mjs';
+import { ROOT } from '../lib/ff.mjs';
 
 const name = process.argv[2] || 'vosk-model-small-en-us-0.15';
 const modelDir = path.join(ROOT, 'Workspace', 'asr', 'models');

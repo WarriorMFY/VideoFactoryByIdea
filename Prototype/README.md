@@ -56,14 +56,14 @@ Prototype/
 
 ```powershell
 # 只要自动剪辑
-node Tool\vfactory.mjs "你的视频.mp4" --out out\cut --title "标题"
+node Tool\edit/vfactory.mjs "你的视频.mp4" --out out\cut --title "标题"
 
 # 外语视频 → 中文字幕（含剪辑）
-node Tool\asr_vosk.mjs "你的外语视频.mp4" --out work\transcript.json
-node Tool\vfactory.mjs  "你的外语视频.mp4" --out out\cut
-node Tool\make_subs.mjs  work\transcript.json --out work\subs --mt mymemory --glossary Tool\glossary_zh.json
-node Tool\remap_subs.mjs work\subs\cues.json out\cut\edits.json --out work\subs\remap --style bilingual
-node Tool\vfactory.mjs  "你的外语视频.mp4" --out out\final --srt work\subs\remap\out_bilingual.srt
+node Tool\subtitle/asr_vosk.mjs "你的外语视频.mp4" --out work\transcript.json
+node Tool\edit/vfactory.mjs  "你的外语视频.mp4" --out out\cut
+node Tool\subtitle/make_subs.mjs  work\transcript.json --out work\subs --mt mymemory --glossary Tool\subtitle/glossary_zh.json
+node Tool\subtitle/remap_subs.mjs work\subs\cues.json out\cut\edits.json --out work\subs\remap --style bilingual
+node Tool\edit/vfactory.mjs  "你的外语视频.mp4" --out out\final --srt work\subs\remap\out_bilingual.srt
 ```
 
 ## 当前状态（诚实版）

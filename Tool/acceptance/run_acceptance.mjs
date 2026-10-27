@@ -13,7 +13,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { spawnSync } from 'node:child_process';
-import { ROOT } from './lib/ff.mjs';
+import { ROOT } from '../lib/ff.mjs';
 
 const args = process.argv.slice(2);
 const getArg = (k, d) => (args.includes(k) ? args[args.indexOf(k) + 1] : d);
@@ -45,7 +45,7 @@ const CASES = [
     id: 'synth',
     title: '用例 A：合成素材（7 段，含黑场/冻帧/静音/仅静音/仅冻帧，带真值）',
     benchDir: path.join(ROOT, 'History', 'bench', 'synth'),
-    makeScript: 'make_bench_source.mjs',
+    makeScript: 'bench/make_bench_source.mjs',
     makeArgs: [path.join(ROOT, 'History', 'bench', 'synth')],
     runDir: path.join(RUNROOT, 'bench01'),
     titleText: '剪辑工厂 DEMO',
@@ -54,7 +54,7 @@ const CASES = [
     id: 'real',
     title: '用例 B：真实素材 Big Buck Bunny（CC-BY 3.0）+ 已知头/中/尾废镜头（带真值）',
     benchDir: path.join(ROOT, 'History', 'bench', 'real'),
-    makeScript: 'make_real_bench.mjs',
+    makeScript: 'bench/make_real_bench.mjs',
     makeArgs: [],
     runDir: path.join(RUNROOT, 'real01'),
     titleText: '真实素材测试',
@@ -72,11 +72,11 @@ for (const c of CASES) {
     if (mk.status !== 0) { results.push({ ...c, ok: false, note: '素材生成失败' }); continue; }
   }
   fs.rmSync(c.runDir, { recursive: true, force: true });
-  const run = step(`剪辑 ${c.id}`, 'vfactory.mjs', [src, '--out', c.runDir, '--title', c.titleText], `vfactory_${c.id}`);
+  const run = step(`剪辑 ${c.id}`, 'edit/vfactory.mjs', [src, '--out', c.runDir, '--title', c.titleText], `vfactory_${c.id}`);
   if (run.status !== 0) { results.push({ ...c, ok: false, note: '流水线执行失败', log: run.log }); continue; }
-  step(`决策时间轴图 ${c.id}`, 'make_timeline.mjs', [path.join(c.runDir, 'edits.json'), path.join(c.runDir, 'timeline.png'), '--label', c.titleText + ' 剪辑决策'], `timeline_${c.id}`);
-  const ver = step(`真值验收 ${c.id}`, 'verify_edl.mjs', [path.join(c.runDir, 'edits.json'), gtFile, '--json', path.join(c.runDir, 'verify.json')], `verify_${c.id}`);
-  const qa = step(`成片质检 ${c.id}`, 'qa_report.mjs', [path.join(c.runDir, 'final.mp4'), '--json', path.join(c.runDir, 'qa.json')], `qa_${c.id}`);
+  step(`决策时间轴图 ${c.id}`, 'edit/make_timeline.mjs', [path.join(c.runDir, 'edits.json'), path.join(c.runDir, 'timeline.png'), '--label', c.titleText + ' 剪辑决策'], `timeline_${c.id}`);
+  const ver = step(`真值验收 ${c.id}`, 'acceptance/verify_edl.mjs', [path.join(c.runDir, 'edits.json'), gtFile, '--json', path.join(c.runDir, 'verify.json')], `verify_${c.id}`);
+  const qa = step(`成片质检 ${c.id}`, 'acceptance/qa_report.mjs', [path.join(c.runDir, 'final.mp4'), '--json', path.join(c.runDir, 'qa.json')], `qa_${c.id}`);
   const verify = JSON.parse(fs.readFileSync(path.join(c.runDir, 'verify.json'), 'utf8'));
   const qaJson = JSON.parse(fs.readFileSync(path.join(c.runDir, 'qa.json'), 'utf8'));
   const edl = JSON.parse(fs.readFileSync(path.join(c.runDir, 'edits.json'), 'utf8'));

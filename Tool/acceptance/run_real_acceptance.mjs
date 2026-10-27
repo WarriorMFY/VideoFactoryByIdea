@@ -13,7 +13,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { spawnSync } from 'node:child_process';
-import { ffprobeJson, ROOT } from './lib/ff.mjs';
+import { ffprobeJson, ROOT } from '../lib/ff.mjs';
 
 const args = process.argv.slice(2);
 const getOpt = (k, d) => (args.includes(k) ? args[args.indexOf(k) + 1] : d);
@@ -76,7 +76,7 @@ const VARIANTS = [
 const variantRows = [];
 for (const [name, af] of VARIANTS) {
   const out = path.join(ROOT, 'History', 'asr', `variant_${name.replace(/[^\w]+/g, '_')}.json`);
-  const r = runNode('asr_vosk.mjs', [CLIP, '--out', out, ...(af ? ['--af', af] : [])], `real3_asr_${name}`);
+  const r = runNode('subtitle/asr_vosk.mjs', [CLIP, '--out', out, ...(af ? ['--af', af] : [])], `real3_asr_${name}`);
   if (r.status !== 0) { variantRows.push({ name, af, error: '识别失败' }); continue; }
   const t = JSON.parse(fs.readFileSync(out, 'utf8'));
   variantRows.push({ name, af: af || '(无)', words: t.words.length, conf: t.stats.avg_conf, sentences: t.sentences.length, text: t.text });
@@ -84,24 +84,24 @@ for (const [name, af] of VARIANTS) {
 }
 
 // 2) 用最优预处理跑正式识别
-step('识别（正式，含音频预处理）', 'asr_vosk.mjs', [CLIP, '--out', ASR, '--af', AF], 'real3_asr');
+step('识别（正式，含音频预处理）', 'subtitle/asr_vosk.mjs', [CLIP, '--out', ASR, '--af', AF], 'real3_asr');
 
 // 3) 剪辑：先跑一次「无语音保护」做对照，再跑正式版（带语音保护）
 const RUN_CUT_NP = path.join(ROOT, 'History', 'runs', 'real3_cut_noprotect');
 fs.rmSync(RUN_CUT_NP, { recursive: true, force: true });
-step('剪辑-对照（不加语音保护）', 'vfactory.mjs', [CLIP, '--out', RUN_CUT_NP, '--title', '真实素材 · 中文字幕'], 'real3_cut_np');
+step('剪辑-对照（不加语音保护）', 'edit/vfactory.mjs', [CLIP, '--out', RUN_CUT_NP, '--title', '真实素材 · 中文字幕'], 'real3_cut_np');
 fs.rmSync(RUN_CUT, { recursive: true, force: true });
-step('剪辑-正式（加语音保护）', 'vfactory.mjs', [CLIP, '--out', RUN_CUT, '--title', '真实素材 · 中文字幕', '--protect', ASR], 'real3_cut');
+step('剪辑-正式（加语音保护）', 'edit/vfactory.mjs', [CLIP, '--out', RUN_CUT, '--title', '真实素材 · 中文字幕', '--protect', ASR], 'real3_cut');
 
 // 4) 字幕（句子级翻译 → 显示行）
-step(`生成字幕（MT=${MT}）`, 'make_subs.mjs', [ASR, '--out', SUBS, '--mt', MT, ...(MT === 'agent' ? ['--zh-file', ZHFILE] : []), '--glossary', path.join(ROOT, 'Tool', 'glossary_zh.json')], 'real3_subs');
+step(`生成字幕（MT=${MT}）`, 'subtitle/make_subs.mjs', [ASR, '--out', SUBS, '--mt', MT, ...(MT === 'agent' ? ['--zh-file', ZHFILE] : []), '--glossary', path.join(ROOT, 'Tool', 'subtitle', 'glossary_zh.json')], 'real3_subs');
 
 // 5) 重映射
-step('字幕时间轴重映射', 'remap_subs.mjs', [path.join(SUBS, 'cues.json'), path.join(RUN_CUT, 'edits.json'), '--out', REMAP, '--style', 'bilingual'], 'real3_remap');
+step('字幕时间轴重映射', 'subtitle/remap_subs.mjs', [path.join(SUBS, 'cues.json'), path.join(RUN_CUT, 'edits.json'), '--out', REMAP, '--style', 'bilingual'], 'real3_remap');
 
 // 6) 烧入
 fs.rmSync(RUN_SUB, { recursive: true, force: true });
-step('渲染成片（烧入双语字幕）', 'vfactory.mjs', [CLIP, '--out', RUN_SUB, '--title', '真实素材 · 中文字幕', '--protect', ASR, '--srt', path.join(REMAP, 'out_bilingual.srt')], 'real3_render');
+step('渲染成片（烧入双语字幕）', 'edit/vfactory.mjs', [CLIP, '--out', RUN_SUB, '--title', '真实素材 · 中文字幕', '--protect', ASR, '--srt', path.join(REMAP, 'out_bilingual.srt')], 'real3_render');
 
 const edlA = JSON.parse(fs.readFileSync(path.join(RUN_CUT, 'edits.json'), 'utf8'));
 const edlB = JSON.parse(fs.readFileSync(path.join(RUN_SUB, 'edits.json'), 'utf8'));
@@ -109,11 +109,11 @@ const sameKept = JSON.stringify(edlA.kept.map((k) => [k.start, k.end])) === JSON
 if (!sameKept) throw new Error('两次渲染的剪辑点不一致（EDL 漂移）');
 
 // 7) 验收 + 质检 + 时间轴图
-const ver = runNode('verify_subs.mjs', [ASR, path.join(BENCH, 'ground_truth.json'), '--cues', path.join(SUBS, 'cues.json'), '--remap', path.join(REMAP, 'remap.json'), '--json', path.join(RUN_SUB, 'verify_subs.json')], 'real3_verify');
+const ver = runNode('subtitle/verify_subs.mjs', [ASR, path.join(BENCH, 'ground_truth.json'), '--cues', path.join(SUBS, 'cues.json'), '--remap', path.join(REMAP, 'remap.json'), '--json', path.join(RUN_SUB, 'verify_subs.json')], 'real3_verify');
 console.log('\n### 字幕链路验收（reference-free）\n' + ver.text.trim().split('\n').slice(-8).join('\n'));
-const qa = runNode('qa_report.mjs', [path.join(RUN_SUB, 'final.mp4'), '--json', path.join(RUN_SUB, 'qa.json')], 'real3_qa');
+const qa = runNode('acceptance/qa_report.mjs', [path.join(RUN_SUB, 'final.mp4'), '--json', path.join(RUN_SUB, 'qa.json')], 'real3_qa');
 console.log('\n### 成片质检\n' + qa.text.trim().split('\n').slice(-6).join('\n'));
-step('决策时间轴图', 'make_timeline.mjs', [path.join(RUN_SUB, 'edits.json'), path.join(RUN_SUB, 'timeline.png'), '--label', '真实素材 · 中文字幕'], 'real3_timeline');
+step('决策时间轴图', 'edit/make_timeline.mjs', [path.join(RUN_SUB, 'edits.json'), path.join(RUN_SUB, 'timeline.png'), '--label', '真实素材 · 中文字幕'], 'real3_timeline');
 
 const verify = JSON.parse(fs.readFileSync(path.join(RUN_SUB, 'verify_subs.json'), 'utf8'));
 const qaJson = JSON.parse(fs.readFileSync(path.join(RUN_SUB, 'qa.json'), 'utf8'));

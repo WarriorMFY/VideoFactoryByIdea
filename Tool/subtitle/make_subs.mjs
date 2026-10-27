@@ -17,7 +17,7 @@
  */
 import fs from 'node:fs';
 import path from 'node:path';
-import { ROOT } from './lib/ff.mjs';
+import { ROOT } from '../lib/ff.mjs';
 
 const args = process.argv.slice(2);
 if (!args[0]) { console.error('用法: node Tool/make_subs.mjs <transcript.json> --out <dir> [--mt mymemory|agent|none]'); process.exit(2); }

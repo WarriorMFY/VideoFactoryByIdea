@@ -12,7 +12,7 @@
  */
 import fs from 'node:fs';
 import path from 'node:path';
-import { ffmpeg, ffprobeJson, durationOf, ROOT } from './lib/ff.mjs';
+import { ffmpeg, ffprobeJson, durationOf, ROOT } from '../lib/ff.mjs';
 
 const args = process.argv.slice(2);
 const file = args[0];

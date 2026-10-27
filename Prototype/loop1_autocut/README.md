@@ -15,8 +15,8 @@
 | A 合成素材（7 段，含各种病态段） | 42.00s → 31.62s | 10.00s | 10.00s | **0s** | **0s** | **1.000** | 0s | 1280×720 H.264 High / AAC −15.9 LUFS |
 | B 真实素材（Big Buck Bunny CC-BY 3.0 + 已知废镜头） | 17.00s → 9.63s | 7.00s | 6.98s | **0s** | 0.017s | **0.998** | 0.017s | 1280×720 H.264 High / 2 段带 0.4s 交叉淡化 |
 
-> 判据是脚本算出来的，不是目测：`Tool/verify_edl.mjs`（决策对错）+ `Tool/qa_report.mjs`（成片合不合格）。
-> 一键复跑全部结论：`node Tool/run_acceptance.mjs`，记录写进 `History/loops/loop01/acceptance.md`。
+> 判据是脚本算出来的，不是目测：`Tool/acceptance/verify_edl.mjs`（决策对错）+ `Tool/acceptance/qa_report.mjs`（成片合不合格）。
+> 一键复跑全部结论：`node Tool/acceptance/run_acceptance.mjs`，记录写进 `History/loops/loop01/acceptance.md`。
 
 ---
 
@@ -70,10 +70,10 @@
 
 ```powershell
 # 0) 首次准备（本机网络只有 Node 能出网，故用 Node 下载 ffmpeg 到 Workspace）
-node Tool\bootstrap_ffmpeg.mjs
+node Tool\setup/bootstrap_ffmpeg.mjs
 
 # 1) 剪一条片子
-node Tool\vfactory.mjs "D:\videos\原片.mp4" --out out\我的片子 --title "我的片子"
+node Tool\edit/vfactory.mjs "D:\videos\原片.mp4" --out out\我的片子 --title "我的片子"
 
 # 常用选项
 #   --title "…"        片头标题（中文用 SimHei，自动淡入淡出）
@@ -84,11 +84,11 @@ node Tool\vfactory.mjs "D:\videos\原片.mp4" --out out\我的片子 --title "�
 #   --max-cut 60       切除比例上限（超过则放弃自动剪切，避免把片子剪空）
 
 # 2) 只看决策对不对 / 成片合不合格
-node Tool\verify_edl.mjs out\我的片子\edits.json <真值.json>
-node Tool\qa_report.mjs  out\我的片子\final.mp4
+node Tool\acceptance/verify_edl.mjs out\我的片子\edits.json <真值.json>
+node Tool\acceptance/qa_report.mjs  out\我的片子\final.mp4
 
 # 3) 决策时间轴图
-node Tool\make_timeline.mjs out\我的片子\edits.json out\我的片子\timeline.png
+node Tool\edit/make_timeline.mjs out\我的片子\edits.json out\我的片子\timeline.png
 ```
 
 ---
