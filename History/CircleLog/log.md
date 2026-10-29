@@ -14,7 +14,7 @@
 | 已完成小循环 | **1 ✅（13:33–13:55，自动剪辑）· 2 ✅（13:56–15:10，外语→中文字幕）· 3 ✅（15:40–17:20，真实素材验证 + 语音保护）· 4 ✅（21:25–22:20，多样本英译中测试）· 5 ✅（08:55–10:05 交付，10:20–11:30 按反馈修抖动 v2）** |
 | 当前等待 | **人对小循环 5 的人工反馈**（`Prototype/loop5_karaoke_subs/`）；未回复则挂起，不开下一轮 |
 | 代码/仓库状态 | git 干净；分支 `main`；共 10+ 次提交；无未跟踪残留（视频按 `.gitignore` 不入库，本地保留） |
-| 远端 | `origin` = https://github.com/WarriorMFY/VideoFactoryByIdea.git（公开，默认分支 main）。**已推送**：`main` 与远端一致（无 ahead/behind）。坑：git 默认 Schannel 握手失败 → 本仓库固定 `http.sslBackend=openssl`；凭据助手经 `sh.exe` 被沙箱拒 → 用 GCM 直取凭据 + `http.extraheader`。详见 `Tool/env.md` 第〇节。后续只在人明确要求时再推 |
+| 远端 | `origin` = https://github.com/WarriorMFY/VideoFactoryByIdea.git（公开，默认分支 main）。**已推送**（2026-10-29 11:40，HEAD `395adfb`）：`main` 与远端一致（0/0），GitHub API 独立确认远端正 HEAD 同提交。坑：git 默认 Schannel 握手失败 → 本仓库固定 `http.sslBackend=openssl`；凭据助手经 `sh.exe` 被沙箱拒 → 用 GCM 直取凭据 + `http.extraheader`。详见 `Tool/env.md` 第〇节。后续只在人明确要求时再推 |
 | 可交付能力 | 自动删减成片（真值验证 IoU 1.000/0.998，误删 0s）· 外语→中文字幕（TTS 素材 WER 6.1%、覆盖 99.8%）· 真实素材上**对白不会被剪**（语音保护） |
 | 已知最大短板 | **真实影视混音下识别不可靠**：小循环 4 用官方字幕作真值实测 **WER 30.5% / 语音覆盖 59.9%**，漏掉的几乎全是 1–3 词短句（覆盖仅 24%）；lgraph 128MB 大模型实测更差 → 需要 Whisper 类模型，而本机 HF/ModelScope 全域不可达 |
 | 其它短板 | 机翻只到"能看懂"（vs 精译 62.9% 字相似度）· ASR 无标点导致断句/串句 · 语音保护会连带保住"对白压黑屏" · GUI 剪辑软件本机装不上（沙箱只可写工作区） |
