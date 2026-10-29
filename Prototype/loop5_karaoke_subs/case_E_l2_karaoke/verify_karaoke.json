@@ -1,0 +1,131 @@
+{
+  "checked_at": "2026-10-29T01:20:10.607Z",
+  "video": "D:\\Data\\DeepseekHarness\\IdeaDrivenLoop\\VideoFactory\\History\\runs\\karaoke_l2\\final.mp4",
+  "ass": "D:\\Data\\DeepseekHarness\\IdeaDrivenLoop\\VideoFactory\\History\\subs\\karaoke\\l2.ass",
+  "highlight": "33E6C8",
+  "events_total": 101,
+  "sampled": 12,
+  "checks": {
+    "highlight_present": true,
+    "single_block_per_frame": true,
+    "highlight_moves": true
+  },
+  "metrics": {
+    "frames": 12,
+    "frames_with_highlight": 12,
+    "frames_single_block": 12,
+    "centroid_spread_px": 544,
+    "avg_highlight_pixels": 590.7
+  },
+  "samples": [
+    {
+      "i": 0,
+      "t": 0.9,
+      "text": "welcome back to the workshop where return raw ",
+      "pixels": 942,
+      "blocks": 1,
+      "bboxW": 146,
+      "centroidX": 752.5
+    },
+    {
+      "i": 1,
+      "t": 2.755,
+      "text": "welcome back to the workshop where return raw ",
+      "pixels": 761,
+      "blocks": 1,
+      "bboxW": 112,
+      "centroidX": 579.2
+    },
+    {
+      "i": 2,
+      "t": 5.395,
+      "text": "today i will show you three simple tricks that",
+      "pixels": 328,
+      "blocks": 1,
+      "bboxW": 51,
+      "centroidX": 669.5
+    },
+    {
+      "i": 3,
+      "t": 7.72,
+      "text": "today i will show you three simple tricks that",
+      "pixels": 493,
+      "blocks": 1,
+      "bboxW": 83,
+      "centroidX": 820.9
+    },
+    {
+      "i": 4,
+      "t": 10.48,
+      "text": "first always cut on the beat because rhythm is",
+      "pixels": 319,
+      "blocks": 1,
+      "bboxW": 43,
+      "centroidX": 677.3
+    },
+    {
+      "i": 5,
+      "t": 12.715,
+      "text": "first always cut on the beat because rhythm is",
+      "pixels": 836,
+      "blocks": 1,
+      "bboxW": 135,
+      "centroidX": 783.7
+    },
+    {
+      "i": 6,
+      "t": 16.195,
+      "text": "second remove the silent gaps longer than half",
+      "pixels": 420,
+      "blocks": 1,
+      "bboxW": 63,
+      "centroidX": 365.3
+    },
+    {
+      "i": 7,
+      "t": 18.225,
+      "text": "second remove the silent gaps longer than half",
+      "pixels": 592,
+      "blocks": 1,
+      "bboxW": 91,
+      "centroidX": 639.2
+    },
+    {
+      "i": 8,
+      "t": 21.49,
+      "text": "third normalize the audio to minus sixty sixte",
+      "pixels": 642,
+      "blocks": 1,
+      "bboxW": 105,
+      "centroidX": 403
+    },
+    {
+      "i": 9,
+      "t": 23.845,
+      "text": "third normalize the audio to minus sixty sixte",
+      "pixels": 251,
+      "blocks": 1,
+      "bboxW": 39,
+      "centroidX": 909.3
+    },
+    {
+      "i": 10,
+      "t": 28.03,
+      "text": "finally export at fifteen megabits per second ",
+      "pixels": 949,
+      "blocks": 1,
+      "bboxW": 137,
+      "centroidX": 787
+    },
+    {
+      "i": 11,
+      "t": 30.555,
+      "text": "finally export at fifteen megabits per second ",
+      "pixels": 555,
+      "blocks": 1,
+      "bboxW": 95,
+      "centroidX": 884.1
+    }
+  ],
+  "verdict": "PASS"
+}

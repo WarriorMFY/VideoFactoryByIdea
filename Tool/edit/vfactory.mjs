@@ -364,19 +364,35 @@ function polish(mergedFile, outFile, hasAudio, totalDur) {
     const font = hasFilter('drawtext', path.join(LOGDIR, 'filters.log')) ? 'SimHei' : 'Arial';
     const esc = OPT.title.replace(/\\/g, '\\\\').replace(/:/g, '\\:').replace(/'/g, "\\'").replace(/,/g, '\\,').replace(/%/g, '\\%');
     const alpha = "if(lt(t,0.6),t/0.6,if(lt(t,3.4),1,max(0,(4.0-t)/0.6)))";
-    vf.push(`drawtext=font=${font}:text='${esc}':fontsize=${Math.round(H * 0.072)}:fontcolor=white:shadowcolor=black@0.7:shadowx=2:shadowy=2:box=1:boxcolor=black@0.45:boxborderw=22:alpha='${alpha}':x=(w-text_w)/2:y=h*0.74:enable='between(t,0.2,4.0)'`);
+    // 标题位置：有字幕时放顶部，避免压住字幕（实测 y=h*0.74 会与底部字幕重叠）；无字幕时放下方留白处。
+    const titleY = OPT.srt ? 'h*0.10' : 'h*0.74';
+    vf.push(`drawtext=font=${font}:text='${esc}':fontsize=${Math.round(H * 0.072)}:fontcolor=white:shadowcolor=black@0.7:shadowx=2:shadowy=2:box=1:boxcolor=black@0.45:boxborderw=22:alpha='${alpha}':x=(w-text_w)/2:y=${titleY}:enable='between(t,0.2,4.0)'`);
   }
   // 空/无字幕的 SRT 会让 libass 直接报 "Unable to open ...srt" 并让整条渲染失败
   // （实测：素材只有 1 个噪声词时，重映射把唯一一行丢掉 → 0 字节 SRT）。所以先判空再拼滤镜。
-  const srtOk = OPT.srt && fs.existsSync(OPT.srt) && fs.statSync(OPT.srt).size > 0 && /\d+\s*\r?\n\d+:\d+:\d+/.test(fs.readFileSync(OPT.srt, 'utf8'));
+  // ASS 走另一套校验（[Events] + Dialogue 行），不能用 SRT 的编号/时间格式判断，否则合法 ASS 会被误判跳过。
+  const isAss = /\.ass$/i.test(OPT.srt || '');
+  let srtOk = false;
+  if (OPT.srt && fs.existsSync(OPT.srt) && fs.statSync(OPT.srt).size > 0) {
+    const txt = fs.readFileSync(OPT.srt, 'utf8');
+    srtOk = isAss
+      ? /\[Events\]/i.test(txt) && /^Dialogue:/m.test(txt)
+      : /\d+\s*\r?\n\d+:\d+:\d+/.test(txt);
+  }
   if (OPT.srt && !srtOk) {
-    console.log(`[warn] 字幕文件为空或不是合法 SRT，跳过烧入：${OPT.srt}`);
+    console.log(`[warn] 字幕文件为空或格式不合法（SRT/ASS），跳过烧入：${OPT.srt}`);
   }
   if (srtOk) {
     const p = OPT.srt.replace(/\\/g, '/').replace(/:/g, '\\:');
-    // FontName 必须指定含 CJK 的字体（否则中文变方块）；Fontsize 以 libass 默认 PlayResY=288 为基准。
-    const fs2 = bilingualSrt(OPT.srt) ? 15 : 20;
-    vf.push(`subtitles='${p}':force_style='FontName=SimHei,Fontsize=${fs2},PrimaryColour=&H00FFFFFF,OutlineColour=&H80000000,BorderStyle=1,Outline=1.2,Shadow=0.6,MarginV=18,Alignment=2'`);
+    if (/\.ass$/i.test(OPT.srt)) {
+      // ASS 自带完整样式（字体/字号/颜色/描边/位置/逐词高亮），不要再叠 force_style，
+      // 否则会把 karaoke 的颜色和排版覆盖掉。fontsdir 指向系统字体目录，保证 SimHei/Arial 可解析。
+      vf.push(`subtitles='${p}'`);
+    } else {
+      // SRT：FontName 必须指定含 CJK 的字体（否则中文变方块）；Fontsize 以 libass 默认 PlayResY=288 为基准。
+      const fs2 = bilingualSrt(OPT.srt) ? 15 : 20;
+      vf.push(`subtitles='${p}':force_style='FontName=SimHei,Fontsize=${fs2},PrimaryColour=&H00FFFFFF,OutlineColour=&H80000000,BorderStyle=1,Outline=1.2,Shadow=0.6,MarginV=18,Alignment=2'`);
+    }
   }
   vf.push(`fade=t=in:st=0:d=0.5`);
   vf.push(`fade=t=out:st=${r2(fadeOutStart)}:d=0.8`);

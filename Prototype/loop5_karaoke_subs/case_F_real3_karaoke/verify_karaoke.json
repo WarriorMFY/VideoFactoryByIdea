@@ -1,0 +1,131 @@
+{
+  "checked_at": "2026-10-29T01:20:26.742Z",
+  "video": "D:\\Data\\DeepseekHarness\\IdeaDrivenLoop\\VideoFactory\\History\\runs\\karaoke_real3\\final.mp4",
+  "ass": "D:\\Data\\DeepseekHarness\\IdeaDrivenLoop\\VideoFactory\\History\\subs\\karaoke\\real3.ass",
+  "highlight": "33E6C8",
+  "events_total": 25,
+  "sampled": 12,
+  "checks": {
+    "highlight_present": true,
+    "single_block_per_frame": true,
+    "highlight_moves": true
+  },
+  "metrics": {
+    "frames": 12,
+    "frames_with_highlight": 12,
+    "frames_single_block": 12,
+    "centroid_spread_px": 414.2,
+    "avg_highlight_pixels": 522
+  },
+  "samples": [
+    {
+      "i": 0,
+      "t": 8.85,
+      "text": "what brings you to the land of the gatekeepers",
+      "pixels": 479,
+      "blocks": 1,
+      "bboxW": 69,
+      "centroidX": 419.3
+    },
+    {
+      "i": 1,
+      "t": 9.36,
+      "text": "what brings you to the land of the gatekeepers",
+      "pixels": 337,
+      "blocks": 1,
+      "bboxW": 51,
+      "centroidX": 598.7
+    },
+    {
+      "i": 2,
+      "t": 9.6,
+      "text": "what brings you to the land of the gatekeepers",
+      "pixels": 321,
+      "blocks": 1,
+      "bboxW": 45,
+      "centroidX": 700.2
+    },
+    {
+      "i": 3,
+      "t": 10.11,
+      "text": "what brings you to the land of the gatekeepers",
+      "pixels": 198,
+      "blocks": 1,
+      "bboxW": 27,
+      "centroidX": 825
+    },
+    {
+      "i": 4,
+      "t": 10.61,
+      "text": "what brings you to the land of the gatekeepers",
+      "pixels": 1277,
+      "blocks": 1,
+      "bboxW": 183,
+      "centroidX": 635.8
+    },
+    {
+      "i": 5,
+      "t": 13.965,
+      "text": "i'm searching for",
+      "pixels": 864,
+      "blocks": 1,
+      "bboxW": 145,
+      "centroidX": 643.1
+    },
+    {
+      "i": 6,
+      "t": 31.73,
+      "text": "dangerous quest for a number two",
+      "pixels": 1029,
+      "blocks": 1,
+      "bboxW": 159,
+      "centroidX": 453.4
+    },
+    {
+      "i": 7,
+      "t": 32.54,
+      "text": "dangerous quest for a number two",
+      "pixels": 261,
+      "blocks": 1,
+      "bboxW": 38,
+      "centroidX": 662.2
+    },
+    {
+      "i": 8,
+      "t": 32.895,
+      "text": "dangerous quest for a number two",
+      "pixels": 676,
+      "blocks": 1,
+      "bboxW": 113,
+      "centroidX": 784.5
+    },
+    {
+      "i": 9,
+      "t": 36.545,
+      "text": "you don't long as i can remember",
+      "pixels": 332,
+      "blocks": 1,
+      "bboxW": 51,
+      "centroidX": 410.8
+    },
+    {
+      "i": 10,
+      "t": 37.325,
+      "text": "you don't long as i can remember",
+      "pixels": 442,
+      "blocks": 1,
+      "bboxW": 61,
+      "centroidX": 574.3
+    },
+    {
+      "i": 11,
+      "t": 37.595,
+      "text": "you don't long as i can remember",
+      "pixels": 48,
+      "blocks": 1,
+      "bboxW": 2,
+      "centroidX": 662.1
+    }
+  ],
+  "verdict": "PASS"
+}

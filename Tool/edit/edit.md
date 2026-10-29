@@ -18,8 +18,8 @@ node Tool\edit\vfactory.mjs <源视频> --out <目录> [选项]
 
 | 选项 | 默认 | 含义 |
 | --- | --- | --- |
-| `--title "…"` | 空 | 片头标题（中文用 SimHei，0.2–4.0s 淡入淡出） |
-| `--srt file.srt` | 空 | 烧入字幕（libass；自动识别双语并缩小字号） |
+| `--title "…"` | 空 | 片头标题（中文用 SimHei，0.2–4.0s 淡入淡出；**有字幕时自动放顶部**，避免压住字幕） |
+| `--srt file` | 空 | 烧入字幕（libass）。SRT：自动识别双语→缩小字号；**`.ass`：不叠 `force_style`**，保留 ASS 自带样式与逐词高亮（见 `subtitle/make_ass.mjs`） |
 | `--protect tr.json` | 空 | **语音保护**：ASR 识别到语音的区间一律不剪（真实素材必备） |
 | `--protect-pad` / `--protect-conf` | 0.25s / 0.5 | 语音区间余量 / 只采信置信度≥该值的词 |
 | `--black-pix` / `--black-pic` / `--black-dur` | 0.04 / 0.98 / 0.30 | 黑场判定（默认值已在真实影视素材上校准） |
