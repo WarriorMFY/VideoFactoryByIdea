@@ -19,3 +19,8 @@ Prototype/**/*.mp4
 Thumbs.db
 desktop.ini
 *.tmp
+
+# 诊断工具的临时工作目录（每次运行重生成）
+.flicker_diag/
+.karaoke_verify/
+.asr_work/
