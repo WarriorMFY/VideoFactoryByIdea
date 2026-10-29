@@ -1,0 +1,169 @@
+{
+  "checked_at": "2026-10-29T01:58:26.328Z",
+  "video": "D:\\Data\\DeepseekHarness\\IdeaDrivenLoop\\VideoFactory\\History\\runs\\karaoke_l2\\final.mp4",
+  "ass": "D:\\Data\\DeepseekHarness\\IdeaDrivenLoop\\VideoFactory\\History\\subs\\karaoke\\l2.ass",
+  "hl": "33E6C8",
+  "mode": "subtitle-only",
+  "window": {
+    "start": 0,
+    "end": 33.88,
+    "frames": 1016,
+    "fps": 30
+  },
+  "criteria": {
+    "hide_threshold_px": 25,
+    "median_white_px": 1642,
+    "min_consecutive_frames": 2,
+    "y_jump_px": 4
+  },
+  "metrics": {
+    "frames": 956,
+    "hidden_frames": 0,
+    "hidden_runs": [],
+    "hidden_multi": 0,
+    "hl_zero_frames": 0,
+    "hl_zero_runs": [],
+    "hl_multi": 0,
+    "y_jumps": 4,
+    "max_y_jump": 18,
+    "jump_log": [
+      {
+        "t": 4.43,
+        "from": 45,
+        "to": 27,
+        "d": 18
+      },
+      {
+        "t": 9.13,
+        "from": 27,
+        "to": 45,
+        "d": 18
+      },
+      {
+        "t": 13.77,
+        "from": 45,
+        "to": 27,
+        "d": 18
+      },
+      {
+        "t": 25.97,
+        "from": 27,
+        "to": 45,
+        "d": 18
+      }
+    ]
+  },
+  "pass": {
+    "no_blink": true,
+    "no_hl_missing": true,
+    "no_position_jump": true
+  },
+  "per_sentence": [
+    {
+      "idx": 0,
+      "start": 0.03,
+      "end": 4.08,
+      "frames": 122,
+      "hidden_frames": 0,
+      "hidden_runs": [],
+      "hidden_multi": 0,
+      "hl_zero_frames": 0,
+      "hl_zero_runs": [],
+      "hl_multi": 0,
+      "y_jumps": 0,
+      "max_y_jump": 0,
+      "jump_log": []
+    },
+    {
+      "idx": 1,
+      "start": 4.41,
+      "end": 8.79,
+      "frames": 131,
+      "hidden_frames": 0,
+      "hidden_runs": [],
+      "hidden_multi": 0,
+      "hl_zero_frames": 0,
+      "hl_zero_runs": [],
+      "hl_multi": 0,
+      "y_jumps": 0,
+      "max_y_jump": 0,
+      "jump_log": []
+    },
+    {
+      "idx": 2,
+      "start": 9.12,
+      "end": 13.41,
+      "frames": 129,
+      "hidden_frames": 0,
+      "hidden_runs": [],
+      "hidden_multi": 0,
+      "hl_zero_frames": 0,
+      "hl_zero_runs": [],
+      "hl_multi": 0,
+      "y_jumps": 0,
+      "max_y_jump": 0,
+      "jump_log": []
+    },
+    {
+      "idx": 3,
+      "start": 13.74,
+      "end": 18.48,
+      "frames": 142,
+      "hidden_frames": 0,
+      "hidden_runs": [],
+      "hidden_multi": 0,
+      "hl_zero_frames": 0,
+      "hl_zero_runs": [],
+      "hl_multi": 0,
+      "y_jumps": 0,
+      "max_y_jump": 0,
+      "jump_log": []
+    },
+    {
+      "idx": 4,
+      "start": 18.78,
+      "end": 25.62,
+      "frames": 205,
+      "hidden_frames": 0,
+      "hidden_runs": [],
+      "hidden_multi": 0,
+      "hl_zero_frames": 0,
+      "hl_zero_runs": [],
+      "hl_multi": 0,
+      "y_jumps": 0,
+      "max_y_jump": 2,
+      "jump_log": []
+    },
+    {
+      "idx": 5,
+      "start": 25.95,
+      "end": 30.78,
+      "frames": 145,
+      "hidden_frames": 0,
+      "hidden_runs": [],
+      "hidden_multi": 0,
+      "hl_zero_frames": 0,
+      "hl_zero_runs": [],
+      "hl_multi": 0,
+      "y_jumps": 0,
+      "max_y_jump": 1,
+      "jump_log": []
+    },
+    {
+      "idx": 6,
+      "start": 31.11,
+      "end": 33.84,
+      "frames": 82,
+      "hidden_frames": 0,
+      "hidden_runs": [],
+      "hidden_multi": 0,
+      "hl_zero_frames": 0,
+      "hl_zero_runs": [],
+      "hl_multi": 0,
+      "y_jumps": 0,
+      "max_y_jump": 0,
+      "jump_log": []
+    }
+  ],
+  "verdict": "PASS"
+}

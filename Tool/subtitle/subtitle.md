@@ -56,6 +56,9 @@ node Tool\acceptance\verify_karaoke.mjs out\final.mp4 work\karaoke.ass --hl 33E6
 | `make_ass --zh-size/--en-size` | 40 / 36 | 中英字号（PlayRes 与成片一致时即像素级） |
 | `make_ass --wrap-zh/--wrap-en` | 14 / 40 | 单行换行宽度（WrapStyle=2 关闭自动换行，全靠这里） |
 | `make_ass --style` | bilingual | `bilingual` / `en` / `zh` |
+| `make_ass --zh-margin-mode` | fixed | `fixed`＝中文位置全片统一（**不抖**）；`dynamic`＝按每句英文行数贴合 |
+| `make_ass --merge-word` | 0.18s | 短于该时长的词并入**同一行**相邻 tile 一起高亮（防高频跳色）；0＝关闭 |
+| `make_ass --hold-tail` / `--min-show` | 0.25s / 0.067s | 句末词最多延长多久 / 句末事件最短显示 |
 
 ## 坑
 
@@ -82,3 +85,17 @@ node Tool\acceptance\verify_karaoke.mjs out\final.mp4 work\karaoke.ass --hl 33E6
   （`26 + 行数×字号×1.3 + 14`），否则英文两行时会把中文压住。
 - **`vfactory` 的 ASS 校验**：早期只认 SRT（正则匹配"编号+时间"），合法 ASS 会被误判跳过；现在按扩展名分别校验。
 - **ASS 不要再叠 `force_style`**：ASS 自带样式，`vfactory` 对 `.ass` 走纯净滤镜（否则 karaoke 颜色/排版被覆盖）。
+
+## karaoke 抖动的三个真根因（2026-10-29 反馈后修）
+
+第一版交付后反馈"字幕频繁抖动"。用 `acceptance/diagnose_flicker.mjs` 逐帧量化，定位到三处，全部修掉：
+
+| 现象 | 根因 | 修法 |
+| --- | --- | --- |
+| 英文行**整行消失几帧再出现**（闪断 30 帧/16 组） | 词事件按 `[word.start, word.end]` 各自铺，词与词之间空档（可达 0.2s）**没有任何事件覆盖** | 每个 tile **无缝延伸到下一个 tile 开始**；空档期间保持上一个词高亮 |
+| **高亮像没亮**（缺失 80 帧/37 组） | 单/双字母词（ASR 把 LUFS 听成 `l u f s`）高亮像素只有个位数，且 0.06–0.1s 就换色 | 过短词（<0.18s）与**同一行内**相邻词合并成一个 tile；单双字母强制合并（**不跨行**，跨行合并会"行尾词+下一行行首词"同时亮，观感更差） |
+| 跨句**整块上下跳**（45 次，最大 55px） | 中文 `MarginV` 按每句英文行数动态算，行数不同就跳 | 中文位置改**全片固定**（`--zh-margin-mode fixed`，按最大行数算一次） |
+
+诊断口径（也踩过坑，写进脚本注释）：必须**把 ASS 烧到纯黑底**上测（否则 BBB 草地/白云会被当白字，误报 29 帧闪断）；
+"应显示"区间要用**中文整句**而不是英文事件并集（否则正好漏掉词间空档）；
+位置判据要用**文字块上下边界**而不是白字质心（质心随上色词漂移，误报 14–18px）。

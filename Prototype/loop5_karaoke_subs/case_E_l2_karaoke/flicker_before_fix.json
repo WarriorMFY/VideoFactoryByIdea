@@ -1,0 +1,507 @@
+{
+  "checked_at": "2026-10-29T01:56:35.855Z",
+  "video": "D:\\Data\\DeepseekHarness\\IdeaDrivenLoop\\VideoFactory\\History\\runs\\karaoke_l2\\final.mp4",
+  "ass": "C:\\Users\\59784\\AppData\\Local\\Temp\\dsh-GvJG5f\\old_karaoke.ass",
+  "hl": "33E6C8",
+  "mode": "subtitle-only",
+  "window": {
+    "start": 0,
+    "end": 33.88,
+    "frames": 1016,
+    "fps": 30
+  },
+  "criteria": {
+    "hide_threshold_px": 25,
+    "median_white_px": 1813,
+    "min_consecutive_frames": 2,
+    "y_jump_px": 4
+  },
+  "metrics": {
+    "frames": 956,
+    "hidden_frames": 30,
+    "hidden_runs": [
+      1,
+      1,
+      1,
+      1,
+      3,
+      1,
+      1,
+      1,
+      1,
+      6,
+      1,
+      1,
+      1,
+      8,
+      1,
+      1
+    ],
+    "hidden_multi": 3,
+    "hl_zero_frames": 80,
+    "hl_zero_runs": [
+      1,
+      6,
+      1,
+      1,
+      1,
+      3,
+      1,
+      1,
+      1,
+      1,
+      3,
+      1,
+      1,
+      6,
+      1,
+      3,
+      1,
+      1,
+      1,
+      1,
+      6,
+      1,
+      7,
+      8,
+      1,
+      1,
+      3,
+      1,
+      1,
+      4,
+      1,
+      1,
+      3,
+      1,
+      3,
+      1,
+      1
+    ],
+    "hl_multi": 12,
+    "y_jumps": 45,
+    "max_y_jump": 55,
+    "jump_log": [
+      {
+        "t": 0.8,
+        "from": 0,
+        "to": 0,
+        "d": 55
+      },
+      {
+        "t": 0.83,
+        "from": 0,
+        "to": 0,
+        "d": 55
+      },
+      {
+        "t": 1.53,
+        "from": 0,
+        "to": 0,
+        "d": 55
+      },
+      {
+        "t": 1.73,
+        "from": 0,
+        "to": 0,
+        "d": 55
+      },
+      {
+        "t": 2.3,
+        "from": 0,
+        "to": 0,
+        "d": 55
+      },
+      {
+        "t": 2.33,
+        "from": 0,
+        "to": 0,
+        "d": 55
+      },
+      {
+        "t": 2.97,
+        "from": 0,
+        "to": 0,
+        "d": 55
+      },
+      {
+        "t": 3,
+        "from": 0,
+        "to": 0,
+        "d": 55
+      }
+    ]
+  },
+  "pass": {
+    "no_blink": false,
+    "no_hl_missing": false,
+    "no_position_jump": false
+  },
+  "per_sentence": [
+    {
+      "idx": 0,
+      "start": 0.03,
+      "end": 4.08,
+      "frames": 122,
+      "hidden_frames": 0,
+      "hidden_runs": [],
+      "hidden_multi": 0,
+      "hl_zero_frames": 10,
+      "hl_zero_runs": [
+        1,
+        6,
+        1,
+        1,
+        1
+      ],
+      "hl_multi": 1,
+      "y_jumps": 10,
+      "max_y_jump": 55,
+      "jump_log": [
+        {
+          "t": 0.8,
+          "from": 0,
+          "to": 0,
+          "d": 55
+        },
+        {
+          "t": 0.83,
+          "from": 0,
+          "to": 0,
+          "d": 55
+        },
+        {
+          "t": 1.53,
+          "from": 0,
+          "to": 0,
+          "d": 55
+        },
+        {
+          "t": 1.73,
+          "from": 0,
+          "to": 0,
+          "d": 55
+        },
+        {
+          "t": 2.3,
+          "from": 0,
+          "to": 0,
+          "d": 55
+        },
+        {
+          "t": 2.33,
+          "from": 0,
+          "to": 0,
+          "d": 55
+        },
+        {
+          "t": 2.97,
+          "from": 0,
+          "to": 0,
+          "d": 55
+        },
+        {
+          "t": 3,
+          "from": 0,
+          "to": 0,
+          "d": 55
+        }
+      ]
+    },
+    {
+      "idx": 1,
+      "start": 4.41,
+      "end": 8.79,
+      "frames": 131,
+      "hidden_frames": 4,
+      "hidden_runs": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "hidden_multi": 0,
+      "hl_zero_frames": 7,
+      "hl_zero_runs": [
+        3,
+        1,
+        1,
+        1,
+        1
+      ],
+      "hl_multi": 1,
+      "y_jumps": 0,
+      "max_y_jump": 0,
+      "jump_log": []
+    },
+    {
+      "idx": 2,
+      "start": 9.12,
+      "end": 13.41,
+      "frames": 129,
+      "hidden_frames": 0,
+      "hidden_runs": [],
+      "hidden_multi": 0,
+      "hl_zero_frames": 12,
+      "hl_zero_runs": [
+        3,
+        1,
+        1,
+        6,
+        1
+      ],
+      "hl_multi": 2,
+      "y_jumps": 10,
+      "max_y_jump": 55,
+      "jump_log": [
+        {
+          "t": 9.6,
+          "from": 0,
+          "to": 0,
+          "d": 55
+        },
+        {
+          "t": 9.7,
+          "from": 0,
+          "to": 0,
+          "d": 55
+        },
+        {
+          "t": 10.1,
+          "from": 0,
+          "to": 0,
+          "d": 55
+        },
+        {
+          "t": 10.13,
+          "from": 0,
+          "to": 0,
+          "d": 55
+        },
+        {
+          "t": 10.43,
+          "from": 0,
+          "to": 0,
+          "d": 55
+        },
+        {
+          "t": 10.47,
+          "from": 0,
+          "to": 0,
+          "d": 55
+        },
+        {
+          "t": 10.9,
+          "from": 0,
+          "to": 0,
+          "d": 55
+        },
+        {
+          "t": 11.1,
+          "from": 0,
+          "to": 0,
+          "d": 55
+        }
+      ]
+    },
+    {
+      "idx": 3,
+      "start": 13.74,
+      "end": 18.48,
+      "frames": 142,
+      "hidden_frames": 7,
+      "hidden_runs": [
+        3,
+        1,
+        1,
+        1,
+        1
+      ],
+      "hidden_multi": 1,
+      "hl_zero_frames": 7,
+      "hl_zero_runs": [
+        3,
+        1,
+        1,
+        1,
+        1
+      ],
+      "hl_multi": 1,
+      "y_jumps": 0,
+      "max_y_jump": 0,
+      "jump_log": []
+    },
+    {
+      "idx": 4,
+      "start": 18.78,
+      "end": 25.62,
+      "frames": 205,
+      "hidden_frames": 19,
+      "hidden_runs": [
+        6,
+        1,
+        1,
+        1,
+        8,
+        1,
+        1
+      ],
+      "hidden_multi": 2,
+      "hl_zero_frames": 24,
+      "hl_zero_runs": [
+        6,
+        1,
+        7,
+        8,
+        1,
+        1
+      ],
+      "hl_multi": 3,
+      "y_jumps": 0,
+      "max_y_jump": 2,
+      "jump_log": []
+    },
+    {
+      "idx": 5,
+      "start": 25.95,
+      "end": 30.78,
+      "frames": 145,
+      "hidden_frames": 0,
+      "hidden_runs": [],
+      "hidden_multi": 0,
+      "hl_zero_frames": 9,
+      "hl_zero_runs": [
+        3,
+        1,
+        1,
+        4
+      ],
+      "hl_multi": 2,
+      "y_jumps": 8,
+      "max_y_jump": 51,
+      "jump_log": [
+        {
+          "t": 26.57,
+          "from": 0,
+          "to": 0,
+          "d": 51
+        },
+        {
+          "t": 26.67,
+          "from": 0,
+          "to": 0,
+          "d": 51
+        },
+        {
+          "t": 27.27,
+          "from": 0,
+          "to": 0,
+          "d": 51
+        },
+        {
+          "t": 27.3,
+          "from": 0,
+          "to": 0,
+          "d": 51
+        },
+        {
+          "t": 28.43,
+          "from": 0,
+          "to": 0,
+          "d": 51
+        },
+        {
+          "t": 28.47,
+          "from": 0,
+          "to": 0,
+          "d": 51
+        },
+        {
+          "t": 28.93,
+          "from": 0,
+          "to": 0,
+          "d": 51
+        },
+        {
+          "t": 29.07,
+          "from": 0,
+          "to": 0,
+          "d": 51
+        }
+      ]
+    },
+    {
+      "idx": 6,
+      "start": 31.11,
+      "end": 33.84,
+      "frames": 82,
+      "hidden_frames": 0,
+      "hidden_runs": [],
+      "hidden_multi": 0,
+      "hl_zero_frames": 11,
+      "hl_zero_runs": [
+        1,
+        1,
+        3,
+        1,
+        3,
+        1,
+        1
+      ],
+      "hl_multi": 2,
+      "y_jumps": 12,
+      "max_y_jump": 51,
+      "jump_log": [
+        {
+          "t": 31.4,
+          "from": 5,
+          "to": 5,
+          "d": 51
+        },
+        {
+          "t": 31.43,
+          "from": 5,
+          "to": 5,
+          "d": 51
+        },
+        {
+          "t": 31.77,
+          "from": 5,
+          "to": 5,
+          "d": 51
+        },
+        {
+          "t": 31.8,
+          "from": 5,
+          "to": 5,
+          "d": 51
+        },
+        {
+          "t": 32.6,
+          "from": 5,
+          "to": 5,
+          "d": 51
+        },
+        {
+          "t": 32.7,
+          "from": 5,
+          "to": 5,
+          "d": 51
+        },
+        {
+          "t": 32.93,
+          "from": 5,
+          "to": 5,
+          "d": 51
+        },
+        {
+          "t": 32.97,
+          "from": 5,
+          "to": 5,
+          "d": 51
+        }
+      ]
+    }
+  ],
+  "verdict": "FAIL"
+}

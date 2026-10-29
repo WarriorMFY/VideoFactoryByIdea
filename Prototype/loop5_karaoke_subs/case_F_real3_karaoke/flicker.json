@@ -1,0 +1,106 @@
+{
+  "checked_at": "2026-10-29T01:56:40.361Z",
+  "video": "D:\\Data\\DeepseekHarness\\IdeaDrivenLoop\\VideoFactory\\History\\runs\\karaoke_real3\\final.mp4",
+  "ass": "D:\\Data\\DeepseekHarness\\IdeaDrivenLoop\\VideoFactory\\History\\subs\\karaoke\\real3.ass",
+  "hl": "33E6C8",
+  "mode": "subtitle-only",
+  "window": {
+    "start": 0,
+    "end": 39.1,
+    "frames": 1173,
+    "fps": 30
+  },
+  "criteria": {
+    "hide_threshold_px": 25,
+    "median_white_px": 618,
+    "min_consecutive_frames": 2,
+    "y_jump_px": 4
+  },
+  "metrics": {
+    "frames": 205,
+    "hidden_frames": 0,
+    "hidden_runs": [],
+    "hidden_multi": 0,
+    "hl_zero_frames": 0,
+    "hl_zero_runs": [],
+    "hl_multi": 0,
+    "y_jumps": 1,
+    "max_y_jump": 18,
+    "jump_log": [
+      {
+        "t": 13.57,
+        "from": 21,
+        "to": 39,
+        "d": 18
+      }
+    ]
+  },
+  "pass": {
+    "no_blink": true,
+    "no_hl_missing": true,
+    "no_position_jump": true
+  },
+  "per_sentence": [
+    {
+      "idx": 0,
+      "start": 8.75,
+      "end": 10.94,
+      "frames": 66,
+      "hidden_frames": 0,
+      "hidden_runs": [],
+      "hidden_multi": 0,
+      "hl_zero_frames": 0,
+      "hl_zero_runs": [],
+      "hl_multi": 0,
+      "y_jumps": 0,
+      "max_y_jump": 1,
+      "jump_log": []
+    },
+    {
+      "idx": 1,
+      "start": 13.56,
+      "end": 14.37,
+      "frames": 25,
+      "hidden_frames": 0,
+      "hidden_runs": [],
+      "hidden_multi": 0,
+      "hl_zero_frames": 0,
+      "hl_zero_runs": [],
+      "hl_multi": 0,
+      "y_jumps": 0,
+      "max_y_jump": 0,
+      "jump_log": []
+    },
+    {
+      "idx": 2,
+      "start": 31.48,
+      "end": 33.46,
+      "frames": 59,
+      "hidden_frames": 0,
+      "hidden_runs": [],
+      "hidden_multi": 0,
+      "hl_zero_frames": 0,
+      "hl_zero_runs": [],
+      "hl_multi": 0,
+      "y_jumps": 0,
+      "max_y_jump": 0,
+      "jump_log": []
+    },
+    {
+      "idx": 3,
+      "start": 36.46,
+      "end": 38.29,
+      "frames": 55,
+      "hidden_frames": 0,
+      "hidden_runs": [],
+      "hidden_multi": 0,
+      "hl_zero_frames": 0,
+      "hl_zero_runs": [],
+      "hl_multi": 0,
+      "y_jumps": 0,
+      "max_y_jump": 0,
+      "jump_log": []
+    }
+  ],
+  "verdict": "PASS"
+}
