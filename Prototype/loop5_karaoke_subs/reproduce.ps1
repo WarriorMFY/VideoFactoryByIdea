@@ -40,6 +40,8 @@ try {
   $env:KARAOKE_DUR = (& Workspace\bin\ffmpeg\ffprobe.exe -v error -show_entries format=duration -of csv=p=0 History\runs\karaoke_l2\final.mp4).Trim()
   node Tool\acceptance\verify_karaoke.mjs History\runs\karaoke_l2\final.mp4 History\subs\karaoke\l2.ass --hl 33E6C8 --json History\runs\karaoke_l2\verify_karaoke.json
   $e = $LASTEXITCODE
+  node Tool\acceptance\diagnose_flicker.mjs History\runs\karaoke_l2\final.mp4 History\subs\karaoke\l2.ass --json History\runs\karaoke_l2\flicker.json
+  $eFlicker = $LASTEXITCODE
   node Tool\acceptance\qa_report.mjs History\runs\karaoke_l2\final.mp4 --json History\runs\karaoke_l2\qa.json | Select-Object -Last 3
 
   Write-Host "`n== 4/5 build ASS + render + verify case F (real footage, remapped timeline)" -ForegroundColor Cyan
@@ -51,12 +53,15 @@ try {
   $env:KARAOKE_DUR = (& Workspace\bin\ffmpeg\ffprobe.exe -v error -show_entries format=duration -of csv=p=0 History\runs\karaoke_real3\final.mp4).Trim()
   node Tool\acceptance\verify_karaoke.mjs History\runs\karaoke_real3\final.mp4 History\subs\karaoke\real3.ass --hl 33E6C8 --json History\runs\karaoke_real3\verify_karaoke.json
   $f = $LASTEXITCODE
+  node Tool\acceptance\diagnose_flicker.mjs History\runs\karaoke_real3\final.mp4 History\subs\karaoke\real3.ass --json History\runs\karaoke_real3\flicker.json
+  $fFlicker = $LASTEXITCODE
   node Tool\acceptance\qa_report.mjs History\runs\karaoke_real3\final.mp4 --json History\runs\karaoke_real3\qa.json | Select-Object -Last 3
 
   Write-Host "`n== 5/5 summary" -ForegroundColor Cyan
-  Write-Host "case E verify exit=$e ; case F verify exit=$f"
+  Write-Host "case E: highlight=$e  flicker=$eFlicker"
+  Write-Host "case F: highlight=$f  flicker=$fFlicker"
   Write-Host "outputs: History\runs\karaoke_l2 , History\runs\karaoke_real3"
-  if ($e -eq 0 -and $f -eq 0) { Write-Host "`nresult: PASS" -ForegroundColor Green; exit 0 }
+  if ($e -eq 0 -and $f -eq 0 -and $eFlicker -eq 0 -and $fFlicker -eq 0) { Write-Host "`nresult: PASS" -ForegroundColor Green; exit 0 }
   else { Write-Host "`nresult: FAIL (see per-case output above)" -ForegroundColor Red; exit 1 }
 }
 finally {

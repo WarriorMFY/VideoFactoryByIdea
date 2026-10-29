@@ -78,8 +78,11 @@ function analyzeFrame(raw) {
     blocks = 1;
     for (let i = 1; i < xs.length; i++) if (xs[i] - xs[i - 1] > 26) blocks++;
   }
-  const bboxW = xs.length ? xs[xs.length - 1] - xs[0] : 0;   // 单词语通常 <300px；两词会明显更宽
-  return { pixels: total, blocks, bboxW, centroidX: total ? Number((sumX / total).toFixed(1)) : null };
+  const bboxW = xs.length ? xs[xs.length - 1] - xs[0] : 0;   // 高亮像素水平范围
+  // 相邻高亮块的最大空隙：判重影用。词间距约 10–20px；跨词/跨行/相距很远的两个词会 >200px。
+  let maxGap = 0;
+  for (let i = 1; i < xs.length; i++) maxGap = Math.max(maxGap, xs[i] - xs[i - 1]);
+  return { pixels: total, blocks, bboxW, maxGap, centroidX: total ? Number((sumX / total).toFixed(1)) : null };
 }
 
 // ---- 3. 抽帧分析 ----
@@ -101,7 +104,10 @@ for (const [i, e] of picks.entries()) {
 
 const okRows = rows.filter((r) => !r.error);
 const withHighlight = okRows.filter((r) => r.pixels > 8).length;
-const singleBlock = okRows.filter((r) => r.blocks === 1).length;
+// 用"高亮像素的水平包围盒宽度"做重影判据，而不是数块数：
+//   · 合并 tile（如 ASR 拆出的 l u f s，四个单字母之间有空格）会自然形成 3–4 个像素块，属设计行为；
+//   · 真正的重影是"两个相距很远的词同时亮"，bboxW 会明显变大（> 480px）。
+const singleBlock = okRows.filter((r) => r.maxGap < 200 && r.bboxW < 480).length;
 const centroids = okRows.map((r) => r.centroidX).filter((x) => x !== null);
 const spread = centroids.length > 1 ? Math.max(...centroids) - Math.min(...centroids) : 0;
 

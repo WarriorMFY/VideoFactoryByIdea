@@ -9,116 +9,86 @@ YCbCr Matrix: TV.709
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: ZH,SimHei,40,&H00FFFFFF,&H00FFFFFF,&H00141414,&H78000000,0,0,0,0,100,100,0,0,1,2.4,1.0,2,48,48,84,1
+Style: ZH,SimHei,40,&H00FFFFFF,&H00FFFFFF,&H00141414,&H78000000,0,0,0,0,100,100,0,0,1,2.4,1.0,2,48,48,134,1
 Style: EN,Arial,36,&H00FFFFFF,&H00FFFFFF,&H00141414,&H78000000,-1,0,0,0,100,100,0,0,1,2.0,0.8,2,48,48,26,1
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.03,0:00:04.08,ZH,,0,0,134,,欢迎回到工作坊，将原始镜头放\N回成品胶片中
-Dialogue: 1,0:00:00.03,0:00:00.44,EN,,0,0,0,,{\c&HC8E633&}welcome{\r} back to the workshop where\Nreturn raw footage into finished films
-Dialogue: 1,0:00:00.45,0:00:00.68,EN,,0,0,0,,welcome {\c&HC8E633&}back{\r} to the workshop where\Nreturn raw footage into finished films
-Dialogue: 1,0:00:00.69,0:00:00.80,EN,,0,0,0,,welcome back {\c&HC8E633&}to{\r} the workshop where\Nreturn raw footage into finished films
-Dialogue: 1,0:00:00.81,0:00:00.89,EN,,0,0,0,,welcome back to {\c&HC8E633&}the{\r} workshop where\Nreturn raw footage into finished films
-Dialogue: 1,0:00:00.90,0:00:01.53,EN,,0,0,0,,welcome back to the {\c&HC8E633&}workshop{\r} where\Nreturn raw footage into finished films
-Dialogue: 1,0:00:01.71,0:00:01.85,EN,,0,0,0,,welcome back to the workshop {\c&HC8E633&}where{\r}\Nreturn raw footage into finished films
-Dialogue: 1,0:00:01.86,0:00:02.30,EN,,0,0,0,,welcome back to the workshop where\N{\c&HC8E633&}return{\r} raw footage into finished films
-Dialogue: 1,0:00:02.31,0:00:02.54,EN,,0,0,0,,welcome back to the workshop where\Nreturn {\c&HC8E633&}raw{\r} footage into finished films
-Dialogue: 1,0:00:02.55,0:00:02.96,EN,,0,0,0,,welcome back to the workshop where\Nreturn raw {\c&HC8E633&}footage{\r} into finished films
-Dialogue: 1,0:00:02.97,0:00:03.14,EN,,0,0,0,,welcome back to the workshop where\Nreturn raw footage {\c&HC8E633&}into{\r} finished films
-Dialogue: 1,0:00:03.15,0:00:03.56,EN,,0,0,0,,welcome back to the workshop where\Nreturn raw footage into {\c&HC8E633&}finished{\r} films
+Dialogue: 0,0:00:00.03,0:00:04.08,ZH,,0,0,180,,欢迎回到工作坊，将原始镜头放\N回成品胶片中
+Dialogue: 1,0:00:00.03,0:00:00.45,EN,,0,0,0,,{\c&HC8E633&}welcome{\r} back to the workshop where\Nreturn raw footage into finished films
+Dialogue: 1,0:00:00.45,0:00:00.81,EN,,0,0,0,,welcome {\c&HC8E633&}back{\r} {\c&HC8E633&}to{\r} the workshop where\Nreturn raw footage into finished films
+Dialogue: 1,0:00:00.81,0:00:01.71,EN,,0,0,0,,welcome back to {\c&HC8E633&}the{\r} {\c&HC8E633&}workshop{\r} where\Nreturn raw footage into finished films
+Dialogue: 1,0:00:01.71,0:00:01.86,EN,,0,0,0,,welcome back to the workshop {\c&HC8E633&}where{\r}\Nreturn raw footage into finished films
+Dialogue: 1,0:00:01.86,0:00:02.31,EN,,0,0,0,,welcome back to the workshop where\N{\c&HC8E633&}return{\r} raw footage into finished films
+Dialogue: 1,0:00:02.31,0:00:02.55,EN,,0,0,0,,welcome back to the workshop where\Nreturn {\c&HC8E633&}raw{\r} footage into finished films
+Dialogue: 1,0:00:02.55,0:00:02.97,EN,,0,0,0,,welcome back to the workshop where\Nreturn raw {\c&HC8E633&}footage{\r} into finished films
+Dialogue: 1,0:00:02.97,0:00:03.57,EN,,0,0,0,,welcome back to the workshop where\Nreturn raw footage {\c&HC8E633&}into{\r} {\c&HC8E633&}finished{\r} films
 Dialogue: 1,0:00:03.57,0:00:04.08,EN,,0,0,0,,welcome back to the workshop where\Nreturn raw footage into finished {\c&HC8E633&}films{\r}
 Dialogue: 0,0:00:04.41,0:00:08.79,ZH,,0,0,180,,今天我将向您展示三个简单的技\N巧，可以节省大约两个小时的编\N辑时间
-Dialogue: 1,0:00:04.41,0:00:04.85,EN,,0,0,0,,{\c&HC8E633&}today{\r} i will show you three simple\Ntricks that save about two hours of\Nediting time
-Dialogue: 1,0:00:04.86,0:00:04.94,EN,,0,0,0,,today {\c&HC8E633&}i{\r} will show you three simple\Ntricks that save about two hours of\Nediting time
-Dialogue: 1,0:00:04.95,0:00:05.09,EN,,0,0,0,,today i {\c&HC8E633&}will{\r} show you three simple\Ntricks that save about two hours of\Nediting time
-Dialogue: 1,0:00:05.10,0:00:05.30,EN,,0,0,0,,today i will {\c&HC8E633&}show{\r} you three simple\Ntricks that save about two hours of\Nediting time
-Dialogue: 1,0:00:05.31,0:00:05.48,EN,,0,0,0,,today i will show {\c&HC8E633&}you{\r} three simple\Ntricks that save about two hours of\Nediting time
-Dialogue: 1,0:00:05.49,0:00:05.78,EN,,0,0,0,,today i will show you {\c&HC8E633&}three{\r} simple\Ntricks that save about two hours of\Nediting time
-Dialogue: 1,0:00:05.79,0:00:06.11,EN,,0,0,0,,today i will show you three {\c&HC8E633&}simple{\r}\Ntricks that save about two hours of\Nediting time
-Dialogue: 1,0:00:06.12,0:00:06.47,EN,,0,0,0,,today i will show you three simple\N{\c&HC8E633&}tricks{\r} that save about two hours of\Nediting time
-Dialogue: 1,0:00:06.48,0:00:06.65,EN,,0,0,0,,today i will show you three simple\Ntricks {\c&HC8E633&}that{\r} save about two hours of\Nediting time
-Dialogue: 1,0:00:06.66,0:00:06.98,EN,,0,0,0,,today i will show you three simple\Ntricks that {\c&HC8E633&}save{\r} about two hours of\Nediting time
-Dialogue: 1,0:00:06.99,0:00:07.25,EN,,0,0,0,,today i will show you three simple\Ntricks that save {\c&HC8E633&}about{\r} two hours of\Nediting time
-Dialogue: 1,0:00:07.26,0:00:07.53,EN,,0,0,0,,today i will show you three simple\Ntricks that save about {\c&HC8E633&}two{\r} hours of\Nediting time
-Dialogue: 1,0:00:07.56,0:00:07.88,EN,,0,0,0,,today i will show you three simple\Ntricks that save about two {\c&HC8E633&}hours{\r} of\Nediting time
-Dialogue: 1,0:00:07.89,0:00:08.00,EN,,0,0,0,,today i will show you three simple\Ntricks that save about two hours {\c&HC8E633&}of{\r}\Nediting time
-Dialogue: 1,0:00:08.01,0:00:08.36,EN,,0,0,0,,today i will show you three simple\Ntricks that save about two hours of\N{\c&HC8E633&}editing{\r} time
+Dialogue: 1,0:00:04.41,0:00:04.95,EN,,0,0,0,,{\c&HC8E633&}today{\r} {\c&HC8E633&}i{\r} will show you three simple\Ntricks that save about two hours of\Nediting time
+Dialogue: 1,0:00:04.95,0:00:05.31,EN,,0,0,0,,today i {\c&HC8E633&}will{\r} {\c&HC8E633&}show{\r} you three simple\Ntricks that save about two hours of\Nediting time
+Dialogue: 1,0:00:05.31,0:00:05.49,EN,,0,0,0,,today i will show {\c&HC8E633&}you{\r} three simple\Ntricks that save about two hours of\Nediting time
+Dialogue: 1,0:00:05.49,0:00:05.79,EN,,0,0,0,,today i will show you {\c&HC8E633&}three{\r} simple\Ntricks that save about two hours of\Nediting time
+Dialogue: 1,0:00:05.79,0:00:06.12,EN,,0,0,0,,today i will show you three {\c&HC8E633&}simple{\r}\Ntricks that save about two hours of\Nediting time
+Dialogue: 1,0:00:06.12,0:00:06.48,EN,,0,0,0,,today i will show you three simple\N{\c&HC8E633&}tricks{\r} that save about two hours of\Nediting time
+Dialogue: 1,0:00:06.48,0:00:06.99,EN,,0,0,0,,today i will show you three simple\Ntricks {\c&HC8E633&}that{\r} {\c&HC8E633&}save{\r} about two hours of\Nediting time
+Dialogue: 1,0:00:06.99,0:00:07.26,EN,,0,0,0,,today i will show you three simple\Ntricks that save {\c&HC8E633&}about{\r} two hours of\Nediting time
+Dialogue: 1,0:00:07.26,0:00:07.56,EN,,0,0,0,,today i will show you three simple\Ntricks that save about {\c&HC8E633&}two{\r} hours of\Nediting time
+Dialogue: 1,0:00:07.56,0:00:08.01,EN,,0,0,0,,today i will show you three simple\Ntricks that save about two {\c&HC8E633&}hours{\r} {\c&HC8E633&}of{\r}\Nediting time
+Dialogue: 1,0:00:08.01,0:00:08.37,EN,,0,0,0,,today i will show you three simple\Ntricks that save about two hours of\N{\c&HC8E633&}editing{\r} time
 Dialogue: 1,0:00:08.37,0:00:08.79,EN,,0,0,0,,today i will show you three simple\Ntricks that save about two hours of\Nediting {\c&HC8E633&}time{\r}
-Dialogue: 0,0:00:09.12,0:00:13.41,ZH,,0,0,134,,首先，总是节拍，因为节奏是让\N观众保持清醒的原因
-Dialogue: 1,0:00:09.12,0:00:09.60,EN,,0,0,0,,{\c&HC8E633&}first{\r} always cut on the beat because\Nrhythm is what keeps the audience awake
-Dialogue: 1,0:00:09.69,0:00:10.10,EN,,0,0,0,,first {\c&HC8E633&}always{\r} cut on the beat because\Nrhythm is what keeps the audience awake
-Dialogue: 1,0:00:10.11,0:00:10.31,EN,,0,0,0,,first always {\c&HC8E633&}cut{\r} on the beat because\Nrhythm is what keeps the audience awake
-Dialogue: 1,0:00:10.32,0:00:10.43,EN,,0,0,0,,first always cut {\c&HC8E633&}on{\r} the beat because\Nrhythm is what keeps the audience awake
-Dialogue: 1,0:00:10.44,0:00:10.52,EN,,0,0,0,,first always cut on {\c&HC8E633&}the{\r} beat because\Nrhythm is what keeps the audience awake
-Dialogue: 1,0:00:10.53,0:00:10.89,EN,,0,0,0,,first always cut on the {\c&HC8E633&}beat{\r} because\Nrhythm is what keeps the audience awake
-Dialogue: 1,0:00:11.10,0:00:11.42,EN,,0,0,0,,first always cut on the beat {\c&HC8E633&}because{\r}\Nrhythm is what keeps the audience awake
-Dialogue: 1,0:00:11.43,0:00:11.75,EN,,0,0,0,,first always cut on the beat because\N{\c&HC8E633&}rhythm{\r} is what keeps the audience awake
-Dialogue: 1,0:00:11.76,0:00:11.87,EN,,0,0,0,,first always cut on the beat because\Nrhythm {\c&HC8E633&}is{\r} what keeps the audience awake
-Dialogue: 1,0:00:11.88,0:00:12.05,EN,,0,0,0,,first always cut on the beat because\Nrhythm is {\c&HC8E633&}what{\r} keeps the audience awake
-Dialogue: 1,0:00:12.06,0:00:12.35,EN,,0,0,0,,first always cut on the beat because\Nrhythm is what {\c&HC8E633&}keeps{\r} the audience awake
-Dialogue: 1,0:00:12.36,0:00:12.50,EN,,0,0,0,,first always cut on the beat because\Nrhythm is what keeps {\c&HC8E633&}the{\r} audience awake
-Dialogue: 1,0:00:12.51,0:00:12.92,EN,,0,0,0,,first always cut on the beat because\Nrhythm is what keeps the {\c&HC8E633&}audience{\r} awake
+Dialogue: 0,0:00:09.12,0:00:13.41,ZH,,0,0,180,,首先，总是节拍，因为节奏是让\N观众保持清醒的原因
+Dialogue: 1,0:00:09.12,0:00:09.69,EN,,0,0,0,,{\c&HC8E633&}first{\r} always cut on the beat because\Nrhythm is what keeps the audience awake
+Dialogue: 1,0:00:09.69,0:00:10.11,EN,,0,0,0,,first {\c&HC8E633&}always{\r} cut on the beat because\Nrhythm is what keeps the audience awake
+Dialogue: 1,0:00:10.11,0:00:10.44,EN,,0,0,0,,first always {\c&HC8E633&}cut{\r} {\c&HC8E633&}on{\r} the beat because\Nrhythm is what keeps the audience awake
+Dialogue: 1,0:00:10.44,0:00:11.10,EN,,0,0,0,,first always cut on {\c&HC8E633&}the{\r} {\c&HC8E633&}beat{\r} because\Nrhythm is what keeps the audience awake
+Dialogue: 1,0:00:11.10,0:00:11.43,EN,,0,0,0,,first always cut on the beat {\c&HC8E633&}because{\r}\Nrhythm is what keeps the audience awake
+Dialogue: 1,0:00:11.43,0:00:11.88,EN,,0,0,0,,first always cut on the beat because\N{\c&HC8E633&}rhythm{\r} {\c&HC8E633&}is{\r} what keeps the audience awake
+Dialogue: 1,0:00:11.88,0:00:12.36,EN,,0,0,0,,first always cut on the beat because\Nrhythm is {\c&HC8E633&}what{\r} {\c&HC8E633&}keeps{\r} the audience awake
+Dialogue: 1,0:00:12.36,0:00:12.93,EN,,0,0,0,,first always cut on the beat because\Nrhythm is what keeps {\c&HC8E633&}the{\r} {\c&HC8E633&}audience{\r} awake
 Dialogue: 1,0:00:12.93,0:00:13.41,EN,,0,0,0,,first always cut on the beat because\Nrhythm is what keeps the audience {\c&HC8E633&}awake{\r}
 Dialogue: 0,0:00:13.74,0:00:18.48,ZH,,0,0,180,,在触摸颜色之前，将静音间隙移\N除超过半秒
-Dialogue: 1,0:00:13.74,0:00:14.28,EN,,0,0,0,,{\c&HC8E633&}second{\r} remove the silent gaps longer\Nthan half a second before you touch the\Ncolors
+Dialogue: 1,0:00:13.74,0:00:14.40,EN,,0,0,0,,{\c&HC8E633&}second{\r} remove the silent gaps longer\Nthan half a second before you touch the\Ncolors
 Dialogue: 1,0:00:14.40,0:00:14.82,EN,,0,0,0,,second {\c&HC8E633&}remove{\r} the silent gaps longer\Nthan half a second before you touch the\Ncolors
-Dialogue: 1,0:00:14.82,0:00:14.90,EN,,0,0,0,,second remove {\c&HC8E633&}the{\r} silent gaps longer\Nthan half a second before you touch the\Ncolors
-Dialogue: 1,0:00:14.91,0:00:15.35,EN,,0,0,0,,second remove the {\c&HC8E633&}silent{\r} gaps longer\Nthan half a second before you touch the\Ncolors
-Dialogue: 1,0:00:15.36,0:00:15.74,EN,,0,0,0,,second remove the silent {\c&HC8E633&}gaps{\r} longer\Nthan half a second before you touch the\Ncolors
-Dialogue: 1,0:00:15.75,0:00:16.10,EN,,0,0,0,,second remove the silent gaps {\c&HC8E633&}longer{\r}\Nthan half a second before you touch the\Ncolors
-Dialogue: 1,0:00:16.11,0:00:16.28,EN,,0,0,0,,second remove the silent gaps longer\N{\c&HC8E633&}than{\r} half a second before you touch the\Ncolors
-Dialogue: 1,0:00:16.29,0:00:16.55,EN,,0,0,0,,second remove the silent gaps longer\Nthan {\c&HC8E633&}half{\r} a second before you touch the\Ncolors
-Dialogue: 1,0:00:16.56,0:00:16.61,EN,,0,0,0,,second remove the silent gaps longer\Nthan half {\c&HC8E633&}a{\r} second before you touch the\Ncolors
-Dialogue: 1,0:00:16.62,0:00:17.06,EN,,0,0,0,,second remove the silent gaps longer\Nthan half a {\c&HC8E633&}second{\r} before you touch the\Ncolors
-Dialogue: 1,0:00:17.07,0:00:17.42,EN,,0,0,0,,second remove the silent gaps longer\Nthan half a second {\c&HC8E633&}before{\r} you touch the\Ncolors
-Dialogue: 1,0:00:17.43,0:00:17.54,EN,,0,0,0,,second remove the silent gaps longer\Nthan half a second before {\c&HC8E633&}you{\r} touch the\Ncolors
-Dialogue: 1,0:00:17.55,0:00:17.87,EN,,0,0,0,,second remove the silent gaps longer\Nthan half a second before you {\c&HC8E633&}touch{\r} the\Ncolors
-Dialogue: 1,0:00:17.88,0:00:17.96,EN,,0,0,0,,second remove the silent gaps longer\Nthan half a second before you touch {\c&HC8E633&}the{\r}\Ncolors
+Dialogue: 1,0:00:14.82,0:00:15.36,EN,,0,0,0,,second remove {\c&HC8E633&}the{\r} {\c&HC8E633&}silent{\r} gaps longer\Nthan half a second before you touch the\Ncolors
+Dialogue: 1,0:00:15.36,0:00:15.75,EN,,0,0,0,,second remove the silent {\c&HC8E633&}gaps{\r} longer\Nthan half a second before you touch the\Ncolors
+Dialogue: 1,0:00:15.75,0:00:16.11,EN,,0,0,0,,second remove the silent gaps {\c&HC8E633&}longer{\r}\Nthan half a second before you touch the\Ncolors
+Dialogue: 1,0:00:16.11,0:00:16.62,EN,,0,0,0,,second remove the silent gaps longer\N{\c&HC8E633&}than{\r} {\c&HC8E633&}half{\r} {\c&HC8E633&}a{\r} second before you touch the\Ncolors
+Dialogue: 1,0:00:16.62,0:00:17.07,EN,,0,0,0,,second remove the silent gaps longer\Nthan half a {\c&HC8E633&}second{\r} before you touch the\Ncolors
+Dialogue: 1,0:00:17.07,0:00:17.43,EN,,0,0,0,,second remove the silent gaps longer\Nthan half a second {\c&HC8E633&}before{\r} you touch the\Ncolors
+Dialogue: 1,0:00:17.43,0:00:17.88,EN,,0,0,0,,second remove the silent gaps longer\Nthan half a second before {\c&HC8E633&}you{\r} {\c&HC8E633&}touch{\r} the\Ncolors
+Dialogue: 1,0:00:17.88,0:00:17.97,EN,,0,0,0,,second remove the silent gaps longer\Nthan half a second before you touch {\c&HC8E633&}the{\r}\Ncolors
 Dialogue: 1,0:00:17.97,0:00:18.48,EN,,0,0,0,,second remove the silent gaps longer\Nthan half a second before you touch the\N{\c&HC8E633&}colors{\r}
 Dialogue: 0,0:00:18.78,0:00:25.62,ZH,,0,0,180,,第三，将音频标准化为负六十六\Nl u fs ，这是在线视频\N平台的标准
-Dialogue: 1,0:00:18.78,0:00:19.23,EN,,0,0,0,,{\c&HC8E633&}third{\r} normalize the audio to minus sixty\Nsixteen l u fs which is the standard for\Nonline video platforms
-Dialogue: 1,0:00:19.41,0:00:20.04,EN,,0,0,0,,third {\c&HC8E633&}normalize{\r} the audio to minus sixty\Nsixteen l u fs which is the standard for\Nonline video platforms
-Dialogue: 1,0:00:20.05,0:00:20.16,EN,,0,0,0,,third normalize {\c&HC8E633&}the{\r} audio to minus sixty\Nsixteen l u fs which is the standard for\Nonline video platforms
-Dialogue: 1,0:00:20.19,0:00:20.57,EN,,0,0,0,,third normalize the {\c&HC8E633&}audio{\r} to minus sixty\Nsixteen l u fs which is the standard for\Nonline video platforms
-Dialogue: 1,0:00:20.58,0:00:20.72,EN,,0,0,0,,third normalize the audio {\c&HC8E633&}to{\r} minus sixty\Nsixteen l u fs which is the standard for\Nonline video platforms
-Dialogue: 1,0:00:20.73,0:00:21.11,EN,,0,0,0,,third normalize the audio to {\c&HC8E633&}minus{\r} sixty\Nsixteen l u fs which is the standard for\Nonline video platforms
-Dialogue: 1,0:00:21.12,0:00:21.34,EN,,0,0,0,,third normalize the audio to minus {\c&HC8E633&}sixty{\r}\Nsixteen l u fs which is the standard for\Nonline video platforms
-Dialogue: 1,0:00:21.35,0:00:21.63,EN,,0,0,0,,third normalize the audio to minus sixty\N{\c&HC8E633&}sixteen{\r} l u fs which is the standard for\Nonline video platforms
-Dialogue: 1,0:00:21.64,0:00:21.83,EN,,0,0,0,,third normalize the audio to minus sixty\Nsixteen {\c&HC8E633&}l{\r} u fs which is the standard for\Nonline video platforms
-Dialogue: 1,0:00:21.84,0:00:21.98,EN,,0,0,0,,third normalize the audio to minus sixty\Nsixteen l {\c&HC8E633&}u{\r} fs which is the standard for\Nonline video platforms
-Dialogue: 1,0:00:21.99,0:00:22.53,EN,,0,0,0,,third normalize the audio to minus sixty\Nsixteen l u {\c&HC8E633&}fs{\r} which is the standard for\Nonline video platforms
-Dialogue: 1,0:00:22.80,0:00:23.00,EN,,0,0,0,,third normalize the audio to minus sixty\Nsixteen l u fs {\c&HC8E633&}which{\r} is the standard for\Nonline video platforms
-Dialogue: 1,0:00:23.01,0:00:23.12,EN,,0,0,0,,third normalize the audio to minus sixty\Nsixteen l u fs which {\c&HC8E633&}is{\r} the standard for\Nonline video platforms
-Dialogue: 1,0:00:23.13,0:00:23.24,EN,,0,0,0,,third normalize the audio to minus sixty\Nsixteen l u fs which is {\c&HC8E633&}the{\r} standard for\Nonline video platforms
-Dialogue: 1,0:00:23.25,0:00:23.75,EN,,0,0,0,,third normalize the audio to minus sixty\Nsixteen l u fs which is the {\c&HC8E633&}standard{\r} for\Nonline video platforms
-Dialogue: 1,0:00:23.76,0:00:23.93,EN,,0,0,0,,third normalize the audio to minus sixty\Nsixteen l u fs which is the standard {\c&HC8E633&}for{\r}\Nonline video platforms
-Dialogue: 1,0:00:23.94,0:00:24.44,EN,,0,0,0,,third normalize the audio to minus sixty\Nsixteen l u fs which is the standard for\N{\c&HC8E633&}online{\r} video platforms
-Dialogue: 1,0:00:24.45,0:00:24.77,EN,,0,0,0,,third normalize the audio to minus sixty\Nsixteen l u fs which is the standard for\Nonline {\c&HC8E633&}video{\r} platforms
+Dialogue: 1,0:00:18.78,0:00:19.41,EN,,0,0,0,,{\c&HC8E633&}third{\r} normalize the audio to minus sixty\Nsixteen l u fs which is the standard for\Nonline video platforms
+Dialogue: 1,0:00:19.41,0:00:20.05,EN,,0,0,0,,third {\c&HC8E633&}normalize{\r} the audio to minus sixty\Nsixteen l u fs which is the standard for\Nonline video platforms
+Dialogue: 1,0:00:20.05,0:00:20.73,EN,,0,0,0,,third normalize {\c&HC8E633&}the{\r} {\c&HC8E633&}audio{\r} {\c&HC8E633&}to{\r} minus sixty\Nsixteen l u fs which is the standard for\Nonline video platforms
+Dialogue: 1,0:00:20.73,0:00:21.12,EN,,0,0,0,,third normalize the audio to {\c&HC8E633&}minus{\r} sixty\Nsixteen l u fs which is the standard for\Nonline video platforms
+Dialogue: 1,0:00:21.12,0:00:21.35,EN,,0,0,0,,third normalize the audio to minus {\c&HC8E633&}sixty{\r}\Nsixteen l u fs which is the standard for\Nonline video platforms
+Dialogue: 1,0:00:21.35,0:00:21.99,EN,,0,0,0,,third normalize the audio to minus sixty\N{\c&HC8E633&}sixteen{\r} {\c&HC8E633&}l{\r} {\c&HC8E633&}u{\r} fs which is the standard for\Nonline video platforms
+Dialogue: 1,0:00:21.99,0:00:22.80,EN,,0,0,0,,third normalize the audio to minus sixty\Nsixteen l u {\c&HC8E633&}fs{\r} which is the standard for\Nonline video platforms
+Dialogue: 1,0:00:22.80,0:00:23.13,EN,,0,0,0,,third normalize the audio to minus sixty\Nsixteen l u fs {\c&HC8E633&}which{\r} {\c&HC8E633&}is{\r} the standard for\Nonline video platforms
+Dialogue: 1,0:00:23.13,0:00:23.76,EN,,0,0,0,,third normalize the audio to minus sixty\Nsixteen l u fs which is {\c&HC8E633&}the{\r} {\c&HC8E633&}standard{\r} for\Nonline video platforms
+Dialogue: 1,0:00:23.76,0:00:23.94,EN,,0,0,0,,third normalize the audio to minus sixty\Nsixteen l u fs which is the standard {\c&HC8E633&}for{\r}\Nonline video platforms
+Dialogue: 1,0:00:23.94,0:00:24.45,EN,,0,0,0,,third normalize the audio to minus sixty\Nsixteen l u fs which is the standard for\N{\c&HC8E633&}online{\r} video platforms
+Dialogue: 1,0:00:24.45,0:00:24.78,EN,,0,0,0,,third normalize the audio to minus sixty\Nsixteen l u fs which is the standard for\Nonline {\c&HC8E633&}video{\r} platforms
 Dialogue: 1,0:00:24.78,0:00:25.62,EN,,0,0,0,,third normalize the audio to minus sixty\Nsixteen l u fs which is the standard for\Nonline video {\c&HC8E633&}platforms{\r}
-Dialogue: 0,0:00:25.95,0:00:30.78,ZH,,0,0,134,,最终以每秒 15 Mbps的\N速度导出，永远不要相信第一个\N渲染
-Dialogue: 1,0:00:25.95,0:00:26.55,EN,,0,0,0,,{\c&HC8E633&}finally{\r} export at fifteen megabits per\Nsecond and never trust the first render
-Dialogue: 1,0:00:26.64,0:00:27.17,EN,,0,0,0,,finally {\c&HC8E633&}export{\r} at fifteen megabits per\Nsecond and never trust the first render
-Dialogue: 1,0:00:27.18,0:00:27.26,EN,,0,0,0,,finally export {\c&HC8E633&}at{\r} fifteen megabits per\Nsecond and never trust the first render
-Dialogue: 1,0:00:27.27,0:00:27.77,EN,,0,0,0,,finally export at {\c&HC8E633&}fifteen{\r} megabits per\Nsecond and never trust the first render
-Dialogue: 1,0:00:27.78,0:00:28.28,EN,,0,0,0,,finally export at fifteen {\c&HC8E633&}megabits{\r} per\Nsecond and never trust the first render
-Dialogue: 1,0:00:28.29,0:00:28.43,EN,,0,0,0,,finally export at fifteen megabits {\c&HC8E633&}per{\r}\Nsecond and never trust the first render
-Dialogue: 1,0:00:28.44,0:00:28.92,EN,,0,0,0,,finally export at fifteen megabits per\N{\c&HC8E633&}second{\r} and never trust the first render
-Dialogue: 1,0:00:29.04,0:00:29.21,EN,,0,0,0,,finally export at fifteen megabits per\Nsecond {\c&HC8E633&}and{\r} never trust the first render
-Dialogue: 1,0:00:29.22,0:00:29.48,EN,,0,0,0,,finally export at fifteen megabits per\Nsecond and {\c&HC8E633&}never{\r} trust the first render
-Dialogue: 1,0:00:29.49,0:00:29.87,EN,,0,0,0,,finally export at fifteen megabits per\Nsecond and never {\c&HC8E633&}trust{\r} the first render
-Dialogue: 1,0:00:29.88,0:00:29.99,EN,,0,0,0,,finally export at fifteen megabits per\Nsecond and never trust {\c&HC8E633&}the{\r} first render
-Dialogue: 1,0:00:30.00,0:00:30.32,EN,,0,0,0,,finally export at fifteen megabits per\Nsecond and never trust the {\c&HC8E633&}first{\r} render
+Dialogue: 0,0:00:25.95,0:00:30.78,ZH,,0,0,180,,最终以每秒 15 Mbps的\N速度导出，永远不要相信第一个\N渲染
+Dialogue: 1,0:00:25.95,0:00:26.64,EN,,0,0,0,,{\c&HC8E633&}finally{\r} export at fifteen megabits per\Nsecond and never trust the first render
+Dialogue: 1,0:00:26.64,0:00:27.27,EN,,0,0,0,,finally {\c&HC8E633&}export{\r} {\c&HC8E633&}at{\r} fifteen megabits per\Nsecond and never trust the first render
+Dialogue: 1,0:00:27.27,0:00:27.78,EN,,0,0,0,,finally export at {\c&HC8E633&}fifteen{\r} megabits per\Nsecond and never trust the first render
+Dialogue: 1,0:00:27.78,0:00:28.29,EN,,0,0,0,,finally export at fifteen {\c&HC8E633&}megabits{\r} per\Nsecond and never trust the first render
+Dialogue: 1,0:00:28.29,0:00:28.44,EN,,0,0,0,,finally export at fifteen megabits {\c&HC8E633&}per{\r}\Nsecond and never trust the first render
+Dialogue: 1,0:00:28.44,0:00:29.04,EN,,0,0,0,,finally export at fifteen megabits per\N{\c&HC8E633&}second{\r} and never trust the first render
+Dialogue: 1,0:00:29.04,0:00:29.49,EN,,0,0,0,,finally export at fifteen megabits per\Nsecond {\c&HC8E633&}and{\r} {\c&HC8E633&}never{\r} trust the first render
+Dialogue: 1,0:00:29.49,0:00:29.88,EN,,0,0,0,,finally export at fifteen megabits per\Nsecond and never {\c&HC8E633&}trust{\r} the first render
+Dialogue: 1,0:00:29.88,0:00:30.33,EN,,0,0,0,,finally export at fifteen megabits per\Nsecond and never trust {\c&HC8E633&}the{\r} {\c&HC8E633&}first{\r} render
 Dialogue: 1,0:00:30.33,0:00:30.78,EN,,0,0,0,,finally export at fifteen megabits per\Nsecond and never trust the first {\c&HC8E633&}render{\r}
-Dialogue: 0,0:00:31.11,0:00:33.84,ZH,,0,0,134,,就是这一集了，下集见
-Dialogue: 1,0:00:31.11,0:00:31.40,EN,,0,0,0,,{\c&HC8E633&}that{\r} is it for this episode see you in\Nthe next one
-Dialogue: 1,0:00:31.41,0:00:31.52,EN,,0,0,0,,that {\c&HC8E633&}is{\r} it for this episode see you in\Nthe next one
-Dialogue: 1,0:00:31.53,0:00:31.64,EN,,0,0,0,,that is {\c&HC8E633&}it{\r} for this episode see you in\Nthe next one
-Dialogue: 1,0:00:31.65,0:00:31.76,EN,,0,0,0,,that is it {\c&HC8E633&}for{\r} this episode see you in\Nthe next one
-Dialogue: 1,0:00:31.77,0:00:31.97,EN,,0,0,0,,that is it for {\c&HC8E633&}this{\r} episode see you in\Nthe next one
-Dialogue: 1,0:00:31.98,0:00:32.58,EN,,0,0,0,,that is it for this {\c&HC8E633&}episode{\r} see you in\Nthe next one
-Dialogue: 1,0:00:32.67,0:00:32.93,EN,,0,0,0,,that is it for this episode {\c&HC8E633&}see{\r} you in\Nthe next one
-Dialogue: 1,0:00:32.94,0:00:33.05,EN,,0,0,0,,that is it for this episode see {\c&HC8E633&}you{\r} in\Nthe next one
-Dialogue: 1,0:00:33.06,0:00:33.14,EN,,0,0,0,,that is it for this episode see you {\c&HC8E633&}in{\r}\Nthe next one
-Dialogue: 1,0:00:33.15,0:00:33.23,EN,,0,0,0,,that is it for this episode see you in\N{\c&HC8E633&}the{\r} next one
-Dialogue: 1,0:00:33.24,0:00:33.53,EN,,0,0,0,,that is it for this episode see you in\Nthe {\c&HC8E633&}next{\r} one
+Dialogue: 0,0:00:31.11,0:00:33.84,ZH,,0,0,180,,就是这一集了，下集见
+Dialogue: 1,0:00:31.11,0:00:31.65,EN,,0,0,0,,{\c&HC8E633&}that{\r} {\c&HC8E633&}is{\r} {\c&HC8E633&}it{\r} for this episode see you in\Nthe next one
+Dialogue: 1,0:00:31.65,0:00:31.98,EN,,0,0,0,,that is it {\c&HC8E633&}for{\r} {\c&HC8E633&}this{\r} episode see you in\Nthe next one
+Dialogue: 1,0:00:31.98,0:00:32.67,EN,,0,0,0,,that is it for this {\c&HC8E633&}episode{\r} see you in\Nthe next one
+Dialogue: 1,0:00:32.67,0:00:32.94,EN,,0,0,0,,that is it for this episode {\c&HC8E633&}see{\r} you in\Nthe next one
+Dialogue: 1,0:00:32.94,0:00:33.15,EN,,0,0,0,,that is it for this episode see {\c&HC8E633&}you{\r} {\c&HC8E633&}in{\r}\Nthe next one
+Dialogue: 1,0:00:33.15,0:00:33.54,EN,,0,0,0,,that is it for this episode see you in\N{\c&HC8E633&}the{\r} {\c&HC8E633&}next{\r} one
 Dialogue: 1,0:00:33.54,0:00:33.84,EN,,0,0,0,,that is it for this episode see you in\Nthe next {\c&HC8E633&}one{\r}
