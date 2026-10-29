@@ -14,6 +14,7 @@
 | `run_real_acceptance.mjs` | 小循环 3 一键验收（真实素材 + 语音保护对照 + 音频预处理实验） | `History/loops/loop03/acceptance.md` |
 | `run_multi_speech_acceptance.mjs` | **小循环 4**：多样本批量验收（真实影视 + 多口音 TTS），逐样本跑 ASR(2 变体对照)→剪辑→机翻→重映射→烧入→验收/质检 | `History/loops/loop04/report.md` + `metrics.json` |
 | `snapshot_loop4.mjs` | 把 loop4 产物整理成交付快照（成片/字幕/抽帧/判定数据） | `Prototype/loop4_multi_samples/cases/<id>/` |
+| `verify_karaoke.mjs` | **逐词高亮字幕验收**（小循环 5）：扫像素判断"高亮存在 / 每帧只亮一个词（不重影）/ 高亮随语流移动" | `verify_karaoke.json` |
 
 ## 怎么用
 
@@ -38,13 +39,15 @@ node Tool\acceptance\qa_report.mjs  out\final.mp4 --json out\qa.json
 | 字幕（有讲稿） | WER ≤ 25%、语音覆盖 ≥ 95%、句界误差 均 ≤0.8s/最大 ≤1.5s、译文覆盖 100%、中文可读性 ≤20 字/秒 | `verify_subs` |
 | 字幕（无讲稿） | 跳过 WER/句界，只看译文覆盖、可读性、重映射自检（无越界/重叠、最短 ≥0.5s） | `verify_subs` reference-free |
 | 跨步骤一致性 | 两次渲染的 EDL 必须完全相同（否则字幕会错位） | 各 `run_*` 内置断言 |
+| 逐词高亮字幕 | 每个采样帧都检到高亮色；每帧只有 1 个词块且包围盒 <320px（不重影）；不同词重心位移 ≥12px（跟随语流） | `verify_karaoke` |
 
 ## 判定数据在哪
 
 - 剪辑：`History/runs/*/verify.json`
 - 成片：`History/runs/*/qa.json`
 - 字幕：`History/runs/*_subs*/verify_subs.json`
-- 汇总：`History/loops/loop0*/acceptance*.md`
+- 逐词高亮：`History/runs/karaoke_*/verify_karaoke.json`
+- 汇总：`History/loops/loop0*/acceptance*.md`、`report*.md`
 - 循环摘要：`History/CircleLog/log.md`
 
 ## 坑
