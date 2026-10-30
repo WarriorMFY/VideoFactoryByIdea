@@ -40,7 +40,9 @@ const TH = {
 };
 fs.mkdirSync(OUT, { recursive: true });
 
-const tr = JSON.parse(fs.readFileSync(TRANSCRIPT, 'utf8'));
+// 读 JSON 时统一去掉 UTF-8 BOM：Windows 上 PowerShell 写出的 json 常带 BOM，JSON.parse 会直接报 "Unexpected token"
+const readJson = (f) => JSON.parse(fs.readFileSync(f, 'utf8').replace(/^\uFEFF/, ''));
+const tr = readJson(TRANSCRIPT);
 const words = tr.words || [];
 if (!words.length) { console.error('transcript 没有词级时间戳'); process.exit(1); }
 
@@ -101,7 +103,7 @@ if (PUNCT && Array.isArray(tr.sentences) && tr.sentences.length && Number.isFini
 
 // ---------- 2. 翻译（句子级） ----------
 const CACHE_PATH = path.join(ROOT, 'History', 'asr', 'mt_cache.json');
-const cache = fs.existsSync(CACHE_PATH) ? JSON.parse(fs.readFileSync(CACHE_PATH, 'utf8')) : {};
+const cache = fs.existsSync(CACHE_PATH) ? readJson(CACHE_PATH) : {};
 const saveCache = () => { fs.mkdirSync(path.dirname(CACHE_PATH), { recursive: true }); fs.writeFileSync(CACHE_PATH, JSON.stringify(cache, null, 2)); };
 
 // MyMemory 偶尔会返回**脏数据**：HTML 片段（`<strong>%2$s</str`）、`%2$s` 这类占位符、
@@ -145,7 +147,7 @@ async function mymemory(text) {
   throw new Error('MyMemory 翻译失败: ' + text.slice(0, 50));
 }
 
-const glossary = GLOSSARY && fs.existsSync(GLOSSARY) ? JSON.parse(fs.readFileSync(GLOSSARY, 'utf8')) : {};
+const glossary = GLOSSARY && fs.existsSync(GLOSSARY) ? readJson(GLOSSARY) : {};
 // 源端术语纠错（`_source_fixes`）：ASR 常把专名/单位拆坏（实测 LUFS 被听成 "l u fs"）。
 // 在**送翻译之前**把源句里的坏写法改回规范写法，机翻才不会把 "l u fs" 当成乱词。
 // 注意：必须**精确取** `_source_fixes` 这个键。之前用 startsWith 匹配，结果命中了
@@ -201,7 +203,7 @@ if (DUMP_EN) {
 let zhMap = {};
 if (MT === 'agent') {
   if (!ZHFILE) { console.error('--mt agent 需要 --zh-file'); process.exit(2); }
-  const raw = JSON.parse(fs.readFileSync(ZHFILE, 'utf8'));
+  const raw = readJson(ZHFILE);
   zhMap = raw.map || raw;
 }
 for (const s of sentences) {

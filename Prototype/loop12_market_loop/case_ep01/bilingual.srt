@@ -1,0 +1,59 @@
+1
+00:00:00,000 --> 00:00:03,255
+五个小改动，能让任何视频看起来更贵。
+Five small edits that make any video look more expensive.
+
+2
+00:00:03,575 --> 00:00:06,525
+第一：跟着节拍剪，而不是跟着静音剪。
+Number one: cut on the beat, not on the silence.
+
+3
+00:00:06,845 --> 00:00:09,748
+第二：把字幕放在安全区内，
+Number two: keep your subtitles inside the safe area, at least
+
+4
+00:00:09,748 --> 00:00:12,650
+离底边至少四十像素。
+forty pixels from the bottom edge.
+
+5
+00:00:12,970 --> 00:00:16,623
+第三：把响度归一到 −16 LUFS
+Number three: normalize the audio to minus sixteen LUFS, and
+
+6
+00:00:16,623 --> 00:00:20,276
+，对白峰值不要超过 −1 dB。
+never let the dialogue peak above minus one dB.
+
+7
+00:00:20,596 --> 00:00:23,899
+第四：导出用 15 Mbps，
+Number four: export at fifteen megabits per second for a clean
+
+8
+00:00:23,899 --> 00:00:27,202
+上传更干净；发布前先看开头三秒。
+upload, and always check the first three seconds.
+
+9
+00:00:27,522 --> 00:00:29,700
+第五：发布之前，关掉声音看一遍自己的
+Number five: before you publish, watch your own video once with
+
+10
+00:00:29,700 --> 00:00:31,879
+视频。
+the sound off.
+
+11
+00:00:32,199 --> 00:00:34,787
+这就是全部清单。存下来，
+That is the whole checklist. Save it, and your next edit will
+
+12
+00:00:34,787 --> 00:00:37,375
+下次剪辑能省一半时间。
+take half the time.

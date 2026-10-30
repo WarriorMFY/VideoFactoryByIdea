@@ -22,6 +22,7 @@
 | `run_rescue_acceptance.mjs` | **小循环 7**：短句救援验收 —— 最优预处理链是否真的更准 / 跨素材是否倒退 / 证伪证据是否充分 / 是否伤中长句（会顺带调三支探针） | `History/loops/loop07/acceptance.md` |
 | `run_review_acceptance.mjs` | **小循环 8**：校对回写闭环 —— 恒等回写逐字节一致 / 改动只落指定行 / 三类误操作被拒绝 / 回写后能出片 | `History/loops/loop08/acceptance.md` |
 | `run_long_acceptance.mjs` | **小循环 9**：49 分钟长视频压测（全链路耗时/字幕条数/校对表规模）+ 术语一致性审计回归 | `History/loops/loop09/acceptance.md` |
+| `run_market_loop_acceptance.mjs` | **小循环 12**：市场 ↔ 工厂闭环 —— 侦查有数据 / 成片可发布 / 双语齐全 / 高亮存在 / 交付包完整 / 空反馈诚实 / 规则可跑 | `History/loops/loop12/acceptance.md` |
 | `run_knowledge_acceptance.mjs` | **小循环 11**：知识型内容链路 —— 内容分诊（knowledge vs narrative）／数值单位规范化（含幂等与不误伤）／中文单位正确性（含对照组）／术语候选 | `History/loops/loop11/acceptance.md` |
 
 ## 怎么用
@@ -36,6 +37,7 @@ node Tool\acceptance\run_rescue_acceptance.mjs --force                 # 小循�
 node Tool\acceptance\run_review_acceptance.mjs --force                 # 小循环 8：校对回写闭环
 node Tool\acceptance\run_long_acceptance.mjs                           # 小循环 9：49 分钟长视频压测（第一次跑约 25 分钟）
 node Tool\acceptance\run_knowledge_acceptance.mjs --force              # 小循环 11：知识型内容（分诊/单位/术语）
+node Tool\acceptance\run_market_loop_acceptance.mjs                   # 小循环 12：市场闭环（需网络：B 站公开接口 + Edge TTS）
 
 # 单独验一个 EDL / 一条成片
 node Tool\acceptance\verify_edl.mjs out\edits.json bench\ground_truth.json --json out\verify.json

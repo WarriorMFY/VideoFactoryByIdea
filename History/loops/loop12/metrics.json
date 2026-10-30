@@ -1,0 +1,81 @@
+{
+  "generated_at": "2026-10-30T09:53:00.169Z",
+  "recon": {
+    "pool": 134,
+    "candidates": 60,
+    "keywords": [
+      {
+        "kw": "TED 中英",
+        "num": 1000,
+        "top_play": 12880872
+      },
+      {
+        "kw": "英文演讲 双语",
+        "num": 1000,
+        "top_play": 3983012
+      },
+      {
+        "kw": "外网搬运 双语",
+        "num": 1000,
+        "top_play": 1314117
+      },
+      {
+        "kw": "编程教程 英文",
+        "num": 1000,
+        "top_play": 25167482
+      },
+      {
+        "kw": "Blender 教程 双语",
+        "num": 1000,
+        "top_play": 19029327
+      },
+      {
+        "kw": "剪辑教程 英文",
+        "num": 1000,
+        "top_play": 4178068
+      },
+      {
+        "kw": "纪录片 中英双字",
+        "num": 1000,
+        "top_play": 1187958
+      }
+    ],
+    "top_keyword": "编程教程 英文"
+  },
+  "episode": {
+    "path": "Deliverables\\ep01_editing_tips",
+    "final_s": 37.374,
+    "w": 1280,
+    "h": 720,
+    "qa": "PASS",
+    "cues": 12,
+    "bilingual": 12,
+    "ass_events": 88,
+    "wer": 0.0952,
+    "coverage": 1
+  },
+  "publish_checks": {
+    "has_title": true,
+    "has_tags": true,
+    "has_zone": true,
+    "has_upload_checklist": true,
+    "has_license_note": true,
+    "has_feedback_steps": true
+  },
+  "feedback": {
+    "empty_report_says_pending": true,
+    "selftest_actions": 4
+  },
+  "checks": {
+    "recon_has_data": true,
+    "recon_picks_niche": true,
+    "final_is_publishable": true,
+    "bilingual_complete": true,
+    "karaoke_present": true,
+    "asr_good_enough": true,
+    "package_complete": true,
+    "feedback_honest_when_empty": true,
+    "feedback_rules_runnable": true
+  },
+  "pass": true
+}
