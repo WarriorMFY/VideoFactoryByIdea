@@ -1,0 +1,1046 @@
+[Script Info]
+; 双语 + 逐词高亮（karaoke）—— 由 Tool/subtitle/make_ass.mjs 生成
+ScriptType: v4.00+
+PlayResX: 1280
+PlayResY: 720
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.709
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: ZH,SimHei,40,&H00FFFFFF,&H00FFFFFF,&H00141414,&H78000000,0,0,0,0,100,100,0,0,1,2.4,1.0,2,48,48,134,1
+Style: EN,Arial,36,&H00FFFFFF,&H00FFFFFF,&H00141414,&H78000000,-1,0,0,0,100,100,0,0,1,2.0,0.8,2,48,48,26,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:03.65,0:00:08.60,ZH,,0,0,227,,我们有主引擎启动或同意主引擎\N启动。
+Dialogue: 1,0:00:03.65,0:00:03.89,EN,,0,0,0,,{\c&HC8E633&}we{\r} have main engine starting or agreed\Nto one
+Dialogue: 1,0:00:03.89,0:00:04.22,EN,,0,0,0,,we {\c&HC8E633&}have{\r} main engine starting or agreed\Nto one
+Dialogue: 1,0:00:04.22,0:00:04.46,EN,,0,0,0,,we have {\c&HC8E633&}main{\r} engine starting or agreed\Nto one
+Dialogue: 1,0:00:04.46,0:00:04.82,EN,,0,0,0,,we have main {\c&HC8E633&}engine{\r} starting or agreed\Nto one
+Dialogue: 1,0:00:04.82,0:00:05.84,EN,,0,0,0,,we have main engine {\c&HC8E633&}starting{\r} or agreed\Nto one
+Dialogue: 1,0:00:05.84,0:00:06.41,EN,,0,0,0,,we have main engine starting {\c&HC8E633&}or{\r} agreed\Nto one
+Dialogue: 1,0:00:06.41,0:00:07.34,EN,,0,0,0,,we have main engine starting or {\c&HC8E633&}agreed{\r}\Nto one
+Dialogue: 1,0:00:07.34,0:00:08.24,EN,,0,0,0,,we have main engine starting or agreed\N{\c&HC8E633&}to{\r} one
+Dialogue: 1,0:00:08.24,0:00:08.60,EN,,0,0,0,,we have main engine starting or agreed\Nto {\c&HC8E633&}one{\r}
+Dialogue: 0,0:00:09.77,0:00:15.05,ZH,,0,0,227,,诶，啊
+Dialogue: 1,0:00:09.77,0:00:15.05,EN,,0,0,0,,{\c&HC8E633&}ah{\r}
+Dialogue: 0,0:00:23.39,0:00:31.28,ZH,,0,0,227,,听着， Celia ，\N我们必须遵循我们的选择，\N您是机器人，这是一个很棒的空\N间，您为什么不告诉我这是您的。
+Dialogue: 1,0:00:23.39,0:00:23.75,EN,,0,0,0,,{\c&HC8E633&}look{\r} celia we have to follow our options\Nyou it you robotics nice one of the\Nawesome space why don't you just tell me\Nthat's your
+Dialogue: 1,0:00:23.75,0:00:24.44,EN,,0,0,0,,look {\c&HC8E633&}celia{\r} {\c&HC8E633&}we{\r} have to follow our options\Nyou it you robotics nice one of the\Nawesome space why don't you just tell me\Nthat's your
+Dialogue: 1,0:00:24.44,0:00:24.77,EN,,0,0,0,,look celia we {\c&HC8E633&}have{\r} {\c&HC8E633&}to{\r} follow our options\Nyou it you robotics nice one of the\Nawesome space why don't you just tell me\Nthat's your
+Dialogue: 1,0:00:24.77,0:00:25.16,EN,,0,0,0,,look celia we have to {\c&HC8E633&}follow{\r} our options\Nyou it you robotics nice one of the\Nawesome space why don't you just tell me\Nthat's your
+Dialogue: 1,0:00:25.16,0:00:25.40,EN,,0,0,0,,look celia we have to follow {\c&HC8E633&}our{\r} options\Nyou it you robotics nice one of the\Nawesome space why don't you just tell me\Nthat's your
+Dialogue: 1,0:00:25.40,0:00:26.30,EN,,0,0,0,,look celia we have to follow our {\c&HC8E633&}options{\r}\Nyou it you robotics nice one of the\Nawesome space why don't you just tell me\Nthat's your
+Dialogue: 1,0:00:26.30,0:00:26.57,EN,,0,0,0,,look celia we have to follow our options\N{\c&HC8E633&}you{\r} {\c&HC8E633&}it{\r} you robotics nice one of the\Nawesome space why don't you just tell me\Nthat's your
+Dialogue: 1,0:00:26.57,0:00:27.28,EN,,0,0,0,,look celia we have to follow our options\Nyou it {\c&HC8E633&}you{\r} {\c&HC8E633&}robotics{\r} nice one of the\Nawesome space why don't you just tell me\Nthat's your
+Dialogue: 1,0:00:27.28,0:00:27.59,EN,,0,0,0,,look celia we have to follow our options\Nyou it you robotics {\c&HC8E633&}nice{\r} one of the\Nawesome space why don't you just tell me\Nthat's your
+Dialogue: 1,0:00:27.59,0:00:27.83,EN,,0,0,0,,look celia we have to follow our options\Nyou it you robotics nice {\c&HC8E633&}one{\r} {\c&HC8E633&}of{\r} the\Nawesome space why don't you just tell me\Nthat's your
+Dialogue: 1,0:00:27.83,0:00:28.10,EN,,0,0,0,,look celia we have to follow our options\Nyou it you robotics nice one of {\c&HC8E633&}the{\r}\Nawesome space why don't you just tell me\Nthat's your
+Dialogue: 1,0:00:28.10,0:00:28.53,EN,,0,0,0,,look celia we have to follow our options\Nyou it you robotics nice one of the\N{\c&HC8E633&}awesome{\r} space why don't you just tell me\Nthat's your
+Dialogue: 1,0:00:28.53,0:00:29.42,EN,,0,0,0,,look celia we have to follow our options\Nyou it you robotics nice one of the\Nawesome {\c&HC8E633&}space{\r} why don't you just tell me\Nthat's your
+Dialogue: 1,0:00:29.42,0:00:29.84,EN,,0,0,0,,look celia we have to follow our options\Nyou it you robotics nice one of the\Nawesome space {\c&HC8E633&}why{\r} don't you just tell me\Nthat's your
+Dialogue: 1,0:00:29.84,0:00:30.05,EN,,0,0,0,,look celia we have to follow our options\Nyou it you robotics nice one of the\Nawesome space why {\c&HC8E633&}don't{\r} you just tell me\Nthat's your
+Dialogue: 1,0:00:30.05,0:00:30.45,EN,,0,0,0,,look celia we have to follow our options\Nyou it you robotics nice one of the\Nawesome space why don't {\c&HC8E633&}you{\r} {\c&HC8E633&}just{\r} tell me\Nthat's your
+Dialogue: 1,0:00:30.45,0:00:30.80,EN,,0,0,0,,look celia we have to follow our options\Nyou it you robotics nice one of the\Nawesome space why don't you just {\c&HC8E633&}tell{\r} {\c&HC8E633&}me{\r}\Nthat's your
+Dialogue: 1,0:00:30.80,0:00:31.01,EN,,0,0,0,,look celia we have to follow our options\Nyou it you robotics nice one of the\Nawesome space why don't you just tell me\N{\c&HC8E633&}that's{\r} your
+Dialogue: 1,0:00:31.01,0:00:31.28,EN,,0,0,0,,look celia we have to follow our options\Nyou it you robotics nice one of the\Nawesome space why don't you just tell me\Nthat's {\c&HC8E633&}your{\r}
+Dialogue: 0,0:00:32.15,0:00:34.97,ZH,,0,0,227,,我手头的角色我热爱自由，\N但它确实如此。
+Dialogue: 1,0:00:32.15,0:00:32.51,EN,,0,0,0,,{\c&HC8E633&}my{\r} {\c&HC8E633&}my{\r} role on hand i love freedom but\Nit's
+Dialogue: 1,0:00:32.51,0:00:33.02,EN,,0,0,0,,my my {\c&HC8E633&}role{\r} {\c&HC8E633&}on{\r} hand i love freedom but\Nit's
+Dialogue: 1,0:00:33.02,0:00:33.83,EN,,0,0,0,,my my role on {\c&HC8E633&}hand{\r} {\c&HC8E633&}i{\r} love freedom but\Nit's
+Dialogue: 1,0:00:33.83,0:00:34.04,EN,,0,0,0,,my my role on hand i {\c&HC8E633&}love{\r} freedom but\Nit's
+Dialogue: 1,0:00:34.04,0:00:34.46,EN,,0,0,0,,my my role on hand i love {\c&HC8E633&}freedom{\r} but\Nit's
+Dialogue: 1,0:00:34.46,0:00:34.70,EN,,0,0,0,,my my role on hand i love freedom {\c&HC8E633&}but{\r}\Nit's
+Dialogue: 1,0:00:34.70,0:00:34.97,EN,,0,0,0,,my my role on hand i love freedom but\N{\c&HC8E633&}it's{\r}
+Dialogue: 0,0:00:36.56,0:00:41.42,ZH,,0,0,227,,好吧，罚款，做噩梦时吓坏了，\N不认为她是，但他的巨人会有电\N话。
+Dialogue: 1,0:00:36.56,0:00:36.77,EN,,0,0,0,,{\c&HC8E633&}alright{\r} right fine a freaked out on\Nhaving nightmares don't think she's but\Nhe's giant will have call
+Dialogue: 1,0:00:36.77,0:00:37.75,EN,,0,0,0,,alright {\c&HC8E633&}right{\r} {\c&HC8E633&}fine{\r} {\c&HC8E633&}a{\r} freaked out on\Nhaving nightmares don't think she's but\Nhe's giant will have call
+Dialogue: 1,0:00:37.75,0:00:38.18,EN,,0,0,0,,alright right fine a {\c&HC8E633&}freaked{\r} out on\Nhaving nightmares don't think she's but\Nhe's giant will have call
+Dialogue: 1,0:00:38.18,0:00:38.54,EN,,0,0,0,,alright right fine a freaked {\c&HC8E633&}out{\r} {\c&HC8E633&}on{\r}\Nhaving nightmares don't think she's but\Nhe's giant will have call
+Dialogue: 1,0:00:38.54,0:00:38.75,EN,,0,0,0,,alright right fine a freaked out on\N{\c&HC8E633&}having{\r} nightmares don't think she's but\Nhe's giant will have call
+Dialogue: 1,0:00:38.75,0:00:39.15,EN,,0,0,0,,alright right fine a freaked out on\Nhaving {\c&HC8E633&}nightmares{\r} don't think she's but\Nhe's giant will have call
+Dialogue: 1,0:00:39.15,0:00:39.59,EN,,0,0,0,,alright right fine a freaked out on\Nhaving nightmares {\c&HC8E633&}don't{\r} {\c&HC8E633&}think{\r} she's but\Nhe's giant will have call
+Dialogue: 1,0:00:39.59,0:00:39.83,EN,,0,0,0,,alright right fine a freaked out on\Nhaving nightmares don't think {\c&HC8E633&}she's{\r} but\Nhe's giant will have call
+Dialogue: 1,0:00:39.83,0:00:39.99,EN,,0,0,0,,alright right fine a freaked out on\Nhaving nightmares don't think she's {\c&HC8E633&}but{\r}\Nhe's giant will have call
+Dialogue: 1,0:00:39.99,0:00:40.51,EN,,0,0,0,,alright right fine a freaked out on\Nhaving nightmares don't think she's but\N{\c&HC8E633&}he's{\r} {\c&HC8E633&}giant{\r} will have call
+Dialogue: 1,0:00:40.51,0:00:41.02,EN,,0,0,0,,alright right fine a freaked out on\Nhaving nightmares don't think she's but\Nhe's giant {\c&HC8E633&}will{\r} {\c&HC8E633&}have{\r} call
+Dialogue: 1,0:00:41.02,0:00:41.42,EN,,0,0,0,,alright right fine a freaked out on\Nhaving nightmares don't think she's but\Nhe's giant will have {\c&HC8E633&}call{\r}
+Dialogue: 0,0:00:43.22,0:00:44.06,ZH,,0,0,227,,做得很好。
+Dialogue: 1,0:00:43.22,0:00:43.58,EN,,0,0,0,,{\c&HC8E633&}well{\r} done
+Dialogue: 1,0:00:43.58,0:00:44.06,EN,,0,0,0,,well {\c&HC8E633&}done{\r}
+Dialogue: 0,0:00:49.04,0:00:52.49,ZH,,0,0,227,,机器人记忆水槽和很多。
+Dialogue: 1,0:00:49.04,0:00:49.52,EN,,0,0,0,,{\c&HC8E633&}robots{\r} memory sink and lot
+Dialogue: 1,0:00:49.52,0:00:50.06,EN,,0,0,0,,robots {\c&HC8E633&}memory{\r} sink and lot
+Dialogue: 1,0:00:50.06,0:00:51.11,EN,,0,0,0,,robots memory {\c&HC8E633&}sink{\r} and lot
+Dialogue: 1,0:00:51.11,0:00:52.19,EN,,0,0,0,,robots memory sink {\c&HC8E633&}and{\r} lot
+Dialogue: 1,0:00:52.19,0:00:52.49,EN,,0,0,0,,robots memory sink and {\c&HC8E633&}lot{\r}
+Dialogue: 0,0:00:59.87,0:01:00.32,ZH,,0,0,227,,是 關於 疾病 的
+Dialogue: 1,0:00:59.87,0:01:00.32,EN,,0,0,0,,{\c&HC8E633&}disease{\r}
+Dialogue: 0,0:01:56.63,0:01:57.59,ZH,,0,0,227,,您应该成为捐赠者吗？
+Dialogue: 1,0:01:56.63,0:01:56.93,EN,,0,0,0,,{\c&HC8E633&}should{\r} you be donor
+Dialogue: 1,0:01:56.93,0:01:57.14,EN,,0,0,0,,should {\c&HC8E633&}you{\r} {\c&HC8E633&}be{\r} donor
+Dialogue: 1,0:01:57.14,0:01:57.59,EN,,0,0,0,,should you be {\c&HC8E633&}donor{\r}
+Dialogue: 0,0:02:10.34,0:02:11.84,ZH,,0,0,227,,我，你们说得最多九个。
+Dialogue: 1,0:02:10.34,0:02:10.54,EN,,0,0,0,,{\c&HC8E633&}i{\r} you guys talking most nine
+Dialogue: 1,0:02:10.54,0:02:10.94,EN,,0,0,0,,i {\c&HC8E633&}you{\r} {\c&HC8E633&}guys{\r} talking most nine
+Dialogue: 1,0:02:10.94,0:02:11.27,EN,,0,0,0,,i you guys {\c&HC8E633&}talking{\r} most nine
+Dialogue: 1,0:02:11.27,0:02:11.51,EN,,0,0,0,,i you guys talking {\c&HC8E633&}most{\r} nine
+Dialogue: 1,0:02:11.51,0:02:11.84,EN,,0,0,0,,i you guys talking most {\c&HC8E633&}nine{\r}
+Dialogue: 0,0:02:15.41,0:02:16.58,ZH,,0,0,227,,仍然为您服务。
+Dialogue: 1,0:02:15.41,0:02:15.92,EN,,0,0,0,,{\c&HC8E633&}still{\r} {\c&HC8E633&}by{\r} for you
+Dialogue: 1,0:02:15.92,0:02:16.31,EN,,0,0,0,,still by {\c&HC8E633&}for{\r} you
+Dialogue: 1,0:02:16.31,0:02:16.58,EN,,0,0,0,,still by for {\c&HC8E633&}you{\r}
+Dialogue: 0,0:02:39.56,0:02:46.07,ZH,,0,0,227,,规则
+Dialogue: 1,0:02:39.56,0:02:46.07,EN,,0,0,0,,{\c&HC8E633&}rule{\r}
+Dialogue: 1,0:02:54.93,0:02:57.26,EN,,0,0,0,,{\c&HC8E633&}new{\r} new
+Dialogue: 0,0:02:54.93,0:02:59.90,ZH,,0,0,227,,!new 新贴
+Dialogue: 1,0:02:57.26,0:02:59.90,EN,,0,0,0,,new {\c&HC8E633&}new{\r}
+Dialogue: 0,0:03:10.37,0:03:13.61,ZH,,0,0,227,,你准备好了吗，因为你已经准备\N好成为一名摇滚明星了？
+Dialogue: 1,0:03:10.37,0:03:10.64,EN,,0,0,0,,{\c&HC8E633&}are{\r} {\c&HC8E633&}you{\r} ready cause you're ready you're\Na rock star
+Dialogue: 1,0:03:10.64,0:03:11.66,EN,,0,0,0,,are you {\c&HC8E633&}ready{\r} cause you're ready you're\Na rock star
+Dialogue: 1,0:03:11.66,0:03:11.99,EN,,0,0,0,,are you ready {\c&HC8E633&}cause{\r} you're ready you're\Na rock star
+Dialogue: 1,0:03:11.99,0:03:12.53,EN,,0,0,0,,are you ready cause {\c&HC8E633&}you're{\r} {\c&HC8E633&}ready{\r} you're\Na rock star
+Dialogue: 1,0:03:12.53,0:03:12.80,EN,,0,0,0,,are you ready cause you're ready {\c&HC8E633&}you're{\r}\Na rock star
+Dialogue: 1,0:03:12.80,0:03:13.10,EN,,0,0,0,,are you ready cause you're ready you're\N{\c&HC8E633&}a{\r} {\c&HC8E633&}rock{\r} star
+Dialogue: 1,0:03:13.10,0:03:13.61,EN,,0,0,0,,are you ready cause you're ready you're\Na rock {\c&HC8E633&}star{\r}
+Dialogue: 0,0:03:16.16,0:03:19.49,ZH,,0,0,227,,看起来像身体，我们应该有大约\N十分钟的时间。
+Dialogue: 1,0:03:16.16,0:03:16.43,EN,,0,0,0,,{\c&HC8E633&}as{\r} {\c&HC8E633&}it{\r} look body we should have about ten\Nminutes
+Dialogue: 1,0:03:16.43,0:03:16.73,EN,,0,0,0,,as it {\c&HC8E633&}look{\r} body we should have about ten\Nminutes
+Dialogue: 1,0:03:16.73,0:03:17.99,EN,,0,0,0,,as it look {\c&HC8E633&}body{\r} {\c&HC8E633&}we{\r} should have about ten\Nminutes
+Dialogue: 1,0:03:17.99,0:03:18.35,EN,,0,0,0,,as it look body we {\c&HC8E633&}should{\r} have about ten\Nminutes
+Dialogue: 1,0:03:18.35,0:03:18.56,EN,,0,0,0,,as it look body we should {\c&HC8E633&}have{\r} about ten\Nminutes
+Dialogue: 1,0:03:18.56,0:03:18.83,EN,,0,0,0,,as it look body we should have {\c&HC8E633&}about{\r} ten\Nminutes
+Dialogue: 1,0:03:18.83,0:03:19.07,EN,,0,0,0,,as it look body we should have about {\c&HC8E633&}ten{\r}\Nminutes
+Dialogue: 1,0:03:19.07,0:03:19.49,EN,,0,0,0,,as it look body we should have about ten\N{\c&HC8E633&}minutes{\r}
+Dialogue: 0,0:03:20.69,0:03:21.71,ZH,,0,0,227,,太好了。
+Dialogue: 1,0:03:20.69,0:03:20.96,EN,,0,0,0,,{\c&HC8E633&}well{\r} that's perfect
+Dialogue: 1,0:03:20.96,0:03:21.23,EN,,0,0,0,,well {\c&HC8E633&}that's{\r} perfect
+Dialogue: 1,0:03:21.23,0:03:21.71,EN,,0,0,0,,well that's {\c&HC8E633&}perfect{\r}
+Dialogue: 0,0:03:22.61,0:03:26.75,ZH,,0,0,227,,罗姆尼，所有系统都可以，\N你去吧。
+Dialogue: 1,0:03:22.61,0:03:23.15,EN,,0,0,0,,{\c&HC8E633&}romney{\r} one all systems go you go
+Dialogue: 1,0:03:23.15,0:03:24.14,EN,,0,0,0,,romney {\c&HC8E633&}one{\r} all systems go you go
+Dialogue: 1,0:03:24.14,0:03:24.47,EN,,0,0,0,,romney one {\c&HC8E633&}all{\r} systems go you go
+Dialogue: 1,0:03:24.47,0:03:25.13,EN,,0,0,0,,romney one all {\c&HC8E633&}systems{\r} go you go
+Dialogue: 1,0:03:25.13,0:03:25.73,EN,,0,0,0,,romney one all systems {\c&HC8E633&}go{\r} you go
+Dialogue: 1,0:03:25.73,0:03:26.31,EN,,0,0,0,,romney one all systems go {\c&HC8E633&}you{\r} go
+Dialogue: 1,0:03:26.31,0:03:26.75,EN,,0,0,0,,romney one all systems go you {\c&HC8E633&}go{\r}
+Dialogue: 0,0:03:41.84,0:03:42.86,ZH,,0,0,227,,太好了。
+Dialogue: 1,0:03:41.84,0:03:42.20,EN,,0,0,0,,{\c&HC8E633&}that's{\r} nice
+Dialogue: 1,0:03:42.20,0:03:42.86,EN,,0,0,0,,that's {\c&HC8E633&}nice{\r}
+Dialogue: 0,0:03:43.61,0:03:44.87,ZH,,0,0,227,,不足为虑。
+Dialogue: 1,0:03:43.61,0:03:44.09,EN,,0,0,0,,{\c&HC8E633&}nothing{\r} {\c&HC8E633&}to{\r} worry about that
+Dialogue: 1,0:03:44.09,0:03:44.33,EN,,0,0,0,,nothing to {\c&HC8E633&}worry{\r} about that
+Dialogue: 1,0:03:44.33,0:03:44.60,EN,,0,0,0,,nothing to worry {\c&HC8E633&}about{\r} that
+Dialogue: 1,0:03:44.60,0:03:44.87,EN,,0,0,0,,nothing to worry about {\c&HC8E633&}that{\r}
+Dialogue: 0,0:03:51.08,0:03:51.80,ZH,,0,0,227,,是吗？
+Dialogue: 1,0:03:51.08,0:03:51.26,EN,,0,0,0,,{\c&HC8E633&}do{\r} she's
+Dialogue: 1,0:03:51.26,0:03:51.80,EN,,0,0,0,,do {\c&HC8E633&}she's{\r}
+Dialogue: 0,0:03:54.38,0:03:55.04,ZH,,0,0,227,,你笑了。
+Dialogue: 1,0:03:54.38,0:03:54.71,EN,,0,0,0,,{\c&HC8E633&}you{\r} laugh
+Dialogue: 1,0:03:54.71,0:03:55.04,EN,,0,0,0,,you {\c&HC8E633&}laugh{\r}
+Dialogue: 0,0:03:56.42,0:03:59.33,ZH,,0,0,227,,她是你被打败的豪华轿车。
+Dialogue: 1,0:03:56.42,0:03:56.66,EN,,0,0,0,,{\c&HC8E633&}she's{\r} your posh the beaten the to
+Dialogue: 1,0:03:56.66,0:03:58.04,EN,,0,0,0,,she's {\c&HC8E633&}your{\r} {\c&HC8E633&}posh{\r} the beaten the to
+Dialogue: 1,0:03:58.04,0:03:58.70,EN,,0,0,0,,she's your posh {\c&HC8E633&}the{\r} beaten the to
+Dialogue: 1,0:03:58.70,0:03:59.06,EN,,0,0,0,,she's your posh the {\c&HC8E633&}beaten{\r} the to
+Dialogue: 1,0:03:59.06,0:03:59.33,EN,,0,0,0,,she's your posh the beaten {\c&HC8E633&}the{\r} {\c&HC8E633&}to{\r}
+Dialogue: 0,0:04:00.50,0:04:01.07,ZH,,0,0,227,,诚实的人。
+Dialogue: 1,0:04:00.50,0:04:01.07,EN,,0,0,0,,{\c&HC8E633&}the{\r} {\c&HC8E633&}honest{\r}
+Dialogue: 0,0:04:04.52,0:04:05.27,ZH,,0,0,227,,余量
+Dialogue: 1,0:04:04.52,0:04:05.27,EN,,0,0,0,,{\c&HC8E633&}reminder{\r}
+Dialogue: 0,0:04:06.22,0:04:06.62,ZH,,0,0,227,,爱。
+Dialogue: 1,0:04:06.22,0:04:06.62,EN,,0,0,0,,{\c&HC8E633&}love{\r}
+Dialogue: 0,0:04:51.77,0:04:52.37,ZH,,0,0,227,,诶，啊
+Dialogue: 1,0:04:51.77,0:04:52.37,EN,,0,0,0,,{\c&HC8E633&}ah{\r}
+Dialogue: 0,0:04:55.73,0:04:57.38,ZH,,0,0,227,,内存覆盖正在进行中。
+Dialogue: 1,0:04:55.73,0:04:56.06,EN,,0,0,0,,{\c&HC8E633&}memory{\r} override in progress
+Dialogue: 1,0:04:56.06,0:04:56.63,EN,,0,0,0,,memory {\c&HC8E633&}override{\r} {\c&HC8E633&}in{\r} progress
+Dialogue: 1,0:04:56.63,0:04:57.38,EN,,0,0,0,,memory override in {\c&HC8E633&}progress{\r}
+Dialogue: 0,0:04:58.22,0:04:59.00,ZH,,0,0,227,,角色
+Dialogue: 1,0:04:58.22,0:04:59.00,EN,,0,0,0,,{\c&HC8E633&}character{\r}
+Dialogue: 0,0:05:01.07,0:05:03.08,ZH,,0,0,227,,啊，对不起，对不起。
+Dialogue: 1,0:05:01.07,0:05:01.54,EN,,0,0,0,,{\c&HC8E633&}ah{\r} {\c&HC8E633&}i'm{\r} sorry sorry
+Dialogue: 1,0:05:01.54,0:05:02.66,EN,,0,0,0,,ah i'm {\c&HC8E633&}sorry{\r} sorry
+Dialogue: 1,0:05:02.66,0:05:03.08,EN,,0,0,0,,ah i'm sorry {\c&HC8E633&}sorry{\r}
+Dialogue: 0,0:05:14.96,0:05:15.68,ZH,,0,0,227,,看看Celia。
+Dialogue: 1,0:05:14.96,0:05:15.18,EN,,0,0,0,,{\c&HC8E633&}look{\r} celia
+Dialogue: 1,0:05:15.18,0:05:15.68,EN,,0,0,0,,look {\c&HC8E633&}celia{\r}
+Dialogue: 0,0:05:17.36,0:05:19.28,ZH,,0,0,227,,我们必须追随我们的激情。
+Dialogue: 1,0:05:17.36,0:05:17.84,EN,,0,0,0,,{\c&HC8E633&}we{\r} {\c&HC8E633&}have{\r} {\c&HC8E633&}to{\r} follow our passions
+Dialogue: 1,0:05:17.84,0:05:18.29,EN,,0,0,0,,we have to {\c&HC8E633&}follow{\r} our passions
+Dialogue: 1,0:05:18.29,0:05:19.28,EN,,0,0,0,,we have to follow {\c&HC8E633&}our{\r} {\c&HC8E633&}passions{\r}
+Dialogue: 0,0:05:20.33,0:05:21.74,ZH,,0,0,227,,你有你的机器人。
+Dialogue: 1,0:05:20.33,0:05:20.51,EN,,0,0,0,,{\c&HC8E633&}you{\r} have your robotics
+Dialogue: 1,0:05:20.51,0:05:20.72,EN,,0,0,0,,you {\c&HC8E633&}have{\r} your robotics
+Dialogue: 1,0:05:20.72,0:05:20.90,EN,,0,0,0,,you have {\c&HC8E633&}your{\r} robotics
+Dialogue: 1,0:05:20.90,0:05:21.74,EN,,0,0,0,,you have your {\c&HC8E633&}robotics{\r}
+Dialogue: 0,0:05:24.83,0:05:26.72,ZH,,0,0,227,,我只想在太空中表现出色。
+Dialogue: 1,0:05:24.83,0:05:25.22,EN,,0,0,0,,{\c&HC8E633&}i{\r} {\c&HC8E633&}just{\r} want to be awesome in space
+Dialogue: 1,0:05:25.22,0:05:25.64,EN,,0,0,0,,i just {\c&HC8E633&}want{\r} {\c&HC8E633&}to{\r} {\c&HC8E633&}be{\r} awesome in space
+Dialogue: 1,0:05:25.64,0:05:26.15,EN,,0,0,0,,i just want to be {\c&HC8E633&}awesome{\r} {\c&HC8E633&}in{\r} space
+Dialogue: 1,0:05:26.15,0:05:26.72,EN,,0,0,0,,i just want to be awesome in {\c&HC8E633&}space{\r}
+Dialogue: 0,0:05:38.06,0:05:40.04,ZH,,0,0,227,,还有两分钟就到了。
+Dialogue: 1,0:05:38.06,0:05:38.30,EN,,0,0,0,,{\c&HC8E633&}that{\r} are coming in two minutes left
+Dialogue: 1,0:05:38.30,0:05:39.29,EN,,0,0,0,,that {\c&HC8E633&}are{\r} {\c&HC8E633&}coming{\r} {\c&HC8E633&}in{\r} two minutes left
+Dialogue: 1,0:05:39.29,0:05:39.74,EN,,0,0,0,,that are coming in {\c&HC8E633&}two{\r} {\c&HC8E633&}minutes{\r} left
+Dialogue: 1,0:05:39.74,0:05:40.04,EN,,0,0,0,,that are coming in two minutes {\c&HC8E633&}left{\r}
+Dialogue: 0,0:05:45.98,0:05:48.92,ZH,,0,0,227,,财务只是承认你被我的机器人火\N腿吓坏了。
+Dialogue: 1,0:05:45.98,0:05:46.46,EN,,0,0,0,,{\c&HC8E633&}financial{\r} just admit that you're freaked\Nout by my robot ham
+Dialogue: 1,0:05:46.46,0:05:46.76,EN,,0,0,0,,financial {\c&HC8E633&}just{\r} admit that you're freaked\Nout by my robot ham
+Dialogue: 1,0:05:46.76,0:05:47.03,EN,,0,0,0,,financial just {\c&HC8E633&}admit{\r} that you're freaked\Nout by my robot ham
+Dialogue: 1,0:05:47.03,0:05:47.30,EN,,0,0,0,,financial just admit {\c&HC8E633&}that{\r} {\c&HC8E633&}you're{\r} freaked\Nout by my robot ham
+Dialogue: 1,0:05:47.30,0:05:47.69,EN,,0,0,0,,financial just admit that you're {\c&HC8E633&}freaked{\r}\Nout by my robot ham
+Dialogue: 1,0:05:47.69,0:05:48.17,EN,,0,0,0,,financial just admit that you're freaked\N{\c&HC8E633&}out{\r} {\c&HC8E633&}by{\r} {\c&HC8E633&}my{\r} robot ham
+Dialogue: 1,0:05:48.17,0:05:48.59,EN,,0,0,0,,financial just admit that you're freaked\Nout by my {\c&HC8E633&}robot{\r} ham
+Dialogue: 1,0:05:48.59,0:05:48.92,EN,,0,0,0,,financial just admit that you're freaked\Nout by my robot {\c&HC8E633&}ham{\r}
+Dialogue: 0,0:05:55.85,0:05:57.80,ZH,,0,0,227,,这个Celia我很年轻。
+Dialogue: 1,0:05:55.85,0:05:56.14,EN,,0,0,0,,{\c&HC8E633&}this{\r} celia i was young
+Dialogue: 1,0:05:56.14,0:05:57.20,EN,,0,0,0,,this {\c&HC8E633&}celia{\r} {\c&HC8E633&}i{\r} was young
+Dialogue: 1,0:05:57.20,0:05:57.44,EN,,0,0,0,,this celia i {\c&HC8E633&}was{\r} young
+Dialogue: 1,0:05:57.44,0:05:57.80,EN,,0,0,0,,this celia i was {\c&HC8E633&}young{\r}
+Dialogue: 0,0:05:58.97,0:06:02.00,ZH,,0,0,227,,还有一个鸡巴，但没有理由毁灭\N这个世界。
+Dialogue: 1,0:05:58.97,0:05:59.15,EN,,0,0,0,,{\c&HC8E633&}and{\r} {\c&HC8E633&}a{\r} dick but there's no reason to\Ndestroy the world
+Dialogue: 1,0:05:59.15,0:06:00.20,EN,,0,0,0,,and a {\c&HC8E633&}dick{\r} but there's no reason to\Ndestroy the world
+Dialogue: 1,0:06:00.20,0:06:00.59,EN,,0,0,0,,and a dick {\c&HC8E633&}but{\r} {\c&HC8E633&}there's{\r} {\c&HC8E633&}no{\r} reason to\Ndestroy the world
+Dialogue: 1,0:06:00.59,0:06:00.95,EN,,0,0,0,,and a dick but there's no {\c&HC8E633&}reason{\r} {\c&HC8E633&}to{\r}\Ndestroy the world
+Dialogue: 1,0:06:00.95,0:06:01.34,EN,,0,0,0,,and a dick but there's no reason to\N{\c&HC8E633&}destroy{\r} the world
+Dialogue: 1,0:06:01.34,0:06:02.00,EN,,0,0,0,,and a dick but there's no reason to\Ndestroy {\c&HC8E633&}the{\r} {\c&HC8E633&}world{\r}
+Dialogue: 0,0:06:04.01,0:06:04.82,ZH,,0,0,227,,她为什么要这么做？
+Dialogue: 1,0:06:04.01,0:06:04.28,EN,,0,0,0,,{\c&HC8E633&}why{\r} {\c&HC8E633&}does{\r} she do this
+Dialogue: 1,0:06:04.28,0:06:04.52,EN,,0,0,0,,why does {\c&HC8E633&}she{\r} {\c&HC8E633&}do{\r} this
+Dialogue: 1,0:06:04.52,0:06:04.82,EN,,0,0,0,,why does she do {\c&HC8E633&}this{\r}
+Dialogue: 0,0:06:06.05,0:06:07.49,ZH,,0,0,227,,我们已经试过了。
+Dialogue: 1,0:06:06.05,0:06:06.23,EN,,0,0,0,,{\c&HC8E633&}we{\r} already tried that one
+Dialogue: 1,0:06:06.23,0:06:06.65,EN,,0,0,0,,we {\c&HC8E633&}already{\r} tried that one
+Dialogue: 1,0:06:06.65,0:06:06.98,EN,,0,0,0,,we already {\c&HC8E633&}tried{\r} that one
+Dialogue: 1,0:06:06.98,0:06:07.49,EN,,0,0,0,,we already tried {\c&HC8E633&}that{\r} {\c&HC8E633&}one{\r}
+Dialogue: 0,0:06:22.49,0:06:23.81,ZH,,0,0,227,,扎心了，老铁
+Dialogue: 1,0:06:22.49,0:06:22.79,EN,,0,0,0,,{\c&HC8E633&}you{\r} broke my heart
+Dialogue: 1,0:06:22.79,0:06:23.46,EN,,0,0,0,,you {\c&HC8E633&}broke{\r} {\c&HC8E633&}my{\r} heart
+Dialogue: 1,0:06:23.46,0:06:23.81,EN,,0,0,0,,you broke my {\c&HC8E633&}heart{\r}
+Dialogue: 0,0:06:26.12,0:06:27.68,ZH,,0,0,227,,你忘了我们地球。
+Dialogue: 1,0:06:26.12,0:06:26.30,EN,,0,0,0,,{\c&HC8E633&}you{\r} forgot we earth
+Dialogue: 1,0:06:26.30,0:06:27.23,EN,,0,0,0,,you {\c&HC8E633&}forgot{\r} {\c&HC8E633&}we{\r} earth
+Dialogue: 1,0:06:27.23,0:06:27.68,EN,,0,0,0,,you forgot we {\c&HC8E633&}earth{\r}
+Dialogue: 0,0:06:28.43,0:06:30.89,ZH,,0,0,227,,知道我应该扔垃圾。
+Dialogue: 1,0:06:28.43,0:06:29.63,EN,,0,0,0,,{\c&HC8E633&}know{\r} {\c&HC8E633&}i{\r} should just trash
+Dialogue: 1,0:06:29.63,0:06:29.96,EN,,0,0,0,,know i {\c&HC8E633&}should{\r} just trash
+Dialogue: 1,0:06:29.96,0:06:30.47,EN,,0,0,0,,know i should {\c&HC8E633&}just{\r} trash
+Dialogue: 1,0:06:30.47,0:06:30.89,EN,,0,0,0,,know i should just {\c&HC8E633&}trash{\r}
+Dialogue: 0,0:06:46.67,0:06:47.21,ZH,,0,0,227,,抱歉！為了防範濫發郵件，\N評論或留言中不允許有 URL\N 和電郵 Id
+Dialogue: 1,0:06:46.67,0:06:47.21,EN,,0,0,0,,{\c&HC8E633&}sorry{\r}
+Dialogue: 0,0:06:49.46,0:06:49.97,ZH,,0,0,227,,那活着。
+Dialogue: 1,0:06:49.46,0:06:49.73,EN,,0,0,0,,{\c&HC8E633&}that{\r} live
+Dialogue: 1,0:06:49.73,0:06:49.97,EN,,0,0,0,,that {\c&HC8E633&}live{\r}
+Dialogue: 0,0:06:58.31,0:06:59.03,ZH,,0,0,227,,好吧，我的球。
+Dialogue: 1,0:06:58.31,0:06:58.61,EN,,0,0,0,,{\c&HC8E633&}well{\r} {\c&HC8E633&}my{\r} ball
+Dialogue: 1,0:06:58.61,0:06:59.03,EN,,0,0,0,,well my {\c&HC8E633&}ball{\r}
+Dialogue: 0,0:07:01.31,0:07:01.76,ZH,,0,0,227,,本次
+Dialogue: 1,0:07:01.31,0:07:01.49,EN,,0,0,0,,{\c&HC8E633&}this{\r} time
+Dialogue: 1,0:07:01.49,0:07:01.76,EN,,0,0,0,,this {\c&HC8E633&}time{\r}
+Dialogue: 0,0:07:07.52,0:07:07.97,ZH,,0,0,227,,在安装时发生错误 : .
+Dialogue: 1,0:07:07.52,0:07:07.97,EN,,0,0,0,,{\c&HC8E633&}while{\r}
+Dialogue: 0,0:07:09.98,0:07:10.27,ZH,,0,0,227,,（吸）哈~
+Dialogue: 1,0:07:09.98,0:07:10.27,EN,,0,0,0,,{\c&HC8E633&}ha{\r}
+Dialogue: 0,0:07:34.70,0:07:37.49,ZH,,0,0,227,,“哇！
+Dialogue: 1,0:07:34.70,0:07:37.49,EN,,0,0,0,,{\c&HC8E633&}oh{\r}
+Dialogue: 0,0:08:23.78,0:08:24.71,ZH,,0,0,227,,第九，他本来要去的。
+Dialogue: 1,0:08:23.78,0:08:24.15,EN,,0,0,0,,{\c&HC8E633&}nine{\r} {\c&HC8E633&}he{\r} was gonna
+Dialogue: 1,0:08:24.15,0:08:24.35,EN,,0,0,0,,nine he {\c&HC8E633&}was{\r} gonna
+Dialogue: 1,0:08:24.35,0:08:24.71,EN,,0,0,0,,nine he was {\c&HC8E633&}gonna{\r}
+Dialogue: 0,0:08:25.46,0:08:27.26,ZH,,0,0,227,,那么就发生了，我们来吧。
+Dialogue: 1,0:08:25.46,0:08:26.39,EN,,0,0,0,,{\c&HC8E633&}happen{\r} {\c&HC8E633&}then{\r} {\c&HC8E633&}we{\r} have come on
+Dialogue: 1,0:08:26.39,0:08:26.63,EN,,0,0,0,,happen then we {\c&HC8E633&}have{\r} come on
+Dialogue: 1,0:08:26.63,0:08:26.96,EN,,0,0,0,,happen then we have {\c&HC8E633&}come{\r} on
+Dialogue: 1,0:08:26.96,0:08:27.26,EN,,0,0,0,,happen then we have come {\c&HC8E633&}on{\r}
+Dialogue: 0,0:08:38.06,0:08:39.41,ZH,,0,0,227,,世界改变了Celia。
+Dialogue: 1,0:08:38.06,0:08:38.27,EN,,0,0,0,,{\c&HC8E633&}the{\r} world's changed celia
+Dialogue: 1,0:08:38.27,0:08:38.60,EN,,0,0,0,,the {\c&HC8E633&}world's{\r} changed celia
+Dialogue: 1,0:08:38.60,0:08:38.96,EN,,0,0,0,,the world's {\c&HC8E633&}changed{\r} celia
+Dialogue: 1,0:08:38.96,0:08:39.41,EN,,0,0,0,,the world's changed {\c&HC8E633&}celia{\r}
+Dialogue: 0,0:08:54.08,0:08:55.04,ZH,,0,0,227,,也许我们可以。
+Dialogue: 1,0:08:54.08,0:08:54.53,EN,,0,0,0,,{\c&HC8E633&}maybe{\r} {\c&HC8E633&}we{\r} can to
+Dialogue: 1,0:08:54.53,0:08:54.71,EN,,0,0,0,,maybe we {\c&HC8E633&}can{\r} to
+Dialogue: 1,0:08:54.71,0:08:55.04,EN,,0,0,0,,maybe we can {\c&HC8E633&}to{\r}
+Dialogue: 0,0:08:57.20,0:08:58.40,ZH,,0,0,227,,显著
+Dialogue: 1,0:08:57.20,0:08:58.40,EN,,0,0,0,,{\c&HC8E633&}remarkably{\r}
+Dialogue: 0,0:09:18.14,0:09:18.53,ZH,,0,0,227,,你知道的。
+Dialogue: 1,0:09:18.14,0:09:18.53,EN,,0,0,0,,{\c&HC8E633&}you{\r} {\c&HC8E633&}know{\r}
+Dialogue: 0,0:09:20.99,0:09:22.55,ZH,,0,0,227,,听力是否模糊不清？
+Dialogue: 1,0:09:20.99,0:09:21.23,EN,,0,0,0,,{\c&HC8E633&}is{\r} {\c&HC8E633&}a{\r} listen to blurred from this
+Dialogue: 1,0:09:21.23,0:09:21.71,EN,,0,0,0,,is a {\c&HC8E633&}listen{\r} {\c&HC8E633&}to{\r} blurred from this
+Dialogue: 1,0:09:21.71,0:09:22.04,EN,,0,0,0,,is a listen to {\c&HC8E633&}blurred{\r} from this
+Dialogue: 1,0:09:22.04,0:09:22.22,EN,,0,0,0,,is a listen to blurred {\c&HC8E633&}from{\r} this
+Dialogue: 1,0:09:22.22,0:09:22.55,EN,,0,0,0,,is a listen to blurred from {\c&HC8E633&}this{\r}
+Dialogue: 0,0:09:25.01,0:09:25.82,ZH,,0,0,227,,情况变得更糟了。
+Dialogue: 1,0:09:25.01,0:09:25.43,EN,,0,0,0,,{\c&HC8E633&}that{\r} {\c&HC8E633&}are{\r} {\c&HC8E633&}gone{\r} worse
+Dialogue: 1,0:09:25.43,0:09:25.82,EN,,0,0,0,,that are gone {\c&HC8E633&}worse{\r}
+Dialogue: 0,0:09:52.22,0:09:57.26,ZH,,0,0,227,,即
+Dialogue: 1,0:09:52.22,0:09:57.26,EN,,0,0,0,,{\c&HC8E633&}that{\r}
+Dialogue: 0,0:12:14.42,0:12:19.40,ZH,,0,0,227,,我们制作了年迈的小明星或三二\N一。
+Dialogue: 1,0:12:14.42,0:12:14.66,EN,,0,0,0,,{\c&HC8E633&}we{\r} have made aged starlet or three two\None
+Dialogue: 1,0:12:14.66,0:12:14.99,EN,,0,0,0,,we {\c&HC8E633&}have{\r} made aged starlet or three two\None
+Dialogue: 1,0:12:14.99,0:12:15.26,EN,,0,0,0,,we have {\c&HC8E633&}made{\r} aged starlet or three two\None
+Dialogue: 1,0:12:15.26,0:12:15.62,EN,,0,0,0,,we have made {\c&HC8E633&}aged{\r} starlet or three two\None
+Dialogue: 1,0:12:15.62,0:12:16.64,EN,,0,0,0,,we have made aged {\c&HC8E633&}starlet{\r} or three two\None
+Dialogue: 1,0:12:16.64,0:12:17.33,EN,,0,0,0,,we have made aged starlet {\c&HC8E633&}or{\r} three two\None
+Dialogue: 1,0:12:17.33,0:12:18.11,EN,,0,0,0,,we have made aged starlet or {\c&HC8E633&}three{\r} two\None
+Dialogue: 1,0:12:18.11,0:12:19.01,EN,,0,0,0,,we have made aged starlet or three {\c&HC8E633&}two{\r}\None
+Dialogue: 1,0:12:19.01,0:12:19.40,EN,,0,0,0,,we have made aged starlet or three two\N{\c&HC8E633&}one{\r}
+Dialogue: 0,0:12:33.80,0:12:38.06,ZH,,0,0,227,,Tom看起来Celia ，\N我们必须追随我们的热情，\N你有你的机器人。
+Dialogue: 1,0:12:33.80,0:12:34.19,EN,,0,0,0,,{\c&HC8E633&}tom{\r} look celia we have to follow our\Npassions you have your robotics
+Dialogue: 1,0:12:34.19,0:12:34.52,EN,,0,0,0,,tom {\c&HC8E633&}look{\r} celia we have to follow our\Npassions you have your robotics
+Dialogue: 1,0:12:34.52,0:12:35.22,EN,,0,0,0,,tom look {\c&HC8E633&}celia{\r} {\c&HC8E633&}we{\r} have to follow our\Npassions you have your robotics
+Dialogue: 1,0:12:35.22,0:12:35.57,EN,,0,0,0,,tom look celia we {\c&HC8E633&}have{\r} {\c&HC8E633&}to{\r} follow our\Npassions you have your robotics
+Dialogue: 1,0:12:35.57,0:12:35.93,EN,,0,0,0,,tom look celia we have to {\c&HC8E633&}follow{\r} our\Npassions you have your robotics
+Dialogue: 1,0:12:35.93,0:12:36.08,EN,,0,0,0,,tom look celia we have to follow {\c&HC8E633&}our{\r}\Npassions you have your robotics
+Dialogue: 1,0:12:36.08,0:12:37.07,EN,,0,0,0,,tom look celia we have to follow our\N{\c&HC8E633&}passions{\r} you have your robotics
+Dialogue: 1,0:12:37.07,0:12:37.34,EN,,0,0,0,,tom look celia we have to follow our\Npassions {\c&HC8E633&}you{\r} {\c&HC8E633&}have{\r} your robotics
+Dialogue: 1,0:12:37.34,0:12:38.06,EN,,0,0,0,,tom look celia we have to follow our\Npassions you have {\c&HC8E633&}your{\r} {\c&HC8E633&}robotics{\r}
+Dialogue: 0,0:12:38.06,0:12:45.74,ZH,,0,0,227,,我只是想让他的空间变得很棒，\N你为什么不承认你被我的角色吓\N坏了，一方面我是一个自由，\N但它是。
+Dialogue: 1,0:12:38.06,0:12:38.25,EN,,0,0,0,,{\c&HC8E633&}and{\r} {\c&HC8E633&}i{\r} just want to be awesome his space\Nwhy don't you just admit that your\Nfreaked out by my role one hand i'm a\Nfreedom but it's
+Dialogue: 1,0:12:38.25,0:12:38.87,EN,,0,0,0,,and i {\c&HC8E633&}just{\r} {\c&HC8E633&}want{\r} {\c&HC8E633&}to{\r} {\c&HC8E633&}be{\r} awesome his space\Nwhy don't you just admit that your\Nfreaked out by my role one hand i'm a\Nfreedom but it's
+Dialogue: 1,0:12:38.87,0:12:39.29,EN,,0,0,0,,and i just want to be {\c&HC8E633&}awesome{\r} his space\Nwhy don't you just admit that your\Nfreaked out by my role one hand i'm a\Nfreedom but it's
+Dialogue: 1,0:12:39.29,0:12:40.43,EN,,0,0,0,,and i just want to be awesome {\c&HC8E633&}his{\r} {\c&HC8E633&}space{\r}\Nwhy don't you just admit that your\Nfreaked out by my role one hand i'm a\Nfreedom but it's
+Dialogue: 1,0:12:40.43,0:12:40.61,EN,,0,0,0,,and i just want to be awesome his space\N{\c&HC8E633&}why{\r} don't you just admit that your\Nfreaked out by my role one hand i'm a\Nfreedom but it's
+Dialogue: 1,0:12:40.61,0:12:40.85,EN,,0,0,0,,and i just want to be awesome his space\Nwhy {\c&HC8E633&}don't{\r} you just admit that your\Nfreaked out by my role one hand i'm a\Nfreedom but it's
+Dialogue: 1,0:12:40.85,0:12:41.27,EN,,0,0,0,,and i just want to be awesome his space\Nwhy don't {\c&HC8E633&}you{\r} {\c&HC8E633&}just{\r} admit that your\Nfreaked out by my role one hand i'm a\Nfreedom but it's
+Dialogue: 1,0:12:41.27,0:12:41.63,EN,,0,0,0,,and i just want to be awesome his space\Nwhy don't you just {\c&HC8E633&}admit{\r} that your\Nfreaked out by my role one hand i'm a\Nfreedom but it's
+Dialogue: 1,0:12:41.63,0:12:42.32,EN,,0,0,0,,and i just want to be awesome his space\Nwhy don't you just admit {\c&HC8E633&}that{\r} {\c&HC8E633&}your{\r}\Nfreaked out by my role one hand i'm a\Nfreedom but it's
+Dialogue: 1,0:12:42.32,0:12:42.77,EN,,0,0,0,,and i just want to be awesome his space\Nwhy don't you just admit that your\N{\c&HC8E633&}freaked{\r} out by my role one hand i'm a\Nfreedom but it's
+Dialogue: 1,0:12:42.77,0:12:43.31,EN,,0,0,0,,and i just want to be awesome his space\Nwhy don't you just admit that your\Nfreaked {\c&HC8E633&}out{\r} {\c&HC8E633&}by{\r} {\c&HC8E633&}my{\r} role one hand i'm a\Nfreedom but it's
+Dialogue: 1,0:12:43.31,0:12:43.56,EN,,0,0,0,,and i just want to be awesome his space\Nwhy don't you just admit that your\Nfreaked out by my {\c&HC8E633&}role{\r} one hand i'm a\Nfreedom but it's
+Dialogue: 1,0:12:43.56,0:12:43.82,EN,,0,0,0,,and i just want to be awesome his space\Nwhy don't you just admit that your\Nfreaked out by my role {\c&HC8E633&}one{\r} hand i'm a\Nfreedom but it's
+Dialogue: 1,0:12:43.82,0:12:44.36,EN,,0,0,0,,and i just want to be awesome his space\Nwhy don't you just admit that your\Nfreaked out by my role one {\c&HC8E633&}hand{\r} i'm a\Nfreedom but it's
+Dialogue: 1,0:12:44.36,0:12:44.81,EN,,0,0,0,,and i just want to be awesome his space\Nwhy don't you just admit that your\Nfreaked out by my role one hand {\c&HC8E633&}i'm{\r} {\c&HC8E633&}a{\r}\Nfreedom but it's
+Dialogue: 1,0:12:44.81,0:12:45.26,EN,,0,0,0,,and i just want to be awesome his space\Nwhy don't you just admit that your\Nfreaked out by my role one hand i'm a\N{\c&HC8E633&}freedom{\r} but it's
+Dialogue: 1,0:12:45.26,0:12:45.50,EN,,0,0,0,,and i just want to be awesome his space\Nwhy don't you just admit that your\Nfreaked out by my role one hand i'm a\Nfreedom {\c&HC8E633&}but{\r} it's
+Dialogue: 1,0:12:45.50,0:12:45.74,EN,,0,0,0,,and i just want to be awesome his space\Nwhy don't you just admit that your\Nfreaked out by my role one hand i'm a\Nfreedom but {\c&HC8E633&}it's{\r}
+Dialogue: 0,0:12:47.36,0:12:52.19,ZH,,0,0,227,,好吧，我吓坏了，做着认为她是\N的噩梦，但他快死了，会哇。
+Dialogue: 1,0:12:47.36,0:12:47.72,EN,,0,0,0,,{\c&HC8E633&}alright{\r} fine i'm freaked out and having\Nnightmares that think she's but he's\Ndying will wow
+Dialogue: 1,0:12:47.72,0:12:48.56,EN,,0,0,0,,alright {\c&HC8E633&}fine{\r} {\c&HC8E633&}i'm{\r} freaked out and having\Nnightmares that think she's but he's\Ndying will wow
+Dialogue: 1,0:12:48.56,0:12:48.95,EN,,0,0,0,,alright fine i'm {\c&HC8E633&}freaked{\r} out and having\Nnightmares that think she's but he's\Ndying will wow
+Dialogue: 1,0:12:48.95,0:12:49.22,EN,,0,0,0,,alright fine i'm freaked {\c&HC8E633&}out{\r} and having\Nnightmares that think she's but he's\Ndying will wow
+Dialogue: 1,0:12:49.22,0:12:49.52,EN,,0,0,0,,alright fine i'm freaked out {\c&HC8E633&}and{\r} {\c&HC8E633&}having{\r}\Nnightmares that think she's but he's\Ndying will wow
+Dialogue: 1,0:12:49.52,0:12:49.94,EN,,0,0,0,,alright fine i'm freaked out and having\N{\c&HC8E633&}nightmares{\r} that think she's but he's\Ndying will wow
+Dialogue: 1,0:12:49.94,0:12:50.36,EN,,0,0,0,,alright fine i'm freaked out and having\Nnightmares {\c&HC8E633&}that{\r} {\c&HC8E633&}think{\r} she's but he's\Ndying will wow
+Dialogue: 1,0:12:50.36,0:12:50.63,EN,,0,0,0,,alright fine i'm freaked out and having\Nnightmares that think {\c&HC8E633&}she's{\r} but he's\Ndying will wow
+Dialogue: 1,0:12:50.63,0:12:50.87,EN,,0,0,0,,alright fine i'm freaked out and having\Nnightmares that think she's {\c&HC8E633&}but{\r} {\c&HC8E633&}he's{\r}\Ndying will wow
+Dialogue: 1,0:12:50.87,0:12:51.29,EN,,0,0,0,,alright fine i'm freaked out and having\Nnightmares that think she's but he's\N{\c&HC8E633&}dying{\r} will wow
+Dialogue: 1,0:12:51.29,0:12:51.89,EN,,0,0,0,,alright fine i'm freaked out and having\Nnightmares that think she's but he's\Ndying {\c&HC8E633&}will{\r} wow
+Dialogue: 1,0:12:51.89,0:12:52.19,EN,,0,0,0,,alright fine i'm freaked out and having\Nnightmares that think she's but he's\Ndying will {\c&HC8E633&}wow{\r}
+Dialogue: 0,0:12:53.99,0:12:54.86,ZH,,0,0,227,,做得很好。
+Dialogue: 1,0:12:53.99,0:12:54.35,EN,,0,0,0,,{\c&HC8E633&}well{\r} done
+Dialogue: 1,0:12:54.35,0:12:54.86,EN,,0,0,0,,well {\c&HC8E633&}done{\r}
+Dialogue: 0,0:12:59.84,0:13:03.29,ZH,,0,0,227,,机器人记忆唱歌和很多。
+Dialogue: 1,0:12:59.84,0:13:00.29,EN,,0,0,0,,{\c&HC8E633&}robots{\r} memory sing and lot
+Dialogue: 1,0:13:00.29,0:13:00.85,EN,,0,0,0,,robots {\c&HC8E633&}memory{\r} sing and lot
+Dialogue: 1,0:13:00.85,0:13:01.91,EN,,0,0,0,,robots memory {\c&HC8E633&}sing{\r} and lot
+Dialogue: 1,0:13:01.91,0:13:03.02,EN,,0,0,0,,robots memory sing {\c&HC8E633&}and{\r} lot
+Dialogue: 1,0:13:03.02,0:13:03.29,EN,,0,0,0,,robots memory sing and {\c&HC8E633&}lot{\r}
+Dialogue: 0,0:13:10.64,0:13:11.09,ZH,,0,0,227,,是 關於 疾病 的
+Dialogue: 1,0:13:10.64,0:13:11.09,EN,,0,0,0,,{\c&HC8E633&}disease{\r}
+Dialogue: 0,0:14:07.43,0:14:08.39,ZH,,0,0,227,,您应该成为捐赠者吗？
+Dialogue: 1,0:14:07.43,0:14:07.67,EN,,0,0,0,,{\c&HC8E633&}should{\r} you be donor
+Dialogue: 1,0:14:07.67,0:14:07.91,EN,,0,0,0,,should {\c&HC8E633&}you{\r} {\c&HC8E633&}be{\r} donor
+Dialogue: 1,0:14:07.91,0:14:08.39,EN,,0,0,0,,should you be {\c&HC8E633&}donor{\r}
+Dialogue: 0,0:14:21.11,0:14:22.61,ZH,,0,0,227,,我听到你们大多数晚上都在说话。
+Dialogue: 1,0:14:21.11,0:14:21.36,EN,,0,0,0,,{\c&HC8E633&}i{\r} {\c&HC8E633&}heard{\r} you guys talking most night
+Dialogue: 1,0:14:21.36,0:14:21.74,EN,,0,0,0,,i heard {\c&HC8E633&}you{\r} {\c&HC8E633&}guys{\r} talking most night
+Dialogue: 1,0:14:21.74,0:14:22.07,EN,,0,0,0,,i heard you guys {\c&HC8E633&}talking{\r} most night
+Dialogue: 1,0:14:22.07,0:14:22.28,EN,,0,0,0,,i heard you guys talking {\c&HC8E633&}most{\r} night
+Dialogue: 1,0:14:22.28,0:14:22.61,EN,,0,0,0,,i heard you guys talking most {\c&HC8E633&}night{\r}
+Dialogue: 0,0:14:26.21,0:14:27.05,ZH,,0,0,227,,仍由为提供。
+Dialogue: 1,0:14:26.21,0:14:26.69,EN,,0,0,0,,{\c&HC8E633&}still{\r} {\c&HC8E633&}by{\r} for
+Dialogue: 1,0:14:26.69,0:14:27.05,EN,,0,0,0,,still by {\c&HC8E633&}for{\r}
+Dialogue: 0,0:15:21.17,0:15:24.38,ZH,,0,0,227,,你准备好了吗，因为你已经准备\N好成为摇滚明星了？
+Dialogue: 1,0:15:21.17,0:15:21.44,EN,,0,0,0,,{\c&HC8E633&}are{\r} {\c&HC8E633&}you{\r} ready cause you're ready your a\Nrock star
+Dialogue: 1,0:15:21.44,0:15:22.43,EN,,0,0,0,,are you {\c&HC8E633&}ready{\r} cause you're ready your a\Nrock star
+Dialogue: 1,0:15:22.43,0:15:22.79,EN,,0,0,0,,are you ready {\c&HC8E633&}cause{\r} you're ready your a\Nrock star
+Dialogue: 1,0:15:22.79,0:15:23.33,EN,,0,0,0,,are you ready cause {\c&HC8E633&}you're{\r} {\c&HC8E633&}ready{\r} your a\Nrock star
+Dialogue: 1,0:15:23.33,0:15:23.66,EN,,0,0,0,,are you ready cause you're ready {\c&HC8E633&}your{\r} {\c&HC8E633&}a{\r}\Nrock star
+Dialogue: 1,0:15:23.66,0:15:23.87,EN,,0,0,0,,are you ready cause you're ready your a\N{\c&HC8E633&}rock{\r} star
+Dialogue: 1,0:15:23.87,0:15:24.38,EN,,0,0,0,,are you ready cause you're ready your a\Nrock {\c&HC8E633&}star{\r}
+Dialogue: 0,0:15:26.93,0:15:30.26,ZH,,0,0,227,,我没有看身体，我们应该有十分\N钟左右的时间。
+Dialogue: 1,0:15:26.93,0:15:27.23,EN,,0,0,0,,{\c&HC8E633&}i{\r} {\c&HC8E633&}wasn't{\r} looking body we should have\Nabout ten minutes
+Dialogue: 1,0:15:27.23,0:15:27.51,EN,,0,0,0,,i wasn't {\c&HC8E633&}looking{\r} body we should have\Nabout ten minutes
+Dialogue: 1,0:15:27.51,0:15:28.79,EN,,0,0,0,,i wasn't looking {\c&HC8E633&}body{\r} {\c&HC8E633&}we{\r} should have\Nabout ten minutes
+Dialogue: 1,0:15:28.79,0:15:29.12,EN,,0,0,0,,i wasn't looking body we {\c&HC8E633&}should{\r} have\Nabout ten minutes
+Dialogue: 1,0:15:29.12,0:15:29.33,EN,,0,0,0,,i wasn't looking body we should {\c&HC8E633&}have{\r}\Nabout ten minutes
+Dialogue: 1,0:15:29.33,0:15:29.60,EN,,0,0,0,,i wasn't looking body we should have\N{\c&HC8E633&}about{\r} ten minutes
+Dialogue: 1,0:15:29.60,0:15:29.84,EN,,0,0,0,,i wasn't looking body we should have\Nabout {\c&HC8E633&}ten{\r} minutes
+Dialogue: 1,0:15:29.84,0:15:30.26,EN,,0,0,0,,i wasn't looking body we should have\Nabout ten {\c&HC8E633&}minutes{\r}
+Dialogue: 0,0:15:31.46,0:15:32.48,ZH,,0,0,227,,太好了。
+Dialogue: 1,0:15:31.46,0:15:31.76,EN,,0,0,0,,{\c&HC8E633&}well{\r} that's perfect
+Dialogue: 1,0:15:31.76,0:15:32.01,EN,,0,0,0,,well {\c&HC8E633&}that's{\r} perfect
+Dialogue: 1,0:15:32.01,0:15:32.48,EN,,0,0,0,,well that's {\c&HC8E633&}perfect{\r}
+Dialogue: 0,0:15:33.47,0:15:38.42,ZH,,0,0,227,,我们希望所有系统都去去去去。
+Dialogue: 1,0:15:33.47,0:15:33.92,EN,,0,0,0,,{\c&HC8E633&}we're{\r} {\c&HC8E633&}on{\r} {\c&HC8E633&}a{\r} want all systems go go go go
+Dialogue: 1,0:15:33.92,0:15:34.91,EN,,0,0,0,,we're on a {\c&HC8E633&}want{\r} all systems go go go go
+Dialogue: 1,0:15:34.91,0:15:35.24,EN,,0,0,0,,we're on a want {\c&HC8E633&}all{\r} systems go go go go
+Dialogue: 1,0:15:35.24,0:15:35.81,EN,,0,0,0,,we're on a want all {\c&HC8E633&}systems{\r} go go go go
+Dialogue: 1,0:15:35.81,0:15:36.80,EN,,0,0,0,,we're on a want all systems {\c&HC8E633&}go{\r} {\c&HC8E633&}go{\r} go go
+Dialogue: 1,0:15:36.80,0:15:37.73,EN,,0,0,0,,we're on a want all systems go go {\c&HC8E633&}go{\r} go
+Dialogue: 1,0:15:37.73,0:15:38.42,EN,,0,0,0,,we're on a want all systems go go go {\c&HC8E633&}go{\r}
+Dialogue: 0,0:15:52.61,0:15:53.63,ZH,,0,0,227,,太好了。
+Dialogue: 1,0:15:52.61,0:15:53.00,EN,,0,0,0,,{\c&HC8E633&}that's{\r} nice
+Dialogue: 1,0:15:53.00,0:15:53.63,EN,,0,0,0,,that's {\c&HC8E633&}nice{\r}
+Dialogue: 0,0:15:54.41,0:15:55.67,ZH,,0,0,227,,不足为虑。
+Dialogue: 1,0:15:54.41,0:15:54.89,EN,,0,0,0,,{\c&HC8E633&}nothing{\r} {\c&HC8E633&}to{\r} worry about that
+Dialogue: 1,0:15:54.89,0:15:55.10,EN,,0,0,0,,nothing to {\c&HC8E633&}worry{\r} about that
+Dialogue: 1,0:15:55.10,0:15:55.37,EN,,0,0,0,,nothing to worry {\c&HC8E633&}about{\r} that
+Dialogue: 1,0:15:55.37,0:15:55.67,EN,,0,0,0,,nothing to worry about {\c&HC8E633&}that{\r}
+Dialogue: 0,0:16:01.85,0:16:02.57,ZH,,0,0,227,,菜肴
+Dialogue: 1,0:16:01.85,0:16:02.57,EN,,0,0,0,,{\c&HC8E633&}dishes{\r}
+Dialogue: 0,0:16:03.47,0:16:03.71,ZH,,0,0,227,,现今阶段，
+Dialogue: 1,0:16:03.47,0:16:03.71,EN,,0,0,0,,{\c&HC8E633&}now{\r}
+Dialogue: 0,0:16:05.18,0:16:05.84,ZH,,0,0,227,,每一刻
+Dialogue: 1,0:16:05.18,0:16:05.48,EN,,0,0,0,,{\c&HC8E633&}you{\r} love
+Dialogue: 1,0:16:05.48,0:16:05.84,EN,,0,0,0,,you {\c&HC8E633&}love{\r}
+Dialogue: 0,0:16:07.22,0:16:10.07,ZH,,0,0,227,,她是你的bash the b\Ne tended that.
+Dialogue: 1,0:16:07.22,0:16:07.46,EN,,0,0,0,,{\c&HC8E633&}she's{\r} your bash the be tended that
+Dialogue: 1,0:16:07.46,0:16:08.81,EN,,0,0,0,,she's {\c&HC8E633&}your{\r} {\c&HC8E633&}bash{\r} the be tended that
+Dialogue: 1,0:16:08.81,0:16:09.62,EN,,0,0,0,,she's your bash {\c&HC8E633&}the{\r} {\c&HC8E633&}be{\r} tended that
+Dialogue: 1,0:16:09.62,0:16:09.92,EN,,0,0,0,,she's your bash the be {\c&HC8E633&}tended{\r} that
+Dialogue: 1,0:16:09.92,0:16:10.07,EN,,0,0,0,,she's your bash the be tended {\c&HC8E633&}that{\r}
+Dialogue: 0,0:16:11.27,0:16:11.87,ZH,,0,0,227,,诚实的人。
+Dialogue: 1,0:16:11.27,0:16:11.87,EN,,0,0,0,,{\c&HC8E633&}the{\r} {\c&HC8E633&}honest{\r}
+Dialogue: 0,0:16:17.00,0:16:17.39,ZH,,0,0,227,,爱。
+Dialogue: 1,0:16:17.00,0:16:17.39,EN,,0,0,0,,{\c&HC8E633&}love{\r}
+Dialogue: 0,0:17:02.54,0:17:03.14,ZH,,0,0,227,,诶，啊
+Dialogue: 1,0:17:02.54,0:17:03.14,EN,,0,0,0,,{\c&HC8E633&}ah{\r}
+Dialogue: 0,0:17:06.53,0:17:08.15,ZH,,0,0,227,,内存覆盖正在进行中。
+Dialogue: 1,0:17:06.53,0:17:06.86,EN,,0,0,0,,{\c&HC8E633&}memory{\r} override in progress
+Dialogue: 1,0:17:06.86,0:17:07.40,EN,,0,0,0,,memory {\c&HC8E633&}override{\r} {\c&HC8E633&}in{\r} progress
+Dialogue: 1,0:17:07.40,0:17:08.15,EN,,0,0,0,,memory override in {\c&HC8E633&}progress{\r}
+Dialogue: 0,0:17:08.99,0:17:09.77,ZH,,0,0,227,,角色
+Dialogue: 1,0:17:08.99,0:17:09.77,EN,,0,0,0,,{\c&HC8E633&}character{\r}
+Dialogue: 0,0:17:11.87,0:17:13.91,ZH,,0,0,227,,哦，对不起，对不起！
+Dialogue: 1,0:17:11.87,0:17:12.23,EN,,0,0,0,,{\c&HC8E633&}oh{\r} {\c&HC8E633&}i'm{\r} sorry sorry
+Dialogue: 1,0:17:12.23,0:17:13.46,EN,,0,0,0,,oh i'm {\c&HC8E633&}sorry{\r} sorry
+Dialogue: 1,0:17:13.46,0:17:13.91,EN,,0,0,0,,oh i'm sorry {\c&HC8E633&}sorry{\r}
+Dialogue: 0,0:17:25.76,0:17:26.48,ZH,,0,0,227,,看看Celia。
+Dialogue: 1,0:17:25.76,0:17:25.96,EN,,0,0,0,,{\c&HC8E633&}look{\r} celia
+Dialogue: 1,0:17:25.96,0:17:26.48,EN,,0,0,0,,look {\c&HC8E633&}celia{\r}
+Dialogue: 0,0:17:28.13,0:17:30.05,ZH,,0,0,227,,你必须追随我们的热情。
+Dialogue: 1,0:17:28.13,0:17:28.64,EN,,0,0,0,,{\c&HC8E633&}you{\r} {\c&HC8E633&}have{\r} {\c&HC8E633&}to{\r} follow our passions
+Dialogue: 1,0:17:28.64,0:17:29.06,EN,,0,0,0,,you have to {\c&HC8E633&}follow{\r} our passions
+Dialogue: 1,0:17:29.06,0:17:30.05,EN,,0,0,0,,you have to follow {\c&HC8E633&}our{\r} {\c&HC8E633&}passions{\r}
+Dialogue: 0,0:17:31.13,0:17:32.54,ZH,,0,0,227,,你有你的机器人。
+Dialogue: 1,0:17:31.13,0:17:31.31,EN,,0,0,0,,{\c&HC8E633&}you{\r} have your robotics
+Dialogue: 1,0:17:31.31,0:17:31.70,EN,,0,0,0,,you {\c&HC8E633&}have{\r} {\c&HC8E633&}your{\r} robotics
+Dialogue: 1,0:17:31.70,0:17:32.54,EN,,0,0,0,,you have your {\c&HC8E633&}robotics{\r}
+Dialogue: 0,0:17:35.60,0:17:37.49,ZH,,0,0,227,,我只想在太空中表现出色。
+Dialogue: 1,0:17:35.60,0:17:35.78,EN,,0,0,0,,{\c&HC8E633&}i{\r} just want to be awesome in space
+Dialogue: 1,0:17:35.78,0:17:35.99,EN,,0,0,0,,i {\c&HC8E633&}just{\r} want to be awesome in space
+Dialogue: 1,0:17:35.99,0:17:36.44,EN,,0,0,0,,i just {\c&HC8E633&}want{\r} {\c&HC8E633&}to{\r} {\c&HC8E633&}be{\r} awesome in space
+Dialogue: 1,0:17:36.44,0:17:36.92,EN,,0,0,0,,i just want to be {\c&HC8E633&}awesome{\r} {\c&HC8E633&}in{\r} space
+Dialogue: 1,0:17:36.92,0:17:37.49,EN,,0,0,0,,i just want to be awesome in {\c&HC8E633&}space{\r}
+Dialogue: 0,0:17:48.95,0:17:50.84,ZH,,0,0,227,,还有两分钟就到了。
+Dialogue: 1,0:17:48.95,0:17:49.16,EN,,0,0,0,,{\c&HC8E633&}that{\r} {\c&HC8E633&}are{\r} coming in two minutes left
+Dialogue: 1,0:17:49.16,0:17:50.06,EN,,0,0,0,,that are {\c&HC8E633&}coming{\r} {\c&HC8E633&}in{\r} two minutes left
+Dialogue: 1,0:17:50.06,0:17:50.51,EN,,0,0,0,,that are coming in {\c&HC8E633&}two{\r} {\c&HC8E633&}minutes{\r} left
+Dialogue: 1,0:17:50.51,0:17:50.84,EN,,0,0,0,,that are coming in two minutes {\c&HC8E633&}left{\r}
+Dialogue: 0,0:17:56.75,0:17:59.72,ZH,,0,0,227,,你为什么不承认你被我的机器人\N他吓坏了？
+Dialogue: 1,0:17:56.75,0:17:56.93,EN,,0,0,0,,{\c&HC8E633&}why{\r} don't you just admit your freaked\Nout by my robot him
+Dialogue: 1,0:17:56.93,0:17:57.14,EN,,0,0,0,,why {\c&HC8E633&}don't{\r} you just admit your freaked\Nout by my robot him
+Dialogue: 1,0:17:57.14,0:17:57.53,EN,,0,0,0,,why don't {\c&HC8E633&}you{\r} {\c&HC8E633&}just{\r} admit your freaked\Nout by my robot him
+Dialogue: 1,0:17:57.53,0:17:57.95,EN,,0,0,0,,why don't you just {\c&HC8E633&}admit{\r} your freaked\Nout by my robot him
+Dialogue: 1,0:17:57.95,0:17:58.46,EN,,0,0,0,,why don't you just admit {\c&HC8E633&}your{\r} {\c&HC8E633&}freaked{\r}\Nout by my robot him
+Dialogue: 1,0:17:58.46,0:17:58.94,EN,,0,0,0,,why don't you just admit your freaked\N{\c&HC8E633&}out{\r} {\c&HC8E633&}by{\r} {\c&HC8E633&}my{\r} robot him
+Dialogue: 1,0:17:58.94,0:17:59.39,EN,,0,0,0,,why don't you just admit your freaked\Nout by my {\c&HC8E633&}robot{\r} him
+Dialogue: 1,0:17:59.39,0:17:59.72,EN,,0,0,0,,why don't you just admit your freaked\Nout by my robot {\c&HC8E633&}him{\r}
+Dialogue: 0,0:18:06.65,0:18:08.57,ZH,,0,0,227,,这个Celia我很年轻。
+Dialogue: 1,0:18:06.65,0:18:06.91,EN,,0,0,0,,{\c&HC8E633&}this{\r} celia i was young
+Dialogue: 1,0:18:06.91,0:18:08.00,EN,,0,0,0,,this {\c&HC8E633&}celia{\r} {\c&HC8E633&}i{\r} was young
+Dialogue: 1,0:18:08.00,0:18:08.24,EN,,0,0,0,,this celia i {\c&HC8E633&}was{\r} young
+Dialogue: 1,0:18:08.24,0:18:08.57,EN,,0,0,0,,this celia i was {\c&HC8E633&}young{\r}
+Dialogue: 0,0:18:09.77,0:18:12.77,ZH,,0,0,227,,还有一个鸡巴，但没有理由毁灭\N这个世界。
+Dialogue: 1,0:18:09.77,0:18:11.00,EN,,0,0,0,,{\c&HC8E633&}and{\r} {\c&HC8E633&}a{\r} {\c&HC8E633&}dick{\r} but there's no reason to\Ndestroy the world
+Dialogue: 1,0:18:11.00,0:18:11.39,EN,,0,0,0,,and a dick {\c&HC8E633&}but{\r} {\c&HC8E633&}there's{\r} {\c&HC8E633&}no{\r} reason to\Ndestroy the world
+Dialogue: 1,0:18:11.39,0:18:11.72,EN,,0,0,0,,and a dick but there's no {\c&HC8E633&}reason{\r} {\c&HC8E633&}to{\r}\Ndestroy the world
+Dialogue: 1,0:18:11.72,0:18:12.14,EN,,0,0,0,,and a dick but there's no reason to\N{\c&HC8E633&}destroy{\r} the world
+Dialogue: 1,0:18:12.14,0:18:12.77,EN,,0,0,0,,and a dick but there's no reason to\Ndestroy {\c&HC8E633&}the{\r} {\c&HC8E633&}world{\r}
+Dialogue: 0,0:18:14.81,0:18:15.59,ZH,,0,0,227,,他为什么要这么做？
+Dialogue: 1,0:18:14.81,0:18:15.29,EN,,0,0,0,,{\c&HC8E633&}why{\r} {\c&HC8E633&}does{\r} {\c&HC8E633&}he{\r} {\c&HC8E633&}do{\r} this
+Dialogue: 1,0:18:15.29,0:18:15.59,EN,,0,0,0,,why does he do {\c&HC8E633&}this{\r}
+Dialogue: 0,0:18:16.82,0:18:18.26,ZH,,0,0,227,,我们已经试过了。
+Dialogue: 1,0:18:16.82,0:18:17.45,EN,,0,0,0,,{\c&HC8E633&}we{\r} {\c&HC8E633&}already{\r} tried that one
+Dialogue: 1,0:18:17.45,0:18:17.78,EN,,0,0,0,,we already {\c&HC8E633&}tried{\r} that one
+Dialogue: 1,0:18:17.78,0:18:18.26,EN,,0,0,0,,we already tried {\c&HC8E633&}that{\r} {\c&HC8E633&}one{\r}
+Dialogue: 0,0:18:33.29,0:18:34.58,ZH,,0,0,227,,扎心了，老铁
+Dialogue: 1,0:18:33.29,0:18:33.59,EN,,0,0,0,,{\c&HC8E633&}you{\r} broke my heart
+Dialogue: 1,0:18:33.59,0:18:34.22,EN,,0,0,0,,you {\c&HC8E633&}broke{\r} {\c&HC8E633&}my{\r} heart
+Dialogue: 1,0:18:34.22,0:18:34.58,EN,,0,0,0,,you broke my {\c&HC8E633&}heart{\r}
+Dialogue: 0,0:18:36.89,0:18:38.39,ZH,,0,0,227,,你忘了我们的荣誉是。
+Dialogue: 1,0:18:36.89,0:18:37.07,EN,,0,0,0,,{\c&HC8E633&}you{\r} forgot we honor is
+Dialogue: 1,0:18:37.07,0:18:37.82,EN,,0,0,0,,you {\c&HC8E633&}forgot{\r} {\c&HC8E633&}we{\r} honor is
+Dialogue: 1,0:18:37.82,0:18:38.39,EN,,0,0,0,,you forgot we {\c&HC8E633&}honor{\r} {\c&HC8E633&}is{\r}
+Dialogue: 0,0:18:39.20,0:18:41.66,ZH,,0,0,227,,知道我应该只穿衣服。
+Dialogue: 1,0:18:39.20,0:18:40.43,EN,,0,0,0,,{\c&HC8E633&}know{\r} {\c&HC8E633&}i{\r} should just dress
+Dialogue: 1,0:18:40.43,0:18:40.73,EN,,0,0,0,,know i {\c&HC8E633&}should{\r} just dress
+Dialogue: 1,0:18:40.73,0:18:41.24,EN,,0,0,0,,know i should {\c&HC8E633&}just{\r} dress
+Dialogue: 1,0:18:41.24,0:18:41.66,EN,,0,0,0,,know i should just {\c&HC8E633&}dress{\r}
+Dialogue: 0,0:18:46.85,0:18:47.09,ZH,,0,0,227,,开
+Dialogue: 1,0:18:46.85,0:18:47.09,EN,,0,0,0,,{\c&HC8E633&}on{\r}
+Dialogue: 0,0:18:57.50,0:18:58.01,ZH,,0,0,227,,抱歉！為了防範濫發郵件，\N評論或留言中不允許有 URL\N 和電郵 Id
+Dialogue: 1,0:18:57.50,0:18:58.01,EN,,0,0,0,,{\c&HC8E633&}sorry{\r}
+Dialogue: 0,0:19:00.20,0:19:00.71,ZH,,0,0,227,,现场直播。
+Dialogue: 1,0:19:00.20,0:19:00.53,EN,,0,0,0,,{\c&HC8E633&}the{\r} live
+Dialogue: 1,0:19:00.53,0:19:00.71,EN,,0,0,0,,the {\c&HC8E633&}live{\r}
+Dialogue: 0,0:19:09.11,0:19:09.80,ZH,,0,0,227,,好吧，我的老板。
+Dialogue: 1,0:19:09.11,0:19:09.38,EN,,0,0,0,,{\c&HC8E633&}well{\r} {\c&HC8E633&}my{\r} boss
+Dialogue: 1,0:19:09.38,0:19:09.80,EN,,0,0,0,,well my {\c&HC8E633&}boss{\r}
+Dialogue: 0,0:19:12.11,0:19:12.53,ZH,,0,0,227,,本次
+Dialogue: 1,0:19:12.11,0:19:12.53,EN,,0,0,0,,{\c&HC8E633&}this{\r} {\c&HC8E633&}time{\r}
+Dialogue: 0,0:19:18.32,0:19:18.74,ZH,,0,0,227,,在安装时发生错误 : .
+Dialogue: 1,0:19:18.32,0:19:18.74,EN,,0,0,0,,{\c&HC8E633&}while{\r}
+Dialogue: 0,0:19:20.81,0:19:21.11,ZH,,0,0,227,,嗨
+Dialogue: 1,0:19:20.81,0:19:21.11,EN,,0,0,0,,{\c&HC8E633&}hi{\r}
+Dialogue: 0,0:20:33.81,0:20:35.43,ZH,,0,0,227,,Emery运营和百分之九十。
+Dialogue: 1,0:20:33.81,0:20:34.08,EN,,0,0,0,,{\c&HC8E633&}emery{\r} operate and ninety percent
+Dialogue: 1,0:20:34.08,0:20:34.46,EN,,0,0,0,,emery {\c&HC8E633&}operate{\r} and ninety percent
+Dialogue: 1,0:20:34.46,0:20:34.92,EN,,0,0,0,,emery operate {\c&HC8E633&}and{\r} {\c&HC8E633&}ninety{\r} percent
+Dialogue: 1,0:20:34.92,0:20:35.43,EN,,0,0,0,,emery operate and ninety {\c&HC8E633&}percent{\r}
+Dialogue: 0,0:20:36.27,0:20:38.01,ZH,,0,0,227,,船长，我们有一个男孩。
+Dialogue: 1,0:20:36.27,0:20:37.17,EN,,0,0,0,,{\c&HC8E633&}captain{\r} {\c&HC8E633&}we{\r} have a boy
+Dialogue: 1,0:20:37.17,0:20:37.62,EN,,0,0,0,,captain we {\c&HC8E633&}have{\r} {\c&HC8E633&}a{\r} boy
+Dialogue: 1,0:20:37.62,0:20:38.01,EN,,0,0,0,,captain we have a {\c&HC8E633&}boy{\r}
+Dialogue: 0,0:20:48.96,0:20:50.19,ZH,,0,0,227,,世界改变了Celia。
+Dialogue: 1,0:20:48.96,0:20:49.41,EN,,0,0,0,,{\c&HC8E633&}the{\r} {\c&HC8E633&}world's{\r} changed celia
+Dialogue: 1,0:20:49.41,0:20:49.74,EN,,0,0,0,,the world's {\c&HC8E633&}changed{\r} celia
+Dialogue: 1,0:20:49.74,0:20:50.19,EN,,0,0,0,,the world's changed {\c&HC8E633&}celia{\r}
+Dialogue: 0,0:21:04.86,0:21:05.79,ZH,,0,0,227,,也许我们可以。
+Dialogue: 1,0:21:04.86,0:21:05.31,EN,,0,0,0,,{\c&HC8E633&}maybe{\r} {\c&HC8E633&}we{\r} can to
+Dialogue: 1,0:21:05.31,0:21:05.79,EN,,0,0,0,,maybe we {\c&HC8E633&}can{\r} {\c&HC8E633&}to{\r}
+Dialogue: 0,0:21:08.36,0:21:09.18,ZH,,0,0,227,,或许吧。
+Dialogue: 1,0:21:08.36,0:21:08.64,EN,,0,0,0,,{\c&HC8E633&}right{\r} probably
+Dialogue: 1,0:21:08.64,0:21:09.18,EN,,0,0,0,,right {\c&HC8E633&}probably{\r}
+Dialogue: 0,0:21:28.92,0:21:29.31,ZH,,0,0,227,,你知道的。
+Dialogue: 1,0:21:28.92,0:21:29.31,EN,,0,0,0,,{\c&HC8E633&}you{\r} {\c&HC8E633&}know{\r}
+Dialogue: 0,0:21:31.74,0:21:33.33,ZH,,0,0,227,,我们可以从中吸取教训。
+Dialogue: 1,0:21:31.74,0:21:32.01,EN,,0,0,0,,{\c&HC8E633&}there's{\r} {\c&HC8E633&}a{\r} listen to be learned from this
+Dialogue: 1,0:21:32.01,0:21:32.61,EN,,0,0,0,,there's a {\c&HC8E633&}listen{\r} {\c&HC8E633&}to{\r} {\c&HC8E633&}be{\r} learned from this
+Dialogue: 1,0:21:32.61,0:21:32.82,EN,,0,0,0,,there's a listen to be {\c&HC8E633&}learned{\r} from this
+Dialogue: 1,0:21:32.82,0:21:33.33,EN,,0,0,0,,there's a listen to be learned {\c&HC8E633&}from{\r} {\c&HC8E633&}this{\r}
+Dialogue: 0,0:21:35.79,0:21:36.60,ZH,,0,0,227,,情况变得更糟了。
+Dialogue: 1,0:21:35.79,0:21:36.21,EN,,0,0,0,,{\c&HC8E633&}that{\r} {\c&HC8E633&}are{\r} {\c&HC8E633&}gone{\r} worse
+Dialogue: 1,0:21:36.21,0:21:36.60,EN,,0,0,0,,that are gone {\c&HC8E633&}worse{\r}
+Dialogue: 0,0:22:59.79,0:23:05.34,ZH,,0,0,227,,但是……
+Dialogue: 1,0:22:59.79,0:23:05.34,EN,,0,0,0,,{\c&HC8E633&}but{\r}
+Dialogue: 0,0:24:25.22,0:24:26.84,ZH,,0,0,227,,我们已经开始了。
+Dialogue: 1,0:24:25.22,0:24:25.46,EN,,0,0,0,,{\c&HC8E633&}we{\r} have made it should start
+Dialogue: 1,0:24:25.46,0:24:25.79,EN,,0,0,0,,we {\c&HC8E633&}have{\r} made it should start
+Dialogue: 1,0:24:25.79,0:24:26.18,EN,,0,0,0,,we have {\c&HC8E633&}made{\r} {\c&HC8E633&}it{\r} should start
+Dialogue: 1,0:24:26.18,0:24:26.39,EN,,0,0,0,,we have made it {\c&HC8E633&}should{\r} start
+Dialogue: 1,0:24:26.39,0:24:26.84,EN,,0,0,0,,we have made it should {\c&HC8E633&}start{\r}
+Dialogue: 0,0:24:28.91,0:24:29.27,ZH,,0,0,227,,致.
+Dialogue: 1,0:24:28.91,0:24:29.27,EN,,0,0,0,,{\c&HC8E633&}to{\r}
+Dialogue: 1,0:24:44.11,0:24:44.57,EN,,0,0,0,,{\c&HC8E633&}jerk{\r} tom look celia would have to follow\Nour passions you have your robotics and\Ni just want to be awesome his face
+Dialogue: 0,0:24:44.11,0:24:50.66,ZH,,0,0,227,,Jerk tom看起来Cel\Nia必须跟随我们的热情，\N你有你的机器人，我只想让他的\N脸看起来很棒。
+Dialogue: 1,0:24:44.57,0:24:44.96,EN,,0,0,0,,jerk {\c&HC8E633&}tom{\r} look celia would have to follow\Nour passions you have your robotics and\Ni just want to be awesome his face
+Dialogue: 1,0:24:44.96,0:24:45.32,EN,,0,0,0,,jerk tom {\c&HC8E633&}look{\r} celia would have to follow\Nour passions you have your robotics and\Ni just want to be awesome his face
+Dialogue: 1,0:24:45.32,0:24:45.83,EN,,0,0,0,,jerk tom look {\c&HC8E633&}celia{\r} would have to follow\Nour passions you have your robotics and\Ni just want to be awesome his face
+Dialogue: 1,0:24:45.83,0:24:46.01,EN,,0,0,0,,jerk tom look celia {\c&HC8E633&}would{\r} have to follow\Nour passions you have your robotics and\Ni just want to be awesome his face
+Dialogue: 1,0:24:46.01,0:24:46.34,EN,,0,0,0,,jerk tom look celia would {\c&HC8E633&}have{\r} {\c&HC8E633&}to{\r} follow\Nour passions you have your robotics and\Ni just want to be awesome his face
+Dialogue: 1,0:24:46.34,0:24:46.73,EN,,0,0,0,,jerk tom look celia would have to {\c&HC8E633&}follow{\r}\Nour passions you have your robotics and\Ni just want to be awesome his face
+Dialogue: 1,0:24:46.73,0:24:47.84,EN,,0,0,0,,jerk tom look celia would have to follow\N{\c&HC8E633&}our{\r} {\c&HC8E633&}passions{\r} you have your robotics and\Ni just want to be awesome his face
+Dialogue: 1,0:24:47.84,0:24:48.14,EN,,0,0,0,,jerk tom look celia would have to follow\Nour passions {\c&HC8E633&}you{\r} {\c&HC8E633&}have{\r} your robotics and\Ni just want to be awesome his face
+Dialogue: 1,0:24:48.14,0:24:48.83,EN,,0,0,0,,jerk tom look celia would have to follow\Nour passions you have {\c&HC8E633&}your{\r} {\c&HC8E633&}robotics{\r} and\Ni just want to be awesome his face
+Dialogue: 1,0:24:48.83,0:24:48.92,EN,,0,0,0,,jerk tom look celia would have to follow\Nour passions you have your robotics {\c&HC8E633&}and{\r}\Ni just want to be awesome his face
+Dialogue: 1,0:24:48.92,0:24:49.16,EN,,0,0,0,,jerk tom look celia would have to follow\Nour passions you have your robotics and\N{\c&HC8E633&}i{\r} {\c&HC8E633&}just{\r} want to be awesome his face
+Dialogue: 1,0:24:49.16,0:24:49.67,EN,,0,0,0,,jerk tom look celia would have to follow\Nour passions you have your robotics and\Ni just {\c&HC8E633&}want{\r} {\c&HC8E633&}to{\r} {\c&HC8E633&}be{\r} awesome his face
+Dialogue: 1,0:24:49.67,0:24:50.06,EN,,0,0,0,,jerk tom look celia would have to follow\Nour passions you have your robotics and\Ni just want to be {\c&HC8E633&}awesome{\r} his face
+Dialogue: 1,0:24:50.06,0:24:50.66,EN,,0,0,0,,jerk tom look celia would have to follow\Nour passions you have your robotics and\Ni just want to be awesome {\c&HC8E633&}his{\r} {\c&HC8E633&}face{\r}
+Dialogue: 0,0:24:51.44,0:24:52.85,ZH,,0,0,227,,不要只是承认你是你的。
+Dialogue: 1,0:24:51.44,0:24:51.62,EN,,0,0,0,,{\c&HC8E633&}don't{\r} you just admit you're your
+Dialogue: 1,0:24:51.62,0:24:52.04,EN,,0,0,0,,don't {\c&HC8E633&}you{\r} {\c&HC8E633&}just{\r} admit you're your
+Dialogue: 1,0:24:52.04,0:24:52.58,EN,,0,0,0,,don't you just {\c&HC8E633&}admit{\r} you're your
+Dialogue: 1,0:24:52.58,0:24:52.85,EN,,0,0,0,,don't you just admit {\c&HC8E633&}you're{\r} {\c&HC8E633&}your{\r}
+Dialogue: 1,0:24:53.72,0:24:54.08,EN,,0,0,0,,{\c&HC8E633&}by{\r} {\c&HC8E633&}my{\r} role one hand and the freedom but\Nit's
+Dialogue: 0,0:24:53.72,0:24:56.54,ZH,,0,0,227,,一方面是因为我的角色和自由，\N但事实的确如此。
+Dialogue: 1,0:24:54.08,0:24:54.37,EN,,0,0,0,,by my {\c&HC8E633&}role{\r} one hand and the freedom but\Nit's
+Dialogue: 1,0:24:54.37,0:24:54.59,EN,,0,0,0,,by my role {\c&HC8E633&}one{\r} hand and the freedom but\Nit's
+Dialogue: 1,0:24:54.59,0:24:55.13,EN,,0,0,0,,by my role one {\c&HC8E633&}hand{\r} and the freedom but\Nit's
+Dialogue: 1,0:24:55.13,0:24:55.46,EN,,0,0,0,,by my role one hand {\c&HC8E633&}and{\r} the freedom but\Nit's
+Dialogue: 1,0:24:55.46,0:24:56.03,EN,,0,0,0,,by my role one hand and {\c&HC8E633&}the{\r} {\c&HC8E633&}freedom{\r} but\Nit's
+Dialogue: 1,0:24:56.03,0:24:56.27,EN,,0,0,0,,by my role one hand and the freedom {\c&HC8E633&}but{\r}\Nit's
+Dialogue: 1,0:24:56.27,0:24:56.54,EN,,0,0,0,,by my role one hand and the freedom but\N{\c&HC8E633&}it's{\r}
+Dialogue: 0,0:24:58.13,0:25:03.08,ZH,,0,0,227,,好吧，我被噩梦吓坏了，\N不认为她是，但他是垂死的玻璃。
+Dialogue: 1,0:24:58.13,0:24:58.49,EN,,0,0,0,,{\c&HC8E633&}alright{\r} fine i freaked out on having\Nnightmares don't think she's but he's\Ndying glass
+Dialogue: 1,0:24:58.49,0:24:59.33,EN,,0,0,0,,alright {\c&HC8E633&}fine{\r} {\c&HC8E633&}i{\r} freaked out on having\Nnightmares don't think she's but he's\Ndying glass
+Dialogue: 1,0:24:59.33,0:24:59.75,EN,,0,0,0,,alright fine i {\c&HC8E633&}freaked{\r} out on having\Nnightmares don't think she's but he's\Ndying glass
+Dialogue: 1,0:24:59.75,0:25:00.09,EN,,0,0,0,,alright fine i freaked {\c&HC8E633&}out{\r} {\c&HC8E633&}on{\r} having\Nnightmares don't think she's but he's\Ndying glass
+Dialogue: 1,0:25:00.09,0:25:00.32,EN,,0,0,0,,alright fine i freaked out on {\c&HC8E633&}having{\r}\Nnightmares don't think she's but he's\Ndying glass
+Dialogue: 1,0:25:00.32,0:25:00.74,EN,,0,0,0,,alright fine i freaked out on having\N{\c&HC8E633&}nightmares{\r} don't think she's but he's\Ndying glass
+Dialogue: 1,0:25:00.74,0:25:00.92,EN,,0,0,0,,alright fine i freaked out on having\Nnightmares {\c&HC8E633&}don't{\r} think she's but he's\Ndying glass
+Dialogue: 1,0:25:00.92,0:25:01.16,EN,,0,0,0,,alright fine i freaked out on having\Nnightmares don't {\c&HC8E633&}think{\r} she's but he's\Ndying glass
+Dialogue: 1,0:25:01.16,0:25:01.40,EN,,0,0,0,,alright fine i freaked out on having\Nnightmares don't think {\c&HC8E633&}she's{\r} but he's\Ndying glass
+Dialogue: 1,0:25:01.40,0:25:01.67,EN,,0,0,0,,alright fine i freaked out on having\Nnightmares don't think she's {\c&HC8E633&}but{\r} {\c&HC8E633&}he's{\r}\Ndying glass
+Dialogue: 1,0:25:01.67,0:25:02.57,EN,,0,0,0,,alright fine i freaked out on having\Nnightmares don't think she's but he's\N{\c&HC8E633&}dying{\r} glass
+Dialogue: 1,0:25:02.57,0:25:03.08,EN,,0,0,0,,alright fine i freaked out on having\Nnightmares don't think she's but he's\Ndying {\c&HC8E633&}glass{\r}
+Dialogue: 0,0:25:04.79,0:25:05.63,ZH,,0,0,227,,做得很好。
+Dialogue: 1,0:25:04.79,0:25:05.12,EN,,0,0,0,,{\c&HC8E633&}well{\r} done
+Dialogue: 1,0:25:05.12,0:25:05.63,EN,,0,0,0,,well {\c&HC8E633&}done{\r}
+Dialogue: 0,0:25:10.61,0:25:14.06,ZH,,0,0,227,,机器人记忆水槽和很多。
+Dialogue: 1,0:25:10.61,0:25:11.09,EN,,0,0,0,,{\c&HC8E633&}robots{\r} memory sink and lot
+Dialogue: 1,0:25:11.09,0:25:11.62,EN,,0,0,0,,robots {\c&HC8E633&}memory{\r} sink and lot
+Dialogue: 1,0:25:11.62,0:25:12.68,EN,,0,0,0,,robots memory {\c&HC8E633&}sink{\r} and lot
+Dialogue: 1,0:25:12.68,0:25:13.82,EN,,0,0,0,,robots memory sink {\c&HC8E633&}and{\r} lot
+Dialogue: 1,0:25:13.82,0:25:14.06,EN,,0,0,0,,robots memory sink and {\c&HC8E633&}lot{\r}
+Dialogue: 0,0:25:21.44,0:25:22.88,ZH,,0,0,227,,这太奇怪了。
+Dialogue: 1,0:25:21.44,0:25:21.95,EN,,0,0,0,,{\c&HC8E633&}this{\r} {\c&HC8E633&}is{\r} pretty freaky
+Dialogue: 1,0:25:21.95,0:25:22.31,EN,,0,0,0,,this is {\c&HC8E633&}pretty{\r} freaky
+Dialogue: 1,0:25:22.31,0:25:22.88,EN,,0,0,0,,this is pretty {\c&HC8E633&}freaky{\r}
+Dialogue: 0,0:26:18.20,0:26:19.16,ZH,,0,0,227,,您应该成为捐赠者吗？
+Dialogue: 1,0:26:18.20,0:26:18.50,EN,,0,0,0,,{\c&HC8E633&}should{\r} you be donor
+Dialogue: 1,0:26:18.50,0:26:19.16,EN,,0,0,0,,should {\c&HC8E633&}you{\r} {\c&HC8E633&}be{\r} {\c&HC8E633&}donor{\r}
+Dialogue: 0,0:26:31.88,0:26:33.41,ZH,,0,0,227,,我强烈建议大家晚上多聊天。
+Dialogue: 1,0:26:31.88,0:26:32.23,EN,,0,0,0,,{\c&HC8E633&}i{\r} {\c&HC8E633&}urge{\r} guys talking most night
+Dialogue: 1,0:26:32.23,0:26:32.51,EN,,0,0,0,,i urge {\c&HC8E633&}guys{\r} talking most night
+Dialogue: 1,0:26:32.51,0:26:32.84,EN,,0,0,0,,i urge guys {\c&HC8E633&}talking{\r} most night
+Dialogue: 1,0:26:32.84,0:26:33.06,EN,,0,0,0,,i urge guys talking {\c&HC8E633&}most{\r} night
+Dialogue: 1,0:26:33.06,0:26:33.41,EN,,0,0,0,,i urge guys talking most {\c&HC8E633&}night{\r}
+Dialogue: 0,0:26:37.01,0:26:37.82,ZH,,0,0,227,,顺便来看看！
+Dialogue: 1,0:26:37.01,0:26:37.49,EN,,0,0,0,,{\c&HC8E633&}stop{\r} {\c&HC8E633&}by{\r} for
+Dialogue: 1,0:26:37.49,0:26:37.82,EN,,0,0,0,,stop by {\c&HC8E633&}for{\r}
+Dialogue: 0,0:27:31.94,0:27:35.18,ZH,,0,0,227,,你准备好了吗，因为你已经准备\N好成为一名摇滚明星了？
+Dialogue: 1,0:27:31.94,0:27:32.21,EN,,0,0,0,,{\c&HC8E633&}are{\r} {\c&HC8E633&}you{\r} ready cause you're ready you're\Na rock star
+Dialogue: 1,0:27:32.21,0:27:33.20,EN,,0,0,0,,are you {\c&HC8E633&}ready{\r} cause you're ready you're\Na rock star
+Dialogue: 1,0:27:33.20,0:27:33.56,EN,,0,0,0,,are you ready {\c&HC8E633&}cause{\r} you're ready you're\Na rock star
+Dialogue: 1,0:27:33.56,0:27:33.74,EN,,0,0,0,,are you ready cause {\c&HC8E633&}you're{\r} ready you're\Na rock star
+Dialogue: 1,0:27:33.74,0:27:34.10,EN,,0,0,0,,are you ready cause you're {\c&HC8E633&}ready{\r} you're\Na rock star
+Dialogue: 1,0:27:34.10,0:27:34.37,EN,,0,0,0,,are you ready cause you're ready {\c&HC8E633&}you're{\r}\Na rock star
+Dialogue: 1,0:27:34.37,0:27:34.64,EN,,0,0,0,,are you ready cause you're ready you're\N{\c&HC8E633&}a{\r} {\c&HC8E633&}rock{\r} star
+Dialogue: 1,0:27:34.64,0:27:35.18,EN,,0,0,0,,are you ready cause you're ready you're\Na rock {\c&HC8E633&}star{\r}
+Dialogue: 0,0:27:37.73,0:27:41.03,ZH,,0,0,227,,看起来像身体，我们应该有大约\N十分钟的时间。
+Dialogue: 1,0:27:37.73,0:27:38.00,EN,,0,0,0,,{\c&HC8E633&}as{\r} {\c&HC8E633&}it{\r} look body we should have about ten\Nminutes
+Dialogue: 1,0:27:38.00,0:27:38.30,EN,,0,0,0,,as it {\c&HC8E633&}look{\r} body we should have about ten\Nminutes
+Dialogue: 1,0:27:38.30,0:27:39.56,EN,,0,0,0,,as it look {\c&HC8E633&}body{\r} {\c&HC8E633&}we{\r} should have about ten\Nminutes
+Dialogue: 1,0:27:39.56,0:27:39.92,EN,,0,0,0,,as it look body we {\c&HC8E633&}should{\r} have about ten\Nminutes
+Dialogue: 1,0:27:39.92,0:27:40.13,EN,,0,0,0,,as it look body we should {\c&HC8E633&}have{\r} about ten\Nminutes
+Dialogue: 1,0:27:40.13,0:27:40.40,EN,,0,0,0,,as it look body we should have {\c&HC8E633&}about{\r} ten\Nminutes
+Dialogue: 1,0:27:40.40,0:27:40.61,EN,,0,0,0,,as it look body we should have about {\c&HC8E633&}ten{\r}\Nminutes
+Dialogue: 1,0:27:40.61,0:27:41.03,EN,,0,0,0,,as it look body we should have about ten\N{\c&HC8E633&}minutes{\r}
+Dialogue: 0,0:27:42.26,0:27:43.34,ZH,,0,0,227,,太好了。
+Dialogue: 1,0:27:42.26,0:27:42.53,EN,,0,0,0,,{\c&HC8E633&}well{\r} that's perfect
+Dialogue: 1,0:27:42.53,0:27:42.80,EN,,0,0,0,,well {\c&HC8E633&}that's{\r} perfect
+Dialogue: 1,0:27:42.80,0:27:43.34,EN,,0,0,0,,well that's {\c&HC8E633&}perfect{\r}
+Dialogue: 0,0:27:45.68,0:27:47.40,ZH,,0,0,227,,Well system go.
+Dialogue: 1,0:27:45.68,0:27:46.04,EN,,0,0,0,,{\c&HC8E633&}well{\r} system go
+Dialogue: 1,0:27:46.04,0:27:46.96,EN,,0,0,0,,well {\c&HC8E633&}system{\r} go
+Dialogue: 1,0:27:46.96,0:27:47.40,EN,,0,0,0,,well system {\c&HC8E633&}go{\r}
+Dialogue: 0,0:28:03.44,0:28:04.40,ZH,,0,0,227,,太好了。
+Dialogue: 1,0:28:03.44,0:28:03.77,EN,,0,0,0,,{\c&HC8E633&}that's{\r} nice
+Dialogue: 1,0:28:03.77,0:28:04.40,EN,,0,0,0,,that's {\c&HC8E633&}nice{\r}
+Dialogue: 0,0:28:05.18,0:28:06.44,ZH,,0,0,227,,不足为虑。
+Dialogue: 1,0:28:05.18,0:28:05.66,EN,,0,0,0,,{\c&HC8E633&}nothing{\r} {\c&HC8E633&}to{\r} worry about that
+Dialogue: 1,0:28:05.66,0:28:05.90,EN,,0,0,0,,nothing to {\c&HC8E633&}worry{\r} about that
+Dialogue: 1,0:28:05.90,0:28:06.17,EN,,0,0,0,,nothing to worry {\c&HC8E633&}about{\r} that
+Dialogue: 1,0:28:06.17,0:28:06.44,EN,,0,0,0,,nothing to worry about {\c&HC8E633&}that{\r}
+Dialogue: 0,0:28:12.65,0:28:13.31,ZH,,0,0,227,,菜肴
+Dialogue: 1,0:28:12.65,0:28:13.31,EN,,0,0,0,,{\c&HC8E633&}dishes{\r}
+Dialogue: 0,0:28:15.95,0:28:16.61,ZH,,0,0,227,,你笑了。
+Dialogue: 1,0:28:15.95,0:28:16.28,EN,,0,0,0,,{\c&HC8E633&}you{\r} laugh
+Dialogue: 1,0:28:16.28,0:28:16.61,EN,,0,0,0,,you {\c&HC8E633&}laugh{\r}
+Dialogue: 0,0:28:17.99,0:28:20.90,ZH,,0,0,227,,她是你假装的狂欢者。
+Dialogue: 1,0:28:17.99,0:28:18.23,EN,,0,0,0,,{\c&HC8E633&}she's{\r} your bash the pretended to
+Dialogue: 1,0:28:18.23,0:28:19.61,EN,,0,0,0,,she's {\c&HC8E633&}your{\r} {\c&HC8E633&}bash{\r} the pretended to
+Dialogue: 1,0:28:19.61,0:28:20.27,EN,,0,0,0,,she's your bash {\c&HC8E633&}the{\r} pretended to
+Dialogue: 1,0:28:20.27,0:28:20.90,EN,,0,0,0,,she's your bash the {\c&HC8E633&}pretended{\r} {\c&HC8E633&}to{\r}
+Dialogue: 0,0:28:22.04,0:28:22.64,ZH,,0,0,227,,要坦诚。
+Dialogue: 1,0:28:22.04,0:28:22.64,EN,,0,0,0,,{\c&HC8E633&}be{\r} {\c&HC8E633&}honest{\r}
+Dialogue: 0,0:28:27.77,0:28:28.19,ZH,,0,0,227,,爱。
+Dialogue: 1,0:28:27.77,0:28:28.19,EN,,0,0,0,,{\c&HC8E633&}love{\r}
+Dialogue: 0,0:29:13.31,0:29:13.94,ZH,,0,0,227,,一
+Dialogue: 1,0:29:13.31,0:29:13.94,EN,,0,0,0,,{\c&HC8E633&}i{\r}
+Dialogue: 0,0:29:17.33,0:29:18.92,ZH,,0,0,227,,每次覆盖都在进行中。
+Dialogue: 1,0:29:17.33,0:29:17.63,EN,,0,0,0,,{\c&HC8E633&}every{\r} override in progress
+Dialogue: 1,0:29:17.63,0:29:18.20,EN,,0,0,0,,every {\c&HC8E633&}override{\r} {\c&HC8E633&}in{\r} progress
+Dialogue: 1,0:29:18.20,0:29:18.92,EN,,0,0,0,,every override in {\c&HC8E633&}progress{\r}
+Dialogue: 0,0:29:19.79,0:29:20.54,ZH,,0,0,227,,主任
+Dialogue: 1,0:29:19.79,0:29:20.54,EN,,0,0,0,,{\c&HC8E633&}director{\r}
+Dialogue: 0,0:29:22.64,0:29:24.68,ZH,,0,0,227,,啊，对不起，对不起。
+Dialogue: 1,0:29:22.64,0:29:23.01,EN,,0,0,0,,{\c&HC8E633&}ah{\r} {\c&HC8E633&}i'm{\r} sorry sorry
+Dialogue: 1,0:29:23.01,0:29:24.23,EN,,0,0,0,,ah i'm {\c&HC8E633&}sorry{\r} sorry
+Dialogue: 1,0:29:24.23,0:29:24.68,EN,,0,0,0,,ah i'm sorry {\c&HC8E633&}sorry{\r}
+Dialogue: 0,0:29:36.53,0:29:37.25,ZH,,0,0,227,,看看Celia。
+Dialogue: 1,0:29:36.53,0:29:36.75,EN,,0,0,0,,{\c&HC8E633&}look{\r} celia
+Dialogue: 1,0:29:36.75,0:29:37.25,EN,,0,0,0,,look {\c&HC8E633&}celia{\r}
+Dialogue: 0,0:29:38.90,0:29:40.85,ZH,,0,0,227,,我们必须追随我们的激情。
+Dialogue: 1,0:29:38.90,0:29:39.41,EN,,0,0,0,,{\c&HC8E633&}we{\r} {\c&HC8E633&}have{\r} {\c&HC8E633&}to{\r} follow our passions
+Dialogue: 1,0:29:39.41,0:29:39.86,EN,,0,0,0,,we have to {\c&HC8E633&}follow{\r} our passions
+Dialogue: 1,0:29:39.86,0:29:40.85,EN,,0,0,0,,we have to follow {\c&HC8E633&}our{\r} {\c&HC8E633&}passions{\r}
+Dialogue: 0,0:29:41.90,0:29:43.31,ZH,,0,0,227,,你有你的机器人。
+Dialogue: 1,0:29:41.90,0:29:42.08,EN,,0,0,0,,{\c&HC8E633&}you{\r} have your robotics
+Dialogue: 1,0:29:42.08,0:29:42.29,EN,,0,0,0,,you {\c&HC8E633&}have{\r} your robotics
+Dialogue: 1,0:29:42.29,0:29:42.47,EN,,0,0,0,,you have {\c&HC8E633&}your{\r} robotics
+Dialogue: 1,0:29:42.47,0:29:43.31,EN,,0,0,0,,you have your {\c&HC8E633&}robotics{\r}
+Dialogue: 0,0:29:45.71,0:29:48.29,ZH,,0,0,227,,我只想在太空中表现出色。
+Dialogue: 1,0:29:45.71,0:29:46.55,EN,,0,0,0,,{\c&HC8E633&}and{\r} {\c&HC8E633&}i{\r} just wanna be awesome in space
+Dialogue: 1,0:29:46.55,0:29:46.79,EN,,0,0,0,,and i {\c&HC8E633&}just{\r} wanna be awesome in space
+Dialogue: 1,0:29:46.79,0:29:47.21,EN,,0,0,0,,and i just {\c&HC8E633&}wanna{\r} {\c&HC8E633&}be{\r} awesome in space
+Dialogue: 1,0:29:47.21,0:29:47.72,EN,,0,0,0,,and i just wanna be {\c&HC8E633&}awesome{\r} {\c&HC8E633&}in{\r} space
+Dialogue: 1,0:29:47.72,0:29:48.29,EN,,0,0,0,,and i just wanna be awesome in {\c&HC8E633&}space{\r}
+Dialogue: 0,0:29:59.96,0:30:01.61,ZH,,0,0,227,,还剩两分钟。
+Dialogue: 1,0:29:59.96,0:30:00.86,EN,,0,0,0,,{\c&HC8E633&}come{\r} {\c&HC8E633&}in{\r} two minutes left
+Dialogue: 1,0:30:00.86,0:30:01.04,EN,,0,0,0,,come in {\c&HC8E633&}two{\r} minutes left
+Dialogue: 1,0:30:01.04,0:30:01.31,EN,,0,0,0,,come in two {\c&HC8E633&}minutes{\r} left
+Dialogue: 1,0:30:01.31,0:30:01.61,EN,,0,0,0,,come in two minutes {\c&HC8E633&}left{\r}
+Dialogue: 0,0:30:07.44,0:30:10.50,ZH,,0,0,227,,好吧，不要说你被我的机器人吓\N坏了。
+Dialogue: 1,0:30:07.44,0:30:07.73,EN,,0,0,0,,{\c&HC8E633&}right{\r} don't suggest that me that your\Nfreaked out by my robot him
+Dialogue: 1,0:30:07.73,0:30:08.28,EN,,0,0,0,,right {\c&HC8E633&}don't{\r} {\c&HC8E633&}suggest{\r} that me that your\Nfreaked out by my robot him
+Dialogue: 1,0:30:08.28,0:30:08.56,EN,,0,0,0,,right don't suggest {\c&HC8E633&}that{\r} {\c&HC8E633&}me{\r} that your\Nfreaked out by my robot him
+Dialogue: 1,0:30:08.56,0:30:08.85,EN,,0,0,0,,right don't suggest that me {\c&HC8E633&}that{\r} {\c&HC8E633&}your{\r}\Nfreaked out by my robot him
+Dialogue: 1,0:30:08.85,0:30:09.24,EN,,0,0,0,,right don't suggest that me that your\N{\c&HC8E633&}freaked{\r} out by my robot him
+Dialogue: 1,0:30:09.24,0:30:09.73,EN,,0,0,0,,right don't suggest that me that your\Nfreaked {\c&HC8E633&}out{\r} {\c&HC8E633&}by{\r} {\c&HC8E633&}my{\r} robot him
+Dialogue: 1,0:30:09.73,0:30:10.17,EN,,0,0,0,,right don't suggest that me that your\Nfreaked out by my {\c&HC8E633&}robot{\r} him
+Dialogue: 1,0:30:10.17,0:30:10.50,EN,,0,0,0,,right don't suggest that me that your\Nfreaked out by my robot {\c&HC8E633&}him{\r}
+Dialogue: 0,0:30:17.43,0:30:19.35,ZH,,0,0,227,,这个Celia我很年轻。
+Dialogue: 1,0:30:17.43,0:30:17.70,EN,,0,0,0,,{\c&HC8E633&}this{\r} celia i was young
+Dialogue: 1,0:30:17.70,0:30:18.78,EN,,0,0,0,,this {\c&HC8E633&}celia{\r} {\c&HC8E633&}i{\r} was young
+Dialogue: 1,0:30:18.78,0:30:18.99,EN,,0,0,0,,this celia i {\c&HC8E633&}was{\r} young
+Dialogue: 1,0:30:18.99,0:30:19.35,EN,,0,0,0,,this celia i was {\c&HC8E633&}young{\r}
+Dialogue: 0,0:30:20.55,0:30:23.55,ZH,,0,0,227,,还有一个鸡巴，但没有理由毁灭\N这个世界。
+Dialogue: 1,0:30:20.55,0:30:20.73,EN,,0,0,0,,{\c&HC8E633&}and{\r} {\c&HC8E633&}a{\r} dick but there's no reason to\Ndestroy the world
+Dialogue: 1,0:30:20.73,0:30:21.78,EN,,0,0,0,,and a {\c&HC8E633&}dick{\r} but there's no reason to\Ndestroy the world
+Dialogue: 1,0:30:21.78,0:30:22.17,EN,,0,0,0,,and a dick {\c&HC8E633&}but{\r} {\c&HC8E633&}there's{\r} {\c&HC8E633&}no{\r} reason to\Ndestroy the world
+Dialogue: 1,0:30:22.17,0:30:22.50,EN,,0,0,0,,and a dick but there's no {\c&HC8E633&}reason{\r} {\c&HC8E633&}to{\r}\Ndestroy the world
+Dialogue: 1,0:30:22.50,0:30:22.92,EN,,0,0,0,,and a dick but there's no reason to\N{\c&HC8E633&}destroy{\r} the world
+Dialogue: 1,0:30:22.92,0:30:23.55,EN,,0,0,0,,and a dick but there's no reason to\Ndestroy {\c&HC8E633&}the{\r} {\c&HC8E633&}world{\r}
+Dialogue: 0,0:30:25.59,0:30:26.37,ZH,,0,0,227,,他为什么要这么做？
+Dialogue: 1,0:30:25.59,0:30:26.10,EN,,0,0,0,,{\c&HC8E633&}why{\r} {\c&HC8E633&}does{\r} {\c&HC8E633&}he{\r} {\c&HC8E633&}do{\r} this
+Dialogue: 1,0:30:26.10,0:30:26.37,EN,,0,0,0,,why does he do {\c&HC8E633&}this{\r}
+Dialogue: 0,0:30:27.60,0:30:29.04,ZH,,0,0,227,,我们已经试过了。
+Dialogue: 1,0:30:27.60,0:30:27.78,EN,,0,0,0,,{\c&HC8E633&}we{\r} already tried that one
+Dialogue: 1,0:30:27.78,0:30:28.23,EN,,0,0,0,,we {\c&HC8E633&}already{\r} tried that one
+Dialogue: 1,0:30:28.23,0:30:28.56,EN,,0,0,0,,we already {\c&HC8E633&}tried{\r} that one
+Dialogue: 1,0:30:28.56,0:30:29.04,EN,,0,0,0,,we already tried {\c&HC8E633&}that{\r} {\c&HC8E633&}one{\r}
+Dialogue: 0,0:30:44.07,0:30:45.36,ZH,,0,0,227,,扎心了，老铁
+Dialogue: 1,0:30:44.07,0:30:44.37,EN,,0,0,0,,{\c&HC8E633&}you{\r} broke my heart
+Dialogue: 1,0:30:44.37,0:30:45.00,EN,,0,0,0,,you {\c&HC8E633&}broke{\r} {\c&HC8E633&}my{\r} heart
+Dialogue: 1,0:30:45.00,0:30:45.36,EN,,0,0,0,,you broke my {\c&HC8E633&}heart{\r}
+Dialogue: 0,0:30:47.67,0:30:49.17,ZH,,0,0,227,,你把我们忘在地球上了。
+Dialogue: 1,0:30:47.67,0:30:47.85,EN,,0,0,0,,{\c&HC8E633&}you{\r} forgot we on earth
+Dialogue: 1,0:30:47.85,0:30:48.81,EN,,0,0,0,,you {\c&HC8E633&}forgot{\r} {\c&HC8E633&}we{\r} {\c&HC8E633&}on{\r} earth
+Dialogue: 1,0:30:48.81,0:30:49.17,EN,,0,0,0,,you forgot we on {\c&HC8E633&}earth{\r}
+Dialogue: 0,0:30:51.03,0:30:52.44,ZH,,0,0,227,,我应该扔垃圾。
+Dialogue: 1,0:30:51.03,0:30:51.21,EN,,0,0,0,,{\c&HC8E633&}i{\r} should just trash
+Dialogue: 1,0:30:51.21,0:30:51.51,EN,,0,0,0,,i {\c&HC8E633&}should{\r} just trash
+Dialogue: 1,0:30:51.51,0:30:52.05,EN,,0,0,0,,i should {\c&HC8E633&}just{\r} trash
+Dialogue: 1,0:30:52.05,0:30:52.44,EN,,0,0,0,,i should just {\c&HC8E633&}trash{\r}
+Dialogue: 0,0:30:57.66,0:30:57.87,ZH,,0,0,227,,开
+Dialogue: 1,0:30:57.66,0:30:57.87,EN,,0,0,0,,{\c&HC8E633&}on{\r}
+Dialogue: 0,0:31:08.25,0:31:08.79,ZH,,0,0,227,,抱歉！為了防範濫發郵件，\N評論或留言中不允許有 URL\N 和電郵 Id
+Dialogue: 1,0:31:08.25,0:31:08.79,EN,,0,0,0,,{\c&HC8E633&}sorry{\r}
+Dialogue: 0,0:31:10.98,0:31:11.52,ZH,,0,0,227,,现场直播。
+Dialogue: 1,0:31:10.98,0:31:11.31,EN,,0,0,0,,{\c&HC8E633&}the{\r} live
+Dialogue: 1,0:31:11.31,0:31:11.52,EN,,0,0,0,,the {\c&HC8E633&}live{\r}
+Dialogue: 0,0:31:19.89,0:31:20.61,ZH,,0,0,227,,好吧，我的球。
+Dialogue: 1,0:31:19.89,0:31:20.16,EN,,0,0,0,,{\c&HC8E633&}well{\r} {\c&HC8E633&}my{\r} ball
+Dialogue: 1,0:31:20.16,0:31:20.61,EN,,0,0,0,,well my {\c&HC8E633&}ball{\r}
+Dialogue: 0,0:31:22.89,0:31:23.31,ZH,,0,0,227,,本次
+Dialogue: 1,0:31:22.89,0:31:23.31,EN,,0,0,0,,{\c&HC8E633&}this{\r} {\c&HC8E633&}time{\r}
+Dialogue: 0,0:31:29.10,0:31:29.40,ZH,,0,0,227,,为什么？
+Dialogue: 1,0:31:29.10,0:31:29.40,EN,,0,0,0,,{\c&HC8E633&}why{\r}
+Dialogue: 0,0:31:31.35,0:31:31.59,ZH,,0,0,227,,不扣除
+Dialogue: 1,0:31:31.35,0:31:31.59,EN,,0,0,0,,{\c&HC8E633&}not{\r}
+Dialogue: 0,0:32:45.00,0:32:46.23,ZH,,0,0,227,,对，百分之九十。
+Dialogue: 1,0:32:45.00,0:32:45.24,EN,,0,0,0,,{\c&HC8E633&}right{\r} and ninety percent
+Dialogue: 1,0:32:45.24,0:32:45.72,EN,,0,0,0,,right {\c&HC8E633&}and{\r} {\c&HC8E633&}ninety{\r} percent
+Dialogue: 1,0:32:45.72,0:32:46.23,EN,,0,0,0,,right and ninety {\c&HC8E633&}percent{\r}
+Dialogue: 0,0:32:46.98,0:32:48.93,ZH,,0,0,227,,船长，我们还有一个月的时间。
+Dialogue: 1,0:32:46.98,0:32:47.94,EN,,0,0,0,,{\c&HC8E633&}captain{\r} {\c&HC8E633&}we{\r} have a month
+Dialogue: 1,0:32:47.94,0:32:48.42,EN,,0,0,0,,captain we {\c&HC8E633&}have{\r} {\c&HC8E633&}a{\r} month
+Dialogue: 1,0:32:48.42,0:32:48.93,EN,,0,0,0,,captain we have a {\c&HC8E633&}month{\r}
+Dialogue: 0,0:32:59.73,0:33:00.96,ZH,,0,0,227,,世界改变了Celia。
+Dialogue: 1,0:32:59.73,0:33:00.18,EN,,0,0,0,,{\c&HC8E633&}the{\r} {\c&HC8E633&}world's{\r} changed celia
+Dialogue: 1,0:33:00.18,0:33:00.51,EN,,0,0,0,,the world's {\c&HC8E633&}changed{\r} celia
+Dialogue: 1,0:33:00.51,0:33:00.96,EN,,0,0,0,,the world's changed {\c&HC8E633&}celia{\r}
+Dialogue: 0,0:33:15.63,0:33:16.62,ZH,,0,0,227,,也许我们可以。
+Dialogue: 1,0:33:15.63,0:33:16.11,EN,,0,0,0,,{\c&HC8E633&}maybe{\r} {\c&HC8E633&}we{\r} can to
+Dialogue: 1,0:33:16.11,0:33:16.29,EN,,0,0,0,,maybe we {\c&HC8E633&}can{\r} to
+Dialogue: 1,0:33:16.29,0:33:16.62,EN,,0,0,0,,maybe we can {\c&HC8E633&}to{\r}
+Dialogue: 0,0:33:18.75,0:33:20.01,ZH,,0,0,227,,显著
+Dialogue: 1,0:33:18.75,0:33:20.01,EN,,0,0,0,,{\c&HC8E633&}remarkably{\r}
+Dialogue: 0,0:33:39.69,0:33:40.11,ZH,,0,0,227,,你知道的。
+Dialogue: 1,0:33:39.69,0:33:40.11,EN,,0,0,0,,{\c&HC8E633&}you{\r} {\c&HC8E633&}know{\r}
+Dialogue: 0,0:33:42.54,0:33:44.13,ZH,,0,0,227,,倾听是否可以从中吸取教训？
+Dialogue: 1,0:33:42.54,0:33:42.74,EN,,0,0,0,,{\c&HC8E633&}is{\r} listen to be learned from this
+Dialogue: 1,0:33:42.74,0:33:43.38,EN,,0,0,0,,is {\c&HC8E633&}listen{\r} {\c&HC8E633&}to{\r} {\c&HC8E633&}be{\r} learned from this
+Dialogue: 1,0:33:43.38,0:33:43.59,EN,,0,0,0,,is listen to be {\c&HC8E633&}learned{\r} from this
+Dialogue: 1,0:33:43.59,0:33:43.77,EN,,0,0,0,,is listen to be learned {\c&HC8E633&}from{\r} this
+Dialogue: 1,0:33:43.77,0:33:44.13,EN,,0,0,0,,is listen to be learned from {\c&HC8E633&}this{\r}
+Dialogue: 0,0:33:46.56,0:33:47.37,ZH,,0,0,227,,情况变得更糟了。
+Dialogue: 1,0:33:46.56,0:33:46.74,EN,,0,0,0,,{\c&HC8E633&}that{\r} {\c&HC8E633&}are{\r} gone worse
+Dialogue: 1,0:33:46.74,0:33:46.98,EN,,0,0,0,,that are {\c&HC8E633&}gone{\r} worse
+Dialogue: 1,0:33:46.98,0:33:47.37,EN,,0,0,0,,that are gone {\c&HC8E633&}worse{\r}
+Dialogue: 0,0:34:14.10,0:34:19.14,ZH,,0,0,227,,即
+Dialogue: 1,0:34:14.10,0:34:19.14,EN,,0,0,0,,{\c&HC8E633&}that{\r}
+Dialogue: 0,0:34:29.94,0:34:34.98,ZH,,0,0,227,,即
+Dialogue: 1,0:34:29.94,0:34:34.98,EN,,0,0,0,,{\c&HC8E633&}that{\r}
+Dialogue: 0,0:35:10.98,0:35:19.53,ZH,,0,0,227,,按
+Dialogue: 1,0:35:10.98,0:35:19.53,EN,,0,0,0,,{\c&HC8E633&}by{\r}
+Dialogue: 0,0:36:35.99,0:36:37.61,ZH,,0,0,227,,我们已有了良好的开始。
+Dialogue: 1,0:36:35.99,0:36:36.23,EN,,0,0,0,,{\c&HC8E633&}we{\r} have made a start
+Dialogue: 1,0:36:36.23,0:36:36.56,EN,,0,0,0,,we {\c&HC8E633&}have{\r} made a start
+Dialogue: 1,0:36:36.56,0:36:37.16,EN,,0,0,0,,we have {\c&HC8E633&}made{\r} {\c&HC8E633&}a{\r} start
+Dialogue: 1,0:36:37.16,0:36:37.61,EN,,0,0,0,,we have made a {\c&HC8E633&}start{\r}
+Dialogue: 0,0:36:38.87,0:36:40.91,ZH,,0,0,227,,三二一
+Dialogue: 1,0:36:38.87,0:36:39.68,EN,,0,0,0,,{\c&HC8E633&}three{\r} two one
+Dialogue: 1,0:36:39.68,0:36:40.58,EN,,0,0,0,,three {\c&HC8E633&}two{\r} one
+Dialogue: 1,0:36:40.58,0:36:40.91,EN,,0,0,0,,three two {\c&HC8E633&}one{\r}
+Dialogue: 0,0:36:54.92,0:37:01.43,ZH,,0,0,227,,Jerk tom看起来Cel\Nia ，我们必须追随我们的热\N情，你有你的机器人，\N我只想让他的脸看起来很棒。
+Dialogue: 1,0:36:54.92,0:36:55.34,EN,,0,0,0,,{\c&HC8E633&}jerk{\r} tom look celia we have to follow\Nour passions you have your robotics and\Ni just want to be awesome his face
+Dialogue: 1,0:36:55.34,0:36:55.76,EN,,0,0,0,,jerk {\c&HC8E633&}tom{\r} look celia we have to follow\Nour passions you have your robotics and\Ni just want to be awesome his face
+Dialogue: 1,0:36:55.76,0:36:56.09,EN,,0,0,0,,jerk tom {\c&HC8E633&}look{\r} celia we have to follow\Nour passions you have your robotics and\Ni just want to be awesome his face
+Dialogue: 1,0:36:56.09,0:36:56.78,EN,,0,0,0,,jerk tom look {\c&HC8E633&}celia{\r} {\c&HC8E633&}we{\r} have to follow\Nour passions you have your robotics and\Ni just want to be awesome his face
+Dialogue: 1,0:36:56.78,0:36:57.11,EN,,0,0,0,,jerk tom look celia we {\c&HC8E633&}have{\r} {\c&HC8E633&}to{\r} follow\Nour passions you have your robotics and\Ni just want to be awesome his face
+Dialogue: 1,0:36:57.11,0:36:57.50,EN,,0,0,0,,jerk tom look celia we have to {\c&HC8E633&}follow{\r}\Nour passions you have your robotics and\Ni just want to be awesome his face
+Dialogue: 1,0:36:57.50,0:36:58.64,EN,,0,0,0,,jerk tom look celia we have to follow\N{\c&HC8E633&}our{\r} {\c&HC8E633&}passions{\r} you have your robotics and\Ni just want to be awesome his face
+Dialogue: 1,0:36:58.64,0:36:58.91,EN,,0,0,0,,jerk tom look celia we have to follow\Nour passions {\c&HC8E633&}you{\r} {\c&HC8E633&}have{\r} your robotics and\Ni just want to be awesome his face
+Dialogue: 1,0:36:58.91,0:36:59.63,EN,,0,0,0,,jerk tom look celia we have to follow\Nour passions you have {\c&HC8E633&}your{\r} {\c&HC8E633&}robotics{\r} and\Ni just want to be awesome his face
+Dialogue: 1,0:36:59.63,0:36:59.72,EN,,0,0,0,,jerk tom look celia we have to follow\Nour passions you have your robotics {\c&HC8E633&}and{\r}\Ni just want to be awesome his face
+Dialogue: 1,0:36:59.72,0:36:59.93,EN,,0,0,0,,jerk tom look celia we have to follow\Nour passions you have your robotics and\N{\c&HC8E633&}i{\r} {\c&HC8E633&}just{\r} want to be awesome his face
+Dialogue: 1,0:36:59.93,0:37:00.44,EN,,0,0,0,,jerk tom look celia we have to follow\Nour passions you have your robotics and\Ni just {\c&HC8E633&}want{\r} {\c&HC8E633&}to{\r} {\c&HC8E633&}be{\r} awesome his face
+Dialogue: 1,0:37:00.44,0:37:00.86,EN,,0,0,0,,jerk tom look celia we have to follow\Nour passions you have your robotics and\Ni just want to be {\c&HC8E633&}awesome{\r} his face
+Dialogue: 1,0:37:00.86,0:37:01.43,EN,,0,0,0,,jerk tom look celia we have to follow\Nour passions you have your robotics and\Ni just want to be awesome {\c&HC8E633&}his{\r} {\c&HC8E633&}face{\r}
+Dialogue: 1,0:37:02.16,0:37:02.42,EN,,0,0,0,,{\c&HC8E633&}don't{\r} you just admit that you're
+Dialogue: 0,0:37:02.17,0:37:03.65,ZH,,0,0,227,,你不要只是承认你是。
+Dialogue: 1,0:37:02.42,0:37:02.84,EN,,0,0,0,,don't {\c&HC8E633&}you{\r} {\c&HC8E633&}just{\r} admit that you're
+Dialogue: 1,0:37:02.84,0:37:03.21,EN,,0,0,0,,don't you just {\c&HC8E633&}admit{\r} that you're
+Dialogue: 1,0:37:03.21,0:37:03.65,EN,,0,0,0,,don't you just admit {\c&HC8E633&}that{\r} {\c&HC8E633&}you're{\r}
+Dialogue: 0,0:37:04.49,0:37:07.31,ZH,,0,0,227,,我的我的机器人手和自由，\N但它是。
+Dialogue: 1,0:37:04.49,0:37:04.84,EN,,0,0,0,,{\c&HC8E633&}my{\r} {\c&HC8E633&}my{\r} {\c&HC8E633&}i{\r} robot hand and the freedom but\Nit's
+Dialogue: 1,0:37:04.84,0:37:05.36,EN,,0,0,0,,my my i {\c&HC8E633&}robot{\r} hand and the freedom but\Nit's
+Dialogue: 1,0:37:05.36,0:37:05.90,EN,,0,0,0,,my my i robot {\c&HC8E633&}hand{\r} and the freedom but\Nit's
+Dialogue: 1,0:37:05.90,0:37:06.26,EN,,0,0,0,,my my i robot hand {\c&HC8E633&}and{\r} the freedom but\Nit's
+Dialogue: 1,0:37:06.26,0:37:06.83,EN,,0,0,0,,my my i robot hand and {\c&HC8E633&}the{\r} {\c&HC8E633&}freedom{\r} but\Nit's
+Dialogue: 1,0:37:06.83,0:37:07.04,EN,,0,0,0,,my my i robot hand and the freedom {\c&HC8E633&}but{\r}\Nit's
+Dialogue: 1,0:37:07.04,0:37:07.31,EN,,0,0,0,,my my i robot hand and the freedom but\N{\c&HC8E633&}it's{\r}
+Dialogue: 0,0:37:08.93,0:37:12.86,ZH,,0,0,227,,好吧，我吓坏了，做了我认为她\N会做的噩梦，但他快死了。
+Dialogue: 1,0:37:08.93,0:37:09.29,EN,,0,0,0,,{\c&HC8E633&}alright{\r} fine i freaked out and having\Nnightmares that i'm think she's but he's\Ndying
+Dialogue: 1,0:37:09.29,0:37:10.10,EN,,0,0,0,,alright {\c&HC8E633&}fine{\r} {\c&HC8E633&}i{\r} freaked out and having\Nnightmares that i'm think she's but he's\Ndying
+Dialogue: 1,0:37:10.10,0:37:10.52,EN,,0,0,0,,alright fine i {\c&HC8E633&}freaked{\r} out and having\Nnightmares that i'm think she's but he's\Ndying
+Dialogue: 1,0:37:10.52,0:37:10.79,EN,,0,0,0,,alright fine i freaked {\c&HC8E633&}out{\r} and having\Nnightmares that i'm think she's but he's\Ndying
+Dialogue: 1,0:37:10.79,0:37:11.09,EN,,0,0,0,,alright fine i freaked out {\c&HC8E633&}and{\r} {\c&HC8E633&}having{\r}\Nnightmares that i'm think she's but he's\Ndying
+Dialogue: 1,0:37:11.09,0:37:11.51,EN,,0,0,0,,alright fine i freaked out and having\N{\c&HC8E633&}nightmares{\r} that i'm think she's but he's\Ndying
+Dialogue: 1,0:37:11.51,0:37:11.93,EN,,0,0,0,,alright fine i freaked out and having\Nnightmares {\c&HC8E633&}that{\r} {\c&HC8E633&}i'm{\r} {\c&HC8E633&}think{\r} she's but he's\Ndying
+Dialogue: 1,0:37:11.93,0:37:12.20,EN,,0,0,0,,alright fine i freaked out and having\Nnightmares that i'm think {\c&HC8E633&}she's{\r} but he's\Ndying
+Dialogue: 1,0:37:12.20,0:37:12.44,EN,,0,0,0,,alright fine i freaked out and having\Nnightmares that i'm think she's {\c&HC8E633&}but{\r} {\c&HC8E633&}he's{\r}\Ndying
+Dialogue: 1,0:37:12.44,0:37:12.86,EN,,0,0,0,,alright fine i freaked out and having\Nnightmares that i'm think she's but he's\N{\c&HC8E633&}dying{\r}
+Dialogue: 0,0:37:15.59,0:37:16.40,ZH,,0,0,227,,做得很好。
+Dialogue: 1,0:37:15.59,0:37:15.92,EN,,0,0,0,,{\c&HC8E633&}well{\r} done
+Dialogue: 1,0:37:15.92,0:37:16.40,EN,,0,0,0,,well {\c&HC8E633&}done{\r}
+Dialogue: 0,0:37:21.41,0:37:24.86,ZH,,0,0,227,,机器人记忆唱歌和很多。
+Dialogue: 1,0:37:21.41,0:37:21.86,EN,,0,0,0,,{\c&HC8E633&}robots{\r} memory sing and lot
+Dialogue: 1,0:37:21.86,0:37:22.40,EN,,0,0,0,,robots {\c&HC8E633&}memory{\r} sing and lot
+Dialogue: 1,0:37:22.40,0:37:23.48,EN,,0,0,0,,robots memory {\c&HC8E633&}sing{\r} and lot
+Dialogue: 1,0:37:23.48,0:37:24.59,EN,,0,0,0,,robots memory sing {\c&HC8E633&}and{\r} lot
+Dialogue: 1,0:37:24.59,0:37:24.86,EN,,0,0,0,,robots memory sing and {\c&HC8E633&}lot{\r}
+Dialogue: 0,0:37:32.24,0:37:33.65,ZH,,0,0,227,,这太奇怪了。
+Dialogue: 1,0:37:32.24,0:37:32.66,EN,,0,0,0,,{\c&HC8E633&}this{\r} {\c&HC8E633&}is{\r} pretty freaky
+Dialogue: 1,0:37:32.66,0:37:33.08,EN,,0,0,0,,this is {\c&HC8E633&}pretty{\r} freaky
+Dialogue: 1,0:37:33.08,0:37:33.65,EN,,0,0,0,,this is pretty {\c&HC8E633&}freaky{\r}
+Dialogue: 0,0:38:28.97,0:38:29.96,ZH,,0,0,227,,您应该成为捐赠者吗？
+Dialogue: 1,0:38:28.97,0:38:29.25,EN,,0,0,0,,{\c&HC8E633&}should{\r} you be donor
+Dialogue: 1,0:38:29.25,0:38:29.48,EN,,0,0,0,,should {\c&HC8E633&}you{\r} {\c&HC8E633&}be{\r} donor
+Dialogue: 1,0:38:29.48,0:38:29.96,EN,,0,0,0,,should you be {\c&HC8E633&}donor{\r}
+Dialogue: 0,0:38:42.68,0:38:44.18,ZH,,0,0,227,,我昨晚听到你们在说话。
+Dialogue: 1,0:38:42.68,0:38:42.93,EN,,0,0,0,,{\c&HC8E633&}i{\r} {\c&HC8E633&}heard{\r} you guys talking last night
+Dialogue: 1,0:38:42.93,0:38:43.31,EN,,0,0,0,,i heard {\c&HC8E633&}you{\r} {\c&HC8E633&}guys{\r} talking last night
+Dialogue: 1,0:38:43.31,0:38:43.64,EN,,0,0,0,,i heard you guys {\c&HC8E633&}talking{\r} last night
+Dialogue: 1,0:38:43.64,0:38:43.85,EN,,0,0,0,,i heard you guys talking {\c&HC8E633&}last{\r} night
+Dialogue: 1,0:38:43.85,0:38:44.18,EN,,0,0,0,,i heard you guys talking last {\c&HC8E633&}night{\r}
+Dialogue: 0,0:38:47.81,0:38:48.62,ZH,,0,0,227,,顺便来看看！
+Dialogue: 1,0:38:47.81,0:38:48.26,EN,,0,0,0,,{\c&HC8E633&}stop{\r} {\c&HC8E633&}by{\r} for
+Dialogue: 1,0:38:48.26,0:38:48.62,EN,,0,0,0,,stop by {\c&HC8E633&}for{\r}
+Dialogue: 0,0:39:42.74,0:39:45.95,ZH,,0,0,227,,你准备好了吗，因为你已经准备\N好成为摇滚明星了？
+Dialogue: 1,0:39:42.74,0:39:43.01,EN,,0,0,0,,{\c&HC8E633&}are{\r} {\c&HC8E633&}you{\r} ready cause you're ready your a\Nrock star
+Dialogue: 1,0:39:43.01,0:39:44.00,EN,,0,0,0,,are you {\c&HC8E633&}ready{\r} cause you're ready your a\Nrock star
+Dialogue: 1,0:39:44.00,0:39:44.36,EN,,0,0,0,,are you ready {\c&HC8E633&}cause{\r} you're ready your a\Nrock star
+Dialogue: 1,0:39:44.36,0:39:44.90,EN,,0,0,0,,are you ready cause {\c&HC8E633&}you're{\r} {\c&HC8E633&}ready{\r} your a\Nrock star
+Dialogue: 1,0:39:44.90,0:39:45.23,EN,,0,0,0,,are you ready cause you're ready {\c&HC8E633&}your{\r} {\c&HC8E633&}a{\r}\Nrock star
+Dialogue: 1,0:39:45.23,0:39:45.44,EN,,0,0,0,,are you ready cause you're ready your a\N{\c&HC8E633&}rock{\r} star
+Dialogue: 1,0:39:45.44,0:39:45.95,EN,,0,0,0,,are you ready cause you're ready your a\Nrock {\c&HC8E633&}star{\r}
+Dialogue: 0,0:39:48.50,0:39:51.83,ZH,,0,0,227,,由于身体看起来不像，\N我们应该有大约十分钟的时间。
+Dialogue: 1,0:39:48.50,0:39:48.80,EN,,0,0,0,,{\c&HC8E633&}as{\r} {\c&HC8E633&}wasn't{\r} looking body we should have\Nabout ten minutes
+Dialogue: 1,0:39:48.80,0:39:49.09,EN,,0,0,0,,as wasn't {\c&HC8E633&}looking{\r} body we should have\Nabout ten minutes
+Dialogue: 1,0:39:49.09,0:39:50.36,EN,,0,0,0,,as wasn't looking {\c&HC8E633&}body{\r} {\c&HC8E633&}we{\r} should have\Nabout ten minutes
+Dialogue: 1,0:39:50.36,0:39:50.69,EN,,0,0,0,,as wasn't looking body we {\c&HC8E633&}should{\r} have\Nabout ten minutes
+Dialogue: 1,0:39:50.69,0:39:50.90,EN,,0,0,0,,as wasn't looking body we should {\c&HC8E633&}have{\r}\Nabout ten minutes
+Dialogue: 1,0:39:50.90,0:39:51.17,EN,,0,0,0,,as wasn't looking body we should have\N{\c&HC8E633&}about{\r} ten minutes
+Dialogue: 1,0:39:51.17,0:39:51.41,EN,,0,0,0,,as wasn't looking body we should have\Nabout {\c&HC8E633&}ten{\r} minutes
+Dialogue: 1,0:39:51.41,0:39:51.83,EN,,0,0,0,,as wasn't looking body we should have\Nabout ten {\c&HC8E633&}minutes{\r}
+Dialogue: 0,0:39:53.06,0:39:54.05,ZH,,0,0,227,,太好了。
+Dialogue: 1,0:39:53.06,0:39:53.30,EN,,0,0,0,,{\c&HC8E633&}well{\r} that's perfect
+Dialogue: 1,0:39:53.30,0:39:53.57,EN,,0,0,0,,well {\c&HC8E633&}that's{\r} perfect
+Dialogue: 1,0:39:53.57,0:39:54.05,EN,,0,0,0,,well that's {\c&HC8E633&}perfect{\r}
+Dialogue: 0,0:39:56.48,0:39:58.99,ZH,,0,0,227,,所有系统都去去去。
+Dialogue: 1,0:39:56.48,0:39:56.81,EN,,0,0,0,,{\c&HC8E633&}all{\r} systems go go go
+Dialogue: 1,0:39:56.81,0:39:57.58,EN,,0,0,0,,all {\c&HC8E633&}systems{\r} go go go
+Dialogue: 1,0:39:57.58,0:39:58.02,EN,,0,0,0,,all systems {\c&HC8E633&}go{\r} go go
+Dialogue: 1,0:39:58.02,0:39:58.64,EN,,0,0,0,,all systems go {\c&HC8E633&}go{\r} go
+Dialogue: 1,0:39:58.64,0:39:58.99,EN,,0,0,0,,all systems go go {\c&HC8E633&}go{\r}
+Dialogue: 0,0:40:14.19,0:40:15.18,ZH,,0,0,227,,太好了。
+Dialogue: 1,0:40:14.19,0:40:14.55,EN,,0,0,0,,{\c&HC8E633&}that's{\r} nice
+Dialogue: 1,0:40:14.55,0:40:15.18,EN,,0,0,0,,that's {\c&HC8E633&}nice{\r}
+Dialogue: 0,0:40:15.96,0:40:17.25,ZH,,0,0,227,,不足为虑。
+Dialogue: 1,0:40:15.96,0:40:16.44,EN,,0,0,0,,{\c&HC8E633&}nothing{\r} {\c&HC8E633&}to{\r} worry about that
+Dialogue: 1,0:40:16.44,0:40:16.68,EN,,0,0,0,,nothing to {\c&HC8E633&}worry{\r} about that
+Dialogue: 1,0:40:16.68,0:40:16.95,EN,,0,0,0,,nothing to worry {\c&HC8E633&}about{\r} that
+Dialogue: 1,0:40:16.95,0:40:17.25,EN,,0,0,0,,nothing to worry about {\c&HC8E633&}that{\r}
+Dialogue: 0,0:40:23.43,0:40:24.09,ZH,,0,0,227,,是吗？
+Dialogue: 1,0:40:23.43,0:40:24.09,EN,,0,0,0,,{\c&HC8E633&}do{\r} {\c&HC8E633&}she's{\r}
+Dialogue: 0,0:40:24.99,0:40:25.29,ZH,,0,0,227,,现今阶段，
+Dialogue: 1,0:40:24.99,0:40:25.29,EN,,0,0,0,,{\c&HC8E633&}now{\r}
+Dialogue: 0,0:40:26.73,0:40:27.39,ZH,,0,0,227,,每一刻
+Dialogue: 1,0:40:26.73,0:40:27.06,EN,,0,0,0,,{\c&HC8E633&}you{\r} love
+Dialogue: 1,0:40:27.06,0:40:27.39,EN,,0,0,0,,you {\c&HC8E633&}love{\r}
+Dialogue: 0,0:40:28.80,0:40:31.73,ZH,,0,0,227,,她是你被打败的拳击手。
+Dialogue: 1,0:40:28.80,0:40:29.01,EN,,0,0,0,,{\c&HC8E633&}she's{\r} your bash the be beaten the to
+Dialogue: 1,0:40:29.01,0:40:30.39,EN,,0,0,0,,she's {\c&HC8E633&}your{\r} {\c&HC8E633&}bash{\r} the be beaten the to
+Dialogue: 1,0:40:30.39,0:40:31.10,EN,,0,0,0,,she's your bash {\c&HC8E633&}the{\r} {\c&HC8E633&}be{\r} beaten the to
+Dialogue: 1,0:40:31.10,0:40:31.44,EN,,0,0,0,,she's your bash the be {\c&HC8E633&}beaten{\r} the to
+Dialogue: 1,0:40:31.44,0:40:31.73,EN,,0,0,0,,she's your bash the be beaten {\c&HC8E633&}the{\r} {\c&HC8E633&}to{\r}
+Dialogue: 0,0:40:32.82,0:40:33.42,ZH,,0,0,227,,要坦诚。
+Dialogue: 1,0:40:32.82,0:40:33.42,EN,,0,0,0,,{\c&HC8E633&}be{\r} {\c&HC8E633&}honest{\r}
+Dialogue: 0,0:40:35.01,0:40:35.46,ZH,,0,0,227,,英国
+Dialogue: 1,0:40:35.01,0:40:35.46,EN,,0,0,0,,{\c&HC8E633&}britain{\r}
+Dialogue: 0,0:40:36.87,0:40:38.97,ZH,,0,0,227,,提醒您一定会喜欢的。
+Dialogue: 1,0:40:36.87,0:40:38.37,EN,,0,0,0,,{\c&HC8E633&}reminder{\r} would love
+Dialogue: 1,0:40:38.37,0:40:38.97,EN,,0,0,0,,reminder {\c&HC8E633&}would{\r} {\c&HC8E633&}love{\r}
+Dialogue: 0,0:41:24.09,0:41:24.75,ZH,,0,0,227,,一
+Dialogue: 1,0:41:24.09,0:41:24.75,EN,,0,0,0,,{\c&HC8E633&}i{\r}
+Dialogue: 0,0:41:28.08,0:41:29.70,ZH,,0,0,227,,每次覆盖都在进行中。
+Dialogue: 1,0:41:28.08,0:41:28.41,EN,,0,0,0,,{\c&HC8E633&}every{\r} override in progress
+Dialogue: 1,0:41:28.41,0:41:28.98,EN,,0,0,0,,every {\c&HC8E633&}override{\r} {\c&HC8E633&}in{\r} progress
+Dialogue: 1,0:41:28.98,0:41:29.70,EN,,0,0,0,,every override in {\c&HC8E633&}progress{\r}
+Dialogue: 0,0:41:30.57,0:41:31.38,ZH,,0,0,227,,你这混蛋
+Dialogue: 1,0:41:30.57,0:41:30.99,EN,,0,0,0,,{\c&HC8E633&}you're{\r} {\c&HC8E633&}a{\r} jerk
+Dialogue: 1,0:41:30.99,0:41:31.38,EN,,0,0,0,,you're a {\c&HC8E633&}jerk{\r}
+Dialogue: 0,0:41:33.42,0:41:35.43,ZH,,0,0,227,,哦，对不起，对不起！
+Dialogue: 1,0:41:33.42,0:41:33.78,EN,,0,0,0,,{\c&HC8E633&}oh{\r} {\c&HC8E633&}i'm{\r} sorry sorry
+Dialogue: 1,0:41:33.78,0:41:35.04,EN,,0,0,0,,oh i'm {\c&HC8E633&}sorry{\r} sorry
+Dialogue: 1,0:41:35.04,0:41:35.43,EN,,0,0,0,,oh i'm sorry {\c&HC8E633&}sorry{\r}
+Dialogue: 0,0:41:47.31,0:41:48.06,ZH,,0,0,227,,看看Celia。
+Dialogue: 1,0:41:47.31,0:41:47.53,EN,,0,0,0,,{\c&HC8E633&}look{\r} celia
+Dialogue: 1,0:41:47.53,0:41:48.06,EN,,0,0,0,,look {\c&HC8E633&}celia{\r}
+Dialogue: 0,0:41:49.68,0:41:51.60,ZH,,0,0,227,,我们必须追随我们的激情。
+Dialogue: 1,0:41:49.68,0:41:50.19,EN,,0,0,0,,{\c&HC8E633&}we{\r} {\c&HC8E633&}have{\r} {\c&HC8E633&}to{\r} follow our passions
+Dialogue: 1,0:41:50.19,0:41:50.64,EN,,0,0,0,,we have to {\c&HC8E633&}follow{\r} our passions
+Dialogue: 1,0:41:50.64,0:41:51.60,EN,,0,0,0,,we have to follow {\c&HC8E633&}our{\r} {\c&HC8E633&}passions{\r}
+Dialogue: 0,0:41:52.68,0:41:54.09,ZH,,0,0,227,,你有你的机器人。
+Dialogue: 1,0:41:52.68,0:41:53.07,EN,,0,0,0,,{\c&HC8E633&}you{\r} {\c&HC8E633&}have{\r} your robotics
+Dialogue: 1,0:41:53.07,0:41:54.09,EN,,0,0,0,,you have {\c&HC8E633&}your{\r} {\c&HC8E633&}robotics{\r}
+Dialogue: 0,0:41:56.49,0:41:59.07,ZH,,0,0,227,,我只想在太空中表现出色。
+Dialogue: 1,0:41:56.49,0:41:57.33,EN,,0,0,0,,{\c&HC8E633&}and{\r} {\c&HC8E633&}i{\r} just wanna be awesome in space
+Dialogue: 1,0:41:57.33,0:41:57.57,EN,,0,0,0,,and i {\c&HC8E633&}just{\r} wanna be awesome in space
+Dialogue: 1,0:41:57.57,0:41:57.99,EN,,0,0,0,,and i just {\c&HC8E633&}wanna{\r} {\c&HC8E633&}be{\r} awesome in space
+Dialogue: 1,0:41:57.99,0:41:58.50,EN,,0,0,0,,and i just wanna be {\c&HC8E633&}awesome{\r} {\c&HC8E633&}in{\r} space
+Dialogue: 1,0:41:58.50,0:41:59.07,EN,,0,0,0,,and i just wanna be awesome in {\c&HC8E633&}space{\r}
+Dialogue: 0,0:42:10.47,0:42:12.39,ZH,,0,0,227,,请在两分钟后前来。
+Dialogue: 1,0:42:10.47,0:42:10.74,EN,,0,0,0,,{\c&HC8E633&}get{\r} come in two minutes left
+Dialogue: 1,0:42:10.74,0:42:11.64,EN,,0,0,0,,get {\c&HC8E633&}come{\r} {\c&HC8E633&}in{\r} two minutes left
+Dialogue: 1,0:42:11.64,0:42:12.09,EN,,0,0,0,,get come in {\c&HC8E633&}two{\r} {\c&HC8E633&}minutes{\r} left
+Dialogue: 1,0:42:12.09,0:42:12.39,EN,,0,0,0,,get come in two minutes {\c&HC8E633&}left{\r}
+Dialogue: 0,0:42:18.48,0:42:21.27,ZH,,0,0,227,,不要说你被我的机器人他吓坏了。
+Dialogue: 1,0:42:18.48,0:42:18.67,EN,,0,0,0,,{\c&HC8E633&}don't{\r} suggest that me that your freaked\Nout by my robot him
+Dialogue: 1,0:42:18.67,0:42:19.08,EN,,0,0,0,,don't {\c&HC8E633&}suggest{\r} that me that your freaked\Nout by my robot him
+Dialogue: 1,0:42:19.08,0:42:19.36,EN,,0,0,0,,don't suggest {\c&HC8E633&}that{\r} {\c&HC8E633&}me{\r} that your freaked\Nout by my robot him
+Dialogue: 1,0:42:19.36,0:42:19.65,EN,,0,0,0,,don't suggest that me {\c&HC8E633&}that{\r} {\c&HC8E633&}your{\r} freaked\Nout by my robot him
+Dialogue: 1,0:42:19.65,0:42:20.04,EN,,0,0,0,,don't suggest that me that your {\c&HC8E633&}freaked{\r}\Nout by my robot him
+Dialogue: 1,0:42:20.04,0:42:20.52,EN,,0,0,0,,don't suggest that me that your freaked\N{\c&HC8E633&}out{\r} {\c&HC8E633&}by{\r} {\c&HC8E633&}my{\r} robot him
+Dialogue: 1,0:42:20.52,0:42:20.94,EN,,0,0,0,,don't suggest that me that your freaked\Nout by my {\c&HC8E633&}robot{\r} him
+Dialogue: 1,0:42:20.94,0:42:21.27,EN,,0,0,0,,don't suggest that me that your freaked\Nout by my robot {\c&HC8E633&}him{\r}
+Dialogue: 1,0:42:25.90,0:42:26.29,EN,,0,0,0,,{\c&HC8E633&}the{\r} little
+Dialogue: 0,0:42:25.90,0:42:26.61,ZH,,0,0,227,,小小的。
+Dialogue: 1,0:42:26.29,0:42:26.61,EN,,0,0,0,,the {\c&HC8E633&}little{\r}
+Dialogue: 0,0:42:28.20,0:42:30.12,ZH,,0,0,227,,这是Celia ，我当时很年\N轻。
+Dialogue: 1,0:42:28.20,0:42:28.50,EN,,0,0,0,,{\c&HC8E633&}this{\r} {\c&HC8E633&}is{\r} celia i was young
+Dialogue: 1,0:42:28.50,0:42:29.55,EN,,0,0,0,,this is {\c&HC8E633&}celia{\r} {\c&HC8E633&}i{\r} was young
+Dialogue: 1,0:42:29.55,0:42:29.79,EN,,0,0,0,,this is celia i {\c&HC8E633&}was{\r} young
+Dialogue: 1,0:42:29.79,0:42:30.12,EN,,0,0,0,,this is celia i was {\c&HC8E633&}young{\r}
+Dialogue: 0,0:42:31.32,0:42:34.35,ZH,,0,0,227,,一个家伙，但没有理由毁灭世界。
+Dialogue: 1,0:42:31.32,0:42:32.55,EN,,0,0,0,,{\c&HC8E633&}at{\r} {\c&HC8E633&}a{\r} {\c&HC8E633&}dick{\r} but there's no reason to\Ndestroy the world
+Dialogue: 1,0:42:32.55,0:42:32.94,EN,,0,0,0,,at a dick {\c&HC8E633&}but{\r} {\c&HC8E633&}there's{\r} {\c&HC8E633&}no{\r} reason to\Ndestroy the world
+Dialogue: 1,0:42:32.94,0:42:33.30,EN,,0,0,0,,at a dick but there's no {\c&HC8E633&}reason{\r} {\c&HC8E633&}to{\r}\Ndestroy the world
+Dialogue: 1,0:42:33.30,0:42:33.69,EN,,0,0,0,,at a dick but there's no reason to\N{\c&HC8E633&}destroy{\r} the world
+Dialogue: 1,0:42:33.69,0:42:34.35,EN,,0,0,0,,at a dick but there's no reason to\Ndestroy {\c&HC8E633&}the{\r} {\c&HC8E633&}world{\r}
+Dialogue: 0,0:42:36.36,0:42:37.17,ZH,,0,0,227,,她为什么要这么做？
+Dialogue: 1,0:42:36.36,0:42:36.64,EN,,0,0,0,,{\c&HC8E633&}why{\r} {\c&HC8E633&}does{\r} she do this
+Dialogue: 1,0:42:36.64,0:42:36.87,EN,,0,0,0,,why does {\c&HC8E633&}she{\r} {\c&HC8E633&}do{\r} this
+Dialogue: 1,0:42:36.87,0:42:37.17,EN,,0,0,0,,why does she do {\c&HC8E633&}this{\r}
+Dialogue: 0,0:42:38.40,0:42:39.84,ZH,,0,0,227,,我们已经试过了。
+Dialogue: 1,0:42:38.40,0:42:38.58,EN,,0,0,0,,{\c&HC8E633&}we{\r} already tried that one
+Dialogue: 1,0:42:38.58,0:42:39.00,EN,,0,0,0,,we {\c&HC8E633&}already{\r} tried that one
+Dialogue: 1,0:42:39.00,0:42:39.33,EN,,0,0,0,,we already {\c&HC8E633&}tried{\r} that one
+Dialogue: 1,0:42:39.33,0:42:39.84,EN,,0,0,0,,we already tried {\c&HC8E633&}that{\r} {\c&HC8E633&}one{\r}
+Dialogue: 0,0:42:46.35,0:42:46.65,ZH,,0,0,227,,出...
+Dialogue: 1,0:42:46.35,0:42:46.65,EN,,0,0,0,,{\c&HC8E633&}the{\r}
+Dialogue: 0,0:42:55.59,0:42:56.13,ZH,,0,0,227,,Mike ，您好！
+Dialogue: 1,0:42:55.59,0:42:56.13,EN,,0,0,0,,{\c&HC8E633&}mike{\r} {\c&HC8E633&}hi{\r}
+Dialogue: 0,0:42:58.47,0:43:01.08,ZH,,0,0,227,,你忘了我们低估了知识。
+Dialogue: 1,0:42:58.47,0:42:59.40,EN,,0,0,0,,{\c&HC8E633&}you{\r} {\c&HC8E633&}forgot{\r} {\c&HC8E633&}we{\r} underestimate the know
+Dialogue: 1,0:42:59.40,0:43:00.28,EN,,0,0,0,,you forgot we {\c&HC8E633&}underestimate{\r} the know
+Dialogue: 1,0:43:00.28,0:43:00.80,EN,,0,0,0,,you forgot we underestimate {\c&HC8E633&}the{\r} know
+Dialogue: 1,0:43:00.80,0:43:01.08,EN,,0,0,0,,you forgot we underestimate the {\c&HC8E633&}know{\r}
+Dialogue: 0,0:43:01.80,0:43:03.24,ZH,,0,0,227,,我应该扔垃圾。
+Dialogue: 1,0:43:01.80,0:43:02.31,EN,,0,0,0,,{\c&HC8E633&}i{\r} {\c&HC8E633&}should{\r} just trash
+Dialogue: 1,0:43:02.31,0:43:02.82,EN,,0,0,0,,i should {\c&HC8E633&}just{\r} trash
+Dialogue: 1,0:43:02.82,0:43:03.24,EN,,0,0,0,,i should just {\c&HC8E633&}trash{\r}
+Dialogue: 0,0:43:08.43,0:43:08.64,ZH,,0,0,227,,I
+Dialogue: 1,0:43:08.43,0:43:08.64,EN,,0,0,0,,{\c&HC8E633&}i'm{\r}
+Dialogue: 0,0:43:18.96,0:43:19.56,ZH,,0,0,227,,对不起。
+Dialogue: 1,0:43:18.96,0:43:19.56,EN,,0,0,0,,{\c&HC8E633&}i'm{\r} {\c&HC8E633&}sorry{\r}
+Dialogue: 0,0:43:21.78,0:43:22.32,ZH,,0,0,227,,那活着。
+Dialogue: 1,0:43:21.78,0:43:22.08,EN,,0,0,0,,{\c&HC8E633&}that{\r} live
+Dialogue: 1,0:43:22.08,0:43:22.32,EN,,0,0,0,,that {\c&HC8E633&}live{\r}
+Dialogue: 0,0:43:30.66,0:43:31.38,ZH,,0,0,227,,好吧，我的球。
+Dialogue: 1,0:43:30.66,0:43:30.96,EN,,0,0,0,,{\c&HC8E633&}well{\r} {\c&HC8E633&}my{\r} ball
+Dialogue: 1,0:43:30.96,0:43:31.38,EN,,0,0,0,,well my {\c&HC8E633&}ball{\r}
+Dialogue: 0,0:43:33.66,0:43:34.11,ZH,,0,0,227,,本次
+Dialogue: 1,0:43:33.66,0:43:34.11,EN,,0,0,0,,{\c&HC8E633&}this{\r} {\c&HC8E633&}time{\r}
+Dialogue: 0,0:43:39.87,0:43:40.32,ZH,,0,0,227,,在安装时发生错误 : .
+Dialogue: 1,0:43:39.87,0:43:40.32,EN,,0,0,0,,{\c&HC8E633&}while{\r}
+Dialogue: 0,0:43:42.12,0:43:42.36,ZH,,0,0,227,,好的。
+Dialogue: 1,0:43:42.12,0:43:42.36,EN,,0,0,0,,{\c&HC8E633&}right{\r}
+Dialogue: 0,0:44:55.77,0:44:56.70,ZH,,0,0,227,,没错，他是。
+Dialogue: 1,0:44:55.77,0:44:56.04,EN,,0,0,0,,{\c&HC8E633&}right{\r} and he was
+Dialogue: 1,0:44:56.04,0:44:56.50,EN,,0,0,0,,right {\c&HC8E633&}and{\r} {\c&HC8E633&}he{\r} was
+Dialogue: 1,0:44:56.50,0:44:56.70,EN,,0,0,0,,right and he {\c&HC8E633&}was{\r}
+Dialogue: 0,0:44:57.45,0:44:57.73,ZH,,0,0,227,,当时
+Dialogue: 1,0:44:57.45,0:44:57.73,EN,,0,0,0,,{\c&HC8E633&}then{\r}
+Dialogue: 0,0:44:58.62,0:44:59.58,ZH,,0,0,227,,我们有更多。
+Dialogue: 1,0:44:58.62,0:44:59.22,EN,,0,0,0,,{\c&HC8E633&}we{\r} {\c&HC8E633&}have{\r} more
+Dialogue: 1,0:44:59.22,0:44:59.58,EN,,0,0,0,,we have {\c&HC8E633&}more{\r}
+Dialogue: 0,0:45:10.50,0:45:11.76,ZH,,0,0,227,,世界改变了Celia。
+Dialogue: 1,0:45:10.50,0:45:10.95,EN,,0,0,0,,{\c&HC8E633&}the{\r} {\c&HC8E633&}world's{\r} changed celia
+Dialogue: 1,0:45:10.95,0:45:11.31,EN,,0,0,0,,the world's {\c&HC8E633&}changed{\r} celia
+Dialogue: 1,0:45:11.31,0:45:11.76,EN,,0,0,0,,the world's changed {\c&HC8E633&}celia{\r}
+Dialogue: 0,0:45:26.43,0:45:27.39,ZH,,0,0,227,,也许我们可以。
+Dialogue: 1,0:45:26.43,0:45:26.88,EN,,0,0,0,,{\c&HC8E633&}maybe{\r} {\c&HC8E633&}we{\r} can to
+Dialogue: 1,0:45:26.88,0:45:27.07,EN,,0,0,0,,maybe we {\c&HC8E633&}can{\r} to
+Dialogue: 1,0:45:27.07,0:45:27.39,EN,,0,0,0,,maybe we can {\c&HC8E633&}to{\r}
+Dialogue: 0,0:45:29.55,0:45:30.72,ZH,,0,0,227,,显著
+Dialogue: 1,0:45:29.55,0:45:30.72,EN,,0,0,0,,{\c&HC8E633&}remarkably{\r}
+Dialogue: 0,0:45:50.49,0:45:50.88,ZH,,0,0,227,,你知道的。
+Dialogue: 1,0:45:50.49,0:45:50.88,EN,,0,0,0,,{\c&HC8E633&}you{\r} {\c&HC8E633&}know{\r}
+Dialogue: 0,0:45:53.34,0:45:54.90,ZH,,0,0,227,,倾听是否可以从中吸取教训？
+Dialogue: 1,0:45:53.34,0:45:53.58,EN,,0,0,0,,{\c&HC8E633&}is{\r} {\c&HC8E633&}a{\r} listen to be learned from this
+Dialogue: 1,0:45:53.58,0:45:54.18,EN,,0,0,0,,is a {\c&HC8E633&}listen{\r} {\c&HC8E633&}to{\r} {\c&HC8E633&}be{\r} learned from this
+Dialogue: 1,0:45:54.18,0:45:54.39,EN,,0,0,0,,is a listen to be {\c&HC8E633&}learned{\r} from this
+Dialogue: 1,0:45:54.39,0:45:54.90,EN,,0,0,0,,is a listen to be learned {\c&HC8E633&}from{\r} {\c&HC8E633&}this{\r}
+Dialogue: 0,0:45:57.36,0:45:58.17,ZH,,0,0,227,,情况变得更糟了。
+Dialogue: 1,0:45:57.36,0:45:57.54,EN,,0,0,0,,{\c&HC8E633&}that{\r} {\c&HC8E633&}are{\r} gone worse
+Dialogue: 1,0:45:57.54,0:45:57.78,EN,,0,0,0,,that are {\c&HC8E633&}gone{\r} worse
+Dialogue: 1,0:45:57.78,0:45:58.17,EN,,0,0,0,,that are gone {\c&HC8E633&}worse{\r}
+Dialogue: 0,0:46:24.75,0:46:30.00,ZH,,0,0,227,,即
+Dialogue: 1,0:46:24.75,0:46:30.00,EN,,0,0,0,,{\c&HC8E633&}that{\r}
+Dialogue: 0,0:46:56.67,0:46:59.82,ZH,,0,0,227,,在附近。
+Dialogue: 1,0:46:56.67,0:46:57.15,EN,,0,0,0,,{\c&HC8E633&}in{\r} around
+Dialogue: 1,0:46:57.15,0:46:59.82,EN,,0,0,0,,in {\c&HC8E633&}around{\r}
+Dialogue: 0,0:47:21.63,0:47:30.30,ZH,,0,0,227,,但是……
+Dialogue: 1,0:47:21.63,0:47:30.30,EN,,0,0,0,,{\c&HC8E633&}but{\r}

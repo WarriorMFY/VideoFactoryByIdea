@@ -1,0 +1,84 @@
+[Script Info]
+; 双语 + 逐词高亮（karaoke）—— 由 Tool/subtitle/make_ass.mjs 生成
+ScriptType: v4.00+
+PlayResX: 1280
+PlayResY: 720
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.709
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: ZH,SimHei,40,&H00FFFFFF,&H00FFFFFF,&H00141414,&H78000000,0,0,0,0,100,100,0,0,1,2.4,1.0,2,48,48,134,1
+Style: EN,Arial,36,&H00FFFFFF,&H00FFFFFF,&H00141414,&H78000000,-1,0,0,0,100,100,0,0,1,2.0,0.8,2,48,48,26,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:03.65,0:00:08.60,ZH,,0,0,227,,我们有主引擎启动或同意主引擎\N启动。
+Dialogue: 1,0:00:03.65,0:00:03.89,EN,,0,0,0,,{\c&HC8E633&}we{\r} have main engine starting or agreed\Nto one
+Dialogue: 1,0:00:03.89,0:00:04.22,EN,,0,0,0,,we {\c&HC8E633&}have{\r} main engine starting or agreed\Nto one
+Dialogue: 1,0:00:04.22,0:00:04.46,EN,,0,0,0,,we have {\c&HC8E633&}main{\r} engine starting or agreed\Nto one
+Dialogue: 1,0:00:04.46,0:00:04.82,EN,,0,0,0,,we have main {\c&HC8E633&}engine{\r} starting or agreed\Nto one
+Dialogue: 1,0:00:04.82,0:00:05.84,EN,,0,0,0,,we have main engine {\c&HC8E633&}starting{\r} or agreed\Nto one
+Dialogue: 1,0:00:05.84,0:00:06.41,EN,,0,0,0,,we have main engine starting {\c&HC8E633&}or{\r} agreed\Nto one
+Dialogue: 1,0:00:06.41,0:00:07.34,EN,,0,0,0,,we have main engine starting or {\c&HC8E633&}agreed{\r}\Nto one
+Dialogue: 1,0:00:07.34,0:00:08.24,EN,,0,0,0,,we have main engine starting or agreed\N{\c&HC8E633&}to{\r} one
+Dialogue: 1,0:00:08.24,0:00:08.60,EN,,0,0,0,,we have main engine starting or agreed\Nto {\c&HC8E633&}one{\r}
+Dialogue: 0,0:00:09.77,0:00:15.05,ZH,,0,0,227,,诶，啊
+Dialogue: 1,0:00:09.77,0:00:15.05,EN,,0,0,0,,{\c&HC8E633&}ah{\r}
+Dialogue: 0,0:00:23.39,0:00:31.28,ZH,,0,0,227,,听着， Celia ，\N我们必须遵循我们的选择，\N您是机器人，这是一个很棒的空\N间，您为什么不告诉我这是您的。
+Dialogue: 1,0:00:23.39,0:00:23.75,EN,,0,0,0,,{\c&HC8E633&}look{\r} celia we have to follow our options\Nyou it you robotics nice one of the\Nawesome space why don't you just tell me\Nthat's your
+Dialogue: 1,0:00:23.75,0:00:24.44,EN,,0,0,0,,look {\c&HC8E633&}celia{\r} {\c&HC8E633&}we{\r} have to follow our options\Nyou it you robotics nice one of the\Nawesome space why don't you just tell me\Nthat's your
+Dialogue: 1,0:00:24.44,0:00:24.77,EN,,0,0,0,,look celia we {\c&HC8E633&}have{\r} {\c&HC8E633&}to{\r} follow our options\Nyou it you robotics nice one of the\Nawesome space why don't you just tell me\Nthat's your
+Dialogue: 1,0:00:24.77,0:00:25.16,EN,,0,0,0,,look celia we have to {\c&HC8E633&}follow{\r} our options\Nyou it you robotics nice one of the\Nawesome space why don't you just tell me\Nthat's your
+Dialogue: 1,0:00:25.16,0:00:25.40,EN,,0,0,0,,look celia we have to follow {\c&HC8E633&}our{\r} options\Nyou it you robotics nice one of the\Nawesome space why don't you just tell me\Nthat's your
+Dialogue: 1,0:00:25.40,0:00:26.30,EN,,0,0,0,,look celia we have to follow our {\c&HC8E633&}options{\r}\Nyou it you robotics nice one of the\Nawesome space why don't you just tell me\Nthat's your
+Dialogue: 1,0:00:26.30,0:00:26.57,EN,,0,0,0,,look celia we have to follow our options\N{\c&HC8E633&}you{\r} {\c&HC8E633&}it{\r} you robotics nice one of the\Nawesome space why don't you just tell me\Nthat's your
+Dialogue: 1,0:00:26.57,0:00:27.28,EN,,0,0,0,,look celia we have to follow our options\Nyou it {\c&HC8E633&}you{\r} {\c&HC8E633&}robotics{\r} nice one of the\Nawesome space why don't you just tell me\Nthat's your
+Dialogue: 1,0:00:27.28,0:00:27.59,EN,,0,0,0,,look celia we have to follow our options\Nyou it you robotics {\c&HC8E633&}nice{\r} one of the\Nawesome space why don't you just tell me\Nthat's your
+Dialogue: 1,0:00:27.59,0:00:27.83,EN,,0,0,0,,look celia we have to follow our options\Nyou it you robotics nice {\c&HC8E633&}one{\r} {\c&HC8E633&}of{\r} the\Nawesome space why don't you just tell me\Nthat's your
+Dialogue: 1,0:00:27.83,0:00:28.10,EN,,0,0,0,,look celia we have to follow our options\Nyou it you robotics nice one of {\c&HC8E633&}the{\r}\Nawesome space why don't you just tell me\Nthat's your
+Dialogue: 1,0:00:28.10,0:00:28.53,EN,,0,0,0,,look celia we have to follow our options\Nyou it you robotics nice one of the\N{\c&HC8E633&}awesome{\r} space why don't you just tell me\Nthat's your
+Dialogue: 1,0:00:28.53,0:00:29.42,EN,,0,0,0,,look celia we have to follow our options\Nyou it you robotics nice one of the\Nawesome {\c&HC8E633&}space{\r} why don't you just tell me\Nthat's your
+Dialogue: 1,0:00:29.42,0:00:29.84,EN,,0,0,0,,look celia we have to follow our options\Nyou it you robotics nice one of the\Nawesome space {\c&HC8E633&}why{\r} don't you just tell me\Nthat's your
+Dialogue: 1,0:00:29.84,0:00:30.05,EN,,0,0,0,,look celia we have to follow our options\Nyou it you robotics nice one of the\Nawesome space why {\c&HC8E633&}don't{\r} you just tell me\Nthat's your
+Dialogue: 1,0:00:30.05,0:00:30.45,EN,,0,0,0,,look celia we have to follow our options\Nyou it you robotics nice one of the\Nawesome space why don't {\c&HC8E633&}you{\r} {\c&HC8E633&}just{\r} tell me\Nthat's your
+Dialogue: 1,0:00:30.45,0:00:30.80,EN,,0,0,0,,look celia we have to follow our options\Nyou it you robotics nice one of the\Nawesome space why don't you just {\c&HC8E633&}tell{\r} {\c&HC8E633&}me{\r}\Nthat's your
+Dialogue: 1,0:00:30.80,0:00:31.01,EN,,0,0,0,,look celia we have to follow our options\Nyou it you robotics nice one of the\Nawesome space why don't you just tell me\N{\c&HC8E633&}that's{\r} your
+Dialogue: 1,0:00:31.01,0:00:31.28,EN,,0,0,0,,look celia we have to follow our options\Nyou it you robotics nice one of the\Nawesome space why don't you just tell me\Nthat's {\c&HC8E633&}your{\r}
+Dialogue: 0,0:00:32.15,0:00:34.97,ZH,,0,0,227,,我手头的角色我热爱自由，\N但它确实如此。
+Dialogue: 1,0:00:32.15,0:00:32.51,EN,,0,0,0,,{\c&HC8E633&}my{\r} {\c&HC8E633&}my{\r} role on hand i love freedom but\Nit's
+Dialogue: 1,0:00:32.51,0:00:33.02,EN,,0,0,0,,my my {\c&HC8E633&}role{\r} {\c&HC8E633&}on{\r} hand i love freedom but\Nit's
+Dialogue: 1,0:00:33.02,0:00:33.83,EN,,0,0,0,,my my role on {\c&HC8E633&}hand{\r} {\c&HC8E633&}i{\r} love freedom but\Nit's
+Dialogue: 1,0:00:33.83,0:00:34.04,EN,,0,0,0,,my my role on hand i {\c&HC8E633&}love{\r} freedom but\Nit's
+Dialogue: 1,0:00:34.04,0:00:34.46,EN,,0,0,0,,my my role on hand i love {\c&HC8E633&}freedom{\r} but\Nit's
+Dialogue: 1,0:00:34.46,0:00:34.70,EN,,0,0,0,,my my role on hand i love freedom {\c&HC8E633&}but{\r}\Nit's
+Dialogue: 1,0:00:34.70,0:00:34.97,EN,,0,0,0,,my my role on hand i love freedom but\N{\c&HC8E633&}it's{\r}
+Dialogue: 0,0:00:36.56,0:00:41.42,ZH,,0,0,227,,好吧，罚款，做噩梦时吓坏了，\N不认为她是，但他的巨人会有电\N话。
+Dialogue: 1,0:00:36.56,0:00:36.77,EN,,0,0,0,,{\c&HC8E633&}alright{\r} right fine a freaked out on\Nhaving nightmares don't think she's but\Nhe's giant will have call
+Dialogue: 1,0:00:36.77,0:00:37.75,EN,,0,0,0,,alright {\c&HC8E633&}right{\r} {\c&HC8E633&}fine{\r} {\c&HC8E633&}a{\r} freaked out on\Nhaving nightmares don't think she's but\Nhe's giant will have call
+Dialogue: 1,0:00:37.75,0:00:38.18,EN,,0,0,0,,alright right fine a {\c&HC8E633&}freaked{\r} out on\Nhaving nightmares don't think she's but\Nhe's giant will have call
+Dialogue: 1,0:00:38.18,0:00:38.54,EN,,0,0,0,,alright right fine a freaked {\c&HC8E633&}out{\r} {\c&HC8E633&}on{\r}\Nhaving nightmares don't think she's but\Nhe's giant will have call
+Dialogue: 1,0:00:38.54,0:00:38.75,EN,,0,0,0,,alright right fine a freaked out on\N{\c&HC8E633&}having{\r} nightmares don't think she's but\Nhe's giant will have call
+Dialogue: 1,0:00:38.75,0:00:39.15,EN,,0,0,0,,alright right fine a freaked out on\Nhaving {\c&HC8E633&}nightmares{\r} don't think she's but\Nhe's giant will have call
+Dialogue: 1,0:00:39.15,0:00:39.59,EN,,0,0,0,,alright right fine a freaked out on\Nhaving nightmares {\c&HC8E633&}don't{\r} {\c&HC8E633&}think{\r} she's but\Nhe's giant will have call
+Dialogue: 1,0:00:39.59,0:00:39.83,EN,,0,0,0,,alright right fine a freaked out on\Nhaving nightmares don't think {\c&HC8E633&}she's{\r} but\Nhe's giant will have call
+Dialogue: 1,0:00:39.83,0:00:39.99,EN,,0,0,0,,alright right fine a freaked out on\Nhaving nightmares don't think she's {\c&HC8E633&}but{\r}\Nhe's giant will have call
+Dialogue: 1,0:00:39.99,0:00:40.51,EN,,0,0,0,,alright right fine a freaked out on\Nhaving nightmares don't think she's but\N{\c&HC8E633&}he's{\r} {\c&HC8E633&}giant{\r} will have call
+Dialogue: 1,0:00:40.51,0:00:41.02,EN,,0,0,0,,alright right fine a freaked out on\Nhaving nightmares don't think she's but\Nhe's giant {\c&HC8E633&}will{\r} {\c&HC8E633&}have{\r} call
+Dialogue: 1,0:00:41.02,0:00:41.42,EN,,0,0,0,,alright right fine a freaked out on\Nhaving nightmares don't think she's but\Nhe's giant will have {\c&HC8E633&}call{\r}
+Dialogue: 0,0:00:43.22,0:00:44.06,ZH,,0,0,227,,做得很好。
+Dialogue: 1,0:00:43.22,0:00:43.58,EN,,0,0,0,,{\c&HC8E633&}well{\r} done
+Dialogue: 1,0:00:43.58,0:00:44.06,EN,,0,0,0,,well {\c&HC8E633&}done{\r}
+Dialogue: 0,0:00:49.04,0:00:52.49,ZH,,0,0,227,,机器人记忆水槽和很多。
+Dialogue: 1,0:00:49.04,0:00:49.52,EN,,0,0,0,,{\c&HC8E633&}robots{\r} memory sink and lot
+Dialogue: 1,0:00:49.52,0:00:50.06,EN,,0,0,0,,robots {\c&HC8E633&}memory{\r} sink and lot
+Dialogue: 1,0:00:50.06,0:00:51.11,EN,,0,0,0,,robots memory {\c&HC8E633&}sink{\r} and lot
+Dialogue: 1,0:00:51.11,0:00:52.19,EN,,0,0,0,,robots memory sink {\c&HC8E633&}and{\r} lot
+Dialogue: 1,0:00:52.19,0:00:52.49,EN,,0,0,0,,robots memory sink and {\c&HC8E633&}lot{\r}
+Dialogue: 0,0:00:59.87,0:01:00.32,ZH,,0,0,227,,是 關於 疾病 的
+Dialogue: 1,0:00:59.87,0:01:00.32,EN,,0,0,0,,{\c&HC8E633&}disease{\r}
+Dialogue: 0,0:01:56.63,0:01:57.59,ZH,,0,0,227,,您应该成为捐赠者吗？
+Dialogue: 1,0:01:56.63,0:01:56.93,EN,,0,0,0,,{\c&HC8E633&}should{\r} you be donor
+Dialogue: 1,0:01:56.93,0:01:57.14,EN,,0,0,0,,should {\c&HC8E633&}you{\r} {\c&HC8E633&}be{\r} donor
+Dialogue: 1,0:01:57.14,0:01:57.59,EN,,0,0,0,,should you be {\c&HC8E633&}donor{\r}
