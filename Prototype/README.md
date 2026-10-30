@@ -67,9 +67,15 @@ Prototype/
     ├── acceptance.md              # 自动验收（分诊、单位规范化幂等、中文单位、术语候选）
     ├── reproduce.ps1              # 一键复现
     └── case_l2_knowledge/         # 分诊结果 / 规范化前后双语 SRT 对照 / 术语候选
+├── loop12_market_loop/            # 小循环 12：市场 ↔ 工厂 闭环（侦查 → 开工 → 交付包 → 反馈机制）
+    ├── README.md                  # 说明：链路状态 / 侦查数据 / 交付包 / 反馈规则 / 挂账
+    ├── acceptance.md              # 自动验收（9 项：侦查/成片/双语/高亮/交付包/反馈诚实性）
+    ├── reproduce.ps1              # 一键复现（无需登录任何平台）
+    ├── case_market/               # B 站侦查报告（榜单 + 关键词市场）与反馈规则自检
+    └── case_ep01/                 # EP01 样片：成片 37s / 封面 / 双语 SRT / 高亮 ASS / 文案 / 质检
 ```
 
-## 十一轮结果一览
+## 十二轮结果一览
 
 | 小循环 | 增量 | 关键结果 | 耗时 |
 | --- | --- | --- | --- |
@@ -84,8 +90,9 @@ Prototype/
 | 9（14:00–14:45） | **49 分钟长视频压测** + **术语一致性审计**（`term_missing`/`term_variant`） | 48.7 分钟成片跑通、**273 条字幕 / 校对表 273 行**、273 行回写恒等；成本 = 两次渲染约 22 分钟 + 识别 6.5 分钟（文本层全秒级）；长片暴露并修掉 **2 个 bug**（回写 trim、机翻脏数据） | ~45 min |
 | 10（14:50–15:05） | **逐词高亮 @ 49 分钟规模**：长片 ASS 事件数/体积/烧入 + 120s 像素抽检 | **1030 事件 / 103KB / 生成 0.1s**；libass 正常烧、12/12 帧高亮在、重心位移 280px；口径修正为 **≈1 事件/词**（对话密集 1h ≈ 8–9k，线性） | ~15 min |
 | 11（16:50–17:30） | **知识型内容链路**：内容分诊（`classify_content`）+ 数值单位规范化（`normalize_units`/`lib/units`）+ 术语候选（`term_candidates`） | 分诊 **l2=knowledge 0.95 / TOS=narrative 0.17**（配乐占比 0% vs 73%）；`minus sixty sixteen l u fs` → **−16 LUFS**、`15 Mbps`（幂等、不误伤 `two hours`）；中文侧统一且对照组拿不到；术语候选：长片 61 个 / l2 31 个 | ~40 min |
+| 12（18:05–19:25，**按人要求暂停**） | **市场 ↔ 工厂闭环**：B 站公开数据侦查 → 选题 → 37s 样片（合成口播+CC-BY 画面）→ 交付包 → 反馈追踪机制 | 侦查样本 **134 条**、关键词市场「编程教程 英文」前 8 条 **2517 万**播放；样片 **12/12 行双语 + 88 条高亮事件**、QA **PASS**、WER **9.5%**/覆盖 **100%**；交付包齐全（文案/标签/分区/上传清单/合规）；反馈器空表输出「待采集」、自检 4 条动作。**上架与真实反馈仍需人工** | ~80 min |
 
-验收记录分别在 `loop1_autocut/acceptance.md`、`loop2_subtitles/acceptance_*.md`、`loop3_real_speech/acceptance.md`、`loop4_multi_samples/acceptance.md`、`loop5_karaoke_subs/acceptance.md`、`loop6_text_quality/acceptance.md`、`loop7_short_utterance/acceptance.md`、`loop8_review_loop/acceptance.md`、`loop9_long_video/acceptance.md`、`loop10_karaoke_scale/acceptance.md`、`loop11_knowledge_content/acceptance.md`；循环摘要见 `History/CircleLog/log.md`，阶段总结见 `History/reports/progress_report_2026-10-30.md`。
+验收记录分别在 `loop1_autocut/acceptance.md`、`loop2_subtitles/acceptance_*.md`、`loop3_real_speech/acceptance.md`、`loop4_multi_samples/acceptance.md`、`loop5_karaoke_subs/acceptance.md`、`loop6_text_quality/acceptance.md`、`loop7_short_utterance/acceptance.md`、`loop8_review_loop/acceptance.md`、`loop9_long_video/acceptance.md`、`loop10_karaoke_scale/acceptance.md`、`loop11_knowledge_content/acceptance.md`、`loop12_market_loop/acceptance.md`；循环摘要见 `History/CircleLog/log.md`，阶段总结见 `History/reports/progress_report_2026-10-30.md`。
 
 ## 怎么跑（在仓库根执行）
 
@@ -122,6 +129,9 @@ Prototype/
 
 # 小循环 11（知识型内容链路）：内容分诊 → 数值单位规范化 → 术语候选 → 8 项验收
 .\Prototype\loop11_knowledge_content\reproduce.ps1
+
+# 小循环 12（市场闭环）：B 站公开数据侦查 → 37s 样片 → 交付包 → 反馈追踪（无需登录任何平台）
+.\Prototype\loop12_market_loop\reproduce.ps1
 ```
 
 脚本都幂等：已装好的依赖、已下载的模型与素材会复用；耗时主要卡在首次下载
@@ -181,6 +191,10 @@ node Tool\subtitle/make_subs.mjs work\tr_punct.json --out work\subs --punct --gl
   `normalize_units` 把 `minus sixty sixteen l u fs` → **−16 LUFS**、`15 Mbps`（幂等、只在单位语境动数字），
   中文侧同步统一；`term_candidates` 自动挑术语（长片 61 个 / l2 31 个）。
   ⚠️ 分诊是启发式、单片段调参，属于"当前能力画像"，会随版本迭代变化（不是内容类型定义）。
+- ✅ **市场 ↔ 工厂 链路**（小循环 12）：B 站公开接口可直连 → 侦查样本 134 条 + 8 个关键词市场 →
+  选出「英文原声 + 中英双语」方向 → 37s 样片（12/12 行双语、88 条高亮事件、QA PASS、WER 9.5%/覆盖 100%）→
+  交付包（成片/封面/文案/标签/分区/上传清单/合规声明）→ 反馈追踪器（空表说"待采集"，有数据给 P0 动作）。
+  ⚠️ **上架与真实反馈需要人工**（工厂不代登录）；竖屏版与封面文字观感待补。
 
 细节与限制见各 loop 的 README；下一步建议：
 1. **换 ASR 模型**（唯一能真正解决漏句的路）—— 需要外部提供模型文件 / 可用下载通道 / 一个 ASR HTTP 接口；

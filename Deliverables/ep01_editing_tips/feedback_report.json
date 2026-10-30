@@ -1,0 +1,14 @@
+{
+  "generated_at": "2026-10-30T09:53:00.101Z",
+  "csv": "Deliverables\\ep01_editing_tips\\feedback.csv",
+  "snaps": [],
+  "last": null,
+  "prev": null,
+  "actions": [
+    {
+      "priority": "P0",
+      "action": "先采集第一批数据",
+      "because": "反馈表没有任何数据行（T+1 播放/完播/互动）"
+    }
+  ]
+}

@@ -24,3 +24,12 @@ desktop.ini
 .flicker_diag/
 .karaoke_verify/
 .asr_work/
+
+# 小循环 12：市场交付样片（37s / 8MB，唯一入库的视频，用于交付包自证）
+!Prototype/loop12_market_loop/case_ep01/final_16x9.mp4
+
+# 交付包里的媒体与中间件（样片已在 Prototype/loop12_market_loop 入库一份，避免重复膨胀）
+Deliverables/**/*.mp4
+Deliverables/**/*.wav
+Deliverables/**/.work/
+Deliverables/**/.qa/

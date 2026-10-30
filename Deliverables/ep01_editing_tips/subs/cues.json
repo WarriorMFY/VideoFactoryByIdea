@@ -1,0 +1,836 @@
+{
+  "generated_at": "2026-10-30T09:48:03.026Z",
+  "transcript": "D:\\Data\\DeepseekHarness\\IdeaDrivenLoop\\VideoFactory\\Deliverables\\ep01_editing_tips\\transcript_aligned.json",
+  "mt_backend": "agent",
+  "params": {
+    "pause": 0.3,
+    "maxSent": 110,
+    "minSentChars": 12,
+    "maxZh": 18,
+    "maxEn": 64,
+    "minCue": 0.8
+  },
+  "stats": {
+    "sentences": 7,
+    "cues": 12,
+    "words": 109
+  },
+  "unit_fixes": [],
+  "sentences": [
+    {
+      "start": 0,
+      "end": 3.255,
+      "words": [
+        {
+          "word": "five",
+          "start": 0.03,
+          "end": 0.3,
+          "conf": 1
+        },
+        {
+          "word": "small",
+          "start": 0.3,
+          "end": 0.66,
+          "conf": 1
+        },
+        {
+          "word": "edits",
+          "start": 0.66,
+          "end": 1.05,
+          "conf": 1
+        },
+        {
+          "word": "that",
+          "start": 1.05,
+          "end": 1.2,
+          "conf": 1
+        },
+        {
+          "word": "make",
+          "start": 1.2,
+          "end": 1.44,
+          "conf": 1
+        },
+        {
+          "word": "any",
+          "start": 1.47,
+          "end": 1.68,
+          "conf": 1
+        },
+        {
+          "word": "video",
+          "start": 1.68,
+          "end": 2.1,
+          "conf": 1
+        },
+        {
+          "word": "look",
+          "start": 2.1,
+          "end": 2.34,
+          "conf": 1
+        },
+        {
+          "word": "more",
+          "start": 2.34,
+          "end": 2.55,
+          "conf": 1
+        },
+        {
+          "word": "expensive",
+          "start": 2.55,
+          "end": 3.27,
+          "conf": 1
+        }
+      ],
+      "en": "Five small edits that make any video look more expensive.",
+      "punctuated": true,
+      "zh": "五个小改动，能让任何视频看起来更贵。"
+    },
+    {
+      "start": 3.575,
+      "end": 6.525,
+      "words": [
+        {
+          "word": "number",
+          "start": 3.57,
+          "end": 3.96,
+          "conf": 1
+        },
+        {
+          "word": "one",
+          "start": 3.96,
+          "end": 4.35,
+          "conf": 1
+        },
+        {
+          "word": "cut",
+          "start": 4.47,
+          "end": 4.71,
+          "conf": 1
+        },
+        {
+          "word": "on",
+          "start": 4.71,
+          "end": 4.86,
+          "conf": 1
+        },
+        {
+          "word": "the",
+          "start": 4.86,
+          "end": 4.95,
+          "conf": 1
+        },
+        {
+          "word": "beat",
+          "start": 4.95,
+          "end": 5.31,
+          "conf": 1
+        },
+        {
+          "word": "not",
+          "start": 5.37,
+          "end": 5.67,
+          "conf": 1
+        },
+        {
+          "word": "on",
+          "start": 5.67,
+          "end": 5.79,
+          "conf": 1
+        },
+        {
+          "word": "the",
+          "start": 5.79,
+          "end": 5.85,
+          "conf": 1
+        },
+        {
+          "word": "silence",
+          "start": 5.85,
+          "end": 6.54,
+          "conf": 1
+        }
+      ],
+      "en": "Number one: cut on the beat, not on the silence.",
+      "punctuated": true,
+      "zh": "第一：跟着节拍剪，而不是跟着静音剪。"
+    },
+    {
+      "start": 6.845,
+      "end": 12.65,
+      "words": [
+        {
+          "word": "number",
+          "start": 6.84,
+          "end": 7.2,
+          "conf": 1
+        },
+        {
+          "word": "to",
+          "start": 7.2,
+          "end": 7.62,
+          "conf": 1
+        },
+        {
+          "word": "keep",
+          "start": 7.74,
+          "end": 8.01,
+          "conf": 1
+        },
+        {
+          "word": "your",
+          "start": 8.01,
+          "end": 8.13,
+          "conf": 1
+        },
+        {
+          "word": "subtitles",
+          "start": 8.13,
+          "end": 8.82,
+          "conf": 1
+        },
+        {
+          "word": "inside",
+          "start": 8.82,
+          "end": 9.27,
+          "conf": 1
+        },
+        {
+          "word": "the",
+          "start": 9.27,
+          "end": 9.36,
+          "conf": 1
+        },
+        {
+          "word": "safe",
+          "start": 9.36,
+          "end": 9.69,
+          "conf": 1
+        },
+        {
+          "word": "area",
+          "start": 9.69,
+          "end": 10.14,
+          "conf": 1
+        },
+        {
+          "word": "at",
+          "start": 10.41,
+          "end": 10.53,
+          "conf": 1
+        },
+        {
+          "word": "least",
+          "start": 10.53,
+          "end": 10.83,
+          "conf": 1
+        },
+        {
+          "word": "forty",
+          "start": 10.83,
+          "end": 11.16,
+          "conf": 1
+        },
+        {
+          "word": "pixels",
+          "start": 11.16,
+          "end": 11.64,
+          "conf": 1
+        },
+        {
+          "word": "from",
+          "start": 11.64,
+          "end": 11.82,
+          "conf": 1
+        },
+        {
+          "word": "the",
+          "start": 11.82,
+          "end": 11.88,
+          "conf": 1
+        },
+        {
+          "word": "bottom",
+          "start": 11.88,
+          "end": 12.21,
+          "conf": 1
+        },
+        {
+          "word": "edge",
+          "start": 12.21,
+          "end": 12.66,
+          "conf": 1
+        }
+      ],
+      "en": "Number two: keep your subtitles inside the safe area, at least forty pixels from the bottom edge.",
+      "punctuated": true,
+      "zh": "第二：把字幕放在安全区内，离底边至少四十像素。"
+    },
+    {
+      "start": 12.97,
+      "end": 20.276,
+      "words": [
+        {
+          "word": "number",
+          "start": 12.96,
+          "end": 13.35,
+          "conf": 1
+        },
+        {
+          "word": "three",
+          "start": 13.35,
+          "end": 13.8,
+          "conf": 1
+        },
+        {
+          "word": "normalized",
+          "start": 13.95,
+          "end": 14.572826,
+          "conf": 0.571579
+        },
+        {
+          "word": "the",
+          "start": 14.572826,
+          "end": 14.7,
+          "conf": 1
+        },
+        {
+          "word": "audio",
+          "start": 14.7,
+          "end": 15.09,
+          "conf": 1
+        },
+        {
+          "word": "to",
+          "start": 15.09,
+          "end": 15.24,
+          "conf": 0.942315
+        },
+        {
+          "word": "minus",
+          "start": 15.24,
+          "end": 15.6,
+          "conf": 0.730671
+        },
+        {
+          "word": "sixteen",
+          "start": 15.6,
+          "end": 16.11,
+          "conf": 0.76075
+        },
+        {
+          "word": "l",
+          "start": 16.11,
+          "end": 16.26,
+          "conf": 0.982015
+        },
+        {
+          "word": "u",
+          "start": 16.26,
+          "end": 16.44,
+          "conf": 0.674819
+        },
+        {
+          "word": "fs",
+          "start": 16.44,
+          "end": 16.98,
+          "conf": 0.801025
+        },
+        {
+          "word": "and",
+          "start": 17.25,
+          "end": 17.43,
+          "conf": 1
+        },
+        {
+          "word": "never",
+          "start": 17.43,
+          "end": 17.7,
+          "conf": 1
+        },
+        {
+          "word": "let",
+          "start": 17.7,
+          "end": 17.88,
+          "conf": 1
+        },
+        {
+          "word": "the",
+          "start": 17.88,
+          "end": 17.97,
+          "conf": 1
+        },
+        {
+          "word": "dialogue",
+          "start": 17.97,
+          "end": 18.48,
+          "conf": 0.80907
+        },
+        {
+          "word": "peak",
+          "start": 18.48,
+          "end": 18.78,
+          "conf": 1
+        },
+        {
+          "word": "above",
+          "start": 18.78,
+          "end": 19.08,
+          "conf": 1
+        },
+        {
+          "word": "minus",
+          "start": 19.08,
+          "end": 19.5,
+          "conf": 1
+        },
+        {
+          "word": "one",
+          "start": 19.5,
+          "end": 19.74,
+          "conf": 1
+        },
+        {
+          "word": "db",
+          "start": 19.74,
+          "end": 20.16,
+          "conf": 1
+        },
+        {
+          "word": "the",
+          "start": 20.16,
+          "end": 20.28,
+          "conf": 0.738799
+        }
+      ],
+      "en": "Number three: normalize the audio to minus sixteen LUFS, and never let the dialogue peak above minus one dB.",
+      "punctuated": true,
+      "zh": "第三：把响度归一到 −16 LUFS，对白峰值不要超过 −1 dB。"
+    },
+    {
+      "start": 20.596,
+      "end": 27.202,
+      "words": [
+        {
+          "word": "number",
+          "start": 20.58,
+          "end": 21,
+          "conf": 1
+        },
+        {
+          "word": "for",
+          "start": 21,
+          "end": 21.45,
+          "conf": 1
+        },
+        {
+          "word": "export",
+          "start": 21.6,
+          "end": 22.11,
+          "conf": 1
+        },
+        {
+          "word": "at",
+          "start": 22.11,
+          "end": 22.23,
+          "conf": 0.844157
+        },
+        {
+          "word": "fifteen",
+          "start": 22.23,
+          "end": 22.71,
+          "conf": 1
+        },
+        {
+          "word": "megabits",
+          "start": 22.71,
+          "end": 23.22,
+          "conf": 1
+        },
+        {
+          "word": "per",
+          "start": 23.22,
+          "end": 23.4,
+          "conf": 1
+        },
+        {
+          "word": "second",
+          "start": 23.4,
+          "end": 23.82,
+          "conf": 1
+        },
+        {
+          "word": "for",
+          "start": 23.82,
+          "end": 24,
+          "conf": 1
+        },
+        {
+          "word": "a",
+          "start": 24,
+          "end": 24.06,
+          "conf": 1
+        },
+        {
+          "word": "clean",
+          "start": 24.06,
+          "end": 24.36,
+          "conf": 1
+        },
+        {
+          "word": "upload",
+          "start": 24.39,
+          "end": 24.87,
+          "conf": 1
+        },
+        {
+          "word": "and",
+          "start": 25.08,
+          "end": 25.26,
+          "conf": 1
+        },
+        {
+          "word": "always",
+          "start": 25.26,
+          "end": 25.65,
+          "conf": 1
+        },
+        {
+          "word": "check",
+          "start": 25.65,
+          "end": 25.95,
+          "conf": 1
+        },
+        {
+          "word": "the",
+          "start": 25.95,
+          "end": 26.07,
+          "conf": 1
+        },
+        {
+          "word": "first",
+          "start": 26.07,
+          "end": 26.4,
+          "conf": 1
+        },
+        {
+          "word": "three",
+          "start": 26.4,
+          "end": 26.61,
+          "conf": 1
+        },
+        {
+          "word": "seconds",
+          "start": 26.61,
+          "end": 27.21,
+          "conf": 1
+        }
+      ],
+      "en": "Number four: export at fifteen megabits per second for a clean upload, and always check the first three seconds.",
+      "punctuated": true,
+      "zh": "第四：导出用 15 Mbps，上传更干净；发布前先看开头三秒。"
+    },
+    {
+      "start": 27.522,
+      "end": 31.879,
+      "words": [
+        {
+          "word": "number",
+          "start": 27.51,
+          "end": 27.9,
+          "conf": 1
+        },
+        {
+          "word": "five",
+          "start": 27.9,
+          "end": 28.38,
+          "conf": 1
+        },
+        {
+          "word": "before",
+          "start": 28.47,
+          "end": 28.83,
+          "conf": 1
+        },
+        {
+          "word": "you",
+          "start": 28.83,
+          "end": 28.98,
+          "conf": 1
+        },
+        {
+          "word": "publish",
+          "start": 28.98,
+          "end": 29.49,
+          "conf": 1
+        },
+        {
+          "word": "watch",
+          "start": 29.67,
+          "end": 29.967751,
+          "conf": 0.894231
+        },
+        {
+          "word": "your",
+          "start": 29.967751,
+          "end": 30.09,
+          "conf": 1
+        },
+        {
+          "word": "own",
+          "start": 30.09,
+          "end": 30.33,
+          "conf": 1
+        },
+        {
+          "word": "video",
+          "start": 30.33,
+          "end": 30.72,
+          "conf": 1
+        },
+        {
+          "word": "ones",
+          "start": 30.72,
+          "end": 30.99,
+          "conf": 0.570905
+        },
+        {
+          "word": "with",
+          "start": 30.99,
+          "end": 31.14,
+          "conf": 1
+        },
+        {
+          "word": "the",
+          "start": 31.14,
+          "end": 31.23,
+          "conf": 1
+        },
+        {
+          "word": "sound",
+          "start": 31.23,
+          "end": 31.56,
+          "conf": 1
+        },
+        {
+          "word": "off",
+          "start": 31.56,
+          "end": 31.92,
+          "conf": 1
+        }
+      ],
+      "en": "Number five: before you publish, watch your own video once with the sound off.",
+      "punctuated": true,
+      "zh": "第五：发布之前，关掉声音看一遍自己的视频。"
+    },
+    {
+      "start": 32.199,
+      "end": 37.375,
+      "words": [
+        {
+          "word": "that",
+          "start": 32.19,
+          "end": 32.49,
+          "conf": 1
+        },
+        {
+          "word": "is",
+          "start": 32.49,
+          "end": 32.61,
+          "conf": 1
+        },
+        {
+          "word": "the",
+          "start": 32.61,
+          "end": 32.7,
+          "conf": 1
+        },
+        {
+          "word": "whole",
+          "start": 32.7,
+          "end": 32.94,
+          "conf": 1
+        },
+        {
+          "word": "checklist",
+          "start": 32.94,
+          "end": 33.63,
+          "conf": 1
+        },
+        {
+          "word": "save",
+          "start": 34.5,
+          "end": 34.92,
+          "conf": 1
+        },
+        {
+          "word": "it",
+          "start": 34.92,
+          "end": 35.13,
+          "conf": 1
+        },
+        {
+          "word": "and",
+          "start": 35.25,
+          "end": 35.43,
+          "conf": 1
+        },
+        {
+          "word": "your",
+          "start": 35.43,
+          "end": 35.55,
+          "conf": 0.830729
+        },
+        {
+          "word": "next",
+          "start": 35.55,
+          "end": 35.88,
+          "conf": 1
+        },
+        {
+          "word": "at",
+          "start": 35.88,
+          "end": 36.06,
+          "conf": 1
+        },
+        {
+          "word": "it",
+          "start": 36.06,
+          "end": 36.18,
+          "conf": 1
+        },
+        {
+          "word": "will",
+          "start": 36.18,
+          "end": 36.3,
+          "conf": 1
+        },
+        {
+          "word": "take",
+          "start": 36.3,
+          "end": 36.57,
+          "conf": 1
+        },
+        {
+          "word": "half",
+          "start": 36.57,
+          "end": 36.81,
+          "conf": 1
+        },
+        {
+          "word": "the",
+          "start": 36.81,
+          "end": 36.9,
+          "conf": 1
+        },
+        {
+          "word": "time",
+          "start": 36.9,
+          "end": 37.35,
+          "conf": 1
+        }
+      ],
+      "en": "That is the whole checklist. Save it, and your next edit will take half the time.",
+      "punctuated": true,
+      "zh": "这就是全部清单。存下来，下次剪辑能省一半时间。"
+    }
+  ],
+  "cues": [
+    {
+      "start": 0,
+      "end": 3.255,
+      "en": "Five small edits that make any video look more expensive.",
+      "zh": "五个小改动，能让任何视频看起来更贵。",
+      "conf": 1,
+      "sent_en": "Five small edits that make any video look more expensive."
+    },
+    {
+      "start": 3.575,
+      "end": 6.525,
+      "en": "Number one: cut on the beat, not on the silence.",
+      "zh": "第一：跟着节拍剪，而不是跟着静音剪。",
+      "conf": 1,
+      "sent_en": "Number one: cut on the beat, not on the silence."
+    },
+    {
+      "start": 6.845,
+      "end": 9.748,
+      "en": "Number two: keep your subtitles inside the safe area, at least",
+      "zh": "第二：把字幕放在安全区内，",
+      "conf": 1,
+      "sent_en": "Number two: keep your subtitles inside the safe area, at least forty pixels from the bottom edge."
+    },
+    {
+      "start": 9.748,
+      "end": 12.65,
+      "en": "forty pixels from the bottom edge.",
+      "zh": "离底边至少四十像素。",
+      "conf": 1,
+      "sent_en": "Number two: keep your subtitles inside the safe area, at least forty pixels from the bottom edge."
+    },
+    {
+      "start": 12.97,
+      "end": 16.623,
+      "en": "Number three: normalize the audio to minus sixteen LUFS, and",
+      "zh": "第三：把响度归一到 −16 LUFS",
+      "conf": 0.91,
+      "sent_en": "Number three: normalize the audio to minus sixteen LUFS, and never let the dialogue peak above minus one dB."
+    },
+    {
+      "start": 16.623,
+      "end": 20.276,
+      "en": "never let the dialogue peak above minus one dB.",
+      "zh": "，对白峰值不要超过 −1 dB。",
+      "conf": 0.91,
+      "sent_en": "Number three: normalize the audio to minus sixteen LUFS, and never let the dialogue peak above minus one dB."
+    },
+    {
+      "start": 20.596,
+      "end": 23.899,
+      "en": "Number four: export at fifteen megabits per second for a clean",
+      "zh": "第四：导出用 15 Mbps，",
+      "conf": 0.992,
+      "sent_en": "Number four: export at fifteen megabits per second for a clean upload, and always check the first three seconds."
+    },
+    {
+      "start": 23.899,
+      "end": 27.202,
+      "en": "upload, and always check the first three seconds.",
+      "zh": "上传更干净；发布前先看开头三秒。",
+      "conf": 0.992,
+      "sent_en": "Number four: export at fifteen megabits per second for a clean upload, and always check the first three seconds."
+    },
+    {
+      "start": 27.522,
+      "end": 29.7,
+      "en": "Number five: before you publish, watch your own video once with",
+      "zh": "第五：发布之前，关掉声音看一遍自己的",
+      "conf": 0.962,
+      "sent_en": "Number five: before you publish, watch your own video once with the sound off."
+    },
+    {
+      "start": 29.7,
+      "end": 31.879,
+      "en": "the sound off.",
+      "zh": "视频。",
+      "conf": 0.962,
+      "sent_en": "Number five: before you publish, watch your own video once with the sound off."
+    },
+    {
+      "start": 32.199,
+      "end": 34.787,
+      "en": "That is the whole checklist. Save it, and your next edit will",
+      "zh": "这就是全部清单。存下来，",
+      "conf": 0.99,
+      "sent_en": "That is the whole checklist. Save it, and your next edit will take half the time."
+    },
+    {
+      "start": 34.787,
+      "end": 37.375,
+      "en": "take half the time.",
+      "zh": "下次剪辑能省一半时间。",
+      "conf": 0.99,
+      "sent_en": "That is the whole checklist. Save it, and your next edit will take half the time."
+    }
+  ]
+}

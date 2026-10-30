@@ -17,6 +17,7 @@
 | `asr_rescue.mjs` | **短句救援**（实验性，默认不开）：能量 VAD 找"有声但没识别"的区间，逐窗滤波放大重识别。实测在当前模型上救不回来（见 `Prototype/loop7_short_utterance/`），但"找未覆盖区间"本身可当漏译检查器 |
 | `classify_content.mjs` | **内容分诊**（小循环 11）：语音覆盖/置信度/**配乐占比**/短句占比/句长/术语密度 → `knowledge`/`mixed`/`narrative` + 当前策略建议（CPS、翻译后端、是否需要人工校对） |
 | `normalize_units.mjs` | **数值与单位规范化**（小循环 11）：`minus sixty sixteen l u fs` → `−16 LUFS`、`fifteen megabits per second` → `15 Mbps`；只改句子文本、不动词级时间，替换留痕、幂等 |
+| `align_script.mjs` | **讲稿强制对齐**（小循环 12）：有讲稿/官方字幕时，按真值句子把 ASR 词流切开（TTS/连续口播的 Vosk 词时间轴常常首尾相接，靠停顿断句会把多句并成一句） |
 | `term_candidates.mjs` | **术语候选**（小循环 11）：从转录挑"该进术语表的词"（缩写/单位、专名、高频词、高频二元短语），标注是否已在表 |
 | `verify_subs.mjs` | 字幕验收：有讲稿时算 WER/句界误差；无讲稿自动切 reference-free（译文覆盖/可读性/重映射自检） |
 | `glossary_zh.json` | 术语表：普通键值修**译文**；`_source_fixes` 修**源句**（ASR 拆坏的 `l u fs` → `LUFS`），送翻译前生效 |

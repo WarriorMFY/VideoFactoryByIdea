@@ -1,0 +1,7 @@
+﻿Five small edits that make any video look more expensive.
+Number one: cut on the beat, not on the silence.
+Number two: keep your subtitles inside the safe area, at least forty pixels from the bottom edge.
+Number three: normalize the audio to minus sixteen LUFS, and never let the dialogue peak above minus one dB.
+Number four: export at fifteen megabits per second for a clean upload, and always check the first three seconds.
+Number five: before you publish, watch your own video once with the sound off.
+That is the whole checklist. Save it, and your next edit will take half the time.
