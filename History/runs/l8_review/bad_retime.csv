@@ -7,7 +7,7 @@
 "6","00:00:11,265","00:00:13,410","audience awake.","因为节奏才能让观众保持清醒。","6.5","","",""
 "7","00:00:13,740","00:00:16,110","Second, remove the silent gaps longer than half a second before","第二，在碰调色之前，","4.2","","",""
 "8","00:00:16,110","00:00:18,480","you touch the colors.","先把长度超过半秒的静音空隙去掉。","6.8","","",""
-"9","00:00:18,780","00:00:22,200","Third, normalize the audio to minus sixty sixteen l u fs, which","第三，把音频响度归一到","4.7","en_residual","en_residual","人工校对示例"
+"9","00:00:18,780","00:00:22,200","Third, normalize the audio to minus sixty sixteen l u fs, which","第三，把音频响度归一到","4.7","en_residual|term_missing","en_residual|term_missing","人工校对示例"
 "10","00:00:22,200","00:00:25,620","is the standard for online video platforms.","−16 LUFS，这是在线视频平台的标准。","4.4","en_residual","en_residual","人工校对示例"
 "11","00:00:25,950","00:00:28,365","Finally, export at fifteen megabits per second, and never trust","最后，以 15 Mbps 导出，","5.4","en_residual","en_residual",""
 "12","00:00:28,365","00:00:30,780","the first render.","而且别信第一次渲染。","5.8","","","人工校对示例"

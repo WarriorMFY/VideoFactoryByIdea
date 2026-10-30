@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-30T05:34:20.161Z",
+  "generated_at": "2026-10-30T06:44:14.521Z",
   "source_cues": "D:\\Data\\DeepseekHarness\\IdeaDrivenLoop\\VideoFactory\\History\\subs\\l2_agent\\cues.json",
   "mt_backend": "agent",
   "rows": 13,
@@ -8,7 +8,39 @@
     "max_zh": 18
   },
   "flag_counts": {
-    "en_residual": 3
+    "en_residual": 3,
+    "term_missing": 1
+  },
+  "term_audit": {
+    "glossary": "Tool\\subtitle\\glossary_zh.json",
+    "canonical_terms": [
+      "LUFS",
+      "Mbps",
+      "16 LUFS"
+    ],
+    "stats": [
+      {
+        "term": "LUFS",
+        "rows_in_en": 1,
+        "canonical": 0,
+        "variant": 0,
+        "missing": 1,
+        "variants": {
+          "(缺)": 1
+        }
+      },
+      {
+        "term": "16 LUFS",
+        "rows_in_en": 1,
+        "canonical": 0,
+        "variant": 0,
+        "missing": 1,
+        "variants": {
+          "(缺)": 1
+        }
+      }
+    ],
+    "note": "term_missing = 英文里出现了该术语但中文里找不到规范写法（常见原因：被行宽切行切断）；term_variant = 译成了术语表里记录的错法。"
   },
   "instructions": "只改 zh 列（可留空 reviewer_note 写备注）。不要改 idx/start/end/en，否则回写会被拒绝（时间码可用 --allow-retime 强制接受）。"
 }
