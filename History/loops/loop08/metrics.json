@@ -1,9 +1,10 @@
 {
-  "generated_at": "2026-10-30T05:34:35.172Z",
+  "generated_at": "2026-10-30T06:44:34.621Z",
   "source_cues": "History\\subs\\l2_agent\\cues.json",
   "clip": "History\\bench\\l2_en\\source.mp4",
   "export_flags": {
-    "en_residual": 3
+    "en_residual": 3,
+    "term_missing": 1
   },
   "identity": {
     "cues_identical": true,

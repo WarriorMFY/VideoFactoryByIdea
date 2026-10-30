@@ -6,7 +6,7 @@
 [render] 提取 1 段 ...
 [render] 合并 (fade) ...
 [render] 收尾(响度归一/淡入淡出/标题/字幕) ...
-[done] 13.0s -> D:\Data\DeepseekHarness\IdeaDrivenLoop\VideoFactory\History\runs\l8_review
+[done] 18.0s -> D:\Data\DeepseekHarness\IdeaDrivenLoop\VideoFactory\History\runs\l8_review
 [done] final=33.88s kept=1 cut=0 transition=single
   - final.mp4 19948KB
   - edits.json 2KB
@@ -14,4 +14,4 @@
   - probe.json 0KB
   - report.md 2KB
   - contact_sheet.jpg 231KB
-  - runlog.jsonl 6KB
+  - runlog.jsonl 9KB
