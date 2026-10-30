@@ -1,0 +1,68 @@
+{
+  "generated_at": "2026-10-30T05:17:05.901Z",
+  "media": "Workspace\\assets\\tos_excerpts\\tos_90s.mp4",
+  "gt_script_words": 95,
+  "best": "band",
+  "rows": [
+    {
+      "id": "none",
+      "af": null,
+      "words": 82,
+      "avg_conf": 0.8788,
+      "wer": 0.3158,
+      "ref_words": 95,
+      "sec": 8,
+      "text": "like celia we have to follow our passions you have your robotics and i just wanna be awesome in space get come in two minutes left minute why don't you just admit that you're freaked out by my robot him this is celia it was young and a dick but there's no reason to destroy the world why does he do this we already tried that one you roll my eyes you forgot me on earth no i should just splash the"
+    },
+    {
+      "id": "band",
+      "af": "highpass=f=200,lowpass=f=4000",
+      "words": 82,
+      "avg_conf": 0.8876,
+      "wer": 0.2842,
+      "ref_words": 95,
+      "sec": 9.8,
+      "text": "look celia we have to follow our passions you have your robotics and i just want to be awesome in space get come in two minutes left minute why don't you just admit that you're freaked out by my robot him this is celia it was young and a dick but there's no reason to destroy the world why does she do this we already tried at one you broke my heart you forgot me on earth i should just dress on"
+    },
+    {
+      "id": "band_afftdn",
+      "af": "afftdn=nf=-25,highpass=f=200,lowpass=f=4000",
+      "words": 79,
+      "avg_conf": 0.8823,
+      "wer": 0.2842,
+      "ref_words": 95,
+      "sec": 10,
+      "text": "look celia we have to follow our passions you have your robotics and i just want to be awesome in space come in two minutes left don't financial just admit that your freaked out by my robot him this is celia i was young and a dick but there's no reason to destroy the world why does he do this we already tried that one you broke my heart you forgot me on earth i should just trash on"
+    },
+    {
+      "id": "afftdn_speechnorm",
+      "af": "afftdn=nf=-25,speechnorm=e=12.5:r=0.0001:l=1,highpass=f=150,lowpass=f=4500",
+      "words": 80,
+      "avg_conf": 0.8774,
+      "wer": 0.3053,
+      "ref_words": 95,
+      "sec": 10.2,
+      "text": "look celia we have to follow our passions you have your robotics and i just want to be awesome in space that are coming two minutes left we're financial just me that your freaked out by my robot him this is celia al pacino and a dick but there's no reason to destroy the world why does he do this we already tried that one you broke my heart you forgot me on earth know i should just trash i'm"
+    },
+    {
+      "id": "dynaudnorm",
+      "af": "dynaudnorm=f=200:g=15,highpass=f=150,lowpass=f=4500",
+      "words": 81,
+      "avg_conf": 0.8851,
+      "wer": 0.3053,
+      "ref_words": 95,
+      "sec": 10.1,
+      "text": "look celia we have to follow our passions you have your robotics and i just want to be awesome in space get and come in two minutes left minute why don't you just admit that you're freaked out by robot ham this is celia it was young and a dick but there's no reason to destroy the world why does she do this we already tried at one you broke my heart you forgot me on earth i should just dress"
+    },
+    {
+      "id": "compress",
+      "af": "highpass=f=150,lowpass=f=4500,acompressor=threshold=-24dB:ratio=3:attack=5:release=150:makeup=4",
+      "words": 76,
+      "avg_conf": 0.8414,
+      "wer": 0.3895,
+      "ref_words": 95,
+      "sec": 9.3,
+      "text": "book celia we have to follow our passions you have your robotics and i just want to be awesome in space get and in two minutes left why don't you just admit that your freaked out by robot ham this is celia out and a dick but there's no reason to destroy the world why does she do this we already tried at one my eyes you forgotten the on earth i should just trash the"
+    }
+  ]
+}

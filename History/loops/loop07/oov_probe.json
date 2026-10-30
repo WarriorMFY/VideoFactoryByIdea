@@ -1,0 +1,174 @@
+{
+  "generated_at": "2026-10-30T05:31:50.554Z",
+  "clip": "Workspace\\assets\\tos_excerpts\\tos_90s.mp4",
+  "note": "干净 TTS vs 原片混音 vs 基线漏句，用来区分\"策略问题\"与\"模型能力问题\"",
+  "summary": {
+    "missed_lines": 10,
+    "clean_tts_recognized_any": 10,
+    "clean_tts_recognized_exact": 5,
+    "in_mix_recognized_any": 3,
+    "clean_matched": 8,
+    "mix_matched": 0,
+    "single_word_total": 7,
+    "single_word_clean_exact": 3,
+    "single_word_detail": [
+      {
+        "text": "Vivacissimo!",
+        "clean": "there was this ammo",
+        "matched": false
+      },
+      {
+        "text": "Abort!",
+        "clean": "abort",
+        "matched": true
+      },
+      {
+        "text": "Cut!",
+        "clean": "cut",
+        "matched": true
+      },
+      {
+        "text": "Whoaaa!",
+        "clean": "woah",
+        "matched": true
+      },
+      {
+        "text": "Whoaaa!",
+        "clean": "woah",
+        "matched": true
+      },
+      {
+        "text": "Nooooo!",
+        "clean": "no",
+        "matched": false
+      },
+      {
+        "text": "I'm-",
+        "clean": "i'm",
+        "matched": true
+      }
+    ]
+  },
+  "rows": [
+    {
+      "text": "Speed it up, Thom!",
+      "gt_start": 33,
+      "covered_in_base": 0,
+      "tts_clean": "speed it up tom",
+      "tts_clean_band": "speed it up tom",
+      "in_mix": "",
+      "clean_sim": 0.92,
+      "mix_sim": 0,
+      "clean_matched": true,
+      "mix_matched": false
+    },
+    {
+      "text": "Vivacissimo!",
+      "gt_start": 35,
+      "covered_in_base": 0,
+      "tts_clean": "there was this ammo",
+      "tts_clean_band": "there was this demo",
+      "in_mix": "",
+      "clean_sim": 0.31,
+      "mix_sim": 0,
+      "clean_matched": false,
+      "mix_matched": false
+    },
+    {
+      "text": "Abort!",
+      "gt_start": 61.5,
+      "covered_in_base": 0,
+      "tts_clean": "abort",
+      "tts_clean_band": "abort",
+      "in_mix": "",
+      "clean_sim": 1,
+      "mix_sim": 0,
+      "clean_matched": true,
+      "mix_matched": false
+    },
+    {
+      "text": "Cut!",
+      "gt_start": 63,
+      "covered_in_base": 0,
+      "tts_clean": "cut",
+      "tts_clean_band": "cut",
+      "in_mix": "",
+      "clean_sim": 1,
+      "mix_sim": 0,
+      "clean_matched": true,
+      "mix_matched": false
+    },
+    {
+      "text": "Whoaaa!",
+      "gt_start": 64,
+      "covered_in_base": 0,
+      "tts_clean": "woah",
+      "tts_clean_band": "woah",
+      "in_mix": "",
+      "clean_sim": 0.5,
+      "mix_sim": 0,
+      "clean_matched": true,
+      "mix_matched": false
+    },
+    {
+      "text": "Whoaaa!",
+      "gt_start": 69,
+      "covered_in_base": 0,
+      "tts_clean": "woah",
+      "tts_clean_band": "woah",
+      "in_mix": "",
+      "clean_sim": 0.5,
+      "mix_sim": 0,
+      "clean_matched": true,
+      "mix_matched": false
+    },
+    {
+      "text": "Nooooo!",
+      "gt_start": 71,
+      "covered_in_base": 0,
+      "tts_clean": "no",
+      "tts_clean_band": "no",
+      "in_mix": "the the",
+      "clean_sim": 0.33,
+      "mix_sim": 0,
+      "clean_matched": false,
+      "mix_matched": false
+    },
+    {
+      "text": "I know.",
+      "gt_start": 76,
+      "covered_in_base": 0,
+      "tts_clean": "i know",
+      "tts_clean_band": "i know",
+      "in_mix": "you",
+      "clean_sim": 1,
+      "mix_sim": 0.2,
+      "clean_matched": true,
+      "mix_matched": false
+    },
+    {
+      "text": "I know.",
+      "gt_start": 79,
+      "covered_in_base": 0,
+      "tts_clean": "i know",
+      "tts_clean_band": "i know",
+      "in_mix": "no",
+      "clean_sim": 1,
+      "mix_sim": 0.4,
+      "clean_matched": true,
+      "mix_matched": false
+    },
+    {
+      "text": "I'm-",
+      "gt_start": 86,
+      "covered_in_base": 0,
+      "tts_clean": "i'm",
+      "tts_clean_band": "i am",
+      "in_mix": "",
+      "clean_sim": 1,
+      "mix_sim": 0,
+      "clean_matched": true,
+      "mix_matched": false
+    }
+  ]
+}

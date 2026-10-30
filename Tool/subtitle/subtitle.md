@@ -12,6 +12,9 @@
 | `make_subs.mjs` | 断句 → **句子级**翻译（MyMemory / agent / none）→ 排显示行 → **阅读速度节流** → `cues.json` + `en/zh/bilingual.srt`；`--punct` 直接吃标点版句子 |
 | `make_ass.mjs` | **双语 + 逐词彩色高亮（karaoke）**：中文整句静态（在上）+ 英文逐词重绘上色（在下）→ ASS；带 `--edl` 时按剪辑重映射 |
 | `remap_subs.mjs` | 把**原片时间轴**的字幕重映射到**剪辑后时间轴**（跨切点拆分、保留<35% 丢弃、过短补齐） |
+| `export_review.mjs` | 把 `cues.json` 导成**人工校对表** `review.csv`，并标出 `cps_over`/`zh_long`/`en_residual`/`sp_gap`/`empty_zh` |
+| `apply_review.mjs` | 把改过的 `review.csv` **回写**成 `cues.json` + 三份 SRT；行数/idx/时间码/en/空译文逐项校验，不合格就拒绝写入 |
+| `asr_rescue.mjs` | **短句救援**（实验性，默认不开）：能量 VAD 找"有声但没识别"的区间，逐窗滤波放大重识别。实测在当前模型上救不回来（见 `Prototype/loop7_short_utterance/`），但"找未覆盖区间"本身可当漏译检查器 |
 | `verify_subs.mjs` | 字幕验收：有讲稿时算 WER/句界误差；无讲稿自动切 reference-free（译文覆盖/可读性/重映射自检） |
 | `glossary_zh.json` | 术语表：普通键值修**译文**；`_source_fixes` 修**源句**（ASR 拆坏的 `l u fs` → `LUFS`），送翻译前生效 |
 
@@ -19,7 +22,7 @@
 
 ```powershell
 node Tool\subtitle\asr_vosk.mjs "外语视频.mp4" --out work\tr.json `
-     --af "afftdn=nf=-25,highpass=f=300,lowpass=f=3400"
+     --af "afftdn=nf=-25,highpass=f=200,lowpass=f=4000"
 node Tool\subtitle\restore_punct.mjs work\tr.json --out work\tr_punct.json --glossary Tool\subtitle\glossary_zh.json
 node Tool\edit\vfactory.mjs "外语视频.mp4" --out out\cut --protect work\tr.json
 node Tool\subtitle\make_subs.mjs work\tr_punct.json --out work\subs --mt mymemory --punct --glossary Tool\subtitle\glossary_zh.json --cps 20
@@ -47,6 +50,21 @@ node Tool\subtitle\make_subs.mjs work\tr_punct.json --out work\subs --punct `
 - 键查找顺序：原句 → 源端纠错后的原句 → 去掉句末标点的版本，所以手写时加不加句末句号都能对上。
 - 精译版与机翻版**共用同一条时间轴**，可以直接对比（`verify_translation.mjs` 算缺陷数 + 与参考译文的相似度）。
 
+## 人工校对回写（`export_review` → 改 CSV → `apply_review`）
+
+机器产出之后，人能改、改完能回灌：`cues.json` 是下游（重映射/高亮/烧入）的唯一输入，所以**必须回写到 cues**，不能只改 SRT。
+
+```powershell
+node Tool\subtitle\export_review.mjs work\subs\cues.json --out work\review            # → review.csv（只改 zh 列）
+node Tool\subtitle\apply_review.mjs  work\subs\cues.json work\review\review.csv --out work\reviewed
+node Tool\edit\vfactory.mjs 原片.mp4 --out out\final --srt work\reviewed\bilingual.srt
+```
+
+- 导出时会打标：`cps_over`（读太快）/`zh_long`（太长）/`en_residual`（残留英文）/`sp_gap`（中英缺空格）/`empty_zh`（漏译），给人"先看哪儿"。
+- 回写会逐项校验，**任一不合格就拒绝写入并报行号**：行数、idx 顺序、时间码被改、`en` 被改、`zh` 为空。
+  确实要改时间码时用 `--allow-retime`（会记进 `review_report.json`）；改原文用 `--allow-en-edit`（`en` 是高亮锚点，慎用）。
+- 恒等测试：导出→不改→回写，`cues.json` 与 `bilingual.srt` 逐字节一致（`Tool/acceptance/run_review_acceptance.mjs`）。
+
 ## 双轨选择
 
 | 想要什么 | 用哪个 | 产物 |
@@ -66,7 +84,7 @@ node Tool\acceptance\verify_karaoke.mjs out\final.mp4 work\karaoke.ass --hl 33E6
 
 | 参数 | 默认 | 含义 |
 | --- | --- | --- |
-| `asr --af` | 空 | 音频预处理。真实影视音轨推荐 `afftdn=nf=-25,highpass=f=300,lowpass=f=3400`（置信度 0.816→0.918） |
+| `asr --af` | 空 | 音频预处理。**真实影视音轨推荐 `afftdn=nf=-25,highpass=f=200,lowpass=f=4000`**：TOS 90s 上 WER 31.6%→28.4%（代价：词数 82→79，噪声段少猜了） |
 | `asr --model` | small-en-us-0.15 | 换语种/换模型。实测 128MB 的 lgraph 大模型在影视混音上**更差** |
 | `make_subs --mt` | mymemory | `mymemory` 全自动 / `agent`（`--zh-file` 人工或 LLM 精译）/ `none` 只出外文 |
 | `make_subs --dump-en` | 关 | 只导出待译模板 `{ "英文原句": "" }` 后退出（给 `--mt agent` 用），不翻译 |
@@ -98,6 +116,11 @@ node Tool\acceptance\verify_karaoke.mjs out\final.mp4 work\karaoke.ass --hl 33E6
   现在还会**校验抽音频时长与输入一致**（差 >2% 直接失败）。
 - **短句是当前最大短板**（小循环 4 实测）：真实电影里 1–3 词短句（`Abort!`/`Cut!`/`Nooooo!`）覆盖率只有 24%，
   长句 84%。别把 WER 差距当"译错"，先看是真漏句还是错词。
+  小循环 7 已把这条路探到底：**干净 TTS 下这些短句能识别（8/10），原片混音下 0/10**，
+  7 条预处理链 × 10 条漏句 = 0 命中，窗口放大到 6–10s 也救不回来 → 是模型能力上限，换 Whisper 级之前别在"喂法"上继续投入。
+- **Vosk 的 recognizer 是有状态的**：复用同一个 recognizer 识别第二段音频，时间戳会接着上一段累加
+  （实测 90s 素材里出现 105s/112s 的词）。模型可复用，**recognizer 必须每段新建**（`lib/vosk.mjs` 已封装）。
+- **短窗解码会空**：1–2s 切片经常 `acceptHits=0`、`final_result` 为空，别指望"切小段逐个识别"。
 - **空 SRT 会让烧入失败**：`vfactory` 现在会先判空/判合法，跳过烧入并告警；上游 `make_subs`/`remap_subs`
   仍可能产出 0 行字幕（例如素材只有 1 个噪声词），这是正常结果，不是 bug。
 

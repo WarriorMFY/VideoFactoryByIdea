@@ -32,6 +32,31 @@ const DEST = path.join(DIR, FILE);
 const DONE = path.join(DIR, '.complete');
 fs.mkdirSync(DIR, { recursive: true });
 
+// ---- 官方字幕（真值来源）----
+// Tears of Steel 的英/中文字幕在 Blender 镜像的 ToS/subtitles/ 下。
+// 英文字幕当**真值**（算 WER/覆盖率），中文字幕当**人工翻译参考**（比机翻质量）。
+// 之前这两份是临时脚本下的，Workspace 清理后重跑 make_tos_excerpt 就会失败 —— 所以固化到这里，
+// 并且放在"电影已下完就早退"之前：字幕缺失时仍然会去补。
+const SUB_DIRS = MIRRORS.map((b) => `${b}subtitles/`).concat('https://ftp.nluug.nl/pub/graphics/blender/demo/movies/ToS/subtitles/');
+for (const name of ['TOS-en.srt', 'TOS-CH.srt']) {
+  const dest = path.join(DIR, name);
+  if (fs.existsSync(dest) && fs.statSync(dest).size > 1000) { console.log(`[subs] 已有 ${name}，跳过`); continue; }
+  let ok = false;
+  for (const dir of SUB_DIRS) {
+    try {
+      const r = await fetch(dir + name, { signal: AbortSignal.timeout(30000) });
+      if (!r.ok) { console.log(`[subs] HTTP ${r.status} ${dir + name}`); continue; }
+      const text = await r.text();
+      if (text.length < 200) { console.log(`[subs] 内容过短 ${text.length} ${dir + name}`); continue; }
+      fs.writeFileSync(dest, text);
+      console.log(`[subs] ${name} ${text.length} 字节 ← ${new URL(dir).hostname}`);
+      ok = true;
+      break;
+    } catch (e) { console.log(`[subs] 失败 ${new URL(dir).hostname}: ${String(e.message).slice(0, 50)}`); }
+  }
+  if (!ok) { console.error(`[subs] 拿不到 ${name}（真值缺失，后续验收无法进行）`); process.exit(1); }
+}
+
 if (fs.existsSync(DONE) && fs.existsSync(DEST)) {
   console.log(`[tos] 已完成（看 .complete 标记），跳过：${(fs.statSync(DEST).size / 1048576).toFixed(1)}MB`);
   process.exit(0);

@@ -1,0 +1,180 @@
+{
+  "generated_at": "2026-10-30T05:13:43.778Z",
+  "source": "Tool/setup/make_tos_excerpt.mjs",
+  "note": "Tears of Steel（© Blender Foundation, CC-BY 3.0）310s 起 90s 的片段；真值取自官方英文字幕 TOS-en.srt（时间已平移 -310s）。",
+  "language": "en",
+  "license": "CC-BY 3.0, Blender Foundation",
+  "duration_s": 90,
+  "window_start_s": 310,
+  "sentences": [
+    {
+      "idx": 0,
+      "start": 6,
+      "end": 7,
+      "text": "Look Celia.",
+      "ref_zh": "Celia."
+    },
+    {
+      "idx": 1,
+      "start": 8,
+      "end": 10,
+      "text": "We have to follow our passions.",
+      "ref_zh": "我们必须跟着我们的感觉走."
+    },
+    {
+      "idx": 2,
+      "start": 11,
+      "end": 13,
+      "text": "You have your robotics...",
+      "ref_zh": "你是机器人..."
+    },
+    {
+      "idx": 3,
+      "start": 15,
+      "end": 18,
+      "text": "...and I just want to be awesome in space.",
+      "ref_zh": "...而我则想要去太空中爽一下."
+    },
+    {
+      "idx": 4,
+      "start": 29,
+      "end": 31,
+      "text": "Okay, they're coming. Two minutes left!",
+      "ref_zh": "Okay, 他们来了. 还剩两分钟!"
+    },
+    {
+      "idx": 5,
+      "start": 33,
+      "end": 34,
+      "text": "Speed it up, Thom!",
+      "ref_zh": "快点, Thom!"
+    },
+    {
+      "idx": 6,
+      "start": 35,
+      "end": 36,
+      "text": "Vivacissimo!",
+      "ref_zh": "Vivacissimo!"
+    },
+    {
+      "idx": 7,
+      "start": 37,
+      "end": 40,
+      "text": "Why don't you just admit that you're freaked out by my robot hand?",
+      "ref_zh": "你为什么不承认你害怕我的机器手臂？"
+    },
+    {
+      "idx": 8,
+      "start": 46,
+      "end": 49,
+      "text": "Listen Celia, I was young...",
+      "ref_zh": "听着 Celia, 我那时还年轻..."
+    },
+    {
+      "idx": 9,
+      "start": 49.5,
+      "end": 51,
+      "text": "...and a dick.",
+      "ref_zh": "...一个什么也不懂的小孩."
+    },
+    {
+      "idx": 10,
+      "start": 51,
+      "end": 53,
+      "text": "But that's no reason to destroy the world.",
+      "ref_zh": "但是这不是毁来这个世界的理由"
+    },
+    {
+      "idx": 11,
+      "start": 55,
+      "end": 56,
+      "text": "Why does he do this?",
+      "ref_zh": "他为啥要这么说?"
+    },
+    {
+      "idx": 12,
+      "start": 56.5,
+      "end": 58.5,
+      "text": "We already tried that one!",
+      "ref_zh": "我们已经试过这个情景了!"
+    },
+    {
+      "idx": 13,
+      "start": 61.5,
+      "end": 62.5,
+      "text": "Abort!",
+      "ref_zh": "中止!"
+    },
+    {
+      "idx": 14,
+      "start": 63,
+      "end": 64,
+      "text": "Cut!",
+      "ref_zh": "停!"
+    },
+    {
+      "idx": 15,
+      "start": 64,
+      "end": 65,
+      "text": "Whoaaa!",
+      "ref_zh": "停!"
+    },
+    {
+      "idx": 16,
+      "start": 69,
+      "end": 70,
+      "text": "Whoaaa!",
+      "ref_zh": "噢啊啊啊!"
+    },
+    {
+      "idx": 17,
+      "start": 71,
+      "end": 73,
+      "text": "Nooooo!",
+      "ref_zh": "不......!"
+    },
+    {
+      "idx": 18,
+      "start": 73,
+      "end": 75,
+      "text": "You broke my heart.",
+      "ref_zh": "你伤了我的心。"
+    },
+    {
+      "idx": 19,
+      "start": 76,
+      "end": 77,
+      "text": "I know.",
+      "ref_zh": "我知道。"
+    },
+    {
+      "idx": 20,
+      "start": 77,
+      "end": 79,
+      "text": "You forgot me on earth.",
+      "ref_zh": "我知道。"
+    },
+    {
+      "idx": 21,
+      "start": 79,
+      "end": 80,
+      "text": "I know.",
+      "ref_zh": "我知道。"
+    },
+    {
+      "idx": 22,
+      "start": 80.5,
+      "end": 83,
+      "text": "I should just crush you.",
+      "ref_zh": "我应该把你碎尸万段"
+    },
+    {
+      "idx": 23,
+      "start": 86,
+      "end": 87,
+      "text": "I'm-",
+      "ref_zh": "对..."
+    }
+  ],
+  "script": "Look Celia. We have to follow our passions. You have your robotics... ...and I just want to be awesome in space. Okay, they're coming. Two minutes left! Speed it up, Thom! Vivacissimo! Why don't you just admit that you're freaked out by my robot hand? Listen Celia, I was young... ...and a dick. But that's no reason to destroy the world. Why does he do this? We already tried that one! Abort! Cut! Whoaaa! Whoaaa! Nooooo! You broke my heart. I know. You forgot me on earth. I know. I should just crush you. I'm-"
+}

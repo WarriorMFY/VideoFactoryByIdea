@@ -19,6 +19,8 @@
 | `verify_punct.mjs` | **标点恢复验收**（小循环 6）：句界 F1 / 句末标点准确率 / 去标点后 WER（用讲稿真值） | `verify_punct.json` |
 | `verify_translation.mjs` | **翻译质量**（小循环 6）：与人工参考的相似度 + **缺陷计数**（句末缺标点/术语错误/残留英文/中英空格） | `mt_quality.json` |
 | `run_text_acceptance.mjs` | 小循环 6 一键验收：标点恢复 → 三种翻译变体横向对比 → 字幕链路回归 | `History/loops/loop06/acceptance.md` |
+| `run_rescue_acceptance.mjs` | **小循环 7**：短句救援验收 —— 最优预处理链是否真的更准 / 跨素材是否倒退 / 证伪证据是否充分 / 是否伤中长句（会顺带调三支探针） | `History/loops/loop07/acceptance.md` |
+| `run_review_acceptance.mjs` | **小循环 8**：校对回写闭环 —— 恒等回写逐字节一致 / 改动只落指定行 / 三类误操作被拒绝 / 回写后能出片 | `History/loops/loop08/acceptance.md` |
 
 ## 怎么用
 
@@ -28,6 +30,8 @@ node Tool\acceptance\run_subs_acceptance.mjs       # 加 --mt agent --zh-file xx
 node Tool\acceptance\run_real_acceptance.mjs       # 加 --af "..." 换音频预处理
 node Tool\acceptance\run_multi_speech_acceptance.mjs --only tos_90s   # 小循环 4：多样本批量（可只跑指定样本）
 node Tool\acceptance\snapshot_loop4.mjs                               # 把小循环 4 产物整理进 Prototype
+node Tool\acceptance\run_rescue_acceptance.mjs --force                 # 小循环 7：短句救援（需先下 TOS 电影+字幕）
+node Tool\acceptance\run_review_acceptance.mjs --force                 # 小循环 8：校对回写闭环
 
 # 单独验一个 EDL / 一条成片
 node Tool\acceptance\verify_edl.mjs out\edits.json bench\ground_truth.json --json out\verify.json
@@ -47,6 +51,8 @@ node Tool\acceptance\qa_report.mjs  out\final.mp4 --json out\qa.json
 | 字幕抖动 | 连续 ≥2 帧整行缺失 = 0；连续 ≥2 帧高亮缺失 = 0；句内文字块上下边界位移 >4px 的次数 = 0（单帧 33ms 不计） | `diagnose_flicker` |
 | 标点恢复 | 句界 F1 ≥0.85、句末标点准确率 ≥85%、去标点后 WER ≤10% | `verify_punct` |
 | 翻译缺陷 | 句末缺标点 = 0、术语错误 = 0（相似度仅作参考） | `verify_translation` |
+| 短句救援 | 预处理链比不处理准 ≥1pp；跨素材不倒退；**证伪证据充分**（干净 TTS 命中 ≥3、原片混音 ≤1、7 条链最佳 0 命中）；中长句覆盖不倒退 >5pp | `run_rescue_acceptance` |
+| 校对回写 | 恒等回写 cues/SRT 逐字节一致；改动只落指定行；删行/改时间码/空译文**必须被拒绝**；回写后出片质检不 FAIL | `run_review_acceptance` |
 
 ## 判定数据在哪
 

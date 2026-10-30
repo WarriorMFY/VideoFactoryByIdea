@@ -1,0 +1,18 @@
+LOG (VoskAPI:ReadDataFiles():model.cc:213) Decoding params beam=10 max-active=3000 lattice-beam=2
+LOG (VoskAPI:ReadDataFiles():model.cc:216) Silence phones 1:2:3:4:5:6:7:8:9:10
+LOG (VoskAPI:RemoveOrphanNodes():nnet-nnet.cc:948) Removed 0 orphan nodes.
+LOG (VoskAPI:RemoveOrphanComponents():nnet-nnet.cc:847) Removing 0 orphan components.
+LOG (VoskAPI:ReadDataFiles():model.cc:248) Loading i-vector extractor from D:\Data\DeepseekHarness\IdeaDrivenLoop\VideoFactory\Workspace\asr\models\vosk-model-small-en-us-0.15/ivector/final.ie
+LOG (VoskAPI:ComputeDerivedVars():ivector-extractor.cc:183) Computing derived variables for iVector extractor
+LOG (VoskAPI:ComputeDerivedVars():ivector-extractor.cc:204) Done.
+LOG (VoskAPI:ReadDataFiles():model.cc:282) Loading HCL and G from D:\Data\DeepseekHarness\IdeaDrivenLoop\VideoFactory\Workspace\asr\models\vosk-model-small-en-us-0.15/graph/HCLr.fst D:\Data\DeepseekHarness\IdeaDrivenLoop\VideoFactory\Workspace\asr\models\vosk-model-small-en-us-0.15/graph/Gr.fst
+LOG (VoskAPI:ReadDataFiles():model.cc:303) Loading winfo D:\Data\DeepseekHarness\IdeaDrivenLoop\VideoFactory\Workspace\asr\models\vosk-model-small-en-us-0.15/graph/phones/word_boundary.int
+[tos_90s/none] words  82 conf 0.8788 WER 31.6%
+[tos_90s/band200_4000] words  82 conf 0.8876 WER 28.4%
+[tos_90s/afftdn_300_3400] words  77 conf 0.9015 WER 30.5%
+[tos_90s/afftdn_band200] words  80 conf 0.8795 WER 25.3%
+[sintel_trailer/none] words  29 conf 0.8175
+[sintel_trailer/band200_4000] words  29 conf 0.8970
+[sintel_trailer/afftdn_300_3400] words  25 conf 0.9241
+[sintel_trailer/afftdn_band200] words  27 conf 0.8659
+[crosscheck] -> History/loops/loop07/af_crosscheck.json

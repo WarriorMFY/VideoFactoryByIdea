@@ -1,0 +1,74 @@
+{
+  "generated_at": "2026-10-30T05:34:35.172Z",
+  "source_cues": "History\\subs\\l2_agent\\cues.json",
+  "clip": "History\\bench\\l2_en\\source.mp4",
+  "export_flags": {
+    "en_residual": 3
+  },
+  "identity": {
+    "cues_identical": true,
+    "srt_identical": true,
+    "rows": 13
+  },
+  "edits": {
+    "edits_requested": {
+      "3": "今天演示三个小技巧，",
+      "9": "第三，把音频响度归一到",
+      "10": "−16 LUFS，这是在线视频平台的标准。",
+      "12": "而且别信第一次渲染。"
+    },
+    "changed_rows": [
+      3,
+      9,
+      10,
+      12
+    ],
+    "report_changed": 4,
+    "only_expected_rows_changed": true,
+    "expected_count": 4,
+    "srt_updated": true
+  },
+  "negatives": {
+    "drop_row": {
+      "rejected": true,
+      "msg": "行数不一致：cues 13 行 vs CSV 12 行（是不是删了/多了一行？）"
+    },
+    "retime": {
+      "rejected": true,
+      "msg": "时间码被改动（2.055→3 / 4.08→4.08）；确认要新时间码请加 --allow-retime"
+    },
+    "blank_zh": {
+      "rejected": true,
+      "msg": "zh 为空（漏译必须显式写内容，不能留空）"
+    },
+    "retime_allowed": {
+      "ok": true,
+      "retimed": [
+        {
+          "idx": 2,
+          "from": [
+            2.055,
+            4.08
+          ],
+          "to": [
+            3,
+            4.08
+          ]
+        }
+      ]
+    }
+  },
+  "render": {
+    "final_mb": 19.5,
+    "qa_verdict": "PASS",
+    "lufs": -16.2
+  },
+  "checks": {
+    "identity_roundtrip": true,
+    "edits_applied_exactly": true,
+    "dangerous_input_rejected": true,
+    "retime_escape_hatch_ok": true,
+    "rerender_ok": true
+  },
+  "pass": true
+}

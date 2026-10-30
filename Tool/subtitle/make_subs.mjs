@@ -19,6 +19,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { ROOT } from '../lib/ff.mjs';
+import { writeSrtSet } from '../lib/srt.mjs';
 
 const args = process.argv.slice(2);
 if (!args[0]) { console.error('用法: node Tool/make_subs.mjs <transcript.json> --out <dir> [--mt mymemory|agent|none]'); process.exit(2); }
@@ -291,17 +292,7 @@ const overAfter = after.filter((v) => v > CPS).length;
 console.log(`[subs] 阅读速度：上限 ${CPS} 字/秒　峰值 ${maxBefore.toFixed(1)} → ${maxAfter.toFixed(1)} 字/秒，超标 ${overAfter}/${finalCues.length} 条（${finalCues.length} 条字幕）`);
 
 // ---------- 4. SRT ----------
-function ts(sec) {
-  const ms = Math.round(sec * 1000);
-  const h = Math.floor(ms / 3600000), m = Math.floor((ms % 3600000) / 60000), s = Math.floor((ms % 60000) / 1000), r = ms % 1000;
-  return `${String(h).padStart(2, '0')}:${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')},${String(r).padStart(3, '0')}`;
-}
-const toSrt = (list, pick) => list.map((c, i) => `${i + 1}\n${ts(c.start)} --> ${ts(c.end)}\n${pick(c).filter(Boolean).join('\n')}\n`).join('\n');
-fs.writeFileSync(path.join(OUT, 'en.srt'), toSrt(finalCues, (c) => [c.en]));
-if (MT !== 'none') {
-  fs.writeFileSync(path.join(OUT, 'zh.srt'), toSrt(finalCues, (c) => [c.zh]));
-  fs.writeFileSync(path.join(OUT, 'bilingual.srt'), toSrt(finalCues, (c) => [c.zh, c.en]));
-}
+writeSrtSet(finalCues, OUT, { mt: MT });
 fs.writeFileSync(path.join(OUT, 'cues.json'), JSON.stringify({
   generated_at: new Date().toISOString(), transcript: TRANSCRIPT, mt_backend: MT, params: TH,
   stats: { sentences: sentences.length, cues: finalCues.length, words: words.length },

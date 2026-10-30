@@ -1,0 +1,13 @@
+LOG (VoskAPI:ReadDataFiles():model.cc:213) Decoding params beam=10 max-active=3000 lattice-beam=2
+LOG (VoskAPI:ReadDataFiles():model.cc:216) Silence phones 1:2:3:4:5:6:7:8:9:10
+LOG (VoskAPI:RemoveOrphanNodes():nnet-nnet.cc:948) Removed 0 orphan nodes.
+LOG (VoskAPI:RemoveOrphanComponents():nnet-nnet.cc:847) Removing 0 orphan components.
+LOG (VoskAPI:ReadDataFiles():model.cc:248) Loading i-vector extractor from D:\Data\DeepseekHarness\IdeaDrivenLoop\VideoFactory\Workspace\asr\models\vosk-model-small-en-us-0.15/ivector/final.ie
+LOG (VoskAPI:ComputeDerivedVars():ivector-extractor.cc:183) Computing derived variables for iVector extractor
+LOG (VoskAPI:ComputeDerivedVars():ivector-extractor.cc:204) Done.
+LOG (VoskAPI:ReadDataFiles():model.cc:282) Loading HCL and G from D:\Data\DeepseekHarness\IdeaDrivenLoop\VideoFactory\Workspace\asr\models\vosk-model-small-en-us-0.15/graph/HCLr.fst D:\Data\DeepseekHarness\IdeaDrivenLoop\VideoFactory\Workspace\asr\models\vosk-model-small-en-us-0.15/graph/Gr.fst
+LOG (VoskAPI:ReadDataFiles():model.cc:303) Loading winfo D:\Data\DeepseekHarness\IdeaDrivenLoop\VideoFactory\Workspace\asr\models\vosk-model-small-en-us-0.15/graph/phones/word_boundary.int
+[rescue] 有声区间 20 / 未被基线覆盖 11 / 试识别窗口 9
+[rescue] 空窗 6 / 新增词 2 / 重叠丢弃 1 / 低置信丢弃 0
+[rescue] 词数 82 → 84，新增：yeah@33.06s no@79.47s
+[rescue] -> D:\Data\DeepseekHarness\IdeaDrivenLoop\VideoFactory\History\loops\loop07\_grid\c040_g10.json

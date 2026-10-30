@@ -1,0 +1,625 @@
+{
+  "generated_at": "2026-10-30T05:26:49.569Z",
+  "engine": "vosk",
+  "model": "vosk-model-small-en-us-0.15",
+  "model_license": "Apache-2.0",
+  "audio_filter": null,
+  "input": "D:\\Data\\DeepseekHarness\\IdeaDrivenLoop\\VideoFactory\\Workspace\\assets\\tos_excerpts\\tos_90s.mp4",
+  "audio_duration_s": 90.001,
+  "text": "like celia we have to follow our passions you have your robotics and i just wanna be awesome in space get come in two minutes left minute why don't you just admit that you're freaked out by my robot him this is celia it was young and a dick but there's no reason to destroy the world why does he do this we already tried that one you roll my eyes you forgot me on earth no i should just splash the",
+  "words": [
+    {
+      "word": "like",
+      "start": 6,
+      "end": 6.21,
+      "conf": 0.717362
+    },
+    {
+      "word": "celia",
+      "start": 6.21,
+      "end": 6.75,
+      "conf": 1
+    },
+    {
+      "word": "we",
+      "start": 8.37,
+      "end": 8.49,
+      "conf": 1
+    },
+    {
+      "word": "have",
+      "start": 8.49,
+      "end": 8.76,
+      "conf": 1
+    },
+    {
+      "word": "to",
+      "start": 8.76,
+      "end": 8.88,
+      "conf": 1
+    },
+    {
+      "word": "follow",
+      "start": 8.88,
+      "end": 9.33,
+      "conf": 1
+    },
+    {
+      "word": "our",
+      "start": 9.33,
+      "end": 9.48,
+      "conf": 1
+    },
+    {
+      "word": "passions",
+      "start": 9.48,
+      "end": 10.32,
+      "conf": 1
+    },
+    {
+      "word": "you",
+      "start": 11.37,
+      "end": 11.55,
+      "conf": 1
+    },
+    {
+      "word": "have",
+      "start": 11.55,
+      "end": 11.76,
+      "conf": 1
+    },
+    {
+      "word": "your",
+      "start": 11.76,
+      "end": 11.94,
+      "conf": 1
+    },
+    {
+      "word": "robotics",
+      "start": 11.94,
+      "end": 12.81,
+      "conf": 1
+    },
+    {
+      "word": "and",
+      "start": 15.18,
+      "end": 15.36,
+      "conf": 1
+    },
+    {
+      "word": "i",
+      "start": 15.84,
+      "end": 16.02,
+      "conf": 1
+    },
+    {
+      "word": "just",
+      "start": 16.02,
+      "end": 16.26,
+      "conf": 1
+    },
+    {
+      "word": "wanna",
+      "start": 16.26,
+      "end": 16.5,
+      "conf": 0.557766
+    },
+    {
+      "word": "be",
+      "start": 16.5,
+      "end": 16.68,
+      "conf": 1
+    },
+    {
+      "word": "awesome",
+      "start": 16.68,
+      "end": 17.1,
+      "conf": 1
+    },
+    {
+      "word": "in",
+      "start": 17.1,
+      "end": 17.19,
+      "conf": 1
+    },
+    {
+      "word": "space",
+      "start": 17.19,
+      "end": 17.76,
+      "conf": 1
+    },
+    {
+      "word": "get",
+      "start": 29.16,
+      "end": 29.34,
+      "conf": 0.64278
+    },
+    {
+      "word": "come",
+      "start": 29.43,
+      "end": 29.64,
+      "conf": 0.631539
+    },
+    {
+      "word": "in",
+      "start": 29.64,
+      "end": 29.82,
+      "conf": 0.764792
+    },
+    {
+      "word": "two",
+      "start": 30.33,
+      "end": 30.51,
+      "conf": 1
+    },
+    {
+      "word": "minutes",
+      "start": 30.51,
+      "end": 30.78,
+      "conf": 1
+    },
+    {
+      "word": "left",
+      "start": 30.78,
+      "end": 31.08,
+      "conf": 1
+    },
+    {
+      "word": "minute",
+      "start": 31.68,
+      "end": 31.95,
+      "conf": 0.829285
+    },
+    {
+      "word": "why",
+      "start": 37.02,
+      "end": 37.17,
+      "conf": 1
+    },
+    {
+      "word": "don't",
+      "start": 37.17,
+      "end": 37.38,
+      "conf": 1
+    },
+    {
+      "word": "you",
+      "start": 37.38,
+      "end": 37.5,
+      "conf": 1
+    },
+    {
+      "word": "just",
+      "start": 37.5,
+      "end": 37.77,
+      "conf": 1
+    },
+    {
+      "word": "admit",
+      "start": 37.77,
+      "end": 38.07,
+      "conf": 0.850537
+    },
+    {
+      "word": "that",
+      "start": 38.07,
+      "end": 38.19,
+      "conf": 0.850537
+    },
+    {
+      "word": "you're",
+      "start": 38.19,
+      "end": 38.34,
+      "conf": 0.638718
+    },
+    {
+      "word": "freaked",
+      "start": 38.34,
+      "end": 38.73,
+      "conf": 1
+    },
+    {
+      "word": "out",
+      "start": 38.73,
+      "end": 38.88,
+      "conf": 1
+    },
+    {
+      "word": "by",
+      "start": 38.88,
+      "end": 39.034636,
+      "conf": 1
+    },
+    {
+      "word": "my",
+      "start": 39.034636,
+      "end": 39.21,
+      "conf": 0.527477
+    },
+    {
+      "word": "robot",
+      "start": 39.21,
+      "end": 39.63,
+      "conf": 0.961142
+    },
+    {
+      "word": "him",
+      "start": 39.63,
+      "end": 39.99,
+      "conf": 0.495286
+    },
+    {
+      "word": "this",
+      "start": 46.89,
+      "end": 47.1,
+      "conf": 1
+    },
+    {
+      "word": "is",
+      "start": 47.1,
+      "end": 47.186898,
+      "conf": 0.660839
+    },
+    {
+      "word": "celia",
+      "start": 47.186898,
+      "end": 47.67,
+      "conf": 1
+    },
+    {
+      "word": "it",
+      "start": 48.24,
+      "end": 48.323705,
+      "conf": 0.322975
+    },
+    {
+      "word": "was",
+      "start": 48.323705,
+      "end": 48.48,
+      "conf": 0.929338
+    },
+    {
+      "word": "young",
+      "start": 48.48,
+      "end": 48.84,
+      "conf": 0.929338
+    },
+    {
+      "word": "and",
+      "start": 50.01,
+      "end": 50.16,
+      "conf": 1
+    },
+    {
+      "word": "a",
+      "start": 50.16,
+      "end": 50.19,
+      "conf": 1
+    },
+    {
+      "word": "dick",
+      "start": 50.19,
+      "end": 50.76,
+      "conf": 1
+    },
+    {
+      "word": "but",
+      "start": 51.24,
+      "end": 51.33,
+      "conf": 1
+    },
+    {
+      "word": "there's",
+      "start": 51.33,
+      "end": 51.48,
+      "conf": 1
+    },
+    {
+      "word": "no",
+      "start": 51.48,
+      "end": 51.63,
+      "conf": 1
+    },
+    {
+      "word": "reason",
+      "start": 51.63,
+      "end": 51.87,
+      "conf": 1
+    },
+    {
+      "word": "to",
+      "start": 51.87,
+      "end": 51.96,
+      "conf": 1
+    },
+    {
+      "word": "destroy",
+      "start": 51.96,
+      "end": 52.38,
+      "conf": 1
+    },
+    {
+      "word": "the",
+      "start": 52.38,
+      "end": 52.5,
+      "conf": 1
+    },
+    {
+      "word": "world",
+      "start": 52.5,
+      "end": 53.04,
+      "conf": 1
+    },
+    {
+      "word": "why",
+      "start": 55.05,
+      "end": 55.2,
+      "conf": 0.833916
+    },
+    {
+      "word": "does",
+      "start": 55.2,
+      "end": 55.32,
+      "conf": 1
+    },
+    {
+      "word": "he",
+      "start": 55.32,
+      "end": 55.41,
+      "conf": 0.529879
+    },
+    {
+      "word": "do",
+      "start": 55.41,
+      "end": 55.56,
+      "conf": 1
+    },
+    {
+      "word": "this",
+      "start": 55.56,
+      "end": 55.86,
+      "conf": 1
+    },
+    {
+      "word": "we",
+      "start": 57.09,
+      "end": 57.24,
+      "conf": 1
+    },
+    {
+      "word": "already",
+      "start": 57.24,
+      "end": 57.63,
+      "conf": 1
+    },
+    {
+      "word": "tried",
+      "start": 57.69,
+      "end": 58.024922,
+      "conf": 1
+    },
+    {
+      "word": "that",
+      "start": 58.024922,
+      "end": 58.17,
+      "conf": 0.457361
+    },
+    {
+      "word": "one",
+      "start": 58.17,
+      "end": 58.53,
+      "conf": 1
+    },
+    {
+      "word": "you",
+      "start": 73.53,
+      "end": 73.814253,
+      "conf": 0.919443
+    },
+    {
+      "word": "roll",
+      "start": 73.92,
+      "end": 74.19,
+      "conf": 0.297042
+    },
+    {
+      "word": "my",
+      "start": 74.260071,
+      "end": 74.513643,
+      "conf": 0.884589
+    },
+    {
+      "word": "eyes",
+      "start": 74.52,
+      "end": 74.94,
+      "conf": 0.697065
+    },
+    {
+      "word": "you",
+      "start": 77.13,
+      "end": 77.34,
+      "conf": 1
+    },
+    {
+      "word": "forgot",
+      "start": 77.34,
+      "end": 77.85,
+      "conf": 1
+    },
+    {
+      "word": "me",
+      "start": 77.85,
+      "end": 78.09,
+      "conf": 0.368623
+    },
+    {
+      "word": "on",
+      "start": 78.09,
+      "end": 78.27,
+      "conf": 0.578452
+    },
+    {
+      "word": "earth",
+      "start": 78.27,
+      "end": 78.69,
+      "conf": 0.578452
+    },
+    {
+      "word": "no",
+      "start": 79.47,
+      "end": 79.74,
+      "conf": 0.668107
+    },
+    {
+      "word": "i",
+      "start": 80.49,
+      "end": 80.67,
+      "conf": 1
+    },
+    {
+      "word": "should",
+      "start": 80.67,
+      "end": 81,
+      "conf": 1
+    },
+    {
+      "word": "just",
+      "start": 81,
+      "end": 81.339844,
+      "conf": 1
+    },
+    {
+      "word": "splash",
+      "start": 81.339844,
+      "end": 81.93,
+      "conf": 0.476761
+    },
+    {
+      "word": "the",
+      "start": 82.32,
+      "end": 82.44,
+      "conf": 0.461095
+    }
+  ],
+  "sentences": [
+    {
+      "start": 6,
+      "end": 6.75,
+      "text": "like celia",
+      "n": 2
+    },
+    {
+      "start": 8.37,
+      "end": 10.32,
+      "text": "we have to follow our passions",
+      "n": 6
+    },
+    {
+      "start": 11.37,
+      "end": 12.81,
+      "text": "you have your robotics",
+      "n": 4
+    },
+    {
+      "start": 15.18,
+      "end": 15.36,
+      "text": "and",
+      "n": 1
+    },
+    {
+      "start": 15.84,
+      "end": 17.76,
+      "text": "i just wanna be awesome in space",
+      "n": 7
+    },
+    {
+      "start": 29.16,
+      "end": 29.82,
+      "text": "get come in",
+      "n": 3
+    },
+    {
+      "start": 30.33,
+      "end": 31.08,
+      "text": "two minutes left",
+      "n": 3
+    },
+    {
+      "start": 31.68,
+      "end": 31.95,
+      "text": "minute",
+      "n": 1
+    },
+    {
+      "start": 37.02,
+      "end": 39.99,
+      "text": "why don't you just admit that you're freaked out by my robot him",
+      "n": 13
+    },
+    {
+      "start": 46.89,
+      "end": 47.67,
+      "text": "this is celia",
+      "n": 3
+    },
+    {
+      "start": 48.24,
+      "end": 48.84,
+      "text": "it was young",
+      "n": 3
+    },
+    {
+      "start": 50.01,
+      "end": 50.76,
+      "text": "and a dick",
+      "n": 3
+    },
+    {
+      "start": 51.24,
+      "end": 53.04,
+      "text": "but there's no reason to destroy the world",
+      "n": 8
+    },
+    {
+      "start": 55.05,
+      "end": 55.86,
+      "text": "why does he do this",
+      "n": 5
+    },
+    {
+      "start": 57.09,
+      "end": 58.53,
+      "text": "we already tried that one",
+      "n": 5
+    },
+    {
+      "start": 73.53,
+      "end": 74.94,
+      "text": "you roll my eyes",
+      "n": 4
+    },
+    {
+      "start": 77.13,
+      "end": 78.69,
+      "text": "you forgot me on earth",
+      "n": 5
+    },
+    {
+      "start": 79.47,
+      "end": 79.74,
+      "text": "no",
+      "n": 1
+    },
+    {
+      "start": 80.49,
+      "end": 82.44,
+      "text": "i should just splash the",
+      "n": 5
+    }
+  ],
+  "stats": {
+    "words": 82,
+    "sentences": 19,
+    "avg_conf": 0.8788
+  }
+}

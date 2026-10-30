@@ -1,0 +1,730 @@
+{
+  "generated_at": "2026-10-30T05:33:59.119Z",
+  "clip": "Workspace\\assets\\tos_excerpts\\tos_90s.mp4",
+  "gt": "Workspace\\assets\\tos_excerpts\\tos_90s.ground_truth.json",
+  "af_best": "afftdn=nf=-25,highpass=f=200,lowpass=f=4000",
+  "rescue_args": [
+    "--min-conf",
+    "0.4",
+    "--pad",
+    "0.30",
+    "--gap-s",
+    "1.0",
+    "--max-windows",
+    "60"
+  ],
+  "none": {
+    "words": 82,
+    "wer": 0.3158,
+    "coverage": 0.5377,
+    "lines": [
+      {
+        "words": 2,
+        "text": "Look Celia.",
+        "start": 6,
+        "covered": 0.75
+      },
+      {
+        "words": 6,
+        "text": "We have to follow our passions.",
+        "start": 8,
+        "covered": 0.815
+      },
+      {
+        "words": 4,
+        "text": "You have your robotics...",
+        "start": 11,
+        "covered": 0.72
+      },
+      {
+        "words": 9,
+        "text": "...and I just want to be awesome in space.",
+        "start": 15,
+        "covered": 0.7
+      },
+      {
+        "words": 6,
+        "text": "Okay, they're coming. Two minutes left!",
+        "start": 29,
+        "covered": 0.665
+      },
+      {
+        "words": 4,
+        "text": "Speed it up, Thom!",
+        "start": 33,
+        "covered": 0
+      },
+      {
+        "words": 1,
+        "text": "Vivacissimo!",
+        "start": 35,
+        "covered": 0
+      },
+      {
+        "words": 13,
+        "text": "Why don't you just admit that you're freaked out by my robot hand?",
+        "start": 37,
+        "covered": 0.99
+      },
+      {
+        "words": 5,
+        "text": "Listen Celia, I was young...",
+        "start": 46,
+        "covered": 0.46
+      },
+      {
+        "words": 3,
+        "text": "...and a dick.",
+        "start": 49.5,
+        "covered": 0.5
+      },
+      {
+        "words": 8,
+        "text": "But that's no reason to destroy the world.",
+        "start": 51,
+        "covered": 0.88
+      },
+      {
+        "words": 5,
+        "text": "Why does he do this?",
+        "start": 55,
+        "covered": 0.81
+      },
+      {
+        "words": 5,
+        "text": "We already tried that one!",
+        "start": 56.5,
+        "covered": 0.705
+      },
+      {
+        "words": 1,
+        "text": "Abort!",
+        "start": 61.5,
+        "covered": 0
+      },
+      {
+        "words": 1,
+        "text": "Cut!",
+        "start": 63,
+        "covered": 0
+      },
+      {
+        "words": 1,
+        "text": "Whoaaa!",
+        "start": 64,
+        "covered": 0
+      },
+      {
+        "words": 1,
+        "text": "Whoaaa!",
+        "start": 69,
+        "covered": 0
+      },
+      {
+        "words": 1,
+        "text": "Nooooo!",
+        "start": 71,
+        "covered": 0
+      },
+      {
+        "words": 4,
+        "text": "You broke my heart.",
+        "start": 73,
+        "covered": 0.705
+      },
+      {
+        "words": 2,
+        "text": "I know.",
+        "start": 76,
+        "covered": 0
+      },
+      {
+        "words": 5,
+        "text": "You forgot me on earth.",
+        "start": 77,
+        "covered": 0.78
+      },
+      {
+        "words": 2,
+        "text": "I know.",
+        "start": 79,
+        "covered": 0.27
+      },
+      {
+        "words": 5,
+        "text": "I should just crush you.",
+        "start": 80.5,
+        "covered": 0.776
+      },
+      {
+        "words": 1,
+        "text": "I'm-",
+        "start": 86,
+        "covered": 0
+      }
+    ],
+    "short": {
+      "n": 11,
+      "cov": 0.138,
+      "missed": 8
+    },
+    "mid": {
+      "n": 11,
+      "cov": 0.665,
+      "missed": 1
+    },
+    "long": {
+      "n": 2,
+      "cov": 0.845,
+      "missed": 0
+    }
+  },
+  "base": {
+    "words": 79,
+    "wer": 0.2842,
+    "coverage": 0.5029,
+    "lines": [
+      {
+        "words": 2,
+        "text": "Look Celia.",
+        "start": 6,
+        "covered": 0.72
+      },
+      {
+        "words": 6,
+        "text": "We have to follow our passions.",
+        "start": 8,
+        "covered": 0.806
+      },
+      {
+        "words": 4,
+        "text": "You have your robotics...",
+        "start": 11,
+        "covered": 0.705
+      },
+      {
+        "words": 9,
+        "text": "...and I just want to be awesome in space.",
+        "start": 15,
+        "covered": 0.69
+      },
+      {
+        "words": 6,
+        "text": "Okay, they're coming. Two minutes left!",
+        "start": 29,
+        "covered": 0.527
+      },
+      {
+        "words": 4,
+        "text": "Speed it up, Thom!",
+        "start": 33,
+        "covered": 0
+      },
+      {
+        "words": 1,
+        "text": "Vivacissimo!",
+        "start": 35,
+        "covered": 0
+      },
+      {
+        "words": 13,
+        "text": "Why don't you just admit that you're freaked out by my robot hand?",
+        "start": 37,
+        "covered": 0.98
+      },
+      {
+        "words": 5,
+        "text": "Listen Celia, I was young...",
+        "start": 46,
+        "covered": 0.46
+      },
+      {
+        "words": 3,
+        "text": "...and a dick.",
+        "start": 49.5,
+        "covered": 0.5
+      },
+      {
+        "words": 8,
+        "text": "But that's no reason to destroy the world.",
+        "start": 51,
+        "covered": 0.865
+      },
+      {
+        "words": 5,
+        "text": "Why does he do this?",
+        "start": 55,
+        "covered": 0.78
+      },
+      {
+        "words": 5,
+        "text": "We already tried that one!",
+        "start": 56.5,
+        "covered": 0.705
+      },
+      {
+        "words": 1,
+        "text": "Abort!",
+        "start": 61.5,
+        "covered": 0
+      },
+      {
+        "words": 1,
+        "text": "Cut!",
+        "start": 63,
+        "covered": 0
+      },
+      {
+        "words": 1,
+        "text": "Whoaaa!",
+        "start": 64,
+        "covered": 0
+      },
+      {
+        "words": 1,
+        "text": "Whoaaa!",
+        "start": 69,
+        "covered": 0
+      },
+      {
+        "words": 1,
+        "text": "Nooooo!",
+        "start": 71,
+        "covered": 0
+      },
+      {
+        "words": 4,
+        "text": "You broke my heart.",
+        "start": 73,
+        "covered": 0.645
+      },
+      {
+        "words": 2,
+        "text": "I know.",
+        "start": 76,
+        "covered": 0
+      },
+      {
+        "words": 5,
+        "text": "You forgot me on earth.",
+        "start": 77,
+        "covered": 0.78
+      },
+      {
+        "words": 2,
+        "text": "I know.",
+        "start": 79,
+        "covered": 0
+      },
+      {
+        "words": 5,
+        "text": "I should just crush you.",
+        "start": 80.5,
+        "covered": 0.564
+      },
+      {
+        "words": 1,
+        "text": "I'm-",
+        "start": 86,
+        "covered": 0
+      }
+    ],
+    "short": {
+      "n": 11,
+      "cov": 0.111,
+      "missed": 9
+    },
+    "mid": {
+      "n": 11,
+      "cov": 0.622,
+      "missed": 1
+    },
+    "long": {
+      "n": 2,
+      "cov": 0.835,
+      "missed": 0
+    }
+  },
+  "rescue": {
+    "words": 82,
+    "wer": 0.2842,
+    "coverage": 0.5186,
+    "added": 3,
+    "lines": [
+      {
+        "words": 2,
+        "text": "Look Celia.",
+        "start": 6,
+        "covered": 0.72
+      },
+      {
+        "words": 6,
+        "text": "We have to follow our passions.",
+        "start": 8,
+        "covered": 0.806
+      },
+      {
+        "words": 4,
+        "text": "You have your robotics...",
+        "start": 11,
+        "covered": 0.705
+      },
+      {
+        "words": 9,
+        "text": "...and I just want to be awesome in space.",
+        "start": 15,
+        "covered": 0.69
+      },
+      {
+        "words": 6,
+        "text": "Okay, they're coming. Two minutes left!",
+        "start": 29,
+        "covered": 0.677
+      },
+      {
+        "words": 4,
+        "text": "Speed it up, Thom!",
+        "start": 33,
+        "covered": 0
+      },
+      {
+        "words": 1,
+        "text": "Vivacissimo!",
+        "start": 35,
+        "covered": 0
+      },
+      {
+        "words": 13,
+        "text": "Why don't you just admit that you're freaked out by my robot hand?",
+        "start": 37,
+        "covered": 0.98
+      },
+      {
+        "words": 5,
+        "text": "Listen Celia, I was young...",
+        "start": 46,
+        "covered": 0.46
+      },
+      {
+        "words": 3,
+        "text": "...and a dick.",
+        "start": 49.5,
+        "covered": 0.5
+      },
+      {
+        "words": 8,
+        "text": "But that's no reason to destroy the world.",
+        "start": 51,
+        "covered": 0.865
+      },
+      {
+        "words": 5,
+        "text": "Why does he do this?",
+        "start": 55,
+        "covered": 0.78
+      },
+      {
+        "words": 5,
+        "text": "We already tried that one!",
+        "start": 56.5,
+        "covered": 0.705
+      },
+      {
+        "words": 1,
+        "text": "Abort!",
+        "start": 61.5,
+        "covered": 0
+      },
+      {
+        "words": 1,
+        "text": "Cut!",
+        "start": 63,
+        "covered": 0
+      },
+      {
+        "words": 1,
+        "text": "Whoaaa!",
+        "start": 64,
+        "covered": 0
+      },
+      {
+        "words": 1,
+        "text": "Whoaaa!",
+        "start": 69,
+        "covered": 0
+      },
+      {
+        "words": 1,
+        "text": "Nooooo!",
+        "start": 71,
+        "covered": 0
+      },
+      {
+        "words": 4,
+        "text": "You broke my heart.",
+        "start": 73,
+        "covered": 0.645
+      },
+      {
+        "words": 2,
+        "text": "I know.",
+        "start": 76,
+        "covered": 0
+      },
+      {
+        "words": 5,
+        "text": "You forgot me on earth.",
+        "start": 77,
+        "covered": 0.78
+      },
+      {
+        "words": 2,
+        "text": "I know.",
+        "start": 79,
+        "covered": 0.33
+      },
+      {
+        "words": 5,
+        "text": "I should just crush you.",
+        "start": 80.5,
+        "covered": 0.564
+      },
+      {
+        "words": 1,
+        "text": "I'm-",
+        "start": 86,
+        "covered": 0
+      }
+    ],
+    "short": {
+      "n": 11,
+      "cov": 0.141,
+      "missed": 8
+    },
+    "mid": {
+      "n": 11,
+      "cov": 0.635,
+      "missed": 1
+    },
+    "long": {
+      "n": 2,
+      "cov": 0.835,
+      "missed": 0
+    },
+    "detail": {
+      "params": {
+        "pad": 0.3,
+        "padCover": 0.25,
+        "minGap": 0.2,
+        "minDur": 0.2,
+        "maxDur": 5,
+        "minConf": 0.4,
+        "maxWindows": 60,
+        "mergeGap": 0.25,
+        "iouReject": 0.35,
+        "af": "highpass=f=180,lowpass=f=4200,acompressor=threshold=-26dB:ratio=4:attack=5:release=120:makeup=3"
+      },
+      "threshold_db": -21.2,
+      "noise_floor_db": -33.2,
+      "speech_regions": 20,
+      "uncovered_regions": 12,
+      "windows_tried": 9,
+      "windows_empty": 5,
+      "words_added": 3,
+      "rejected_low_conf": 0,
+      "rejected_overlap": 4,
+      "window_detail": [
+        {
+          "start": 3.4000000000000004,
+          "end": 4.28,
+          "variant": "af",
+          "words": 0
+        },
+        {
+          "start": 17.64,
+          "end": 29.61,
+          "variant": "af",
+          "words": 1
+        },
+        {
+          "start": 30.96,
+          "end": 37.2,
+          "variant": "raw",
+          "words": 1
+        },
+        {
+          "start": 39.980000000000004,
+          "end": 42.199999999999996,
+          "variant": "af",
+          "words": 0
+        },
+        {
+          "start": 44.06,
+          "end": 45.239999999999995,
+          "variant": "af",
+          "words": 0
+        },
+        {
+          "start": 58.38,
+          "end": 73.71000000000001,
+          "variant": "af",
+          "words": 0
+        },
+        {
+          "start": 74.7,
+          "end": 77.31,
+          "variant": "raw",
+          "words": 0
+        },
+        {
+          "start": 78.57,
+          "end": 80.67,
+          "variant": "af",
+          "words": 1
+        },
+        {
+          "start": 81.78,
+          "end": 87.30000000000001,
+          "variant": "af",
+          "words": 0
+        }
+      ],
+      "added_words": [
+        {
+          "word": "get",
+          "start": 29.16,
+          "end": 29.34,
+          "conf": 1
+        },
+        {
+          "word": "minute",
+          "start": 31.639,
+          "end": 31.95,
+          "conf": 0.534991
+        },
+        {
+          "word": "no",
+          "start": 79.47,
+          "end": 79.8,
+          "conf": 1
+        }
+      ]
+    }
+  },
+  "deltas": {
+    "af_wer_gain": 0.03160000000000002,
+    "rescue_wer": 0,
+    "short": 0.029999999999999985,
+    "mid": 0.013000000000000012,
+    "long": 0
+  },
+  "short_target_met": false,
+  "recovered": [],
+  "broken": [],
+  "oov_summary": {
+    "missed_lines": 10,
+    "clean_tts_recognized_any": 10,
+    "clean_tts_recognized_exact": 5,
+    "in_mix_recognized_any": 3,
+    "clean_matched": 8,
+    "mix_matched": 0,
+    "single_word_total": 7,
+    "single_word_clean_exact": 3,
+    "single_word_detail": [
+      {
+        "text": "Vivacissimo!",
+        "clean": "there was this ammo",
+        "matched": false
+      },
+      {
+        "text": "Abort!",
+        "clean": "abort",
+        "matched": true
+      },
+      {
+        "text": "Cut!",
+        "clean": "cut",
+        "matched": true
+      },
+      {
+        "text": "Whoaaa!",
+        "clean": "woah",
+        "matched": true
+      },
+      {
+        "text": "Whoaaa!",
+        "clean": "woah",
+        "matched": true
+      },
+      {
+        "text": "Nooooo!",
+        "clean": "no",
+        "matched": false
+      },
+      {
+        "text": "I'm-",
+        "clean": "i'm",
+        "matched": true
+      }
+    ]
+  },
+  "chain_stats": [
+    {
+      "id": "band200_4000",
+      "af": "highpass=f=200,lowpass=f=4000",
+      "hits": 0,
+      "full": 0,
+      "mean": 0
+    },
+    {
+      "id": "band300_3400",
+      "af": "highpass=f=300,lowpass=f=3400",
+      "hits": 0,
+      "full": 0,
+      "mean": 0
+    },
+    {
+      "id": "afftdn_band",
+      "af": "afftdn=nf=-20,highpass=f=250,lowpass=f=3500",
+      "hits": 0,
+      "full": 0,
+      "mean": 0
+    },
+    {
+      "id": "dynaudnorm",
+      "af": "dynaudnorm=f=100:g=25,highpass=f=250,lowpass=f=3500",
+      "hits": 0,
+      "full": 0,
+      "mean": 0
+    },
+    {
+      "id": "speechnorm",
+      "af": "speechnorm=e=10:r=0.0001:l=1,highpass=f=250,lowpass=f=3500",
+      "hits": 0,
+      "full": 0,
+      "mean": 0
+    },
+    {
+      "id": "boost12",
+      "af": "volume=12dB,highpass=f=250,lowpass=f=3500",
+      "hits": 0,
+      "full": 0,
+      "mean": 0
+    },
+    {
+      "id": "combo",
+      "af": "afftdn=nf=-20,dynaudnorm=f=100:g=20,highpass=f=250,lowpass=f=3500,volume=6dB",
+      "hits": 0,
+      "full": 0,
+      "mean": 0
+    }
+  ],
+  "crosscheck_ok": true,
+  "checks": {
+    "af_beats_none": true,
+    "crosscheck_ok": true,
+    "wall_documented": true,
+    "no_harm_to_long": true
+  },
+  "pass": true
+}

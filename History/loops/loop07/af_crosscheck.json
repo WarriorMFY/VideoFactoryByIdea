@@ -1,0 +1,78 @@
+{
+  "generated_at": "2026-10-30T05:33:24.182Z",
+  "note": "两条候选预处理链在 TOS（有真值）与 Sintel（无真值，看词数/置信度）上的交叉对比 注意：本探针在**同一个 node 进程里连续识别多段音频**（复用模型、每段新建 recognizer），与 asr_vosk.mjs（新进程、单段）相比，同一链的结果可能差 1 个词（实测 afftdn_band200：80 词/WER 25.3% vs 79 词/WER 28.4%，两次运行各自可复现）。选链只看**同一探针内的相对排序**（afftdn+带通最优）；对外报数一律以 run_rescue_acceptance.mjs 的 asr_vosk 结果为准。",
+  "rows": [
+    {
+      "clip": "tos_90s",
+      "chain": "none",
+      "af": null,
+      "words": 82,
+      "avg_conf": 0.8788,
+      "wer": 0.3158,
+      "text": "like celia we have to follow our passions you have your robotics and i just wanna be awesome in space get come in two minutes left minute why don't you just admit that you're freaked out by my robot him this is celia it was young and a dick but there's no reason to destroy the world why does he do t"
+    },
+    {
+      "clip": "tos_90s",
+      "chain": "band200_4000",
+      "af": "highpass=f=200,lowpass=f=4000",
+      "words": 82,
+      "avg_conf": 0.8876,
+      "wer": 0.2842,
+      "text": "look celia we have to follow our passions you have your robotics and i just want to be awesome in space get come in two minutes left minute why don't you just admit that you're freaked out by my robot him this is celia it was young and a dick but there's no reason to destroy the world why does she d"
+    },
+    {
+      "clip": "tos_90s",
+      "chain": "afftdn_300_3400",
+      "af": "afftdn=nf=-25,highpass=f=300,lowpass=f=3400",
+      "words": 77,
+      "avg_conf": 0.9015,
+      "wer": 0.3053,
+      "text": "look celia we have to follow our passions you have your robotics i just want to be awesome in space come in two minutes left financial just admit that your freaked out by my robot him this is celia i was young and a dick but there's no reason to destroy the world why does he do this we already tried"
+    },
+    {
+      "clip": "tos_90s",
+      "chain": "afftdn_band200",
+      "af": "afftdn=nf=-25,highpass=f=200,lowpass=f=4000",
+      "words": 80,
+      "avg_conf": 0.8795,
+      "wer": 0.2526,
+      "text": "look celia we have to follow our passions you have your robotics and i just want to be awesome in space come in two minutes left why don't you just admit that you're freaked out by my robot him this is celia i was young and a dick but there's no reason to destroy the world why does he do this we alr"
+    },
+    {
+      "clip": "sintel_trailer",
+      "chain": "none",
+      "af": null,
+      "words": 29,
+      "avg_conf": 0.8175,
+      "wer": null,
+      "text": "what brings you to the land are the gatekeepers i'm searching for so a dangerous quest for and none too people don't for a long as i can remember"
+    },
+    {
+      "clip": "sintel_trailer",
+      "chain": "band200_4000",
+      "af": "highpass=f=200,lowpass=f=4000",
+      "words": 29,
+      "avg_conf": 0.897,
+      "wer": null,
+      "text": "what brings you to the land are the gatekeepers i'm searching for so dangerous quest for and know not too can you do information on it i can remember"
+    },
+    {
+      "clip": "sintel_trailer",
+      "chain": "afftdn_300_3400",
+      "af": "afftdn=nf=-25,highpass=f=300,lowpass=f=3400",
+      "words": 25,
+      "avg_conf": 0.9241,
+      "wer": null,
+      "text": "what brings you to the land of the gatekeepers i'm searching for dangerous quest for a number two you don't long as i can remember"
+    },
+    {
+      "clip": "sintel_trailer",
+      "chain": "afftdn_band200",
+      "af": "afftdn=nf=-25,highpass=f=200,lowpass=f=4000",
+      "words": 27,
+      "avg_conf": 0.8659,
+      "wer": null,
+      "text": "what brings you to the land of the gatekeepers i'm searching for so dangerous quest for a number two learned from a long as i can remember"
+    }
+  ]
+}

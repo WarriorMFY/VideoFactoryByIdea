@@ -1,0 +1,18 @@
+{
+  "generated_at": "2026-10-30T05:34:20.290Z",
+  "source_cues": "D:\\Data\\DeepseekHarness\\IdeaDrivenLoop\\VideoFactory\\History\\subs\\l2_agent\\cues.json",
+  "review_csv": "D:\\Data\\DeepseekHarness\\IdeaDrivenLoop\\VideoFactory\\History\\runs\\l8_review\\review_edited.csv",
+  "cues_sha256": "340f84cdccae5d69",
+  "rows": 13,
+  "changed": 4,
+  "char_delta": -10,
+  "retimed": [],
+  "en_edited": [],
+  "checks": {
+    "row_count": true,
+    "idx_order": true,
+    "timing_locked": true,
+    "en_locked": true,
+    "zh_non_empty": true
+  }
+}
