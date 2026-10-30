@@ -1,0 +1,47 @@
+{
+  "checked_at": "2026-10-30T04:58:51.353Z",
+  "file": "History\\runs\\l6_text\\final.mp4",
+  "size_mb": 19.498,
+  "duration_s": 33.878,
+  "video": {
+    "codec": "h264",
+    "profile": "High",
+    "level": 31,
+    "w": 1280,
+    "h": 720,
+    "pix_fmt": "yuv420p",
+    "fps": "30/1",
+    "avg_fps": "30/1",
+    "sar": "1:1"
+  },
+  "audio": {
+    "codec": "aac",
+    "sample_rate": 48000,
+    "channels": 2,
+    "bitrate": 183391
+  },
+  "loudness": {
+    "integrated_lufs": -16.2,
+    "lra_lu": 2.6,
+    "true_peak_dbtp": -1.5
+  },
+  "silent_input_note": null,
+  "residual_defects": {
+    "black_segments": 0,
+    "freeze_segments": 0,
+    "silence_segments": 0,
+    "note": "冻帧/静音残留不一定是缺陷：本流水线规则明确保留「仅冻帧」或「仅静音」的镜头（口播/动作镜头）"
+  },
+  "av_duration_diff_s": 0.045,
+  "checks": {
+    "has_video": true,
+    "h264": true,
+    "yuv420p": true,
+    "cfr": true,
+    "audio_aac_48k": true,
+    "loudness_ok": true,
+    "no_residual_black": true,
+    "av_synced": true
+  },
+  "verdict": "PASS"
+}

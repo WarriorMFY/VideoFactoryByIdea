@@ -1,0 +1,9 @@
+[punct] 词间停顿 中位数 0.000s / p80 0.004s → 断句阈值 0.30s
+[punct] 101 词 → 7 句 → History\asr\transcript_punct.json
+   0.03–4.08  Welcome back to the workshop where return raw footage into finished films.
+   4.41–8.79  Today I will show you three simple tricks that save about two hours of editing time.
+   9.12–13.41  First, always cut on the beat, because rhythm is what keeps the audience awake.
+   13.74–18.48  Second, remove the silent gaps longer than half a second before you touch the colors.
+   18.78–25.62  Third, normalize the audio to minus sixty sixteen l u fs, which is the standard for online video platforms.
+   25.95–30.78  Finally, export at fifteen megabits per second, and never trust the first render.
+   31.11–33.84  That is it for this episode see you in the next one.

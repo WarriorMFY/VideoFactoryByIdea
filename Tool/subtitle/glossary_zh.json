@@ -1,5 +1,14 @@
 {
   "_note": "机翻术语表：键=机器译文里出现的错误写法，值=正确写法。用于修 LUFS/码率/专业名词被机翻译坏的问题。",
+  "_source_fixes_note": "在【送翻译之前】对源句做的纠错（ASR 常把单位/专名拆坏，如 LUFS 被听成 l u fs），键=ASR 坏写法，值=规范写法。",
+  "_source_fixes": {
+    "l u fs": "LUFS",
+    "l u f s": "LUFS",
+    "lufs": "LUFS",
+    "luf": "LUFS",
+    "megabit per second": "Mbps",
+    "sixteen l u fs": "16 LUFS"
+  },
   "lufs": "LUFS",
   "luf": "LUFS",
   "卢夫斯": "LUFS",

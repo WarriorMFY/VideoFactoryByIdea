@@ -12,7 +12,8 @@
  *
  * 用法：
  *   node Tool/make_subs.mjs <transcript.json> --out <dir> [--mt mymemory|agent|none]
- *        [--zh-file 精译.json] [--glossary glossary.json]
+ *        [--zh-file 精译.json] [--glossary glossary.json] [--punct] [--dump-en 待译模板.json]
+ *   --dump-en：只导出待译句子模板（`{ "英文原句": "" }`）后退出，不翻译、不产出 cues。
  * 输出：cues.json、en.srt、zh.srt、bilingual.srt
  */
 import fs from 'node:fs';
@@ -76,7 +77,25 @@ function buildSentences(words) {
   }
   return merged.map((s) => ({ start: s.start, end: s.end, words: s.words, en: s.words.map((w) => w.word).join(' ') }));
 }
-const sentences = buildSentences(words);
+// 断句来源：
+//   · 默认：按停顿 + 长度自动切（无标点，机翻质量较差）；
+//   · `--punct`：使用 restore_punct.mjs 产出的"带标点句子"（tr.sentences 里有 w0/w1），
+//     翻译直接吃带标点/大小写的整句 → 实测机翻质量明显提升（术语 luf → LUFS、句末语气正确）。
+const PUNCT = args.includes('--punct');
+let sentences;
+if (PUNCT && Array.isArray(tr.sentences) && tr.sentences.length && Number.isFinite(tr.sentences[0].w0)) {
+  sentences = tr.sentences.map((s) => ({
+    start: s.start,
+    end: s.end,
+    words: words.slice(s.w0, s.w1 + 1),
+    en: s.text,                       // 带标点/大小写
+    punctuated: true,
+  }));
+  console.log(`[subs] 使用标点恢复后的断句：${sentences.length} 句（--punct）`);
+} else {
+  if (PUNCT) console.warn('[subs] --punct 但输入里没有 sentences[].w0，回退为自动断句');
+  sentences = buildSentences(words);
+}
 
 // ---------- 2. 翻译（句子级） ----------
 const CACHE_PATH = path.join(ROOT, 'History', 'asr', 'mt_cache.json');
@@ -86,6 +105,15 @@ const saveCache = () => { fs.mkdirSync(path.dirname(CACHE_PATH), { recursive: tr
 async function mymemory(text) {
   const key = `en|zh-CN|${text}`;
   if (cache[key]) return cache[key];
+  // MyMemory 单次查询上限 500 字符（超了返回 403 QUERY LENGTH LIMIT）→ 超长句先拆成两半再拼
+  if (text.length > 480) {
+    const cut = text.lastIndexOf(' ', 240) > 80 ? text.lastIndexOf(' ', 240) : 240;
+    const a = await mymemory(text.slice(0, cut).trim());
+    const b = await mymemory(text.slice(cut).trim());
+    const joined = a + b;
+    cache[key] = joined; saveCache();
+    return joined;
+  }
   const url = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(text)}&langpair=en|zh-CN`;
   for (let attempt = 0; attempt < 4; attempt++) {
     try {
@@ -102,6 +130,16 @@ async function mymemory(text) {
 }
 
 const glossary = GLOSSARY && fs.existsSync(GLOSSARY) ? JSON.parse(fs.readFileSync(GLOSSARY, 'utf8')) : {};
+// 源端术语纠错（`_source_fixes`）：ASR 常把专名/单位拆坏（实测 LUFS 被听成 "l u fs"）。
+// 在**送翻译之前**把源句里的坏写法改回规范写法，机翻才不会把 "l u fs" 当成乱词。
+// 注意：必须**精确取** `_source_fixes` 这个键。之前用 startsWith 匹配，结果命中了
+// `_source_fixes_note`（说明文字），遍历字符串字符做替换，等于没生效（实测 LUFS 仍被译坏）。
+const sourceFixes = glossary._source_fixes || {};
+function fixSource(en) {
+  let out = en;
+  for (const [from, to] of Object.entries(sourceFixes)) out = out.split(from).join(to);
+  return out;
+}
 function applyGlossary(zh) {
   let out = zh;
   for (const [from, to] of Object.entries(glossary)) {
@@ -109,6 +147,23 @@ function applyGlossary(zh) {
     out = out.split(from).join(to);
   }
   return out;
+}
+
+// ---------- 2.5 精译稿模板（--dump-en） ----------
+// 发布级译文走 `--mt agent --zh-file`，但人工/LLM 得先知道"要译哪些句"。
+// 把断句结果导出成 `{ "英文原句": "" }` 模板（**已做源端术语纠错**，如 `l u fs`→`LUFS`），
+// 填好中文再传回来；缺句会直接报错（见下面 agent 分支），不会静默退回机翻。
+// 放在这里而不是断句之后：模板要对源端纠错后的句子，得等术语表加载完。
+const DUMP_EN = getOpt('--dump-en', '');
+if (DUMP_EN) {
+  const out = path.resolve(ROOT, DUMP_EN);
+  const tpl = {};
+  for (const s of sentences) tpl[fixSource(s.en)] = '';
+  fs.mkdirSync(path.dirname(out), { recursive: true });
+  fs.writeFileSync(out, JSON.stringify(tpl, null, 2));
+  console.log(`[subs] 已导出待译 ${sentences.length} 句 → ${out}`);
+  console.log(`[subs] 填好中文后：--mt agent --zh-file ${DUMP_EN}`);
+  process.exit(0);
 }
 
 let zhMap = {};
@@ -120,10 +175,17 @@ if (MT === 'agent') {
 for (const s of sentences) {
   if (MT === 'none') { s.zh = ''; continue; }
   if (MT === 'agent') {
-    const v = zhMap[s.en];
+    // 精译文件按"标点恢复后的原句"做 key。候选顺序：原句 → 源端纠错后的原句
+    // （`--dump-en` 导出的模板用的是纠错后文本，见上一节）→ 去掉句末标点的版本。
+    const fixed = fixSource(s.en);
+    const v = zhMap[s.en] || zhMap[fixed]
+      || zhMap[s.en.replace(/[.,!?]+$/, '')] || zhMap[fixed.replace(/[.,!?]+$/, '')];
     if (!v) throw new Error('精译文件缺少该句: ' + s.en);
     s.zh = v;
-  } else s.zh = applyGlossary(await mymemory(s.en));
+  } else {
+    s.mt_input = fixSource(s.en);      // 记录实际送翻译的文本，便于审计
+    s.zh = applyGlossary(await mymemory(s.mt_input));
+  }
 }
 
 // ---------- 3. 句子 → 显示行 ----------
@@ -188,6 +250,45 @@ for (const s of sentences) {
   }
 }
 const finalCues = cues.filter((c) => (c.en || '').trim() || (c.zh || '').trim());
+
+// ---------- 3.5 阅读速度（CPS）节流 ----------
+// 字幕"读不完"是发布级字幕的硬伤：中文超过约 20 字/秒就来不及看。
+// 做法（不改变音画对齐，只调显示时长）：
+//   ① 先尝试把该条字幕的结束时间往后延（不越过下一条开始）；
+//   ② 仍超标就按标点/字数把它拆成两条，按字数比例分配时间（不切到一半的词）。
+const CPS = Number(getOpt('--cps', 20));
+const before = finalCues.map((c) => ([...String(c.zh || '')].length) / Math.max(0.2, c.end - c.start));
+const retimed = [];
+for (let i = 0; i < finalCues.length; i++) {
+  const c = finalCues[i];
+  const nextStart = finalCues[i + 1] ? finalCues[i + 1].start : Infinity;
+  const chars = [...String(c.zh || '')].length;
+  if (!chars || chars / Math.max(0.2, c.end - c.start) <= CPS) { retimed.push(c); continue; }
+  // ① 延长时间
+  const need = chars / CPS;
+  const maxEnd = Math.min(nextStart - 0.02, c.start + need * 1.6);
+  let end = Math.max(c.end, Math.min(maxEnd, c.start + need));
+  // ② 还不够就拆成两条
+  if (chars / Math.max(0.2, end - c.start) > CPS && nextStart - c.start > 0.8) {
+    const mid = Math.floor(chars / 2);
+    const zhA = [...String(c.zh || '')].slice(0, mid).join('');
+    const zhB = [...String(c.zh || '')].slice(mid).join('');
+    const total = end - c.start;
+    const cut = c.start + total * (mid / chars);
+    retimed.push({ ...c, end: cut, zh: zhA });
+    retimed.push({ ...c, start: cut, end, zh: zhB, en: '' });
+    continue;
+  }
+  retimed.push({ ...c, end });
+}
+finalCues.length = 0;
+retimed.forEach((c) => finalCues.push(c));
+const after = finalCues.map((c) => ([...String(c.zh || '')].length) / Math.max(0.2, c.end - c.start));
+const maxBefore = before.length ? Math.max(...before) : 0;
+const maxAfter = after.length ? Math.max(...after) : 0;
+const overAfter = after.filter((v) => v > CPS).length;
+// 诚实说明：时间窗物理上不够时（下一条已经压上来）无法强行达标，只能尽量延/拆；所以这里**报告超标条数**。
+console.log(`[subs] 阅读速度：上限 ${CPS} 字/秒　峰值 ${maxBefore.toFixed(1)} → ${maxAfter.toFixed(1)} 字/秒，超标 ${overAfter}/${finalCues.length} 条（${finalCues.length} 条字幕）`);
 
 // ---------- 4. SRT ----------
 function ts(sec) {

@@ -93,5 +93,18 @@
   "en|zh-CN|we already tried that one": "我们已经试过那个",
   "en|zh-CN|you broke my heart": "扎心了，老铁",
   "en|zh-CN|you forgot me on earth": "你把我忘在地球上",
-  "en|zh-CN|i should just trash on": "我应该直接倒垃圾"
+  "en|zh-CN|i should just trash on": "我应该直接倒垃圾",
+  "en|zh-CN|Welcome back to the workshop where return raw footage into finished films.": "欢迎回到工作坊，将原始镜头放回成品胶片中。",
+  "en|zh-CN|Today I will show you three simple tricks that save about two hours of editing time.": "今天，我将向您展示三个简单的技巧，可以节省大约两个小时的编辑时间。",
+  "en|zh-CN|First, always cut on the beat, because rhythm is what keeps the audience awake.": "首先，始终保持节拍，因为节奏是让观众保持清醒的原因。",
+  "en|zh-CN|Second, remove the silent gaps longer than half a second before you touch the colors.": "其次，在触摸颜色之前，去除超过半秒钟的无声间隙。",
+  "en|zh-CN|Third, normalize the audio to minus sixty sixteen l u fs, which is the standard for online video platforms.": "第三，将音频标准化为负六十六l u fs ，这是在线视频平台的标准。",
+  "en|zh-CN|Finally, export at fifteen megabits per second, and never trust the first render.": "最后，以每秒15兆比特的速度导出，永远不要相信第一个渲染。",
+  "en|zh-CN|That is it for this episode see you in the next one.": "这一集到此结束，下一集见。",
+  "en|zh-CN|Third, normalize the audio to minus sixty sixteen LUFS, which is the standard for online video platforms.": "第三，将音频标准化为零下六十六个LUFS ，这是在线视频平台的标准。",
+  "en|zh-CN|What brings you to the land of the gatekeepers?": "是什么让你来到守门人的国度？",
+  "en|zh-CN|I'm searching for.": "我正在寻找",
+  "en|zh-CN|Dangerous quest for a number two.": "寻找二号的危险任务。",
+  "en|zh-CN|You don't.": "你並沒有。",
+  "en|zh-CN|Long as I can remember.": "只要我记得。"
 }
