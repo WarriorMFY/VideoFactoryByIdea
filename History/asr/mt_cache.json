@@ -247,5 +247,7 @@
   "en|zh-CN|Then.": "当时",
   "en|zh-CN|We have more.": "我们有更多。",
   "en|zh-CN|Is a listen to be learned from this?": "倾听是否可以从中吸取教训？",
-  "en|zh-CN|In around.": "在附近。"
+  "en|zh-CN|In around.": "在附近。",
+  "en|zh-CN|Third, normalize the audio to −16 LUFS, which is the standard for online video platforms.": "第三，将音频标准化为-16 LUFS ，这是在线视频平台的标准。",
+  "en|zh-CN|Finally, export at 15 Mbps, and never trust the first render.": "最后，以15 Mbps的速度导出，永远不要相信第一个渲染。"
 }

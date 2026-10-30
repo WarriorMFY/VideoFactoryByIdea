@@ -1,23 +1,22 @@
 {
-  "checked_at": "2026-10-30T05:03:01.204Z",
+  "checked_at": "2026-10-30T08:58:54.684Z",
   "cues": "D:\\Data\\DeepseekHarness\\IdeaDrivenLoop\\VideoFactory\\History\\subs\\l2_punct\\cues.json",
   "reference": "D:\\Data\\DeepseekHarness\\IdeaDrivenLoop\\VideoFactory\\History\\bench\\l2_en\\reference_zh.json",
   "metric": "char-level similarity vs human reference (0–1)",
   "note": "相似度只表示\"与人工译文的接近程度\"，不等于正确率；用于同一素材上的相对比较。",
   "sentences": 7,
-  "mean_similarity": 0.472,
+  "mean_similarity": 0.467,
   "defect_counts": {
     "missing_end_punct": 0,
     "term_errors": 0,
     "leftover_english": 0,
-    "cjk_latin_no_space": 2
+    "cjk_latin_no_space": 1
   },
   "defects": {
     "missing_end_punct": [],
     "term_errors": [],
     "leftover_english": [],
     "cjk_latin_no_space": [
-      5,
       6
     ]
   },
@@ -53,16 +52,16 @@
     {
       "idx": 4,
       "en": "Third, normalize the audio to minus sixty sixteen l u fs, which is the standard for online video platforms.",
-      "mt": "第三，将音频标准化为零下六十六个LUFS ，这是在线视频平台的标准。",
+      "mt": "第三，将音频标准化为−16 LUFS，这是在线视频平台的标准。",
       "ref": "第三，把音频响度归一到负十六 LUFS，这是在线视频平台的标准。",
-      "sim": 0.7
+      "sim": 0.679
     },
     {
       "idx": 5,
       "en": "Finally, export at fifteen megabits per second, and never trust the first render.",
-      "mt": "最后，以每秒 15 Mbps的速度导出，永远不要相信第一个渲染。",
+      "mt": "最后，以15 Mbps的速度导出，永远不要相信第一个渲染。",
       "ref": "最后，以每秒十五兆的码率导出，而且永远不要相信第一次渲染。",
-      "sim": 0.593
+      "sim": 0.577
     },
     {
       "idx": 6,

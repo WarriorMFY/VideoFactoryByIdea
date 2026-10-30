@@ -1,0 +1,9 @@
+[classify] tos_90s.mp4 90.0s → class=narrative（knowledge_score 0.174）
+   · speech_ratio: 0 (w=0.25) 23% 时长有词（教学/旁白高；剧情片混音段低）
+   · asr_conf: 0.676 (w=0.25) 平均置信 0.8853（干净近场麦高）
+   · music_ratio: 0 (w=0.2) 有声但无词 73%（配乐/音效占比，影视混音高）
+   · short_ratio: 0 (w=0.15) 短句占比 44%（喊叫/对话碎片多则高）
+   · words_per_sent: 0.05 (w=0.1) 句均 4.4 词（口播句子长）
+   · term_density: 0 (w=0.05) 术语/单位 0/100 词（知识型高）
+   → 建议：精译（--mt agent，人/LLM 带剧情上下文）｜CPS 16｜人工校对 required
+   语气与画面承载语义，机翻只能当草稿

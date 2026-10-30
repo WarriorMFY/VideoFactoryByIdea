@@ -1,0 +1,288 @@
+{
+  "generated_at": "2026-10-30T08:59:08.477Z",
+  "input": "History\\runs\\l11_knowledge\\transcript_norm.json",
+  "sentences": 7,
+  "total_words": 95,
+  "glossary": "Tool\\subtitle\\glossary_zh.json",
+  "candidates": [
+    {
+      "term": "Welcome",
+      "count": 1,
+      "kind": "proper_noun",
+      "in_glossary": false,
+      "examples": [
+        "Welcome back to the workshop where return raw footage into finished films."
+      ]
+    },
+    {
+      "term": "welcome",
+      "count": 1,
+      "kind": "frequent_word",
+      "in_glossary": false,
+      "examples": [
+        "Welcome back to the workshop where return raw footage into finished films."
+      ]
+    },
+    {
+      "term": "workshop",
+      "count": 1,
+      "kind": "frequent_word",
+      "in_glossary": false,
+      "examples": [
+        "Welcome back to the workshop where return raw footage into finished films."
+      ]
+    },
+    {
+      "term": "return",
+      "count": 1,
+      "kind": "frequent_word",
+      "in_glossary": false,
+      "examples": [
+        "Welcome back to the workshop where return raw footage into finished films."
+      ]
+    },
+    {
+      "term": "footage",
+      "count": 1,
+      "kind": "frequent_word",
+      "in_glossary": false,
+      "examples": [
+        "Welcome back to the workshop where return raw footage into finished films."
+      ]
+    },
+    {
+      "term": "finished",
+      "count": 1,
+      "kind": "frequent_word",
+      "in_glossary": false,
+      "examples": [
+        "Welcome back to the workshop where return raw footage into finished films."
+      ]
+    },
+    {
+      "term": "Welcome back",
+      "count": 1,
+      "kind": "phrase",
+      "in_glossary": false,
+      "examples": [
+        "Welcome back to the workshop where return raw footage into finished films."
+      ]
+    },
+    {
+      "term": "workshop where",
+      "count": 1,
+      "kind": "phrase",
+      "in_glossary": false,
+      "examples": [
+        "Welcome back to the workshop where return raw footage into finished films."
+      ]
+    },
+    {
+      "term": "where return",
+      "count": 1,
+      "kind": "phrase",
+      "in_glossary": false,
+      "examples": [
+        "Welcome back to the workshop where return raw footage into finished films."
+      ]
+    },
+    {
+      "term": "finished films",
+      "count": 1,
+      "kind": "phrase",
+      "in_glossary": false,
+      "examples": [
+        "Welcome back to the workshop where return raw footage into finished films."
+      ]
+    },
+    {
+      "term": "Today",
+      "count": 1,
+      "kind": "proper_noun",
+      "in_glossary": false,
+      "examples": [
+        "Today I will show you three simple tricks that save about two hours of editing time."
+      ]
+    },
+    {
+      "term": "editing",
+      "count": 1,
+      "kind": "frequent_word",
+      "in_glossary": false,
+      "examples": [
+        "Today I will show you three simple tricks that save about two hours of editing time."
+      ]
+    },
+    {
+      "term": "rhythm",
+      "count": 1,
+      "kind": "frequent_word",
+      "in_glossary": false,
+      "examples": [
+        "First, always cut on the beat, because rhythm is what keeps the audience awake."
+      ]
+    },
+    {
+      "term": "audience",
+      "count": 1,
+      "kind": "frequent_word",
+      "in_glossary": false,
+      "examples": [
+        "First, always cut on the beat, because rhythm is what keeps the audience awake."
+      ]
+    },
+    {
+      "term": "audience awake",
+      "count": 1,
+      "kind": "phrase",
+      "in_glossary": false,
+      "examples": [
+        "First, always cut on the beat, because rhythm is what keeps the audience awake."
+      ]
+    },
+    {
+      "term": "remove",
+      "count": 1,
+      "kind": "frequent_word",
+      "in_glossary": false,
+      "examples": [
+        "Second, remove the silent gaps longer than half a second before you touch the colors."
+      ]
+    },
+    {
+      "term": "silent",
+      "count": 1,
+      "kind": "frequent_word",
+      "in_glossary": false,
+      "examples": [
+        "Second, remove the silent gaps longer than half a second before you touch the colors."
+      ]
+    },
+    {
+      "term": "longer",
+      "count": 1,
+      "kind": "frequent_word",
+      "in_glossary": false,
+      "examples": [
+        "Second, remove the silent gaps longer than half a second before you touch the colors."
+      ]
+    },
+    {
+      "term": "colors",
+      "count": 1,
+      "kind": "frequent_word",
+      "in_glossary": false,
+      "examples": [
+        "Second, remove the silent gaps longer than half a second before you touch the colors."
+      ]
+    },
+    {
+      "term": "silent gaps",
+      "count": 1,
+      "kind": "phrase",
+      "in_glossary": false,
+      "examples": [
+        "Second, remove the silent gaps longer than half a second before you touch the colors."
+      ]
+    },
+    {
+      "term": "gaps longer",
+      "count": 1,
+      "kind": "phrase",
+      "in_glossary": false,
+      "examples": [
+        "Second, remove the silent gaps longer than half a second before you touch the colors."
+      ]
+    },
+    {
+      "term": "normalize",
+      "count": 1,
+      "kind": "frequent_word",
+      "in_glossary": false,
+      "examples": [
+        "Third, normalize the audio to −16 LUFS, which is the standard for online video platforms."
+      ]
+    },
+    {
+      "term": "standard",
+      "count": 1,
+      "kind": "frequent_word",
+      "in_glossary": false,
+      "examples": [
+        "Third, normalize the audio to −16 LUFS, which is the standard for online video platforms."
+      ]
+    },
+    {
+      "term": "online",
+      "count": 1,
+      "kind": "frequent_word",
+      "in_glossary": false,
+      "examples": [
+        "Third, normalize the audio to −16 LUFS, which is the standard for online video platforms."
+      ]
+    },
+    {
+      "term": "platforms",
+      "count": 1,
+      "kind": "frequent_word",
+      "in_glossary": false,
+      "examples": [
+        "Third, normalize the audio to −16 LUFS, which is the standard for online video platforms."
+      ]
+    },
+    {
+      "term": "15 Mbps",
+      "count": 1,
+      "kind": "acronym_or_unit",
+      "in_glossary": false,
+      "examples": [
+        "Finally, export at 15 Mbps, and never trust the first render."
+      ]
+    },
+    {
+      "term": "export",
+      "count": 1,
+      "kind": "frequent_word",
+      "in_glossary": false,
+      "examples": [
+        "Finally, export at 15 Mbps, and never trust the first render."
+      ]
+    },
+    {
+      "term": "render",
+      "count": 1,
+      "kind": "frequent_word",
+      "in_glossary": false,
+      "examples": [
+        "Finally, export at 15 Mbps, and never trust the first render."
+      ]
+    },
+    {
+      "term": "episode",
+      "count": 1,
+      "kind": "frequent_word",
+      "in_glossary": false,
+      "examples": [
+        "That is it for this episode see you in the next one."
+      ]
+    },
+    {
+      "term": "16 LUFS",
+      "count": 1,
+      "kind": "acronym_or_unit",
+      "in_glossary": true,
+      "examples": [
+        "Third, normalize the audio to −16 LUFS, which is the standard for online video platforms."
+      ]
+    },
+    {
+      "term": "Mbps",
+      "count": 1,
+      "kind": "proper_noun",
+      "in_glossary": true,
+      "examples": [
+        "Finally, export at 15 Mbps, and never trust the first render."
+      ]
+    }
+  ]
+}
