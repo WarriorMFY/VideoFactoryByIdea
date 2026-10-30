@@ -1,0 +1,27 @@
+{
+  "generated_at": "2026-10-30T08:57:05.063Z",
+  "input": "History\\asr\\transcript_punct_norm.json",
+  "sentences": 7,
+  "total_words": 95,
+  "glossary": "Tool\\subtitle\\glossary_zh.json",
+  "candidates": [
+    {
+      "term": "15 Mbps",
+      "count": 1,
+      "kind": "acronym_or_unit",
+      "in_glossary": false,
+      "examples": [
+        "Finally, export at 15 Mbps, and never trust the first render."
+      ]
+    },
+    {
+      "term": "16 LUFS",
+      "count": 1,
+      "kind": "acronym_or_unit",
+      "in_glossary": true,
+      "examples": [
+        "Third, normalize the audio to −16 LUFS, which is the standard for online video platforms."
+      ]
+    }
+  ]
+}

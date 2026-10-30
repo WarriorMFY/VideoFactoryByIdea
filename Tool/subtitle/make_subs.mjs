@@ -20,6 +20,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { ROOT } from '../lib/ff.mjs';
 import { writeSrtSet } from '../lib/srt.mjs';
+import { normalizeSourceText, canonicalizeZh } from '../lib/units.mjs';
 
 const args = process.argv.slice(2);
 if (!args[0]) { console.error('用法: node Tool/make_subs.mjs <transcript.json> --out <dir> [--mt mymemory|agent|none]'); process.exit(2); }
@@ -150,10 +151,18 @@ const glossary = GLOSSARY && fs.existsSync(GLOSSARY) ? JSON.parse(fs.readFileSyn
 // 注意：必须**精确取** `_source_fixes` 这个键。之前用 startsWith 匹配，结果命中了
 // `_source_fixes_note`（说明文字），遍历字符串字符做替换，等于没生效（实测 LUFS 仍被译坏）。
 const sourceFixes = glossary._source_fixes || {};
+// `--no-unit-norm` 只做术语表纠错、不做数值/单位规范化（小循环 11 的对照组用；
+// 默认开，因为知识型内容里数值单位本身就是信息主体）
+const UNIT_NORM = !args.includes('--no-unit-norm');
+// 源端规范化（数值+单位）：`minus sixteen l u fs` → `−16 LUFS`、`fifteen megabits per second` → `15 Mbps`。
+// 必须在**送翻译之前**做 —— 机翻看到 `−16 LUFS` 才知道这是响度标准（小循环 11）。
 function fixSource(en) {
-  let out = en;
-  for (const [from, to] of Object.entries(sourceFixes)) out = out.split(from).join(to);
-  return out;
+  if (!UNIT_NORM) {
+    let out = en;
+    for (const [from, to] of Object.entries(sourceFixes)) out = out.split(from).join(to);
+    return out;
+  }
+  return normalizeSourceText(en, sourceFixes).text;
 }
 function applyGlossary(zh) {
   let out = zh;
@@ -162,6 +171,14 @@ function applyGlossary(zh) {
     out = out.split(from).join(to);
   }
   return out;
+}
+// 中文侧单位写法统一（"负十六 LUFS"/"零下16LUFS" → "−16 LUFS"）；记录替换次数供审计
+const unitFixes = [];
+function fixUnitsZh(zh, sentEn) {
+  if (!UNIT_NORM) return zh;
+  const { text, changes } = canonicalizeZh(zh);
+  if (changes.length) unitFixes.push({ sent_en: sentEn, from: zh, to: text, changes: changes.map((c) => c.rule) });
+  return text;
 }
 
 // ---------- 2.5 精译稿模板（--dump-en） ----------
@@ -196,10 +213,10 @@ for (const s of sentences) {
     const v = zhMap[s.en] || zhMap[fixed]
       || zhMap[s.en.replace(/[.,!?]+$/, '')] || zhMap[fixed.replace(/[.,!?]+$/, '')];
     if (!v) throw new Error('精译文件缺少该句: ' + s.en);
-    s.zh = v;
+    s.zh = fixUnitsZh(applyGlossary(v), s.en);
   } else {
     s.mt_input = fixSource(s.en);      // 记录实际送翻译的文本，便于审计
-    s.zh = applyGlossary(await mymemory(s.mt_input));
+    s.zh = fixUnitsZh(applyGlossary(await mymemory(s.mt_input)), s.en);
   }
 }
 
@@ -310,9 +327,11 @@ writeSrtSet(finalCues, OUT, { mt: MT });
 fs.writeFileSync(path.join(OUT, 'cues.json'), JSON.stringify({
   generated_at: new Date().toISOString(), transcript: TRANSCRIPT, mt_backend: MT, params: TH,
   stats: { sentences: sentences.length, cues: finalCues.length, words: words.length },
+  unit_fixes: unitFixes,
   sentences, cues: finalCues,
 }, null, 2));
 
 console.log(`[subs] ${sentences.length} 句 → ${finalCues.length} 行字幕（MT=${MT}）`);
+if (unitFixes.length) console.log(`[subs] 数值/单位规范化 ${unitFixes.length} 条：` + unitFixes.map((u) => `${JSON.stringify(u.from)}→${JSON.stringify(u.to)}`).join(' '));
 for (const s of sentences) console.log(`   句 ${s.start.toFixed(2)}–${s.end.toFixed(2)}  ${s.en.slice(0, 70)}\n              → ${s.zh || ''}`);
 console.log(`[subs] -> ${path.relative(ROOT, OUT)}`);

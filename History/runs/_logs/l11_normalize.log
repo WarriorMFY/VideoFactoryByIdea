@@ -1,0 +1,5 @@
+[norm] 7 句，改动 2 句 / 3 处 → History\runs\l11_knowledge\transcript_norm.json
+   Third, normalize the audio to minus sixty sixteen l u fs, which is the standard for online video platforms.
+   → Third, normalize the audio to −16 LUFS, which is the standard for online video platforms.
+   Finally, export at fifteen megabits per second, and never trust the first render.
+   → Finally, export at 15 Mbps, and never trust the first render.

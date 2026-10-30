@@ -1,6 +1,7 @@
 [subs] 使用标点恢复后的断句：7 句（--punct）
 [subs] 阅读速度：上限 20 字/秒　峰值 8.9 → 8.9 字/秒，超标 0/13 条（13 条字幕）
 [subs] 7 句 → 13 行字幕（MT=mymemory）
+[subs] 数值/单位规范化 1 条："第三，将音频标准化为-16 LUFS ，这是在线视频平台的标准。"→"第三，将音频标准化为−16 LUFS，这是在线视频平台的标准。"
    句 0.03–4.08  Welcome back to the workshop where return raw footage into finished fi
               → 欢迎回到工作坊，将原始镜头放回成品胶片中。
    句 4.41–8.79  Today I will show you three simple tricks that save about two hours of
@@ -10,9 +11,9 @@
    句 13.74–18.48  Second, remove the silent gaps longer than half a second before you to
               → 其次，在触摸颜色之前，去除超过半秒钟的无声间隙。
    句 18.78–25.62  Third, normalize the audio to minus sixty sixteen l u fs, which is the
-              → 第三，将音频标准化为零下六十六个LUFS ，这是在线视频平台的标准。
+              → 第三，将音频标准化为−16 LUFS，这是在线视频平台的标准。
    句 25.95–30.78  Finally, export at fifteen megabits per second, and never trust the fi
-              → 最后，以每秒 15 Mbps的速度导出，永远不要相信第一个渲染。
+              → 最后，以15 Mbps的速度导出，永远不要相信第一个渲染。
    句 31.11–33.84  That is it for this episode see you in the next one.
               → 这一集到此结束，下一集见。
 [subs] -> History\subs\l2_punct

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-30T05:03:01.146Z",
+  "generated_at": "2026-10-30T08:58:54.627Z",
   "transcript": "D:\\Data\\DeepseekHarness\\IdeaDrivenLoop\\VideoFactory\\History\\asr\\transcript_punct.json",
   "mt_backend": "mymemory",
   "params": {
@@ -15,6 +15,17 @@
     "cues": 13,
     "words": 101
   },
+  "unit_fixes": [
+    {
+      "sent_en": "Third, normalize the audio to minus sixty sixteen l u fs, which is the standard for online video platforms.",
+      "from": "第三，将音频标准化为-16 LUFS ，这是在线视频平台的标准。",
+      "to": "第三，将音频标准化为−16 LUFS，这是在线视频平台的标准。",
+      "changes": [
+        "zh_ascii_minus",
+        "zh_space_before_punct"
+      ]
+    }
+  ],
   "sentences": [
     {
       "start": 0.03,
@@ -519,8 +530,8 @@
       ],
       "en": "Third, normalize the audio to minus sixty sixteen l u fs, which is the standard for online video platforms.",
       "punctuated": true,
-      "mt_input": "Third, normalize the audio to minus sixty sixteen LUFS, which is the standard for online video platforms.",
-      "zh": "第三，将音频标准化为零下六十六个LUFS ，这是在线视频平台的标准。"
+      "mt_input": "Third, normalize the audio to −16 LUFS, which is the standard for online video platforms.",
+      "zh": "第三，将音频标准化为−16 LUFS，这是在线视频平台的标准。"
     },
     {
       "start": 25.95,
@@ -607,8 +618,8 @@
       ],
       "en": "Finally, export at fifteen megabits per second, and never trust the first render.",
       "punctuated": true,
-      "mt_input": "Finally, export at fifteen megabits per second, and never trust the first render.",
-      "zh": "最后，以每秒 15 Mbps的速度导出，永远不要相信第一个渲染。"
+      "mt_input": "Finally, export at 15 Mbps, and never trust the first render.",
+      "zh": "最后，以15 Mbps的速度导出，永远不要相信第一个渲染。"
     },
     {
       "start": 31.11,
@@ -762,7 +773,7 @@
       "start": 18.78,
       "end": 22.2,
       "en": "Third, normalize the audio to minus sixty sixteen l u fs, which",
-      "zh": "第三，将音频标准化为零下六十六个LU",
+      "zh": "第三，将音频标准化为−16 LUFS",
       "conf": 0.885,
       "sent_en": "Third, normalize the audio to minus sixty sixteen l u fs, which is the standard for online video platforms."
     },
@@ -770,7 +781,7 @@
       "start": 22.2,
       "end": 25.62,
       "en": "is the standard for online video platforms.",
-      "zh": "FS ，这是在线视频平台的标准。",
+      "zh": "，这是在线视频平台的标准。",
       "conf": 0.885,
       "sent_en": "Third, normalize the audio to minus sixty sixteen l u fs, which is the standard for online video platforms."
     },
@@ -778,7 +789,7 @@
       "start": 25.95,
       "end": 28.365,
       "en": "Finally, export at fifteen megabits per second, and never trust",
-      "zh": "最后，以每秒 15 Mbps的速度导",
+      "zh": "最后，以15 Mbps的速度导出，",
       "conf": 0.979,
       "sent_en": "Finally, export at fifteen megabits per second, and never trust the first render."
     },
@@ -786,7 +797,7 @@
       "start": 28.365,
       "end": 30.78,
       "en": "the first render.",
-      "zh": "出，永远不要相信第一个渲染。",
+      "zh": "永远不要相信第一个渲染。",
       "conf": 0.979,
       "sent_en": "Finally, export at fifteen megabits per second, and never trust the first render."
     },

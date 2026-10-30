@@ -1,0 +1,38 @@
+{
+  "tool": "normalize_units.mjs",
+  "glossary": "Tool\\subtitle\\glossary_zh.json",
+  "sentences": 7,
+  "changed": 2,
+  "substitutions": 3,
+  "changes": [
+    {
+      "start": 18.78,
+      "raw": "Third, normalize the audio to minus sixty sixteen l u fs, which is the standard for online video platforms.",
+      "normalized": "Third, normalize the audio to −16 LUFS, which is the standard for online video platforms.",
+      "changes": [
+        {
+          "from": "sixteen l u fs",
+          "to": "16 LUFS",
+          "rule": "source_fixes"
+        },
+        {
+          "from": "minus sixty 16 LUFS",
+          "to": "−16 LUFS",
+          "rule": "minus_cleanup"
+        }
+      ]
+    },
+    {
+      "start": 25.95,
+      "raw": "Finally, export at fifteen megabits per second, and never trust the first render.",
+      "normalized": "Finally, export at 15 Mbps, and never trust the first render.",
+      "changes": [
+        {
+          "from": "fifteen megabits per second",
+          "to": "15 Mbps",
+          "rule": "mbps"
+        }
+      ]
+    }
+  ]
+}

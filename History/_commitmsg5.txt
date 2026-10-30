@@ -1,0 +1,28 @@
+feat(loop11): 知识型内容链路——内容分诊 + 数值单位规范化 + 术语候选
+
+背景：人指出"讲视频剪辑技巧的教学片翻得好"，并要求"不要给工厂下定义，工厂是持续迭代的"。
+所以这一轮把这条能力做成可计算/可判定，而不是写边界文档。
+
+新增
+- Tool/subtitle/classify_content.mjs：6 个可计算信号（语音覆盖/置信度/配乐占比/短句占比/句均词数/术语密度）
+  → knowledge / mixed / narrative + 当前策略建议（CPS、翻译后端、是否需要人工校对）
+- Tool/lib/units.mjs + Tool/subtitle/normalize_units.mjs：数值与单位规范化
+  `minus sixty sixteen l u fs` → `−16 LUFS`、`fifteen megabits per second` → `15 Mbps`、`60 fps`、`4K`；
+  只改句子文本不动词级时间；替换留痕；幂等；只在单位语境动数字（`two hours` 不变）
+- Tool/subtitle/term_candidates.mjs：术语候选（缩写/单位、专名、高频长词、高频二元短语），标注是否已入表
+- Tool/acceptance/run_knowledge_acceptance.mjs：8 项判据（含对照组 --no-unit-norm、幂等、不误伤）
+
+改动
+- make_subs：源端改用 normalizeSourceText（一次性替换术语表纠错，避免 `luf` 二次命中 `LUFS` 产出 `LUFSS`）；
+  翻译后加 canonicalizeZh（中文单位统一：负十六/零下16/-16 → `−16 LUFS`），替换写进 cues.json.unit_fixes；
+  新增 --no-unit-norm（对照组开关）
+- 结果：l2 knowledge 0.95 / TOS narrative 0.17（配乐占比 0% vs 73%）；规范化后中文出现 `−16 LUFS`、`15 Mbps`
+  且无"负十六/卢夫斯"，对照组拿不到 `−16 LUFS`；术语候选长片 61 个 / l2 31 个
+
+回归
+- 小循环 6 文本验收复跑仍 PASS（WER 6.1%、覆盖 99.8%、句界 0.02s 不变）；l2_agent cues 内容未变化
+
+交付与文档
+- Prototype/loop11_knowledge_content/（README/acceptance/reproduce/case：分诊结果、规范化前后 SRT 对照、术语候选）
+- Prototype/README.md 扩到十一轮并修树形连线；subtitle.md 补三个新工具与 --no-unit-norm；acceptance.md 补判据
+- CircleLog 记小循环 11；History/reports/progress_report_2026-10-30.md 补 loop11 收益与"能力画像（会迭代）"说明

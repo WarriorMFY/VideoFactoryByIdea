@@ -15,6 +15,9 @@
 | `export_review.mjs` | 把 `cues.json` 导成**人工校对表** `review.csv`，并标出 `cps_over`/`zh_long`/`en_residual`/`sp_gap`/`empty_zh` |
 | `apply_review.mjs` | 把改过的 `review.csv` **回写**成 `cues.json` + 三份 SRT；行数/idx/时间码/en/空译文逐项校验，不合格就拒绝写入 |
 | `asr_rescue.mjs` | **短句救援**（实验性，默认不开）：能量 VAD 找"有声但没识别"的区间，逐窗滤波放大重识别。实测在当前模型上救不回来（见 `Prototype/loop7_short_utterance/`），但"找未覆盖区间"本身可当漏译检查器 |
+| `classify_content.mjs` | **内容分诊**（小循环 11）：语音覆盖/置信度/**配乐占比**/短句占比/句长/术语密度 → `knowledge`/`mixed`/`narrative` + 当前策略建议（CPS、翻译后端、是否需要人工校对） |
+| `normalize_units.mjs` | **数值与单位规范化**（小循环 11）：`minus sixty sixteen l u fs` → `−16 LUFS`、`fifteen megabits per second` → `15 Mbps`；只改句子文本、不动词级时间，替换留痕、幂等 |
+| `term_candidates.mjs` | **术语候选**（小循环 11）：从转录挑"该进术语表的词"（缩写/单位、专名、高频词、高频二元短语），标注是否已在表 |
 | `verify_subs.mjs` | 字幕验收：有讲稿时算 WER/句界误差；无讲稿自动切 reference-free（译文覆盖/可读性/重映射自检） |
 | `glossary_zh.json` | 术语表：普通键值修**译文**；`_source_fixes` 修**源句**（ASR 拆坏的 `l u fs` → `LUFS`），送翻译前生效 |
 
@@ -92,6 +95,7 @@ node Tool\acceptance\verify_karaoke.mjs out\final.mp4 work\karaoke.ass --hl 33E6
 | `make_subs --dump-en` | 关 | 只导出待译模板 `{ "英文原句": "" }` 后退出（给 `--mt agent` 用），不翻译 |
 | `make_subs --punct` | 关 | 使用 `restore_punct.mjs` 的带标点断句（翻译质量明显更好，推荐开） |
 | `make_subs --cps` | 20 | 中文阅读速度上限（字/秒）；先延长显示、再按标点拆分，仍超标只在日志里报数 |
+| `make_subs --no-unit-norm` | 关（即默认开规范化） | 只做术语表纠错、**不做**数值/单位规范化（小循环 11 的对照组开关） |
 | `restore_punct --sent-pause` | 自动(p80) | 断句阈值：默认取词间停顿的 **80 分位**（夹在 0.30–0.70s） |
 | `--pause` / `--max-sent` / `--min-sent` | 0.3s / 110 / 12 | 断句：停顿阈值、单句字数上限、最短句长（真实对白多短句，`min-sent` 别设太大，否则两句并一句再翻译会串味） |
 | `--max-zh` / `--max-en` | 18 / 64 | 单行显示宽度 |

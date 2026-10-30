@@ -1,0 +1,14 @@
+[term] 7 句 / 约 95 词 → 候选术语 31 个（未入术语表 29）
+   + Welcome  ×1  [proper_noun]
+   + welcome  ×1  [frequent_word]
+   + workshop  ×1  [frequent_word]
+   + return  ×1  [frequent_word]
+   + footage  ×1  [frequent_word]
+   + finished  ×1  [frequent_word]
+   + Welcome back  ×1  [phrase]
+   + workshop where  ×1  [phrase]
+   + where return  ×1  [phrase]
+   + finished films  ×1  [phrase]
+   + Today  ×1  [proper_noun]
+   + editing  ×1  [frequent_word]
+[term] -> History\runs\l11_knowledge\term_candidates_l2.json

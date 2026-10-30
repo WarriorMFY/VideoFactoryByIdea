@@ -86,7 +86,7 @@
   },
   "readability": {
     "max_zh_cps": 8.89,
-    "mean_zh_cps": 5.82,
+    "mean_zh_cps": 5.66,
     "max_en_cps": 29.37
   },
   "remap": null,

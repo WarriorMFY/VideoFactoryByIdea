@@ -14,7 +14,7 @@ Prototype/
 │   ├── acceptance.md              # 两用例真值验收 + 成片质检汇总（自动生成）
 │   ├── case_A_synth/              # 合成素材（7 段含病态段）→ 成片 + EDL + 时间轴图 + 真值/验收
 │   └── case_B_real/               # 真实素材 BBB(CC-BY) + 已知废镜头 → 同上
-└── loop2_subtitles/               # 小循环 2：外语视频 → 中文字幕（含随剪辑重映射）
+├── loop2_subtitles/               # 小循环 2：外语视频 → 中文字幕（含随剪辑重映射）
 │   ├── README.md                  # 说明：链路 / 结果 / 用法 / 机翻vs精译 / 限制
 │   ├── reproduce.ps1              # 一键复现（装 ASR 依赖 + 拉模型 + 全链路验收）
 │   ├── acceptance_mt.md           # 机翻版验收（全自动）
@@ -25,7 +25,7 @@ Prototype/
 │   ├── reproduce.ps1              # 一键复现（下素材 → 识别 → 带语音保护剪辑 → 字幕 → 验收）
 │   ├── acceptance.md              # reference-free 验收（真实素材无讲稿）
 │   └── case_D_sintel_en2zh/       # Sintel 预告片(CC-BY)：成片 + 双语 SRT + 识别稿 + 保护前后 EDL 对照
-└── loop4_multi_samples/           # 小循环 4：多样本英译中（真实影视 + 多口音 TTS）
+├── loop4_multi_samples/           # 小循环 4：多样本英译中（真实影视 + 多口音 TTS）
     ├── README.md                  # 说明：样本清单 / 三个关键发现 / 修掉的 bug / 建议
     ├── reproduce.ps1              # 一键复现（装依赖 → 下素材 → 造 TTS 样本 → 批量验收 → 快照）
     ├── acceptance.md              # 7 样本横向对比 + 逐句译文（自动生成）
@@ -37,7 +37,7 @@ Prototype/
 │   ├── reproduce.ps1              # 一键复现（生成 ASS → 烧入 → 像素级客观验收）
 │   ├── case_E_l2_karaoke/         # TTS 素材：逐词高亮 + 3 张不同词抽帧
 │   └── case_F_real3_karaoke/      # Sintel 真实素材：25 词 + 剪辑重映射后的时间轴
-└── loop6_text_quality/            # 小循环 6：字幕文本层（标点恢复 + 精译 + 阅读速度）
+├── loop6_text_quality/            # 小循环 6：字幕文本层（标点恢复 + 精译 + 阅读速度）
     ├── README.md                  # 说明：根因/做法/三种变体对比/残留差距
     ├── acceptance.md              # 自动验收（标点 F1、翻译缺陷、字幕回归）
     ├── reproduce.ps1              # 一键复现
@@ -47,24 +47,29 @@ Prototype/
 │   ├── acceptance.md              # 自动验收（预处理链收益 + 证伪证据 + 分桶）
 │   ├── reproduce.ps1              # 一键复现（下 TOS 电影+字幕 → 三支探针 → 验收）
 │   └── case_tos_short/            # 预处理链穷举 / 干净 TTS 对照 / 链穷举 / 分桶指标
-└── loop8_review_loop/             # 小循环 8：校对回写闭环（人改中文 → 回灌时间轴）
+├── loop8_review_loop/             # 小循环 8：校对回写闭环（人改中文 → 回灌时间轴）
     ├── README.md                  # 说明：为什么要有/两个工具/5 项硬判据/限制
     ├── acceptance.md              # 自动验收（恒等回写/改动落点/拒绝危险输入/重渲染）
     ├── reproduce.ps1              # 一键复现
     └── case_l2_review/            # 校对表（改前/改后）、回写 cues、双语 SRT、成片
-└── loop9_long_video/              # 小循环 9：49 分钟长视频压测 + 术语一致性审计
+├── loop9_long_video/              # 小循环 9：49 分钟长视频压测 + 术语一致性审计
     ├── README.md                  # 说明：成本表 / 长片才暴露的 2 个 bug / 术语审计 / 限制
     ├── acceptance.md              # 自动验收（7 阶段跑通、273 行回写恒等、术语审计回归）
     ├── reproduce.ps1              # 一键复现（冷跑约 25 分钟）
     └── case_long/                 # 273 行 cues / 校对表 / 术语审计 / 质检 / 抽帧
-└── loop10_karaoke_scale/          # 小循环 10：逐词高亮在 49 分钟上的规模验收
+├── loop10_karaoke_scale/          # 小循环 10：逐词高亮在 49 分钟上的规模验收
     ├── README.md                  # 说明：事件数口径修正 / 两个坑 / 结论
     ├── acceptance.md              # 自动验收（1030 事件、120s 烧入、像素抽检 12/12）
     ├── reproduce.ps1              # 一键复现（依赖 loop9 产物，约 1 分钟）
     └── case_long_karaoke/         # 长片 ASS / verify_karaoke / 120s 烧入样片
+└── loop11_knowledge_content/      # 小循环 11：知识型内容链路（分诊 + 数值单位规范化 + 术语候选）
+    ├── README.md                  # 说明：为什么这类内容更稳 / 三个工具 / 8 项验收 / 限制
+    ├── acceptance.md              # 自动验收（分诊、单位规范化幂等、中文单位、术语候选）
+    ├── reproduce.ps1              # 一键复现
+    └── case_l2_knowledge/         # 分诊结果 / 规范化前后双语 SRT 对照 / 术语候选
 ```
 
-## 十轮结果一览
+## 十一轮结果一览
 
 | 小循环 | 增量 | 关键结果 | 耗时 |
 | --- | --- | --- | --- |
@@ -78,8 +83,9 @@ Prototype/
 | 8（13:30–13:50） | **校对回写闭环**：`export_review`（带 5 类机器标记）→ 人改 CSV → `apply_review`（严格校验后回写 cues+SRT） | 恒等回写 **逐字节一致**；4 处真实改动只落指定行；删行/改时间码/空译文 **3/3 被拒绝**；回写后出片 QA **PASS** | ~20 min |
 | 9（14:00–14:45） | **49 分钟长视频压测** + **术语一致性审计**（`term_missing`/`term_variant`） | 48.7 分钟成片跑通、**273 条字幕 / 校对表 273 行**、273 行回写恒等；成本 = 两次渲染约 22 分钟 + 识别 6.5 分钟（文本层全秒级）；长片暴露并修掉 **2 个 bug**（回写 trim、机翻脏数据） | ~45 min |
 | 10（14:50–15:05） | **逐词高亮 @ 49 分钟规模**：长片 ASS 事件数/体积/烧入 + 120s 像素抽检 | **1030 事件 / 103KB / 生成 0.1s**；libass 正常烧、12/12 帧高亮在、重心位移 280px；口径修正为 **≈1 事件/词**（对话密集 1h ≈ 8–9k，线性） | ~15 min |
+| 11（16:50–17:30） | **知识型内容链路**：内容分诊（`classify_content`）+ 数值单位规范化（`normalize_units`/`lib/units`）+ 术语候选（`term_candidates`） | 分诊 **l2=knowledge 0.95 / TOS=narrative 0.17**（配乐占比 0% vs 73%）；`minus sixty sixteen l u fs` → **−16 LUFS**、`15 Mbps`（幂等、不误伤 `two hours`）；中文侧统一且对照组拿不到；术语候选：长片 61 个 / l2 31 个 | ~40 min |
 
-验收记录分别在 `loop1_autocut/acceptance.md`、`loop2_subtitles/acceptance_*.md`、`loop3_real_speech/acceptance.md`、`loop4_multi_samples/acceptance.md`、`loop5_karaoke_subs/acceptance.md`、`loop6_text_quality/acceptance.md`、`loop7_short_utterance/acceptance.md`、`loop8_review_loop/acceptance.md`、`loop9_long_video/acceptance.md`、`loop10_karaoke_scale/acceptance.md`；循环摘要见 `History/CircleLog/log.md`，阶段总结见 `History/reports/progress_report_2026-10-30.md`。
+验收记录分别在 `loop1_autocut/acceptance.md`、`loop2_subtitles/acceptance_*.md`、`loop3_real_speech/acceptance.md`、`loop4_multi_samples/acceptance.md`、`loop5_karaoke_subs/acceptance.md`、`loop6_text_quality/acceptance.md`、`loop7_short_utterance/acceptance.md`、`loop8_review_loop/acceptance.md`、`loop9_long_video/acceptance.md`、`loop10_karaoke_scale/acceptance.md`、`loop11_knowledge_content/acceptance.md`；循环摘要见 `History/CircleLog/log.md`，阶段总结见 `History/reports/progress_report_2026-10-30.md`。
 
 ## 怎么跑（在仓库根执行）
 
@@ -113,6 +119,9 @@ Prototype/
 
 # 小循环 10（karaoke 长片规模）：生成 49 分钟 ASS → 烧前 120s → 像素抽检（依赖 loop9 产物，约 1 分钟）
 .\Prototype\loop10_karaoke_scale\reproduce.ps1
+
+# 小循环 11（知识型内容链路）：内容分诊 → 数值单位规范化 → 术语候选 → 8 项验收
+.\Prototype\loop11_knowledge_content\reproduce.ps1
 ```
 
 脚本都幂等：已装好的依赖、已下载的模型与素材会复用；耗时主要卡在首次下载
@@ -167,9 +176,14 @@ node Tool\subtitle/make_subs.mjs work\tr_punct.json --out work\subs --punct --gl
 - ✅ **能扛长片**（小循环 9）：49 分钟素材全链路跑通，成片 48.7 分钟、273 条字幕、校对表 273 行、
   回写在 273 行规模下仍逐字节恒等；成本结构清晰——**两次渲染约 22 分钟 + 识别 6.5 分钟，文本层全秒级**。
   顺带修掉两个"只有长片才会暴露"的 bug（回写 trim 破坏恒等、MyMemory 返回 HTML/占位符脏数据）。
+- ✅ **内容分诊 + 知识型专项**（小循环 11）：`classify_content` 用可计算信号（语音覆盖/置信度/配乐占比/短句占比/句长/术语密度）
+  给出**当前版本**的策略建议——l2 教学片 `knowledge` 0.95，TOS 电影 `narrative` 0.17（配乐占比 0% vs 73%）；
+  `normalize_units` 把 `minus sixty sixteen l u fs` → **−16 LUFS**、`15 Mbps`（幂等、只在单位语境动数字），
+  中文侧同步统一；`term_candidates` 自动挑术语（长片 61 个 / l2 31 个）。
+  ⚠️ 分诊是启发式、单片段调参，属于"当前能力画像"，会随版本迭代变化（不是内容类型定义）。
 
 细节与限制见各 loop 的 README；下一步建议：
 1. **换 ASR 模型**（唯一能真正解决漏句的路）—— 需要外部提供模型文件 / 可用下载通道 / 一个 ASR HTTP 接口；
-2. 长视频（49min）压测 + 离线翻译后端（工程风险，不改变能力）；
-3. 术语一致性检查 + 多版本字幕对照（都能直接挂在小循环 8 的校对表上）；
+2. 知识型链路继续加厚：货币/百分比单位、术语表回填界面、批量队列、竖屏/多比例模板；
+3. 术语一致性 + 多版本字幕对照（都能直接挂在小循环 8 的校对表上）；
 4. 语义级断句（当前断句仍是"停顿 + 长度"，从句/长句靠规则）。

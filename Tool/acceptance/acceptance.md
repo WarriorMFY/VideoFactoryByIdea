@@ -22,6 +22,7 @@
 | `run_rescue_acceptance.mjs` | **小循环 7**：短句救援验收 —— 最优预处理链是否真的更准 / 跨素材是否倒退 / 证伪证据是否充分 / 是否伤中长句（会顺带调三支探针） | `History/loops/loop07/acceptance.md` |
 | `run_review_acceptance.mjs` | **小循环 8**：校对回写闭环 —— 恒等回写逐字节一致 / 改动只落指定行 / 三类误操作被拒绝 / 回写后能出片 | `History/loops/loop08/acceptance.md` |
 | `run_long_acceptance.mjs` | **小循环 9**：49 分钟长视频压测（全链路耗时/字幕条数/校对表规模）+ 术语一致性审计回归 | `History/loops/loop09/acceptance.md` |
+| `run_knowledge_acceptance.mjs` | **小循环 11**：知识型内容链路 —— 内容分诊（knowledge vs narrative）／数值单位规范化（含幂等与不误伤）／中文单位正确性（含对照组）／术语候选 | `History/loops/loop11/acceptance.md` |
 
 ## 怎么用
 
@@ -34,6 +35,7 @@ node Tool\acceptance\snapshot_loop4.mjs                               # 把小�
 node Tool\acceptance\run_rescue_acceptance.mjs --force                 # 小循环 7：短句救援（需先下 TOS 电影+字幕）
 node Tool\acceptance\run_review_acceptance.mjs --force                 # 小循环 8：校对回写闭环
 node Tool\acceptance\run_long_acceptance.mjs                           # 小循环 9：49 分钟长视频压测（第一次跑约 25 分钟）
+node Tool\acceptance\run_knowledge_acceptance.mjs --force              # 小循环 11：知识型内容（分诊/单位/术语）
 
 # 单独验一个 EDL / 一条成片
 node Tool\acceptance\verify_edl.mjs out\edits.json bench\ground_truth.json --json out\verify.json
@@ -56,6 +58,7 @@ node Tool\acceptance\qa_report.mjs  out\final.mp4 --json out\qa.json
 | 短句救援 | 预处理链比不处理准 ≥1pp；跨素材不倒退；**证伪证据充分**（干净 TTS 命中 ≥3、原片混音 ≤1、7 条链最佳 0 命中）；中长句覆盖不倒退 >5pp | `run_rescue_acceptance` |
 | 校对回写 | 恒等回写 cues/SRT 逐字节一致；改动只落指定行；删行/改时间码/空译文**必须被拒绝**；回写后出片质检不 FAIL | `run_review_acceptance` |
 | 长视频压测 | 49 分钟素材全链路跑通（7 阶段）、成片 > 40 分钟、字幕 ≥ 200 条、279 行规模下回写恒等、术语审计能抓到被切行切断的术语、质检不 FAIL | `run_long_acceptance` |
+| 知识型内容 | 分诊能分开教学片/电影（music_ratio 方向正确）；源句出现 `−16 LUFS`/`15 Mbps`、规范化幂等且不误伤普通数字；中文无"负十六/卢夫斯"（对照组拿不到）；术语候选非空 | `run_knowledge_acceptance` |
 
 ## 判定数据在哪
 

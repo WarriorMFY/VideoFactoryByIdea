@@ -1,0 +1,616 @@
+{
+  "generated_at": "2026-10-30T08:59:08.417Z",
+  "input": "History\\asr\\long\\transcript_long.json",
+  "sentences": 286,
+  "total_words": 1091,
+  "glossary": "Tool\\subtitle\\glossary_zh.json",
+  "candidates": [
+    {
+      "term": "freaked",
+      "count": 9,
+      "kind": "frequent_word",
+      "in_glossary": false,
+      "examples": [
+        "alright right fine a freaked out on having nightmares don't think she's but he's giant will have call",
+        "financial just admit that you're freaked out by my robot ham",
+        "why don't you just admit that your freaked out by my role one hand i'm a freedom but it's"
+      ]
+    },
+    {
+      "term": "follow",
+      "count": 8,
+      "kind": "frequent_word",
+      "in_glossary": false,
+      "examples": [
+        "look celia we have to follow our options you it you robotics nice one of the awesome space why don't you just tell me that's your",
+        "we have to follow our passions",
+        "tom look celia we have to follow our passions you have your robotics and i just want to be awesome his space"
+      ]
+    },
+    {
+      "term": "robotics",
+      "count": 8,
+      "kind": "frequent_word",
+      "in_glossary": false,
+      "examples": [
+        "look celia we have to follow our options you it you robotics nice one of the awesome space why don't you just tell me that's your",
+        "you have your robotics",
+        "tom look celia we have to follow our passions you have your robotics and i just want to be awesome his space"
+      ]
+    },
+    {
+      "term": "awesome",
+      "count": 8,
+      "kind": "frequent_word",
+      "in_glossary": false,
+      "examples": [
+        "look celia we have to follow our options you it you robotics nice one of the awesome space why don't you just tell me that's your",
+        "i just want to be awesome in space",
+        "tom look celia we have to follow our passions you have your robotics and i just want to be awesome his space"
+      ]
+    },
+    {
+      "term": "look celia",
+      "count": 8,
+      "kind": "phrase",
+      "in_glossary": false,
+      "examples": [
+        "look celia we have to follow our options you it you robotics nice one of the awesome space why don't you just tell me that's your",
+        "look celia",
+        "tom look celia we have to follow our passions you have your robotics and i just want to be awesome his space"
+      ]
+    },
+    {
+      "term": "minutes",
+      "count": 8,
+      "kind": "frequent_word",
+      "in_glossary": false,
+      "examples": [
+        "we should have about ten minutes",
+        "that are coming in two minutes left",
+        "two minutes left"
+      ]
+    },
+    {
+      "term": "passions",
+      "count": 7,
+      "kind": "frequent_word",
+      "in_glossary": false,
+      "examples": [
+        "we have to follow our passions",
+        "tom look celia we have to follow our passions you have your robotics and i just want to be awesome his space",
+        "you have to follow our passions"
+      ]
+    },
+    {
+      "term": "memory",
+      "count": 6,
+      "kind": "frequent_word",
+      "in_glossary": false,
+      "examples": [
+        "robots memory sink",
+        "memory override in progress",
+        "robots memory sing"
+      ]
+    },
+    {
+      "term": "freedom",
+      "count": 4,
+      "kind": "frequent_word",
+      "in_glossary": false,
+      "examples": [
+        "my my role on hand i love freedom but it's",
+        "why don't you just admit that your freaked out by my role one hand i'm a freedom but it's",
+        "by my role one hand and the freedom but it's"
+      ]
+    },
+    {
+      "term": "alright",
+      "count": 4,
+      "kind": "frequent_word",
+      "in_glossary": false,
+      "examples": [
+        "alright right fine a freaked out on having nightmares don't think she's but he's giant will have call",
+        "alright fine i'm freaked out and having nightmares that think she's but he's dying will",
+        "alright fine i freaked out on having nightmares don't think she's but he's dying"
+      ]
+    },
+    {
+      "term": "having",
+      "count": 4,
+      "kind": "frequent_word",
+      "in_glossary": false,
+      "examples": [
+        "alright right fine a freaked out on having nightmares don't think she's but he's giant will have call",
+        "alright fine i'm freaked out and having nightmares that think she's but he's dying will",
+        "alright fine i freaked out on having nightmares don't think she's but he's dying"
+      ]
+    },
+    {
+      "term": "nightmares",
+      "count": 4,
+      "kind": "frequent_word",
+      "in_glossary": false,
+      "examples": [
+        "alright right fine a freaked out on having nightmares don't think she's but he's giant will have call",
+        "alright fine i'm freaked out and having nightmares that think she's but he's dying will",
+        "alright fine i freaked out on having nightmares don't think she's but he's dying"
+      ]
+    },
+    {
+      "term": "having nightmares",
+      "count": 4,
+      "kind": "phrase",
+      "in_glossary": false,
+      "examples": [
+        "alright right fine a freaked out on having nightmares don't think she's but he's giant will have call",
+        "alright fine i'm freaked out and having nightmares that think she's but he's dying will",
+        "alright fine i freaked out on having nightmares don't think she's but he's dying"
+      ]
+    },
+    {
+      "term": "well done",
+      "count": 4,
+      "kind": "phrase",
+      "in_glossary": false,
+      "examples": [
+        "well done"
+      ]
+    },
+    {
+      "term": "robots",
+      "count": 4,
+      "kind": "frequent_word",
+      "in_glossary": false,
+      "examples": [
+        "robots memory sink",
+        "robots memory sing"
+      ]
+    },
+    {
+      "term": "robots memory",
+      "count": 4,
+      "kind": "phrase",
+      "in_glossary": false,
+      "examples": [
+        "robots memory sink",
+        "robots memory sing"
+      ]
+    },
+    {
+      "term": "talking",
+      "count": 4,
+      "kind": "frequent_word",
+      "in_glossary": false,
+      "examples": [
+        "i you guys talking most nine",
+        "i heard you guys talking most night",
+        "i urge guys talking most night"
+      ]
+    },
+    {
+      "term": "guys talking",
+      "count": 4,
+      "kind": "phrase",
+      "in_glossary": false,
+      "examples": [
+        "i you guys talking most nine",
+        "i heard you guys talking most night",
+        "i urge guys talking most night"
+      ]
+    },
+    {
+      "term": "rock star",
+      "count": 4,
+      "kind": "phrase",
+      "in_glossary": false,
+      "examples": [
+        "cause you're ready you're a rock star",
+        "cause you're ready your a rock star"
+      ]
+    },
+    {
+      "term": "perfect",
+      "count": 4,
+      "kind": "frequent_word",
+      "in_glossary": false,
+      "examples": [
+        "well that's perfect"
+      ]
+    },
+    {
+      "term": "nothing",
+      "count": 4,
+      "kind": "frequent_word",
+      "in_glossary": false,
+      "examples": [
+        "nothing to worry about that"
+      ]
+    },
+    {
+      "term": "honest",
+      "count": 4,
+      "kind": "frequent_word",
+      "in_glossary": false,
+      "examples": [
+        "the honest",
+        "be honest"
+      ]
+    },
+    {
+      "term": "override",
+      "count": 4,
+      "kind": "frequent_word",
+      "in_glossary": false,
+      "examples": [
+        "memory override in progress",
+        "every override in progress"
+      ]
+    },
+    {
+      "term": "progress",
+      "count": 4,
+      "kind": "frequent_word",
+      "in_glossary": false,
+      "examples": [
+        "memory override in progress",
+        "every override in progress"
+      ]
+    },
+    {
+      "term": "minutes left",
+      "count": 4,
+      "kind": "phrase",
+      "in_glossary": false,
+      "examples": [
+        "that are coming in two minutes left",
+        "two minutes left"
+      ]
+    },
+    {
+      "term": "reason",
+      "count": 4,
+      "kind": "frequent_word",
+      "in_glossary": false,
+      "examples": [
+        "but there's no reason to destroy the world"
+      ]
+    },
+    {
+      "term": "destroy",
+      "count": 4,
+      "kind": "frequent_word",
+      "in_glossary": false,
+      "examples": [
+        "but there's no reason to destroy the world"
+      ]
+    },
+    {
+      "term": "already",
+      "count": 4,
+      "kind": "frequent_word",
+      "in_glossary": false,
+      "examples": [
+        "we already tried that one"
+      ]
+    },
+    {
+      "term": "already tried",
+      "count": 4,
+      "kind": "phrase",
+      "in_glossary": false,
+      "examples": [
+        "we already tried that one"
+      ]
+    },
+    {
+      "term": "forgot",
+      "count": 4,
+      "kind": "frequent_word",
+      "in_glossary": false,
+      "examples": [
+        "you forgot we earth",
+        "you forgot we honor is",
+        "you forgot we on earth"
+      ]
+    },
+    {
+      "term": "changed",
+      "count": 4,
+      "kind": "frequent_word",
+      "in_glossary": false,
+      "examples": [
+        "the world's changed celia"
+      ]
+    },
+    {
+      "term": "changed celia",
+      "count": 4,
+      "kind": "phrase",
+      "in_glossary": false,
+      "examples": [
+        "the world's changed celia"
+      ]
+    },
+    {
+      "term": "listen",
+      "count": 4,
+      "kind": "frequent_word",
+      "in_glossary": false,
+      "examples": [
+        "is a listen to blurred from this",
+        "there's a listen to be learned from this",
+        "is listen to be learned from this"
+      ]
+    },
+    {
+      "term": "gone worse",
+      "count": 4,
+      "kind": "phrase",
+      "in_glossary": false,
+      "examples": [
+        "that are gone worse"
+      ]
+    },
+    {
+      "term": "talking most",
+      "count": 3,
+      "kind": "phrase",
+      "in_glossary": false,
+      "examples": [
+        "i you guys talking most nine",
+        "i heard you guys talking most night",
+        "i urge guys talking most night"
+      ]
+    },
+    {
+      "term": "systems",
+      "count": 3,
+      "kind": "frequent_word",
+      "in_glossary": false,
+      "examples": [
+        "all systems go you go",
+        "all systems go go go go",
+        "all systems go go go"
+      ]
+    },
+    {
+      "term": "remarkably",
+      "count": 3,
+      "kind": "frequent_word",
+      "in_glossary": false,
+      "examples": [
+        "remarkably"
+      ]
+    },
+    {
+      "term": "alright fine",
+      "count": 3,
+      "kind": "phrase",
+      "in_glossary": false,
+      "examples": [
+        "alright fine i'm freaked out and having nightmares that think she's but he's dying will",
+        "alright fine i freaked out on having nightmares don't think she's but he's dying",
+        "alright fine i freaked out and having nightmares that i'm think she's but he's dying"
+      ]
+    },
+    {
+      "term": "learned",
+      "count": 3,
+      "kind": "frequent_word",
+      "in_glossary": false,
+      "examples": [
+        "there's a listen to be learned from this",
+        "is listen to be learned from this",
+        "is a listen to be learned from this"
+      ]
+    },
+    {
+      "term": "memory sink",
+      "count": 2,
+      "kind": "phrase",
+      "in_glossary": false,
+      "examples": [
+        "robots memory sink"
+      ]
+    },
+    {
+      "term": "disease",
+      "count": 2,
+      "kind": "frequent_word",
+      "in_glossary": false,
+      "examples": [
+        "disease"
+      ]
+    },
+    {
+      "term": "look body",
+      "count": 2,
+      "kind": "phrase",
+      "in_glossary": false,
+      "examples": [
+        "as it look body"
+      ]
+    },
+    {
+      "term": "beaten",
+      "count": 2,
+      "kind": "frequent_word",
+      "in_glossary": false,
+      "examples": [
+        "the beaten the to",
+        "the be beaten the to"
+      ]
+    },
+    {
+      "term": "reminder",
+      "count": 2,
+      "kind": "frequent_word",
+      "in_glossary": false,
+      "examples": [
+        "reminder"
+      ]
+    },
+    {
+      "term": "memory override",
+      "count": 2,
+      "kind": "phrase",
+      "in_glossary": false,
+      "examples": [
+        "memory override in progress"
+      ]
+    },
+    {
+      "term": "character",
+      "count": 2,
+      "kind": "frequent_word",
+      "in_glossary": false,
+      "examples": [
+        "character"
+      ]
+    },
+    {
+      "term": "coming",
+      "count": 2,
+      "kind": "frequent_word",
+      "in_glossary": false,
+      "examples": [
+        "that are coming in two minutes left"
+      ]
+    },
+    {
+      "term": "memory sing",
+      "count": 2,
+      "kind": "phrase",
+      "in_glossary": false,
+      "examples": [
+        "robots memory sing"
+      ]
+    },
+    {
+      "term": "most night",
+      "count": 2,
+      "kind": "phrase",
+      "in_glossary": false,
+      "examples": [
+        "i heard you guys talking most night",
+        "i urge guys talking most night"
+      ]
+    },
+    {
+      "term": "looking",
+      "count": 2,
+      "kind": "frequent_word",
+      "in_glossary": false,
+      "examples": [
+        "i wasn't looking body",
+        "as wasn't looking body"
+      ]
+    },
+    {
+      "term": "looking body",
+      "count": 2,
+      "kind": "phrase",
+      "in_glossary": false,
+      "examples": [
+        "i wasn't looking body",
+        "as wasn't looking body"
+      ]
+    },
+    {
+      "term": "dishes",
+      "count": 2,
+      "kind": "frequent_word",
+      "in_glossary": false,
+      "examples": [
+        "dishes"
+      ]
+    },
+    {
+      "term": "ninety",
+      "count": 2,
+      "kind": "frequent_word",
+      "in_glossary": false,
+      "examples": [
+        "emery operate and ninety percent",
+        "right and ninety percent"
+      ]
+    },
+    {
+      "term": "percent",
+      "count": 2,
+      "kind": "frequent_word",
+      "in_glossary": false,
+      "examples": [
+        "emery operate and ninety percent",
+        "right and ninety percent"
+      ]
+    },
+    {
+      "term": "ninety percent",
+      "count": 2,
+      "kind": "phrase",
+      "in_glossary": false,
+      "examples": [
+        "emery operate and ninety percent",
+        "right and ninety percent"
+      ]
+    },
+    {
+      "term": "captain",
+      "count": 2,
+      "kind": "frequent_word",
+      "in_glossary": false,
+      "examples": [
+        "captain we have a boy",
+        "captain we have a month"
+      ]
+    },
+    {
+      "term": "pretty",
+      "count": 2,
+      "kind": "frequent_word",
+      "in_glossary": false,
+      "examples": [
+        "this is pretty freaky"
+      ]
+    },
+    {
+      "term": "freaky",
+      "count": 2,
+      "kind": "frequent_word",
+      "in_glossary": false,
+      "examples": [
+        "this is pretty freaky"
+      ]
+    },
+    {
+      "term": "pretty freaky",
+      "count": 2,
+      "kind": "phrase",
+      "in_glossary": false,
+      "examples": [
+        "this is pretty freaky"
+      ]
+    },
+    {
+      "term": "every override",
+      "count": 2,
+      "kind": "phrase",
+      "in_glossary": false,
+      "examples": [
+        "every override in progress"
+      ]
+    },
+    {
+      "term": "suggest",
+      "count": 2,
+      "kind": "frequent_word",
+      "in_glossary": false,
+      "examples": [
+        "right don't suggest that me that your freaked out by my robot him",
+        "don't suggest that me that your freaked out by my robot him"
+      ]
+    }
+  ]
+}

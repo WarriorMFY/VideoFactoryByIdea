@@ -685,7 +685,7 @@
     "sentences": 1,
     "avg_conf": 0.9666
   },
-  "punct_restored_at": "2026-10-30T05:03:00.976Z",
+  "punct_restored_at": "2026-10-30T08:58:54.464Z",
   "punct_rules": {
     "sentPause": 0.55,
     "softPause": 0.28,

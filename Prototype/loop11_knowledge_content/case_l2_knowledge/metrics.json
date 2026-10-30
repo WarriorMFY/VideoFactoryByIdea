@@ -1,0 +1,277 @@
+{
+  "generated_at": "2026-10-30T08:59:08.498Z",
+  "classify": {
+    "l2": {
+      "class": "knowledge",
+      "score": 0.95,
+      "signals": {
+        "speech_ratio": 0.898,
+        "asr_conf": 0.9666,
+        "dyn_spread_db": 18.1,
+        "energy_active_ratio": 0.799,
+        "music_ratio": 0.002,
+        "sentences": 7,
+        "words": 101,
+        "words_per_sent": 14.4,
+        "short_ratio": 0,
+        "term_per_100w": 0
+      },
+      "strategy": {
+        "mt": "mymemory 可自动；术语表必开；发布前建议只抽检",
+        "cps": 20,
+        "review": "optional",
+        "note": "信息主要在文字里，术语可枚举 → 自动链路最靠得住的一类"
+      }
+    },
+    "tos": {
+      "class": "narrative",
+      "score": 0.174,
+      "signals": {
+        "speech_ratio": 0.229,
+        "asr_conf": 0.8853,
+        "dyn_spread_db": 9.7,
+        "energy_active_ratio": 0.483,
+        "music_ratio": 0.734,
+        "sentences": 18,
+        "words": 79,
+        "words_per_sent": 4.4,
+        "short_ratio": 0.444,
+        "term_per_100w": 0
+      },
+      "strategy": {
+        "mt": "精译（--mt agent，人/LLM 带剧情上下文）",
+        "cps": 16,
+        "review": "required",
+        "note": "语气与画面承载语义，机翻只能当草稿"
+      }
+    }
+  },
+  "normalization": {
+    "changed": 2,
+    "substitutions": 3,
+    "idempotent": true,
+    "changes": [
+      {
+        "start": 18.78,
+        "raw": "Third, normalize the audio to minus sixty sixteen l u fs, which is the standard for online video platforms.",
+        "normalized": "Third, normalize the audio to −16 LUFS, which is the standard for online video platforms.",
+        "changes": [
+          {
+            "from": "sixteen l u fs",
+            "to": "16 LUFS",
+            "rule": "source_fixes"
+          },
+          {
+            "from": "minus sixty 16 LUFS",
+            "to": "−16 LUFS",
+            "rule": "minus_cleanup"
+          }
+        ]
+      },
+      {
+        "start": 25.95,
+        "raw": "Finally, export at fifteen megabits per second, and never trust the first render.",
+        "normalized": "Finally, export at 15 Mbps, and never trust the first render.",
+        "changes": [
+          {
+            "from": "fifteen megabits per second",
+            "to": "15 Mbps",
+            "rule": "mbps"
+          }
+        ]
+      }
+    ]
+  },
+  "zh_units": {
+    "normalized": {
+      "lufs": true,
+      "mbps": true,
+      "badZhUnits": false
+    },
+    "raw": {
+      "lufs": false,
+      "mbps": true,
+      "badZhUnits": true
+    },
+    "unit_fixes": 1
+  },
+  "term_candidates": {
+    "total": 61,
+    "not_in_glossary": 61,
+    "top": [
+      {
+        "term": "freaked",
+        "count": 9,
+        "kind": "frequent_word",
+        "in_glossary": false,
+        "examples": [
+          "alright right fine a freaked out on having nightmares don't think she's but he's giant will have call",
+          "financial just admit that you're freaked out by my robot ham",
+          "why don't you just admit that your freaked out by my role one hand i'm a freedom but it's"
+        ]
+      },
+      {
+        "term": "follow",
+        "count": 8,
+        "kind": "frequent_word",
+        "in_glossary": false,
+        "examples": [
+          "look celia we have to follow our options you it you robotics nice one of the awesome space why don't you just tell me that's your",
+          "we have to follow our passions",
+          "tom look celia we have to follow our passions you have your robotics and i just want to be awesome his space"
+        ]
+      },
+      {
+        "term": "robotics",
+        "count": 8,
+        "kind": "frequent_word",
+        "in_glossary": false,
+        "examples": [
+          "look celia we have to follow our options you it you robotics nice one of the awesome space why don't you just tell me that's your",
+          "you have your robotics",
+          "tom look celia we have to follow our passions you have your robotics and i just want to be awesome his space"
+        ]
+      },
+      {
+        "term": "awesome",
+        "count": 8,
+        "kind": "frequent_word",
+        "in_glossary": false,
+        "examples": [
+          "look celia we have to follow our options you it you robotics nice one of the awesome space why don't you just tell me that's your",
+          "i just want to be awesome in space",
+          "tom look celia we have to follow our passions you have your robotics and i just want to be awesome his space"
+        ]
+      },
+      {
+        "term": "look celia",
+        "count": 8,
+        "kind": "phrase",
+        "in_glossary": false,
+        "examples": [
+          "look celia we have to follow our options you it you robotics nice one of the awesome space why don't you just tell me that's your",
+          "look celia",
+          "tom look celia we have to follow our passions you have your robotics and i just want to be awesome his space"
+        ]
+      },
+      {
+        "term": "minutes",
+        "count": 8,
+        "kind": "frequent_word",
+        "in_glossary": false,
+        "examples": [
+          "we should have about ten minutes",
+          "that are coming in two minutes left",
+          "two minutes left"
+        ]
+      },
+      {
+        "term": "passions",
+        "count": 7,
+        "kind": "frequent_word",
+        "in_glossary": false,
+        "examples": [
+          "we have to follow our passions",
+          "tom look celia we have to follow our passions you have your robotics and i just want to be awesome his space",
+          "you have to follow our passions"
+        ]
+      },
+      {
+        "term": "memory",
+        "count": 6,
+        "kind": "frequent_word",
+        "in_glossary": false,
+        "examples": [
+          "robots memory sink",
+          "memory override in progress",
+          "robots memory sing"
+        ]
+      },
+      {
+        "term": "freedom",
+        "count": 4,
+        "kind": "frequent_word",
+        "in_glossary": false,
+        "examples": [
+          "my my role on hand i love freedom but it's",
+          "why don't you just admit that your freaked out by my role one hand i'm a freedom but it's",
+          "by my role one hand and the freedom but it's"
+        ]
+      },
+      {
+        "term": "alright",
+        "count": 4,
+        "kind": "frequent_word",
+        "in_glossary": false,
+        "examples": [
+          "alright right fine a freaked out on having nightmares don't think she's but he's giant will have call",
+          "alright fine i'm freaked out and having nightmares that think she's but he's dying will",
+          "alright fine i freaked out on having nightmares don't think she's but he's dying"
+        ]
+      },
+      {
+        "term": "having",
+        "count": 4,
+        "kind": "frequent_word",
+        "in_glossary": false,
+        "examples": [
+          "alright right fine a freaked out on having nightmares don't think she's but he's giant will have call",
+          "alright fine i'm freaked out and having nightmares that think she's but he's dying will",
+          "alright fine i freaked out on having nightmares don't think she's but he's dying"
+        ]
+      },
+      {
+        "term": "nightmares",
+        "count": 4,
+        "kind": "frequent_word",
+        "in_glossary": false,
+        "examples": [
+          "alright right fine a freaked out on having nightmares don't think she's but he's giant will have call",
+          "alright fine i'm freaked out and having nightmares that think she's but he's dying will",
+          "alright fine i freaked out on having nightmares don't think she's but he's dying"
+        ]
+      },
+      {
+        "term": "having nightmares",
+        "count": 4,
+        "kind": "phrase",
+        "in_glossary": false,
+        "examples": [
+          "alright right fine a freaked out on having nightmares don't think she's but he's giant will have call",
+          "alright fine i'm freaked out and having nightmares that think she's but he's dying will",
+          "alright fine i freaked out on having nightmares don't think she's but he's dying"
+        ]
+      },
+      {
+        "term": "well done",
+        "count": 4,
+        "kind": "phrase",
+        "in_glossary": false,
+        "examples": [
+          "well done"
+        ]
+      },
+      {
+        "term": "robots",
+        "count": 4,
+        "kind": "frequent_word",
+        "in_glossary": false,
+        "examples": [
+          "robots memory sink",
+          "robots memory sing"
+        ]
+      }
+    ]
+  },
+  "checks": {
+    "classify_separates": true,
+    "music_ratio_ordering": true,
+    "units_in_source": true,
+    "units_idempotent": true,
+    "no_false_digitization": true,
+    "units_reach_zh": true,
+    "raw_zh_lacks_units": true,
+    "term_candidates_work": true
+  },
+  "pass": true
+}

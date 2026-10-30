@@ -1,0 +1,9 @@
+[classify] source.mp4 33.9s → class=knowledge（knowledge_score 0.95）
+   · speech_ratio: 1 (w=0.25) 90% 时长有词（教学/旁白高；剧情片混音段低）
+   · asr_conf: 1 (w=0.25) 平均置信 0.9666（干净近场麦高）
+   · music_ratio: 1 (w=0.2) 有声但无词 0%（配乐/音效占比，影视混音高）
+   · short_ratio: 1 (w=0.15) 短句占比 0%（喊叫/对话碎片多则高）
+   · words_per_sent: 1 (w=0.1) 句均 14.4 词（口播句子长）
+   · term_density: 0 (w=0.05) 术语/单位 0/100 词（知识型高）
+   → 建议：mymemory 可自动；术语表必开；发布前建议只抽检｜CPS 20｜人工校对 optional
+   信息主要在文字里，术语可枚举 → 自动链路最靠得住的一类

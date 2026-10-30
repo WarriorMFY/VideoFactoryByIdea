@@ -1,0 +1,65 @@
+{
+  "generated_at": "2026-10-30T08:59:07.894Z",
+  "media": "History\\bench\\l2_en\\source.mp4",
+  "transcript": "History\\asr\\transcript_punct.json",
+  "duration_s": 33.88,
+  "signals": {
+    "speech_ratio": 0.898,
+    "asr_conf": 0.9666,
+    "dyn_spread_db": 18.1,
+    "energy_active_ratio": 0.799,
+    "music_ratio": 0.002,
+    "sentences": 7,
+    "words": 101,
+    "words_per_sent": 14.4,
+    "short_ratio": 0,
+    "term_per_100w": 0
+  },
+  "breakdown": [
+    {
+      "name": "speech_ratio",
+      "value": 1,
+      "weight": 0.25,
+      "note": "90% 时长有词（教学/旁白高；剧情片混音段低）"
+    },
+    {
+      "name": "asr_conf",
+      "value": 1,
+      "weight": 0.25,
+      "note": "平均置信 0.9666（干净近场麦高）"
+    },
+    {
+      "name": "music_ratio",
+      "value": 1,
+      "weight": 0.2,
+      "note": "有声但无词 0%（配乐/音效占比，影视混音高）"
+    },
+    {
+      "name": "short_ratio",
+      "value": 1,
+      "weight": 0.15,
+      "note": "短句占比 0%（喊叫/对话碎片多则高）"
+    },
+    {
+      "name": "words_per_sent",
+      "value": 1,
+      "weight": 0.1,
+      "note": "句均 14.4 词（口播句子长）"
+    },
+    {
+      "name": "term_density",
+      "value": 0,
+      "weight": 0.05,
+      "note": "术语/单位 0/100 词（知识型高）"
+    }
+  ],
+  "knowledge_score": 0.95,
+  "class": "knowledge",
+  "strategy": {
+    "mt": "mymemory 可自动；术语表必开；发布前建议只抽检",
+    "cps": 20,
+    "review": "optional",
+    "note": "信息主要在文字里，术语可枚举 → 自动链路最靠得住的一类"
+  },
+  "disclaimer": "这是\"当前版本\"的策略建议，不是对内容类型的定义；分类器与阈值会随迭代调整。"
+}
