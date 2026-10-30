@@ -1,0 +1,29 @@
+LOG (VoskAPI:ReadDataFiles():model.cc:213) Decoding params beam=10 max-active=3000 lattice-beam=2
+LOG (VoskAPI:ReadDataFiles():model.cc:216) Silence phones 1:2:3:4:5:6:7:8:9:10
+LOG (VoskAPI:RemoveOrphanNodes():nnet-nnet.cc:948) Removed 0 orphan nodes.
+LOG (VoskAPI:RemoveOrphanComponents():nnet-nnet.cc:847) Removing 0 orphan components.
+LOG (VoskAPI:ReadDataFiles():model.cc:248) Loading i-vector extractor from D:\Data\DeepseekHarness\IdeaDrivenLoop\VideoFactory\Workspace\asr\models\vosk-model-small-en-us-0.15/ivector/final.ie
+LOG (VoskAPI:ComputeDerivedVars():ivector-extractor.cc:183) Computing derived variables for iVector extractor
+LOG (VoskAPI:ComputeDerivedVars():ivector-extractor.cc:204) Done.
+LOG (VoskAPI:ReadDataFiles():model.cc:282) Loading HCL and G from D:\Data\DeepseekHarness\IdeaDrivenLoop\VideoFactory\Workspace\asr\models\vosk-model-small-en-us-0.15/graph/HCLr.fst D:\Data\DeepseekHarness\IdeaDrivenLoop\VideoFactory\Workspace\asr\models\vosk-model-small-en-us-0.15/graph/Gr.fst
+LOG (VoskAPI:ReadDataFiles():model.cc:303) Loading winfo D:\Data\DeepseekHarness\IdeaDrivenLoop\VideoFactory\Workspace\asr\models\vosk-model-small-en-us-0.15/graph/phones/word_boundary.int
+  "Speed it up, Thom!"  band200_4000:0>0?n band300_3400:0>0?n afftdn_band:0>0?n dynaudnorm:0>0?n speechnorm:0>0?n boost12:0>0?n combo:0>0?n
+  "Vivacissimo!"  band200_4000:0>0?n band300_3400:0>0?n afftdn_band:0>0?n dynaudnorm:0>0?n speechnorm:0>0?n boost12:0>0?n combo:0>0?n
+  "Abort!"  band200_4000:0>0?n band300_3400:0>0?n afftdn_band:0>0?n dynaudnorm:0>0?n speechnorm:0>0?n boost12:0>0?n combo:0>0?n
+  "Cut!"  band200_4000:0>0?n band300_3400:0>0?n afftdn_band:0>0?n dynaudnorm:0>0?n speechnorm:0>0?n boost12:0>0?n combo:0>0?n
+  "Whoaaa!"  band200_4000:0>0?n band300_3400:0>0?n afftdn_band:0>0?n dynaudnorm:0>0?n speechnorm:0>0?n boost12:0>0?n combo:0>0?n
+  "Whoaaa!"  band200_4000:0>0?n band300_3400:0>0?n afftdn_band:0>0?n dynaudnorm:0>0?n speechnorm:0>0?n boost12:0>0?n combo:0>0?n
+  "Nooooo!"  band200_4000:0>0?n band300_3400:0>0?n afftdn_band:0>0?n dynaudnorm:0>0?n speechnorm:0>0?n boost12:0>0?n combo:0>0?n
+  "I know."  band200_4000:0>0?n band300_3400:0>0?n afftdn_band:0>0?n dynaudnorm:0>0?n speechnorm:0>0?n boost12:0>0?n combo:0>0?n
+  "I know."  band200_4000:0>0?n band300_3400:0>0?n afftdn_band:0>0?n dynaudnorm:0>0?n speechnorm:0>0?n boost12:0>0?n combo:0>0?n
+  "I'm-"  band200_4000:0>0?n band300_3400:0>0?n afftdn_band:0>0?n dynaudnorm:0>0?n speechnorm:0>0?n boost12:0>0?n combo:0>0?n
+
+[chain] 各链命中漏句数（共 10 条）：
+  band200_4000     hits 0/10  完全命中 0  平均命中率 0%
+  band300_3400     hits 0/10  完全命中 0  平均命中率 0%
+  afftdn_band      hits 0/10  完全命中 0  平均命中率 0%
+  dynaudnorm       hits 0/10  完全命中 0  平均命中率 0%
+  speechnorm       hits 0/10  完全命中 0  平均命中率 0%
+  boost12          hits 0/10  完全命中 0  平均命中率 0%
+  combo            hits 0/10  完全命中 0  平均命中率 0%
+[chain] -> History/loops/loop07/rescue_chain_probe.json

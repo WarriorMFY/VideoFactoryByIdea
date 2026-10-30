@@ -42,9 +42,19 @@ Prototype/
     ├── acceptance.md              # 自动验收（标点 F1、翻译缺陷、字幕回归）
     ├── reproduce.ps1              # 一键复现
     └── case_l2_textquality/       # 精译版样片 + 三种变体字幕 + 验收数据
+├── loop7_short_utterance/         # 小循环 7：真实影视"短句漏识"——一条被证伪的假设
+│   ├── README.md                  # 说明：假设/做法/为什么救不回来/落地了什么
+│   ├── acceptance.md              # 自动验收（预处理链收益 + 证伪证据 + 分桶）
+│   ├── reproduce.ps1              # 一键复现（下 TOS 电影+字幕 → 三支探针 → 验收）
+│   └── case_tos_short/            # 预处理链穷举 / 干净 TTS 对照 / 链穷举 / 分桶指标
+└── loop8_review_loop/             # 小循环 8：校对回写闭环（人改中文 → 回灌时间轴）
+    ├── README.md                  # 说明：为什么要有/两个工具/5 项硬判据/限制
+    ├── acceptance.md              # 自动验收（恒等回写/改动落点/拒绝危险输入/重渲染）
+    ├── reproduce.ps1              # 一键复现
+    └── case_l2_review/            # 校对表（改前/改后）、回写 cues、双语 SRT、成片
 ```
 
-## 六轮结果一览
+## 八轮结果一览
 
 | 小循环 | 增量 | 关键结果 | 耗时 |
 | --- | --- | --- | --- |
@@ -54,8 +64,10 @@ Prototype/
 | 4（21:25–22:15） | **多样本英译中**：新下 3 段真实素材（含 Tears of Steel 电影）+ 4 种口音 TTS，7 样本批量跑全链路 | 口音 WER：GB **1.1%** / AU 5.6% / US=IN 6.7%；**真实电影（官方字幕作真值）WER 30.5%、覆盖 59.9%**，漏的几乎全是 1–3 词短句（覆盖 24%）；附带修掉「ASR 工作目录串台」与「空 SRT 渲染崩溃」两个 bug | ~50 min |
 | 5（08:55–10:05；11:30 修抖动） | **双语 + 逐词彩色高亮字幕（karaoke）**：中文整句静态 + 英文逐词重绘上色，ASS 输出，随剪辑重映射 | 高亮存在 **12/12**、无重影 **12/12**、重心位移 502/453px；抖动修复：闪断 30 帧→**0**、高亮缺失 80 帧→**0** | ~70 + 70 min |
 | 6（12:00–13:40） | **字幕文本层**：标点/大小写恢复 + 精译后端 + 源端术语纠错 + 阅读速度节流 | 句界 F1 **1.00**、句末标点 **100%**、去标点 WER 6.1%（不变）；句末缺标点 **7→0**、术语错误 **1→0**；精译达人工参考 **94.1%** | ~100 min |
+| 7（13:05–13:45） | **真实影视"短句漏识"**：假设"切窗重识别能救回短句"→ 做 `asr_rescue` 验证；顺带穷举音频预处理链 | WER 31.6%→**28.4%**（预处理链收益），但短句覆盖只 **+3.0pp**（目标 +10pp 未达成）；证伪证据：干净 TTS 听得出 **8/10**、原片混音 **0/10**、7 条链 × 10 条漏句 **0 命中** → **模型能力上限** | ~40 min |
+| 8（13:30–13:50） | **校对回写闭环**：`export_review`（带 5 类机器标记）→ 人改 CSV → `apply_review`（严格校验后回写 cues+SRT） | 恒等回写 **逐字节一致**；4 处真实改动只落指定行；删行/改时间码/空译文 **3/3 被拒绝**；回写后出片 QA **PASS** | ~20 min |
 
-验收记录分别在 `loop1_autocut/acceptance.md`、`loop2_subtitles/acceptance_*.md`、`loop3_real_speech/acceptance.md`、`loop4_multi_samples/acceptance.md`、`loop5_karaoke_subs/acceptance.md`、`loop6_text_quality/acceptance.md`；循环摘要见 `History/CircleLog/log.md`。
+验收记录分别在 `loop1_autocut/acceptance.md`、`loop2_subtitles/acceptance_*.md`、`loop3_real_speech/acceptance.md`、`loop4_multi_samples/acceptance.md`、`loop5_karaoke_subs/acceptance.md`、`loop6_text_quality/acceptance.md`、`loop7_short_utterance/acceptance.md`、`loop8_review_loop/acceptance.md`；循环摘要见 `History/CircleLog/log.md`。
 
 ## 怎么跑（在仓库根执行）
 
@@ -77,6 +89,12 @@ Prototype/
 
 # 小循环 6（字幕文本层）：标点恢复 → 三种翻译变体对比 → 字幕回归 → 精译版样片
 .\Prototype\loop6_text_quality\reproduce.ps1
+
+# 小循环 7（短句救援）：下 TOS 电影+官方字幕 → 90s 片段 → 预处理链穷举/证伪探针 → 验收
+.\Prototype\loop7_short_utterance\reproduce.ps1
+
+# 小循环 8（校对回写）：导出校对表 → 恒等回写 → 4 处真实改动 → 3 类误操作拦截 → 重新出片
+.\Prototype\loop8_review_loop\reproduce.ps1
 ```
 
 脚本都幂等：已装好的依赖、已下载的模型与素材会复用；耗时主要卡在首次下载
@@ -116,11 +134,19 @@ node Tool\subtitle/make_subs.mjs work\tr_punct.json --out work\subs --punct --gl
 - ⚠️ **识别是当前最大短板**：真实电影（有官方字幕真值）**WER 30.5%、语音覆盖 59.9%**；
   漏的几乎全是 1–3 词短句（覆盖仅 24%，`Abort!`/`Cut!`/`Nooooo!` 这类感叹全丢）→ 短板是"漏句"而不是"错译"。
   标点与翻译只能改善"文本层"，**补不回漏掉的词**。
-- ⚠️ 全自动机翻仍是"能看懂"级（缺陷已清零但表达生硬）；发布级必须 `--mt agent`（人/LLM 精译）。
+- ⚠️ 全自动机翻仍是"能看懂"级（缺陷已清零但表达生硬）；发布级 = `--mt agent` 精译（或机翻 + 小循环 8 的人工校对回写）。
 - ⚠️ 语音保护会连带保住"对白压在黑屏/字幕卡"上的黑场（已知取舍，验收里单独标注）。
 - ⚠️ 模型下载通道受限（HuggingFace 全域不可达），未能用 Whisper 级模型。
 - ✅ **双语逐词高亮字幕**（小循环 5）：中文整句 + 英文当前词上色，ASS 输出、随剪辑重映射，像素级验收通过；
   ⚠️ 词级时间来自 ASR，识别错的地方高亮也会错；长片事件数未压测（1h ≈ 1–1.5 万条）。
+- ✅ **人工校对回写闭环**（小循环 8）：机翻/精译字幕 → 导出带标记的校对表 → 人改中文 → 严格校验后回写 cues+SRT，
+  恒等回写逐字节一致、三类误操作全部拒绝；发布流程从此是"机器出稿 + 人改 + 一条命令回灌"。
+- ⚠️ **短句漏识已被证伪为"模型上限"**（小循环 7）：干净 TTS 能识别 8/10 的漏句，原片混音 0/10，
+  7 条预处理链 × 10 条漏句 = 0 命中 → 再调"喂法"无意义，只能换 Whisper 级模型（本机通道不通，需外部提供）。
+  附带落地的只有预处理链：真实影视 `--af "afftdn=nf=-25,highpass=f=200,lowpass=f=4000"`，TOS WER 31.6%→28.4%（代价是词数略降）。
 
-细节与限制见各 loop 的 README；下一步建议见 `loop6_text_quality/README.md` 第 7 节
-（校对回写闭环、语义断句、术语一致性检查、长视频压测 + 离线翻译后端）。
+细节与限制见各 loop 的 README；下一步建议：
+1. **换 ASR 模型**（唯一能真正解决漏句的路）—— 需要外部提供模型文件 / 可用下载通道 / 一个 ASR HTTP 接口；
+2. 长视频（49min）压测 + 离线翻译后端（工程风险，不改变能力）；
+3. 术语一致性检查 + 多版本字幕对照（都能直接挂在小循环 8 的校对表上）；
+4. 语义级断句（当前断句仍是"停顿 + 长度"，从句/长句靠规则）。

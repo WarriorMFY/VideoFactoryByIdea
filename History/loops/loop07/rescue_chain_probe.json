@@ -1,0 +1,408 @@
+{
+  "generated_at": "2026-10-30T05:29:20.822Z",
+  "note": "漏句片段 × 预处理链；hit=真值词被识别出来的比例（前缀近似也算中）",
+  "missed": 10,
+  "chain_stats": [
+    {
+      "id": "band200_4000",
+      "af": "highpass=f=200,lowpass=f=4000",
+      "hits": 0,
+      "full": 0,
+      "mean": 0
+    },
+    {
+      "id": "band300_3400",
+      "af": "highpass=f=300,lowpass=f=3400",
+      "hits": 0,
+      "full": 0,
+      "mean": 0
+    },
+    {
+      "id": "afftdn_band",
+      "af": "afftdn=nf=-20,highpass=f=250,lowpass=f=3500",
+      "hits": 0,
+      "full": 0,
+      "mean": 0
+    },
+    {
+      "id": "dynaudnorm",
+      "af": "dynaudnorm=f=100:g=25,highpass=f=250,lowpass=f=3500",
+      "hits": 0,
+      "full": 0,
+      "mean": 0
+    },
+    {
+      "id": "speechnorm",
+      "af": "speechnorm=e=10:r=0.0001:l=1,highpass=f=250,lowpass=f=3500",
+      "hits": 0,
+      "full": 0,
+      "mean": 0
+    },
+    {
+      "id": "boost12",
+      "af": "volume=12dB,highpass=f=250,lowpass=f=3500",
+      "hits": 0,
+      "full": 0,
+      "mean": 0
+    },
+    {
+      "id": "combo",
+      "af": "afftdn=nf=-20,dynaudnorm=f=100:g=20,highpass=f=250,lowpass=f=3500,volume=6dB",
+      "hits": 0,
+      "full": 0,
+      "mean": 0
+    }
+  ],
+  "rows": [
+    {
+      "text": "Speed it up, Thom!",
+      "start": 33,
+      "covered_in_base": 0,
+      "chains": {
+        "band200_4000": {
+          "hyp": "yeah",
+          "hit": 0
+        },
+        "band300_3400": {
+          "hyp": "",
+          "hit": 0
+        },
+        "afftdn_band": {
+          "hyp": "",
+          "hit": 0
+        },
+        "dynaudnorm": {
+          "hyp": "",
+          "hit": 0
+        },
+        "speechnorm": {
+          "hyp": "yeah",
+          "hit": 0
+        },
+        "boost12": {
+          "hyp": "",
+          "hit": 0
+        },
+        "combo": {
+          "hyp": "",
+          "hit": 0
+        }
+      }
+    },
+    {
+      "text": "Vivacissimo!",
+      "start": 35,
+      "covered_in_base": 0,
+      "chains": {
+        "band200_4000": {
+          "hyp": "",
+          "hit": 0
+        },
+        "band300_3400": {
+          "hyp": "",
+          "hit": 0
+        },
+        "afftdn_band": {
+          "hyp": "",
+          "hit": 0
+        },
+        "dynaudnorm": {
+          "hyp": "",
+          "hit": 0
+        },
+        "speechnorm": {
+          "hyp": "",
+          "hit": 0
+        },
+        "boost12": {
+          "hyp": "",
+          "hit": 0
+        },
+        "combo": {
+          "hyp": "the",
+          "hit": 0
+        }
+      }
+    },
+    {
+      "text": "Abort!",
+      "start": 61.5,
+      "covered_in_base": 0,
+      "chains": {
+        "band200_4000": {
+          "hyp": "",
+          "hit": 0
+        },
+        "band300_3400": {
+          "hyp": "hello",
+          "hit": 0
+        },
+        "afftdn_band": {
+          "hyp": "",
+          "hit": 0
+        },
+        "dynaudnorm": {
+          "hyp": "hello",
+          "hit": 0
+        },
+        "speechnorm": {
+          "hyp": "hello",
+          "hit": 0
+        },
+        "boost12": {
+          "hyp": "",
+          "hit": 0
+        },
+        "combo": {
+          "hyp": "",
+          "hit": 0
+        }
+      }
+    },
+    {
+      "text": "Cut!",
+      "start": 63,
+      "covered_in_base": 0,
+      "chains": {
+        "band200_4000": {
+          "hyp": "",
+          "hit": 0
+        },
+        "band300_3400": {
+          "hyp": "",
+          "hit": 0
+        },
+        "afftdn_band": {
+          "hyp": "",
+          "hit": 0
+        },
+        "dynaudnorm": {
+          "hyp": "",
+          "hit": 0
+        },
+        "speechnorm": {
+          "hyp": "",
+          "hit": 0
+        },
+        "boost12": {
+          "hyp": "",
+          "hit": 0
+        },
+        "combo": {
+          "hyp": "",
+          "hit": 0
+        }
+      }
+    },
+    {
+      "text": "Whoaaa!",
+      "start": 64,
+      "covered_in_base": 0,
+      "chains": {
+        "band200_4000": {
+          "hyp": "",
+          "hit": 0
+        },
+        "band300_3400": {
+          "hyp": "",
+          "hit": 0
+        },
+        "afftdn_band": {
+          "hyp": "",
+          "hit": 0
+        },
+        "dynaudnorm": {
+          "hyp": "",
+          "hit": 0
+        },
+        "speechnorm": {
+          "hyp": "",
+          "hit": 0
+        },
+        "boost12": {
+          "hyp": "",
+          "hit": 0
+        },
+        "combo": {
+          "hyp": "",
+          "hit": 0
+        }
+      }
+    },
+    {
+      "text": "Whoaaa!",
+      "start": 69,
+      "covered_in_base": 0,
+      "chains": {
+        "band200_4000": {
+          "hyp": "",
+          "hit": 0
+        },
+        "band300_3400": {
+          "hyp": "the",
+          "hit": 0
+        },
+        "afftdn_band": {
+          "hyp": "",
+          "hit": 0
+        },
+        "dynaudnorm": {
+          "hyp": "the",
+          "hit": 0
+        },
+        "speechnorm": {
+          "hyp": "the",
+          "hit": 0
+        },
+        "boost12": {
+          "hyp": "",
+          "hit": 0
+        },
+        "combo": {
+          "hyp": "",
+          "hit": 0
+        }
+      }
+    },
+    {
+      "text": "Nooooo!",
+      "start": 71,
+      "covered_in_base": 0,
+      "chains": {
+        "band200_4000": {
+          "hyp": "the",
+          "hit": 0
+        },
+        "band300_3400": {
+          "hyp": "the",
+          "hit": 0
+        },
+        "afftdn_band": {
+          "hyp": "",
+          "hit": 0
+        },
+        "dynaudnorm": {
+          "hyp": "the",
+          "hit": 0
+        },
+        "speechnorm": {
+          "hyp": "the",
+          "hit": 0
+        },
+        "boost12": {
+          "hyp": "the",
+          "hit": 0
+        },
+        "combo": {
+          "hyp": "",
+          "hit": 0
+        }
+      }
+    },
+    {
+      "text": "I know.",
+      "start": 76,
+      "covered_in_base": 0,
+      "chains": {
+        "band200_4000": {
+          "hyp": "",
+          "hit": 0
+        },
+        "band300_3400": {
+          "hyp": "",
+          "hit": 0
+        },
+        "afftdn_band": {
+          "hyp": "",
+          "hit": 0
+        },
+        "dynaudnorm": {
+          "hyp": "",
+          "hit": 0
+        },
+        "speechnorm": {
+          "hyp": "",
+          "hit": 0
+        },
+        "boost12": {
+          "hyp": "",
+          "hit": 0
+        },
+        "combo": {
+          "hyp": "",
+          "hit": 0
+        }
+      }
+    },
+    {
+      "text": "I know.",
+      "start": 79,
+      "covered_in_base": 0,
+      "chains": {
+        "band200_4000": {
+          "hyp": "no",
+          "hit": 0
+        },
+        "band300_3400": {
+          "hyp": "no",
+          "hit": 0
+        },
+        "afftdn_band": {
+          "hyp": "the with",
+          "hit": 0
+        },
+        "dynaudnorm": {
+          "hyp": "no",
+          "hit": 0
+        },
+        "speechnorm": {
+          "hyp": "no",
+          "hit": 0
+        },
+        "boost12": {
+          "hyp": "no",
+          "hit": 0
+        },
+        "combo": {
+          "hyp": "no with",
+          "hit": 0
+        }
+      }
+    },
+    {
+      "text": "I'm-",
+      "start": 86,
+      "covered_in_base": 0,
+      "chains": {
+        "band200_4000": {
+          "hyp": "",
+          "hit": 0
+        },
+        "band300_3400": {
+          "hyp": "",
+          "hit": 0
+        },
+        "afftdn_band": {
+          "hyp": "",
+          "hit": 0
+        },
+        "dynaudnorm": {
+          "hyp": "",
+          "hit": 0
+        },
+        "speechnorm": {
+          "hyp": "",
+          "hit": 0
+        },
+        "boost12": {
+          "hyp": "",
+          "hit": 0
+        },
+        "combo": {
+          "hyp": "",
+          "hit": 0
+        }
+      }
+    }
+  ]
+}

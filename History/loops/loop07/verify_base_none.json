@@ -1,0 +1,236 @@
+{
+  "verdict": "FAIL",
+  "mode": "with-reference（有讲稿真值）",
+  "thresholds": {
+    "wer": 0.25,
+    "cover": 0.95,
+    "boundMean": 0.8,
+    "boundMax": 1.5,
+    "cps_zh": 20,
+    "cps_en": 25
+  },
+  "wer": {
+    "refWords": 95,
+    "hypWords": 82,
+    "dist": 30,
+    "rate": 0.3158
+  },
+  "timing": {
+    "coverage_ratio": 0.5377,
+    "mean_boundary_err_s": 1.599,
+    "max_boundary_err_s": 6.91,
+    "sentences": [
+      {
+        "idx": 0,
+        "start": 6,
+        "end": 7,
+        "covered_ratio": 0.75,
+        "start_err": 0,
+        "end_err": 0.25
+      },
+      {
+        "idx": 1,
+        "start": 8,
+        "end": 10,
+        "covered_ratio": 0.815,
+        "start_err": 0.37,
+        "end_err": 0.32
+      },
+      {
+        "idx": 2,
+        "start": 11,
+        "end": 13,
+        "covered_ratio": 0.72,
+        "start_err": 0.37,
+        "end_err": 0.19
+      },
+      {
+        "idx": 3,
+        "start": 15,
+        "end": 18,
+        "covered_ratio": 0.7,
+        "start_err": 0.18,
+        "end_err": 0.24
+      },
+      {
+        "idx": 4,
+        "start": 29,
+        "end": 31,
+        "covered_ratio": 0.665,
+        "start_err": 0.16,
+        "end_err": 0.08
+      },
+      {
+        "idx": 5,
+        "start": 33,
+        "end": 34,
+        "covered_ratio": 0,
+        "start_err": 1.32,
+        "end_err": 2.05
+      },
+      {
+        "idx": 6,
+        "start": 35,
+        "end": 36,
+        "covered_ratio": 0,
+        "start_err": 2.02,
+        "end_err": 3.99
+      },
+      {
+        "idx": 7,
+        "start": 37,
+        "end": 40,
+        "covered_ratio": 0.99,
+        "start_err": 0.02,
+        "end_err": 0.01
+      },
+      {
+        "idx": 8,
+        "start": 46,
+        "end": 49,
+        "covered_ratio": 0.46,
+        "start_err": 0.89,
+        "end_err": 0.16
+      },
+      {
+        "idx": 9,
+        "start": 49.5,
+        "end": 51,
+        "covered_ratio": 0.5,
+        "start_err": 0.51,
+        "end_err": 0.24
+      },
+      {
+        "idx": 10,
+        "start": 51,
+        "end": 53,
+        "covered_ratio": 0.88,
+        "start_err": 0.24,
+        "end_err": 0.04
+      },
+      {
+        "idx": 11,
+        "start": 55,
+        "end": 56,
+        "covered_ratio": 0.81,
+        "start_err": 0.05,
+        "end_err": 0.14
+      },
+      {
+        "idx": 12,
+        "start": 56.5,
+        "end": 58.5,
+        "covered_ratio": 0.705,
+        "start_err": 0.59,
+        "end_err": 0.03
+      },
+      {
+        "idx": 13,
+        "start": 61.5,
+        "end": 62.5,
+        "covered_ratio": 0,
+        "start_err": 4.41,
+        "end_err": 3.97
+      },
+      {
+        "idx": 14,
+        "start": 63,
+        "end": 64,
+        "covered_ratio": 0,
+        "start_err": 5.91,
+        "end_err": 5.47
+      },
+      {
+        "idx": 15,
+        "start": 64,
+        "end": 65,
+        "covered_ratio": 0,
+        "start_err": 6.91,
+        "end_err": 6.47
+      },
+      {
+        "idx": 16,
+        "start": 69,
+        "end": 70,
+        "covered_ratio": 0,
+        "start_err": 4.53,
+        "end_err": 4.94
+      },
+      {
+        "idx": 17,
+        "start": 71,
+        "end": 73,
+        "covered_ratio": 0,
+        "start_err": 2.53,
+        "end_err": 1.94
+      },
+      {
+        "idx": 18,
+        "start": 73,
+        "end": 75,
+        "covered_ratio": 0.705,
+        "start_err": 0.53,
+        "end_err": 0.06
+      },
+      {
+        "idx": 19,
+        "start": 76,
+        "end": 77,
+        "covered_ratio": 0,
+        "start_err": 1.13,
+        "end_err": 1.69
+      },
+      {
+        "idx": 20,
+        "start": 77,
+        "end": 79,
+        "covered_ratio": 0.78,
+        "start_err": 0.13,
+        "end_err": 0.31
+      },
+      {
+        "idx": 21,
+        "start": 79,
+        "end": 80,
+        "covered_ratio": 0.27,
+        "start_err": 0.47,
+        "end_err": 0.26
+      },
+      {
+        "idx": 22,
+        "start": 80.5,
+        "end": 83,
+        "covered_ratio": 0.776,
+        "start_err": 0.01,
+        "end_err": 0.56
+      },
+      {
+        "idx": 23,
+        "start": 86,
+        "end": 87,
+        "covered_ratio": 0,
+        "start_err": 5.51,
+        "end_err": 4.56
+      }
+    ]
+  },
+  "translate": null,
+  "readability": null,
+  "remap": null,
+  "quality": null,
+  "pass": {
+    "wer": false,
+    "coverage": false,
+    "boundary_mean": false,
+    "boundary_max": false,
+    "translated": null,
+    "readability": null,
+    "remap": null
+  },
+  "source": {
+    "transcript": "D:\\Data\\DeepseekHarness\\IdeaDrivenLoop\\VideoFactory\\History\\loops\\loop07\\base_none.json",
+    "ground_truth": "D:\\Data\\DeepseekHarness\\IdeaDrivenLoop\\VideoFactory\\Workspace\\assets\\tos_excerpts\\tos_90s.ground_truth.json",
+    "cues": null,
+    "remap": null
+  }
+}

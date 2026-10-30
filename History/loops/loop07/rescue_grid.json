@@ -1,0 +1,195 @@
+{
+  "generated_at": "2026-10-30T05:20:47.113Z",
+  "note": "c035_g12_w120 组合超时未完成，已剔除（见 notes.md）",
+  "base": {
+    "words": 82,
+    "wer": 0.2842,
+    "short": {
+      "n": 11,
+      "cov": 0.115
+    },
+    "mid": {
+      "n": 11,
+      "cov": 0.638
+    },
+    "long": {
+      "n": 2,
+      "cov": 0.845
+    }
+  },
+  "combos": [
+    {
+      "id": "c030_g10",
+      "words": 84,
+      "added": 2,
+      "windows": 9,
+      "empty": 6,
+      "wer": 0.2842,
+      "coverage": 0.5295,
+      "short": {
+        "n": 11,
+        "cov": 0.145
+      },
+      "mid": {
+        "n": 11,
+        "cov": 0.663
+      },
+      "long": {
+        "n": 2,
+        "cov": 0.845
+      },
+      "dShort": 0.03,
+      "dWer": 0,
+      "recovered": [],
+      "broken": [],
+      "addedWords": [
+        "yeah@33.06",
+        "no@79.47"
+      ]
+    },
+    {
+      "id": "c030_g15_p40",
+      "words": 84,
+      "added": 2,
+      "windows": 9,
+      "empty": 6,
+      "wer": 0.2842,
+      "coverage": 0.5295,
+      "short": {
+        "n": 11,
+        "cov": 0.145
+      },
+      "mid": {
+        "n": 11,
+        "cov": 0.663
+      },
+      "long": {
+        "n": 2,
+        "cov": 0.845
+      },
+      "dShort": 0.03,
+      "dWer": 0,
+      "recovered": [],
+      "broken": [],
+      "addedWords": [
+        "yeah@33.06",
+        "no@79.47"
+      ]
+    },
+    {
+      "id": "c040_g08",
+      "words": 84,
+      "added": 2,
+      "windows": 9,
+      "empty": 6,
+      "wer": 0.2842,
+      "coverage": 0.5295,
+      "short": {
+        "n": 11,
+        "cov": 0.145
+      },
+      "mid": {
+        "n": 11,
+        "cov": 0.663
+      },
+      "long": {
+        "n": 2,
+        "cov": 0.845
+      },
+      "dShort": 0.03,
+      "dWer": 0,
+      "recovered": [],
+      "broken": [],
+      "addedWords": [
+        "yeah@33.06",
+        "no@79.47"
+      ]
+    },
+    {
+      "id": "c040_g10",
+      "words": 84,
+      "added": 2,
+      "windows": 9,
+      "empty": 6,
+      "wer": 0.2842,
+      "coverage": 0.5295,
+      "short": {
+        "n": 11,
+        "cov": 0.145
+      },
+      "mid": {
+        "n": 11,
+        "cov": 0.663
+      },
+      "long": {
+        "n": 2,
+        "cov": 0.845
+      },
+      "dShort": 0.03,
+      "dWer": 0,
+      "recovered": [],
+      "broken": [],
+      "addedWords": [
+        "yeah@33.06",
+        "no@79.47"
+      ]
+    },
+    {
+      "id": "c040_g15",
+      "words": 84,
+      "added": 2,
+      "windows": 9,
+      "empty": 6,
+      "wer": 0.2842,
+      "coverage": 0.5295,
+      "short": {
+        "n": 11,
+        "cov": 0.145
+      },
+      "mid": {
+        "n": 11,
+        "cov": 0.663
+      },
+      "long": {
+        "n": 2,
+        "cov": 0.845
+      },
+      "dShort": 0.03,
+      "dWer": 0,
+      "recovered": [],
+      "broken": [],
+      "addedWords": [
+        "yeah@33.06",
+        "no@79.47"
+      ]
+    },
+    {
+      "id": "c045_g10",
+      "words": 83,
+      "added": 1,
+      "windows": 9,
+      "empty": 7,
+      "wer": 0.2842,
+      "coverage": 0.5228,
+      "short": {
+        "n": 11,
+        "cov": 0.145
+      },
+      "mid": {
+        "n": 11,
+        "cov": 0.638
+      },
+      "long": {
+        "n": 2,
+        "cov": 0.845
+      },
+      "dShort": 0.03,
+      "dWer": 0,
+      "recovered": [],
+      "broken": [],
+      "addedWords": [
+        "no@79.47"
+      ]
+    }
+  ]
+}

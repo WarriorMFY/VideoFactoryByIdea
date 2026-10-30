@@ -1,0 +1,6 @@
+
+=== 字幕链路验收: FAIL ===
+模式: with-reference（有讲稿真值）
+ASR: WER 28.4%  (错 27/95 词；识别 82 词)
+时间轴: 语音覆盖 51.5% / 句界平均误差 1.47s / 最大 6.91s
+判定: wer=✗ coverage=✗ boundary_mean=✗ boundary_max=✗ translated=n/a readability=n/a remap=n/a
