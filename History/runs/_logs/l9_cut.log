@@ -1,0 +1,17 @@
+[probe] D:\Data\DeepseekHarness\IdeaDrivenLoop\VideoFactory\Workspace\assets\longbench\source_long.mp4
+[probe] 2940.04s 1280x534 audio=true
+[analyze] blackdetect / freezedetect / scdet / silencedetect ...
+[analyze] black=0 freeze=46 silence=9 scenes=620
+[decide] 应用剪辑规则 ...
+[render] 提取 5 段 ...
+[render] 合并 (fade) ...
+[render] 收尾(响度归一/淡入淡出/标题) ...
+[done] 674.9s -> D:\Data\DeepseekHarness\IdeaDrivenLoop\VideoFactory\History\runs\l9_long\cut
+[done] final=2924.30s kept=5 cut=5 transition=xfade(fade,0.4s)
+  - final.mp4 368669KB
+  - edits.json 17KB
+  - signals.json 11KB
+  - probe.json 0KB
+  - report.md 3KB
+  - contact_sheet.jpg 129KB
+  - runlog.jsonl 7KB

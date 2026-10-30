@@ -52,9 +52,14 @@ Prototype/
     ├── acceptance.md              # 自动验收（恒等回写/改动落点/拒绝危险输入/重渲染）
     ├── reproduce.ps1              # 一键复现
     └── case_l2_review/            # 校对表（改前/改后）、回写 cues、双语 SRT、成片
+└── loop9_long_video/              # 小循环 9：49 分钟长视频压测 + 术语一致性审计
+    ├── README.md                  # 说明：成本表 / 长片才暴露的 2 个 bug / 术语审计 / 限制
+    ├── acceptance.md              # 自动验收（7 阶段跑通、273 行回写恒等、术语审计回归）
+    ├── reproduce.ps1              # 一键复现（冷跑约 25 分钟）
+    └── case_long/                 # 273 行 cues / 校对表 / 术语审计 / 质检 / 抽帧
 ```
 
-## 八轮结果一览
+## 九轮结果一览
 
 | 小循环 | 增量 | 关键结果 | 耗时 |
 | --- | --- | --- | --- |
@@ -66,8 +71,9 @@ Prototype/
 | 6（12:00–13:40） | **字幕文本层**：标点/大小写恢复 + 精译后端 + 源端术语纠错 + 阅读速度节流 | 句界 F1 **1.00**、句末标点 **100%**、去标点 WER 6.1%（不变）；句末缺标点 **7→0**、术语错误 **1→0**；精译达人工参考 **94.1%** | ~100 min |
 | 7（13:05–13:45） | **真实影视"短句漏识"**：假设"切窗重识别能救回短句"→ 做 `asr_rescue` 验证；顺带穷举音频预处理链 | WER 31.6%→**28.4%**（预处理链收益），但短句覆盖只 **+3.0pp**（目标 +10pp 未达成）；证伪证据：干净 TTS 听得出 **8/10**、原片混音 **0/10**、7 条链 × 10 条漏句 **0 命中** → **模型能力上限** | ~40 min |
 | 8（13:30–13:50） | **校对回写闭环**：`export_review`（带 5 类机器标记）→ 人改 CSV → `apply_review`（严格校验后回写 cues+SRT） | 恒等回写 **逐字节一致**；4 处真实改动只落指定行；删行/改时间码/空译文 **3/3 被拒绝**；回写后出片 QA **PASS** | ~20 min |
+| 9（14:00–14:45） | **49 分钟长视频压测** + **术语一致性审计**（`term_missing`/`term_variant`） | 48.7 分钟成片跑通、**273 条字幕 / 校对表 273 行**、273 行回写恒等；成本 = 两次渲染约 22 分钟 + 识别 6.5 分钟（文本层全秒级）；长片暴露并修掉 **2 个 bug**（回写 trim、机翻脏数据） | ~45 min |
 
-验收记录分别在 `loop1_autocut/acceptance.md`、`loop2_subtitles/acceptance_*.md`、`loop3_real_speech/acceptance.md`、`loop4_multi_samples/acceptance.md`、`loop5_karaoke_subs/acceptance.md`、`loop6_text_quality/acceptance.md`、`loop7_short_utterance/acceptance.md`、`loop8_review_loop/acceptance.md`；循环摘要见 `History/CircleLog/log.md`。
+验收记录分别在 `loop1_autocut/acceptance.md`、`loop2_subtitles/acceptance_*.md`、`loop3_real_speech/acceptance.md`、`loop4_multi_samples/acceptance.md`、`loop5_karaoke_subs/acceptance.md`、`loop6_text_quality/acceptance.md`、`loop7_short_utterance/acceptance.md`、`loop8_review_loop/acceptance.md`、`loop9_long_video/acceptance.md`；循环摘要见 `History/CircleLog/log.md`，阶段总结见 `History/reports/progress_report_2026-10-30.md`。
 
 ## 怎么跑（在仓库根执行）
 
@@ -95,6 +101,9 @@ Prototype/
 
 # 小循环 8（校对回写）：导出校对表 → 恒等回写 → 4 处真实改动 → 3 类误操作拦截 → 重新出片
 .\Prototype\loop8_review_loop\reproduce.ps1
+
+# 小循环 9（49 分钟压测）：拼长素材 → 识别/剪辑/字幕/回写/术语审计 → 两遍渲染 → 质检（冷跑约 25 分钟）
+.\Prototype\loop9_long_video\reproduce.ps1
 ```
 
 脚本都幂等：已装好的依赖、已下载的模型与素材会复用；耗时主要卡在首次下载
@@ -144,6 +153,9 @@ node Tool\subtitle/make_subs.mjs work\tr_punct.json --out work\subs --punct --gl
 - ⚠️ **短句漏识已被证伪为"模型上限"**（小循环 7）：干净 TTS 能识别 8/10 的漏句，原片混音 0/10，
   7 条预处理链 × 10 条漏句 = 0 命中 → 再调"喂法"无意义，只能换 Whisper 级模型（本机通道不通，需外部提供）。
   附带落地的只有预处理链：真实影视 `--af "afftdn=nf=-25,highpass=f=200,lowpass=f=4000"`，TOS WER 31.6%→28.4%（代价是词数略降）。
+- ✅ **能扛长片**（小循环 9）：49 分钟素材全链路跑通，成片 48.7 分钟、273 条字幕、校对表 273 行、
+  回写在 273 行规模下仍逐字节恒等；成本结构清晰——**两次渲染约 22 分钟 + 识别 6.5 分钟，文本层全秒级**。
+  顺带修掉两个"只有长片才会暴露"的 bug（回写 trim 破坏恒等、MyMemory 返回 HTML/占位符脏数据）。
 
 细节与限制见各 loop 的 README；下一步建议：
 1. **换 ASR 模型**（唯一能真正解决漏句的路）—— 需要外部提供模型文件 / 可用下载通道 / 一个 ASR HTTP 接口；

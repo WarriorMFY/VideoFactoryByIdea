@@ -103,9 +103,22 @@ const CACHE_PATH = path.join(ROOT, 'History', 'asr', 'mt_cache.json');
 const cache = fs.existsSync(CACHE_PATH) ? JSON.parse(fs.readFileSync(CACHE_PATH, 'utf8')) : {};
 const saveCache = () => { fs.mkdirSync(path.dirname(CACHE_PATH), { recursive: true }); fs.writeFileSync(CACHE_PATH, JSON.stringify(cache, null, 2)); };
 
+// MyMemory 偶尔会返回**脏数据**：HTML 片段（`<strong>%2$s</str`）、`%2$s` 这类占位符、
+// 以及带前导空格的结果（` Id`）。长片压测（小循环 9）里 279 行字幕踩到 6 行，全是这种。
+// 这里统一清洗：去标签、解几个常见实体、折叠空白、丢掉"明显是服务端模板残留"的结果。
+function cleanMt(out) {
+  let s = String(out);
+  s = s.replace(/<[^>]*>?/g, '');                     // 去标签（含被截断的半截标签）
+  s = s.replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&').replace(/&quot;/g, '"').replace(/&#39;/g, "'");
+  s = s.replace(/%\d*\$?[sdif]/g, '');                // printf 占位符
+  s = s.replace(/\s+/g, ' ').trim();
+  return s;
+}
+const looksLikeTemplate = (s) => !s || /^[%<>$\d\s]*$/.test(s);
+
 async function mymemory(text) {
   const key = `en|zh-CN|${text}`;
-  if (cache[key]) return cache[key];
+  if (cache[key]) return cleanMt(cache[key]);
   // MyMemory 单次查询上限 500 字符（超了返回 403 QUERY LENGTH LIMIT）→ 超长句先拆成两半再拼
   if (text.length > 480) {
     const cut = text.lastIndexOf(' ', 240) > 80 ? text.lastIndexOf(' ', 240) : 240;
@@ -120,8 +133,9 @@ async function mymemory(text) {
     try {
       const r = await fetch(url, { signal: AbortSignal.timeout(25000) });
       const j = await r.json();
-      const out = j?.responseData?.translatedText;
-      if (out && typeof out === 'string' && !/MYMEMORY WARNING|QUERY LENGTH LIMIT|INVALID/i.test(out)) {
+      const raw = j?.responseData?.translatedText;
+      const out = raw && typeof raw === 'string' ? cleanMt(raw) : '';
+      if (out && !looksLikeTemplate(out) && !/MYMEMORY WARNING|QUERY LENGTH LIMIT|INVALID/i.test(out)) {
         cache[key] = out; saveCache(); return out;
       }
       await new Promise((res) => setTimeout(res, 900));
