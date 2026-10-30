@@ -1,0 +1,143 @@
+{
+  "checked_at": "2026-10-30T06:40:53.414Z",
+  "video": "D:\\Data\\DeepseekHarness\\IdeaDrivenLoop\\VideoFactory\\History\\runs\\l10_karaoke\\probe.mp4",
+  "ass": "D:\\Data\\DeepseekHarness\\IdeaDrivenLoop\\VideoFactory\\History\\runs\\l10_karaoke\\probe.ass",
+  "highlight": "33E6C8",
+  "events_total": 59,
+  "sampled": 12,
+  "checks": {
+    "highlight_present": true,
+    "single_block_per_frame": true,
+    "highlight_moves": true
+  },
+  "metrics": {
+    "frames": 12,
+    "frames_with_highlight": 12,
+    "frames_single_block": 12,
+    "centroid_spread_px": 280,
+    "avg_highlight_pixels": 41.8
+  },
+  "samples": [
+    {
+      "i": 0,
+      "t": 3.77,
+      "text": "we have main engine starting or agreed to one",
+      "pixels": 33,
+      "blocks": 1,
+      "bboxW": 8,
+      "maxGap": 7,
+      "centroidX": 177.8
+    },
+    {
+      "i": 1,
+      "t": 5.33,
+      "text": "we have main engine starting or agreed to one",
+      "pixels": 56,
+      "blocks": 1,
+      "bboxW": 53,
+      "maxGap": 26,
+      "centroidX": 367.9
+    },
+    {
+      "i": 2,
+      "t": 8.42,
+      "text": "we have main engine starting or agreed to one",
+      "pixels": 31,
+      "blocks": 1,
+      "bboxW": 15,
+      "maxGap": 9,
+      "centroidX": 330.8
+    },
+    {
+      "i": 3,
+      "t": 24.605,
+      "text": "look celia we have to follow our options you i",
+      "pixels": 45,
+      "blocks": 1,
+      "bboxW": 41,
+      "maxGap": 17,
+      "centroidX": 300.7
+    },
+    {
+      "i": 4,
+      "t": 26.435,
+      "text": "look celia we have to follow our options you i",
+      "pixels": 48,
+      "blocks": 1,
+      "bboxW": 37,
+      "maxGap": 13,
+      "centroidX": 209.9
+    },
+    {
+      "i": 5,
+      "t": 27.965,
+      "text": "look celia we have to follow our options you i",
+      "pixels": 29,
+      "blocks": 1,
+      "bboxW": 15,
+      "maxGap": 9,
+      "centroidX": 436.9
+    },
+    {
+      "i": 6,
+      "t": 29.945,
+      "text": "look celia we have to follow our options you i",
+      "pixels": 66,
+      "blocks": 1,
+      "bboxW": 34,
+      "maxGap": 9,
+      "centroidX": 339.1
+    },
+    {
+      "i": 7,
+      "t": 31.145,
+      "text": "look celia we have to follow our options you i",
+      "pixels": 46,
+      "blocks": 1,
+      "bboxW": 27,
+      "maxGap": 9,
+      "centroidX": 344.2
+    },
+    {
+      "i": 8,
+      "t": 33.935,
+      "text": "my my role on hand i love freedom but it's",
+      "pixels": 16,
+      "blocks": 1,
+      "bboxW": 0,
+      "maxGap": 0,
+      "centroidX": 356.7
+    },
+    {
+      "i": 9,
+      "t": 36.665,
+      "text": "alright right fine a freaked out on having nig",
+      "pixels": 39,
+      "blocks": 1,
+      "bboxW": 40,
+      "maxGap": 15,
+      "centroidX": 220.3
+    },
+    {
+      "i": 10,
+      "t": 38.645,
+      "text": "alright right fine a freaked out on having nig",
+      "pixels": 34,
+      "blocks": 1,
+      "bboxW": 33,
+      "maxGap": 18,
+      "centroidX": 194
+    },
+    {
+      "i": 11,
+      "t": 39.91,
+      "text": "alright right fine a freaked out on having nig",
+      "pixels": 58,
+      "blocks": 1,
+      "bboxW": 21,
+      "maxGap": 9,
+      "centroidX": 457.8
+    }
+  ],
+  "verdict": "PASS"
+}

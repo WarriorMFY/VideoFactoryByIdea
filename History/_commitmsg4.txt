@@ -1,0 +1,13 @@
+feat(loop10): 逐词高亮 49 分钟规模验收（事件数口径修正）
+
+- 新增 acceptance/run_karaoke_scale.mjs：用 loop9 的 273 条字幕 + EDL 生成全片 ASS（带剪辑重映射），
+  只烧前 120s 做像素抽检（时间轴一致，省掉一次 49 分钟渲染）
+- 结果 PASS：1030 条 ASS 事件 / 2 样式 / 103KB / 生成 0.1s；时间轴 3.6–2841.6s，峰值 1 事件/秒；
+  120s 烧入成功（7.8MB）；verify_karaoke PASS（12/12 帧有高亮、12/12 单块、重心位移 280px）
+- 口径修正：事件数 ≈ 识别词数（l2 教学片 101 词→78 事件=0.77/词；本片约 1300 词→1030 事件≈0.8–1/词），
+  "1h ≈ 1–1.5 万条"只是对话密集素材上限；按 ≈1 事件/词 外推 1h 密集素材 ≈8–9k，线性增长无平方级爆炸
+- 踩坑并记录：① ffmpeg 滤镜里 Windows 路径必须 `subtitles='D\:/...'`（否则 filtergraph 初始化失败）；
+  ② verify_karaoke 按整份 ASS 均匀抽样，只烧 120s 时会抽到视频外 → 给它"只含前 120s 事件"的 ASS 副本
+- 交付：Prototype/loop10_karaoke_scale/（README/acceptance/reproduce/case：长片 ASS、verify_karaoke、120s 样片）
+- 文档：Prototype/README.md 扩到十轮；CircleLog 记 loop10 并刷新状态表与短板表；
+  History/reports/progress_report_2026-10-30.md 补 loop10 收益并把"事件数未实测"划掉

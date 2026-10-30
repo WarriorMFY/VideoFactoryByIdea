@@ -1,0 +1,13 @@
+
+=== 逐词高亮验收: PASS ===
+ASS 英文词事件 59 条，抽样 12 帧
+高亮存在 12/12 帧 · 单块(不重影) 12/12 帧 · 重心位移 280.0px · 平均高亮像素 41.8
+判定: highlight_present=ok single_block_per_frame=ok highlight_moves=ok
+  3.77s  pixels=   33 blocks=1 cx=177.8  «we have main engine starting or agreed to one»
+  5.33s  pixels=   56 blocks=1 cx=367.9  «we have main engine starting or agreed to one»
+  8.42s  pixels=   31 blocks=1 cx=330.8  «we have main engine starting or agreed to one»
+  24.61s  pixels=   45 blocks=1 cx=300.7  «look celia we have to follow our options you i»
+  26.43s  pixels=   48 blocks=1 cx=209.9  «look celia we have to follow our options you i»
+  27.96s  pixels=   29 blocks=1 cx=436.9  «look celia we have to follow our options you i»
+  29.95s  pixels=   66 blocks=1 cx=339.1  «look celia we have to follow our options you i»
+  31.14s  pixels=   46 blocks=1 cx=344.2  «look celia we have to follow our options you i»

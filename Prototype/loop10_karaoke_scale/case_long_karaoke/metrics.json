@@ -1,0 +1,25 @@
+{
+  "generated_at": "2026-10-30T06:40:53.427Z",
+  "cues": 273,
+  "events": 1030,
+  "styles": 2,
+  "ass_mb": 0.1,
+  "gen_sec": 0.1,
+  "events_per_cue": 3.77,
+  "span_s": [
+    3.6,
+    2841.6
+  ],
+  "peak_events_per_sec": 1,
+  "probe_s": 120,
+  "verify_karaoke": "PASS",
+  "checks": {
+    "ass_generated_fast": true,
+    "events_present": true,
+    "events_density_sane": true,
+    "no_event_gap": true,
+    "burn_ok": true,
+    "verify_karaoke_pass": true
+  },
+  "pass": true
+}

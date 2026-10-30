@@ -57,9 +57,14 @@ Prototype/
     ├── acceptance.md              # 自动验收（7 阶段跑通、273 行回写恒等、术语审计回归）
     ├── reproduce.ps1              # 一键复现（冷跑约 25 分钟）
     └── case_long/                 # 273 行 cues / 校对表 / 术语审计 / 质检 / 抽帧
+└── loop10_karaoke_scale/          # 小循环 10：逐词高亮在 49 分钟上的规模验收
+    ├── README.md                  # 说明：事件数口径修正 / 两个坑 / 结论
+    ├── acceptance.md              # 自动验收（1030 事件、120s 烧入、像素抽检 12/12）
+    ├── reproduce.ps1              # 一键复现（依赖 loop9 产物，约 1 分钟）
+    └── case_long_karaoke/         # 长片 ASS / verify_karaoke / 120s 烧入样片
 ```
 
-## 九轮结果一览
+## 十轮结果一览
 
 | 小循环 | 增量 | 关键结果 | 耗时 |
 | --- | --- | --- | --- |
@@ -72,8 +77,9 @@ Prototype/
 | 7（13:05–13:45） | **真实影视"短句漏识"**：假设"切窗重识别能救回短句"→ 做 `asr_rescue` 验证；顺带穷举音频预处理链 | WER 31.6%→**28.4%**（预处理链收益），但短句覆盖只 **+3.0pp**（目标 +10pp 未达成）；证伪证据：干净 TTS 听得出 **8/10**、原片混音 **0/10**、7 条链 × 10 条漏句 **0 命中** → **模型能力上限** | ~40 min |
 | 8（13:30–13:50） | **校对回写闭环**：`export_review`（带 5 类机器标记）→ 人改 CSV → `apply_review`（严格校验后回写 cues+SRT） | 恒等回写 **逐字节一致**；4 处真实改动只落指定行；删行/改时间码/空译文 **3/3 被拒绝**；回写后出片 QA **PASS** | ~20 min |
 | 9（14:00–14:45） | **49 分钟长视频压测** + **术语一致性审计**（`term_missing`/`term_variant`） | 48.7 分钟成片跑通、**273 条字幕 / 校对表 273 行**、273 行回写恒等；成本 = 两次渲染约 22 分钟 + 识别 6.5 分钟（文本层全秒级）；长片暴露并修掉 **2 个 bug**（回写 trim、机翻脏数据） | ~45 min |
+| 10（14:50–15:05） | **逐词高亮 @ 49 分钟规模**：长片 ASS 事件数/体积/烧入 + 120s 像素抽检 | **1030 事件 / 103KB / 生成 0.1s**；libass 正常烧、12/12 帧高亮在、重心位移 280px；口径修正为 **≈1 事件/词**（对话密集 1h ≈ 8–9k，线性） | ~15 min |
 
-验收记录分别在 `loop1_autocut/acceptance.md`、`loop2_subtitles/acceptance_*.md`、`loop3_real_speech/acceptance.md`、`loop4_multi_samples/acceptance.md`、`loop5_karaoke_subs/acceptance.md`、`loop6_text_quality/acceptance.md`、`loop7_short_utterance/acceptance.md`、`loop8_review_loop/acceptance.md`、`loop9_long_video/acceptance.md`；循环摘要见 `History/CircleLog/log.md`，阶段总结见 `History/reports/progress_report_2026-10-30.md`。
+验收记录分别在 `loop1_autocut/acceptance.md`、`loop2_subtitles/acceptance_*.md`、`loop3_real_speech/acceptance.md`、`loop4_multi_samples/acceptance.md`、`loop5_karaoke_subs/acceptance.md`、`loop6_text_quality/acceptance.md`、`loop7_short_utterance/acceptance.md`、`loop8_review_loop/acceptance.md`、`loop9_long_video/acceptance.md`、`loop10_karaoke_scale/acceptance.md`；循环摘要见 `History/CircleLog/log.md`，阶段总结见 `History/reports/progress_report_2026-10-30.md`。
 
 ## 怎么跑（在仓库根执行）
 
@@ -104,6 +110,9 @@ Prototype/
 
 # 小循环 9（49 分钟压测）：拼长素材 → 识别/剪辑/字幕/回写/术语审计 → 两遍渲染 → 质检（冷跑约 25 分钟）
 .\Prototype\loop9_long_video\reproduce.ps1
+
+# 小循环 10（karaoke 长片规模）：生成 49 分钟 ASS → 烧前 120s → 像素抽检（依赖 loop9 产物，约 1 分钟）
+.\Prototype\loop10_karaoke_scale\reproduce.ps1
 ```
 
 脚本都幂等：已装好的依赖、已下载的模型与素材会复用；耗时主要卡在首次下载
@@ -147,7 +156,9 @@ node Tool\subtitle/make_subs.mjs work\tr_punct.json --out work\subs --punct --gl
 - ⚠️ 语音保护会连带保住"对白压在黑屏/字幕卡"上的黑场（已知取舍，验收里单独标注）。
 - ⚠️ 模型下载通道受限（HuggingFace 全域不可达），未能用 Whisper 级模型。
 - ✅ **双语逐词高亮字幕**（小循环 5）：中文整句 + 英文当前词上色，ASS 输出、随剪辑重映射，像素级验收通过；
-  ⚠️ 词级时间来自 ASR，识别错的地方高亮也会错；长片事件数未压测（1h ≈ 1–1.5 万条）。
+  长片规模已实测（小循环 10）：49 分钟 **1030 条 ASS 事件 / 103KB / 生成 0.1s**，libass 正常烧、12/12 帧高亮在；
+  口径修正为 **≈1 事件/词**（不是平方级爆炸，对话密集 1h ≈ 8–9k）。
+  ⚠️ 词级时间来自 ASR，识别错的地方高亮也会错。
 - ✅ **人工校对回写闭环**（小循环 8）：机翻/精译字幕 → 导出带标记的校对表 → 人改中文 → 严格校验后回写 cues+SRT，
   恒等回写逐字节一致、三类误操作全部拒绝；发布流程从此是"机器出稿 + 人改 + 一条命令回灌"。
 - ⚠️ **短句漏识已被证伪为"模型上限"**（小循环 7）：干净 TTS 能识别 8/10 的漏句，原片混音 0/10，
