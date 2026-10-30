@@ -1,0 +1,2685 @@
+{
+  "generated_at": "2026-10-30T06:33:46.378Z",
+  "cues_in": 273,
+  "cues_out": 267,
+  "dropped": [],
+  "output_duration": 2925.745,
+  "style": "bilingual",
+  "sanity": {
+    "overflow_cues": 0,
+    "overlaps": 0,
+    "min_dur": 0.6
+  },
+  "cues": [
+    {
+      "idx": 0,
+      "src_cue": 0,
+      "start": 3.651,
+      "end": 8.601,
+      "en": "We have main engine starting or agreed to one.",
+      "zh": "我们有主引擎启动或同意主引擎启动。",
+      "conf": 0.842,
+      "split_from_cut": false
+    },
+    {
+      "idx": 1,
+      "src_cue": 1,
+      "start": 9.771,
+      "end": 15.051,
+      "en": "Ah.",
+      "zh": "诶，啊",
+      "conf": 0.475,
+      "split_from_cut": false
+    },
+    {
+      "idx": 2,
+      "src_cue": 2,
+      "start": 23.391,
+      "end": 25.363,
+      "en": "Look celia we have to follow our options you it you robotics",
+      "zh": "听着， Celia ，",
+      "conf": 0.81,
+      "split_from_cut": false
+    },
+    {
+      "idx": 3,
+      "src_cue": 3,
+      "start": 25.363,
+      "end": 27.336,
+      "en": "Look celia we have to follow our options you it you roboticsnice one of the awesome space why don't you just tell me that's",
+      "zh": "我们必须遵循我们的选择，您是机器人，",
+      "conf": 0.81,
+      "split_from_cut": false
+    },
+    {
+      "idx": 4,
+      "src_cue": 4,
+      "start": 27.336,
+      "end": 29.309,
+      "en": "nice one of the awesome space why don't you just tell me that's",
+      "zh": "这是一个很棒的空间，",
+      "conf": 0.81,
+      "split_from_cut": false
+    },
+    {
+      "idx": 5,
+      "src_cue": 5,
+      "start": 29.309,
+      "end": 31.281,
+      "en": "nice one of the awesome space why don't you just tell me that'syour.",
+      "zh": "您为什么不告诉我这是您的。",
+      "conf": 0.81,
+      "split_from_cut": false
+    },
+    {
+      "idx": 6,
+      "src_cue": 6,
+      "start": 32.151,
+      "end": 33.561,
+      "en": "My my role on hand I love freedom, but it's.",
+      "zh": "我手头的角色我热爱自由，",
+      "conf": 0.837,
+      "split_from_cut": false
+    },
+    {
+      "idx": 7,
+      "src_cue": 7,
+      "start": 33.561,
+      "end": 34.971,
+      "en": "My my role on hand I love freedom, but it's.",
+      "zh": "但它确实如此。",
+      "conf": 0.837,
+      "split_from_cut": false
+    },
+    {
+      "idx": 8,
+      "src_cue": 8,
+      "start": 36.561,
+      "end": 38.991,
+      "en": "Alright right fine a freaked out on having nightmares don't",
+      "zh": "好吧，罚款，做噩梦时吓坏了，",
+      "conf": 0.726,
+      "split_from_cut": false
+    },
+    {
+      "idx": 9,
+      "src_cue": 9,
+      "start": 38.991,
+      "end": 41.421,
+      "en": "think she's, but he's giant will have call.",
+      "zh": "不认为她是，但他的巨人会有电话。",
+      "conf": 0.726,
+      "split_from_cut": false
+    },
+    {
+      "idx": 10,
+      "src_cue": 10,
+      "start": 43.221,
+      "end": 44.061,
+      "en": "Well done.",
+      "zh": "做得很好。",
+      "conf": 1,
+      "split_from_cut": false
+    },
+    {
+      "idx": 11,
+      "src_cue": 11,
+      "start": 49.041,
+      "end": 52.491,
+      "en": "Robots memory sink and lot.",
+      "zh": "机器人记忆水槽和很多。",
+      "conf": 0.755,
+      "split_from_cut": false
+    },
+    {
+      "idx": 12,
+      "src_cue": 12,
+      "start": 59.871,
+      "end": 60.496,
+      "en": "Disease.",
+      "zh": "是 關於 疾病 的",
+      "conf": 1,
+      "split_from_cut": false
+    },
+    {
+      "idx": 13,
+      "src_cue": 13,
+      "start": 116.631,
+      "end": 117.591,
+      "en": "Should you be donor?",
+      "zh": "您应该成为捐赠者吗？",
+      "conf": 0.897,
+      "split_from_cut": false
+    },
+    {
+      "idx": 14,
+      "src_cue": 14,
+      "start": 130.341,
+      "end": 131.841,
+      "en": "I you guys talking most nine.",
+      "zh": "我，你们说得最多九个。",
+      "conf": 0.72,
+      "split_from_cut": false
+    },
+    {
+      "idx": 15,
+      "src_cue": 15,
+      "start": 135.411,
+      "end": 136.581,
+      "en": "Still by for you.",
+      "zh": "仍然为您服务。",
+      "conf": 0.785,
+      "split_from_cut": false
+    },
+    {
+      "idx": 16,
+      "src_cue": 16,
+      "start": 159.561,
+      "end": 166.071,
+      "en": "Rule.",
+      "zh": "规则",
+      "conf": 0.416,
+      "split_from_cut": false
+    },
+    {
+      "idx": 17,
+      "src_cue": 17,
+      "start": 174.929,
+      "end": 179.895,
+      "en": "New new.",
+      "zh": "!new 新贴",
+      "conf": 0.673,
+      "split_from_cut": false
+    },
+    {
+      "idx": 18,
+      "src_cue": 18,
+      "start": 190.371,
+      "end": 191.991,
+      "en": "Are you ready cause you're ready you're a rock star?",
+      "zh": "你准备好了吗，因为你已经准备好成为一",
+      "conf": 0.914,
+      "split_from_cut": false
+    },
+    {
+      "idx": 19,
+      "src_cue": 19,
+      "start": 191.991,
+      "end": 193.611,
+      "en": "Are you ready cause you're ready you're a rock star?",
+      "zh": "名摇滚明星了？",
+      "conf": 0.914,
+      "split_from_cut": false
+    },
+    {
+      "idx": 20,
+      "src_cue": 20,
+      "start": 196.161,
+      "end": 197.826,
+      "en": "As it look body we should have about ten minutes.",
+      "zh": "看起来像身体，我们应该有大约十分钟的",
+      "conf": 0.833,
+      "split_from_cut": false
+    },
+    {
+      "idx": 21,
+      "src_cue": 21,
+      "start": 197.826,
+      "end": 199.491,
+      "en": "As it look body we should have about ten minutes.",
+      "zh": "时间。",
+      "conf": 0.833,
+      "split_from_cut": false
+    },
+    {
+      "idx": 22,
+      "src_cue": 22,
+      "start": 200.691,
+      "end": 201.711,
+      "en": "Well that's perfect.",
+      "zh": "太好了。",
+      "conf": 1,
+      "split_from_cut": false
+    },
+    {
+      "idx": 23,
+      "src_cue": 23,
+      "start": 202.611,
+      "end": 206.75,
+      "en": "Romney one all systems go you go.",
+      "zh": "罗姆尼，所有系统都可以，你去吧。",
+      "conf": 0.755,
+      "split_from_cut": false
+    },
+    {
+      "idx": 24,
+      "src_cue": 24,
+      "start": 221.841,
+      "end": 222.861,
+      "en": "That's nice.",
+      "zh": "太好了。",
+      "conf": 1,
+      "split_from_cut": false
+    },
+    {
+      "idx": 25,
+      "src_cue": 25,
+      "start": 223.611,
+      "end": 224.871,
+      "en": "Nothing to worry about that.",
+      "zh": "不足为虑。",
+      "conf": 0.934,
+      "split_from_cut": false
+    },
+    {
+      "idx": 26,
+      "src_cue": 26,
+      "start": 231.081,
+      "end": 231.841,
+      "en": "Do she's?",
+      "zh": "是吗？",
+      "conf": 0.526,
+      "split_from_cut": false
+    },
+    {
+      "idx": 27,
+      "src_cue": 27,
+      "start": 234.381,
+      "end": 235.111,
+      "en": "You laugh.",
+      "zh": "你笑了。",
+      "conf": 0.869,
+      "split_from_cut": false
+    },
+    {
+      "idx": 28,
+      "src_cue": 28,
+      "start": 236.421,
+      "end": 239.331,
+      "en": "She's your posh the beaten the to.",
+      "zh": "她是你被打败的豪华轿车。",
+      "conf": 0.734,
+      "split_from_cut": false
+    },
+    {
+      "idx": 29,
+      "src_cue": 29,
+      "start": 240.501,
+      "end": 241.186,
+      "en": "The honest.",
+      "zh": "诚实的人。",
+      "conf": 1,
+      "split_from_cut": false
+    },
+    {
+      "idx": 30,
+      "src_cue": 30,
+      "start": 244.521,
+      "end": 245.296,
+      "en": "Reminder.",
+      "zh": "余量",
+      "conf": 1,
+      "split_from_cut": false
+    },
+    {
+      "idx": 31,
+      "src_cue": 31,
+      "start": 246.219,
+      "end": 246.82,
+      "en": "Love.",
+      "zh": "爱。",
+      "conf": 1,
+      "split_from_cut": false
+    },
+    {
+      "idx": 32,
+      "src_cue": 32,
+      "start": 291.771,
+      "end": 292.471,
+      "en": "Ah.",
+      "zh": "诶，啊",
+      "conf": 0.688,
+      "split_from_cut": false
+    },
+    {
+      "idx": 33,
+      "src_cue": 33,
+      "start": 295.731,
+      "end": 297.381,
+      "en": "Memory override in progress.",
+      "zh": "内存覆盖正在进行中。",
+      "conf": 0.964,
+      "split_from_cut": false
+    },
+    {
+      "idx": 34,
+      "src_cue": 34,
+      "start": 298.221,
+      "end": 299.011,
+      "en": "Character.",
+      "zh": "角色",
+      "conf": 0.832,
+      "split_from_cut": false
+    },
+    {
+      "idx": 35,
+      "src_cue": 35,
+      "start": 301.071,
+      "end": 303.081,
+      "en": "Ah i'm sorry sorry.",
+      "zh": "啊，对不起，对不起。",
+      "conf": 0.833,
+      "split_from_cut": false
+    },
+    {
+      "idx": 36,
+      "src_cue": 36,
+      "start": 314.961,
+      "end": 315.721,
+      "en": "Look celia.",
+      "zh": "看看Celia。",
+      "conf": 0.84,
+      "split_from_cut": false
+    },
+    {
+      "idx": 37,
+      "src_cue": 37,
+      "start": 317.361,
+      "end": 319.281,
+      "en": "We have to follow our passions.",
+      "zh": "我们必须追随我们的激情。",
+      "conf": 0.953,
+      "split_from_cut": false
+    },
+    {
+      "idx": 38,
+      "src_cue": 38,
+      "start": 320.331,
+      "end": 321.741,
+      "en": "You have your robotics.",
+      "zh": "你有你的机器人。",
+      "conf": 1,
+      "split_from_cut": false
+    },
+    {
+      "idx": 39,
+      "src_cue": 39,
+      "start": 324.831,
+      "end": 326.721,
+      "en": "I just want to be awesome in space.",
+      "zh": "我只想在太空中表现出色。",
+      "conf": 0.906,
+      "split_from_cut": false
+    },
+    {
+      "idx": 40,
+      "src_cue": 40,
+      "start": 338.061,
+      "end": 340.041,
+      "en": "That are coming in two minutes left.",
+      "zh": "还有两分钟就到了。",
+      "conf": 0.893,
+      "split_from_cut": false
+    },
+    {
+      "idx": 41,
+      "src_cue": 41,
+      "start": 345.981,
+      "end": 347.451,
+      "en": "Financial just admit that you're freaked out by my robot ham.",
+      "zh": "财务只是承认你被我的机器人火腿吓坏了",
+      "conf": 0.812,
+      "split_from_cut": false
+    },
+    {
+      "idx": 42,
+      "src_cue": 42,
+      "start": 347.451,
+      "end": 348.921,
+      "en": "Financial just admit that you're freaked out by my robot ham.",
+      "zh": "。",
+      "conf": 0.812,
+      "split_from_cut": false
+    },
+    {
+      "idx": 43,
+      "src_cue": 43,
+      "start": 355.851,
+      "end": 357.801,
+      "en": "This celia I was young.",
+      "zh": "这个Celia我很年轻。",
+      "conf": 0.926,
+      "split_from_cut": false
+    },
+    {
+      "idx": 44,
+      "src_cue": 44,
+      "start": 358.971,
+      "end": 360.486,
+      "en": "And a dick, but there's no reason to destroy the world.",
+      "zh": "还有一个鸡巴，但没有理由毁灭这个世界",
+      "conf": 0.964,
+      "split_from_cut": false
+    },
+    {
+      "idx": 45,
+      "src_cue": 45,
+      "start": 360.486,
+      "end": 362.001,
+      "en": "And a dick, but there's no reason to destroy the world.",
+      "zh": "。",
+      "conf": 0.964,
+      "split_from_cut": false
+    },
+    {
+      "idx": 46,
+      "src_cue": 46,
+      "start": 364.011,
+      "end": 364.821,
+      "en": "Why does she do this?",
+      "zh": "她为什么要这么做？",
+      "conf": 0.96,
+      "split_from_cut": false
+    },
+    {
+      "idx": 47,
+      "src_cue": 47,
+      "start": 366.051,
+      "end": 367.491,
+      "en": "We already tried that one.",
+      "zh": "我们已经试过了。",
+      "conf": 0.854,
+      "split_from_cut": false
+    },
+    {
+      "idx": 48,
+      "src_cue": 48,
+      "start": 382.491,
+      "end": 383.811,
+      "en": "You broke my heart.",
+      "zh": "扎心了，老铁",
+      "conf": 0.884,
+      "split_from_cut": false
+    },
+    {
+      "idx": 49,
+      "src_cue": 49,
+      "start": 386.121,
+      "end": 387.681,
+      "en": "You forgot we earth.",
+      "zh": "你忘了我们地球。",
+      "conf": 0.778,
+      "split_from_cut": false
+    },
+    {
+      "idx": 50,
+      "src_cue": 50,
+      "start": 388.431,
+      "end": 390.891,
+      "en": "Know I should just trash.",
+      "zh": "知道我应该扔垃圾。",
+      "conf": 0.921,
+      "split_from_cut": false
+    },
+    {
+      "idx": 51,
+      "src_cue": 51,
+      "start": 406.671,
+      "end": 407.521,
+      "en": "Sorry. Sorry. Sorry.",
+      "zh": "抱歉！為了防範濫發郵件，評論或留言中不允許有 URL 和電郵Id",
+      "conf": 1,
+      "split_from_cut": false
+    },
+    {
+      "idx": 54,
+      "src_cue": 54,
+      "start": 409.461,
+      "end": 410.116,
+      "en": "That live.",
+      "zh": "那活着。",
+      "conf": 0.651,
+      "split_from_cut": false
+    },
+    {
+      "idx": 55,
+      "src_cue": 55,
+      "start": 418.311,
+      "end": 419.071,
+      "en": "Well my ball.",
+      "zh": "好吧，我的球。",
+      "conf": 0.713,
+      "split_from_cut": false
+    },
+    {
+      "idx": 56,
+      "src_cue": 56,
+      "start": 421.311,
+      "end": 421.936,
+      "en": "This time.",
+      "zh": "本次",
+      "conf": 0.597,
+      "split_from_cut": false
+    },
+    {
+      "idx": 57,
+      "src_cue": 57,
+      "start": 427.521,
+      "end": 428.146,
+      "en": "While.",
+      "zh": "在安装时发生错误 : .",
+      "conf": 0.633,
+      "split_from_cut": false
+    },
+    {
+      "idx": 58,
+      "src_cue": 58,
+      "start": 429.983,
+      "end": 430.583,
+      "en": "Ha.",
+      "zh": "（吸）哈~",
+      "conf": 0.501,
+      "split_from_cut": false
+    },
+    {
+      "idx": 59,
+      "src_cue": 59,
+      "start": 454.701,
+      "end": 457.491,
+      "en": "Oh!",
+      "zh": "“哇！",
+      "conf": 1,
+      "split_from_cut": false
+    },
+    {
+      "idx": 60,
+      "src_cue": 60,
+      "start": 503.781,
+      "end": 504.711,
+      "en": "Nine he was gonna.",
+      "zh": "第九，他本来要去的。",
+      "conf": 0.6,
+      "split_from_cut": false
+    },
+    {
+      "idx": 61,
+      "src_cue": 61,
+      "start": 505.461,
+      "end": 507.261,
+      "en": "Happen then, we have come on.",
+      "zh": "那么就发生了，我们来吧。",
+      "conf": 0.629,
+      "split_from_cut": false
+    },
+    {
+      "idx": 62,
+      "src_cue": 62,
+      "start": 518.061,
+      "end": 519.411,
+      "en": "The world's changed celia.",
+      "zh": "世界改变了Celia。",
+      "conf": 0.951,
+      "split_from_cut": false
+    },
+    {
+      "idx": 63,
+      "src_cue": 63,
+      "start": 534.081,
+      "end": 535.041,
+      "en": "Maybe we can to.",
+      "zh": "也许我们可以。",
+      "conf": 0.882,
+      "split_from_cut": false
+    },
+    {
+      "idx": 64,
+      "src_cue": 64,
+      "start": 537.201,
+      "end": 538.401,
+      "en": "Remarkably.",
+      "zh": "显著",
+      "conf": 1,
+      "split_from_cut": false
+    },
+    {
+      "idx": 65,
+      "src_cue": 65,
+      "start": 558.141,
+      "end": 558.741,
+      "en": "You know.",
+      "zh": "你知道的。",
+      "conf": 1,
+      "split_from_cut": false
+    },
+    {
+      "idx": 66,
+      "src_cue": 66,
+      "start": 560.991,
+      "end": 562.551,
+      "en": "Is a listen to blurred from this?",
+      "zh": "听力是否模糊不清？",
+      "conf": 0.762,
+      "split_from_cut": false
+    },
+    {
+      "idx": 67,
+      "src_cue": 67,
+      "start": 565.011,
+      "end": 565.821,
+      "en": "That are gone worse.",
+      "zh": "情况变得更糟了。",
+      "conf": 0.936,
+      "split_from_cut": false
+    },
+    {
+      "idx": 68,
+      "src_cue": 68,
+      "start": 592.221,
+      "end": 597.261,
+      "en": "That.",
+      "zh": "即",
+      "conf": 0.692,
+      "split_from_cut": false
+    },
+    {
+      "idx": 69,
+      "src_cue": 69,
+      "start": 734.423,
+      "end": 739.403,
+      "en": "We have made aged starlet or three two one.",
+      "zh": "我们制作了年迈的小明星或三二一。",
+      "conf": 0.944,
+      "split_from_cut": false
+    },
+    {
+      "idx": 70,
+      "src_cue": 70,
+      "start": 753.803,
+      "end": 755.223,
+      "en": "Tom look celia we have to follow our passions you have your",
+      "zh": "Tom看起来Celia ，",
+      "conf": 0.835,
+      "split_from_cut": false
+    },
+    {
+      "idx": 71,
+      "src_cue": 71,
+      "start": 755.223,
+      "end": 756.643,
+      "en": "Tom look celia we have to follow our passions you have your",
+      "zh": "我们必须追随我们的热情，",
+      "conf": 0.835,
+      "split_from_cut": false
+    },
+    {
+      "idx": 72,
+      "src_cue": 72,
+      "start": 756.643,
+      "end": 758.063,
+      "en": "Tom look celia we have to follow our passions you have yourrobotics.",
+      "zh": "你有你的机器人。",
+      "conf": 0.835,
+      "split_from_cut": false
+    },
+    {
+      "idx": 73,
+      "src_cue": 73,
+      "start": 758.063,
+      "end": 760.623,
+      "en": "And I just want to be awesome his space why don't you just admit",
+      "zh": "我只是想让他的空间变得很棒，",
+      "conf": 0.883,
+      "split_from_cut": false
+    },
+    {
+      "idx": 74,
+      "src_cue": 74,
+      "start": 760.623,
+      "end": 763.183,
+      "en": "that your freaked out by my role one hand i'm a freedom, but",
+      "zh": "你为什么不承认你被我的角色吓坏了，",
+      "conf": 0.883,
+      "split_from_cut": false
+    },
+    {
+      "idx": 75,
+      "src_cue": 75,
+      "start": 763.183,
+      "end": 765.743,
+      "en": "it's.",
+      "zh": "一方面我是一个自由，但它是。",
+      "conf": 0.883,
+      "split_from_cut": false
+    },
+    {
+      "idx": 76,
+      "src_cue": 76,
+      "start": 767.363,
+      "end": 769.778,
+      "en": "Alright fine i'm freaked out and having nightmares that think",
+      "zh": "好吧，我吓坏了，做着认为她是的噩梦，",
+      "conf": 0.778,
+      "split_from_cut": false
+    },
+    {
+      "idx": 77,
+      "src_cue": 77,
+      "start": 769.778,
+      "end": 772.193,
+      "en": "she's, but he's dying will wow.",
+      "zh": "但他快死了，会哇。",
+      "conf": 0.778,
+      "split_from_cut": false
+    },
+    {
+      "idx": 78,
+      "src_cue": 78,
+      "start": 773.993,
+      "end": 774.863,
+      "en": "Well done.",
+      "zh": "做得很好。",
+      "conf": 1,
+      "split_from_cut": false
+    },
+    {
+      "idx": 79,
+      "src_cue": 79,
+      "start": 779.843,
+      "end": 783.293,
+      "en": "Robots memory sing and lot.",
+      "zh": "机器人记忆唱歌和很多。",
+      "conf": 0.82,
+      "split_from_cut": false
+    },
+    {
+      "idx": 80,
+      "src_cue": 80,
+      "start": 790.643,
+      "end": 791.268,
+      "en": "Disease.",
+      "zh": "是 關於 疾病 的",
+      "conf": 0.77,
+      "split_from_cut": false
+    },
+    {
+      "idx": 81,
+      "src_cue": 81,
+      "start": 847.433,
+      "end": 848.393,
+      "en": "Should you be donor?",
+      "zh": "您应该成为捐赠者吗？",
+      "conf": 0.901,
+      "split_from_cut": false
+    },
+    {
+      "idx": 82,
+      "src_cue": 82,
+      "start": 861.113,
+      "end": 862.613,
+      "en": "I heard you guys talking most night.",
+      "zh": "我听到你们大多数晚上都在说话。",
+      "conf": 0.824,
+      "split_from_cut": false
+    },
+    {
+      "idx": 83,
+      "src_cue": 83,
+      "start": 866.213,
+      "end": 867.053,
+      "en": "Still by for.",
+      "zh": "仍由为提供。",
+      "conf": 0.754,
+      "split_from_cut": false
+    },
+    {
+      "idx": 84,
+      "src_cue": 84,
+      "start": 921.173,
+      "end": 922.778,
+      "en": "Are you ready cause you're ready your a rock star?",
+      "zh": "你准备好了吗，因为你已经准备好成为摇",
+      "conf": 0.917,
+      "split_from_cut": false
+    },
+    {
+      "idx": 85,
+      "src_cue": 85,
+      "start": 922.778,
+      "end": 924.383,
+      "en": "Are you ready cause you're ready your a rock star?",
+      "zh": "滚明星了？",
+      "conf": 0.917,
+      "split_from_cut": false
+    },
+    {
+      "idx": 86,
+      "src_cue": 86,
+      "start": 926.933,
+      "end": 928.598,
+      "en": "I wasn't looking body we should have about ten minutes.",
+      "zh": "我没有看身体，我们应该有十分钟左右的",
+      "conf": 0.929,
+      "split_from_cut": false
+    },
+    {
+      "idx": 87,
+      "src_cue": 87,
+      "start": 928.598,
+      "end": 930.263,
+      "en": "I wasn't looking body we should have about ten minutes.",
+      "zh": "时间。",
+      "conf": 0.929,
+      "split_from_cut": false
+    },
+    {
+      "idx": 88,
+      "src_cue": 88,
+      "start": 931.463,
+      "end": 932.483,
+      "en": "Well that's perfect.",
+      "zh": "太好了。",
+      "conf": 0.877,
+      "split_from_cut": false
+    },
+    {
+      "idx": 89,
+      "src_cue": 89,
+      "start": 933.473,
+      "end": 938.423,
+      "en": "We're on a want all systems go go go go.",
+      "zh": "我们希望所有系统都去去去去。",
+      "conf": 0.738,
+      "split_from_cut": false
+    },
+    {
+      "idx": 90,
+      "src_cue": 90,
+      "start": 952.613,
+      "end": 953.633,
+      "en": "That's nice.",
+      "zh": "太好了。",
+      "conf": 1,
+      "split_from_cut": false
+    },
+    {
+      "idx": 91,
+      "src_cue": 91,
+      "start": 954.413,
+      "end": 955.673,
+      "en": "Nothing to worry about that.",
+      "zh": "不足为虑。",
+      "conf": 0.969,
+      "split_from_cut": false
+    },
+    {
+      "idx": 92,
+      "src_cue": 92,
+      "start": 961.853,
+      "end": 962.613,
+      "en": "Dishes.",
+      "zh": "菜肴",
+      "conf": 0.914,
+      "split_from_cut": false
+    },
+    {
+      "idx": 93,
+      "src_cue": 93,
+      "start": 963.473,
+      "end": 964.073,
+      "en": "Now.",
+      "zh": "现今阶段，",
+      "conf": 0.51,
+      "split_from_cut": false
+    },
+    {
+      "idx": 94,
+      "src_cue": 94,
+      "start": 965.183,
+      "end": 965.913,
+      "en": "You love.",
+      "zh": "每一刻",
+      "conf": 0.76,
+      "split_from_cut": false
+    },
+    {
+      "idx": 95,
+      "src_cue": 95,
+      "start": 967.223,
+      "end": 968.648,
+      "en": "She's your bash the be tended that.",
+      "zh": "她是你的bash the be te",
+      "conf": 0.687,
+      "split_from_cut": false
+    },
+    {
+      "idx": 96,
+      "src_cue": 96,
+      "start": 968.648,
+      "end": 970.073,
+      "en": "She's your bash the be tended that.",
+      "zh": "nded that.",
+      "conf": 0.687,
+      "split_from_cut": false
+    },
+    {
+      "idx": 97,
+      "src_cue": 97,
+      "start": 971.273,
+      "end": 971.973,
+      "en": "The honest.",
+      "zh": "诚实的人。",
+      "conf": 0.816,
+      "split_from_cut": false
+    },
+    {
+      "idx": 98,
+      "src_cue": 98,
+      "start": 977.003,
+      "end": 977.603,
+      "en": "Love.",
+      "zh": "爱。",
+      "conf": 1,
+      "split_from_cut": false
+    },
+    {
+      "idx": 99,
+      "src_cue": 99,
+      "start": 1022.543,
+      "end": 1023.243,
+      "en": "Ah.",
+      "zh": "诶，啊",
+      "conf": 0.71,
+      "split_from_cut": false
+    },
+    {
+      "idx": 100,
+      "src_cue": 100,
+      "start": 1026.533,
+      "end": 1028.153,
+      "en": "Memory override in progress.",
+      "zh": "内存覆盖正在进行中。",
+      "conf": 0.917,
+      "split_from_cut": false
+    },
+    {
+      "idx": 101,
+      "src_cue": 101,
+      "start": 1028.993,
+      "end": 1029.783,
+      "en": "Character.",
+      "zh": "角色",
+      "conf": 0.307,
+      "split_from_cut": false
+    },
+    {
+      "idx": 102,
+      "src_cue": 102,
+      "start": 1031.873,
+      "end": 1033.913,
+      "en": "Oh i'm sorry sorry!",
+      "zh": "哦，对不起，对不起！",
+      "conf": 0.835,
+      "split_from_cut": false
+    },
+    {
+      "idx": 103,
+      "src_cue": 103,
+      "start": 1045.763,
+      "end": 1046.523,
+      "en": "Look celia.",
+      "zh": "看看Celia。",
+      "conf": 0.64,
+      "split_from_cut": false
+    },
+    {
+      "idx": 104,
+      "src_cue": 104,
+      "start": 1048.133,
+      "end": 1050.053,
+      "en": "You have to follow our passions.",
+      "zh": "你必须追随我们的热情。",
+      "conf": 0.948,
+      "split_from_cut": false
+    },
+    {
+      "idx": 105,
+      "src_cue": 105,
+      "start": 1051.133,
+      "end": 1052.543,
+      "en": "You have your robotics.",
+      "zh": "你有你的机器人。",
+      "conf": 1,
+      "split_from_cut": false
+    },
+    {
+      "idx": 106,
+      "src_cue": 106,
+      "start": 1055.603,
+      "end": 1057.493,
+      "en": "I just want to be awesome in space.",
+      "zh": "我只想在太空中表现出色。",
+      "conf": 0.864,
+      "split_from_cut": false
+    },
+    {
+      "idx": 107,
+      "src_cue": 107,
+      "start": 1068.953,
+      "end": 1070.843,
+      "en": "That are coming in two minutes left.",
+      "zh": "还有两分钟就到了。",
+      "conf": 0.908,
+      "split_from_cut": false
+    },
+    {
+      "idx": 108,
+      "src_cue": 108,
+      "start": 1076.753,
+      "end": 1078.238,
+      "en": "Why don't you just admit your freaked out by my robot him?",
+      "zh": "你为什么不承认你被我的机器人他吓坏了",
+      "conf": 0.872,
+      "split_from_cut": false
+    },
+    {
+      "idx": 109,
+      "src_cue": 109,
+      "start": 1078.238,
+      "end": 1079.723,
+      "en": "Why don't you just admit your freaked out by my robot him?",
+      "zh": "？",
+      "conf": 0.872,
+      "split_from_cut": false
+    },
+    {
+      "idx": 110,
+      "src_cue": 110,
+      "start": 1086.653,
+      "end": 1088.573,
+      "en": "This celia I was young.",
+      "zh": "这个Celia我很年轻。",
+      "conf": 0.928,
+      "split_from_cut": false
+    },
+    {
+      "idx": 111,
+      "src_cue": 111,
+      "start": 1089.773,
+      "end": 1091.273,
+      "en": "And a dick, but there's no reason to destroy the world.",
+      "zh": "还有一个鸡巴，但没有理由毁灭这个世界",
+      "conf": 1,
+      "split_from_cut": false
+    },
+    {
+      "idx": 112,
+      "src_cue": 112,
+      "start": 1091.273,
+      "end": 1092.773,
+      "en": "And a dick, but there's no reason to destroy the world.",
+      "zh": "。",
+      "conf": 1,
+      "split_from_cut": false
+    },
+    {
+      "idx": 113,
+      "src_cue": 113,
+      "start": 1094.813,
+      "end": 1095.603,
+      "en": "Why does he do this?",
+      "zh": "他为什么要这么做？",
+      "conf": 0.906,
+      "split_from_cut": false
+    },
+    {
+      "idx": 114,
+      "src_cue": 114,
+      "start": 1096.823,
+      "end": 1098.263,
+      "en": "We already tried that one.",
+      "zh": "我们已经试过了。",
+      "conf": 0.921,
+      "split_from_cut": false
+    },
+    {
+      "idx": 115,
+      "src_cue": 115,
+      "start": 1113.293,
+      "end": 1114.583,
+      "en": "You broke my heart.",
+      "zh": "扎心了，老铁",
+      "conf": 0.975,
+      "split_from_cut": false
+    },
+    {
+      "idx": 116,
+      "src_cue": 116,
+      "start": 1116.893,
+      "end": 1118.393,
+      "en": "You forgot we honor is.",
+      "zh": "你忘了我们的荣誉是。",
+      "conf": 0.747,
+      "split_from_cut": false
+    },
+    {
+      "idx": 117,
+      "src_cue": 117,
+      "start": 1119.203,
+      "end": 1121.663,
+      "en": "Know I should just dress.",
+      "zh": "知道我应该只穿衣服。",
+      "conf": 0.862,
+      "split_from_cut": false
+    },
+    {
+      "idx": 118,
+      "src_cue": 118,
+      "start": 1126.853,
+      "end": 1127.453,
+      "en": "On.",
+      "zh": "开",
+      "conf": 0.658,
+      "split_from_cut": false
+    },
+    {
+      "idx": 119,
+      "src_cue": 119,
+      "start": 1137.503,
+      "end": 1138.328,
+      "en": "Sorry. Sorry. Sorry.",
+      "zh": "抱歉！為了防範濫發郵件，評論或留言中不允許有 URL 和電郵Id",
+      "conf": 1,
+      "split_from_cut": false
+    },
+    {
+      "idx": 122,
+      "src_cue": 122,
+      "start": 1140.203,
+      "end": 1140.858,
+      "en": "The live.",
+      "zh": "现场直播。",
+      "conf": 0.629,
+      "split_from_cut": false
+    },
+    {
+      "idx": 123,
+      "src_cue": 123,
+      "start": 1149.113,
+      "end": 1149.858,
+      "en": "Well my boss.",
+      "zh": "好吧，我的老板。",
+      "conf": 0.809,
+      "split_from_cut": false
+    },
+    {
+      "idx": 124,
+      "src_cue": 124,
+      "start": 1152.113,
+      "end": 1152.723,
+      "en": "This time.",
+      "zh": "本次",
+      "conf": 0.731,
+      "split_from_cut": false
+    },
+    {
+      "idx": 125,
+      "src_cue": 125,
+      "start": 1158.323,
+      "end": 1158.933,
+      "en": "While.",
+      "zh": "在安装时发生错误 : .",
+      "conf": 0.605,
+      "split_from_cut": false
+    },
+    {
+      "idx": 126,
+      "src_cue": 126,
+      "start": 1160.813,
+      "end": 1161.413,
+      "en": "Hi.",
+      "zh": "嗨",
+      "conf": 1,
+      "split_from_cut": false
+    },
+    {
+      "idx": 127,
+      "src_cue": 127,
+      "start": 1233.813,
+      "end": 1235.433,
+      "en": "Emery operate and ninety percent.",
+      "zh": "Emery运营和百分之九十。",
+      "conf": 0.633,
+      "split_from_cut": false
+    },
+    {
+      "idx": 128,
+      "src_cue": 128,
+      "start": 1236.273,
+      "end": 1238.013,
+      "en": "Captain we have a boy.",
+      "zh": "船长，我们有一个男孩。",
+      "conf": 1,
+      "split_from_cut": false
+    },
+    {
+      "idx": 129,
+      "src_cue": 129,
+      "start": 1248.963,
+      "end": 1250.193,
+      "en": "The world's changed celia.",
+      "zh": "世界改变了Celia。",
+      "conf": 1,
+      "split_from_cut": false
+    },
+    {
+      "idx": 130,
+      "src_cue": 130,
+      "start": 1264.863,
+      "end": 1265.793,
+      "en": "Maybe we can to.",
+      "zh": "也许我们可以。",
+      "conf": 0.867,
+      "split_from_cut": false
+    },
+    {
+      "idx": 131,
+      "src_cue": 131,
+      "start": 1268.359,
+      "end": 1269.183,
+      "en": "Right probably.",
+      "zh": "或许吧。",
+      "conf": 0.66,
+      "split_from_cut": false
+    },
+    {
+      "idx": 132,
+      "src_cue": 132,
+      "start": 1288.923,
+      "end": 1289.523,
+      "en": "You know.",
+      "zh": "你知道的。",
+      "conf": 1,
+      "split_from_cut": false
+    },
+    {
+      "idx": 133,
+      "src_cue": 133,
+      "start": 1291.743,
+      "end": 1293.333,
+      "en": "There's a listen to be learned from this.",
+      "zh": "我们可以从中吸取教训。",
+      "conf": 0.95,
+      "split_from_cut": false
+    },
+    {
+      "idx": 134,
+      "src_cue": 134,
+      "start": 1295.793,
+      "end": 1296.603,
+      "en": "That are gone worse.",
+      "zh": "情况变得更糟了。",
+      "conf": 0.964,
+      "split_from_cut": false
+    },
+    {
+      "idx": 135,
+      "src_cue": 135,
+      "start": 1379.793,
+      "end": 1385.343,
+      "en": "But.",
+      "zh": "但是……",
+      "conf": 0.486,
+      "split_from_cut": false
+    },
+    {
+      "idx": 136,
+      "src_cue": 136,
+      "start": 1465.223,
+      "end": 1466.843,
+      "en": "We have made it should start.",
+      "zh": "我们已经开始了。",
+      "conf": 0.927,
+      "split_from_cut": false
+    },
+    {
+      "idx": 137,
+      "src_cue": 137,
+      "start": 1468.913,
+      "end": 1469.513,
+      "en": "To.",
+      "zh": "致.",
+      "conf": 0.319,
+      "split_from_cut": false
+    },
+    {
+      "idx": 138,
+      "src_cue": 138,
+      "start": 1484.111,
+      "end": 1486.295,
+      "en": "Jerk tom look celia would have to follow our passions you have",
+      "zh": "Jerk tom看起来Celia必须",
+      "conf": 0.906,
+      "split_from_cut": false
+    },
+    {
+      "idx": 139,
+      "src_cue": 139,
+      "start": 1486.295,
+      "end": 1488.479,
+      "en": "Jerk tom look celia would have to follow our passions you haveyour robotics and I just want to be awesome his face.",
+      "zh": "跟随我们的热情，你有你的机器人，",
+      "conf": 0.906,
+      "split_from_cut": false
+    },
+    {
+      "idx": 140,
+      "src_cue": 140,
+      "start": 1488.479,
+      "end": 1490.663,
+      "en": "your robotics and I just want to be awesome his face.",
+      "zh": "我只想让他的脸看起来很棒。",
+      "conf": 0.906,
+      "split_from_cut": false
+    },
+    {
+      "idx": 141,
+      "src_cue": 141,
+      "start": 1491.443,
+      "end": 1492.853,
+      "en": "Don't you just admit you're your.",
+      "zh": "不要只是承认你是你的。",
+      "conf": 0.72,
+      "split_from_cut": false
+    },
+    {
+      "idx": 142,
+      "src_cue": 142,
+      "start": 1493.716,
+      "end": 1495.13,
+      "en": "By my role one hand and the freedom, but it's.",
+      "zh": "一方面是因为我的角色和自由，",
+      "conf": 0.861,
+      "split_from_cut": false
+    },
+    {
+      "idx": 143,
+      "src_cue": 143,
+      "start": 1495.13,
+      "end": 1496.543,
+      "en": "By my role one hand and the freedom, but it's.",
+      "zh": "但事实的确如此。",
+      "conf": 0.861,
+      "split_from_cut": false
+    },
+    {
+      "idx": 144,
+      "src_cue": 144,
+      "start": 1498.133,
+      "end": 1500.608,
+      "en": "Alright fine I freaked out on having nightmares don't think",
+      "zh": "好吧，我被噩梦吓坏了，不认为她是，",
+      "conf": 0.841,
+      "split_from_cut": false
+    },
+    {
+      "idx": 145,
+      "src_cue": 145,
+      "start": 1500.608,
+      "end": 1503.083,
+      "en": "she's, but he's dying glass.",
+      "zh": "但他是垂死的玻璃。",
+      "conf": 0.841,
+      "split_from_cut": false
+    },
+    {
+      "idx": 146,
+      "src_cue": 146,
+      "start": 1504.793,
+      "end": 1505.633,
+      "en": "Well done.",
+      "zh": "做得很好。",
+      "conf": 1,
+      "split_from_cut": false
+    },
+    {
+      "idx": 147,
+      "src_cue": 147,
+      "start": 1510.613,
+      "end": 1514.063,
+      "en": "Robots memory sink and lot.",
+      "zh": "机器人记忆水槽和很多。",
+      "conf": 0.765,
+      "split_from_cut": false
+    },
+    {
+      "idx": 148,
+      "src_cue": 148,
+      "start": 1521.443,
+      "end": 1522.883,
+      "en": "This is pretty freaky.",
+      "zh": "这太奇怪了。",
+      "conf": 0.913,
+      "split_from_cut": false
+    },
+    {
+      "idx": 149,
+      "src_cue": 149,
+      "start": 1578.203,
+      "end": 1579.163,
+      "en": "Should you be donor?",
+      "zh": "您应该成为捐赠者吗？",
+      "conf": 1,
+      "split_from_cut": false
+    },
+    {
+      "idx": 150,
+      "src_cue": 150,
+      "start": 1591.883,
+      "end": 1593.413,
+      "en": "I urge guys talking most night.",
+      "zh": "我强烈建议大家晚上多聊天。",
+      "conf": 0.746,
+      "split_from_cut": false
+    },
+    {
+      "idx": 151,
+      "src_cue": 151,
+      "start": 1597.013,
+      "end": 1597.823,
+      "en": "Stop by for!",
+      "zh": "顺便来看看！",
+      "conf": 1,
+      "split_from_cut": false
+    },
+    {
+      "idx": 152,
+      "src_cue": 152,
+      "start": 1651.943,
+      "end": 1653.563,
+      "en": "Are you ready cause you're ready you're a rock star?",
+      "zh": "你准备好了吗，因为你已经准备好成为一",
+      "conf": 0.873,
+      "split_from_cut": false
+    },
+    {
+      "idx": 153,
+      "src_cue": 153,
+      "start": 1653.563,
+      "end": 1655.183,
+      "en": "Are you ready cause you're ready you're a rock star?",
+      "zh": "名摇滚明星了？",
+      "conf": 0.873,
+      "split_from_cut": false
+    },
+    {
+      "idx": 154,
+      "src_cue": 154,
+      "start": 1657.733,
+      "end": 1659.383,
+      "en": "As it look body we should have about ten minutes.",
+      "zh": "看起来像身体，我们应该有大约十分钟的",
+      "conf": 0.806,
+      "split_from_cut": false
+    },
+    {
+      "idx": 155,
+      "src_cue": 155,
+      "start": 1659.383,
+      "end": 1661.033,
+      "en": "As it look body we should have about ten minutes.",
+      "zh": "时间。",
+      "conf": 0.806,
+      "split_from_cut": false
+    },
+    {
+      "idx": 156,
+      "src_cue": 156,
+      "start": 1662.263,
+      "end": 1663.343,
+      "en": "Well that's perfect.",
+      "zh": "太好了。",
+      "conf": 0.871,
+      "split_from_cut": false
+    },
+    {
+      "idx": 157,
+      "src_cue": 157,
+      "start": 1665.683,
+      "end": 1667.403,
+      "en": "Well system go.",
+      "zh": "Well system go.",
+      "conf": 0.716,
+      "split_from_cut": false
+    },
+    {
+      "idx": 158,
+      "src_cue": 158,
+      "start": 1683.443,
+      "end": 1684.403,
+      "en": "That's nice.",
+      "zh": "太好了。",
+      "conf": 1,
+      "split_from_cut": false
+    },
+    {
+      "idx": 159,
+      "src_cue": 159,
+      "start": 1685.183,
+      "end": 1686.443,
+      "en": "Nothing to worry about that.",
+      "zh": "不足为虑。",
+      "conf": 0.968,
+      "split_from_cut": false
+    },
+    {
+      "idx": 160,
+      "src_cue": 160,
+      "start": 1692.653,
+      "end": 1693.383,
+      "en": "Dishes.",
+      "zh": "菜肴",
+      "conf": 0.781,
+      "split_from_cut": false
+    },
+    {
+      "idx": 161,
+      "src_cue": 161,
+      "start": 1695.953,
+      "end": 1696.683,
+      "en": "You laugh.",
+      "zh": "你笑了。",
+      "conf": 0.761,
+      "split_from_cut": false
+    },
+    {
+      "idx": 162,
+      "src_cue": 162,
+      "start": 1697.993,
+      "end": 1700.903,
+      "en": "She's your bash the pretended to.",
+      "zh": "她是你假装的狂欢者。",
+      "conf": 1,
+      "split_from_cut": false
+    },
+    {
+      "idx": 163,
+      "src_cue": 163,
+      "start": 1702.043,
+      "end": 1702.743,
+      "en": "Be honest.",
+      "zh": "要坦诚。",
+      "conf": 1,
+      "split_from_cut": false
+    },
+    {
+      "idx": 164,
+      "src_cue": 164,
+      "start": 1707.773,
+      "end": 1708.383,
+      "en": "Love.",
+      "zh": "爱。",
+      "conf": 1,
+      "split_from_cut": false
+    },
+    {
+      "idx": 165,
+      "src_cue": 165,
+      "start": 1753.313,
+      "end": 1754.028,
+      "en": "I.",
+      "zh": "一",
+      "conf": 0.528,
+      "split_from_cut": false
+    },
+    {
+      "idx": 166,
+      "src_cue": 166,
+      "start": 1757.333,
+      "end": 1758.923,
+      "en": "Every override in progress.",
+      "zh": "每次覆盖都在进行中。",
+      "conf": 0.817,
+      "split_from_cut": false
+    },
+    {
+      "idx": 167,
+      "src_cue": 167,
+      "start": 1759.793,
+      "end": 1760.568,
+      "en": "Director.",
+      "zh": "主任",
+      "conf": 0.262,
+      "split_from_cut": false
+    },
+    {
+      "idx": 168,
+      "src_cue": 168,
+      "start": 1762.643,
+      "end": 1764.683,
+      "en": "Ah i'm sorry sorry.",
+      "zh": "啊，对不起，对不起。",
+      "conf": 0.863,
+      "split_from_cut": false
+    },
+    {
+      "idx": 169,
+      "src_cue": 169,
+      "start": 1776.533,
+      "end": 1777.293,
+      "en": "Look celia.",
+      "zh": "看看Celia。",
+      "conf": 0.817,
+      "split_from_cut": false
+    },
+    {
+      "idx": 170,
+      "src_cue": 170,
+      "start": 1778.903,
+      "end": 1780.853,
+      "en": "We have to follow our passions.",
+      "zh": "我们必须追随我们的激情。",
+      "conf": 0.94,
+      "split_from_cut": false
+    },
+    {
+      "idx": 171,
+      "src_cue": 171,
+      "start": 1781.903,
+      "end": 1783.313,
+      "en": "You have your robotics.",
+      "zh": "你有你的机器人。",
+      "conf": 1,
+      "split_from_cut": false
+    },
+    {
+      "idx": 172,
+      "src_cue": 172,
+      "start": 1785.713,
+      "end": 1788.293,
+      "en": "And I just wanna be awesome in space.",
+      "zh": "我只想在太空中表现出色。",
+      "conf": 0.887,
+      "split_from_cut": false
+    },
+    {
+      "idx": 173,
+      "src_cue": 173,
+      "start": 1799.963,
+      "end": 1801.613,
+      "en": "Come in two minutes left.",
+      "zh": "还剩两分钟。",
+      "conf": 0.957,
+      "split_from_cut": false
+    },
+    {
+      "idx": 174,
+      "src_cue": 174,
+      "start": 1807.443,
+      "end": 1808.973,
+      "en": "Right don't suggest that me that your freaked out by my robot",
+      "zh": "好吧，不要说你被我的机器人吓坏了。",
+      "conf": 0.859,
+      "split_from_cut": false
+    },
+    {
+      "idx": 175,
+      "src_cue": 175,
+      "start": 1808.973,
+      "end": 1810.503,
+      "en": "him.",
+      "zh": "好吧，不要说你被我的机器人吓坏了。",
+      "conf": 0.859,
+      "split_from_cut": false
+    },
+    {
+      "idx": 176,
+      "src_cue": 176,
+      "start": 1817.433,
+      "end": 1819.353,
+      "en": "This celia I was young.",
+      "zh": "这个Celia我很年轻。",
+      "conf": 0.855,
+      "split_from_cut": false
+    },
+    {
+      "idx": 177,
+      "src_cue": 177,
+      "start": 1820.553,
+      "end": 1822.053,
+      "en": "And a dick, but there's no reason to destroy the world.",
+      "zh": "还有一个鸡巴，但没有理由毁灭这个世界",
+      "conf": 0.98,
+      "split_from_cut": false
+    },
+    {
+      "idx": 178,
+      "src_cue": 178,
+      "start": 1822.053,
+      "end": 1823.553,
+      "en": "And a dick, but there's no reason to destroy the world.",
+      "zh": "。",
+      "conf": 0.98,
+      "split_from_cut": false
+    },
+    {
+      "idx": 179,
+      "src_cue": 179,
+      "start": 1825.593,
+      "end": 1826.383,
+      "en": "Why does he do this?",
+      "zh": "他为什么要这么做？",
+      "conf": 0.941,
+      "split_from_cut": false
+    },
+    {
+      "idx": 180,
+      "src_cue": 180,
+      "start": 1827.603,
+      "end": 1829.043,
+      "en": "We already tried that one.",
+      "zh": "我们已经试过了。",
+      "conf": 0.92,
+      "split_from_cut": false
+    },
+    {
+      "idx": 181,
+      "src_cue": 181,
+      "start": 1844.073,
+      "end": 1845.363,
+      "en": "You broke my heart.",
+      "zh": "扎心了，老铁",
+      "conf": 0.605,
+      "split_from_cut": false
+    },
+    {
+      "idx": 182,
+      "src_cue": 182,
+      "start": 1847.673,
+      "end": 1849.173,
+      "en": "You forgot we on earth.",
+      "zh": "你把我们忘在地球上了。",
+      "conf": 0.974,
+      "split_from_cut": false
+    },
+    {
+      "idx": 183,
+      "src_cue": 183,
+      "start": 1851.033,
+      "end": 1852.443,
+      "en": "I should just trash.",
+      "zh": "我应该扔垃圾。",
+      "conf": 0.905,
+      "split_from_cut": false
+    },
+    {
+      "idx": 184,
+      "src_cue": 184,
+      "start": 1857.663,
+      "end": 1858.263,
+      "en": "On.",
+      "zh": "开",
+      "conf": 0.459,
+      "split_from_cut": false
+    },
+    {
+      "idx": 185,
+      "src_cue": 185,
+      "start": 1868.253,
+      "end": 1869.103,
+      "en": "Sorry. Sorry. Sorry.",
+      "zh": "抱歉！為了防範濫發郵件，評論或留言中不允許有 URL 和電郵Id",
+      "conf": 1,
+      "split_from_cut": false
+    },
+    {
+      "idx": 188,
+      "src_cue": 188,
+      "start": 1870.983,
+      "end": 1871.653,
+      "en": "The live.",
+      "zh": "现场直播。",
+      "conf": 0.647,
+      "split_from_cut": false
+    },
+    {
+      "idx": 189,
+      "src_cue": 189,
+      "start": 1879.893,
+      "end": 1880.653,
+      "en": "Well my ball.",
+      "zh": "好吧，我的球。",
+      "conf": 0.739,
+      "split_from_cut": false
+    },
+    {
+      "idx": 190,
+      "src_cue": 190,
+      "start": 1882.893,
+      "end": 1883.503,
+      "en": "This time.",
+      "zh": "本次",
+      "conf": 0.615,
+      "split_from_cut": false
+    },
+    {
+      "idx": 191,
+      "src_cue": 191,
+      "start": 1889.103,
+      "end": 1889.703,
+      "en": "Why?",
+      "zh": "为什么？",
+      "conf": 0.907,
+      "split_from_cut": false
+    },
+    {
+      "idx": 192,
+      "src_cue": 192,
+      "start": 1891.353,
+      "end": 1891.953,
+      "en": "Not.",
+      "zh": "不扣除",
+      "conf": 0.907,
+      "split_from_cut": false
+    },
+    {
+      "idx": 193,
+      "src_cue": 193,
+      "start": 1965.003,
+      "end": 1966.233,
+      "en": "Right and ninety percent.",
+      "zh": "对，百分之九十。",
+      "conf": 0.802,
+      "split_from_cut": false
+    },
+    {
+      "idx": 194,
+      "src_cue": 194,
+      "start": 1966.983,
+      "end": 1968.933,
+      "en": "Captain we have a month.",
+      "zh": "船长，我们还有一个月的时间。",
+      "conf": 0.65,
+      "split_from_cut": false
+    },
+    {
+      "idx": 195,
+      "src_cue": 195,
+      "start": 1979.733,
+      "end": 1980.963,
+      "en": "The world's changed celia.",
+      "zh": "世界改变了Celia。",
+      "conf": 0.955,
+      "split_from_cut": false
+    },
+    {
+      "idx": 196,
+      "src_cue": 196,
+      "start": 1995.633,
+      "end": 1996.623,
+      "en": "Maybe we can to.",
+      "zh": "也许我们可以。",
+      "conf": 0.873,
+      "split_from_cut": false
+    },
+    {
+      "idx": 197,
+      "src_cue": 197,
+      "start": 1998.753,
+      "end": 2000.013,
+      "en": "Remarkably.",
+      "zh": "显著",
+      "conf": 1,
+      "split_from_cut": false
+    },
+    {
+      "idx": 198,
+      "src_cue": 198,
+      "start": 2019.693,
+      "end": 2020.303,
+      "en": "You know.",
+      "zh": "你知道的。",
+      "conf": 1,
+      "split_from_cut": false
+    },
+    {
+      "idx": 199,
+      "src_cue": 199,
+      "start": 2022.543,
+      "end": 2024.133,
+      "en": "Is listen to be learned from this?",
+      "zh": "倾听是否可以从中吸取教训？",
+      "conf": 0.886,
+      "split_from_cut": false
+    },
+    {
+      "idx": 200,
+      "src_cue": 200,
+      "start": 2026.563,
+      "end": 2027.373,
+      "en": "That are gone worse.",
+      "zh": "情况变得更糟了。",
+      "conf": 0.836,
+      "split_from_cut": false
+    },
+    {
+      "idx": 201,
+      "src_cue": 201,
+      "start": 2054.103,
+      "end": 2059.143,
+      "en": "That.",
+      "zh": "即",
+      "conf": 0.864,
+      "split_from_cut": false
+    },
+    {
+      "idx": 202,
+      "src_cue": 202,
+      "start": 2069.943,
+      "end": 2074.983,
+      "en": "That.",
+      "zh": "即",
+      "conf": 0.469,
+      "split_from_cut": false
+    },
+    {
+      "idx": 203,
+      "src_cue": 203,
+      "start": 2110.983,
+      "end": 2119.533,
+      "en": "By.",
+      "zh": "按",
+      "conf": 0.409,
+      "split_from_cut": false
+    },
+    {
+      "idx": 204,
+      "src_cue": 204,
+      "start": 2195.993,
+      "end": 2197.613,
+      "en": "We have made a start.",
+      "zh": "我们已有了良好的开始。",
+      "conf": 0.9,
+      "split_from_cut": false
+    },
+    {
+      "idx": 205,
+      "src_cue": 205,
+      "start": 2198.873,
+      "end": 2200.913,
+      "en": "Three two one.",
+      "zh": "三二一",
+      "conf": 0.74,
+      "split_from_cut": false
+    },
+    {
+      "idx": 206,
+      "src_cue": 206,
+      "start": 2214.923,
+      "end": 2216.55,
+      "en": "Jerk tom look celia we have to follow our passions you have your",
+      "zh": "Jerk tom看起来Celia ，",
+      "conf": 0.953,
+      "split_from_cut": false
+    },
+    {
+      "idx": 207,
+      "src_cue": 207,
+      "start": 2216.55,
+      "end": 2218.178,
+      "en": "Jerk tom look celia we have to follow our passions you have your",
+      "zh": "我们必须追随我们的热情，",
+      "conf": 0.953,
+      "split_from_cut": false
+    },
+    {
+      "idx": 208,
+      "src_cue": 208,
+      "start": 2218.178,
+      "end": 2219.806,
+      "en": "Jerk tom look celia we have to follow our passions you have yourrobotics and I just want to be awesome his face.",
+      "zh": "你有你的机器人，我只想让他的脸看起来",
+      "conf": 0.953,
+      "split_from_cut": false
+    },
+    {
+      "idx": 209,
+      "src_cue": 209,
+      "start": 2219.806,
+      "end": 2221.433,
+      "en": "robotics and I just want to be awesome his face.",
+      "zh": "很棒。",
+      "conf": 0.953,
+      "split_from_cut": false
+    },
+    {
+      "idx": 210,
+      "src_cue": 210,
+      "start": 2222.165,
+      "end": 2223.653,
+      "en": "Don't you just admit that you're.",
+      "zh": "你不要只是承认你是。",
+      "conf": 0.861,
+      "split_from_cut": false
+    },
+    {
+      "idx": 211,
+      "src_cue": 211,
+      "start": 2224.493,
+      "end": 2227.313,
+      "en": "My my I robot hand and the freedom, but it's.",
+      "zh": "我的我的机器人手和自由，但它是。",
+      "conf": 0.676,
+      "split_from_cut": false
+    },
+    {
+      "idx": 212,
+      "src_cue": 212,
+      "start": 2228.933,
+      "end": 2230.898,
+      "en": "Alright fine I freaked out and having nightmares that i'm think",
+      "zh": "好吧，我吓坏了，做了我认为她会做的噩",
+      "conf": 0.782,
+      "split_from_cut": false
+    },
+    {
+      "idx": 213,
+      "src_cue": 213,
+      "start": 2230.898,
+      "end": 2232.863,
+      "en": "she's, but he's dying.",
+      "zh": "梦，但他快死了。",
+      "conf": 0.782,
+      "split_from_cut": false
+    },
+    {
+      "idx": 214,
+      "src_cue": 214,
+      "start": 2235.593,
+      "end": 2236.403,
+      "en": "Well done.",
+      "zh": "做得很好。",
+      "conf": 1,
+      "split_from_cut": false
+    },
+    {
+      "idx": 215,
+      "src_cue": 215,
+      "start": 2241.413,
+      "end": 2244.863,
+      "en": "Robots memory sing and lot.",
+      "zh": "机器人记忆唱歌和很多。",
+      "conf": 0.818,
+      "split_from_cut": false
+    },
+    {
+      "idx": 216,
+      "src_cue": 216,
+      "start": 2252.243,
+      "end": 2253.653,
+      "en": "This is pretty freaky.",
+      "zh": "这太奇怪了。",
+      "conf": 0.909,
+      "split_from_cut": false
+    },
+    {
+      "idx": 217,
+      "src_cue": 217,
+      "start": 2308.973,
+      "end": 2309.963,
+      "en": "Should you be donor?",
+      "zh": "您应该成为捐赠者吗？",
+      "conf": 0.963,
+      "split_from_cut": false
+    },
+    {
+      "idx": 218,
+      "src_cue": 218,
+      "start": 2322.683,
+      "end": 2324.183,
+      "en": "I heard you guys talking last night.",
+      "zh": "我昨晚听到你们在说话。",
+      "conf": 0.804,
+      "split_from_cut": false
+    },
+    {
+      "idx": 219,
+      "src_cue": 219,
+      "start": 2327.813,
+      "end": 2328.623,
+      "en": "Stop by for!",
+      "zh": "顺便来看看！",
+      "conf": 1,
+      "split_from_cut": false
+    },
+    {
+      "idx": 220,
+      "src_cue": 220,
+      "start": 2382.743,
+      "end": 2384.348,
+      "en": "Are you ready cause you're ready your a rock star?",
+      "zh": "你准备好了吗，因为你已经准备好成为摇",
+      "conf": 0.868,
+      "split_from_cut": false
+    },
+    {
+      "idx": 221,
+      "src_cue": 221,
+      "start": 2384.348,
+      "end": 2385.953,
+      "en": "Are you ready cause you're ready your a rock star?",
+      "zh": "滚明星了？",
+      "conf": 0.868,
+      "split_from_cut": false
+    },
+    {
+      "idx": 222,
+      "src_cue": 222,
+      "start": 2388.503,
+      "end": 2390.168,
+      "en": "As wasn't looking body we should have about ten minutes.",
+      "zh": "由于身体看起来不像，",
+      "conf": 0.832,
+      "split_from_cut": false
+    },
+    {
+      "idx": 223,
+      "src_cue": 223,
+      "start": 2390.168,
+      "end": 2391.833,
+      "en": "As wasn't looking body we should have about ten minutes.",
+      "zh": "我们应该有大约十分钟的时间。",
+      "conf": 0.832,
+      "split_from_cut": false
+    },
+    {
+      "idx": 224,
+      "src_cue": 224,
+      "start": 2393.063,
+      "end": 2394.053,
+      "en": "Well that's perfect.",
+      "zh": "太好了。",
+      "conf": 1,
+      "split_from_cut": false
+    },
+    {
+      "idx": 225,
+      "src_cue": 225,
+      "start": 2396.483,
+      "end": 2398.991,
+      "en": "All systems go go go.",
+      "zh": "所有系统都去去去。",
+      "conf": 0.87,
+      "split_from_cut": false
+    },
+    {
+      "idx": 226,
+      "src_cue": 226,
+      "start": 2414.193,
+      "end": 2415.183,
+      "en": "That's nice.",
+      "zh": "太好了。",
+      "conf": 1,
+      "split_from_cut": false
+    },
+    {
+      "idx": 227,
+      "src_cue": 227,
+      "start": 2415.963,
+      "end": 2417.253,
+      "en": "Nothing to worry about that.",
+      "zh": "不足为虑。",
+      "conf": 0.876,
+      "split_from_cut": false
+    },
+    {
+      "idx": 228,
+      "src_cue": 228,
+      "start": 2423.433,
+      "end": 2424.163,
+      "en": "Do she's?",
+      "zh": "是吗？",
+      "conf": 0.941,
+      "split_from_cut": false
+    },
+    {
+      "idx": 229,
+      "src_cue": 229,
+      "start": 2424.993,
+      "end": 2425.593,
+      "en": "Now.",
+      "zh": "现今阶段，",
+      "conf": 0.474,
+      "split_from_cut": false
+    },
+    {
+      "idx": 230,
+      "src_cue": 230,
+      "start": 2426.733,
+      "end": 2427.463,
+      "en": "You love.",
+      "zh": "每一刻",
+      "conf": 1,
+      "split_from_cut": false
+    },
+    {
+      "idx": 231,
+      "src_cue": 231,
+      "start": 2428.803,
+      "end": 2431.732,
+      "en": "She's your bash the be beaten the to.",
+      "zh": "她是你被打败的拳击手。",
+      "conf": 0.764,
+      "split_from_cut": false
+    },
+    {
+      "idx": 232,
+      "src_cue": 232,
+      "start": 2432.823,
+      "end": 2433.523,
+      "en": "Be honest.",
+      "zh": "要坦诚。",
+      "conf": 0.846,
+      "split_from_cut": false
+    },
+    {
+      "idx": 233,
+      "src_cue": 233,
+      "start": 2435.013,
+      "end": 2435.638,
+      "en": "Britain.",
+      "zh": "英国",
+      "conf": 0.578,
+      "split_from_cut": false
+    },
+    {
+      "idx": 234,
+      "src_cue": 234,
+      "start": 2436.873,
+      "end": 2438.973,
+      "en": "Reminder would love.",
+      "zh": "提醒您一定会喜欢的。",
+      "conf": 0.967,
+      "split_from_cut": false
+    },
+    {
+      "idx": 235,
+      "src_cue": 235,
+      "start": 2484.093,
+      "end": 2484.823,
+      "en": "I.",
+      "zh": "一",
+      "conf": 0.674,
+      "split_from_cut": false
+    },
+    {
+      "idx": 236,
+      "src_cue": 236,
+      "start": 2488.083,
+      "end": 2489.703,
+      "en": "Every override in progress.",
+      "zh": "每次覆盖都在进行中。",
+      "conf": 0.876,
+      "split_from_cut": false
+    },
+    {
+      "idx": 237,
+      "src_cue": 237,
+      "start": 2490.573,
+      "end": 2491.383,
+      "en": "You're a jerk.",
+      "zh": "你这混蛋",
+      "conf": 1,
+      "split_from_cut": false
+    },
+    {
+      "idx": 238,
+      "src_cue": 238,
+      "start": 2493.423,
+      "end": 2495.433,
+      "en": "Oh i'm sorry sorry!",
+      "zh": "哦，对不起，对不起！",
+      "conf": 1,
+      "split_from_cut": false
+    },
+    {
+      "idx": 239,
+      "src_cue": 239,
+      "start": 2507.313,
+      "end": 2508.088,
+      "en": "Look celia.",
+      "zh": "看看Celia。",
+      "conf": 0.811,
+      "split_from_cut": false
+    },
+    {
+      "idx": 240,
+      "src_cue": 240,
+      "start": 2509.683,
+      "end": 2511.603,
+      "en": "We have to follow our passions.",
+      "zh": "我们必须追随我们的激情。",
+      "conf": 0.958,
+      "split_from_cut": false
+    },
+    {
+      "idx": 241,
+      "src_cue": 241,
+      "start": 2512.683,
+      "end": 2514.093,
+      "en": "You have your robotics.",
+      "zh": "你有你的机器人。",
+      "conf": 1,
+      "split_from_cut": false
+    },
+    {
+      "idx": 242,
+      "src_cue": 242,
+      "start": 2516.493,
+      "end": 2519.073,
+      "en": "And I just wanna be awesome in space.",
+      "zh": "我只想在太空中表现出色。",
+      "conf": 0.927,
+      "split_from_cut": false
+    },
+    {
+      "idx": 243,
+      "src_cue": 243,
+      "start": 2530.473,
+      "end": 2532.393,
+      "en": "Get come in two minutes left.",
+      "zh": "请在两分钟后前来。",
+      "conf": 0.863,
+      "split_from_cut": false
+    },
+    {
+      "idx": 244,
+      "src_cue": 244,
+      "start": 2538.483,
+      "end": 2541.273,
+      "en": "Don't suggest that me that your freaked out by my robot him.",
+      "zh": "不要说你被我的机器人他吓坏了。",
+      "conf": 0.722,
+      "split_from_cut": false
+    },
+    {
+      "idx": 245,
+      "src_cue": 245,
+      "start": 2545.897,
+      "end": 2546.655,
+      "en": "The little.",
+      "zh": "小小的。",
+      "conf": 0.508,
+      "split_from_cut": false
+    },
+    {
+      "idx": 246,
+      "src_cue": 246,
+      "start": 2548.203,
+      "end": 2550.123,
+      "en": "This is celia I was young.",
+      "zh": "这是Celia ，我当时很年轻。",
+      "conf": 0.722,
+      "split_from_cut": false
+    },
+    {
+      "idx": 247,
+      "src_cue": 247,
+      "start": 2551.323,
+      "end": 2554.353,
+      "en": "At a dick, but there's no reason to destroy the world.",
+      "zh": "一个家伙，但没有理由毁灭世界。",
+      "conf": 0.959,
+      "split_from_cut": false
+    },
+    {
+      "idx": 248,
+      "src_cue": 248,
+      "start": 2556.363,
+      "end": 2557.173,
+      "en": "Why does she do this?",
+      "zh": "她为什么要这么做？",
+      "conf": 0.921,
+      "split_from_cut": false
+    },
+    {
+      "idx": 249,
+      "src_cue": 249,
+      "start": 2558.403,
+      "end": 2559.843,
+      "en": "We already tried that one.",
+      "zh": "我们已经试过了。",
+      "conf": 0.895,
+      "split_from_cut": false
+    },
+    {
+      "idx": 250,
+      "src_cue": 250,
+      "start": 2566.353,
+      "end": 2566.953,
+      "en": "The.",
+      "zh": "出...",
+      "conf": 0.513,
+      "split_from_cut": false
+    },
+    {
+      "idx": 251,
+      "src_cue": 251,
+      "start": 2575.593,
+      "end": 2576.263,
+      "en": "Mike hi.",
+      "zh": "Mike ，您好！",
+      "conf": 0.693,
+      "split_from_cut": false
+    },
+    {
+      "idx": 252,
+      "src_cue": 252,
+      "start": 2578.473,
+      "end": 2581.083,
+      "en": "You forgot we underestimate the know.",
+      "zh": "你忘了我们低估了知识。",
+      "conf": 0.821,
+      "split_from_cut": false
+    },
+    {
+      "idx": 253,
+      "src_cue": 253,
+      "start": 2581.803,
+      "end": 2583.243,
+      "en": "I should just trash.",
+      "zh": "我应该扔垃圾。",
+      "conf": 0.917,
+      "split_from_cut": false
+    },
+    {
+      "idx": 254,
+      "src_cue": 254,
+      "start": 2588.433,
+      "end": 2589.033,
+      "en": "I'm.",
+      "zh": "I",
+      "conf": 0.456,
+      "split_from_cut": false
+    },
+    {
+      "idx": 255,
+      "src_cue": 255,
+      "start": 2598.963,
+      "end": 2599.663,
+      "en": "I'm sorry.",
+      "zh": "对不起。",
+      "conf": 0.773,
+      "split_from_cut": false
+    },
+    {
+      "idx": 256,
+      "src_cue": 256,
+      "start": 2601.783,
+      "end": 2602.453,
+      "en": "That live.",
+      "zh": "那活着。",
+      "conf": 0.944,
+      "split_from_cut": false
+    },
+    {
+      "idx": 257,
+      "src_cue": 257,
+      "start": 2610.663,
+      "end": 2611.423,
+      "en": "Well my ball.",
+      "zh": "好吧，我的球。",
+      "conf": 0.735,
+      "split_from_cut": false
+    },
+    {
+      "idx": 258,
+      "src_cue": 258,
+      "start": 2613.663,
+      "end": 2614.288,
+      "en": "This time.",
+      "zh": "本次",
+      "conf": 1,
+      "split_from_cut": false
+    },
+    {
+      "idx": 259,
+      "src_cue": 259,
+      "start": 2619.873,
+      "end": 2620.498,
+      "en": "While.",
+      "zh": "在安装时发生错误 : .",
+      "conf": 0.733,
+      "split_from_cut": false
+    },
+    {
+      "idx": 260,
+      "src_cue": 260,
+      "start": 2622.123,
+      "end": 2622.723,
+      "en": "Right.",
+      "zh": "好的。",
+      "conf": 0.797,
+      "split_from_cut": false
+    },
+    {
+      "idx": 261,
+      "src_cue": 261,
+      "start": 2695.773,
+      "end": 2696.703,
+      "en": "Right and he was.",
+      "zh": "没错，他是。",
+      "conf": 0.683,
+      "split_from_cut": false
+    },
+    {
+      "idx": 262,
+      "src_cue": 262,
+      "start": 2697.448,
+      "end": 2698.048,
+      "en": "Then.",
+      "zh": "当时",
+      "conf": 0.883,
+      "split_from_cut": false
+    },
+    {
+      "idx": 263,
+      "src_cue": 263,
+      "start": 2698.623,
+      "end": 2699.583,
+      "en": "We have more.",
+      "zh": "我们有更多。",
+      "conf": 0.751,
+      "split_from_cut": false
+    },
+    {
+      "idx": 264,
+      "src_cue": 264,
+      "start": 2710.503,
+      "end": 2711.763,
+      "en": "The world's changed celia.",
+      "zh": "世界改变了Celia。",
+      "conf": 0.931,
+      "split_from_cut": false
+    },
+    {
+      "idx": 265,
+      "src_cue": 265,
+      "start": 2726.433,
+      "end": 2727.393,
+      "en": "Maybe we can to.",
+      "zh": "也许我们可以。",
+      "conf": 0.869,
+      "split_from_cut": false
+    },
+    {
+      "idx": 266,
+      "src_cue": 266,
+      "start": 2729.553,
+      "end": 2730.723,
+      "en": "Remarkably.",
+      "zh": "显著",
+      "conf": 1,
+      "split_from_cut": false
+    },
+    {
+      "idx": 267,
+      "src_cue": 267,
+      "start": 2750.493,
+      "end": 2751.093,
+      "en": "You know.",
+      "zh": "你知道的。",
+      "conf": 1,
+      "split_from_cut": false
+    },
+    {
+      "idx": 268,
+      "src_cue": 268,
+      "start": 2753.343,
+      "end": 2754.903,
+      "en": "Is a listen to be learned from this?",
+      "zh": "倾听是否可以从中吸取教训？",
+      "conf": 0.918,
+      "split_from_cut": false
+    },
+    {
+      "idx": 269,
+      "src_cue": 269,
+      "start": 2757.363,
+      "end": 2758.173,
+      "en": "That are gone worse.",
+      "zh": "情况变得更糟了。",
+      "conf": 0.958,
+      "split_from_cut": false
+    },
+    {
+      "idx": 270,
+      "src_cue": 270,
+      "start": 2784.753,
+      "end": 2790.003,
+      "en": "That.",
+      "zh": "即",
+      "conf": 1,
+      "split_from_cut": false
+    },
+    {
+      "idx": 271,
+      "src_cue": 271,
+      "start": 2816.673,
+      "end": 2819.823,
+      "en": "In around.",
+      "zh": "在附近。",
+      "conf": 0.537,
+      "split_from_cut": false
+    },
+    {
+      "idx": 272,
+      "src_cue": 272,
+      "start": 2841.633,
+      "end": 2850.303,
+      "en": "But.",
+      "zh": "但是……",
+      "conf": 0.451,
+      "split_from_cut": false
+    }
+  ]
+}

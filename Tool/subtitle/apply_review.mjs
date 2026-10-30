@@ -74,8 +74,11 @@ for (let k = 0; k < Math.min(dataRows.length, cues.length); k++) {
   } else if (Math.abs(st - c.start) > 0.0015 || Math.abs(en - c.end) > 0.0015) {
     retimed.push({ idx: idx, from: [c.start, c.end], to: [st, en] });
   }
-  const zh = String(r[iZh] || '').trim();
-  if (!zh) { errors.push(`${label}：zh 为空（漏译必须显式写内容，不能留空）`); continue; }
+  // 注意：只判"是否空白"，**不要 trim 后写回** —— 实测译文里确实存在有意义的前导空格
+  // （如 ` Id`），trim 会让"恒等回写"不再恒等（小循环 9 长片压测暴露：279 行里有 6 行因此对不上）。
+  const zhRaw = String(r[iZh] ?? '');
+  if (!zhRaw.trim()) { errors.push(`${label}：zh 为空（漏译必须显式写内容，不能留空）`); continue; }
+  const zh = zhRaw;
   const enText = String(r[iEn] || '').trim();
   if (!ALLOW_EN && enText !== String(c.en || '').trim()) {
     errors.push(`${label}：en 被改动（en 是重映射/高亮的锚点，请只改 zh）`);

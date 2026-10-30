@@ -1,0 +1,54 @@
+{
+  "generated_at": "2026-10-30T06:34:44.719Z",
+  "minutes": 49,
+  "src": "Workspace\\assets\\longbench\\source_long.mp4",
+  "timings": {
+    "make_src": 0.1,
+    "cut": 0,
+    "remap": 0.1,
+    "export_review": 0.1,
+    "apply_review": 0.1,
+    "export_term": 0.1,
+    "cut_subbed": 0,
+    "qa": 58.1
+  },
+  "words": 1091,
+  "sentences": 286,
+  "cues": 273,
+  "cues_remap": 267,
+  "review_rows": 273,
+  "review_flags": {
+    "en_residual": 28,
+    "sp_gap": 17,
+    "cps_over": 6
+  },
+  "apply_ms": 75,
+  "term_audit": {
+    "lufs": {
+      "term": "LUFS",
+      "rows_in_en": 1,
+      "canonical": 0,
+      "variant": 0,
+      "missing": 1,
+      "variants": {
+        "(缺)": 1
+      }
+    },
+    "flagged_rows": 1
+  },
+  "final": {
+    "duration_s": 2924.3,
+    "size_mb": 361.3,
+    "qa_verdict": "WARN",
+    "lufs": -16.3
+  },
+  "checks": {
+    "ran_end_to_end": true,
+    "final_long_enough": true,
+    "cues_scale": true,
+    "review_roundtrip_at_scale": true,
+    "term_audit_catches_split": true,
+    "qa_not_fail": true
+  },
+  "pass": true
+}

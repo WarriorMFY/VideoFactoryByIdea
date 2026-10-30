@@ -1,0 +1,26 @@
+{
+  "generated_at": "2026-10-30T06:33:46.452Z",
+  "source_cues": "D:\\Data\\DeepseekHarness\\IdeaDrivenLoop\\VideoFactory\\History\\runs\\l9_long\\subs\\cues.json",
+  "mt_backend": "mymemory",
+  "rows": 273,
+  "params": {
+    "cps_limit": 20,
+    "max_zh": 18
+  },
+  "flag_counts": {
+    "en_residual": 28,
+    "sp_gap": 17,
+    "cps_over": 6
+  },
+  "term_audit": {
+    "glossary": "Tool\\subtitle\\glossary_zh.json",
+    "canonical_terms": [
+      "LUFS",
+      "Mbps",
+      "16 LUFS"
+    ],
+    "stats": [],
+    "note": "term_missing = 英文里出现了该术语但中文里找不到规范写法（常见原因：被行宽切行切断）；term_variant = 译成了术语表里记录的错法。"
+  },
+  "instructions": "只改 zh 列（可留空 reviewer_note 写备注）。不要改 idx/start/end/en，否则回写会被拒绝（时间码可用 --allow-retime 强制接受）。"
+}

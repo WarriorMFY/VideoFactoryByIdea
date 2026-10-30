@@ -1,0 +1,21 @@
+{
+  "file": "D:\\Data\\DeepseekHarness\\IdeaDrivenLoop\\VideoFactory\\Workspace\\assets\\longbench\\source_long.mp4",
+  "duration": 2940.041667,
+  "format": "mov,mp4,m4a,3gp,3g2,mj2",
+  "size": 1488820302,
+  "bitrate": 4051154,
+  "video": {
+    "codec": "h264",
+    "width": 1280,
+    "height": 534,
+    "fps": "24/1",
+    "pix_fmt": "yuv420p",
+    "nb_frames": "70561"
+  },
+  "audio": {
+    "codec": "mp3",
+    "sample_rate": "44100",
+    "channels": 2,
+    "bitrate": "191980"
+  }
+}

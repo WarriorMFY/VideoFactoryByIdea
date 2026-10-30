@@ -60,7 +60,9 @@ node Tool\subtitle\apply_review.mjs  work\subs\cues.json work\review\review.csv 
 node Tool\edit\vfactory.mjs 原片.mp4 --out out\final --srt work\reviewed\bilingual.srt
 ```
 
-- 导出时会打标：`cps_over`（读太快）/`zh_long`（太长）/`en_residual`（残留英文）/`sp_gap`（中英缺空格）/`empty_zh`（漏译），给人"先看哪儿"。
+- 导出时会打标：`cps_over`（读太快）/`zh_long`（太长）/`en_residual`（残留英文）/`sp_gap`（中英缺空格）/`empty_zh`（漏译），
+  外加**术语一致性审计**（小循环 9）：`term_missing`（英文里有 `LUFS`/`Mbps` 这类术语，中文里找不到规范写法——最常见就是被行宽切行切断）、
+  `term_variant`（译成了术语表里记录的错法，如「卢夫斯」）。术语统计写在 `review.json` 的 `term_audit`。
 - 回写会逐项校验，**任一不合格就拒绝写入并报行号**：行数、idx 顺序、时间码被改、`en` 被改、`zh` 为空。
   确实要改时间码时用 `--allow-retime`（会记进 `review_report.json`）；改原文用 `--allow-en-edit`（`en` 是高亮锚点，慎用）。
 - 恒等测试：导出→不改→回写，`cues.json` 与 `bilingual.srt` 逐字节一致（`Tool/acceptance/run_review_acceptance.mjs`）。
