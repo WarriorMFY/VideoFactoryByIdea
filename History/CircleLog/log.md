@@ -13,8 +13,8 @@
 | 大循环 | **进行中**（人控）。时间窗口 2026-10-27 10:44 → 2026-10-31 10:44；已用约 **78h / 96h**，剩余 **18 小时**（截至 2026-10-30 17:30） |
 | 已完成小循环 | **1 ✅（自动剪辑）· 2 ✅（外语→中文字幕）· 3 ✅（真实素材+语音保护）· 4 ✅（多样本）· 5 ✅（逐词高亮，含抖动 v2）· 6 ✅（文本层：标点/精译/节流）· 7 ✅（短句救援证伪 + 预处理链）· 8 ✅（校对回写闭环）· 9 ✅（49 分钟压测 + 术语审计）· 10 ✅（karaoke 长片规模）· 11 ✅（知识型链路：分诊/单位/术语）** |
 | 当前等待 | **人对小循环 7–11 的反馈**。关键待决策仍是：**换不换 ASR 模型**（唯一能提高质量上限的动作，需要模型文件/下载通道/ASR 接口） |
-| 代码/仓库状态 | git 干净；分支 `main`；共 13+ 次提交；无未跟踪残留（视频/大素材按 `.gitignore` 不入库，本地保留） |
-| 远端 | `origin` = https://github.com/WarriorMFY/VideoFactoryByIdea.git（公开，默认分支 main）。**已推送**（2026-10-29 11:40，HEAD `395adfb`）：当时 `main` 与远端一致（0/0），GitHub API 独立确认。坑：git 默认 Schannel 握手失败 → 本仓库固定 `http.sslBackend=openssl`；凭据助手经 `sh.exe` 被沙箱拒 → 用 GCM 直取凭据 + `http.extraheader`。详见 `Tool/env.md` 第〇节。后续只在人明确要求时再推 |
+| 代码/仓库状态 | git 干净；分支 `main`；入库 960 文件 / 20.3MB（视频与大素材按 `.gitignore` 不入库，本地保留 6.36GB） | |
+| 远端 | `origin` = https://github.com/WarriorMFY/VideoFactoryByIdea.git（公开，默认分支 main）。**已推送**：2026-10-30 17:36，`80a7150 → 0cc37c2`（9 个提交），push exit=0；三方核对一致——`git ls-remote` = `0cc37c2`、`rev-list --left-right` = **0/0**、GitHub API `commits/main` = `0cc37c2`（pushed_at 2026-10-30T09:36Z，仓库 size 34,746KB）。坑：git 默认 Schannel 握手失败 → 本仓库固定 `http.sslBackend=openssl`；凭据助手经 `sh.exe` 被沙箱拒 → 用 GCM 直取凭据 + `http.extraheader`（脚本 `Workspace/cache/push_with_gcm.ps1`）。详见 `Tool/env.md` 第〇节。后续只在人明确要求时再推 | |
 | 可交付能力 | 自动删减成片（真值 IoU 1.000/0.998，误删 0s）· 外语→中文字幕（TTS 素材 WER 6.1%、覆盖 99.8%）· 真实素材**对白不会被剪**（语音保护）· 双语逐词高亮（长片 1030 事件/0.1s）· 标点恢复 + 精译 · **人工校对回写闭环** · **能扛 49 分钟长片**（48.7 分钟成片、273 条字幕） |
 | 已知最大短板 | **真实影视混音下识别不可靠**（WER 28.4%、覆盖 50–60%，1–3 词短句只覆盖 11–14%）。小循环 7 已证明这是**模型能力上限**（干净 TTS 能识别 8/10、原片混音 0/10、7 条预处理链全失败）→ 只能换 Whisper 级模型，而本机 HF/ModelScope 全域不可达 |
 | 其它短板 | 全自动机翻只到"能看懂"（发布走精译或人工校对）· 语音保护会连带保住"对白压黑屏" · 语义级断句未做 · 术语审计不认复数变形 · GUI 剪辑软件本机装不上（沙箱只可写工作区） |
@@ -194,4 +194,18 @@
 | 关键数据 | 直连失败 21.3s / 56.1s，网络好时 1.2s 成功；镜像成功 25.9–46.3s，偶发 500/502（2.3–17.3s）；杀子进程只能 `child.kill('SIGKILL')`（3ms 生效），`taskkill /T /F` 被沙箱拒（exit 1）；`http.lowSpeedTime=20` 会误杀慢镜像，已改 90s |
 | 验证 | 四条验收全过：`state` 可读 · `pull --check` 在 78s/38s 内给结论（直连失败自动切镜像）· `run --stall 4` 打黑洞地址 4.0s 被看门狗杀掉 · `clone octocat/Hello-World` 成功且 origin 为规范地址。留痕：`History/probe/gitnet.md`、`History/probe/gitnet_killtest.log`、`History/probe/gitnet_acceptance.log` |
 | 状态 | 新增文件**未提交、未推送**（`Tool/Git/`、`History/probe/gitnet*`，以及对 `Tool/Tool.md`、`Tool/env.md` 的改动）。仓库仍在等"人对小循环 3 的反馈"，本轮不改变大循环状态与时间窗口 |
+| 人工反馈 | （待填） |
+
+---
+
+## 维护记录 · 2026-10-30 17:36 · 推送至远端（用户明确指令："推送到远端仓库"）
+
+| 项 | 内容 |
+| --- | --- |
+| 触发 | 用户明确要求推送（按红线：只有人明确说推才推） |
+| 范围 | `main`：`80a7150 → 0cc37c2`，共 **9 个提交**（loop6 收尾、loop7+8、loop9、loop10、loop11 及相关 docs/status 提交） |
+| 方式 | 复用 `Workspace/cache/push_with_gcm.ps1`：GCM 取凭据 → `git -c credential.helper= -c "http.extraheader=Authorization: Basic …" push -u origin main`（本仓库固定 `http.sslBackend=openssl`；git 写 stderr 属正常，退出码只看 `$LASTEXITCODE`） |
+| 结果 | `push exit=0`；`80a7150..0cc37c2  main -> main`。**三方核对一致**：`git ls-remote origin main` = `0cc37c2ffbd…`；`git fetch` 后 `rev-list --left-right --count origin/main...HEAD` = **0 / 0**；GitHub API `commits/main` = 同一 sha（pushed_at `2026-10-30T09:36:05Z`） |
+| 入库体积 | 本地 `.git` pack 33.93 MiB；GitHub 侧仓库 size **34,746 KB**。视频/大素材仍按 `.gitignore` 不入库（本地 6.36GB） |
+| 复核 | 推完后工作区干净；本地跟踪文件 960 个 / 20.3MB |
 | 人工反馈 | （待填） |
