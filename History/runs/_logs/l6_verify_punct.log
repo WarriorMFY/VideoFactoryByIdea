@@ -1,0 +1,7 @@
+
+=== 标点恢复验收: PASS ===
+句数：预测 7 vs 真值 7 OK
+句界：P 1.00 / R 1.00 / F1 1.00（容差 ±0.8s）
+句末标点准确率 100%　|　文本 WER 6.1%（应≈ASR 自身水平，说明只补标点没改词）
+逗号 F1 0.75（真值 9 个 / 预测 7 个，信息指标）
+判定: sentence_count=ok boundary_f1=ok end_punct=ok text_integrity=ok

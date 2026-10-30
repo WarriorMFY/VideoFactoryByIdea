@@ -1,0 +1,95 @@
+{
+  "checked_at": "2026-10-30T05:03:01.204Z",
+  "cues": "D:\\Data\\DeepseekHarness\\IdeaDrivenLoop\\VideoFactory\\History\\subs\\l2_punct\\cues.json",
+  "reference": "D:\\Data\\DeepseekHarness\\IdeaDrivenLoop\\VideoFactory\\History\\bench\\l2_en\\reference_zh.json",
+  "metric": "char-level similarity vs human reference (0–1)",
+  "note": "相似度只表示\"与人工译文的接近程度\"，不等于正确率；用于同一素材上的相对比较。",
+  "sentences": 7,
+  "mean_similarity": 0.472,
+  "defect_counts": {
+    "missing_end_punct": 0,
+    "term_errors": 0,
+    "leftover_english": 0,
+    "cjk_latin_no_space": 2
+  },
+  "defects": {
+    "missing_end_punct": [],
+    "term_errors": [],
+    "leftover_english": [],
+    "cjk_latin_no_space": [
+      5,
+      6
+    ]
+  },
+  "per_sentence": [
+    {
+      "idx": 0,
+      "en": "Welcome back to the workshop where return raw footage into finished films.",
+      "mt": "欢迎回到工作坊，将原始镜头放回成品胶片中。",
+      "ref": "欢迎回到工作坊，我们在这里把原始素材变成成片。",
+      "sim": 0.381
+    },
+    {
+      "idx": 1,
+      "en": "Today I will show you three simple tricks that save about two hours of editing time.",
+      "mt": "今天，我将向您展示三个简单的技巧，可以节省大约两个小时的编辑时间。",
+      "ref": "今天我会演示三个简单的小技巧，能省下大约两个小时的剪辑时间。",
+      "sim": 0.667
+    },
+    {
+      "idx": 2,
+      "en": "First, always cut on the beat, because rhythm is what keeps the audience awake.",
+      "mt": "首先，始终保持节拍，因为节奏是让观众保持清醒的原因。",
+      "ref": "第一，永远在节拍上剪，因为节奏才能让观众保持清醒。",
+      "sim": 0.435
+    },
+    {
+      "idx": 3,
+      "en": "Second, remove the silent gaps longer than half a second before you touch the colors.",
+      "mt": "其次，在触摸颜色之前，去除超过半秒钟的无声间隙。",
+      "ref": "第二，在碰调色之前，先把长度超过半秒的静音空隙去掉。",
+      "sim": 0.348
+    },
+    {
+      "idx": 4,
+      "en": "Third, normalize the audio to minus sixty sixteen l u fs, which is the standard for online video platforms.",
+      "mt": "第三，将音频标准化为零下六十六个LUFS ，这是在线视频平台的标准。",
+      "ref": "第三，把音频响度归一到负十六 LUFS，这是在线视频平台的标准。",
+      "sim": 0.7
+    },
+    {
+      "idx": 5,
+      "en": "Finally, export at fifteen megabits per second, and never trust the first render.",
+      "mt": "最后，以每秒 15 Mbps的速度导出，永远不要相信第一个渲染。",
+      "ref": "最后，以每秒十五兆的码率导出，而且永远不要相信第一次渲染。",
+      "sim": 0.593
+    },
+    {
+      "idx": 6,
+      "en": "That is it for this episode see you in the next one.",
+      "mt": "这一集到此结束，下一集见。",
+      "ref": "本期就到这里，我们下期见。",
+      "sim": 0.182
+    }
+  ],
+  "worst": [
+    {
+      "idx": 6,
+      "sim": 0.182,
+      "mt": "这一集到此结束，下一集见。",
+      "ref": "本期就到这里，我们下期见。"
+    },
+    {
+      "idx": 3,
+      "sim": 0.348,
+      "mt": "其次，在触摸颜色之前，去除超过半秒钟的无声间隙。",
+      "ref": "第二，在碰调色之前，先把长度超过半秒的静音空隙去掉。"
+    },
+    {
+      "idx": 0,
+      "sim": 0.381,
+      "mt": "欢迎回到工作坊，将原始镜头放回成品胶片中。",
+      "ref": "欢迎回到工作坊，我们在这里把原始素材变成成片。"
+    }
+  ]
+}

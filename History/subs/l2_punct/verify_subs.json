@@ -1,0 +1,109 @@
+{
+  "verdict": "PASS",
+  "mode": "with-reference（有讲稿真值）",
+  "thresholds": {
+    "wer": 0.25,
+    "cover": 0.95,
+    "boundMean": 0.8,
+    "boundMax": 1.5,
+    "cps_zh": 20,
+    "cps_en": 25
+  },
+  "wer": {
+    "refWords": 99,
+    "hypWords": 101,
+    "dist": 6,
+    "rate": 0.0606
+  },
+  "timing": {
+    "coverage_ratio": 0.9978,
+    "mean_boundary_err_s": 0.016,
+    "max_boundary_err_s": 0.045,
+    "sentences": [
+      {
+        "idx": 0,
+        "start": 0,
+        "end": 4.084,
+        "covered_ratio": 0.992,
+        "start_err": 0.03,
+        "end_err": 0.004
+      },
+      {
+        "idx": 1,
+        "start": 4.434,
+        "end": 8.778,
+        "covered_ratio": 1,
+        "start_err": 0.024,
+        "end_err": 0.012
+      },
+      {
+        "idx": 2,
+        "start": 9.128,
+        "end": 13.403,
+        "covered_ratio": 1,
+        "start_err": 0.008,
+        "end_err": 0.007
+      },
+      {
+        "idx": 3,
+        "start": 13.753,
+        "end": 18.475,
+        "covered_ratio": 1,
+        "start_err": 0.013,
+        "end_err": 0.005
+      },
+      {
+        "idx": 4,
+        "start": 18.825,
+        "end": 25.598,
+        "covered_ratio": 1,
+        "start_err": 0.045,
+        "end_err": 0.022
+      },
+      {
+        "idx": 5,
+        "start": 25.948,
+        "end": 30.772,
+        "covered_ratio": 1,
+        "start_err": 0.002,
+        "end_err": 0.008
+      },
+      {
+        "idx": 6,
+        "start": 31.122,
+        "end": 33.878,
+        "covered_ratio": 0.986,
+        "start_err": 0.012,
+        "end_err": 0.038
+      }
+    ]
+  },
+  "translate": {
+    "cues": 13,
+    "translated": 13,
+    "missing": 0,
+    "missing_samples": []
+  },
+  "readability": {
+    "max_zh_cps": 8.89,
+    "mean_zh_cps": 5.82,
+    "max_en_cps": 29.37
+  },
+  "remap": null,
+  "quality": null,
+  "pass": {
+    "wer": true,
+    "coverage": true,
+    "boundary_mean": true,
+    "boundary_max": true,
+    "translated": true,
+    "readability": true,
+    "remap": null
+  },
+  "source": {
+    "transcript": "D:\\Data\\DeepseekHarness\\IdeaDrivenLoop\\VideoFactory\\History\\asr\\transcript_punct.json",
+    "ground_truth": "D:\\Data\\DeepseekHarness\\IdeaDrivenLoop\\VideoFactory\\History\\bench\\l2_en\\ground_truth.json",
+    "cues": "D:\\Data\\DeepseekHarness\\IdeaDrivenLoop\\VideoFactory\\History\\subs\\l2_punct\\cues.json",
+    "remap": null
+  }
+}

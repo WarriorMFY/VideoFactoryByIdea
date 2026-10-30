@@ -16,6 +16,9 @@
 | `snapshot_loop4.mjs` | 把 loop4 产物整理成交付快照（成片/字幕/抽帧/判定数据） | `Prototype/loop4_multi_samples/cases/<id>/` |
 | `verify_karaoke.mjs` | **逐词高亮字幕验收**（小循环 5）：扫像素判断"高亮存在 / 不重影 / 高亮随语流移动" | `verify_karaoke.json` |
 | `diagnose_flicker.mjs` | **抖动诊断**（小循环 5 v2）：把 ASS 烧到纯黑底（隔离画面）后逐帧统计"英文行是否整行消失 / 高亮是否断档 / 文字块是否上下跳" | `flicker.json` |
+| `verify_punct.mjs` | **标点恢复验收**（小循环 6）：句界 F1 / 句末标点准确率 / 去标点后 WER（用讲稿真值） | `verify_punct.json` |
+| `verify_translation.mjs` | **翻译质量**（小循环 6）：与人工参考的相似度 + **缺陷计数**（句末缺标点/术语错误/残留英文/中英空格） | `mt_quality.json` |
+| `run_text_acceptance.mjs` | 小循环 6 一键验收：标点恢复 → 三种翻译变体横向对比 → 字幕链路回归 | `History/loops/loop06/acceptance.md` |
 
 ## 怎么用
 
@@ -42,6 +45,8 @@ node Tool\acceptance\qa_report.mjs  out\final.mp4 --json out\qa.json
 | 跨步骤一致性 | 两次渲染的 EDL 必须完全相同（否则字幕会错位） | 各 `run_*` 内置断言 |
 | 逐词高亮字幕 | 每个采样帧都检到高亮色；高亮块间最大空隙 <200px 且总宽 <480px（不重影）；不同词重心位移 ≥12px（跟随语流） | `verify_karaoke` |
 | 字幕抖动 | 连续 ≥2 帧整行缺失 = 0；连续 ≥2 帧高亮缺失 = 0；句内文字块上下边界位移 >4px 的次数 = 0（单帧 33ms 不计） | `diagnose_flicker` |
+| 标点恢复 | 句界 F1 ≥0.85、句末标点准确率 ≥85%、去标点后 WER ≤10% | `verify_punct` |
+| 翻译缺陷 | 句末缺标点 = 0、术语错误 = 0（相似度仅作参考） | `verify_translation` |
 
 ## 判定数据在哪
 

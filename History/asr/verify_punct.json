@@ -1,0 +1,124 @@
+{
+  "verdict": "PASS",
+  "checked_at": "2026-10-30T05:03:01.025Z",
+  "inputs": {
+    "transcript": "D:\\Data\\DeepseekHarness\\IdeaDrivenLoop\\VideoFactory\\History\\asr\\transcript_punct.json",
+    "script": "D:\\Data\\DeepseekHarness\\IdeaDrivenLoop\\VideoFactory\\History\\bench\\l2_en\\script.txt",
+    "gt": "D:\\Data\\DeepseekHarness\\IdeaDrivenLoop\\VideoFactory\\History\\bench\\l2_en\\ground_truth.json"
+  },
+  "thresholds": {
+    "boundaryF1": 0.85,
+    "endPunctAcc": 0.85,
+    "werMax": 0.1,
+    "commaF1Info": 0.5,
+    "tol_s": 0.8
+  },
+  "metrics": {
+    "predicted_sentences": 7,
+    "gt_sentences": 7,
+    "boundary": {
+      "tp": 7,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "end_punct_accuracy": 1,
+    "wer": {
+      "rate": 0.0606,
+      "dist": 6,
+      "refWords": 99
+    },
+    "comma": {
+      "gt": 9,
+      "pred": 7,
+      "f1": 0.75
+    }
+  },
+  "pass": {
+    "sentence_count": true,
+    "boundary_f1": true,
+    "end_punct": true,
+    "text_integrity": true
+  },
+  "matched": [
+    {
+      "pred": 0.03,
+      "gt": 0,
+      "d": 0.03,
+      "gtIdx": 0
+    },
+    {
+      "pred": 4.41,
+      "gt": 4.434,
+      "d": 0.024,
+      "gtIdx": 1
+    },
+    {
+      "pred": 9.12,
+      "gt": 9.128,
+      "d": 0.008,
+      "gtIdx": 2
+    },
+    {
+      "pred": 13.74,
+      "gt": 13.753,
+      "d": 0.013,
+      "gtIdx": 3
+    },
+    {
+      "pred": 18.78,
+      "gt": 18.825,
+      "d": 0.045,
+      "gtIdx": 4
+    },
+    {
+      "pred": 25.95,
+      "gt": 25.948,
+      "d": 0.002,
+      "gtIdx": 5
+    },
+    {
+      "pred": 31.11,
+      "gt": 31.122,
+      "d": 0.012,
+      "gtIdx": 6
+    }
+  ],
+  "predicted": [
+    {
+      "start": 0.03,
+      "end": 4.08,
+      "text": "Welcome back to the workshop where return raw footage into finished films."
+    },
+    {
+      "start": 4.41,
+      "end": 8.79,
+      "text": "Today I will show you three simple tricks that save about two hours of editing time."
+    },
+    {
+      "start": 9.12,
+      "end": 13.41,
+      "text": "First, always cut on the beat, because rhythm is what keeps the audience awake."
+    },
+    {
+      "start": 13.74,
+      "end": 18.48,
+      "text": "Second, remove the silent gaps longer than half a second before you touch the colors."
+    },
+    {
+      "start": 18.78,
+      "end": 25.62,
+      "text": "Third, normalize the audio to minus sixty sixteen l u fs, which is the standard for online video platforms."
+    },
+    {
+      "start": 25.95,
+      "end": 30.78,
+      "text": "Finally, export at fifteen megabits per second, and never trust the first render."
+    },
+    {
+      "start": 31.11,
+      "end": 33.84,
+      "text": "That is it for this episode see you in the next one."
+    }
+  ]
+}

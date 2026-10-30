@@ -1,0 +1,12 @@
+{
+  "_note": "人工级精译（按键=transcript_punct 的 sentences[].text 生成）",
+  "map": {
+    "Welcome back to the workshop where return raw footage into finished films.": "欢迎回到工作坊，我们在这里把原始素材变成成片。",
+    "Today I will show you three simple tricks that save about two hours of editing time.": "今天我会演示三个简单的小技巧，能省下大约两个小时的剪辑时间。",
+    "First, always cut on the beat, because rhythm is what keeps the audience awake.": "第一，永远在节拍上剪，因为节奏才能让观众保持清醒。",
+    "Second, remove the silent gaps longer than half a second before you touch the colors.": "第二，在碰调色之前，先把长度超过半秒的静音空隙去掉。",
+    "Third, normalize the audio to minus sixty sixteen l u fs, which is the standard for online video platforms.": "第三，把音频响度归一到 −16 LUFS，这是在线视频平台的标准。",
+    "Finally, export at fifteen megabits per second, and never trust the first render.": "最后，以 15 Mbps 导出，而且永远不要相信第一次渲染。",
+    "That is it for this episode see you in the next one.": "本期就到这里，我们下期见。"
+  }
+}

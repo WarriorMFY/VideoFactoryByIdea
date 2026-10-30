@@ -1,0 +1,8 @@
+
+=== 字幕链路验收: PASS ===
+模式: with-reference（有讲稿真值）
+ASR: WER 6.1%  (错 6/99 词；识别 101 词)
+时间轴: 语音覆盖 99.8% / 句界平均误差 0.02s / 最大 0.04s
+译文: 13/13 条有中文（缺 0）
+可读性: 中文峰值 8.89 字/秒（均值 5.82）/ 英文峰值 29.37 字符/秒
+判定: wer=ok coverage=ok boundary_mean=ok boundary_max=ok translated=ok readability=ok remap=n/a

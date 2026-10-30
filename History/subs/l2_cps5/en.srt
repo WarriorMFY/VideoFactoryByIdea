@@ -1,0 +1,87 @@
+1
+00:00:00,030 --> 00:00:01,043
+Welcome back to the workshop where return raw footage into
+
+2
+00:00:01,043 --> 00:00:02,055
+
+
+3
+00:00:02,055 --> 00:00:04,080
+finished films.
+
+4
+00:00:04,410 --> 00:00:05,432
+Today I will show you three simple tricks that save about two
+
+5
+00:00:05,432 --> 00:00:06,600
+
+
+6
+00:00:06,600 --> 00:00:07,767
+hours of editing time.
+
+7
+00:00:07,767 --> 00:00:09,100
+
+
+8
+00:00:09,120 --> 00:00:10,095
+First, always cut on the beat, because rhythm is what keeps the
+
+9
+00:00:10,095 --> 00:00:11,265
+
+
+10
+00:00:11,265 --> 00:00:12,493
+audience awake.
+
+11
+00:00:12,493 --> 00:00:13,720
+
+
+12
+00:00:13,740 --> 00:00:16,110
+Second, remove the silent gaps longer than half a second before
+
+13
+00:00:16,110 --> 00:00:17,435
+you touch the colors.
+
+14
+00:00:17,435 --> 00:00:18,760
+
+
+15
+00:00:18,780 --> 00:00:20,490
+Third, normalize the audio to minus sixty sixteen l u fs, which
+
+16
+00:00:20,490 --> 00:00:22,200
+
+
+17
+00:00:22,200 --> 00:00:25,620
+is the standard for online video platforms.
+
+18
+00:00:25,950 --> 00:00:27,158
+Finally, export at fifteen megabits per second, and never trust
+
+19
+00:00:27,158 --> 00:00:28,365
+
+
+20
+00:00:28,365 --> 00:00:29,728
+the first render.
+
+21
+00:00:29,728 --> 00:00:31,090
+
+
+22
+00:00:31,110 --> 00:00:33,840
+That is it for this episode see you in the next one.
