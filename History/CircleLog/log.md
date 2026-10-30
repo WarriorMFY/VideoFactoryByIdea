@@ -218,3 +218,15 @@
 | 入库体积 | 本地 `.git` pack 33.93 MiB；GitHub 侧仓库 size **34,746 KB**。视频/大素材仍按 `.gitignore` 不入库（本地 6.36GB） |
 | 复核 | 推完后工作区干净；本地跟踪文件 960 个 / 20.3MB |
 | 人工反馈 | （待填） |
+---
+
+## 维护记录 · 2026-10-30 19:53 · 推送至远端（用户指令："把当前循环进度记下来，推送到远端仓库"）
+
+| 项 | 内容 |
+| --- | --- |
+| 触发 | 小循环 12 中途，人要求先停下、记录进度并推送 |
+| 范围 | main：a57013 → 4537920，共 2 个提交（loop12 特性 + 清理临时文件） |
+| 结果 | 第一次 push **超时失败**（Connection timed out after 30001 ms）；重试脚本第 1 次仍失败（Failed to connect to github.com:443），**第 2 次成功**：a57013..4537920  main -> main |
+| 经验 | 网络抖动时 push 要**带重试 + http.version=HTTP/1.1 + 大 postBuffer**（脚本 Workspace/cache/push_retry.ps1）；失败表现是 exit=128 连接超时，不是凭据问题 |
+| 核对 | git ls-remote / ev-list --left-right = 0/0 / GitHub API 三处一致；远端 Prototype/loop12_market_loop/case_ep01/ 已含 8MB 样片 |
+| 人工反馈 | （待填） |
