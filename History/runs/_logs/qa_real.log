@@ -6,4 +6,4 @@
 响度 -70 LUFS / 峰值 null dBTP / LRA 0 LU（音轨实质静音（素材本身无真实音频），响度归一不适用）
 残留缺陷 黑场=0 冻帧=0 静音=1   音画时长差=0.026s
 检查项: has_video=ok h264=ok yuv420p=ok cfr=ok audio_aac_48k=ok loudness_ok=- no_residual_black=ok av_synced=ok
-明细: F:\AgentWorkArea\DeepseekHarness\IdeaDrivenAigc\VideoFactory\History\runs\real01\qa.json
+明细: F:\AgentWorkArea\WorkBuddy\VideoFactory\History\runs\real01\qa.json

@@ -8,6 +8,7 @@
 | 文件 | 作用 |
 | --- | --- |
 | `ff.mjs` | 子进程封装 + ffprobe 便捷函数 + fontconfig 自建配置 + `ROOT` 常量 |
+| `pw.mjs` | Playwright 加载（多路径解析）+ 系统浏览器探测（msedge/chrome）+ 持久化登录态上下文 + `loginState`（SESSDATA/DedeUserID 判定）。发布链共用，见 [`../ops/ops.md`](../ops/ops.md) |
 
 ## 关键设计
 

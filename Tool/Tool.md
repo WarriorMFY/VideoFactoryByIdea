@@ -38,15 +38,18 @@ node Tool\Git\gitnet.mjs clone WarriorMFY/VideoFactoryByIdea
 
 | 目录 | 什么时候进 | 说明文件 |
 | --- | --- | --- |
-| `setup/` | 第一次跑、或换机器 | [`setup/setup.md`](setup/setup.md) — 装 ffmpeg / ASR 依赖、下模型与素材 |
+| `setup/` | 第一次跑、或换机器 | [`setup/setup.md`](setup/setup.md) — 装 ffmpeg / ASR 依赖 / playwright（不下载浏览器，走系统 Edge）、下模型与素材 |
 | `bench/` | 想造"带真值"的测试素材 | [`bench/bench.md`](bench/bench.md) — 合成素材、真实素材+已知废镜头、外语语音素材 |
 | `edit/` | 要做剪辑/出片 | [`edit/edit.md`](edit/edit.md) — 主流水线 `vfactory.mjs`、决策时间轴图 |
 | `subtitle/` | 要做识别/翻译/字幕（含**双语逐词高亮** karaoke 样式） | [`subtitle/subtitle.md`](subtitle/subtitle.md) — ASR、字幕生成、ASS 逐词高亮、时间轴重映射、字幕验收 |
 | `acceptance/` | 要"证明它是对的" | [`acceptance/acceptance.md`](acceptance/acceptance.md) — 三个一键验收 + 真值比对 + 成片质检 |
-| `ops/` | 要看市场、要交付、要追踪反馈 | [`ops/ops.md`](ops/ops.md) — `recon_bilibili`（B 站侦查）、`make_episode`（造样片素材）、`make_cover`（封面）、`track_feedback`（反馈→迭代动作） |
+| `ops/` | 要看市场、要交付、要发布、要追踪反馈 | [`ops/ops.md`](ops/ops.md) — `recon_bilibili`（B 站侦查）、`make_episode`（造样片素材）、`make_cover`（封面）、`publish_bilibili`（扫码登录/上传/填表/封面/投稿/回执）、`track_feedback`（反馈→迭代动作） |
 | `lib/` | 要改脚本的公共层 | [`lib/lib.md`](lib/lib.md) — 子进程调用封装（fd 重定向）、fontconfig、SRT/CSV/单位规范化 |
 | `Git/` | clone/pull 卡住、克隆第三方项目 | [`Git/Git.md`](Git/Git.md) — `gitnet.mjs`：端点学习 + 无进展看门狗 + 镜像回退 |
 | 环境约束 | 遇到"为什么跑不通" | [`env.md`](env.md) — 出网/管道/字体/模型源等实测坑 |
+
+**依赖落在哪**：`Workspace/deps/`（`ffmpeg/` 二进制、`asr/` 的 koffi/vosk/edge-tts + 模型、`node_modules/` 的 playwright），素材在 `Workspace/assets/`，下载缓存在 `Workspace/cache/`，运行时临时在 `Workspace/run/`（含 B 站登录态）。
+每层谁在用、删了怎么补 → [`../Workspace/README.md`](../Workspace/README.md)。
 
 ## 记住这四条
 

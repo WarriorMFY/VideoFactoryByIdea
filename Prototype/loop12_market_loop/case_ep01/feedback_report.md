@@ -1,8 +1,8 @@
 # 市场反馈报告
 
-> 反馈表：`Deliverables\ep01_editing_tips\feedback.csv`　快照数：0
+> 反馈表：`Prototype/loop12_market_loop/case_ep01/feedback.csv`　快照数：1
 
-**状态：待采集** —— 表里还没有数据行。
+**状态：待采集** —— 有 1 条记录，但播放都为 0（T0 基线），比率没有分母，不据此下结论。
 
 采集口径（建议）：
 

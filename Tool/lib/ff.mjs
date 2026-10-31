@@ -10,8 +10,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 export const ROOT = path.resolve(import.meta.dirname, '..', '..');
-export const FF = process.env.FFMPEG || path.join(ROOT, 'Workspace', 'bin', 'ffmpeg', 'ffmpeg.exe');
-export const FP = process.env.FFPROBE || path.join(ROOT, 'Workspace', 'bin', 'ffmpeg', 'ffprobe.exe');
+export const FF = process.env.FFMPEG || path.join(ROOT, 'Workspace', 'deps', 'ffmpeg', 'ffmpeg.exe');
+export const FP = process.env.FFPROBE || path.join(ROOT, 'Workspace', 'deps', 'ffmpeg', 'ffprobe.exe');
 
 // drawtext/libass 依赖 fontconfig。本机 ffmpeg 静态构建找不到默认 fonts.conf，
 // 且沙箱下默认缓存目录不可写 —— 于是自建一份最小 fonts.conf（指向 Windows 字体目录 + 可写缓存）。

@@ -52,7 +52,7 @@ if (!fs.existsSync(BACKDROP)) {
   process.exit(1);
 }
 
-const require = createRequire(path.join(ROOT, 'Workspace', 'asr', 'index.cjs'));
+const require = createRequire(path.join(ROOT, 'Workspace', 'deps', 'asr', 'index.cjs'));
 const { EdgeTTS } = require('@andresaya/edge-tts');
 
 for (const [dirName, voice, desc] of VOICES) {

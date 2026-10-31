@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-30T09:47:21.030Z",
+  "generated_at": "2026-10-31T03:12:57.939Z",
   "source": "Tool/ops/make_episode.mjs",
   "note": "画面：Big Buck Bunny（© Blender Foundation, CC-BY 3.0）；声音：Edge TTS 合成英语口播；时间码由 TTS 实际时长累加得到",
   "language": "en",
   "license": "CC-BY 3.0 (footage) / 合成语音",
-  "duration_s": 37.374,
+  "duration_s": 37.375,
   "sentences": [
     {
       "idx": 0,
@@ -39,12 +39,12 @@
     {
       "idx": 5,
       "start": 27.522,
-      "end": 31.879,
+      "end": 31.88,
       "text": "Number five: before you publish, watch your own video once with the sound off."
     },
     {
       "idx": 6,
-      "start": 32.199,
+      "start": 32.2,
       "end": 37.375,
       "text": "That is the whole checklist. Save it, and your next edit will take half the time."
     }

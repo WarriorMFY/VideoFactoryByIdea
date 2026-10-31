@@ -10,16 +10,15 @@
 
 | 项 | 状态 |
 | --- | --- |
-| 大循环 | **进行中**（人控）。时间窗口 2026-10-27 10:44 → 2026-10-31 10:44；已用约 **79.3h / 96h**，剩余 **16.7 小时**（截至 2026-10-30 19:25） |
-| 已完成小循环 | **1 ✅（自动剪辑）· 2 ✅（外语→中文字幕）· 3 ✅（真实素材+语音保护）· 4 ✅（多样本）· 5 ✅（逐词高亮，含抖动 v2）· 6 ✅（文本层：标点/精译/节流）· 7 ✅（短句救援证伪 + 预处理链）· 8 ✅（校对回写闭环）· 9 ✅（49 分钟压测 + 术语审计）· 10 ✅（karaoke 长片规模）· 11 ✅（知识型链路：分诊/单位/术语）· 12 ⏸️（市场闭环：侦查/样片/交付包已跑通，上架与反馈待人工；按人要求暂停留痕）** |
-| 当前等待 | **人对小循环 7–12 的反馈**；小循环 12 下一步需要人：用自己账号上架 `Deliverables/ep01_editing_tips/` 并回填 `feedback.csv`。关键待决策仍是：**换不换 ASR 模型**（唯一能提高质量上限的动作，需要模型文件/下载通道/ASR 接口） |
-| 代码/仓库状态 | git 干净；分支 `main`；入库 960 文件 / 20.3MB（视频与大素材按 `.gitignore` 不入库，本地保留 6.36GB） | |
+| 大循环 | **进行中**（人控）。时间窗口 **2026-10-27 10:44 → 2026-11-03 10:44**（人于 10-31 延长，原为 10-31 10:44）；总长 168h，已用 **101.5h（60.4%）**，剩余 **66.5h**（截至 2026-10-31 16:14） |
+| 已完成小循环 | **1 ✅（自动剪辑）· 2 ✅（外语→中文字幕）· 3 ✅（真实素材+语音保护）· 4 ✅（多样本）· 5 ✅（逐词高亮，含抖动 v2）· 6 ✅（文本层：标点/精译/节流）· 7 ✅（短句救援证伪 + 预处理链）· 8 ✅（校对回写闭环）· 9 ✅（49 分钟压测 + 术语审计）· 10 ✅（karaoke 长片规模）· 11 ✅（知识型链路：分诊/单位/术语）· 12 ✅（市场闭环：侦查→样片→交付包→**已发布 BV1AaxC6hExH**；真实反馈待 T+1 采集）** —— 共 12 轮，12 个 `Prototype/` 增量 |
+| 当前等待 | **当前停在小循环 12 的收尾**：作品 2026-10-31 15:22 投稿成功（pubdate 15:22，https://www.bilibili.com/video/BV1AaxC6hExH/），`feedback.csv` 只有 T0 基线（播放 0），**真实数据要 T+1（11-01）起回填**，再跑 `track_feedback.mjs` 出 P0/P1 动作。同时等人对 7–12 轮的反馈。关键待决策：**换不换 ASR 模型**（唯一能提高质量上限的动作，需要模型文件/下载通道/ASR 接口） |
+| 代码/仓库状态 | 分支 `main`；入库 **1046 文件 / .git 44MB**（视频与大素材按 `.gitignore` 不入库）。**有未提交改动**：79 改 / 26 删 / 21 新增——来源是 10-31 的「12 轮全链路重跑 + B 站发布 + 发布脚本沉淀 + 根目录整理 + Workspace 重组」，尚未 commit/push。 | |
 | 远端 | `origin` = https://github.com/WarriorMFY/VideoFactoryByIdea.git（公开，默认分支 main）。**已推送**：2026-10-30 17:36，`80a7150 → 0cc37c2`（9 个提交），push exit=0；三方核对一致——`git ls-remote` = `0cc37c2`、`rev-list --left-right` = **0/0**、GitHub API `commits/main` = `0cc37c2`（pushed_at 2026-10-30T09:36Z，仓库 size 34,746KB）。坑：git 默认 Schannel 握手失败 → 本仓库固定 `http.sslBackend=openssl`；凭据助手经 `sh.exe` 被沙箱拒 → 用 GCM 直取凭据 + `http.extraheader`（脚本 `Workspace/cache/push_with_gcm.ps1`）。详见 `Tool/env.md` 第〇节。后续只在人明确要求时再推 | |
 | 可交付能力 | 自动删减成片（真值 IoU 1.000/0.998，误删 0s）· 外语→中文字幕（TTS 素材 WER 6.1%、覆盖 99.8%）· 真实素材**对白不会被剪**（语音保护）· 双语逐词高亮（长片 1030 事件/0.1s）· 标点恢复 + 精译 · **人工校对回写闭环** · **能扛 49 分钟长片**（48.7 分钟成片、273 条字幕） |
 | 已知最大短板 | **真实影视混音下识别不可靠**（WER 28.4%、覆盖 50–60%，1–3 词短句只覆盖 11–14%）。小循环 7 已证明这是**模型能力上限**（干净 TTS 能识别 8/10、原片混音 0/10、7 条预处理链全失败）→ 只能换 Whisper 级模型，而本机 HF/ModelScope 全域不可达 |
 | 其它短板 | 全自动机翻只到"能看懂"（发布走精译或人工校对）· 语音保护会连带保住"对白压黑屏" · 语义级断句未做 · 术语审计不认复数变形 · GUI 剪辑软件本机装不上（沙箱只可写工作区） |
-| 下一轮触发条件 | ①人给模型/通道/ASR 接口（收益最大）；②人给方向（批量化、竖屏模板、多语种）；③时间窗口耗尽前主动收敛建议 |
-| 下一轮触发条件 | ①人提出方向（如"换 Whisper/打通模型通道""批量化""竖屏模板"）；②人或给真实素材；③时间窗口耗尽前主动收敛建议 |
+| 下一轮触发条件 | ①人给模型/下载通道/ASR 接口（收益最大）；②人给方向（换 Whisper、批量化、竖屏模板、多语种）；③人或给真实素材；④T+1 反馈数据到位（→ 按 P0 动作改下一版）；⑤时间窗口耗尽前主动提收敛建议 |
 
 ---
 
@@ -228,5 +227,62 @@
 | 范围 | main：a57013 → 4537920，共 2 个提交（loop12 特性 + 清理临时文件） |
 | 结果 | 第一次 push **超时失败**（Connection timed out after 30001 ms）；重试脚本第 1 次仍失败（Failed to connect to github.com:443），**第 2 次成功**：a57013..4537920  main -> main |
 | 经验 | 网络抖动时 push 要**带重试 + http.version=HTTP/1.1 + 大 postBuffer**（脚本 Workspace/cache/push_retry.ps1）；失败表现是 exit=128 连接超时，不是凭据问题 |
-| 核对 | git ls-remote / ev-list --left-right = 0/0 / GitHub API 三处一致；远端 Prototype/loop12_market_loop/case_ep01/ 已含 8MB 样片 |
+| 核对 | git ls-remote / 
+ev-list --left-right = 0/0 / GitHub API 三处一致；远端 Prototype/loop12_market_loop/case_ep01/ 已含 8MB 样片 |
 | 人工反馈 | （待填） |
+
+---
+
+## 小循环 12 · 补充记录 · 2026-10-31 11:08–11:16 · 全链路重跑（干净 clone）
+
+| 项 | 内容 |
+| --- | --- |
+| 触发 | 用户指令：「你继续跑循环12，直到验收交付」 |
+| 环境 | 干净 clone 后 `Workspace/` 全空，从零重建：ffmpeg 6.1.1（79MB×2 / 37s）、koffi+vosk+edge-tts（82MB / 53s）、Vosk small-en-us 模型（41MB / 36s）、CC-BY 画面素材 |
+| 过程 | recon×2 → `make_episode`（Edge TTS 7 句口播）→ `asr_vosk` → `align_script` → `make_subs`（精译）→ `make_ass` → `vfactory` 渲染 → `qa_report` → `make_cover` → `track_feedback` → `run_market_loop_acceptance` |
+| 结束结果 | **9/9 PASS**。成片 37.375s / −16.3 LUFS / −1.8 dBTP / 音画差 0.008s / 黑场 0 / **冻帧 0**；双语 12/12；高亮 81 词级 + 7 中文 = **88 条**；WER **9.5%** / 覆盖 **100%**；高亮像素验收 12/12 帧有高亮、12/12 单块不重影、重心位移 391px；市场样本 134 条 |
+| 复现性 | 与 10-30 产物逐项对齐：时长差 **0.001s**、响度与真峰完全一致、ASS 事件数一致、WER 一致、对齐时间码逐句一致、ASR 均为 109 词 → 链路可复现 |
+| 修的 bug | ① `bootstrap_asr` 传 tar 绝对路径，盘符被 bsdtar 当远程主机（`Cannot connect to F:`）；② `fetch_vosk_model` 的包是 **zip**，GNU tar 解不了、bsdtar 又怕盘符 → 显式优先 `%SystemRoot%\System32\tar.exe`；③ 验收脚本在缺成片时从快照回填 + 把"方向验证（最大需求词）"与"本期选题"拆成两行 |
+| 留痕澄清 | 10-30 产物内部时间戳为 17:44–17:53，而本日志记「18:05 开工」；`verify_subs.json` 里还留着 `D:\Data\DeepseekHarness\...` 路径 → 原产物疑似来自更早的一次会话。本次重跑已让产物时间戳与日志自洽，之后再出现偏差即可视为真问题 |
+| 新发现的局限 | 英文 CPS 峰值 28.93 > 阈值 25，但 `verify_subs` 的 `pass.readability` 只判中文（`max_zh_cps 8.26 ≤ 20`）→ 该阈值只展示不判定，已在 README 注明；"边界误差 0s"来自讲稿强制对齐，属自证，不能当独立指标 |
+| 状态 | 上架与真实反馈仍待人工（需账号）；改动全部留在本地，**未推远端** |
+| 人工反馈 | （待填） |
+
+## 循环 12 · 发布（2026-10-31 15:2x）
+
+| 项 | 内容 |
+| --- | --- |
+| 触发 | 用户指令：「这轮循环不算结束，还没有发布到B站，需求改为由你自动发布，我给账号使用权」 |
+| 方式 | Playwright + 系统 Edge（无头）驱动创作中心网页端；登录用手机扫码（用户扫码确认，UID 3747573749779036，会话持久化于 Workspace/.bili_profile） |
+| 过程 | 上传 final.mp4（18.6MB/100%）→ 标题(A版)/简介/7 标签 → 分区 知识 → 创作声明「含AI生成内容」→ 封面 cover_16x9.jpg（4:3+16:9 同步）→ 立即投稿 |
+| 结果 | **已上线 https://www.bilibili.com/video/BV1AaxC6hExH/**（37.4s，页面标题与封面已验证生效）；feedback.csv 记录 T0 基线 |
+| 途中坑 | ① 控制器带参命令（clickxy/typefile）因精确匹配 bug 全部落入 unknown → 改用 eval + execCommand('insertText') + KeyboardEvent 事件注入；② 简介/封面/声明均为富文本或受控组件，DOM 直改+原生事件可行；③ file input 用 DataTransfer 注入 File 对象 |
+| 沉淀 | Workspace/bili_controller.mjs（遥控式发布控制器）与登录脚本；正式沉淀到 Tool/ops 待下轮整理（当前在 Workspace 未入库） |
+| 置顶评论 | 未发（页面上发评论属公开互动，留给用户） |
+| 人工反馈 | 数据 T+1/T+3/T+7 待回填 feedback.csv → track_feedback 出迭代动作 |
+
+## 循环 12 · 发布脚本沉淀（2026-10-31 15:30–15:55）
+
+| 项 | 内容 |
+| --- | --- |
+| 触发 | 用户指令：「直接把发布脚本整理沉淀」 |
+| 新增 | `Tool/ops/publish_bilibili.mjs`（status/login/publish/verify 四命令，`--dry-run` 停在投稿前）、`Tool/lib/pw.mjs`（playwright 多路径加载 + 系统浏览器探测 + 登录态判定）、`Tool/setup/bootstrap_playwright.mjs`（只装 Node 包、不下载浏览器） |
+| 删除 | Workspace 下 6 个一次性脚本（bili_controller / bili_login_* / bili_upload_* / probe_browser），已全部并入 Tool |
+| 验证 | `status` → 已登录 UID 3747573749779036；`publish --dry-run` 全链路（上传→标题→简介→7 标签→分区知识→声明→封面）**通过**，停在投稿前；`verify --bvid BV1AaxC6hExH` 读到线上真实标题/关键词/封面/38s；`login` 在已登录时直接返回 |
+| 未做 | 未再真正发布（本轮只做沉淀，线上仍只有 BV1AaxC6hExH 一条；稿件管理核对：已发布 1 / 草稿 0） |
+| 途中踩坑 | ① 合成 KeyboardEvent 加标签静默失败 → 必须真键盘；② `Control+A`+Backspace 会把上一个标签 chip 删掉（表现为只剩一个自定义标签）；③ 逐字符 type(30ms) 被重渲染吞字（只剩「程」）；④ 草稿恢复弹窗「继续编辑/不用了」会串上次表单；⑤ 异常路径不关浏览器会让 node 进程挂住；⑥ 线上 meta 带 `data-vue-meta`，正则不能写死属性顺序。全部写进 `Tool/ops/ops.md` 的「发布链踩过的坑」 |
+| 附带 | 新增 `Deliverables/ep01_editing_tips/desc_publish.txt`（发布用简介定稿，供 `--desc-file` 直接复用） |
+
+## 维护记录 · 2026-10-31 15:57–16:14 · 目录整理（用户指令，非小循环）
+
+| 项 | 内容 |
+| --- | --- |
+| 触发 | 人：「按照AGENTS.md整理一下根目录」，随后「重新整理一下你的WorkSpace目录」 |
+| 根目录 | 删 `Deliverables/` → 交付包并入 `Prototype/loop12_market_loop/case_ep01/`（4 个同名文件 sha256 一致去重；`publish.md`/`feedback_report.md` 取交付包内新版）；可重建中间件移到 `Workspace/run/`。根目录现在只剩 `AGENTS.md`、`.gitignore` + `Idea/ Prototype/ History/ Tool/ Workspace/` |
+| 留痕归位 | `Workspace/bili_*`、`publish_runs/` → `History/publish/bilibili/{runs,adhoc}`；`publish_bilibili.mjs` 的 `RUNS` 改到 History 下，之后每次发布产物自动落留痕 |
+| Workspace | `deps/{ffmpeg,asr,node_modules}` + `assets/` + `cache/` + `run/{bili_profile,ffmpeg_intermediate}`；新增 `Workspace/README.md`（谁在用 / 删了怎么补 / 已知事实），`.gitignore` 只对这份说明开口 |
+| 清理 | 删 `cache/vosk_parts` 40MB（zip 校验 20 条目无损、模型 68MB 完整） |
+| 代码同步 | `ff.mjs`、`vosk.mjs`、`pw.mjs`、`bootstrap_ffmpeg/asr/playwright`、`fetch_vosk_model`、`make_episode`、`make_l2_bench`、`make_speech4_tts` 共 12 处；文档 `ops.md`/`setup.md`/`Tool.md`/loop1 README/loop3 model_compare |
+| 顺带修 | `track_feedback` 原会把「播放为 0 的 T0 基线」当真数据、推出假 P0「重做前 3 秒」→ 现在识别为基线、标"待采集"；`.gitignore` 两行编码坏掉的注释修正 |
+| 验证 | 验收重跑 **9/9 PASS**；ASR 实跑 109 词 / 2 句 / conf 0.9759；`publish status` 仍已登录（profile 迁移无损）；`ffmpeg -version` 6.1.1 |
+| 未做 | 未 commit、未 push（等人指示） |

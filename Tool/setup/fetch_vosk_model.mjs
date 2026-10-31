@@ -6,7 +6,7 @@
  * 实测「多连接分段并行 + 每段独立重试续传」能把 40MB 的模型拉下来且不怕断。
  *
  * 用法：node Tool/fetch_vosk_model.mjs [模型名]
- * 落地：Workspace/asr/models/<模型名>/ + Workspace/cache/vosk_parts/（分段缓存）
+ * 落地：Workspace/deps/asr/models/<模型名>/ + Workspace/cache/vosk_parts/（分段缓存，zip 完整后可删）
  */
 import fs from 'node:fs';
 import path from 'node:path';
@@ -14,7 +14,7 @@ import { spawnSync } from 'node:child_process';
 import { ROOT } from '../lib/ff.mjs';
 
 const name = process.argv[2] || 'vosk-model-small-en-us-0.15';
-const modelDir = path.join(ROOT, 'Workspace', 'asr', 'models');
+const modelDir = path.join(ROOT, 'Workspace', 'deps', 'asr', 'models');
 const target = path.join(modelDir, name);
 const partsDir = path.join(ROOT, 'Workspace', 'cache', 'vosk_parts', name);
 const zip = path.join(ROOT, 'Workspace', 'cache', `${name}.zip`);
@@ -80,8 +80,21 @@ const size = fs.statSync(zip).size;
 if (size !== TOTAL) throw new Error(`大小不符 ${size} != ${TOTAL}`);
 console.log(`[dl] 完成 ${(size / 1048576).toFixed(1)}MB  ${((Date.now() - t0) / 1000).toFixed(0)}s`);
 
-const r = spawnSync('tar', ['-xf', zip, '-C', modelDir], { stdio: 'inherit' });
-if (r.status !== 0) throw new Error('解压失败');
+// 坑（2026-10-31 本机实测）：这个包是 **zip** 不是 tar。
+//   · GNU tar（PortableGit/usr/bin/tar）解不了 zip → "This does not look like a tar archive"
+//   · Windows 自带 C:\Windows\System32\tar.exe 是 bsdtar（libarchive），能解 zip，但绝对路径里的盘符会被当成远程主机
+//   → 显式优先用 system32 的 bsdtar，并 cwd 到缓存目录、只用正斜杠相对路径。
+const zDir = path.dirname(zip);
+const relDest = path.relative(zDir, modelDir).split(path.sep).join('/');
+const tarCands = process.platform === 'win32'
+  ? [path.join(process.env.SystemRoot || 'C:\\Windows', 'System32', 'tar.exe'), 'tar']
+  : ['tar'];
+let extracted = false;
+for (const bin of tarCands) {
+  const r = spawnSync(bin, ['-xf', path.basename(zip), '-C', relDest], { stdio: 'ignore', cwd: zDir });
+  if (r.status === 0) { extracted = true; break; }
+}
+if (!extracted) throw new Error('解压失败（尝试 bsdtar / tar 均未成功）');
 fs.writeFileSync(path.join(modelDir, 'SOURCE.txt'), [
   `model: ${name}`,
   `url: ${url}`,

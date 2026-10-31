@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-30T09:53:00.169Z",
+  "generated_at": "2026-10-31T08:08:20.943Z",
   "recon": {
     "pool": 134,
     "candidates": 60,
@@ -7,44 +7,29 @@
       {
         "kw": "TED 中英",
         "num": 1000,
-        "top_play": 12880872
-      },
-      {
-        "kw": "英文演讲 双语",
-        "num": 1000,
-        "top_play": 3983012
-      },
-      {
-        "kw": "外网搬运 双语",
-        "num": 1000,
-        "top_play": 1314117
-      },
-      {
-        "kw": "编程教程 英文",
-        "num": 1000,
-        "top_play": 25167482
+        "top_play": 12544700
       },
       {
         "kw": "Blender 教程 双语",
         "num": 1000,
-        "top_play": 19029327
+        "top_play": 19085263
       },
       {
         "kw": "剪辑教程 英文",
         "num": 1000,
-        "top_play": 4178068
+        "top_play": 4383199
       },
       {
         "kw": "纪录片 中英双字",
         "num": 1000,
-        "top_play": 1187958
+        "top_play": 360973
       }
     ],
-    "top_keyword": "编程教程 英文"
+    "top_keyword": "Blender 教程 双语"
   },
   "episode": {
-    "path": "Deliverables\\ep01_editing_tips",
-    "final_s": 37.374,
+    "path": "Prototype\\loop12_market_loop\\case_ep01",
+    "final_s": 37.375,
     "w": 1280,
     "h": 720,
     "qa": "PASS",
@@ -52,7 +37,8 @@
     "bilingual": 12,
     "ass_events": 88,
     "wer": 0.0952,
-    "coverage": 1
+    "coverage": 1,
+    "restored_from_snapshot": false
   },
   "publish_checks": {
     "has_title": true,

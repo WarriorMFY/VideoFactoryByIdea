@@ -17,10 +17,10 @@ import path from 'node:path';
 import { createRequire } from 'node:module';
 import { ROOT } from './ff.mjs';
 
-const ASRDIR = path.join(ROOT, 'Workspace', 'asr');
+const ASRDIR = path.join(ROOT, 'Workspace', 'deps', 'asr');
 const LIB_PATH = path.join(ASRDIR, 'node_modules', 'vosk', 'lib', 'win-x86_64', 'libvosk.dll');
 
-export const DEFAULT_MODEL = path.join(ROOT, 'Workspace', 'asr', 'models', 'vosk-model-small-en-us-0.15');
+export const DEFAULT_MODEL = path.join(ROOT, 'Workspace', 'deps', 'asr', 'models', 'vosk-model-small-en-us-0.15');
 
 let _koffi = null;
 let _fns = null;

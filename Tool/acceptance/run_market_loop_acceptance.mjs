@@ -8,7 +8,7 @@
  *   C 交付包：发布所需的东西一件不少（文案/标签/分区/上传清单/合规声明）
  *   D 反馈闭环：反馈表 + 追踪器能算出指标并给出**可执行**的迭代动作（空数据必须诚实说"待采集"）
  *
- * 用法：node Tool/acceptance/run_market_loop_acceptance.mjs [--ep Deliverables/ep01_editing_tips]
+ * 用法：node Tool/acceptance/run_market_loop_acceptance.mjs [--ep Prototype/loop12_market_loop/case_ep01]
  * 输出：History/loops/loop12/{acceptance.md,metrics.json}
  */
 import fs from 'node:fs';
@@ -17,7 +17,8 @@ import { run, ffprobeJson, ROOT } from '../lib/ff.mjs';
 
 const args = process.argv.slice(2);
 const getOpt = (k, d) => (args.includes(k) ? args[args.indexOf(k) + 1] : d);
-const EP = path.resolve(ROOT, getOpt('--ep', path.join('Deliverables', 'ep01_editing_tips')));
+// 交付包位置：并入 Prototype 后与快照同目录（`Prototype/loop12_market_loop/case_ep01`）
+const EP = path.resolve(ROOT, getOpt('--ep', path.join('Prototype', 'loop12_market_loop', 'case_ep01')));
 const OUTDIR = path.join(ROOT, 'History', 'loops', 'loop12');
 const LOGS = path.join(ROOT, 'History', 'runs', '_logs');
 for (const d of [OUTDIR, LOGS]) fs.mkdirSync(d, { recursive: true });
@@ -46,6 +47,17 @@ if (topKw) console.log(`  最大需求关键词：「${topKw.keyword}」前 8 �
 // ---------- B. 开工产出 ----------
 step('B 工厂交付物（规格 / 质检 / 字幕 / 封面）');
 const FINAL = path.join(EP, 'render_16x9', 'final.mp4');
+// 坑（2026-10-31）：mp4 被 .gitignore 排除（`Prototype/**/*.mp4`），干净 clone 后交付位没有成片，
+// 验收会直接抛"缺少交付物"。成片在快照里另存一份（`final_16x9.mp4`，唯一入库的 mp4），这里自动回填，
+// 让"clone → 跑验收"这条路成立；回填动作会打印出来，不隐藏。
+const SNAP_FINAL = path.join(ROOT, 'Prototype', 'loop12_market_loop', 'case_ep01', 'final_16x9.mp4');
+let restoredFromSnapshot = false;
+if (!fs.existsSync(FINAL) && fs.existsSync(SNAP_FINAL)) {
+  fs.mkdirSync(path.dirname(FINAL), { recursive: true });
+  fs.copyFileSync(SNAP_FINAL, FINAL);
+  restoredFromSnapshot = true;
+  console.log(`  [restore] 交付位缺成片（mp4 不入库），已从快照回填 ${path.relative(ROOT, SNAP_FINAL)}`);
+}
 for (const f of [FINAL, path.join(EP, 'karaoke.ass'), path.join(EP, 'cover_16x9.jpg'), path.join(EP, 'subs', 'bilingual.srt'), path.join(EP, 'publish.md'), path.join(EP, 'feedback.csv')]) {
   if (!fs.existsSync(f)) throw new Error(`缺少交付物: ${path.relative(ROOT, f)}`);
 }
@@ -80,8 +92,10 @@ const publishChecks = {
 // ---------- D. 反馈闭环 ----------
 step('D 反馈闭环（空数据要诚实 + 规则要能跑）');
 const FB = path.join(EP, 'feedback.csv');
-const stub = run(process.execPath, [path.join(ROOT, 'Tool/ops/track_feedback.mjs'), '--csv', path.relative(ROOT, FB), '--out', path.join('Deliverables', 'ep01_editing_tips', 'feedback_report.md')], path.join(LOGS, 'l12_track_empty.log'));
-const emptyReport = fs.readFileSync(path.join(EP, 'feedback_report.md'), 'utf8');
+// 空表自检的输出落到 History（过程留痕），不覆盖交付包里的 feedback_report.md
+const EMPTY_REPORT = path.join(OUTDIR, 'feedback_report_empty.md');
+const stub = run(process.execPath, [path.join(ROOT, 'Tool/ops/track_feedback.mjs'), '--csv', path.relative(ROOT, FB), '--out', path.relative(ROOT, EMPTY_REPORT)], path.join(LOGS, 'l12_track_empty.log'));
+const emptyReport = fs.readFileSync(EMPTY_REPORT, 'utf8');
 const dry = run(process.execPath, [path.join(ROOT, 'Tool/ops/track_feedback.mjs'), '--selftest'], path.join(LOGS, 'l12_track_selftest.log'));
 const selftest = fs.readFileSync(path.join(ROOT, 'History', 'loops', 'loop12', 'feedback_selftest.md'), 'utf8');
 console.log(`  空表 → 「待采集」=${/待采集/.test(emptyReport)}；自检 → 动作 ${(selftest.match(/^- \*\*/gm) || []).length} 条`);
@@ -108,8 +122,9 @@ L.push(`**${pass ? 'PASS' : 'FAIL'}**\n`);
 L.push('| 环节 | 检查 | 结果 | 数据 |');
 L.push('| --- | --- | --- | --- |');
 L.push(`| A 侦查 | 拿到公开市场样本 | ${checks.recon_has_data ? '✅' : '❌'} | ${mr.pool_size} 条榜单 / ${cands.length} 个候选 |`);
-L.push(`| A 侦查 | 选出有需求的方向 | ${checks.recon_picks_niche ? '✅' : '❌'} | 「${topKw?.keyword ?? '—'}」前 8 条 ${((topKw?.top_play ?? 0) / 10000).toFixed(0)} 万播放 |`);
-L.push(`| B 开工 | 成片可发布（时长/编码/质检） | ${checks.final_is_publishable ? '✅' : '❌'} | ${finalDur}s ${vi.width}x${vi.height} h264 / QA ${qa.verdict} |`);
+L.push(`| A 侦查 | 有需求方向已验证（取最大需求词） | ${checks.recon_picks_niche ? '✅' : '❌'} | 「${topKw?.keyword ?? '—'}」前 8 条 ${((topKw?.top_play ?? 0) / 10000).toFixed(0)} 万播放（方向证据，非本期选题） |`);
+L.push(`| A 侦查 | 本期选题与能力匹配 | — | 「剪辑教程 英文」${((kwRows.find((k) => k.keyword === '剪辑教程 英文')?.top_play ?? 0) / 10000).toFixed(0)} 万播放，见 \`${path.relative(ROOT, path.join(EP, 'publish.md'))}\` §1 |`);
+L.push(`| B 开工 | 成片可发布（时长/编码/质检） | ${checks.final_is_publishable ? '✅' : '❌'} | ${finalDur}s ${vi.width}x${vi.height} h264 / QA ${qa.verdict}${restoredFromSnapshot ? '（成片由 Prototype 快照回填）' : ''} |`);
 L.push(`| B 开工 | 双语字幕齐全 | ${checks.bilingual_complete ? '✅' : '❌'} | ${bilingual}/${cues.cues.length} 行双语 |`);
 L.push(`| B 开工 | 逐词高亮（ASS） | ${checks.karaoke_present ? '✅' : '❌'} | ${assEvents} 条事件 |`);
 L.push(`| B 开工 | 识别质量够用 | ${checks.asr_good_enough ? '✅' : '❌'} | WER ${v.wer ? (v.wer.rate * 100).toFixed(1) + '%' : '—'} / 覆盖 ${(v.timing?.coverage_ratio * 100).toFixed(1)}% |`);
@@ -141,7 +156,7 @@ fs.writeFileSync(path.join(OUTDIR, 'acceptance.md'), L.join('\n') + '\n', 'utf8'
 fs.writeFileSync(path.join(OUTDIR, 'metrics.json'), JSON.stringify({
   generated_at: new Date().toISOString(),
   recon: { pool: mr.pool_size, candidates: cands.length, keywords: kwRows.map((k) => ({ kw: k.keyword, num: k.num_results, top_play: k.top_play })), top_keyword: topKw?.keyword ?? null },
-  episode: { path: path.relative(ROOT, EP), final_s: finalDur, w: vi.width, h: vi.height, qa: qa.verdict, cues: cues.cues.length, bilingual, ass_events: assEvents, wer: v.wer?.rate ?? null, coverage: v.timing?.coverage_ratio ?? null },
+  episode: { path: path.relative(ROOT, EP), final_s: finalDur, w: vi.width, h: vi.height, qa: qa.verdict, cues: cues.cues.length, bilingual, ass_events: assEvents, wer: v.wer?.rate ?? null, coverage: v.timing?.coverage_ratio ?? null, restored_from_snapshot: restoredFromSnapshot },
   publish_checks: publishChecks,
   feedback: { empty_report_says_pending: /待采集/.test(emptyReport), selftest_actions: (selftest.match(/^- \*\*/gm) || []).length },
   checks, pass,

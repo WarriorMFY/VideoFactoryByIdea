@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-27T14:25:21.588Z",
+  "generated_at": "2026-10-31T02:09:59.660Z",
   "tool": "vfactory v0.1",
   "source": {
-    "file": "F:\\AgentWorkArea\\DeepseekHarness\\IdeaDrivenAigc\\VideoFactory\\History\\bench\\synth\\source.mp4",
+    "file": "F:\\AgentWorkArea\\WorkBuddy\\VideoFactory\\History\\bench\\synth\\source.mp4",
     "duration": 42,
     "video": {
       "codec": "h264",
@@ -20,7 +20,7 @@
     }
   },
   "output": {
-    "file": "F:\\AgentWorkArea\\DeepseekHarness\\IdeaDrivenAigc\\VideoFactory\\History\\runs\\bench01\\final.mp4",
+    "file": "F:\\AgentWorkArea\\WorkBuddy\\VideoFactory\\History\\runs\\bench01\\final.mp4",
     "duration": 31.621,
     "width": 1280,
     "height": 720,
