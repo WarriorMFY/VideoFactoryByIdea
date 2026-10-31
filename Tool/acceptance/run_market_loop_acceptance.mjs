@@ -91,11 +91,15 @@ const publishChecks = {
 
 // ---------- D. 反馈闭环 ----------
 step('D 反馈闭环（空数据要诚实 + 规则要能跑）');
-const FB = path.join(EP, 'feedback.csv');
-// 空表自检的输出落到 History（过程留痕），不覆盖交付包里的 feedback_report.md
+// 这项验的是"没数据时不许编"，所以必须用**自造的空表**，不能拿交付包里的 feedback.csv。
+// 踩过：交付表上架后会随每日采集长出真实数据行，拿它当"空表"用，第二周就变成假失败。
+const EMPTY_CSV = path.join(OUTDIR, '_empty_feedback.csv');
+fs.writeFileSync(EMPTY_CSV,
+  '\uFEFF"date","duration_s","views","avg_watch_s","likes","favorites","comments","shares","new_followers","notes"\r\n', 'utf8');
 const EMPTY_REPORT = path.join(OUTDIR, 'feedback_report_empty.md');
-const stub = run(process.execPath, [path.join(ROOT, 'Tool/ops/track_feedback.mjs'), '--csv', path.relative(ROOT, FB), '--out', path.relative(ROOT, EMPTY_REPORT)], path.join(LOGS, 'l12_track_empty.log'));
+const stub = run(process.execPath, [path.join(ROOT, 'Tool/ops/track_feedback.mjs'), '--csv', path.relative(ROOT, EMPTY_CSV), '--out', path.relative(ROOT, EMPTY_REPORT)], path.join(LOGS, 'l12_track_empty.log'));
 const emptyReport = fs.readFileSync(EMPTY_REPORT, 'utf8');
+fs.rmSync(EMPTY_CSV, { force: true });   // 临时空表用完即删，别让它变成仓库里的垃圾文件
 const dry = run(process.execPath, [path.join(ROOT, 'Tool/ops/track_feedback.mjs'), '--selftest'], path.join(LOGS, 'l12_track_selftest.log'));
 const selftest = fs.readFileSync(path.join(ROOT, 'History', 'loops', 'loop12', 'feedback_selftest.md'), 'utf8');
 console.log(`  空表 → 「待采集」=${/待采集/.test(emptyReport)}；自检 → 动作 ${(selftest.match(/^- \*\*/gm) || []).length} 条`);

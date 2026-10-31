@@ -45,23 +45,31 @@ const parseCsv = (text) => {
   return rows.map((r) => Object.fromEntries(header.map((h, i) => [h, (r[i] ?? '').trim()])));
 };
 
-const num = (v) => { const n = Number(String(v).replace(/[,\s]/g, '')); return Number.isFinite(n) ? n : null; };
+// 空单元格 = 没采到，不是 0。
+// 踩过：Number('') 是 0，于是"平均播放时长没填"被算成完播率 0%，规则推出一条假的 P0「重做前 3 秒」。
+const num = (v) => {
+  const s = String(v ?? '').replace(/[,\s]/g, '');
+  if (!s) return null;
+  const n = Number(s);
+  return Number.isFinite(n) ? n : null;
+};
 
 // ---------- 规则 ----------
 function analyze(rows) {
   const snaps = rows.map((r) => {
     const views = num(r.views) ?? 0;
-    const dur = num(r.duration_s) ?? 0;
-    const watch = num(r.avg_watch_s) ?? 0;
-    const like = num(r.likes) ?? 0, fav = num(r.favorites) ?? 0, cmt = num(r.comments) ?? 0, share = num(r.shares) ?? 0, fans = num(r.new_followers) ?? 0;
+    const dur = num(r.duration_s);
+    const watch = num(r.avg_watch_s);
+    const like = num(r.likes), fav = num(r.favorites), cmt = num(r.comments), share = num(r.shares), fans = num(r.new_followers);
+    const rate = (v) => (v == null || views <= 0 ? null : v / views);
     return {
       date: r.date, views, duration_s: dur, avg_watch_s: watch,
-      retention: dur > 0 ? watch / dur : null,
-      like_rate: views > 0 ? like / views : null,
-      fav_rate: views > 0 ? fav / views : null,
-      comment_rate: views > 0 ? cmt / views : null,
-      share_rate: views > 0 ? share / views : null,
-      fans_per_1k: views > 0 ? (fans / views) * 1000 : null,
+      retention: dur > 0 && watch != null ? watch / dur : null,
+      like_rate: rate(like),
+      fav_rate: rate(fav),
+      comment_rate: rate(cmt),
+      share_rate: rate(share),
+      fans_per_1k: rate(fans) == null ? null : rate(fans) * 1000,
       notes: String(r.notes || ''),
       raw: r,
     };
@@ -81,7 +89,9 @@ function analyze(rows) {
     return { snaps, last, prev, actions };
   }
   // 主指标：完播率（B 站知识区，<35% 说明开头没抓住）
-  if (last.retention == null) add('P0', '补 avg_watch_s / duration_s', '完播率算不出来，无法判断内容是否被看完');
+  // 注意：这是**采集缺口**，不是内容问题。公开接口拿不到平均播放时长，
+  // 所以要人从创作中心补；别把它当成"片子不好"的证据。
+  if (last.retention == null) add('P1', '补 avg_watch_s（去创作中心抄「平均播放时长」，或 collect_feedback --avg-watch）', '完播率算不出来，最强指标缺席；这是采集缺口，不是内容问题');
   else if (last.retention < 0.35) add('P0', '重做前 3 秒钩子（结论前置 / 强对比画面）', `完播率 ${(last.retention * 100).toFixed(1)}% < 35%`);
   else if (last.retention < 0.5) add('P1', '把最有价值的技巧提前到第 1 章，首屏加"清单"预告', `完播率 ${(last.retention * 100).toFixed(1)}% 介于 35–50%`);
   else add('—', '内容留存正常，优先解决"被发现"的问题（标题/封面/分区）', `完播率 ${(last.retention * 100).toFixed(1)}% ≥ 50%`);

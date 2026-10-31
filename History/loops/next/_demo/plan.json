@@ -1,0 +1,244 @@
+{
+  "generated_at": "2026-10-31T09:02:03.891Z",
+  "snapshot": "2026-11-04T02:00:00.000Z",
+  "bvid": "BV_DEMO",
+  "context": {
+    "ageDays": 3.7761921296296297,
+    "views": 3000,
+    "viewsDelta": 800,
+    "likeRate": 0.008,
+    "favRate": 0.07,
+    "commentRate": 0.004,
+    "shareRate": 0.0016666666666666668,
+    "fansDelta": 25,
+    "danmakuCount": 8,
+    "commentCount": 12,
+    "texts": [
+      "字幕太小了，手机上根本看不清",
+      "字幕能不能大一点，白字有点糊",
+      "第三句翻译怪怪的，机翻味很重",
+      "翻译有点硬，其他都挺好",
+      "求系列！这个太有用了",
+      "这里字幕看不清",
+      "太快了",
+      "字幕挡住画面了",
+      "没看懂",
+      "太快",
+      "开头不错",
+      "有用"
+    ],
+    "hits": {
+      "readability": [
+        "字幕太小了，手机上根本看不清",
+        "字幕能不能大一点，白字有点糊",
+        "这里字幕看不清",
+        "字幕挡住画面了"
+      ],
+      "pace": [
+        "太快了",
+        "太快"
+      ],
+      "translation": [
+        "第三句翻译怪怪的，机翻味很重",
+        "翻译有点硬，其他都挺好"
+      ],
+      "hook": [],
+      "series": [
+        "求系列！这个太有用了"
+      ],
+      "useful": [
+        "求系列！这个太有用了",
+        "有用"
+      ],
+      "audio": [],
+      "visual": [
+        "字幕能不能大一点，白字有点糊",
+        "字幕挡住画面了"
+      ]
+    },
+    "burst": {
+      "start": 10,
+      "end": 15,
+      "n": 5,
+      "total": 7
+    },
+    "hasSignal": true
+  },
+  "proposals": [
+    {
+      "id": "R4",
+      "pri": "P0",
+      "title": "字幕可读性返工（4 条反馈）",
+      "goal": "观众明确说字幕看不清/太小，这是交付质量问题，必须先修。",
+      "evidence": [
+        "命中 4 条：「字幕太小了，手机上根本看不清」、「字幕能不能大一点，白字有点糊」、「这里字幕看不清」"
+      ],
+      "changes": [
+        {
+          "file": "Tool/subtitle/make_ass.mjs",
+          "what": "中文字号 40→46、英文字号 36→40、中文每行 14→12 字",
+          "param": "--zh-size 46 --en-size 40 --wrap-zh 12"
+        },
+        {
+          "file": "Tool/subtitle/make_ass.mjs",
+          "what": "底边距抬高，避开 B 站播放器自带进度条遮挡",
+          "param": "--en-margin 26→40"
+        },
+        {
+          "file": "复用 Tool/acceptance/qa_report.mjs",
+          "what": "重烧后确认没有越界/重叠",
+          "param": "—"
+        }
+      ],
+      "acceptance": [
+        "同一段 10s 截图对比，字号变化可量化",
+        "qa_report 仍 PASS（无越界/无重叠）",
+        "重发后同类反馈条数下降"
+      ],
+      "cost": "低（只重烧字幕层，不重跑 ASR/翻译）",
+      "risk": "字号变大→换行变多→可能压画面，需要 wrap-zh 同步降"
+    },
+    {
+      "id": "R6",
+      "pri": "P0",
+      "title": "译文质量返工（2 条反馈）",
+      "goal": "评论指出翻译生硬/术语错，走人工校对闭环。",
+      "evidence": [
+        "命中 2 条：「第三句翻译怪怪的，机翻味很重」、「翻译有点硬，其他都挺好」"
+      ],
+      "changes": [
+        {
+          "file": "Tool/subtitle/export_review.mjs",
+          "what": "导出校对表，按 flags 优先改 cps_over / term_missing",
+          "param": "--cps 16"
+        },
+        {
+          "file": "Tool/subtitle/apply_review.mjs",
+          "what": "改完回写 cues，再重烧",
+          "param": "—"
+        },
+        {
+          "file": "Tool/subtitle/term_candidates.mjs",
+          "what": "把被译坏的术语补进 glossary_zh.json",
+          "param": "—"
+        }
+      ],
+      "acceptance": [
+        "flags 里 term_missing 归零",
+        "apply_review 后 cues 与校对表逐字节一致",
+        "重发后同类反馈消失"
+      ],
+      "cost": "中（人工过一遍中文）",
+      "risk": "人工改动可能引入断句错位，必须跑 verify_subs"
+    },
+    {
+      "id": "R2",
+      "pri": "P1",
+      "title": "推荐流在推但点赞率低：封面承诺和内容前 30 秒对不上",
+      "goal": "本期增量 800（说明有曝光），点赞率 0.80% < 2.00%。",
+      "evidence": [
+        "views_delta 800",
+        "点赞率 0.80%",
+        "收藏率 7.00%"
+      ],
+      "changes": [
+        {
+          "file": "Tool/ops/make_episode.mjs / 讲稿",
+          "what": "把封面主标题的承诺写进第 1 句，前 3 秒出现结果对比",
+          "param": "--script 改写前 2 行"
+        },
+        {
+          "file": "Tool/edit/make_timeline.mjs",
+          "what": "把\"最强结论\"片段提到 0–5s（EDL 重排）",
+          "param": "edits.json 首段顺序"
+        }
+      ],
+      "acceptance": [
+        "新版点赞率 ≥ 3%",
+        "前 10 秒留存由 A/B 对比确认（无完播数据时用点赞率代理）"
+      ],
+      "cost": "低（重剪开头，不动中间）",
+      "risk": "开头改动可能伤完播，需两版对照"
+    },
+    {
+      "id": "R3",
+      "pri": "P1",
+      "title": "收藏率高 = 工具型内容：做成系列 + 出配套清单",
+      "goal": "收藏率 7.00% ≥ 5.00%，观众在\"存着以后用\"。",
+      "evidence": [
+        "收藏率 7.00%",
+        "正向评论 2 条：「求系列！这个太有用了」、「有用」"
+      ],
+      "changes": [
+        {
+          "file": "Idea/Idea.md",
+          "what": "定系列名与 5 期母题（同一批观众复用）",
+          "param": "—"
+        },
+        {
+          "file": "Tool/ops/make_episode.mjs",
+          "what": "每期结尾固定 CTA：\"清单在置顶评论\"",
+          "param": "--script 尾部"
+        }
+      ],
+      "acceptance": [
+        "第 2 期发布后 7 天内，关注转化（粉丝增量/千播）≥ 本期 2 倍"
+      ],
+      "cost": "中（要写系列大纲）",
+      "risk": "系列化会压缩单期选题自由度"
+    },
+    {
+      "id": "R5",
+      "pri": "P1",
+      "title": "语速偏快（2 条反馈）",
+      "goal": "观众说跟不上，降低每秒字数上限并拆行。",
+      "evidence": [
+        "命中 2 条：「太快了」、「太快」"
+      ],
+      "changes": [
+        {
+          "file": "Tool/subtitle/make_subs.mjs",
+          "what": "CPS 20→16，单行中文 18→14 字",
+          "param": "--cps 16 --max-zh 14"
+        },
+        {
+          "file": "Tool/subtitle/make_ass.mjs",
+          "what": "同步 --wrap-zh 14→12，避免长句塞一行",
+          "param": "--wrap-zh 12"
+        }
+      ],
+      "acceptance": [
+        "export_review 的 cps_over 条数降为 0",
+        "重发后同类反馈消失"
+      ],
+      "cost": "低（重跑 cues + 重烧）",
+      "risk": "拆行过多会让画面频繁闪，需看 10s 样例"
+    },
+    {
+      "id": "R8",
+      "pri": "P1",
+      "title": "10s–15s 被集中吐槽（5/7 条弹幕）",
+      "goal": "弹幕时间点等于观众的\"忍耐点\"，这段必须改。",
+      "evidence": [
+        "该 5 秒窗口 5 条弹幕，占全部 71.43%"
+      ],
+      "changes": [
+        {
+          "file": "History/runs/feedback/latest.json",
+          "what": "读 danmakus 里 t∈[10,15] 的原文，确认是\"看不懂\"还是\"画面糊\"",
+          "param": "—"
+        },
+        {
+          "file": "Tool/edit/make_timeline.mjs",
+          "what": "该段缩短或换成更直观的画面",
+          "param": "edits.json 对应区间"
+        }
+      ],
+      "acceptance": [
+        "新版该区间弹幕情绪转为中性/正向"
+      ],
+      "cost": "低",
+      "risk": "弹幕少时可能是噪声，注意总数门槛"
+    }
+  ]
+}
