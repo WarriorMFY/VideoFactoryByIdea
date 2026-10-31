@@ -65,7 +65,7 @@
 - [ ] 填标题（选一版）、简介、标签、分区
 - [ ] 声明：本片画面为 Blender 开放影片（CC-BY 3.0），语音为合成音；**不含第三方版权素材**
 - [ ] 发布后把播放/完播/互动数据填进 `feedback.csv`（T+1 / T+3 / T+7）
-- [ ] 跑 `node Tool/ops/track_feedback.mjs --csv Deliverables/ep01_editing_tips/feedback.csv`，按报告里的 P0 动作改下一版
+- [ ] 跑 `node Tool/ops/track_feedback.mjs --csv Prototype/loop12_market_loop/case_ep01/feedback.csv`，按报告里的 P0 动作改下一版
 
 ## 5. 这期已知的局限（别当成"完美成品"）
 
@@ -79,14 +79,14 @@
 
 ```powershell
 # 1) 造素材（合成口播 + 循环画面，37s）
-node Tool\ops\make_episode.mjs --script Deliverables\ep01_editing_tips\script_en.txt --out Deliverables\ep01_editing_tips
+node Tool\ops\make_episode.mjs --script Workspace\deliverables\ep01_editing_tips\script_en.txt --out Workspace\deliverables\ep01_editing_tips
 # 2) 识别 + 对齐讲稿 + 出双语字幕（精译）+ 出 ASS + 烧入
-node Tool\subtitle\asr_vosk.mjs Deliverables\ep01_editing_tips\source.mp4 --out Deliverables\ep01_editing_tips\transcript.json
-node Tool\subtitle\align_script.mjs Deliverables\ep01_editing_tips\transcript.json Deliverables\ep01_editing_tips\ground_truth.json --out Deliverables\ep01_editing_tips\transcript_aligned.json
-node Tool\subtitle\make_subs.mjs Deliverables\ep01_editing_tips\transcript_aligned.json --out Deliverables\ep01_editing_tips\subs --punct --mt agent --zh-file Deliverables\ep01_editing_tips\zh_agent.json --glossary Tool\subtitle\glossary_zh.json --cps 20
-node Tool\subtitle\make_ass.mjs Deliverables\ep01_editing_tips\subs\cues.json --out Deliverables\ep01_editing_tips\karaoke.ass --hl 33E6C8
-node Tool\edit\vfactory.mjs Deliverables\ep01_editing_tips\source.mp4 --out Deliverables\ep01_editing_tips\render_16x9 --title "5个剪辑提速技巧" --srt Deliverables\ep01_editing_tips\karaoke.ass --width 1280 --height 720 --max-cut 0
+node Tool\subtitle\asr_vosk.mjs Workspace\deliverables\ep01_editing_tips\source.mp4 --out Workspace\deliverables\ep01_editing_tips\transcript.json
+node Tool\subtitle\align_script.mjs Workspace\deliverables\ep01_editing_tips\transcript.json Workspace\deliverables\ep01_editing_tips\ground_truth.json --out Workspace\deliverables\ep01_editing_tips\transcript_aligned.json
+node Tool\subtitle\make_subs.mjs Workspace\deliverables\ep01_editing_tips\transcript_aligned.json --out Workspace\deliverables\ep01_editing_tips\subs --punct --mt agent --zh-file Workspace\deliverables\ep01_editing_tips\zh_agent.json --glossary Tool\subtitle\glossary_zh.json --cps 20
+node Tool\subtitle\make_ass.mjs Workspace\deliverables\ep01_editing_tips\subs\cues.json --out Workspace\deliverables\ep01_editing_tips\karaoke.ass --hl 33E6C8
+node Tool\edit\vfactory.mjs Workspace\deliverables\ep01_editing_tips\source.mp4 --out Workspace\deliverables\ep01_editing_tips\render_16x9 --title "5个剪辑提速技巧" --srt Workspace\deliverables\ep01_editing_tips\karaoke.ass --width 1280 --height 720 --max-cut 0
 # 3) 封面 + 反馈追踪
-node Tool\ops\make_cover.mjs --video Deliverables\ep01_editing_tips\render_16x9\final.mp4 --out Deliverables\ep01_editing_tips\cover_16x9.jpg --title "5 个剪辑提速技巧" --sub "英文原声 · 中英双语 · 逐词高亮" --tag "工厂样片"
-node Tool\ops\track_feedback.mjs --csv Deliverables\ep01_editing_tips\feedback.csv
+node Tool\ops\make_cover.mjs --video Workspace\deliverables\ep01_editing_tips\render_16x9\final.mp4 --out Workspace\deliverables\ep01_editing_tips\cover_16x9.jpg --title "5 个剪辑提速技巧" --sub "英文原声 · 中英双语 · 逐词高亮" --tag "工厂样片"
+node Tool\ops\track_feedback.mjs --csv Prototype\loop12_market_loop\case_ep01\feedback.csv
 ```

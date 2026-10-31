@@ -5,7 +5,7 @@
 $ErrorActionPreference = 'Stop'
 $root = Resolve-Path (Join-Path $PSScriptRoot '..\..')
 Push-Location $root
-$EP = 'Deliverables\ep01_editing_tips'
+$EP = 'Workspace\deliverables\ep01_editing_tips'
 try {
   Write-Host "== 0/6 cwd: $($PWD.Path)" -ForegroundColor Cyan
   if (-not (Get-Command node -ErrorAction SilentlyContinue)) { throw "node not found; install Node.js 20+" }

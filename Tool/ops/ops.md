@@ -18,12 +18,12 @@
 # 1) 侦查：今天市场上什么火、我们能不能快速做
 node Tool\ops\recon_bilibili.mjs --out History\loops\loop12 --top 60
 # 2) 造样片素材（合成口播 + 循环画面）
-node Tool\ops\make_episode.mjs --script Deliverables\ep01_editing_tips\script_en.txt --out Deliverables\ep01_editing_tips
+node Tool\ops\make_episode.mjs --script Workspace\deliverables\ep01_editing_tips\script_en.txt --out Workspace\deliverables\ep01_editing_tips
 # 3) 工厂链路（识别→对齐讲稿→精译→字幕→烧入）见 Prototype\loop12_market_loop\reproduce.ps1
 # 4) 封面
 node Tool\ops\make_cover.mjs --video <成片.mp4> --out cover.jpg --title "..." --sub "..." --tag "..."
 # 5) 反馈
-node Tool\ops\track_feedback.mjs --csv Deliverables\ep01_editing_tips\feedback.csv
+node Tool\ops\track_feedback.mjs --csv Prototype\loop12_market_loop\case_ep01\feedback.csv
 ```
 
 ## 坑

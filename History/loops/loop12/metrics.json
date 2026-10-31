@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-30T09:53:00.169Z",
+  "generated_at": "2026-10-31T01:50:30.322Z",
   "recon": {
     "pool": 134,
     "candidates": 60,
@@ -43,7 +43,7 @@
     "top_keyword": "编程教程 英文"
   },
   "episode": {
-    "path": "Deliverables\\ep01_editing_tips",
+    "path": "Workspace\\deliverables\\ep01_editing_tips",
     "final_s": 37.374,
     "w": 1280,
     "h": 720,

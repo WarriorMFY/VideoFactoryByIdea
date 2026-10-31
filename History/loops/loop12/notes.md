@@ -42,3 +42,17 @@
 3. **竖屏版（9:16）**：B 站横屏为主，但抖音/视频号需要竖屏，字幕字号/换行要单独一套参数；
 4. **封面文字是否压主体**：我读不了图，需要人眼确认（`cover_16x9.jpg`）；
 5. **选题库常态化**：现在是一次性侦查，可以做成"每天跑一次的选题雷达"（同一脚本 + 定时）。
+
+---
+
+## 路径迁移说明（2026-10-31，方案 A）
+
+> 上文提到的 `Deliverables/ep01_editing_tips/` 已按 AGENTS.md 目录约定迁移，**旧记录保留原样**，以新位置为准：
+
+| 内容 | 旧位置 | 新位置 |
+| --- | --- | --- |
+| 构建产物（transcript / edits / verify / render 中间件） | `Deliverables/ep01_editing_tips/` | `Workspace/deliverables/ep01_editing_tips/`（可重建，不入库） |
+| 可发布成品快照（成片/封面/双语SRT/高亮ASS/文案/上传清单） | 同上 | `Prototype/loop12_market_loop/case_ep01/`（不变，入库） |
+| 人工反馈表与反馈报告 | `Deliverables/ep01_editing_tips/feedback.csv` | `Prototype/loop12_market_loop/case_ep01/feedback.csv` |
+
+迁移后复跑：`node Tool\acceptance\run_market_loop_acceptance.mjs` → 9/9 PASS。

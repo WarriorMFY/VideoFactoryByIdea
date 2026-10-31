@@ -42,7 +42,7 @@
 
 素材合规：画面 Big Buck Bunny（CC-BY 3.0）+ Edge TTS 合成语音 —— **不涉及搬运侵权**，可以直接公开。
 
-## 4. 交付包（`Deliverables/ep01_editing_tips/`）
+## 4. 交付包（`Workspace/deliverables/ep01_editing_tips/`）
 
 成片 / 封面 / 双语 SRT / 高亮 ASS / **发布文案**（3 版标题、简介、标签、分区、置顶评论）/ **上传清单** / 合规声明 / `feedback.csv`。
 
@@ -54,7 +54,7 @@
 ## 5. 反馈与迭代：机制已可运行
 
 ```powershell
-node Tool\ops\track_feedback.mjs --csv Deliverables\ep01_editing_tips\feedback.csv
+node Tool\ops\track_feedback.mjs --csv Prototype\loop12_market_loop\case_ep01\feedback.csv
 ```
 
 - 空表 → 明确输出"**待采集**"（不编数字）；

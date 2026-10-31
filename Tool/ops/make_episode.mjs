@@ -10,7 +10,7 @@
  * 为什么不用真·英文教程视频：版权不明确（B 站上的"搬运"内容不能直接再分发）。
  * 这条样片的意义是**验证"工厂 → 交付包"这一段能跑通**，不是伪装成真实搬运。
  *
- * 用法：node Tool/ops/make_episode.mjs --script episodes/ep01.txt --out Deliverables/ep01 --footage <mp4>
+ * 用法：node Tool/ops/make_episode.mjs --script episodes/ep01.txt --out Workspace/deliverables/ep01 --footage <mp4>
  * 输出：<out>/source.mp4、<out>/ground_truth.json、<out>/script.txt
  */
 import fs from 'node:fs';
@@ -21,7 +21,7 @@ import { ffmpeg, durationOf, ffprobeJson, ROOT } from '../lib/ff.mjs';
 const args = process.argv.slice(2);
 const getOpt = (k, d) => (args.includes(k) ? args[args.indexOf(k) + 1] : d);
 const SCRIPT = path.resolve(ROOT, getOpt('--script', ''));
-const OUT = path.resolve(ROOT, getOpt('--out', 'Deliverables/ep01'));
+const OUT = path.resolve(ROOT, getOpt('--out', 'Workspace/deliverables/ep01'));
 const FOOTAGE = path.resolve(ROOT, getOpt('--footage', path.join('Workspace', 'assets', 'realspeech', 'w3c-bunny-trailer.mp4')));
 const VOICE = getOpt('--voice', 'en-US-AriaNeural');
 const RATE = getOpt('--rate', '+0%');

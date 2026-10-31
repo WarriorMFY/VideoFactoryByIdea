@@ -11,7 +11,7 @@
  *
  * 设计原则：不猜。没有数据就说"待采集"，不编数字；--selftest 用**明确标注的合成数据**只验证规则能跑。
  *
- * 用法：node Tool/ops/track_feedback.mjs --csv Deliverables/ep01_editing_tips/feedback.csv --out Deliverables/ep01_editing_tips/feedback_report.md
+ * 用法：node Tool/ops/track_feedback.mjs --csv Prototype/loop12_market_loop/case_ep01/feedback.csv --out Prototype/loop12_market_loop/case_ep01/feedback_report.md
  *       node Tool/ops/track_feedback.mjs --selftest      # 用合成数据验证规则（输出标注 DRY-RUN）
  */
 import fs from 'node:fs';

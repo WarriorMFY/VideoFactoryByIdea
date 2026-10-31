@@ -7,6 +7,9 @@ History/**/.qa/
 History/**/.asr_work/
 History/asr/.asr_work/
 
+# 对外交付包的构建产物（脚本重建即可；可发布的成品快照在 Prototype/loop12_market_loop/case_ep01/）
+# 位置：Workspace/deliverables/<ep>/（整个 Workspace/ 已忽略，这里保留说明即可）
+
 # 可再生的音视频产物（成品在 Prototype/ 下保留在本地磁盘，但为避免仓库膨胀不入库；
 # 重建命令见 Prototype/README*.md 与 History/CircleLog/log.md）
 History/bench/**/*.mp4
@@ -25,11 +28,7 @@ desktop.ini
 .karaoke_verify/
 .asr_work/
 
-# Сѭ�� 12���г�������Ƭ��37s / 8MB��Ψһ������Ƶ�����ڽ�������֤��
+# Сѭ�� 12���г�������Ƭ��37s / 8MB��Ψһ������Ƶ�����ڽ�������֤��
 !Prototype/loop12_market_loop/case_ep01/final_16x9.mp4
 
-# ���������ý�����м������Ƭ���� Prototype/loop12_market_loop ���һ�ݣ������ظ����ͣ�
-Deliverables/**/*.mp4
-Deliverables/**/*.wav
-Deliverables/**/.work/
-Deliverables/**/.qa/
+# ���������ý�����м������Ƭ���� Prototype/loop12_market_loop ���һ�ݣ������ظ����ͣ�

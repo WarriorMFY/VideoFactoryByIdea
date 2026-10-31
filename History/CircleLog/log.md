@@ -12,7 +12,7 @@
 | --- | --- |
 | 大循环 | **进行中**（人控）。时间窗口 2026-10-27 10:44 → 2026-10-31 10:44；已用约 **79.3h / 96h**，剩余 **16.7 小时**（截至 2026-10-30 19:25） |
 | 已完成小循环 | **1 ✅（自动剪辑）· 2 ✅（外语→中文字幕）· 3 ✅（真实素材+语音保护）· 4 ✅（多样本）· 5 ✅（逐词高亮，含抖动 v2）· 6 ✅（文本层：标点/精译/节流）· 7 ✅（短句救援证伪 + 预处理链）· 8 ✅（校对回写闭环）· 9 ✅（49 分钟压测 + 术语审计）· 10 ✅（karaoke 长片规模）· 11 ✅（知识型链路：分诊/单位/术语）· 12 ⏸️（市场闭环：侦查/样片/交付包已跑通，上架与反馈待人工；按人要求暂停留痕）** |
-| 当前等待 | **人对小循环 7–12 的反馈**；小循环 12 下一步需要人：用自己账号上架 `Deliverables/ep01_editing_tips/` 并回填 `feedback.csv`。关键待决策仍是：**换不换 ASR 模型**（唯一能提高质量上限的动作，需要模型文件/下载通道/ASR 接口） |
+| 当前等待 | **人对小循环 7–12 的反馈**；小循环 12 下一步需要人：用自己账号上架 `Prototype/loop12_market_loop/case_ep01/`（可发布成品快照）并回填同目录 `feedback.csv`。关键待决策仍是：**换不换 ASR 模型**（唯一能提高质量上限的动作，需要模型文件/下载通道/ASR 接口） |
 | 代码/仓库状态 | git 干净；分支 `main`；入库 960 文件 / 20.3MB（视频与大素材按 `.gitignore` 不入库，本地保留 6.36GB） | |
 | 远端 | `origin` = https://github.com/WarriorMFY/VideoFactoryByIdea.git（公开，默认分支 main）。**已推送**：2026-10-30 17:36，`80a7150 → 0cc37c2`（9 个提交），push exit=0；三方核对一致——`git ls-remote` = `0cc37c2`、`rev-list --left-right` = **0/0**、GitHub API `commits/main` = `0cc37c2`（pushed_at 2026-10-30T09:36Z，仓库 size 34,746KB）。坑：git 默认 Schannel 握手失败 → 本仓库固定 `http.sslBackend=openssl`；凭据助手经 `sh.exe` 被沙箱拒 → 用 GCM 直取凭据 + `http.extraheader`（脚本 `Workspace/cache/push_with_gcm.ps1`）。详见 `Tool/env.md` 第〇节。后续只在人明确要求时再推 | |
 | 可交付能力 | 自动删减成片（真值 IoU 1.000/0.998，误删 0s）· 外语→中文字幕（TTS 素材 WER 6.1%、覆盖 99.8%）· 真实素材**对白不会被剪**（语音保护）· 双语逐词高亮（长片 1030 事件/0.1s）· 标点恢复 + 精译 · **人工校对回写闭环** · **能扛 49 分钟长片**（48.7 分钟成片、273 条字幕） |
@@ -229,4 +229,16 @@
 | 结果 | 第一次 push **超时失败**（Connection timed out after 30001 ms）；重试脚本第 1 次仍失败（Failed to connect to github.com:443），**第 2 次成功**：a57013..4537920  main -> main |
 | 经验 | 网络抖动时 push 要**带重试 + http.version=HTTP/1.1 + 大 postBuffer**（脚本 Workspace/cache/push_retry.ps1）；失败表现是 exit=128 连接超时，不是凭据问题 |
 | 核对 | git ls-remote / ev-list --left-right = 0/0 / GitHub API 三处一致；远端 Prototype/loop12_market_loop/case_ep01/ 已含 8MB 样片 |
+| 人工反馈 | （待填） |
+---
+
+## 维护记录 · 2026-10-31 · `Deliverables/` 目录归位（用户指令「A」）
+
+| 项 | 内容 |
+| --- | --- |
+| 触发 | 用户指出根目录出现 `Deliverables/` **不符合 AGENTS.md 目录约定**（"根目录仅 AGENTS.md、git 文件及约定目录"）。溯源：该目录由 `ff8ffd0 feat(loop12)`（2026-10-30 17:53）建立，属 loop12 交付包工作目录；本会话是在拉取该提交后**未做目录合规检查**，由用户发现 |
+| 决策 | 人选定**方案 A**：临时/可重建的构建产物进 `Workspace/`，人工反馈数据进 `Prototype/`，并同步更新引用（未修改目录约定本身） |
+| 动作 | ① `Deliverables/ep01_editing_tips/` → `Workspace/deliverables/ep01_editing_tips/`（26 个跟踪文件，构建产物、可重建）；② 人工反馈 `feedback.csv` + `feedback_report.md` 归到 `Prototype/loop12_market_loop/case_ep01/`（跟踪入库）；③ 更新 19 行引用（`Tool/ops/*`、`Tool/acceptance/run_market_loop_acceptance.mjs`、`Prototype/loop12_market_loop/*`）；④ 移除 `.gitignore` 里 4 条 `Deliverables/**` 规则（`Workspace/` 已整体忽略）；⑤ `Deliverables/` 从索引与磁盘删除，根目录回到白名单 |
+| 验证 | `node Tool\acceptance\run_market_loop_acceptance.mjs` → **9/9 PASS**（成片 37.374s/720p、QA PASS、双语 12/12、ASS 88 事件、WER 9.5%）；成片质检用新路径重跑：−16.3 LUFS / 峰值 −1.8 dBTP / 无残留黑场；`git grep Deliverables` 仅剩 History 历史记录（按"不改留痕"原则保留）与已重跑的 `qa.json` |
+| 状态 | 根目录 = `.git/.gitignore/AGENTS.md/Idea/Prototype/History/Tool/Workspace`，符合约定；本次改动已本地提交，未推送 |
 | 人工反馈 | （待填） |

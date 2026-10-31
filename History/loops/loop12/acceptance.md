@@ -1,6 +1,6 @@
 # 小循环 12 · 市场 ↔ 工厂 闭环验收（自动生成）
 
-> 生成时间：2026-10-30T09:53:00.168Z　交付包：`Deliverables\ep01_editing_tips`
+> 生成时间：2026-10-31T01:50:30.321Z　交付包：`Workspace\deliverables\ep01_editing_tips`
 
 ## 判定
 

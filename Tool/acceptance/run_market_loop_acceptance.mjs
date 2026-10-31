@@ -8,7 +8,7 @@
  *   C 交付包：发布所需的东西一件不少（文案/标签/分区/上传清单/合规声明）
  *   D 反馈闭环：反馈表 + 追踪器能算出指标并给出**可执行**的迭代动作（空数据必须诚实说"待采集"）
  *
- * 用法：node Tool/acceptance/run_market_loop_acceptance.mjs [--ep Deliverables/ep01_editing_tips]
+ * 用法：node Tool/acceptance/run_market_loop_acceptance.mjs [--ep Workspace/deliverables/ep01_editing_tips]
  * 输出：History/loops/loop12/{acceptance.md,metrics.json}
  */
 import fs from 'node:fs';
@@ -17,7 +17,7 @@ import { run, ffprobeJson, ROOT } from '../lib/ff.mjs';
 
 const args = process.argv.slice(2);
 const getOpt = (k, d) => (args.includes(k) ? args[args.indexOf(k) + 1] : d);
-const EP = path.resolve(ROOT, getOpt('--ep', path.join('Deliverables', 'ep01_editing_tips')));
+const EP = path.resolve(ROOT, getOpt('--ep', path.join('Workspace', 'deliverables', 'ep01_editing_tips')));
 const OUTDIR = path.join(ROOT, 'History', 'loops', 'loop12');
 const LOGS = path.join(ROOT, 'History', 'runs', '_logs');
 for (const d of [OUTDIR, LOGS]) fs.mkdirSync(d, { recursive: true });
@@ -79,9 +79,12 @@ const publishChecks = {
 
 // ---------- D. 反馈闭环 ----------
 step('D 反馈闭环（空数据要诚实 + 规则要能跑）');
-const FB = path.join(EP, 'feedback.csv');
-const stub = run(process.execPath, [path.join(ROOT, 'Tool/ops/track_feedback.mjs'), '--csv', path.relative(ROOT, FB), '--out', path.join('Deliverables', 'ep01_editing_tips', 'feedback_report.md')], path.join(LOGS, 'l12_track_empty.log'));
-const emptyReport = fs.readFileSync(path.join(EP, 'feedback_report.md'), 'utf8');
+// 人工反馈数据归 Prototype 快照（符合 AGENTS.md「反馈进 Prototype/」）：
+// 构建产物在 Workspace/deliverables/<ep>/，但 feedback.csv / feedback_report.md 放快照目录。
+const FB = path.join(ROOT, 'Prototype', 'loop12_market_loop', 'case_ep01', 'feedback.csv');
+const FBR = path.join(ROOT, 'Prototype', 'loop12_market_loop', 'case_ep01', 'feedback_report.md');
+const stub = run(process.execPath, [path.join(ROOT, 'Tool/ops/track_feedback.mjs'), '--csv', path.relative(ROOT, FB), '--out', path.relative(ROOT, FBR)], path.join(LOGS, 'l12_track_empty.log'));
+const emptyReport = fs.readFileSync(FBR, 'utf8');
 const dry = run(process.execPath, [path.join(ROOT, 'Tool/ops/track_feedback.mjs'), '--selftest'], path.join(LOGS, 'l12_track_selftest.log'));
 const selftest = fs.readFileSync(path.join(ROOT, 'History', 'loops', 'loop12', 'feedback_selftest.md'), 'utf8');
 console.log(`  空表 → 「待采集」=${/待采集/.test(emptyReport)}；自检 → 动作 ${(selftest.match(/^- \*\*/gm) || []).length} 条`);
