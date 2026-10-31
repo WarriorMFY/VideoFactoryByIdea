@@ -18,6 +18,12 @@
  * 你在创作中心看到后可以用 `--avg-watch 12.4` 补录。
  *
  * 幂等：同一天重复跑只更新当天那一行（数值刷新，人工备注保留）。
+ * 产物：
+ *   feedback.csv                     一天一行（给 track_feedback 按天算环比）
+ *   History/runs/feedback/ticks.jsonl 一次一行（半小时/一小时一采时的日内时序，
+ *                                    用来判断"推荐流从哪一刻起没再推"）
+ *   History/runs/feedback/latest.json 最新一次快照（plan_next_loop 的输入）
+ *   History/runs/feedback/<时间戳>.json 仅在数据变化时落（避免高频采集塞满磁盘）
  *
  * 用法：
  *   node Tool/ops/collect_feedback.mjs                       # 采一次，写默认 CSV
@@ -270,6 +276,28 @@ async function main() {
   // 不刷新会让 plan.md 显示上一轮的增量（"播放 3 / +0"这种自相矛盾的读数）。
   if (!unchanged) fs.writeFileSync(snapFile, JSON.stringify(snap, null, 2), 'utf8');
   fs.writeFileSync(latestFile, JSON.stringify(snap, null, 2), 'utf8');
+
+  /**
+   * 每小时/半小时一采时，`feedback.csv` 一天只留一行（诊断口径要稳定，环比按天算），
+   * 日内「哪半小时播放涨得快」就无处可查 —— 而这正是判断"有没有进推荐流"最直接的证据。
+   * 所以另起一个只追加的 ticks.jsonl：一行一个采样点，数据没变也记（时间点本身是信息：
+   * 能看出推荐流从哪一刻起没再推）。体积很小：半小时一次 ≈ 7KB/天。
+   */
+  const ticksFile = path.join(RUNS, 'ticks.jsonl');
+  const tick = {
+    at: stamp.toISOString(),
+    date: today,
+    views: Number(stat.view) || 0,
+    likes: Number(stat.like) || 0,
+    coins: Number(stat.coin) || 0,
+    favorites: Number(stat.favorite) || 0,
+    comments: Number(stat.reply) || 0,
+    danmaku: Number(stat.danmaku) || 0,
+    shares: Number(stat.share) || 0,
+    fans: fansTotal,
+    views_since_publish: baseViews == null ? null : (Number(stat.view) || 0) - baseViews,
+  };
+  fs.appendFileSync(ticksFile, JSON.stringify(tick) + '\n', 'utf8');
 
   // ---------- 7. 变化摘要 ----------
   const delta = row.views_delta === '' ? '（首个快照，无基线）' : `（较上次 +${row.views_delta}）`;
