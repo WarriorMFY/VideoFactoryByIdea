@@ -1,0 +1,143 @@
+{
+  "checked_at": "2026-10-31T03:15:20.324Z",
+  "video": "F:\\AgentWorkArea\\WorkBuddy\\VideoFactory\\Deliverables\\ep01_editing_tips\\render_16x9\\final.mp4",
+  "ass": "F:\\AgentWorkArea\\WorkBuddy\\VideoFactory\\Deliverables\\ep01_editing_tips\\karaoke.ass",
+  "highlight": "33E6C8",
+  "events_total": 81,
+  "sampled": 12,
+  "checks": {
+    "highlight_present": true,
+    "single_block_per_frame": true,
+    "highlight_moves": true
+  },
+  "metrics": {
+    "frames": 12,
+    "frames_with_highlight": 12,
+    "frames_single_block": 12,
+    "centroid_spread_px": 391.1,
+    "avg_highlight_pixels": 584.2
+  },
+  "samples": [
+    {
+      "i": 0,
+      "t": 0.9,
+      "text": "five small edits that make any video look more",
+      "pixels": 469,
+      "blocks": 1,
+      "bboxW": 69,
+      "maxGap": 7,
+      "centroidX": 558
+    },
+    {
+      "i": 1,
+      "t": 2.22,
+      "text": "five small edits that make any video look more",
+      "pixels": 382,
+      "blocks": 1,
+      "bboxW": 59,
+      "maxGap": 7,
+      "centroidX": 513.8
+    },
+    {
+      "i": 2,
+      "t": 5.115,
+      "text": "number one cut on the beat not on the silence",
+      "pixels": 750,
+      "blocks": 1,
+      "bboxW": 121,
+      "maxGap": 15,
+      "centroidX": 705.3
+    },
+    {
+      "i": 3,
+      "t": 7.875,
+      "text": "number to keep your subtitles inside the safe ",
+      "pixels": 466,
+      "blocks": 1,
+      "bboxW": 67,
+      "maxGap": 7,
+      "centroidX": 532.5
+    },
+    {
+      "i": 4,
+      "t": 10.68,
+      "text": "number to keep your subtitles inside the safe ",
+      "pixels": 497,
+      "blocks": 1,
+      "bboxW": 68,
+      "maxGap": 5,
+      "centroidX": 572
+    },
+    {
+      "i": 5,
+      "t": 13.155,
+      "text": "number three normalized the audio to minus six",
+      "pixels": 703,
+      "blocks": 1,
+      "bboxW": 113,
+      "maxGap": 7,
+      "centroidX": 411.7
+    },
+    {
+      "i": 6,
+      "t": 16.845,
+      "text": "number three normalized the audio to minus six",
+      "pixels": 176,
+      "blocks": 1,
+      "bboxW": 23,
+      "maxGap": 5,
+      "centroidX": 640.6
+    },
+    {
+      "i": 7,
+      "t": 19.29,
+      "text": "number three normalized the audio to minus six",
+      "pixels": 547,
+      "blocks": 1,
+      "bboxW": 89,
+      "maxGap": 7,
+      "centroidX": 715.1
+    },
+    {
+      "i": 8,
+      "t": 21.915,
+      "text": "number for export at fifteen megabits per seco",
+      "pixels": 765,
+      "blocks": 1,
+      "bboxW": 131,
+      "maxGap": 14,
+      "centroidX": 600.4
+    },
+    {
+      "i": 9,
+      "t": 24.735,
+      "text": "number for export at fifteen megabits per seco",
+      "pixels": 719,
+      "blocks": 1,
+      "bboxW": 99,
+      "maxGap": 7,
+      "centroidX": 728.7
+    },
+    {
+      "i": 10,
+      "t": 26.905,
+      "text": "number for export at fifteen megabits per seco",
+      "pixels": 776,
+      "blocks": 1,
+      "bboxW": 125,
+      "maxGap": 7,
+      "centroidX": 795.8
+    },
+    {
+      "i": 11,
+      "t": 30.15,
+      "text": "number five before you publish watch your own ",
+      "pixels": 760,
+      "blocks": 1,
+      "bboxW": 138,
+      "maxGap": 14,
+      "centroidX": 404.7
+    }
+  ],
+  "verdict": "PASS"
+}

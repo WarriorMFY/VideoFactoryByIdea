@@ -10,7 +10,7 @@
  *
  * 来源：https://registry.npmmirror.com/-/binary/ffmpeg-static/b6.1.1/  （镜像自 eugeneware/ffmpeg-static）
  * 许可：见落盘的 win32-x64.LICENSE（该构建为 GPL 版本，分发需遵守 GPL；本项目仅本机使用）
- * 落地：Workspace/bin/ffmpeg/{ffmpeg.exe,ffprobe.exe,LICENSE.txt,README.txt,SOURCE.txt}（Workspace 可随时清理重建）
+ * 落地：Workspace/deps/ffmpeg/{ffmpeg.exe,ffprobe.exe,LICENSE.txt,README.txt,SOURCE.txt}（Workspace 可随时清理重建）
  */
 import { createWriteStream } from 'node:fs';
 import fs from 'node:fs/promises';
@@ -21,7 +21,7 @@ import { pipeline } from 'node:stream/promises';
 
 const BASE = 'https://registry.npmmirror.com/-/binary/ffmpeg-static/b6.1.1/';
 const root = path.resolve(import.meta.dirname, '..', '..');
-const binDir = path.join(root, 'Workspace', 'bin', 'ffmpeg');
+const binDir = path.join(root, 'Workspace', 'deps', 'ffmpeg');
 
 async function exists(p) { try { await fs.access(p); return true; } catch { return false; } }
 

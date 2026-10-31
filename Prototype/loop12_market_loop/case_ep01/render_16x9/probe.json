@@ -1,0 +1,21 @@
+{
+  "file": "F:\\AgentWorkArea\\WorkBuddy\\VideoFactory\\Deliverables\\ep01_editing_tips\\source.mp4",
+  "duration": 37.375,
+  "format": "mov,mp4,m4a,3gp,3g2,mj2",
+  "size": 16179905,
+  "bitrate": 3463257,
+  "video": {
+    "codec": "h264",
+    "width": 1280,
+    "height": 720,
+    "fps": "30/1",
+    "pix_fmt": "yuv420p",
+    "nb_frames": "1121"
+  },
+  "audio": {
+    "codec": "aac",
+    "sample_rate": "48000",
+    "channels": 2,
+    "bitrate": "182393"
+  }
+}

@@ -1,4 +1,4 @@
-[probe] F:\AgentWorkArea\DeepseekHarness\IdeaDrivenAigc\VideoFactory\History\bench\real\source.mp4
+[probe] F:\AgentWorkArea\WorkBuddy\VideoFactory\History\bench\real\source.mp4
 [probe] 17.00s 1920x1080 audio=true
 [analyze] blackdetect / freezedetect / scdet / silencedetect ...
 [analyze] black=3 freeze=3 silence=1 scenes=4
@@ -6,7 +6,7 @@
 [render] 提取 2 段 ...
 [render] 合并 (fade) ...
 [render] 收尾(响度归一/淡入淡出/标题) ...
-[done] 8.9s -> F:\AgentWorkArea\DeepseekHarness\IdeaDrivenAigc\VideoFactory\History\runs\real01
+[done] 10.9s -> F:\AgentWorkArea\WorkBuddy\VideoFactory\History\runs\real01
 [done] final=9.63s kept=2 cut=3 transition=xfade(fade,0.4s)
   - final.mp4 4985KB
   - edits.json 2KB

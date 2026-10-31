@@ -1,0 +1,28 @@
+{
+  "generated_at": "2026-10-31T08:08:20.626Z",
+  "csv": "Prototype\\loop12_market_loop\\case_ep01\\feedback.csv",
+  "snaps": [
+    {
+      "date": "2026-10-31",
+      "views": 0,
+      "duration_s": 37,
+      "avg_watch_s": 0,
+      "retention": 0,
+      "like_rate": null,
+      "fav_rate": null,
+      "comment_rate": null,
+      "share_rate": null,
+      "fans_per_1k": null,
+      "notes": "已发布 BV1AaxC6hExH（T0 基线）；标签7个/分区=知识/声明=含AI生成内容/封面已上传；数据待 T+1 回填"
+    }
+  ],
+  "last": null,
+  "prev": null,
+  "actions": [
+    {
+      "priority": "P0",
+      "action": "先采集第一批数据",
+      "because": "已有 1 条记录但播放都是 0（T0 基线），比率没有分母，不能据此判断内容好坏"
+    }
+  ]
+}

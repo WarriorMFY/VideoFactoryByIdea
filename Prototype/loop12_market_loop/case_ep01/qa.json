@@ -1,8 +1,8 @@
 {
-  "checked_at": "2026-10-30T09:48:26.377Z",
-  "file": "Deliverables\\ep01_editing_tips\\render_16x9\\final.mp4",
-  "size_mb": 7.991,
-  "duration_s": 37.374,
+  "checked_at": "2026-10-31T03:14:05.050Z",
+  "file": "Deliverables/ep01_editing_tips/render_16x9/final.mp4",
+  "size_mb": 18.587,
+  "duration_s": 37.375,
   "video": {
     "codec": "h264",
     "profile": "High",
@@ -18,21 +18,21 @@
     "codec": "aac",
     "sample_rate": 48000,
     "channels": 2,
-    "bitrate": 182891
+    "bitrate": 183120
   },
   "loudness": {
     "integrated_lufs": -16.3,
-    "lra_lu": 2.3,
+    "lra_lu": 2.2,
     "true_peak_dbtp": -1.8
   },
   "silent_input_note": null,
   "residual_defects": {
     "black_segments": 0,
-    "freeze_segments": 17,
+    "freeze_segments": 0,
     "silence_segments": 1,
     "note": "冻帧/静音残留不一定是缺陷：本流水线规则明确保留「仅冻帧」或「仅静音」的镜头（口播/动作镜头）"
   },
-  "av_duration_diff_s": 0.007,
+  "av_duration_diff_s": 0.008,
   "checks": {
     "has_video": true,
     "h264": true,

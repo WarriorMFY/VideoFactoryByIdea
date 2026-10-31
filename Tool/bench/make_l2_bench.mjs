@@ -52,7 +52,7 @@ fs.writeFileSync(path.join(OUT, 'script.txt'), SCRIPT.join('\n') + '\n');
 const ttsDir = path.join(OUT, 'tts');
 fs.mkdirSync(ttsDir, { recursive: true });
 console.log(`[l2] TTS 合成英文语音（edge-tts / ${VOICE} / rate ${RATE}）...`);
-const require = createRequire(path.join(ROOT, 'Workspace', 'asr', 'index.cjs'));
+const require = createRequire(path.join(ROOT, 'Workspace', 'deps', 'asr', 'index.cjs'));
 const { EdgeTTS } = require('@andresaya/edge-tts');
 const wavs = [];
 const durs = [];

@@ -6,4 +6,4 @@
 响度 -15.9 LUFS / 峰值 -14.8 dBTP / LRA 0.8 LU
 残留缺陷 黑场=0 冻帧=1 静音=1   音画时长差=0.021s
 检查项: has_video=ok h264=ok yuv420p=ok cfr=ok audio_aac_48k=ok loudness_ok=ok no_residual_black=ok av_synced=ok
-明细: F:\AgentWorkArea\DeepseekHarness\IdeaDrivenAigc\VideoFactory\History\runs\bench01\qa.json
+明细: F:\AgentWorkArea\WorkBuddy\VideoFactory\History\runs\bench01\qa.json

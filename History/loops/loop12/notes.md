@@ -31,14 +31,24 @@
 ## 交付物
 
 - 市场：`History/loops/loop12/market_report.md`（+ `niche/market_report.md` 关键词市场）
-- 交付包：`Deliverables/ep01_editing_tips/`（成片/封面/双语 SRT/高亮 ASS/文案/反馈表）
+- 交付包：`Prototype/loop12_market_loop/case_ep01/`（成片/封面/双语 SRT/高亮 ASS/文案/反馈表；原 `Deliverables/ep01_editing_tips/` 已并入）
 - 快照：`Prototype/loop12_market_loop/`（含 37s 样片，唯一入库的视频，8MB）
 - 验收：`History/loops/loop12/acceptance.md`（9 项，PASS）
 
 ## 还没做的（明确挂账）
 
-1. **上架**：需要人用自己账号发布（工厂不代登录）；发布后把数据填 `Deliverables/ep01_editing_tips/feedback.csv`；
+1. **上架**：2026-10-31 已在用户授权下由代理自动完成（`Tool/ops/publish_bilibili.mjs`，BV1AaxC6hExH）；待 T+1/T+3/T+7 把数据填 `Prototype/loop12_market_loop/case_ep01/feedback.csv`；
 2. **真实反馈/迭代**：现在只有机制，没有数据 —— 有 T+1 数据后跑 `track_feedback.mjs`，按 P0 动作改；
 3. **竖屏版（9:16）**：B 站横屏为主，但抖音/视频号需要竖屏，字幕字号/换行要单独一套参数；
 4. **封面文字是否压主体**：我读不了图，需要人眼确认（`cover_16x9.jpg`）；
 5. **选题库常态化**：现在是一次性侦查，可以做成"每天跑一次的选题雷达"（同一脚本 + 定时）。
+
+## 2026-10-31 目录整理（结构变更，路径以本节为准）
+
+- `Deliverables/ep01_editing_tips/` **并入** `Prototype/loop12_market_loop/case_ep01/`：AGENTS.md 只允许根目录出现 `Idea/ Prototype/ History/ Tool/ Workspace/`，交付包属"反馈产物"，与快照同目录最省心。本文件上文出现的旧路径按当时语境保留。
+- 去重：`cover_16x9.jpg` / `ground_truth.json` / `karaoke.ass` / `feedback_template.csv` 两处 sha256 完全一致，只留一份；`publish.md`、`feedback_report.md` 取交付包内的新版（含 2026-10-31 线上回执）。
+- 临时件 `render_16x9/{.work,.qa,.karaoke_verify}` 与 `.asr_work` 移到 `Workspace/loop12_ep01_intermediate/`（ffmpeg 分段缓存，可直接删）。
+- 发布留痕从 `Workspace/` 迁到 `History/publish/bilibili/`：`runs/` 为脚本产物（截图 + run.log + 回执），`adhoc/` 为调试截图；`publish_bilibili.mjs` 的产物目录同步改成 `History/publish/bilibili/runs`。登录态仍留 `Workspace/.bili_profile`（临时、不入库）。
+- 路径全量更新：`run_market_loop_acceptance.mjs`（默认 `--ep`）、`make_episode.mjs`（默认 `--out`）、`track_feedback.mjs`（用法注释）、`Tool/ops/ops.md`、`Prototype/loop12_market_loop/README.md`、`case_ep01/publish.md`、`case_ep01/render_16x9/report.md`；`Prototype/loop12_market_loop/acceptance.md` 从 `History/loops/loop12/acceptance.md` 重新同步。**验收重跑仍 9/9 PASS。**
+- 顺带修的两个真问题：① `track_feedback` 遇到"播放为 0 的 T0 基线行"会推出假动作（"重做前 3 秒"），改为识别基线、标"待采集"；② `.gitignore` 两行编码坏掉的注释修正，并补 `Prototype/**` 的 `.work/.qa/.karaoke_verify`、`*.mp4`、`*.wav` 规则（保留 `final_16x9.mp4` 例外）。
+- 遗留：`case_ep01/**/*.json`（`qa.json`/`edits.json`/`probe.json`/`cues.json`/`transcript*.json`）里的 `file` 字段仍是旧绝对路径——那是产物生成时写死的值，重跑一遍流程才刷新，不影响验收与交付。

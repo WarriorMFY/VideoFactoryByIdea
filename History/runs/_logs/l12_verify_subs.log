@@ -4,5 +4,5 @@
 ASR: WER 9.5%  (错 10/105 词；识别 109 词)
 时间轴: 语音覆盖 100.0% / 句界平均误差 0.00s / 最大 0.00s
 译文: 12/12 条有中文（缺 0）
-可读性: 中文峰值 8.26 字/秒（均值 4.73）/ 英文峰值 28.93 字符/秒
+可读性: 中文峰值 8.26 字/秒（均值 4.73）/ 英文峰值 28.91 字符/秒
 判定: wer=ok coverage=ok boundary_mean=ok boundary_max=ok translated=ok readability=ok remap=n/a

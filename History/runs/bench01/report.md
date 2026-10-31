@@ -61,7 +61,7 @@
 ## 复现
 
 ```powershell
-node Tool\edit\vfactory.mjs "F:\AgentWorkArea\DeepseekHarness\IdeaDrivenAigc\VideoFactory\History\bench\synth\source.mp4" --out out --title "..."
+node Tool\edit\vfactory.mjs "F:\AgentWorkArea\WorkBuddy\VideoFactory\History\bench\synth\source.mp4" --out out --title "..."
 ```
 
 每步 ffmpeg 命令见 `runlog.jsonl`。

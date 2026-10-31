@@ -37,4 +37,4 @@
 - 默认仍用 `small-en-us-0.15`（快、插入少）；
 - 预处理默认保留 `afftdn + 300–3400Hz 带通`（置信度 0.816→0.918，且纠正了 "are→of"）；
 - 真要提升到可交付水平，需要 **Whisper 类模型**（本机 HF/ModelScope 不可达）或**人工/LLM 校听**——这属于下一轮要解决的下载通道问题。
-- 128MB 的 lgraph 模型已完整保留在 `Workspace/asr/models/`，下一轮可直接复用（不需要重下）。
+- 128MB 的 lgraph 模型已完整保留在 `Workspace/deps/asr/models/`，下一轮可直接复用（不需要重下）。

@@ -11,7 +11,7 @@
  *
  * 设计原则：不猜。没有数据就说"待采集"，不编数字；--selftest 用**明确标注的合成数据**只验证规则能跑。
  *
- * 用法：node Tool/ops/track_feedback.mjs --csv Deliverables/ep01_editing_tips/feedback.csv --out Deliverables/ep01_editing_tips/feedback_report.md
+ * 用法：node Tool/ops/track_feedback.mjs --csv Prototype/loop12_market_loop/case_ep01/feedback.csv --out Prototype/loop12_market_loop/case_ep01/feedback_report.md
  *       node Tool/ops/track_feedback.mjs --selftest      # 用合成数据验证规则（输出标注 DRY-RUN）
  */
 import fs from 'node:fs';
@@ -66,13 +66,18 @@ function analyze(rows) {
       raw: r,
     };
   });
-  const last = snaps[snaps.length - 1] || null;
-  const prev = snaps.length > 1 ? snaps[snaps.length - 2] : null;
+  // T0 基线（播放为 0）不能算比率：分母为 0，任何"完播率/点赞率"都是假信号，只当占位行跳过，
+  // 否则一条"已发布但还没采数据"的基线行会推出一条 P0"重做前 3 秒"的假动作。
+  const usable = snaps.filter((s) => s.views > 0);
+  const last = usable[usable.length - 1] || null;
+  const prev = usable.length > 1 ? usable[usable.length - 2] : null;
   const actions = [];
   const add = (pri, act, why) => actions.push({ priority: pri, action: act, because: why });
 
   if (!last) {
-    add('P0', '先采集第一批数据', '反馈表没有任何数据行（T+1 播放/完播/互动）');
+    add('P0', '先采集第一批数据', snaps.length
+      ? `已有 ${snaps.length} 条记录但播放都是 0（T0 基线），比率没有分母，不能据此判断内容好坏`
+      : '反馈表没有任何数据行（T+1 播放/完播/互动）');
     return { snaps, last, prev, actions };
   }
   // 主指标：完播率（B 站知识区，<35% 说明开头没抓住）
@@ -135,7 +140,9 @@ const L = [];
 L.push('# 市场反馈报告\n');
 L.push(`> 反馈表：\`${csvPath}\`　快照数：${res.snaps.length}\n`);
 if (!res.last) {
-  L.push('**状态：待采集** —— 表里还没有数据行。\n');
+  L.push(res.snaps.length
+    ? `**状态：待采集** —— 有 ${res.snaps.length} 条记录，但播放都为 0（T0 基线），比率没有分母，不据此下结论。\n`
+    : '**状态：待采集** —— 表里还没有数据行。\n');
   L.push('采集口径（建议）：\n');
   L.push('| 时间点 | 采什么 |');
   L.push('| --- | --- |');

@@ -122,7 +122,7 @@ node Tool\edit/make_timeline.mjs out\我的片子\edits.json out\我的片子\ti
 
 | 依赖 | 来源 / 版本 | 许可 | 说明 |
 | --- | --- | --- | --- |
-| FFmpeg / ffprobe | npmmirror 镜像 `ffmpeg-static/b6.1.1` → 实为 ffmpeg 6.1.1 essentials build (gyan.dev) | GPLv3（含 libx264/libass/fontconfig） | 仅本机运行时使用，**不随交付物分发**；复现脚本自行下载；来源记录在 `Workspace/bin/ffmpeg/SOURCE.txt` |
+| FFmpeg / ffprobe | npmmirror 镜像 `ffmpeg-static/b6.1.1` → 实为 ffmpeg 6.1.1 essentials build (gyan.dev) | GPLv3（含 libx264/libass/fontconfig） | 仅本机运行时使用，**不随交付物分发**；复现脚本自行下载；来源记录在 `Workspace/deps/ffmpeg/SOURCE.txt` |
 | Node.js | 本机 24.20.0 | MIT | 仅用标准库 |
 | 字体 | `C:/Windows/Fonts/simhei.ttf` | 系统字体，本机使用 | drawtext/libass 需要可写 fontconfig 配置，已由 `Tool/lib/ff.mjs` 生成到 `Workspace/cache/fontconfig/` |
 | 测试素材 B | test-videos.co.uk 的 Big Buck Bunny 片段 | © Blender Foundation, **CC-BY 3.0** | 仅作测试，随用例随附并注明出处 |
