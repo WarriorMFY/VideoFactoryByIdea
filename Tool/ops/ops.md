@@ -13,6 +13,9 @@
 | `make_episode.mjs` | **造交付样片素材**：Edge TTS 合成英语口播 + CC-BY 画面循环铺满 → `source.mp4` + `ground_truth.json`（逐句时间码），用于验证"工厂→交付包"而不碰版权 |
 | `make_cover.mjs` | **封面生成**：从成片抽帧 + 主标题/副标题/角标（CJK 走 `font=SimHei`，避免方块） |
 | `track_feedback.mjs` | **反馈追踪**：读 `feedback.csv` 快照 → 完播率/点赞率/收藏率/评论率/千播涨粉 + 环比 + **规则化迭代动作**（P0/P1/P2）。空数据时明确输出"待采集"；`--selftest` 用合成数据验证规则（输出标 DRY-RUN） |
+| `collect_feedback.mjs` | **反馈采集**（小循环 12 收尾新增）：零登录读 B 站公开接口 —— `web-interface/view`（播放/点赞/投币/收藏/评论数/分享/弹幕数）、`v2/reply`（热评原文）、`v1/dm/list.so`（弹幕原文 + 出现秒数）、`relation/stat`（粉丝总数）→ 写 `feedback.csv`（每天一行，同日重跑只刷新、人工备注保留；数据无变化不落新快照） |
+| `plan_next_loop.mjs` | **下一轮规划**：把「播放增量 / 点赞率 / 收藏率 / 评论弹幕命中类别 / 弹幕时间聚集」翻成**可执行任务书**（R1–R10 共 10 条规则）→ `History/loops/next/plan.md`：目标 / 改哪个脚本哪个参数 / 验收阈值 / 成本 / 风险。`--demo` 用内置合成样本验证规则 |
+| `watch_feedback.mjs` | **一键编排**：采集 → 诊断 → 规划，任一步失败会指明断在哪、前序产物是否还在。定时任务只需要挂这一条 |
 | `publish_bilibili.mjs` | **投稿发布**（小循环 12 新增）：Playwright + 系统 Edge 驱动创作中心网页端 —— 扫码登录（登录态持久化在 `Workspace/run/bili_profile`）→ 上传成片 → 标题/简介/7 标签 → 分区 → 创作声明 → 封面（4:3 与 16:9 同步）→ 投稿 → 回执（BV 号 + 逐项回读）。`status` 查登录态、`login` 出二维码、`publish --dry-run` 停在投稿前、`verify --bvid` 校验线上页 |
 
 ## 最短链路
@@ -33,8 +36,13 @@ node Tool\ops\publish_bilibili.mjs publish --video Prototype\loop12_market_loop\
   --tags "剪辑教程,视频剪辑,中英双语,剪辑技巧,后期,创作者工具,效率" --zone 知识 --decl "含AI生成内容" --dry-run
 # 去掉 --dry-run 即真发；发完 verify 校验线上页
 node Tool\ops\publish_bilibili.mjs verify --bvid BV1AaxC6hExH
-# 6) 反馈
-node Tool\ops\track_feedback.mjs --csv Prototype\loop12_market_loop\case_ep01\feedback.csv
+# 6) 反馈：采集 → 诊断 → 排下一轮（一条命令）
+node Tool\ops\watch_feedback.mjs
+# 想补录完播率（公开接口没有，只能去创作中心看「平均播放时长」）
+node Tool\ops\collect_feedback.mjs --avg-watch 12.4
+# 只验证规则能跑，不碰真实数据
+node Tool\ops\plan_next_loop.mjs --demo
+node Tool\ops\track_feedback.mjs --selftest
 ```
 
 ## 坑
@@ -43,6 +51,22 @@ node Tool\ops\track_feedback.mjs --csv Prototype\loop12_market_loop\case_ep01\fe
 - **合片时必须显式 `-map`**：画面源自带音轨（配乐），ffmpeg 默认流选择会挑它，成片里就不是刚合成的口播（实测 ASR 0 词）；
 - **反馈表空着也要能跑**：追踪器的价值一半在"提醒你还没采集"，不要为了出报告编数据；
 - 候选打分是**采样规则**，不是市场结论：它只回答"今天这个时间点，哪些方向值得先试"。
+
+### 反馈采集链（`collect_feedback` / `plan_next_loop`）踩过的坑
+
+1. **空单元格不是 0**。`Number('')` 是 `0`，于是"平均播放时长没填"被算成完播率 0%，
+   规则一本正经地推出一条 P0「重做前 3 秒」——**假任务比没任务更糟**。
+   现在 `num()` 对空串返回 `null`，比率算不出来就显示 `—`，缺失单独归到"采集缺口"（P1）而不是内容问题。
+2. **旧表没有新列时字段是 `undefined`**，`Number(undefined)` → `NaN`，一路把 `new_followers` 写成 `"NaN"`。
+   读 CSV 一律走 `numOr()`，`undefined` / `''` / 非数字统一归 `null`。
+3. **增量基线要能跨"同日多次采集"**。定时任务一天跑两次，若拿"当天旧行"当基线，第二次跑 `views_delta` 就变 0，
+   R1（没进推荐）和 R2（在推但没人买账）会判反。做法：当天行已带 delta 时反推原始基线 = 当日值 − 当日 delta。
+4. **"开头不错"不是"开头留人失败"**。分类正则里混着中性话题词（开头/字幕/语速），拿它判负会把好评吃成差评。
+   单独维护 `NEGATIVE` 明确负面词表：`正向词 && !NEGATIVE` 才算好评，其余才进问题分类。
+5. **弹幕是带时间点的反馈**：`dm/list.so` 的 `p` 属性第 1 个字段是秒数。走 5 秒一桶找最大桶，
+   占比 ≥30% 且总数 ≥5 才判"某段被集中吐槽"——弹幕少时全是噪声。
+6. **拿不到的指标就写"拿不到"**：完播率/平均播放时长只在登录态创作中心里，公开接口没有。
+   采集器留空并提示 `--avg-watch <秒>` 补录，绝不估一个。
 
 ### 发布链（`publish_bilibili.mjs`）踩过的坑
 

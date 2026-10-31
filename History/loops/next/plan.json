@@ -1,0 +1,55 @@
+{
+  "generated_at": "2026-10-31T09:12:01.726Z",
+  "snapshot": "2026-10-31T09:12:01.127Z",
+  "bvid": "BV1AaxC6hExH",
+  "context": {
+    "ageDays": 0.07620517361219283,
+    "views": 4,
+    "viewsDelta": 4,
+    "likeRate": 0,
+    "favRate": 0,
+    "commentRate": 0,
+    "shareRate": 0.25,
+    "fansDelta": 0,
+    "danmakuCount": 0,
+    "commentCount": 0,
+    "texts": [],
+    "hits": {
+      "readability": [],
+      "pace": [],
+      "translation": [],
+      "hook": [],
+      "series": [],
+      "useful": [],
+      "audio": [],
+      "visual": []
+    },
+    "burst": null,
+    "hasSignal": false
+  },
+  "proposals": [
+    {
+      "id": "R0",
+      "pri": "—",
+      "title": "信号不足，本轮不排新循环",
+      "goal": "当前无评论/弹幕（播放 4），样本量不足以判断内容好坏。",
+      "evidence": [
+        "播放 4，评论 0，弹幕 0",
+        "点赞率 0.00%，收藏率 0.00%",
+        "文本反馈 0 条"
+      ],
+      "changes": [
+        {
+          "file": "—",
+          "what": "继续按 T+1 / T+3 / T+7 采集；达到阈值后本脚本会自动出提案",
+          "param": "—"
+        }
+      ],
+      "acceptance": [
+        "下一次采集若出现 ≥2 条同类反馈，自动生成对应提案"
+      ],
+      "cost": "零",
+      "risk": "—"
+    }
+  ]
+}

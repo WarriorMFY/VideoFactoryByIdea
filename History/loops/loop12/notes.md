@@ -1,9 +1,11 @@
 # 小循环 12 · 过程笔记（市场 ↔ 工厂 闭环）
 
+> **状态：✅ 通过结束**（人工判定 2026-10-31 17:11）。四段链路全部落地，线上稿件 [BV1AaxC6hExH](https://www.bilibili.com/video/BV1AaxC6hExH/)，反馈采集与下一轮规划已自动化。本文件保留当时（10-30 暂停时）的过程笔记原文，结尾有「结项」一节。
+
 ## 一句话
 
-链路**前三段已跑通并验收 PASS**：能读真实市场数据（B 站公开接口直连）→ 能挑出"能力匹配的题" → 能产出一条可发布样片（37s，双语+逐词高亮，QA PASS）；
-**第四段（上架/真实反馈）停在人工关卡**：工厂不代登录，交付包与反馈机制已就绪；本轮按人要求**暂停并留痕**。
+链路**四段全部落地**：能读真实市场数据（B 站公开接口直连）→ 能挑出"能力匹配的题" → 能产出一条可发布样片（37s，双语+逐词高亮，QA PASS）→ **能自己发上线并每天自动采反馈、出下一轮任务书**。
+原「第四段停在人工关卡（工厂不代登录）」的边界，已由人在 10-31 授权代理代发而作废。
 
 ## 时间线（实际发生）
 
@@ -52,3 +54,31 @@
 - 路径全量更新：`run_market_loop_acceptance.mjs`（默认 `--ep`）、`make_episode.mjs`（默认 `--out`）、`track_feedback.mjs`（用法注释）、`Tool/ops/ops.md`、`Prototype/loop12_market_loop/README.md`、`case_ep01/publish.md`、`case_ep01/render_16x9/report.md`；`Prototype/loop12_market_loop/acceptance.md` 从 `History/loops/loop12/acceptance.md` 重新同步。**验收重跑仍 9/9 PASS。**
 - 顺带修的两个真问题：① `track_feedback` 遇到"播放为 0 的 T0 基线行"会推出假动作（"重做前 3 秒"），改为识别基线、标"待采集"；② `.gitignore` 两行编码坏掉的注释修正，并补 `Prototype/**` 的 `.work/.qa/.karaoke_verify`、`*.mp4`、`*.wav` 规则（保留 `final_16x9.mp4` 例外）。
 - 遗留：`case_ep01/**/*.json`（`qa.json`/`edits.json`/`probe.json`/`cues.json`/`transcript*.json`）里的 `file` 字段仍是旧绝对路径——那是产物生成时写死的值，重跑一遍流程才刷新，不影响验收与交付。
+
+## 2026-10-31 17:10 反馈环节自动化（本节起，反馈不再靠人填表）
+
+第 4 段「反馈」原来停在"人记得去 B 站看数据、手抄进 csv"，实际上等于没闭环。现在拆成三个脚本 + 一个定时任务：
+
+| 环节 | 脚本 | 产物 |
+| --- | --- | --- |
+| 采集 | `Tool/ops/collect_feedback.mjs` | `case_ep01/feedback.csv`（每天一行）+ `History/runs/feedback/latest.json`（评论/弹幕原文） |
+| 诊断 | `Tool/ops/track_feedback.mjs` | `case_ep01/feedback_report.md/.json` |
+| 规划 | `Tool/ops/plan_next_loop.mjs` | `History/loops/next/plan.md`（下一轮任务书，R1–R10 规则） |
+| 编排 | `Tool/ops/watch_feedback.mjs` | 串起上面三步；定时任务只挂这一条 |
+
+- **定时**：automation 每天 10:00 跑一次，`validUntil` 2026-11-14（T+14 观察窗）。数据到阈值自动出提案，不到阈值输出 R0「信号不足」。
+- **边界**：规划 ≠ 开跑。`plan.md` 顶部写死「待批准」，开轮次仍要人点头（AGENTS 人环规则）；采集只读公开接口，不登录、不改稿件、不刷互动。
+- **拿不到的指标不编**：完播率/平均播放时长只在登录态创作中心里。`avg_watch_s` 留空并提示 `--avg-watch <秒>` 补录；空值绝不当 0（否则会推出假的 P0「重做前 3 秒」）。
+- **当前读数**（17:02）：播放 3、评论 0、弹幕 0、粉丝 1 → R0。发布仅 1.8 小时，未进推荐流属正常，T+1 起才有判断价值。
+- **复验**：`node Tool/ops/plan_next_loop.mjs --demo`（合成样本 → 6 条提案）、`node Tool/acceptance/run_market_loop_acceptance.mjs`（9/9 PASS）。
+
+## 结项 · 2026-10-31 17:11（人工判定「通过结束」）
+
+| 项 | 结果 |
+| --- | --- |
+| 判定 | 人直接下结论「loop12 标记通过结束」，无返工要求、未否定任何交付物 |
+| 四段状态 | 侦查 ✅ 134 条真实榜单 → 开工 ✅ 37.375s 样片 QA PASS → 交付包 ✅ 齐 → 发布 ✅ BV1AaxC6hExH → 反馈 ✅ 每天 10:00 自动采集并出提案 |
+| 验收 | `Prototype/loop12_market_loop/acceptance.md` **9/9 PASS**（重跑多次结果一致） |
+| 结转下一轮 | 竖屏 9:16、封面文字人眼确认、选题雷达常态化——**不属本轮未完成**，是下一轮候选 |
+| 诚实边界 | 发布仅 2 小时、播放个位数，本轮**没有任何"内容好坏"的结论**；反馈规则只被合成样本（`--demo`）验证过，真实数据驱动的第一次判断在 T+1（11-01 10:00） |
+| 结项后 | 小循环 12 关闭；12/12 轮全部结项；第 13 轮不自动开跑，等人点头或给方向 |
