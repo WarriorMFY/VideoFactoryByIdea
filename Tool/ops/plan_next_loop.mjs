@@ -438,9 +438,31 @@ const json = {
   proposals,
 };
 fs.writeFileSync(path.join(outDir, 'plan.json'), JSON.stringify(json, null, 2), 'utf8');
-if (!DEMO) fs.appendFileSync(path.join(outDir, 'plan_history.jsonl'),
-  JSON.stringify({ at: now.toISOString(), bvid: snap.bvid, views: ctx.views, proposals: proposals.map((p) => ({ id: p.id, pri: p.pri, title: p.title })) }) + '\n',
-  'utf8');
+
+/**
+ * plan_history 只记「结论变化」，不记「跑过一次」。
+ * 半小时一唤醒后每天会 append 48 行，而绝大多数是同一个提案集重复一遍；
+ * 播放量的时序另有 History/runs/feedback/ticks.jsonl 负责（一 tick 一行）。
+ * 幂等规则：提案的「优先级+编号」序列与上一条完全相同 → 跳过。
+ */
+if (!DEMO) {
+  const histFile = path.join(outDir, 'plan_history.jsonl');
+  const entry = {
+    at: now.toISOString(),
+    bvid: snap.bvid,
+    views: ctx.views,
+    proposals: proposals.map((p) => ({ id: p.id, pri: p.pri, title: p.title })),
+  };
+  const sigOf = (o) => JSON.stringify((o.proposals || []).map((p) => `${p.pri}${p.id}`));
+  let prevEntry = null;
+  try {
+    const lines = fs.readFileSync(histFile, 'utf8').trimEnd().split('\n');
+    prevEntry = JSON.parse(lines[lines.length - 1]);
+  } catch { /* 首次跑，正常 */ }
+  if (!prevEntry || sigOf(prevEntry) !== sigOf(entry)) {
+    fs.appendFileSync(histFile, JSON.stringify(entry) + '\n', 'utf8');
+  }
+}
 
 console.log(`[plan] 播放 ${ctx.views}｜评论 ${ctx.commentCount}｜弹幕 ${ctx.danmakuCount}｜提案 ${proposals.length} 条`);
 for (const p of proposals) console.log(`[plan]   ${p.pri} ${p.id} ${p.title}`);

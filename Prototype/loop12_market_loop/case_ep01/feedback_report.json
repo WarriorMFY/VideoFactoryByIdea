@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-31T09:12:01.609Z",
+  "generated_at": "2026-10-31T09:16:49.227Z",
   "csv": "Prototype\\loop12_market_loop\\case_ep01\\feedback.csv",
   "snaps": [
     {
@@ -43,7 +43,7 @@
       "coins": "0",
       "fans_total": "1",
       "views_delta": "4",
-      "snapshot_at": "2026-10-31T09:12:01.127Z"
+      "snapshot_at": "2026-10-31T09:16:48.551Z"
     }
   },
   "prev": null,
