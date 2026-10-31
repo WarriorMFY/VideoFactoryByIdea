@@ -286,3 +286,12 @@ ev-list --left-right = 0/0 / GitHub API 三处一致；远端 Prototype/loop12_m
 | 顺带修 | `track_feedback` 原会把「播放为 0 的 T0 基线」当真数据、推出假 P0「重做前 3 秒」→ 现在识别为基线、标"待采集"；`.gitignore` 两行编码坏掉的注释修正 |
 | 验证 | 验收重跑 **9/9 PASS**；ASR 实跑 109 词 / 2 句 / conf 0.9759；`publish status` 仍已登录（profile 迁移无损）；`ffmpeg -version` 6.1.1 |
 | 未做 | 未 commit、未 push（等人指示） |
+
+## 分支记录 · 2026-10-31 16:23 · 两条线分叉，分分支管理
+
+| 项 | 内容 |
+| --- | --- |
+| 现象 | 本地这条线（本机 15:22 用 Playwright 真浏览器发布 BV1AaxC6hExH + 两轮目录整理）与远端 `main`（14:58–16:04 另一个会话推的 loop12+ 竖屏 / loop13 API 版发布骨架）在 `86fcc1c` 分叉：本地 1 个提交、远端 5 个提交，冲突 114 个文件（多为同一批产物两边各改一次） |
+| 处置 | 按人指示**分两条分支各自管理**，不合并、不覆写：<br>· `main` = 远端那条线（`f3c03be`），本地已对齐 `origin/main`，未做任何改动<br>· `browser-publish` = 本机这条线（`1fcd615`），已推到远端同名分支并跟踪<br>· 另留本地备份分支 `backup/local-publish-1fcd615` |
+| 两条线的差别 | `main`：B 站走 **API 方案**（`bili_auth/bili_upload/bili_stats`，卡在需要 Cookie，尚未发出稿件）；产物含竖屏 9:16、封面自检、选题雷达常态化<br>`browser-publish`：B 站走 **Playwright + 系统 Edge**（`publish_bilibili.mjs`，已实际发出 BV1AaxC6hExH，回执在 `History/publish/bilibili/runs/`）；仓库结构按 AGENTS.md 收敛、Workspace 四层重组 |
+| 后续 | 需要合并时再单独处理；在那之前**不要**在两条线之间 `reset --hard` 或 `push -f`。改哪条线就先 `git switch` 到哪条 |
