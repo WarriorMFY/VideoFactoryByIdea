@@ -3,6 +3,9 @@
 > 规则（AGENTS.md 全局规则 5）：每轮小循环追加一条摘要——开始时间、结束时间、初始目标、结束结果、人工反馈。
 > 一轮一条，**只追加不覆盖、不美化**；人反馈到达后回填该轮"人工反馈"栏。
 > 时间＝本机时间（UTC+8）。日志自小循环 2 起生效；小循环 1 为**事后补录**（时间取自 git 提交与产物时间戳）。
+> 读旧条目注意：2026-10-31 15:57 起 `Deliverables/ep01_editing_tips/` 已并入 `Prototype/loop12_market_loop/case_ep01/`，`Workspace/asr`、`Workspace/bin` 已改为 `Workspace/deps/asr`、`Workspace/deps/ffmpeg`——文中早于该时点的路径按当时语境保留，未逐条回改。
+
+---
 
 ---
 
@@ -10,11 +13,11 @@
 
 | 项 | 状态 |
 | --- | --- |
-| 大循环 | **进行中**（人控）。时间窗口 **2026-10-27 10:44 → 2026-11-03 10:44**（人于 10-31 延长，原为 10-31 10:44）；总长 168h，已用 **101.5h（60.4%）**，剩余 **66.5h**（截至 2026-10-31 16:14） |
+| 大循环 | **进行中**（人控）。时间窗口 **2026-10-27 10:44 → 2026-11-03 10:44**（人于 10-31 延长，原为 10-31 10:44）；总长 168h，已用 **102.1h（60.8%）**，剩余 **65.9h**（截至 2026-10-31 16:50） |
 | 已完成小循环 | **1 ✅（自动剪辑）· 2 ✅（外语→中文字幕）· 3 ✅（真实素材+语音保护）· 4 ✅（多样本）· 5 ✅（逐词高亮，含抖动 v2）· 6 ✅（文本层：标点/精译/节流）· 7 ✅（短句救援证伪 + 预处理链）· 8 ✅（校对回写闭环）· 9 ✅（49 分钟压测 + 术语审计）· 10 ✅（karaoke 长片规模）· 11 ✅（知识型链路：分诊/单位/术语）· 12 ✅（市场闭环：侦查→样片→交付包→**已发布 BV1AaxC6hExH**；真实反馈待 T+1 采集）** —— 共 12 轮，12 个 `Prototype/` 增量 |
 | 当前等待 | **当前停在小循环 12 的收尾**：作品 2026-10-31 15:22 投稿成功（pubdate 15:22，https://www.bilibili.com/video/BV1AaxC6hExH/），`feedback.csv` 只有 T0 基线（播放 0），**真实数据要 T+1（11-01）起回填**，再跑 `track_feedback.mjs` 出 P0/P1 动作。同时等人对 7–12 轮的反馈。关键待决策：**换不换 ASR 模型**（唯一能提高质量上限的动作，需要模型文件/下载通道/ASR 接口） |
-| 代码/仓库状态 | 分支 `main`；入库 **1046 文件 / .git 44MB**（视频与大素材按 `.gitignore` 不入库）。**有未提交改动**：79 改 / 26 删 / 21 新增——来源是 10-31 的「12 轮全链路重跑 + B 站发布 + 发布脚本沉淀 + 根目录整理 + Workspace 重组」，尚未 commit/push。 | |
-| 远端 | `origin` = https://github.com/WarriorMFY/VideoFactoryByIdea.git（公开，默认分支 main）。**已推送**：2026-10-30 17:36，`80a7150 → 0cc37c2`（9 个提交），push exit=0；三方核对一致——`git ls-remote` = `0cc37c2`、`rev-list --left-right` = **0/0**、GitHub API `commits/main` = `0cc37c2`（pushed_at 2026-10-30T09:36Z，仓库 size 34,746KB）。坑：git 默认 Schannel 握手失败 → 本仓库固定 `http.sslBackend=openssl`；凭据助手经 `sh.exe` 被沙箱拒 → 用 GCM 直取凭据 + `http.extraheader`（脚本 `Workspace/cache/push_with_gcm.ps1`）。详见 `Tool/env.md` 第〇节。后续只在人明确要求时再推 | |
+| 代码/仓库状态 | 当前分支 **`browser-publish`**（本机这条线）；入库 **1046 文件**，`.git` 65MB（pack 44MB，含远端另一条线的对象），视频与大素材按 `.gitignore` 不入库。**工作区干净**：10-31 的全部改动（12 轮重跑 + B 站发布 + 发布脚本沉淀 + 根目录整理 + Workspace 重组）已在 `1fcd615` 提交（140 文件 / +4550 −3338），`090f66b` 补记分支分叉 |
+| 远端 | `origin` = https://github.com/WarriorMFY/VideoFactoryByIdea.git（公开，默认分支 main）。**已推送**：2026-10-30 17:36，`80a7150 → 0cc37c2`（9 个提交），push exit=0；三方核对一致——`git ls-remote` = `0cc37c2`、`rev-list --left-right` = **0/0**、GitHub API `commits/main` = `0cc37c2`（pushed_at 2026-10-30T09:36Z，仓库 size 34,746KB）。坑：git 默认 Schannel 握手失败 → 本仓库固定 `http.sslBackend=openssl`；凭据助手经 `sh.exe` 被沙箱拒 → 用 GCM 直取凭据 + `http.extraheader`（脚本 `Workspace/cache/push_with_gcm.ps1`）。详见 `Tool/env.md` 第〇节。后续只在人明确要求时再推。**2026-10-31 16:2x 再推**：`origin/browser-publish` ← `1fcd615 → 090f66b`（只推本机这条线的新分支；`main` 仍是远端那条线的 `f3c03be`，一个字节未动） |
 | 可交付能力 | 自动删减成片（真值 IoU 1.000/0.998，误删 0s）· 外语→中文字幕（TTS 素材 WER 6.1%、覆盖 99.8%）· 真实素材**对白不会被剪**（语音保护）· 双语逐词高亮（长片 1030 事件/0.1s）· 标点恢复 + 精译 · **人工校对回写闭环** · **能扛 49 分钟长片**（48.7 分钟成片、273 条字幕） |
 | 已知最大短板 | **真实影视混音下识别不可靠**（WER 28.4%、覆盖 50–60%，1–3 词短句只覆盖 11–14%）。小循环 7 已证明这是**模型能力上限**（干净 TTS 能识别 8/10、原片混音 0/10、7 条预处理链全失败）→ 只能换 Whisper 级模型，而本机 HF/ModelScope 全域不可达 |
 | 其它短板 | 全自动机翻只到"能看懂"（发布走精译或人工校对）· 语音保护会连带保住"对白压黑屏" · 语义级断句未做 · 术语审计不认复数变形 · GUI 剪辑软件本机装不上（沙箱只可写工作区） |
@@ -55,8 +58,6 @@
 | 初始目标 | 人指令："你自行去网上下载一下外语素材，先自己跑通验证"。补上小循环 2 遗留的"真人原声未测"，且素材与判据由 LLM 自主定 |
 | 结束结果 | **跑通，并修掉一个会毁片的 bug**。自选素材：Sintel 预告片（media.w3.org，© Blender Foundation **CC-BY 3.0**，52.2s，真人英语对白+音乐+音效）。真实素材暴露出**对白被黑场规则剪掉**（暗场景误判 + 台词压黑底字幕卡）→ 新增 `--protect <transcript.json>` **语音保护**（识别到语音的区间一律不剪，conf≥0.5、两侧 0.25s 余量）+ 收紧黑场判定（pix 0.10→0.04、pic 0.98、dur 0.12→0.30）：对白 **4/4 保住**，切除 13.52s→11.57s。另外：真实音轨上 `afftdn+300–3400Hz 带通` 让识别置信度 0.816→**0.918**；`--min-sent` 24→12 修掉"短句合并导致机翻串味"。**坏消息**：小模型 Vosk 在真实影视混音上词准确率仅约 **55–65%**（TTS 上是 6.1% WER），识别是当前最大短板。验收 reference-free：译文 4/4、可读性 6.17 字/秒、重映射无越界无重叠、成片 39.10s/720p/−14.9 LUFS、音画差 0.004s；残留黑场 3 段（其中 1 段为"对白压黑底"的已知取舍）。回归：小循环 1、2 均仍 PASS。交付在 `Prototype/loop3_real_speech/`（13.8MB，含原始片段便于对照） |
 | 人工反馈 | 2026-10-27 21:20：**"好了，继续跑循环，我认为你可以再多从网上下载几个视频样本来进行英文转中文翻译测试"**。解读：①认可 loop3 结论，方向延续「外语→中文字幕」；②明确要求**扩充样本**（不只一条 Sintel），用更多下载来的视频做英译中测试；③素材与判据仍由 LLM 自主。→ 触发小循环 4 |
-
----
 
 ---
 
@@ -181,55 +182,6 @@
 | 结束结果 | **前三段跑通、验收 9/9 PASS，第四段停在人工关卡**。① 通道探测：B 站**公开接口**（`ranking/v2`/`popular`/`search/type`）在本沙箱 Node fetch 直连可用（HTTP 200、0.2–0.4s）→ 新增 `Tool/ops/recon_bilibili.mjs`。② 侦查：榜单样本 **134 条**（分区/时长分布 + 8 个关键词市场），最大需求词「编程教程 英文」前 8 条 **2517 万**播放、「Blender 教程 双语」1903 万、「TED 中英」1288 万 → 判定"英文原声 + 中英双语"是被验证的需求，选「剪辑技巧」（关键词 418 万）作为本期。③ 开工：新增 `Tool/ops/make_episode.mjs`（Edge TTS 7 句口播 + CC-BY 画面循环 → 37.37s 源片，**素材零版权风险**）；识别 WER **9.5%**、覆盖 **100%**；新增 `Tool/subtitle/align_script.mjs`（有讲稿时按真值句子强制对齐词流，109 词→7 句全覆盖，解决 TTS 无停顿导致断句串行）；精译 **12/12 行双语**、**88 条**逐词高亮 ASS；烧入后 **QA PASS**（−16.3 LUFS / 真峰 −1.8 dBTP / 音画差 0.007s）。④ 交付包：成片 + 封面（`make_cover.mjs`）+ 双语 SRT + 高亮 ASS + 发布文案（3 版标题/简介/标签/分区/置顶评论）+ 上传清单 + 合规声明，落在 `Deliverables/ep01_editing_tips/`。⑤ 反馈机制：新增 `Tool/ops/track_feedback.mjs`（完播/点赞/收藏/评论/千播涨粉 + 环比 + P0/P1/P2 动作；空表输出"待采集"，`--selftest` 用明确标注的合成数据验证规则 → 4 条动作）。⑥ 验收 `run_market_loop_acceptance.mjs` **9 项全过**。**修掉 3 个"市场化才暴露"的 bug**：合片默认流选择取到画面自带配乐（ASR 0 词）→ 显式 `-map`；`zh_agent.json` 带 BOM 让 `make_subs` 崩 → 统一 `readJson()`；TTS 词间 0 gap 导致 `restore_punct` 把 7 句并 5 句 → 讲稿强制对齐。交付：`Prototype/loop12_market_loop/`（README/acceptance/reproduce.ps1/case_market/case_ep01，含 37s 样片，唯一入库视频 8MB） |
 | 挂账（下一步） | ① **上架**：需人用自己的 B 站账号发布（工厂不代登录），交付包已就绪；② **真实反馈**：发布后回填 `Deliverables/ep01_editing_tips/feedback.csv`（T+1/T+3/T+7），再跑追踪器按 P0 动作改；③ 竖屏 9:16 版；④ 封面文字观感需人眼确认（我读不了图）；⑤ 选题雷达常态化（每日侦查） |
 | 人工反馈 | （待填 —— 人已明确："先停下，把当前循环进度记下来，推送到远端仓库"） |
-- **识别质量（最高优先级）**：真实影视混音下 Vosk 小模型仅约 55–65% 词准确率。已做模型对照（详见 `History/loops/loop03/model_compare.md`）：**128MB 的 lgraph 大模型反而更差**（插入多、置信度 0.788 vs 0.918）→ 短板是模型能力上限，不是模型大小；要上 Whisper 类需要新下载通道（HF/ModelScope 全域不可达）。lgraph 模型已保留在 `Workspace/asr/models/` 可复用。
-- **标点恢复**：✅ 小循环 6 已解决（规则化恢复：句界 F1 1.00 / 句末标点 100%）。剩余：语义级断句（从句/长句仍靠停顿+长度）。
-- **翻译质量**：✅ 缺陷清零（句末缺标点 7→0、术语错误 1→0）；全自动机翻仍是"能看懂"级，发布走 `--mt agent`（人/LLM 精译，实测可达人工参考 94.1%）或"机翻 + 人工校对回写"。待译清单 `make_subs --dump-en`；校对回写闭环 ✅ 小循环 8 已解决（`export_review` → 改 CSV → `apply_review`，恒等回写逐字节一致、误操作全部拒绝）。
-- **机翻质量**：MyMemory 只能"看懂"，不宜直发；需 LLM 精译或自建 MT。
-- **音画绑定**：语音保护会连带保住"对白压在黑屏/字幕卡"上的黑屏，暂时无法"保音频换画面"。
-- 模型下载通道：本机只有 alphacephei、npmmirror 与 nluug/dotsrc 的 Blender 镜像可用。
-- **短句通道（小循环 4 新增，收益最大）**：❌ **小循环 7 已证伪"喂法能救"**：干净 TTS 8/10 能识别、原片混音 0/10、7 条链 × 10 条漏句 0 命中、窗口放大到 6–10s 仍 0 → 是模型能力上限。**别再在预处理/切窗上投入**；唯一解是换 Whisper 级模型（需外部给模型/通道/接口）。`asr_rescue.mjs` 的"找未被覆盖有声区间"能力保留，可当漏译检查器。
-- **机翻质量定量化（小循环 4 新增）**：`Workspace/assets/tos/TOS-CH.srt` 是官方中文翻译，可直接算“机翻 vs 人工”字相似度分布，给出能否直接发布的门槛。
-- **逐词高亮的进阶玩法（小循环 5 新增）**：当前只做“只亮当前词”。`\kf` 扫光式高亮、长句自动分页、多语言字体回退、软字幕轨都未做；1 小时长片的事件量（约 1–1.5 万条）未压测。
-
----
-
-## 维护记录 · 2026-10-27 20:50–21:10 · Git 出网避坑（用户指令，非小循环）
-
-| 项 | 内容 |
-| --- | --- |
-| 触发 | 用户要求把 `https://github.com/WarriorMFY/VideoFactoryByIdea.git` 下载到本地：直连 clone 连续 2 次 `errno 10053`；随后指令"在 `Tool\` 新建 Git 目录，说明这次避坑并新建脚本，避免以后长时间 pull 失败" |
-| 做了什么 | ① 分层实测出网（TCP / HTTP / git 协议三层，共 15 组数据）→ 结论：**前两层探针都会骗人**，只有 `git ls-remote` 可信但很慢；② 新增 `Tool/Git/gitnet.mjs`（端点学习 + 无进展看门狗 + 硬超时 + 镜像回退）；③ 新增 `Tool/Git/Git.md`（现象/根因/实测/用法/验收/限制）；④ 更新 `Tool/Tool.md`（目录地图 + 第 4 条规则）与 `Tool/env.md`（§〇 出网会漂、§二 杀进程） |
-| 关键数据 | 直连失败 21.3s / 56.1s，网络好时 1.2s 成功；镜像成功 25.9–46.3s，偶发 500/502（2.3–17.3s）；杀子进程只能 `child.kill('SIGKILL')`（3ms 生效），`taskkill /T /F` 被沙箱拒（exit 1）；`http.lowSpeedTime=20` 会误杀慢镜像，已改 90s |
-| 验证 | 四条验收全过：`state` 可读 · `pull --check` 在 78s/38s 内给结论（直连失败自动切镜像）· `run --stall 4` 打黑洞地址 4.0s 被看门狗杀掉 · `clone octocat/Hello-World` 成功且 origin 为规范地址。留痕：`History/probe/gitnet.md`、`History/probe/gitnet_killtest.log`、`History/probe/gitnet_acceptance.log` |
-| 状态 | 新增文件**未提交、未推送**（`Tool/Git/`、`History/probe/gitnet*`，以及对 `Tool/Tool.md`、`Tool/env.md` 的改动）。仓库仍在等"人对小循环 3 的反馈"，本轮不改变大循环状态与时间窗口 |
-| 人工反馈 | （待填） |
-
----
-
-## 维护记录 · 2026-10-30 17:36 · 推送至远端（用户明确指令："推送到远端仓库"）
-
-| 项 | 内容 |
-| --- | --- |
-| 触发 | 用户明确要求推送（按红线：只有人明确说推才推） |
-| 范围 | `main`：`80a7150 → 0cc37c2`，共 **9 个提交**（loop6 收尾、loop7+8、loop9、loop10、loop11 及相关 docs/status 提交） |
-| 方式 | 复用 `Workspace/cache/push_with_gcm.ps1`：GCM 取凭据 → `git -c credential.helper= -c "http.extraheader=Authorization: Basic …" push -u origin main`（本仓库固定 `http.sslBackend=openssl`；git 写 stderr 属正常，退出码只看 `$LASTEXITCODE`） |
-| 结果 | `push exit=0`；`80a7150..0cc37c2  main -> main`。**三方核对一致**：`git ls-remote origin main` = `0cc37c2ffbd…`；`git fetch` 后 `rev-list --left-right --count origin/main...HEAD` = **0 / 0**；GitHub API `commits/main` = 同一 sha（pushed_at `2026-10-30T09:36:05Z`） |
-| 入库体积 | 本地 `.git` pack 33.93 MiB；GitHub 侧仓库 size **34,746 KB**。视频/大素材仍按 `.gitignore` 不入库（本地 6.36GB） |
-| 复核 | 推完后工作区干净；本地跟踪文件 960 个 / 20.3MB |
-| 人工反馈 | （待填） |
----
-
-## 维护记录 · 2026-10-30 19:53 · 推送至远端（用户指令："把当前循环进度记下来，推送到远端仓库"）
-
-| 项 | 内容 |
-| --- | --- |
-| 触发 | 小循环 12 中途，人要求先停下、记录进度并推送 |
-| 范围 | main：a57013 → 4537920，共 2 个提交（loop12 特性 + 清理临时文件） |
-| 结果 | 第一次 push **超时失败**（Connection timed out after 30001 ms）；重试脚本第 1 次仍失败（Failed to connect to github.com:443），**第 2 次成功**：a57013..4537920  main -> main |
-| 经验 | 网络抖动时 push 要**带重试 + http.version=HTTP/1.1 + 大 postBuffer**（脚本 Workspace/cache/push_retry.ps1）；失败表现是 exit=128 连接超时，不是凭据问题 |
-| 核对 | git ls-remote / 
-ev-list --left-right = 0/0 / GitHub API 三处一致；远端 Prototype/loop12_market_loop/case_ep01/ 已含 8MB 样片 |
-| 人工反馈 | （待填） |
 
 ---
 
@@ -248,7 +200,9 @@ ev-list --left-right = 0/0 / GitHub API 三处一致；远端 Prototype/loop12_m
 | 状态 | 上架与真实反馈仍待人工（需账号）；改动全部留在本地，**未推远端** |
 | 人工反馈 | （待填） |
 
-## 循环 12 · 发布（2026-10-31 15:2x）
+---
+
+## 小循环 12 · 发布（2026-10-31 15:22）
 
 | 项 | 内容 |
 | --- | --- |
@@ -257,11 +211,13 @@ ev-list --left-right = 0/0 / GitHub API 三处一致；远端 Prototype/loop12_m
 | 过程 | 上传 final.mp4（18.6MB/100%）→ 标题(A版)/简介/7 标签 → 分区 知识 → 创作声明「含AI生成内容」→ 封面 cover_16x9.jpg（4:3+16:9 同步）→ 立即投稿 |
 | 结果 | **已上线 https://www.bilibili.com/video/BV1AaxC6hExH/**（37.4s，页面标题与封面已验证生效）；feedback.csv 记录 T0 基线 |
 | 途中坑 | ① 控制器带参命令（clickxy/typefile）因精确匹配 bug 全部落入 unknown → 改用 eval + execCommand('insertText') + KeyboardEvent 事件注入；② 简介/封面/声明均为富文本或受控组件，DOM 直改+原生事件可行；③ file input 用 DataTransfer 注入 File 对象 |
-| 沉淀 | Workspace/bili_controller.mjs（遥控式发布控制器）与登录脚本；正式沉淀到 Tool/ops 待下轮整理（当前在 Workspace 未入库） |
+| 沉淀 | 当轮用 `Workspace/bili_controller.mjs`（遥控式发布控制器）与登录脚本跑通；20 分钟后已正式沉淀到 `Tool/ops/`（见下节），Workspace 里的临时脚本已删 |
 | 置顶评论 | 未发（页面上发评论属公开互动，留给用户） |
 | 人工反馈 | 数据 T+1/T+3/T+7 待回填 feedback.csv → track_feedback 出迭代动作 |
 
-## 循环 12 · 发布脚本沉淀（2026-10-31 15:30–15:55）
+---
+
+## 小循环 12 · 发布脚本沉淀（2026-10-31 15:30–15:55）
 
 | 项 | 内容 |
 | --- | --- |
@@ -273,7 +229,47 @@ ev-list --left-right = 0/0 / GitHub API 三处一致；远端 Prototype/loop12_m
 | 途中踩坑 | ① 合成 KeyboardEvent 加标签静默失败 → 必须真键盘；② `Control+A`+Backspace 会把上一个标签 chip 删掉（表现为只剩一个自定义标签）；③ 逐字符 type(30ms) 被重渲染吞字（只剩「程」）；④ 草稿恢复弹窗「继续编辑/不用了」会串上次表单；⑤ 异常路径不关浏览器会让 node 进程挂住；⑥ 线上 meta 带 `data-vue-meta`，正则不能写死属性顺序。全部写进 `Tool/ops/ops.md` 的「发布链踩过的坑」 |
 | 附带 | 新增 `Deliverables/ep01_editing_tips/desc_publish.txt`（发布用简介定稿，供 `--desc-file` 直接复用） |
 
-## 维护记录 · 2026-10-31 15:57–16:14 · 目录整理（用户指令，非小循环）
+---
+
+## 维护与分支记录（按时间顺序）
+
+> 这些不是小循环产出，而是环境/推送/目录整理/分支管理的操作留痕。原按追加顺序散落在各轮之间，2026-10-31 整理时按时间归到一处，条目内容未改。
+
+### 维护记录 · 2026-10-27 20:50–21:10 · Git 出网避坑（用户指令，非小循环）
+
+| 项 | 内容 |
+| --- | --- |
+| 触发 | 用户要求把 `https://github.com/WarriorMFY/VideoFactoryByIdea.git` 下载到本地：直连 clone 连续 2 次 `errno 10053`；随后指令"在 `Tool\` 新建 Git 目录，说明这次避坑并新建脚本，避免以后长时间 pull 失败" |
+| 做了什么 | ① 分层实测出网（TCP / HTTP / git 协议三层，共 15 组数据）→ 结论：**前两层探针都会骗人**，只有 `git ls-remote` 可信但很慢；② 新增 `Tool/Git/gitnet.mjs`（端点学习 + 无进展看门狗 + 硬超时 + 镜像回退）；③ 新增 `Tool/Git/Git.md`（现象/根因/实测/用法/验收/限制）；④ 更新 `Tool/Tool.md`（目录地图 + 第 4 条规则）与 `Tool/env.md`（§〇 出网会漂、§二 杀进程） |
+| 关键数据 | 直连失败 21.3s / 56.1s，网络好时 1.2s 成功；镜像成功 25.9–46.3s，偶发 500/502（2.3–17.3s）；杀子进程只能 `child.kill('SIGKILL')`（3ms 生效），`taskkill /T /F` 被沙箱拒（exit 1）；`http.lowSpeedTime=20` 会误杀慢镜像，已改 90s |
+| 验证 | 四条验收全过：`state` 可读 · `pull --check` 在 78s/38s 内给结论（直连失败自动切镜像）· `run --stall 4` 打黑洞地址 4.0s 被看门狗杀掉 · `clone octocat/Hello-World` 成功且 origin 为规范地址。留痕：`History/probe/gitnet.md`、`History/probe/gitnet_killtest.log`、`History/probe/gitnet_acceptance.log` |
+| 状态 | 新增文件**未提交、未推送**（`Tool/Git/`、`History/probe/gitnet*`，以及对 `Tool/Tool.md`、`Tool/env.md` 的改动）。仓库仍在等"人对小循环 3 的反馈"，本轮不改变大循环状态与时间窗口 |
+| 人工反馈 | （待填） |
+
+### 维护记录 · 2026-10-30 17:36 · 推送至远端（用户明确指令："推送到远端仓库"）
+
+| 项 | 内容 |
+| --- | --- |
+| 触发 | 用户明确要求推送（按红线：只有人明确说推才推） |
+| 范围 | `main`：`80a7150 → 0cc37c2`，共 **9 个提交**（loop6 收尾、loop7+8、loop9、loop10、loop11 及相关 docs/status 提交） |
+| 方式 | 复用 `Workspace/cache/push_with_gcm.ps1`：GCM 取凭据 → `git -c credential.helper= -c "http.extraheader=Authorization: Basic …" push -u origin main`（本仓库固定 `http.sslBackend=openssl`；git 写 stderr 属正常，退出码只看 `$LASTEXITCODE`） |
+| 结果 | `push exit=0`；`80a7150..0cc37c2  main -> main`。**三方核对一致**：`git ls-remote origin main` = `0cc37c2ffbd…`；`git fetch` 后 `rev-list --left-right --count origin/main...HEAD` = **0 / 0**；GitHub API `commits/main` = 同一 sha（pushed_at `2026-10-30T09:36:05Z`） |
+| 入库体积 | 本地 `.git` pack 33.93 MiB；GitHub 侧仓库 size **34,746 KB**。视频/大素材仍按 `.gitignore` 不入库（本地 6.36GB） |
+| 复核 | 推完后工作区干净；本地跟踪文件 960 个 / 20.3MB |
+| 人工反馈 | （待填） |
+
+### 维护记录 · 2026-10-30 19:53 · 推送至远端（用户指令："把当前循环进度记下来，推送到远端仓库"）
+
+| 项 | 内容 |
+| --- | --- |
+| 触发 | 小循环 12 中途，人要求先停下、记录进度并推送 |
+| 范围 | main：ba57013 → 4537920，共 2 个提交（loop12 特性 + 清理临时文件） |
+| 结果 | 第一次 push **超时失败**（Connection timed out after 30001 ms）；重试脚本第 1 次仍失败（Failed to connect to github.com:443），**第 2 次成功**：ba57013..4537920  main -> main |
+| 经验 | 网络抖动时 push 要**带重试 + http.version=HTTP/1.1 + 大 postBuffer**（脚本 Workspace/cache/push_retry.ps1）；失败表现是 exit=128 连接超时，不是凭据问题 |
+| 核对 | git ls-remote / rev-list --left-right = 0/0 / GitHub API 三处一致；远端 Prototype/loop12_market_loop/case_ep01/ 已含 8MB 样片 |
+| 人工反馈 | （待填） |
+
+### 维护记录 · 2026-10-31 15:57–16:14 · 目录整理（用户指令，非小循环）
 
 | 项 | 内容 |
 | --- | --- |
@@ -285,13 +281,44 @@ ev-list --left-right = 0/0 / GitHub API 三处一致；远端 Prototype/loop12_m
 | 代码同步 | `ff.mjs`、`vosk.mjs`、`pw.mjs`、`bootstrap_ffmpeg/asr/playwright`、`fetch_vosk_model`、`make_episode`、`make_l2_bench`、`make_speech4_tts` 共 12 处；文档 `ops.md`/`setup.md`/`Tool.md`/loop1 README/loop3 model_compare |
 | 顺带修 | `track_feedback` 原会把「播放为 0 的 T0 基线」当真数据、推出假 P0「重做前 3 秒」→ 现在识别为基线、标"待采集"；`.gitignore` 两行编码坏掉的注释修正 |
 | 验证 | 验收重跑 **9/9 PASS**；ASR 实跑 109 词 / 2 句 / conf 0.9759；`publish status` 仍已登录（profile 迁移无损）；`ffmpeg -version` 6.1.1 |
-| 未做 | 未 commit、未 push（等人指示） |
+| 未做 | 未 commit、未 push（等人指示）——**已于 16:18 提交 `1fcd615`、16:23 推 `origin/browser-publish`**，见下节 |
 
-## 分支记录 · 2026-10-31 16:23 · 两条线分叉，分分支管理
+### 分支记录 · 2026-10-31 16:23 · 两条线分叉，分分支管理
 
 | 项 | 内容 |
 | --- | --- |
 | 现象 | 本地这条线（本机 15:22 用 Playwright 真浏览器发布 BV1AaxC6hExH + 两轮目录整理）与远端 `main`（14:58–16:04 另一个会话推的 loop12+ 竖屏 / loop13 API 版发布骨架）在 `86fcc1c` 分叉：本地 1 个提交、远端 5 个提交，冲突 114 个文件（多为同一批产物两边各改一次） |
 | 处置 | 按人指示**分两条分支各自管理**，不合并、不覆写：<br>· `main` = 远端那条线（`f3c03be`），本地已对齐 `origin/main`，未做任何改动<br>· `browser-publish` = 本机这条线（`1fcd615`），已推到远端同名分支并跟踪<br>· 另留本地备份分支 `backup/local-publish-1fcd615` |
 | 两条线的差别 | `main`：B 站走 **API 方案**（`bili_auth/bili_upload/bili_stats`，卡在需要 Cookie，尚未发出稿件）；产物含竖屏 9:16、封面自检、选题雷达常态化<br>`browser-publish`：B 站走 **Playwright + 系统 Edge**（`publish_bilibili.mjs`，已实际发出 BV1AaxC6hExH，回执在 `History/publish/bilibili/runs/`）；仓库结构按 AGENTS.md 收敛、Workspace 四层重组 |
+| 提交 | `1fcd615`（140 文件 / +4550 −3338）：发布脚本沉淀 + 目录整理 + Workspace 重组 + 4 处 bug 修复；`090f66b` 记录本次分叉 |
+| 推送 | `git push -u origin browser-publish` → `1fcd615 → 090f66b`，exit 0；远端 `main` 仍是 `f3c03be`（未被覆盖） |
 | 后续 | 需要合并时再单独处理；在那之前**不要**在两条线之间 `reset --hard` 或 `push -f`。改哪条线就先 `git switch` 到哪条 |
+
+### 维护记录 · 2026-10-31 16:48 · 日志本身整理（用户指令："把 log.md 整理一下"）
+
+| 项 | 内容 |
+| --- | --- |
+| 体量 | 297 → 324 行；正文一条未删（除下表列出的错字与过期状态），多的行数来自本章节、附录标题与统一的分隔线 |
+| 修掉的数据损坏 | 两处 `0x08` 退格符把提交号吃成 `a57013` → 还原 **`ba57013`**；另一处 `rev-list` 被误断成两行（`re` + 换行 + `ev-list`）→ 合并回一行 |
+| 章节归位 | 「维护记录 ×4 + 分支记录」原本散落在各轮之间（10-27 的 Git 出网记录竟排在 10-30 的 loop12 之后）→ 全部降为 `###` 归入文末 **「维护与分支记录（按时间顺序）」**，小循环 1–12 从前往后连贯读 |
+| 抽离游离条目 | 小循环 12 表格下方有 9 条无标题的「跨轮短板」清单，混在某一轮的记录里 → 移到文末 **「附录 · 跨轮短板与待办台账」**，并把失效路径 `Workspace/asr/models/` 更正为 `Workspace/deps/asr/models/` |
+| 格式统一 | 每节之间统一「空行 + `---` + 空行」（原来有的挨着、有的连写两遍 `---`）；删掉两个表格行尾多余的空单元格；去掉连续空行 |
+| 状态表纠正 | ①大循环时间推进到 16:50（已用 102.1h / 剩 65.9h）；②`代码/仓库状态` 原写"有未提交改动、尚未 commit/push"→ 改为已提交 `1fcd615`、工作区干净、当前分支 `browser-publish`；③`远端` 补记 16:2x 推 `browser-publish` 且 `main` 未被覆盖 |
+| 标题/口径 | 「循环 12 · 发布」→「**小循环** 12 · 发布」，时间 `15:2x` → `15:22`（对外 pubdate）；两处"待下轮整理""未 commit"的过期表述就地注明后续已做 |
+| 读旧条目约定 | 顶部加一条：10-31 15:57 起 `Deliverables/` 已并入 `case_ep01/`、`Workspace/asr` 与 `Workspace/bin` 已改为 `Workspace/deps/*`，文中更早的路径按当时语境保留 |
+
+---
+
+## 附录 · 跨轮短板与待办台账
+
+> 这些条目原本散落在「小循环 12」表格下方、无标题。2026-10-31 整理日志时原文移到这里，内容未改；只把 `Workspace/asr/models/` 更新为现行路径 `Workspace/deps/asr/models/`。
+
+- **识别质量（最高优先级）**：真实影视混音下 Vosk 小模型仅约 55–65% 词准确率。已做模型对照（详见 `History/loops/loop03/model_compare.md`）：**128MB 的 lgraph 大模型反而更差**（插入多、置信度 0.788 vs 0.918）→ 短板是模型能力上限，不是模型大小；要上 Whisper 类需要新下载通道（HF/ModelScope 全域不可达）。lgraph 模型已保留在 `Workspace/deps/asr/models/` 可复用。
+- **标点恢复**：✅ 小循环 6 已解决（规则化恢复：句界 F1 1.00 / 句末标点 100%）。剩余：语义级断句（从句/长句仍靠停顿+长度）。
+- **翻译质量**：✅ 缺陷清零（句末缺标点 7→0、术语错误 1→0）；全自动机翻仍是"能看懂"级，发布走 `--mt agent`（人/LLM 精译，实测可达人工参考 94.1%）或"机翻 + 人工校对回写"。待译清单 `make_subs --dump-en`；校对回写闭环 ✅ 小循环 8 已解决（`export_review` → 改 CSV → `apply_review`，恒等回写逐字节一致、误操作全部拒绝）。
+- **机翻质量**：MyMemory 只能"看懂"，不宜直发；需 LLM 精译或自建 MT。
+- **音画绑定**：语音保护会连带保住"对白压在黑屏/字幕卡"上的黑屏，暂时无法"保音频换画面"。
+- 模型下载通道：本机只有 alphacephei、npmmirror 与 nluug/dotsrc 的 Blender 镜像可用。
+- **短句通道（小循环 4 新增，收益最大）**：❌ **小循环 7 已证伪"喂法能救"**：干净 TTS 8/10 能识别、原片混音 0/10、7 条链 × 10 条漏句 0 命中、窗口放大到 6–10s 仍 0 → 是模型能力上限。**别再在预处理/切窗上投入**；唯一解是换 Whisper 级模型（需外部给模型/通道/接口）。`asr_rescue.mjs` 的"找未被覆盖有声区间"能力保留，可当漏译检查器。
+- **机翻质量定量化（小循环 4 新增）**：`Workspace/assets/tos/TOS-CH.srt` 是官方中文翻译，可直接算“机翻 vs 人工”字相似度分布，给出能否直接发布的门槛。
+- **逐词高亮的进阶玩法（小循环 5 新增）**：当前只做“只亮当前词”。`\kf` 扫光式高亮、长句自动分页、多语言字体回退、软字幕轨都未做；1 小时长片的事件量（约 1–1.5 万条）未压测。
