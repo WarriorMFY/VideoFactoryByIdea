@@ -13,6 +13,9 @@
 | `make_vertical.mjs` | **竖屏版**（9:16）：模糊铺底 + 居中正片 + 重排字幕 + 可选顶部标题，一次 ffmpeg 滤镜图完成 |
 | `pick_cover_frame.mjs` | **封面自动选帧**：按"下半区够暗 + 有细节 + 不过曝"给候选帧打分，避免取到片头标题卡/白屏 |
 | `check_cover.mjs` | **封面自检**：尺寸比例 / 文字带暗底 / 高亮占比 / 局部蒙版分隔 / 320px 缩略图可读 / 安全边距（**不做 OCR**，错别字仍需人眼） |
+| `bili_auth.mjs` | **阶段 A｜登录态自检**：读 `Workspace/secrets/bili.cookie.json`，验证 nav/WBI/稿件列表可达性；`--template` 生成模板（详见 [`bili.md`](bili.md)） |
+| `bili_stats.mjs` | **阶段 A｜自动反馈跟踪**：拉自己稿件列表 + 每条真实数据（播放/点赞/收藏/评论/分享/弹幕）→ 自动写 `feedback.csv` + 原始快照到 `History/ops/bili/`；完播率拿不到就留空，**不估算** |
+| `bili_upload.mjs` | **阶段 B/C｜自动投稿**：默认只做**预检**（校验资产/生成投稿计划）；`--probe` 只读探测协议；`--confirm-upload` 才真发且**必须**配 `--dtime` 定时（除非显式 `--public`） |
 | `radar.mjs` | **选题雷达常态化**：每跑一次存一期快照（`History/ops/radar/`），与上一期差分出新进榜/掉榜/播放增速/关键词变化，出趋势报告 |
 | `track_feedback.mjs` | **反馈追踪**：读 `feedback.csv` 快照 → 完播率/点赞率/收藏率/评论率/千播涨粉 + 环比 + **规则化迭代动作**（P0/P1/P2）。空数据时明确输出"待采集"；`--selftest` 用合成数据验证规则（输出标 DRY-RUN） |
 
@@ -37,8 +40,14 @@ node Tool\ops\make_vertical.mjs --video <clean16x9.mp4> --ass karaoke_9x16.ass -
 node Tool\ops\radar.mjs                              # 采集一期 + 与上一期差分
 node Tool\ops\radar.mjs --seed <旧 market_raw.json>   # 首次建立基线
 
-# 7) 反馈
+# 7) 反馈（手工填表 → 出动作）
 node Tool\ops\track_feedback.mjs --csv Prototype\loop12_market_loop\case_ep01\feedback.csv
+
+# 8) 自动发布与跟踪（见 bili.md；凭据放 Workspace\secrets\bili.cookie.json，不入库）
+node Tool\ops\bili_auth.mjs                      # 阶段 A：登录态/WBI/稿件列表自检
+node Tool\ops\bili_stats.mjs                     # 阶段 A：自动拉真实数据写 feedback.csv
+node Tool\ops\bili_upload.mjs --title "..." --tag "..." --tid <分区id> --probe            # 只读探测协议
+node Tool\ops\bili_upload.mjs --title "..." --tag "..." --tid <分区id> --dtime "2026-11-01 20:00" --confirm-upload   # 阶段 B：定时发布
 ```
 
 ## 坑

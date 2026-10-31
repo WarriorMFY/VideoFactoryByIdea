@@ -257,3 +257,18 @@
 | 环境事实 | B 站搜索接口会整批返回 HTML（风控），侦查脚本已容错；本沙箱不能设定时任务，雷达靠"每天手动跑一次"积累 |
 | 状态 | **loop12 仍未结束**（卡点：上架 + 真实反馈，需人的账号）。本轮未关闭、未宣布收敛 |
 | 人工反馈 | （待填） |
+
+---
+
+## 小循环 13 · 自动发布与反馈跟踪（需求变更：人授权账号使用权）
+
+| 项 | 内容 |
+| --- | --- |
+| 开始时间 | 2026-10-31 11:30 |
+| 结束时间 | 进行中（卡在人在环：等 Cookie） |
+| 初始目标 | 人指令：「现在需求变了，我给你账户使用权，你来自动发布与跟踪反馈」。选定方案：Cookie + **A 只读验证 → B 定时发布（不立即公开）→ C 人确认后公开**，只发 16:9 正片；人明确接受网页接口自动投稿的风控/协议风险 |
+| 已做（只读 + 预检，未使用账号） | ① **接口形状探测**（`History/probe/loop13_bili_*.mjs`）：`nav` 200/-101（可达、缺登录态）、`member.bilibili.com/x/web/archives` 200/-101（稿件列表端点存在）、`x/vu/web/add` 405（存在，仅 POST）、无签名访问 `/space/wbi/*` 412（**必须 WBI 签名**）、公开数据端点 200/code=0；② 新增公共层 `Tool/lib/bili.mjs`（凭据装载、请求包装、**WBI 签名**、风控码识别 -352/-412/-509）；③ 新增 `Tool/ops/bili_auth.mjs`（登录态自检 + `--template` 生成 `Workspace/secrets/bili.cookie.json`）；④ 新增 `Tool/ops/bili_stats.mjs`（阶段 A：拉稿件+真实数据 → 自动写 `feedback.csv` + 快照，**完播率拿不到就留空不估算**）；⑤ 新增 `Tool/ops/bili_upload.mjs`（阶段 B/C 骨架：默认 preflight 预检 PASS，`--probe` 只读探测，`--confirm-upload` 在协议未实测前**明确报未实现并退出 4**，不假装成功）；⑥ 文档 `Tool/ops/bili.md` + `ops.md` 更新；⑦ `publish.md` 的"需要人来做"改为阶段 B 流程 |
+| 硬阻塞 | **缺凭据**：需要人把 `SESSDATA` / `bili_jct` / `DedeUserID` 填进 `Workspace/secrets/bili.cookie.json`（已生成模板，Workspace/ 不入库）。为了不让 Cookie 出现在对话记录里，采用"人自己写文件"的方式 |
+| 下一步（凭据到位后） | ① 跑 `bili_auth.mjs`（A）→ ② `bili_stats.mjs` 拿真实数据（若已有稿件则反馈闭环立刻成立）→ ③ `bili_upload.mjs --probe` 钉住 init/上传端点 → ④ 实现 init→分片→add，用**定时发布**先发一条（可删稿）→ ⑤ 人确认后到点公开 |
+| 红线（已写进脚本） | 不绕过验证码/风控（遇非 JSON 或 -352/-412/-509 退出码 3 并停下）；不打印凭据；无 `--confirm-upload` 绝不上传；无 `--public` 必须 `--dtime`（拒绝手滑公开） |
+| 人工反馈 | （待填） |

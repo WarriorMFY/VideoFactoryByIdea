@@ -1,0 +1,52 @@
+{
+  "generated_at": "2026-10-31T06:57:51.132Z",
+  "mode": "preflight",
+  "checks": {
+    "video": {
+      "file": "Workspace\\deliverables\\ep01_editing_tips\\render_16x9\\final.mp4",
+      "size_mb": 7.99,
+      "duration_s": 37.37,
+      "codec": "h264",
+      "w": 1280,
+      "h": 720,
+      "fps": "30/1",
+      "audio": "aac",
+      "ok": true
+    },
+    "cover": {
+      "file": "Workspace\\deliverables\\ep01_editing_tips\\cover_16x9.jpg",
+      "size_mb": 0.13,
+      "ok": true
+    },
+    "meta": {
+      "title": "5 个剪辑提速技巧",
+      "title_len": 9,
+      "tags": [
+        "剪辑",
+        "效率",
+        "教程"
+      ],
+      "tag_count": 3,
+      "tid": 21,
+      "copyright": 1,
+      "desc_from": "Prototype\\loop12_market_loop\\case_ep01\\publish.md",
+      "dtime": "2026-11-01 20:00",
+      "public_now": false,
+      "aspect": "16:9",
+      "ok": true
+    }
+  },
+  "payload": {
+    "copyright": 1,
+    "tid": 21,
+    "title": "5 个剪辑提速技巧",
+    "desc": "# 交付包 · EP01「5 个剪辑提速技巧」（工厂样片）\r\n\r\n> 这期节目是为了验证 **市场 → 工厂 → 交付 → 反馈 → 迭代** 这条链路能不能跑通，\r\n> 所以它同时是**产品样片**和**流水线证据**。素材授权干净（CC-BY 画面 + 合成语音），可以直接公开，不涉及搬运侵权。\r\n\r\n## 1. 选题依据（来自真实市场侦查，见 `History/loops/loop12/market_report.md`）\r\n\r\n| 关键词 | 搜索结果量 | 前 8 条播放合计 | 说明 |\r\n| --- | --- | --- | --- |\r\n| 中英双语 | 1000（封顶） | 1288 万 | 需求明确，供给大多是\"搬运 + 机翻字幕\" |\r\n| 编程教程 英文 | 1000（封顶） | 2517 万 | 英文长教程的受众最大 |\r\n| Blender 教程 双语 | 1000（封顶） | 1903 万 | 软件教程 + 双语是刚需 |\r\n| 剪辑教程 英文 | 1000（封顶） | 418 万 | **本期选它**：与工厂现有素材/能力最贴合 |\r\n\r\n结论：**\"英文原声 + 高质量中英双语\"是一个被验证过的需求，而现有供给普遍在\"字幕质量\"上偷懒** ——\r\n这正是工厂能打的位置（双语 + 逐词高亮 + 术语/单位规范 + 人工校对回写）。\r\n\r\n## 2. 交付物清单\r\n\r\n| 文件 | 说明 |\r\n| --- | --- |\r\n| `render_16x9/final.mp4` | **主交付**：1280×720 / H.264 / 30fps / AAC 48k，37.4s，烧入双语 + 逐词高亮，QA **PASS** |\r\n| `karaoke.ass` | 双语逐词高亮字幕（可复用到其它平台/软字幕） |\r\n| `subs/{bilingual,zh,en}.srt` | 双语/单语字幕，便于二创与检索 |\r\n| `cover_16x9.jpg` | 1280×720 封面（标题 + 副标题 + 角标） |\r\n| `ground_truth.json` / `script_en.txt` / `zh_agent.json` | 讲稿、真值时间码、精译文件（可复现、可审计） |\r\n| `feedback.csv` / `feedback_report.md` | 反馈采集表 + 追踪报告（当前状态：待采集） |\r\n\r\n## 3. 发布文案（可直接改）\r\n\r\n**标题（A/B 三版，按\"关键词 + 收益 + 反差\"结构）**\r\n- A：`5 个剪辑提速技巧｜英文原声 + 中英双语字幕，照着做能省一半时间`\r\n- B：`剪辑总卡在细节？这 5 个小改动让成片立刻\"变贵\"（中英双语）`\r\n- C：`剪辑师不会告诉你的 5 个提速技巧 | 英文原声·中英双语`\r\n\r\n**简介**\r\n```\r\n本期 5 个技巧，全部来自真实剪辑工作流，每条都能立刻用：\r\n1) 跟着节拍剪，不要跟着静音剪\r\n2) 字幕放进安全区（离底边至少 40px）\r\n3) 响度归一到 −16 LUFS，对白峰值不超 −1 dB\r\n4) 导出 15 Mbps，发布前先看开头 3 秒\r\n5) 关掉声音看一遍自己的片子\r\n\r\n英文原声 + 中英双语字幕，当前词高亮，适合边看边练。\r\n（本期为工厂样片：画面 CC-BY，语音为合成音，用于验证\"双语字幕 + 交付\"链路。）\r\n```\r\n\r\n**标签**：`剪辑教程` `视频剪辑` `中英双语` `剪辑技巧` `后期` `创作者工具` `效率`\r\n\r\n**分区**：知识 → 软件应用 / 设计·创意\r\n\r\n**封面文案**：主标题「5 个剪辑提速技巧」；副标题「英文原声 · 中英双语 · 逐词高亮」；角标「工厂样片」\r\n\r\n**置顶评论**（用来收反馈，直接对应 `feedback.csv` 的 notes 列）\r\n```\r\n哪一条你最想先试？或者你被哪条坑过？评论告诉我，下期就拆它。\r\n字幕字号/速度有想调的也直说，我改完会重发一版。\r\n```\r\n\r\n## 4. 上传清单（**需要人来做**，工厂不代登录）\r\n\r\n- [ ] 用自己的账号登录 B 站创作中心 → 投稿\r\n- [ ] 上传 `render_16x9/final.mp4`，封面用 `cover_16x9.jpg`（已过 `check_cover` 自检；取帧来自**无字幕干净成片**）\r\n- [ ] （可选，B 站支持竖屏）另投 `final_9x16.mp4` + `cover_9x16.jpg`（1080×1920，字幕已按竖屏重排）\r\n- [ ] 填标题（选一版）、简介、标签、分区\r\n- [ ] 声明：本片画面为 Ble",
+    "tag": "剪辑,效率,教程",
+    "cover": "Workspace\\deliverables\\ep01_editing_tips\\cover_16x9.jpg",
+    "no_reprint": 1,
+    "open_elec": 0,
+    "dtime": "2026-11-01 20:00",
+    "video": "Workspace\\deliverables\\ep01_editing_tips\\render_16x9\\final.mp4"
+  },
+  "probe": null
+}
