@@ -89,6 +89,36 @@ const dry = run(process.execPath, [path.join(ROOT, 'Tool/ops/track_feedback.mjs'
 const selftest = fs.readFileSync(path.join(ROOT, 'History', 'loops', 'loop12', 'feedback_selftest.md'), 'utf8');
 console.log(`  空表 → 「待采集」=${/待采集/.test(emptyReport)}；自检 → 动作 ${(selftest.match(/^- \*\*/gm) || []).length} 条`);
 
+// ---------- E. 交付形态扩展（竖屏 / 封面自检 / 选题雷达）----------
+step('E 交付形态扩展（9:16 竖屏 / 封面自检 / 选题雷达）');
+const VERT = path.join(EP, 'render_9x16', 'final_9x16.mp4');
+const VERT_QA = path.join(EP, 'render_9x16', 'qa.json');
+let vert = { exists: fs.existsSync(VERT), w: 0, h: 0, dur: 0, qa: null };
+if (vert.exists) {
+  const pv = ffprobeJson(['-show_entries', 'format=duration', '-show_entries', 'stream=codec_name,width,height', VERT], path.join(LOGS, 'l12_vert_probe.log'));
+  const sv = (pv.streams || []).find((s) => s.codec_name === 'h264') || {};
+  vert = { exists: true, w: Number(sv.width || 0), h: Number(sv.height || 0), dur: Number(pv.format?.duration || 0), qa: fs.existsSync(VERT_QA) ? J(VERT_QA).verdict : null };
+  console.log(`  竖屏 ${vert.w}x${vert.h} ${vert.dur.toFixed(1)}s / QA ${vert.qa}`);
+}
+// 封面自检：两张封面各跑一次检查脚本，结果落盘
+const coverReports = {};
+for (const [tag, file, expect] of [['16x9', path.join(EP, 'cover_16x9.jpg'), '16:9'], ['9x16', path.join(EP, 'cover_9x16.jpg'), '9:16']]) {
+  const out = path.join(EP, `cover_${tag}.check.json`);
+  node('Tool/ops/check_cover.mjs', ['--cover', path.relative(ROOT, file), '--expect', expect, '--json', path.relative(ROOT, out)], `cover_${tag}`, { allowFail: true });
+  coverReports[tag] = fs.existsSync(out) ? J(out) : { verdict: 'MISSING', checks: {} };
+  console.log(`  封面 ${tag}：${coverReports[tag].verdict}`);
+}
+// 选题雷达：至少要有一期索引 + 趋势报告（第二期起才有差分）
+const RADAR = path.join(ROOT, 'History', 'ops', 'radar');
+const radarIndex = path.join(RADAR, 'index.json');
+const radarReport = path.join(RADAR, 'report-latest.md');
+let radar = { snapshots: 0, diff: false };
+if (fs.existsSync(radarIndex)) {
+  radar.snapshots = (J(radarIndex).snapshots || []).length;
+  radar.diff = fs.existsSync(radarReport) && /与上一期|这是\*\*第一期\*\*/.test(fs.readFileSync(radarReport, 'utf8'));
+  console.log(`  雷达 ${radar.snapshots} 期 / 趋势报告 ${fs.existsSync(radarReport) ? '有' : '无'}`);
+}
+
 // ---------- 判定 ----------
 const checks = {
   recon_has_data: mr.pool_size >= 60 && cands.length >= 20,
@@ -100,6 +130,10 @@ const checks = {
   package_complete: Object.values(publishChecks).every(Boolean),
   feedback_honest_when_empty: /待采集/.test(emptyReport),
   feedback_rules_runnable: /DRY-RUN/.test(selftest) && (selftest.match(/^- \*\*/gm) || []).length >= 2,
+  // E：交付形态扩展
+  vertical_publishable: vert.exists && vert.w === 1080 && vert.h === 1920 && vert.qa !== 'FAIL' && Math.abs(vert.dur - finalDur) < 0.5,
+  covers_pass_selfcheck: coverReports['16x9'].verdict === 'PASS' && coverReports['9x16'].verdict === 'PASS',
+  radar_trending: radar.snapshots >= 2 && radar.diff,
 };
 const pass = Object.values(checks).every(Boolean);
 
@@ -119,6 +153,9 @@ L.push(`| B 开工 | 识别质量够用 | ${checks.asr_good_enough ? '✅' : '�
 L.push(`| C 交付 | 发布文案/标签分区/上传清单/合规 | ${checks.package_complete ? '✅' : '❌'} | ${Object.entries(publishChecks).filter(([, x]) => x).length}/${Object.keys(publishChecks).length} |`);
 L.push(`| D 反馈 | 空数据时诚实标"待采集" | ${checks.feedback_honest_when_empty ? '✅' : '❌'} | |`);
 L.push(`| D 反馈 | 规则能跑并给出动作 | ${checks.feedback_rules_runnable ? '✅' : '❌'} | 自检 ${(selftest.match(/^- \*\*/gm) || []).length} 条动作（DRY-RUN） |`);
+L.push(`| E 形态 | 竖屏 9:16 可发布 | ${checks.vertical_publishable ? '✅' : '❌'} | ${vert.w}x${vert.h} ${vert.dur.toFixed(1)}s / QA ${vert.qa ?? '—'} |`);
+L.push(`| E 形态 | 双封面自检通过 | ${checks.covers_pass_selfcheck ? '✅' : '❌'} | 16:9 ${coverReports['16x9'].verdict} / 9:16 ${coverReports['9x16'].verdict}（像素统计，不含 OCR） |`);
+L.push(`| E 运营 | 选题雷达能出趋势 | ${checks.radar_trending ? '✅' : '❌'} | ${radar.snapshots} 期快照 / 差分报告 ${radar.diff ? '有' : '无'} |`);
 L.push('');
 L.push('## 链路状态（诚实版）\n');
 L.push('| 段 | 状态 | 说明 |');
@@ -145,6 +182,9 @@ fs.writeFileSync(path.join(OUTDIR, 'metrics.json'), JSON.stringify({
   generated_at: new Date().toISOString(),
   recon: { pool: mr.pool_size, candidates: cands.length, keywords: kwRows.map((k) => ({ kw: k.keyword, num: k.num_results, top_play: k.top_play })), top_keyword: topKw?.keyword ?? null },
   episode: { path: path.relative(ROOT, EP), final_s: finalDur, w: vi.width, h: vi.height, qa: qa.verdict, cues: cues.cues.length, bilingual, ass_events: assEvents, wer: v.wer?.rate ?? null, coverage: v.timing?.coverage_ratio ?? null },
+  vertical: { exists: vert.exists, w: vert.w, h: vert.h, dur_s: Number(vert.dur.toFixed(2)), qa: vert.qa },
+  covers: { '16x9': coverReports['16x9'].verdict, '9x16': coverReports['9x16'].verdict, detail: { '16x9': coverReports['16x9'].checks, '9x16': coverReports['9x16'].checks } },
+  radar: { snapshots: radar.snapshots, has_diff_report: radar.diff },
   publish_checks: publishChecks,
   feedback: { empty_report_says_pending: /待采集/.test(emptyReport), selftest_actions: (selftest.match(/^- \*\*/gm) || []).length },
   checks, pass,

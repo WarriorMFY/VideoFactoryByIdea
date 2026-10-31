@@ -2,6 +2,7 @@
 Workspace/
 
 # 每步 ffmpeg 原始日志/中间文件（体积大、可由脚本重建）
+History/**/.tmp-collect/
 History/**/.work/
 History/**/.qa/
 History/**/.asr_work/

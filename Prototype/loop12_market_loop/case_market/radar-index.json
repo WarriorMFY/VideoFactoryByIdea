@@ -1,0 +1,61 @@
+{
+  "generated_at": "2026-10-31T02:03:40.892Z",
+  "snapshots": [
+    {
+      "ts": "2026-10-30_1744",
+      "file": "History\\ops\\radar\\snapshots\\2026-10-30_1744.json",
+      "generated_at": "2026-10-30T09:44:56.678Z",
+      "pool_size": 134,
+      "candidates": 60,
+      "top_zones": [
+        "搞笑(10)",
+        "日常(9)",
+        "电子竞技(8)",
+        "单机游戏(8)",
+        "影视剪辑(5)"
+      ],
+      "keyword_top": [
+        {
+          "keyword": "中英双语",
+          "num_results": 1000,
+          "top_play": 24485
+        },
+        {
+          "keyword": "英语教程",
+          "num_results": 1000,
+          "top_play": 8125513
+        },
+        {
+          "keyword": "科普",
+          "num_results": 1000,
+          "top_play": 10299915
+        },
+        {
+          "keyword": "AI 教程",
+          "num_results": 1000,
+          "top_play": 12718771
+        },
+        {
+          "keyword": "纪录片 中字",
+          "num_results": 1000,
+          "top_play": 163824
+        }
+      ]
+    },
+    {
+      "ts": "2026-10-31_1003",
+      "file": "History\\ops\\radar\\snapshots\\2026-10-31_1003.json",
+      "generated_at": "2026-10-31T02:03:40.856Z",
+      "pool_size": 130,
+      "candidates": 60,
+      "top_zones": [
+        "单机游戏(12)",
+        "日常(9)",
+        "搞笑(9)",
+        "手机游戏(6)",
+        "影视剪辑(5)"
+      ],
+      "keyword_top": []
+    }
+  ]
+}

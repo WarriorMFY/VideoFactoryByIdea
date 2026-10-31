@@ -29,20 +29,52 @@ if (!fs.existsSync(VIDEO)) { console.error('视频不存在:', VIDEO); process.e
 
 // drawtext 的文本里这些字符要转义（否则 filtergraph 解析失败）
 const esc = (s) => String(s || '').replace(/\\/g, '\\\\').replace(/'/g, "\\'").replace(/:/g, '\\:').replace(/%/g, '\\%');
+
+// 自适应字号 + 换行：原来标题字号只按 H 算（H*0.085），竖屏 1080x1920 时会算成 163px、
+// 9 个汉字宽约 1467px > 画面宽度 → 文字被裁到只剩中间几个字（小循环 12 实测踩到）。
+// 规则：先按 H 比例给字号，超宽就等比缩；缩到下限还超宽就折成两行。
+const estWidth = (s, fs) => [...String(s)].reduce((a, ch) => a + (/[\x00-\x7F]/.test(ch) ? 0.56 : 1.02) * fs, 0);
+function fitTitle(text, maxW, baseFs, floorFs) {
+  let fs = Math.max(floorFs, Math.round(baseFs));
+  const lines = [String(text)];
+  if (estWidth(text, fs) > maxW) {
+    fs = Math.max(floorFs, Math.floor(fs * maxW / estWidth(text, fs)));
+    if (estWidth(text, fs) > maxW) {                 // 还超宽 → 折两行
+      const ch = [...String(text)];
+      const mid = Math.ceil(ch.length / 2);
+      lines.length = 0;
+      lines.push(ch.slice(0, mid).join(''), ch.slice(mid).join(''));
+      const widest = Math.max(...lines.map((l) => estWidth(l, 1)));
+      fs = Math.max(floorFs, Math.floor(maxW / widest));
+    }
+  }
+  return { fs, lines };
+}
+
 const filters = [
   `scale=${W}:${H}:force_original_aspect_ratio=increase`,
   `crop=${W}:${H}`,
   // 底部压暗，保证文字可读
   `drawbox=x=0:y=${Math.round(H * 0.62)}:w=${W}:h=${H - Math.round(H * 0.62)}:color=black@0.55:t=fill`,
 ];
+let titleFit = null;
 if (TITLE) {
-  filters.push(`drawtext=font=SimHei:text='${esc(TITLE)}':fontsize=${Math.round(H * 0.085)}:fontcolor=white:borderw=3:bordercolor=black@0.6:x=(w-text_w)/2:y=${Math.round(H * 0.66)}`);
+  const { fs: tfs, lines } = fitTitle(TITLE, W * 0.92, H * 0.085, Math.max(16, Math.round(W * 0.035)));
+  const lh = Math.round(tfs * 1.20);
+  const y0 = Math.round(H * 0.655 - (lines.length - 1) * lh / 2);
+  lines.forEach((ln, i) => {
+    filters.push(`drawtext=font=SimHei:text='${esc(ln)}':fontsize=${tfs}:fontcolor=white:borderw=${Math.max(2, Math.round(tfs * 0.05))}:bordercolor=black@0.6:x=(w-text_w)/2:y=${y0 + i * lh}`);
+  });
+  titleFit = { fs: tfs, lines, lh, y0 };
 }
 if (SUB) {
-  filters.push(`drawtext=font=SimHei:text='${esc(SUB)}':fontsize=${Math.round(H * 0.042)}:fontcolor=#7FE9D5:x=(w-text_w)/2:y=${Math.round(H * 0.80)}`);
+  // 副标题同样不能超宽（竖屏下按 H*0.042 会变成 80px，一行 24 字符约 1900px）
+  const sfs = Math.max(12, Math.min(Math.round(H * 0.042), Math.floor(W * 0.92 / Math.max(1, estWidth(SUB, 1)))));
+  const ySub = titleFit ? Math.min(H - Math.round(H * 0.08), titleFit.y0 + titleFit.lines.length * titleFit.lh + Math.round(sfs * 0.55)) : Math.round(H * 0.80);
+  filters.push(`drawtext=font=SimHei:text='${esc(SUB)}':fontsize=${sfs}:fontcolor=#7FE9D5:x=(w-text_w)/2:y=${ySub}`);
 }
 if (TAG) {
-  filters.push(`drawtext=font=SimHei:text='${esc(TAG)}':fontsize=${Math.round(H * 0.036)}:fontcolor=white:box=1:boxcolor=#E64980@0.85:boxborderw=${Math.round(H * 0.014)}:x=${Math.round(W * 0.04)}:y=${Math.round(H * 0.04)}`);
+  filters.push(`drawtext=font=SimHei:text='${esc(TAG)}':fontsize=${Math.round(Math.min(H * 0.036, W * 0.045))}:fontcolor=white:box=1:boxcolor=#E64980@0.85:boxborderw=${Math.round(Math.min(H * 0.014, W * 0.016))}:x=${Math.round(W * 0.04)}:y=${Math.round(H * 0.04)}`);
 }
 
 fs.mkdirSync(path.dirname(OUT), { recursive: true });

@@ -1,0 +1,47 @@
+{
+  "checked_at": "2026-10-31T02:07:02.346Z",
+  "file": "Workspace\\deliverables\\ep01_editing_tips\\cover_16x9.jpg",
+  "verdict": "PASS",
+  "checks": {
+    "aspect": true,
+    "text_band_dark": true,
+    "text_present": true,
+    "band_contrast": true,
+    "thumb_readable": true,
+    "safe_margin": true
+  },
+  "detail": {
+    "aspect": {
+      "w": 1280,
+      "h": 720,
+      "ratio": 1.778,
+      "expect": "16:9",
+      "ok": true
+    },
+    "text_band": {
+      "mean": 0.217,
+      "std": 0.145,
+      "hiRatio": 0.019,
+      "region": "y≥62%"
+    },
+    "contrast": {
+      "aboveMean": 0.416,
+      "bandMean": 0.217,
+      "delta": 0.199
+    },
+    "thumb320": {
+      "w": 320,
+      "h": 180,
+      "std": 0.124,
+      "hiRatio": 0.008
+    },
+    "edges": {
+      "top": 0,
+      "bottom": 0,
+      "left": 0.001,
+      "right": 0
+    }
+  },
+  "failed": [],
+  "note": "不做 OCR：错别字/文案/主体表情仍需人眼确认；这里只量化\"文字是否可读、是否贴边、缩略图下是否还有对比\"。"
+}

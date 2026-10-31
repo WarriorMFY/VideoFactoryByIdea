@@ -1,0 +1,17 @@
+[api] ranking HTTP 200 code=0 0.4s
+[api] popular HTTP 200 code=0 0.2s
+[api] search:中英双语 FAIL SyntaxError Unexpected token '<', "<!DOCTYPE "... is not valid JSON
+[api] search:英语教程 FAIL SyntaxError Unexpected token '<', "<!DOCTYPE "... is not valid JSON
+[api] search:科普 FAIL SyntaxError Unexpected token '<', "<!DOCTYPE "... is not valid JSON
+[api] search:AI 教程 FAIL SyntaxError Unexpected token '<', "<!DOCTYPE "... is not valid JSON
+[api] search:纪录片 中字 FAIL SyntaxError Unexpected token '<', "<!DOCTYPE "... is not valid JSON
+
+[recon] 样本 130 条｜分区前 3: 单机游戏×12 日常×9 搞笑×9
+[recon] 时长分布: ≤1min=10 1–5min=56 5–10min=24 10–30min=27 >30min=13
+[recon] 候选前 5：
+  0.755    18m  219.5435万  数码      刚用四天iPhone Duo，喀嚓一声炸屏了
+  0.739    57m  312.8402万  数码      旗舰手机芯片大横评：苹果高通发哥玄戒谁最强？
+  0.711    24m  115.9535万  科学科普    丧尽天良！反诈博主徽剑遭电诈头目刘忍买凶灭口！谁来保护下一个徽剑？【徽剑遇害事件
+  0.695     3m  13.3155万  VOCALOID·UTAU  【本家】ラズベリー - 柿崎ユウタ(selfcover)【カササギ】
+  0.682     9m  176.9641万  科学科普    秦始皇之死：真的是求长生不老，害了他吗？
+[recon] -> History\ops\radar\.tmp-collect/market_report.md

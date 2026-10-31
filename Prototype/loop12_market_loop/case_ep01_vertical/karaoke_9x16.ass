@@ -1,0 +1,103 @@
+[Script Info]
+; 双语 + 逐词高亮（karaoke）—— 由 Tool/subtitle/make_ass.mjs 生成
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.709
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: ZH,SimHei,68,&H00FFFFFF,&H00FFFFFF,&H00141414,&H78000000,0,0,0,0,100,100,0,0,1,2.4,1.0,2,48,48,419,1
+Style: EN,Arial,54,&H00FFFFFF,&H00FFFFFF,&H00141414,&H78000000,-1,0,0,0,100,100,0,0,1,2.0,0.8,2,48,48,265,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:03.26,ZH,,0,0,560,,五个小改动，能让任何视频\N看起来更贵。
+Dialogue: 1,0:00:00.00,0:00:00.30,EN,,0,0,0,,{\c&HC8E633&}five{\r} small edits that make any\Nvideo look more expensive
+Dialogue: 1,0:00:00.30,0:00:00.66,EN,,0,0,0,,five {\c&HC8E633&}small{\r} edits that make any\Nvideo look more expensive
+Dialogue: 1,0:00:00.66,0:00:01.05,EN,,0,0,0,,five small {\c&HC8E633&}edits{\r} that make any\Nvideo look more expensive
+Dialogue: 1,0:00:01.05,0:00:01.47,EN,,0,0,0,,five small edits {\c&HC8E633&}that{\r} {\c&HC8E633&}make{\r} any\Nvideo look more expensive
+Dialogue: 1,0:00:01.47,0:00:01.68,EN,,0,0,0,,five small edits that make {\c&HC8E633&}any{\r}\Nvideo look more expensive
+Dialogue: 1,0:00:01.68,0:00:02.10,EN,,0,0,0,,five small edits that make any\N{\c&HC8E633&}video{\r} look more expensive
+Dialogue: 1,0:00:02.10,0:00:02.34,EN,,0,0,0,,five small edits that make any\Nvideo {\c&HC8E633&}look{\r} more expensive
+Dialogue: 1,0:00:02.34,0:00:02.55,EN,,0,0,0,,five small edits that make any\Nvideo look {\c&HC8E633&}more{\r} expensive
+Dialogue: 1,0:00:02.55,0:00:03.26,EN,,0,0,0,,five small edits that make any\Nvideo look more {\c&HC8E633&}expensive{\r}
+Dialogue: 1,0:00:03.57,0:00:03.96,EN,,0,0,0,,{\c&HC8E633&}number{\r} one cut on the beat not on\Nthe silence
+Dialogue: 0,0:00:03.58,0:00:06.53,ZH,,0,0,560,,第一：跟着节拍剪，\N而不是跟着静音剪。
+Dialogue: 1,0:00:03.96,0:00:04.47,EN,,0,0,0,,number {\c&HC8E633&}one{\r} cut on the beat not on\Nthe silence
+Dialogue: 1,0:00:04.47,0:00:04.86,EN,,0,0,0,,number one {\c&HC8E633&}cut{\r} {\c&HC8E633&}on{\r} the beat not on\Nthe silence
+Dialogue: 1,0:00:04.86,0:00:05.37,EN,,0,0,0,,number one cut on {\c&HC8E633&}the{\r} {\c&HC8E633&}beat{\r} not on\Nthe silence
+Dialogue: 1,0:00:05.37,0:00:05.79,EN,,0,0,0,,number one cut on the beat {\c&HC8E633&}not{\r} {\c&HC8E633&}on{\r}\Nthe silence
+Dialogue: 1,0:00:05.79,0:00:06.53,EN,,0,0,0,,number one cut on the beat not on\N{\c&HC8E633&}the{\r} {\c&HC8E633&}silence{\r}
+Dialogue: 1,0:00:06.84,0:00:07.20,EN,,0,0,0,,{\c&HC8E633&}number{\r} to keep your subtitles\Ninside the safe area at least\Nforty pixels from the bottom edge
+Dialogue: 0,0:00:06.85,0:00:12.65,ZH,,0,0,560,,第二：把字幕放在安全区内，\N离底边至少四十像素。
+Dialogue: 1,0:00:07.20,0:00:07.74,EN,,0,0,0,,number {\c&HC8E633&}to{\r} keep your subtitles\Ninside the safe area at least\Nforty pixels from the bottom edge
+Dialogue: 1,0:00:07.74,0:00:08.01,EN,,0,0,0,,number to {\c&HC8E633&}keep{\r} your subtitles\Ninside the safe area at least\Nforty pixels from the bottom edge
+Dialogue: 1,0:00:08.01,0:00:08.82,EN,,0,0,0,,number to keep {\c&HC8E633&}your{\r} {\c&HC8E633&}subtitles{\r}\Ninside the safe area at least\Nforty pixels from the bottom edge
+Dialogue: 1,0:00:08.82,0:00:09.27,EN,,0,0,0,,number to keep your subtitles\N{\c&HC8E633&}inside{\r} the safe area at least\Nforty pixels from the bottom edge
+Dialogue: 1,0:00:09.27,0:00:09.69,EN,,0,0,0,,number to keep your subtitles\Ninside {\c&HC8E633&}the{\r} {\c&HC8E633&}safe{\r} area at least\Nforty pixels from the bottom edge
+Dialogue: 1,0:00:09.69,0:00:10.53,EN,,0,0,0,,number to keep your subtitles\Ninside the safe {\c&HC8E633&}area{\r} {\c&HC8E633&}at{\r} least\Nforty pixels from the bottom edge
+Dialogue: 1,0:00:10.53,0:00:10.83,EN,,0,0,0,,number to keep your subtitles\Ninside the safe area at {\c&HC8E633&}least{\r}\Nforty pixels from the bottom edge
+Dialogue: 1,0:00:10.83,0:00:11.16,EN,,0,0,0,,number to keep your subtitles\Ninside the safe area at least\N{\c&HC8E633&}forty{\r} pixels from the bottom edge
+Dialogue: 1,0:00:11.16,0:00:11.64,EN,,0,0,0,,number to keep your subtitles\Ninside the safe area at least\Nforty {\c&HC8E633&}pixels{\r} from the bottom edge
+Dialogue: 1,0:00:11.64,0:00:11.88,EN,,0,0,0,,number to keep your subtitles\Ninside the safe area at least\Nforty pixels {\c&HC8E633&}from{\r} {\c&HC8E633&}the{\r} bottom edge
+Dialogue: 1,0:00:11.88,0:00:12.21,EN,,0,0,0,,number to keep your subtitles\Ninside the safe area at least\Nforty pixels from the {\c&HC8E633&}bottom{\r} edge
+Dialogue: 1,0:00:12.21,0:00:12.65,EN,,0,0,0,,number to keep your subtitles\Ninside the safe area at least\Nforty pixels from the bottom {\c&HC8E633&}edge{\r}
+Dialogue: 1,0:00:12.96,0:00:13.35,EN,,0,0,0,,{\c&HC8E633&}number{\r} three normalized the audio\Nto minus sixteen l u fs and never\Nlet the dialogue peak above minus\None db the
+Dialogue: 0,0:00:12.97,0:00:20.28,ZH,,0,0,560,,第三：把响度归一到 −1\N6 LUFS，对白峰值不\N要超过 −1 dB。
+Dialogue: 1,0:00:13.35,0:00:13.95,EN,,0,0,0,,number {\c&HC8E633&}three{\r} normalized the audio\Nto minus sixteen l u fs and never\Nlet the dialogue peak above minus\None db the
+Dialogue: 1,0:00:13.95,0:00:14.57,EN,,0,0,0,,number three {\c&HC8E633&}normalized{\r} the audio\Nto minus sixteen l u fs and never\Nlet the dialogue peak above minus\None db the
+Dialogue: 1,0:00:14.57,0:00:15.09,EN,,0,0,0,,number three normalized {\c&HC8E633&}the{\r} {\c&HC8E633&}audio{\r}\Nto minus sixteen l u fs and never\Nlet the dialogue peak above minus\None db the
+Dialogue: 1,0:00:15.09,0:00:15.60,EN,,0,0,0,,number three normalized the audio\N{\c&HC8E633&}to{\r} {\c&HC8E633&}minus{\r} sixteen l u fs and never\Nlet the dialogue peak above minus\None db the
+Dialogue: 1,0:00:15.60,0:00:16.44,EN,,0,0,0,,number three normalized the audio\Nto minus {\c&HC8E633&}sixteen{\r} {\c&HC8E633&}l{\r} {\c&HC8E633&}u{\r} fs and never\Nlet the dialogue peak above minus\None db the
+Dialogue: 1,0:00:16.44,0:00:17.25,EN,,0,0,0,,number three normalized the audio\Nto minus sixteen l u {\c&HC8E633&}fs{\r} and never\Nlet the dialogue peak above minus\None db the
+Dialogue: 1,0:00:17.25,0:00:17.70,EN,,0,0,0,,number three normalized the audio\Nto minus sixteen l u fs {\c&HC8E633&}and{\r} {\c&HC8E633&}never{\r}\Nlet the dialogue peak above minus\None db the
+Dialogue: 1,0:00:17.70,0:00:17.97,EN,,0,0,0,,number three normalized the audio\Nto minus sixteen l u fs and never\N{\c&HC8E633&}let{\r} {\c&HC8E633&}the{\r} dialogue peak above minus\None db the
+Dialogue: 1,0:00:17.97,0:00:18.48,EN,,0,0,0,,number three normalized the audio\Nto minus sixteen l u fs and never\Nlet the {\c&HC8E633&}dialogue{\r} peak above minus\None db the
+Dialogue: 1,0:00:18.48,0:00:18.78,EN,,0,0,0,,number three normalized the audio\Nto minus sixteen l u fs and never\Nlet the dialogue {\c&HC8E633&}peak{\r} above minus\None db the
+Dialogue: 1,0:00:18.78,0:00:19.08,EN,,0,0,0,,number three normalized the audio\Nto minus sixteen l u fs and never\Nlet the dialogue peak {\c&HC8E633&}above{\r} minus\None db the
+Dialogue: 1,0:00:19.08,0:00:19.50,EN,,0,0,0,,number three normalized the audio\Nto minus sixteen l u fs and never\Nlet the dialogue peak above {\c&HC8E633&}minus{\r}\None db the
+Dialogue: 1,0:00:19.50,0:00:19.74,EN,,0,0,0,,number three normalized the audio\Nto minus sixteen l u fs and never\Nlet the dialogue peak above minus\N{\c&HC8E633&}one{\r} db the
+Dialogue: 1,0:00:19.74,0:00:20.16,EN,,0,0,0,,number three normalized the audio\Nto minus sixteen l u fs and never\Nlet the dialogue peak above minus\None {\c&HC8E633&}db{\r} the
+Dialogue: 1,0:00:20.16,0:00:20.28,EN,,0,0,0,,number three normalized the audio\Nto minus sixteen l u fs and never\Nlet the dialogue peak above minus\None db {\c&HC8E633&}the{\r}
+Dialogue: 1,0:00:20.58,0:00:21.00,EN,,0,0,0,,{\c&HC8E633&}number{\r} for export at fifteen\Nmegabits per second for a clean\Nupload and always check the first\Nthree seconds
+Dialogue: 0,0:00:20.60,0:00:27.20,ZH,,0,0,560,,第四：导出用 15 Mb\Nps，上传更干净；\N发布前先看开头三秒。
+Dialogue: 1,0:00:21.00,0:00:21.60,EN,,0,0,0,,number {\c&HC8E633&}for{\r} export at fifteen\Nmegabits per second for a clean\Nupload and always check the first\Nthree seconds
+Dialogue: 1,0:00:21.60,0:00:22.23,EN,,0,0,0,,number for {\c&HC8E633&}export{\r} {\c&HC8E633&}at{\r} fifteen\Nmegabits per second for a clean\Nupload and always check the first\Nthree seconds
+Dialogue: 1,0:00:22.23,0:00:22.71,EN,,0,0,0,,number for export at {\c&HC8E633&}fifteen{\r}\Nmegabits per second for a clean\Nupload and always check the first\Nthree seconds
+Dialogue: 1,0:00:22.71,0:00:23.22,EN,,0,0,0,,number for export at fifteen\N{\c&HC8E633&}megabits{\r} per second for a clean\Nupload and always check the first\Nthree seconds
+Dialogue: 1,0:00:23.22,0:00:23.82,EN,,0,0,0,,number for export at fifteen\Nmegabits {\c&HC8E633&}per{\r} {\c&HC8E633&}second{\r} for a clean\Nupload and always check the first\Nthree seconds
+Dialogue: 1,0:00:23.82,0:00:24.06,EN,,0,0,0,,number for export at fifteen\Nmegabits per second {\c&HC8E633&}for{\r} {\c&HC8E633&}a{\r} clean\Nupload and always check the first\Nthree seconds
+Dialogue: 1,0:00:24.06,0:00:24.39,EN,,0,0,0,,number for export at fifteen\Nmegabits per second for a {\c&HC8E633&}clean{\r}\Nupload and always check the first\Nthree seconds
+Dialogue: 1,0:00:24.39,0:00:25.08,EN,,0,0,0,,number for export at fifteen\Nmegabits per second for a clean\N{\c&HC8E633&}upload{\r} and always check the first\Nthree seconds
+Dialogue: 1,0:00:25.08,0:00:25.26,EN,,0,0,0,,number for export at fifteen\Nmegabits per second for a clean\Nupload {\c&HC8E633&}and{\r} always check the first\Nthree seconds
+Dialogue: 1,0:00:25.26,0:00:25.65,EN,,0,0,0,,number for export at fifteen\Nmegabits per second for a clean\Nupload and {\c&HC8E633&}always{\r} check the first\Nthree seconds
+Dialogue: 1,0:00:25.65,0:00:25.95,EN,,0,0,0,,number for export at fifteen\Nmegabits per second for a clean\Nupload and always {\c&HC8E633&}check{\r} the first\Nthree seconds
+Dialogue: 1,0:00:25.95,0:00:26.40,EN,,0,0,0,,number for export at fifteen\Nmegabits per second for a clean\Nupload and always check {\c&HC8E633&}the{\r} {\c&HC8E633&}first{\r}\Nthree seconds
+Dialogue: 1,0:00:26.40,0:00:26.61,EN,,0,0,0,,number for export at fifteen\Nmegabits per second for a clean\Nupload and always check the first\N{\c&HC8E633&}three{\r} seconds
+Dialogue: 1,0:00:26.61,0:00:27.20,EN,,0,0,0,,number for export at fifteen\Nmegabits per second for a clean\Nupload and always check the first\Nthree {\c&HC8E633&}seconds{\r}
+Dialogue: 1,0:00:27.51,0:00:27.90,EN,,0,0,0,,{\c&HC8E633&}number{\r} five before you publish\Nwatch your own video ones with the\Nsound off
+Dialogue: 0,0:00:27.52,0:00:31.88,ZH,,0,0,560,,第五：发布之前，关掉声音\N看一遍自己的视频。
+Dialogue: 1,0:00:27.90,0:00:28.47,EN,,0,0,0,,number {\c&HC8E633&}five{\r} before you publish\Nwatch your own video ones with the\Nsound off
+Dialogue: 1,0:00:28.47,0:00:28.83,EN,,0,0,0,,number five {\c&HC8E633&}before{\r} you publish\Nwatch your own video ones with the\Nsound off
+Dialogue: 1,0:00:28.83,0:00:29.64,EN,,0,0,0,,number five before {\c&HC8E633&}you{\r} {\c&HC8E633&}publish{\r}\Nwatch your own video ones with the\Nsound off
+Dialogue: 1,0:00:29.64,0:00:29.97,EN,,0,0,0,,number five before you publish\N{\c&HC8E633&}watch{\r} your own video ones with the\Nsound off
+Dialogue: 1,0:00:29.97,0:00:30.33,EN,,0,0,0,,number five before you publish\Nwatch {\c&HC8E633&}your{\r} {\c&HC8E633&}own{\r} video ones with the\Nsound off
+Dialogue: 1,0:00:30.33,0:00:30.72,EN,,0,0,0,,number five before you publish\Nwatch your own {\c&HC8E633&}video{\r} ones with the\Nsound off
+Dialogue: 1,0:00:30.72,0:00:30.99,EN,,0,0,0,,number five before you publish\Nwatch your own video {\c&HC8E633&}ones{\r} with the\Nsound off
+Dialogue: 1,0:00:30.99,0:00:31.23,EN,,0,0,0,,number five before you publish\Nwatch your own video ones {\c&HC8E633&}with{\r} {\c&HC8E633&}the{\r}\Nsound off
+Dialogue: 1,0:00:31.23,0:00:31.56,EN,,0,0,0,,number five before you publish\Nwatch your own video ones with the\N{\c&HC8E633&}sound{\r} off
+Dialogue: 1,0:00:31.56,0:00:31.88,EN,,0,0,0,,number five before you publish\Nwatch your own video ones with the\Nsound {\c&HC8E633&}off{\r}
+Dialogue: 1,0:00:32.19,0:00:32.61,EN,,0,0,0,,{\c&HC8E633&}that{\r} {\c&HC8E633&}is{\r} the whole checklist save\Nit and your next at it will take\Nhalf the time
+Dialogue: 0,0:00:32.20,0:00:37.38,ZH,,0,0,560,,这就是全部清单。存下来，\N下次剪辑能省一半时间。
+Dialogue: 1,0:00:32.61,0:00:32.94,EN,,0,0,0,,that is {\c&HC8E633&}the{\r} {\c&HC8E633&}whole{\r} checklist save\Nit and your next at it will take\Nhalf the time
+Dialogue: 1,0:00:32.94,0:00:34.50,EN,,0,0,0,,that is the whole {\c&HC8E633&}checklist{\r} save\Nit and your next at it will take\Nhalf the time
+Dialogue: 1,0:00:34.50,0:00:34.92,EN,,0,0,0,,that is the whole checklist {\c&HC8E633&}save{\r}\Nit and your next at it will take\Nhalf the time
+Dialogue: 1,0:00:34.92,0:00:35.25,EN,,0,0,0,,that is the whole checklist save\N{\c&HC8E633&}it{\r} and your next at it will take\Nhalf the time
+Dialogue: 1,0:00:35.25,0:00:35.55,EN,,0,0,0,,that is the whole checklist save\Nit {\c&HC8E633&}and{\r} {\c&HC8E633&}your{\r} next at it will take\Nhalf the time
+Dialogue: 1,0:00:35.55,0:00:36.18,EN,,0,0,0,,that is the whole checklist save\Nit and your {\c&HC8E633&}next{\r} {\c&HC8E633&}at{\r} {\c&HC8E633&}it{\r} will take\Nhalf the time
+Dialogue: 1,0:00:36.18,0:00:36.57,EN,,0,0,0,,that is the whole checklist save\Nit and your next at it {\c&HC8E633&}will{\r} {\c&HC8E633&}take{\r}\Nhalf the time
+Dialogue: 1,0:00:36.57,0:00:36.81,EN,,0,0,0,,that is the whole checklist save\Nit and your next at it will take\N{\c&HC8E633&}half{\r} the time
+Dialogue: 1,0:00:36.81,0:00:37.38,EN,,0,0,0,,that is the whole checklist save\Nit and your next at it will take\Nhalf {\c&HC8E633&}the{\r} {\c&HC8E633&}time{\r}

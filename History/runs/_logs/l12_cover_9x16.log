@@ -1,0 +1,9 @@
+[cover] cover_9x16.jpg 1080x1920 → PASS
+  ✅ aspect
+  ✅ text_band_dark
+  ✅ text_present
+  ✅ band_contrast
+  ✅ thumb_readable
+  ✅ safe_margin
+  文字带 亮度均值 0.174 / 高亮占比 0.035 / 与上半区差 0.213
+  320px 缩略图 std 0.174 / 高亮 0.028 / 边缘亮像素 {"top":0,"bottom":0,"left":0.001,"right":0}

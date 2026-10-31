@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-31T01:50:30.322Z",
+  "generated_at": "2026-10-31T02:08:10.886Z",
   "recon": {
     "pool": 134,
     "candidates": 60,
@@ -54,6 +54,39 @@
     "wer": 0.0952,
     "coverage": 1
   },
+  "vertical": {
+    "exists": true,
+    "w": 1080,
+    "h": 1920,
+    "dur_s": 37.38,
+    "qa": "PASS"
+  },
+  "covers": {
+    "16x9": "PASS",
+    "9x16": "PASS",
+    "detail": {
+      "16x9": {
+        "aspect": true,
+        "text_band_dark": true,
+        "text_present": true,
+        "band_contrast": true,
+        "thumb_readable": true,
+        "safe_margin": true
+      },
+      "9x16": {
+        "aspect": true,
+        "text_band_dark": true,
+        "text_present": true,
+        "band_contrast": true,
+        "thumb_readable": true,
+        "safe_margin": true
+      }
+    }
+  },
+  "radar": {
+    "snapshots": 2,
+    "has_diff_report": true
+  },
   "publish_checks": {
     "has_title": true,
     "has_tags": true,
@@ -75,7 +108,10 @@
     "asr_good_enough": true,
     "package_complete": true,
     "feedback_honest_when_empty": true,
-    "feedback_rules_runnable": true
+    "feedback_rules_runnable": true,
+    "vertical_publishable": true,
+    "covers_pass_selfcheck": true,
+    "radar_trending": true
   },
   "pass": true
 }
