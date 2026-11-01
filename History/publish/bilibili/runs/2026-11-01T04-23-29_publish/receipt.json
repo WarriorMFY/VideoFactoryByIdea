@@ -1,0 +1,65 @@
+{
+  "at": "2026-11-01T04:24:12.896Z",
+  "video": "Prototype\\loop14_talk\\ep_a_digest\\final.mp4",
+  "videoSizeMB": 24.29,
+  "title": "李飞飞 TED 3分钟摘要：AI 的下一个突破口，是空间智能",
+  "tags": [
+    "AI",
+    "人工智能",
+    "李飞飞",
+    "TED",
+    "空间智能",
+    "演讲"
+  ],
+  "zone": "人工智能",
+  "declaration": "含AI生成内容",
+  "cover": "Prototype\\loop14_talk\\ep_a_digest\\cover.jpg",
+  "coverUploaded": true,
+  "dryRun": false,
+  "runDir": "History\\publish\\bilibili\\runs\\2026-11-01T04-23-29_publish",
+  "tidExpected": "231",
+  "tidTrace": {
+    "forced": "231",
+    "htype": "1011",
+    "seen": [],
+    "rewritten": [],
+    "reqs": [
+      {
+        "via": "xhr",
+        "url": "/x/vupre/web/archive/types/predict?t=1793507033855&x-bili-locale-json=%7B%22c_locale%22:%7B%22language%22:%22zh%22,%22sc",
+        "bodyType": "FormData"
+      },
+      {
+        "via": "xhr",
+        "url": "/x/vu/web/cover/up?t=1793507049914&x-bili-locale-json=%7B%22c_locale%22:%7B%22language%22:%22zh%22,%22script%22:%22Hans%",
+        "bodyType": "FormData"
+      },
+      {
+        "via": "xhr",
+        "url": "/x/vu/web/cover/up?t=1793507049914&x-bili-locale-json=%7B%22c_locale%22:%7B%22language%22:%22zh%22,%22script%22:%22Hans%",
+        "bodyType": "FormData"
+      },
+      {
+        "via": "xhr",
+        "url": "//member.bilibili.com/x/vu/web/add/v3?web_location=333.1024&t=1793507053422&csrf=56111a1092fb7aa0a481be216aeac20d&x-bili",
+        "bodyType": "String"
+      },
+      {
+        "tid": "231"
+      },
+      {
+        "via": "fetch",
+        "url": "//data.bilibili.com/v2/log/web?content_type=pbrequest&logid=021436&disable_compression=true",
+        "bodyType": "Uint8Array"
+      },
+      {
+        "via": "fetch",
+        "url": "//data.bilibili.com/v2/log/web?content_type=pbrequest&logid=021436&disable_compression=true",
+        "bodyType": "Uint8Array"
+      }
+    ]
+  },
+  "published": true,
+  "bvid": "BV1DExp6UEdb",
+  "url": "https://www.bilibili.com/video/BV1DExp6UEdb/"
+}

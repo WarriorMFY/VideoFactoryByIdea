@@ -1,0 +1,21 @@
+{
+  "file": "F:\\AgentWorkArea\\WorkBuddy\\VideoFactory\\Workspace\\tmp\\ted_epb\\talk_720p.mp4",
+  "duration": 880.362667,
+  "format": "mov,mp4,m4a,3gp,3g2,mj2",
+  "size": 265869524,
+  "bitrate": 2415999,
+  "video": {
+    "codec": "h264",
+    "width": 1280,
+    "height": 720,
+    "fps": "24000/1001",
+    "pix_fmt": "yuv420p",
+    "nb_frames": "21106"
+  },
+  "audio": {
+    "codec": "aac",
+    "sample_rate": "48000",
+    "channels": 2,
+    "bitrate": "160362"
+  }
+}

@@ -1,0 +1,37 @@
+[02:11:02] 浏览器 msedge｜profile=F:\AgentWorkArea\WorkBuddy\VideoFactory\Workspace\run\bili_profile
+[02:11:02] 已登录 UID=3747573749779036
+[02:11:18] 未见草稿恢复弹窗（干净进入）
+[02:11:18] 投稿页 file input × 3
+[02:11:18] 已挂载 final.mp4（204.8MB），等转码/表单
+[02:11:18] 上传 0%  0.0MB/s
+[02:11:21] 上传 4%  0.3MB/s
+[02:11:24] 上传 18%  11.4MB/s
+[02:11:27] 上传 29%  7.3MB/s
+[02:11:30] 上传 40%  7.4MB/s
+[02:11:33] 上传 51%  6.8MB/s
+[02:11:36] 上传 61%  7.7MB/s
+[02:11:39] 上传 72%  7.3MB/s
+[02:11:42] 上传 83%  7.4MB/s
+[02:11:45] 上传 93%  7.4MB/s
+[02:11:48] 表单就绪（30s）
+[02:11:48] 标题 OK（23 字）
+[02:11:48] 已布防 tid 改写（全格式）：提交请求体里的 tid → 231（UI 显示仅作参考，落库以回读校验为准）
+[02:11:48] 简介 OK：「AI 的到来将把我们从常规工作中解放出来，也提醒我们人因何为人。」 创新工场创…
+[02:11:48] 标签第 1 轮：多余 [生活记录,校园,记录] 缺 [AI,人工智能,李开复,TED,科技,演讲]
+[02:11:58] 标签 OK（6）：AI / 人工智能 / 李开复 / TED / 科技 / 演讲
+[02:12:00] 分区 体育运动 → 人工智能
+[02:12:02] 创作声明 = 含AI生成内容
+[02:12:04] 封面已传入，等裁剪界面
+[02:12:08] 封面第 1 步：完成
+[02:12:10] 封面完成
+[02:12:11] 表单回读 {"title":"李开复：AI 抢走常规工作后，人类只剩这一条路","zone":"人工智能","decl":"含AI生成内容","descLen":468,"coverSet":true}
+[02:12:11] 已点投稿
+[02:12:11] [net] add 请求 POST https://member.bilibili.com/x/vu/web/add/v3?web_location=333.1024&t=1793499131598&csrf=56111a1092fb7aa0a481be2
+[02:12:11] [net] add 请求体: {"cover":"https://archive.biliimg.com/bfs/archive/7b731139962da7418f5df8b4028aa62b0f1cf1e8.jpg","cover43":"https://archive.biliimg.com/bfs/archive/0335c5517e0abbe4484321d640c1f99c3a3aa2b5.jpg","ai_cover":0,"is_ab_cover":0,"ab_cover_info":null,"title":"李开复：AI 抢走常规工作后，人类只剩这一条路","copyright":3,"creation_statement":{"id":1},"human_type2":1011,"tid":231,"tag":"AI,人工智能,李开复,TED,科技,演讲","desc":"「AI 的到来将把我们从常规工作中解放出来，也提醒我们人因何为人。」\n\n创新工场创始人李开复在 TED2018 的演讲。他从 1983 年 12 月 16 日晚上 11 点、自己在哥伦比亚大学做的第一个 AI 项目讲起——那是他第一次发现，机器认不出一只猫。三十多年后，同一件事已经能击败世界围棋冠军。\n\n他在演讲里回答了三件事：\n· 中国为什么会在 AI 的\"落地时代\"反超（数据、市场、政策三个引擎）\n· 哪些工作会被取代，哪些不会\n· 以及他自己被确诊第四期淋巴瘤之后，对\"工作\"这件事的彻底改观\n\n他给出的答案不是人机对抗，而是一张共存蓝图：创造力与同情心，是 AI 拿不走的两件事。\n\n英文字幕为 TED 官方转录，中文为 TED 官方翻译（简体），逐词高亮跟随语流，适合边看边学。\n演讲原文（CC BY-NC-ND）：https://www.ted.com/talks/kai_f
+[02:12:11] [net] add 响应 200: {"code":0,"message":"OK","ttl":1,"data":{"aid":117538742601468,"bvid":"BV1tKxW62EhT"}}
+[02:12:16] 投稿返回 ok=true errors=[]
+[02:12:20] 提交 tid 留痕：seen=[] rewritten=[]
+[02:12:20] 带体请求：[{"via":"xhr","url":"/x/vu/web/cover/up?t=1793499128082&x-bili-locale-json=%7B%22c_locale%22:%7B%22language%22:%22zh%22,%22script%22:%22Hans%","bodyType":"FormData"},{"via":"xhr","url":"/x/vu/web/cover/up?t=1793499128082&x-bili-locale-json=%7B%22c_locale%22:%7B%22language%22:%22zh%22,%22script%22:%22Hans%","bodyType":"FormData"},{"via":"xhr","url":"//member.bilibili.com/x/vu/web/add/v3?web_location=333.1024&t=1793499131598&csrf=56111a1092fb7aa0a481be216aeac20d&x-bili","bodyType":"String"},{"via":"fetch","url":"//data.bilibili.com/v2/log/web?content_type=pbrequest&logid=021436&disable_compression=true","bodyType":"Uint8Array"},{"via":"fetch","url":"//data.bilibili.com/v2/log/web?content_type=pbrequest&logid=021436&disable_compression=true","bodyType":"Uint8Array"}]
+[02:12:20] ✓ 提交请求确认带 tid=231（原生或改写），仍以发布后回读为准
+[02:12:20] 已上线 https://www.bilibili.com/video/BV1tKxW62EhT/
+[02:12:21] 回执 F:\AgentWorkArea\WorkBuddy\VideoFactory\History\publish\bilibili\runs\2026-11-01T02-11-01_publish\receipt.json

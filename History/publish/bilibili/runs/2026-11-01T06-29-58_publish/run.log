@@ -1,0 +1,28 @@
+[06:29:59] 浏览器 msedge｜profile=F:\AgentWorkArea\WorkBuddy\VideoFactory\Workspace\run\bili_profile
+[06:30:00] 已登录 UID=3747573749779036
+[06:30:15] 未见草稿恢复弹窗（干净进入）
+[06:30:15] 投稿页 file input × 3
+[06:30:15] 已挂载 final.mp4（22.1MB），等转码/表单
+[06:30:15] 上传 0%  0.0MB/s
+[06:30:18] 表单就绪（3s）
+[06:30:19] 标题 OK（29 字）
+[06:30:19] 已布防 tid 改写（全格式）：提交请求体里的 tid → 231（UI 显示仅作参考，落库以回读校验为准）
+[06:30:19] 简介 OK：李开复 TED2018 演讲《How AI can save our human…
+[06:30:19] 标签第 1 轮：多余 [生活记录,校园,记录] 缺 [AI,人工智能,李开复,TED,演讲]
+[06:30:27] 标签 OK（5）：AI / 人工智能 / 李开复 / TED / 演讲
+[06:30:27] 分区已是「人工智能」
+[06:30:29] 创作声明 = 含AI生成内容
+[06:30:31] 封面已传入，等裁剪界面
+[06:30:34] 封面第 1 步：完成
+[06:30:37] 封面完成
+[06:30:37] 表单回读 {"title":"李开复 TED 3分钟摘要：AI 抢走工作后，人凭什么立足","zone":"人工智能","decl":"含AI生成内容","descLen":938,"coverSet":true}
+[06:30:38] 已点投稿
+[06:30:39] [net] add 请求 POST https://member.bilibili.com/x/vu/web/add/v3?web_location=333.1024&t=1793514638491&csrf=56111a1092fb7aa0a481be2
+[06:30:39] [net] add 请求体: {"cover":"https://archive.biliimg.com/bfs/archive/8203950e82fc4f6ece20ef5d4be97a99ad6f0b5d.jpg","cover43":"https://archive.biliimg.com/bfs/archive/843ec5558dab9c2d64e6319be5346c135f63e7e7.jpg","ai_cover":0,"is_ab_cover":0,"ab_cover_info":null,"title":"李开复 TED 3分钟摘要：AI 抢走工作后，人凭什么立足","copyright":3,"creation_statement":{"id":1},"human_type2":1011,"tid":231,"tag":"AI,人工智能,李开复,TED,演讲","desc":"李开复 TED2018 演讲《How AI can save our humanity》3 分钟中文摘要报告。解说与字幕为本频道原创整理，画面取自 TED 官方演讲视频（CC BY–NC–ND 4.0，非商业摘要引用）。\n\n完整原片（14:32）：https://www.bilibili.com/video/BV1tKxW62EhT?t=0\n\n【快速导航通道】本片每章右上角标注了对应原片时间，按下表可直接跳到原片完整论述：\n01 第1章 · 产房里的疯狂 ｜ 摘要 00:03 → 原片 00:15  https://www.bilibili.com/video/BV1tKxW62EhT?t=15\n02 第2章 · 发现的时代 ｜ 摘要 00:20 → 原片 01:15  https://www.bilibili.com/video/BV1tKxW62EhT?t=75\n03 第3章 · 实践的时
+[06:30:39] [net] add 响应 200: {"code":0,"message":"OK","ttl":1,"data":{"aid":117539766077328,"bvid":"BV1cCxs63ESU"}}
+[06:30:43] 投稿返回 ok=true errors=[]
+[06:30:47] 提交 tid 留痕：seen=[] rewritten=[]
+[06:30:47] 带体请求：[{"via":"xhr","url":"//e17962d5cstx.esheep.com/svfboss/n261101tx17sjq7sgbzs7jh3cdrlxnj2.zip?partNumber=1&uploadId=98a4ebc12da04a5f&chunk=0&ch","bodyType":"Blob"},{"via":"xhr","url":"//e17962d5cstx.esheep.com/svfboss/n261101tx17sjq7sgbzs7jh3cdrlxnj2.zip?output=json&name=frames_3747573749779036_17935146","bodyType":"String"},{"via":"xhr","url":"/x/vupre/web/archive/types/predict?t=1793514621920&x-bili-locale-json=%7B%22c_locale%22:%7B%22language%22:%22zh%22,%22sc","bodyType":"FormData"},{"via":"xhr","url":"/x/vu/web/cover/up?t=1793514634974&x-bili-locale-json=%7B%22c_locale%22:%7B%22language%22:%22zh%22,%22script%22:%22Hans%","bodyType":"FormData"},{"via":"xhr","url":"/x/vu/web/cover/up?t=1793514634975&x-bili-locale-json=%7B%22c_locale%22:%7B%22language%22:%22zh%22,%22script%22:%22Hans%","bodyType":"FormData"},{"via":"xhr","url":"https://hdaa.shuzilm.cn/report?v=1.2.0&e=1&c=1&r=3d820424-0f6a-4c01-95a0-3c54f2c3988b","bodyType":"ArrayBuffer"},{"via":"xhr","url":"//member.bilibili.com/x/vu/web/add/v3?web_location=333.1024&t=1793514638491&csrf=56111a1092fb7aa0a481be216aeac20d&x-bili","bodyType":"String"},{"via":"fetch","url":"//data.bilibili.com/v2/log/web?content_type=pbrequest&logid=021436&disable_compression=true","bodyType":"Uint8Array"},{"via":"fetch","url":"//data.bilibili.com/v2/log/web?content_type=pbrequest&logid=021436&disable_compression=true","bodyType":"Uint8Array"}]
+[06:30:47] ✓ 提交请求确认带 tid=231（原生或改写），仍以发布后回读为准
+[06:30:47] 已上线 https://www.bilibili.com/video/BV1cCxs63ESU/
+[06:30:48] 回执 Prototype/loop14_talk/ep_b_digest/receipt.json

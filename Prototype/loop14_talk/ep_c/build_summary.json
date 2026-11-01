@@ -1,0 +1,9 @@
+{
+ "dir": "Workspace/tmp/ted_batch/suleyman",
+ "out": "Prototype/loop14_talk/ep_c",
+ "offset_s": 3.558,
+ "asr_words": 3258,
+ "sentences": 401,
+ "final_exists": true,
+ "elapsed_s": 585
+}

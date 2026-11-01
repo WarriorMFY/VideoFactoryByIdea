@@ -1,0 +1,62 @@
+[03:29:22] 浏览器 msedge｜profile=F:\AgentWorkArea\WorkBuddy\VideoFactory\Workspace\run\bili_profile
+[03:29:23] 已登录 UID=3747573749779036
+[03:29:40] 未见草稿恢复弹窗（干净进入）
+[03:29:40] 投稿页 file input × 3
+[03:29:40] 已挂载 final.mp4（788.8MB），等转码/表单
+[03:29:40] 上传 0%  0.0MB/s
+[03:29:46] 上传 4%  11.4MB/s
+[03:29:49] 上传 7%  7.3MB/s
+[03:29:52] 上传 10%  7.4MB/s
+[03:29:55] 上传 13%  7.0MB/s
+[03:29:58] 上传 16%  7.8MB/s
+[03:30:01] 上传 19%  7.3MB/s
+[03:30:04] 上传 21%  7.4MB/s
+[03:30:07] 上传 24%  7.4MB/s
+[03:30:11] 上传 27%  7.4MB/s
+[03:30:14] 上传 30%  7.4MB/s
+[03:30:17] 上传 33%  7.4MB/s
+[03:30:20] 上传 35%  7.5MB/s
+[03:30:23] 上传 38%  7.2MB/s
+[03:30:26] 上传 41%  7.4MB/s
+[03:30:29] 上传 44%  7.4MB/s
+[03:30:32] 上传 47%  7.5MB/s
+[03:30:35] 上传 50%  7.4MB/s
+[03:30:38] 上传 52%  7.4MB/s
+[03:30:41] 上传 55%  7.4MB/s
+[03:30:44] 上传 58%  7.4MB/s
+[03:30:47] 上传 61%  7.4MB/s
+[03:30:50] 上传 64%  7.4MB/s
+[03:30:53] 上传 66%  7.5MB/s
+[03:30:56] 上传 69%  7.3MB/s
+[03:30:59] 上传 72%  7.4MB/s
+[03:31:02] 上传 75%  7.4MB/s
+[03:31:05] 上传 78%  7.4MB/s
+[03:31:08] 上传 81%  7.3MB/s
+[03:31:11] 上传 83%  7.4MB/s
+[03:31:14] 上传 86%  7.4MB/s
+[03:31:17] 上传 89%  7.3MB/s
+[03:31:20] 上传 92%  7.4MB/s
+[03:31:23] 上传 95%  7.3MB/s
+[03:31:26] 上传 98%  7.5MB/s
+[03:31:29] 表单就绪（108s）
+[03:31:29] 标题 OK（18 字）
+[03:31:29] 已布防 tid 改写（全格式）：提交请求体里的 tid → 231（UI 显示仅作参考，落库以回读校验为准）
+[03:31:29] 简介 OK：「AI 革命已经站稳脚跟，而且不会停。」 OpenAI CEO 山姆·奥尔特曼（…
+[03:31:29] 标签第 1 轮：多余 [生活记录,校园,记录] 缺 [AI,人工智能,奥尔特曼,OpenAI,TED,科技]
+[03:31:39] 标签 OK（6）：AI / 人工智能 / 奥尔特曼 / OpenAI / TED / 科技
+[03:31:39] 分区已是「人工智能」
+[03:31:41] 创作声明 = 含AI生成内容
+[03:31:43] 封面已传入，等裁剪界面
+[03:31:47] 封面第 1 步：完成
+[03:31:50] 封面完成
+[03:31:50] 表单回读 {"title":"奥尔特曼：AI 超越人类只是时间问题","zone":"人工智能","decl":"含AI生成内容","descLen":544,"coverSet":true}
+[03:31:50] 已点投稿
+[03:31:50] [net] add 请求 POST https://member.bilibili.com/x/vu/web/add/v3?web_location=333.1024&t=1793503910662&csrf=56111a1092fb7aa0a481be2
+[03:31:50] [net] add 请求体: {"cover":"https://archive.biliimg.com/bfs/archive/d304fefbd0404e87a66fc435418e58e44609de67.jpg","cover43":"https://archive.biliimg.com/bfs/archive/cac1fe2e7e16afcd7a4e1777a8f98955e38c7111.jpg","ai_cover":0,"is_ab_cover":0,"ab_cover_info":null,"title":"奥尔特曼：AI 超越人类只是时间问题","copyright":3,"creation_statement":{"id":1},"human_type2":1011,"tid":231,"tag":"AI,人工智能,奥尔特曼,OpenAI,TED,科技","desc":"「AI 革命已经站稳脚跟，而且不会停。」\n\nOpenAI CEO 山姆·奥尔特曼（Sam Altman）在 TED2025 与 TED 负责人克里斯·安德森的现场对谈，47 分钟。\n\n聊透了这几件事：\n· AGI 到底怎么定义——以及为什么它比大多数人以为的更近\n· 智能体（Agents）：「好的产品就是安全的产品」，你不信任它就不会用——信任本身就是产品\n· 软件正在被重写：写代码的方式两年间已经完全不同，下一波同样大的变化几个月内就会到来\n· 安全团队离职、董事会风波、权力的边界——他没有回避\n\n他说，历史上每一次把更强大的工具交到创造者手里，人类整体的创造产出都会变得更好。这一次也不会例外——如果你信得过接下来这几年的话。\n\n英文字幕为 TED 官方转录，中文为 TED 官方翻译（简体），逐词高亮跟随语流，适合边看边学。\n演讲原文（CC BY-NC-ND）：https://www.
+[03:31:50] [net] add 响应 200: {"code":0,"message":"OK","ttl":1,"data":{"aid":117539061369768,"bvid":"BV19Gxp6XE4T"}}
+[03:31:55] 投稿返回 ok=true errors=[]
+[03:31:59] 提交 tid 留痕：seen=[] rewritten=[]
+[03:31:59] 带体请求：[{"via":"xhr","url":"/x/vu/web/cover/up?t=1793503907071&x-bili-locale-json=%7B%22c_locale%22:%7B%22language%22:%22zh%22,%22script%22:%22Hans%","bodyType":"FormData"},{"via":"xhr","url":"/x/vu/web/cover/up?t=1793503907071&x-bili-locale-json=%7B%22c_locale%22:%7B%22language%22:%22zh%22,%22script%22:%22Hans%","bodyType":"FormData"},{"via":"xhr","url":"//member.bilibili.com/x/vu/web/add/v3?web_location=333.1024&t=1793503910662&csrf=56111a1092fb7aa0a481be216aeac20d&x-bili","bodyType":"String"},{"via":"fetch","url":"//data.bilibili.com/v2/log/web?content_type=pbrequest&logid=021436&disable_compression=true","bodyType":"Uint8Array"},{"via":"fetch","url":"//data.bilibili.com/v2/log/web?content_type=pbrequest&logid=021436&disable_compression=true","bodyType":"Uint8Array"}]
+[03:31:59] ✓ 提交请求确认带 tid=231（原生或改写），仍以发布后回读为准
+[03:31:59] 已上线 https://www.bilibili.com/video/BV19Gxp6XE4T/
+[03:32:00] 回执 F:\AgentWorkArea\WorkBuddy\VideoFactory\History\publish\bilibili\runs\2026-11-01T03-29-19_publish\receipt.json

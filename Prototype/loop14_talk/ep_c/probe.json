@@ -1,0 +1,21 @@
+{
+  "file": "F:\\AgentWorkArea\\WorkBuddy\\VideoFactory\\Workspace\\tmp\\ted_batch\\suleyman\\talk_720p.mp4",
+  "duration": 1321.557333,
+  "format": "mov,mp4,m4a,3gp,3g2,mj2",
+  "size": 398131173,
+  "bitrate": 2410072,
+  "video": {
+    "codec": "h264",
+    "width": 1280,
+    "height": 720,
+    "fps": "24000/1001",
+    "pix_fmt": "yuv420p",
+    "nb_frames": "31684"
+  },
+  "audio": {
+    "codec": "aac",
+    "sample_rate": "48000",
+    "channels": 2,
+    "bitrate": "160270"
+  }
+}

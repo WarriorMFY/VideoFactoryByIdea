@@ -1,0 +1,64 @@
+[03:41:26] 浏览器 msedge｜profile=F:\AgentWorkArea\WorkBuddy\VideoFactory\Workspace\run\bili_profile
+[03:41:26] 已登录 UID=3747573749779036
+[03:41:42] 未见草稿恢复弹窗（干净进入）
+[03:41:42] 投稿页 file input × 3
+[03:41:42] 已挂载 final.mp4（815.2MB），等转码/表单
+[03:41:42] 上传 0%  0.0MB/s
+[03:41:45] 上传 1%  0.3MB/s
+[03:41:48] 上传 5%  11.4MB/s
+[03:41:51] 上传 7%  7.3MB/s
+[03:41:54] 上传 10%  6.4MB/s
+[03:41:57] 上传 13%  7.4MB/s
+[03:42:00] 上传 16%  7.4MB/s
+[03:42:03] 上传 18%  7.4MB/s
+[03:42:06] 上传 21%  7.4MB/s
+[03:42:09] 上传 24%  7.4MB/s
+[03:42:12] 上传 27%  7.4MB/s
+[03:42:15] 上传 29%  7.7MB/s
+[03:42:18] 上传 32%  7.4MB/s
+[03:42:21] 上传 35%  6.4MB/s
+[03:42:24] 上传 37%  8.4MB/s
+[03:42:27] 上传 40%  7.0MB/s
+[03:42:30] 上传 43%  6.9MB/s
+[03:42:33] 上传 45%  7.4MB/s
+[03:42:36] 上传 48%  7.4MB/s
+[03:42:39] 上传 51%  7.3MB/s
+[03:42:42] 上传 53%  7.4MB/s
+[03:42:45] 上传 56%  7.4MB/s
+[03:42:48] 上传 59%  7.4MB/s
+[03:42:51] 上传 62%  8.2MB/s
+[03:42:54] 上传 64%  7.4MB/s
+[03:42:57] 上传 67%  7.4MB/s
+[03:43:00] 上传 70%  7.5MB/s
+[03:43:03] 上传 72%  8.5MB/s
+[03:43:06] 上传 75%  7.4MB/s
+[03:43:09] 上传 78%  7.4MB/s
+[03:43:12] 上传 80%  7.5MB/s
+[03:43:15] 上传 83%  7.3MB/s
+[03:43:18] 上传 86%  7.4MB/s
+[03:43:21] 上传 89%  7.4MB/s
+[03:43:24] 上传 92%  7.4MB/s
+[03:43:27] 上传 94%  7.4MB/s
+[03:43:30] 上传 97%  7.4MB/s
+[03:43:33] 表单就绪（111s）
+[03:43:33] 标题 OK（24 字）
+[03:43:33] 已布防 tid 改写（全格式）：提交请求体里的 tid → 231（UI 显示仅作参考，落库以回读校验为准）
+[03:43:33] 简介 OK：「人们完全没有意识到，这东西会比汽车更大。」 2022 年 4 月 14 日，马…
+[03:43:33] 标签第 1 轮：多余 [生活记录,校园,记录] 缺 [AI,人工智能,马斯克,TED,科技,机器人]
+[03:43:43] 标签 OK（6）：AI / 人工智能 / 马斯克 / TED / 科技 / 机器人
+[03:43:45] 分区 知识 → 人工智能
+[03:43:47] 创作声明 = 含AI生成内容
+[03:43:49] 封面已传入，等裁剪界面
+[03:43:53] 封面第 1 步：完成
+[03:43:56] 封面完成
+[03:43:56] 表单回读 {"title":"马斯克：人形机器人会比汽车更大，多数人还没意识到","zone":"人工智能","decl":"含AI生成内容","descLen":459,"coverSet":true}
+[03:43:56] 已点投稿
+[03:43:57] [net] add 请求 POST https://member.bilibili.com/x/vu/web/add/v3?web_location=333.1024&t=1793504636642&csrf=56111a1092fb7aa0a481be2
+[03:43:57] [net] add 请求体: {"cover":"https://archive.biliimg.com/bfs/archive/efda325f7853504983caa89ae1c8b36a42dd522e.jpg","cover43":"https://archive.biliimg.com/bfs/archive/6b209efa56bda4790116d8c2e42af5745f192032.jpg","ai_cover":0,"is_ab_cover":0,"ab_cover_info":null,"title":"马斯克：人形机器人会比汽车更大，多数人还没意识到","copyright":3,"creation_statement":{"id":1},"human_type2":1011,"tid":231,"tag":"AI,人工智能,马斯克,TED,科技,机器人","desc":"「人们完全没有意识到，这东西会比汽车更大。」\n\n2022 年 4 月 14 日，马斯克提出收购 Twitter 的几个小时后，坐上了 TED 的舞台。\n\n这场 50 分钟的对谈里，他讲了同一条逻辑链：\n· 为什么买 Twitter——「文明风险的下降，取决于公共平台的可信度」\n· 为什么造人形机器人 Optimus——第一批先干危险、无聊、重复的活\n· 为什么它比汽车更重要——「任何商品和服务，都会便宜到想要就有」，一个富足的世界\n· 关于 AI：他认为应该有监管机构，还远程无法更新的物理开关\n\n英文字幕为 TED 官方转录，中文为 TED 官方翻译（简体），逐词高亮跟随语流，适合边看边学。\n演讲原文（CC BY-NC-ND）：https://www.ted.com/talks/elon_musk_elon_musk_talks_twitter_tesla_and_how_his_bra
+[03:43:57] [net] add 响应 200: {"code":0,"message":"OK","ttl":1,"data":{"aid":117539111698558,"bvid":"BV1fwxp68EQB"}}
+[03:44:01] 投稿返回 ok=true errors=[]
+[03:44:05] 提交 tid 留痕：seen=[] rewritten=[]
+[03:44:05] 带体请求：[{"via":"xhr","url":"//member.bilibili.com/upload/multipart/complete","bodyType":"String"},{"via":"xhr","url":"/x/vu/web/cover/up?t=1793504633132&x-bili-locale-json=%7B%22c_locale%22:%7B%22language%22:%22zh%22,%22script%22:%22Hans%","bodyType":"FormData"},{"via":"xhr","url":"/x/vu/web/cover/up?t=1793504633132&x-bili-locale-json=%7B%22c_locale%22:%7B%22language%22:%22zh%22,%22script%22:%22Hans%","bodyType":"FormData"},{"via":"xhr","url":"//member.bilibili.com/x/vu/web/add/v3?web_location=333.1024&t=1793504636642&csrf=56111a1092fb7aa0a481be216aeac20d&x-bili","bodyType":"String"},{"via":"fetch","url":"//data.bilibili.com/v2/log/web?content_type=pbrequest&logid=021436&disable_compression=true","bodyType":"Uint8Array"},{"via":"fetch","url":"//data.bilibili.com/v2/log/web?content_type=pbrequest&logid=021436&disable_compression=true","bodyType":"Uint8Array"}]
+[03:44:05] ✓ 提交请求确认带 tid=231（原生或改写），仍以发布后回读为准
+[03:44:06] 已上线 https://www.bilibili.com/video/BV1fwxp68EQB/
+[03:44:06] 回执 F:\AgentWorkArea\WorkBuddy\VideoFactory\History\publish\bilibili\runs\2026-11-01T03-41-25_publish\receipt.json
