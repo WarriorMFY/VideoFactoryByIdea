@@ -1,0 +1,19 @@
+# 第三方与临时工作区（可随时清理重建，不入库）
+Workspace/*
+!Workspace/README.md
+
+# 可再生的音视频与中间件（成片体积大；随包带的样例成片要不要入库由使用者定，
+# 默认忽略，磁盘上保留）
+Prototype/**/*.mp4
+Prototype/**/.work/
+Prototype/**/frames/
+History/**/.work/
+
+# 下载缓存与运行时
+Workspace/cache/
+Workspace/run/
+
+# 系统杂项
+Thumbs.db
+desktop.ini
+*.tmp
