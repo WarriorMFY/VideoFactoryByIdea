@@ -1,0 +1,61 @@
+{
+  "collected_at": "2026-10-31T09:34:08.460Z",
+  "uid": "3747573749779036",
+  "size": 20,
+  "reconcile": "创作中心 play=5，公开 views=4，差 +1（正常：创作中心更新更早）",
+  "items": [
+    {
+      "aid": 117534313417232,
+      "bvid": "BV1AaxC6hExH",
+      "title": "5 个剪辑提速技巧｜英文原声 + 中英双语字幕，照着做能省一半时间",
+      "duration_s": 38,
+      "pubtime": "2026-10-31T07:22:17.000Z",
+      "is_only_self": false,
+      "values": {
+        "play": 5,
+        "like": 0,
+        "coin": 0,
+        "fav": 0,
+        "comment": 0,
+        "dm": 0,
+        "share": 1,
+        "unfollow": null,
+        "total_new_attention_cnt": null,
+        "full_play_ratio": null,
+        "avg_play_time": null,
+        "play_viewer_rate": null,
+        "crash_rate": null,
+        "interact_rate": null,
+        "play_fan_rate": null,
+        "play_trans_fan_rate": null,
+        "tm_rate": null,
+        "full_play_ratio_med": null,
+        "crash_rate_med": null,
+        "interact_rate_med": null,
+        "play_viewer_rate_med": null,
+        "play_fan_rate_med": null,
+        "crash_p50": 2735,
+        "interact_p50": 480,
+        "play_trans_fan_p50": 9
+      },
+      "not_ready": [
+        "unfollow",
+        "total_new_attention_cnt",
+        "full_play_ratio",
+        "avg_play_time",
+        "play_viewer_rate",
+        "crash_rate",
+        "interact_rate",
+        "play_fan_rate",
+        "play_trans_fan_rate",
+        "tm_rate",
+        "full_play_ratio_med",
+        "crash_rate_med",
+        "interact_rate_med",
+        "play_viewer_rate_med",
+        "play_fan_rate_med"
+      ],
+      "not_ready_count": 37
+    }
+  ]
+}

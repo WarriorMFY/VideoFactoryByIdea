@@ -29,6 +29,7 @@ desktop.ini
 .flicker_diag/
 .karaoke_verify/
 .asr_work/
+.sheet_tmp/
 
 # 小循环 12 成片快照（37s / 8MB，唯一入库的视频，用于干净 clone 后的验收回填）
 !Prototype/loop12_market_loop/case_ep01/final_16x9.mp4

@@ -1,37 +1,37 @@
 {
-  "generated_at": "2026-10-31T09:16:49.227Z",
+  "generated_at": "2026-10-31T13:09:51.421Z",
   "csv": "Prototype\\loop12_market_loop\\case_ep01\\feedback.csv",
   "snaps": [
     {
       "date": "2026-10-31",
-      "views": 4,
+      "views": 11,
       "duration_s": 38,
       "avg_watch_s": null,
       "retention": null,
       "like_rate": 0,
       "fav_rate": 0,
       "comment_rate": 0,
-      "share_rate": 0.25,
+      "share_rate": 0.09090909090909091,
       "fans_per_1k": 0,
       "notes": "评论:无"
     }
   ],
   "last": {
     "date": "2026-10-31",
-    "views": 4,
+    "views": 11,
     "duration_s": 38,
     "avg_watch_s": null,
     "retention": null,
     "like_rate": 0,
     "fav_rate": 0,
     "comment_rate": 0,
-    "share_rate": 0.25,
+    "share_rate": 0.09090909090909091,
     "fans_per_1k": 0,
     "notes": "评论:无",
     "raw": {
       "date": "2026-10-31",
       "duration_s": "38",
-      "views": "4",
+      "views": "11",
       "avg_watch_s": "",
       "likes": "0",
       "favorites": "0",
@@ -42,8 +42,8 @@
       "danmaku": "0",
       "coins": "0",
       "fans_total": "1",
-      "views_delta": "4",
-      "snapshot_at": "2026-10-31T09:16:48.551Z"
+      "views_delta": "11",
+      "snapshot_at": "2026-10-31T13:09:50.746Z"
     }
   },
   "prev": null,
