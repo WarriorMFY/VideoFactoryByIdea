@@ -1,0 +1,86 @@
+{
+  "generated_at": "2026-10-31T23:34:27.748Z",
+  "wp": "loop13/WP5 形态对照稿",
+  "topic": "跳切（jump cut）单技巧 · 改前/改后对比",
+  "duration_s": 62.95,
+  "target": "60–75s",
+  "lines": [
+    {
+      "idx": 0,
+      "kind": "hook",
+      "text": "同样十秒的素材，有人剪出来还是十秒，有人只要三秒，差的就是这一刀。",
+      "dur_s": 5.594
+    },
+    {
+      "idx": 1,
+      "kind": "before",
+      "text": "先看改之前的版本。",
+      "dur_s": 1.473
+    },
+    {
+      "idx": 2,
+      "kind": "before",
+      "text": "一个镜头从头到尾不切，开场两秒的停顿原样保留，观众的耐心到这里基本就耗完了。",
+      "dur_s": 6.855
+    },
+    {
+      "idx": 3,
+      "kind": "after",
+      "text": "再看改之后的。",
+      "dur_s": 1.068
+    },
+    {
+      "idx": 4,
+      "kind": "after",
+      "text": "这个做法叫跳切，把停顿和废话直接切掉，每一下都在推进信息。",
+      "dur_s": 5.12
+    },
+    {
+      "idx": 5,
+      "kind": "explain",
+      "text": "操作只有两步：第一步粗剪，只留主干；第二步在每个停顿的两端各切一刀，中间直接删掉。",
+      "dur_s": 7.581
+    },
+    {
+      "idx": 6,
+      "kind": "explain",
+      "text": "观众不会察觉画面断过，只会觉得节奏变快了。",
+      "dur_s": 3.84
+    },
+    {
+      "idx": 7,
+      "kind": "explain",
+      "text": "你刷到的那些「节奏好快」的片子，十有八九就是这几刀切出来的。",
+      "dur_s": 4.73
+    },
+    {
+      "idx": 8,
+      "kind": "explain",
+      "text": "同一段素材，时长从十秒压到三秒，信息一点没少，这就是快节奏片子的底层逻辑。",
+      "dur_s": 6.837
+    },
+    {
+      "idx": 9,
+      "kind": "explain",
+      "text": "下次粗剪完，先跳切一遍再谈别的。",
+      "dur_s": 2.993
+    }
+  ],
+  "subtitle_cues": 26,
+  "voice": {
+    "engine": "edge-tts",
+    "name": "zh-CN-XiaoxiaoNeural",
+    "rate": "+8%",
+    "gap_s": 0.18
+  },
+  "demo": {
+    "before_silence_s": 10,
+    "after_silence_s": 5,
+    "jumpcut_from": "Big_Buck_Bunny_1080_10s_5MB.mp4 cuts [0-2][3.2-4.6][5.8-7.0][8-9]"
+  },
+  "footage": {
+    "file": "Workspace/assets/Big_Buck_Bunny_1080_10s_5MB.mp4",
+    "license": "CC-BY 3.0 (Blender Foundation)"
+  },
+  "title_candidate": "10秒素材剪到3秒：跳切改前改后对比"
+}

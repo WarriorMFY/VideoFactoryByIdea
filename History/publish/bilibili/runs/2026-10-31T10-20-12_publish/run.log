@@ -1,0 +1,6 @@
+[10:20:13] 浏览器 msedge｜profile=F:\AgentWorkArea\WorkBuddy\VideoFactory\Workspace\run\bili_profile
+[10:20:13] 已登录 UID=3747573749779036
+[10:20:13] FATAL page.evaluate: TypeError: Cannot set properties of undefined (setting 'forced')
+    at eval (eval at evaluate (:370:30), <anonymous>:1:37)
+    at UtilityScript.evaluate (<anonymous>:372:16)
+    at UtilityScript.<anonymous> (<anonymous>:1:44)

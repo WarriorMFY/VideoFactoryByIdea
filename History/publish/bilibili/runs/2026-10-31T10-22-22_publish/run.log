@@ -1,0 +1,5 @@
+[10:22:23] 浏览器 msedge｜profile=F:\AgentWorkArea\WorkBuddy\VideoFactory\Workspace\run\bili_profile
+[10:22:24] 已登录 UID=3747573749779036
+[10:22:24] 已布防 tid 改写（全格式）：提交请求体里的 tid → 122（UI 显示仅作参考，落库以回读校验为准）
+[10:22:40] 未见草稿恢复弹窗（干净进入）
+[10:22:40] FATAL locator.count: Target page, context or browser has been closed

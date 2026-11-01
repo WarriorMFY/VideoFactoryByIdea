@@ -1,0 +1,24 @@
+[10:31:21] 浏览器 msedge｜profile=F:\AgentWorkArea\WorkBuddy\VideoFactory\Workspace\run\bili_profile
+[10:31:21] 已登录 UID=3747573749779036
+[10:31:37] 未见草稿恢复弹窗（干净进入）
+[10:31:37] 投稿页 file input × 3
+[10:31:37] 已挂载 zone_test.mp4（0.1MB），等转码/表单
+[10:31:37] 表单就绪（0s）
+[10:31:37] 标题 OK（13 字）
+[10:31:37] 已布防 tid 改写（全格式）：提交请求体里的 tid → 122（UI 显示仅作参考，落库以回读校验为准）
+[10:31:37] 简介 OK：【系统测试稿 G】分区对照实验第二组，发布后 10 分钟内删除。6 秒色板，请忽…
+[10:31:37] 标签第 1 轮：多余 [] 缺 [学习]
+[10:31:39] 标签第 2 轮：多余 [合作,创价学会,说的道理] 缺 []
+[10:31:41] 标签 OK（1）：学习
+[10:31:43] 分区 音乐 → 知识
+[10:31:45] 创作声明 = 含AI生成内容
+[10:31:47] 封面已传入，等裁剪界面
+[10:31:51] 封面第 1 步：完成
+[10:31:53] 封面完成
+[10:31:54] 表单回读 {"title":"分区验证测试稿G，稍后删除","zone":"知识","decl":"含AI生成内容","descLen":45,"coverSet":true}
+[10:31:54] 已点投稿
+[10:31:59] 诊断 tidRewrite: {"seen":[],"rewritten":[{"orig":"231","to":"122"}]}
+[10:31:59] 诊断 reqs: [{"via":"xhr","url":"//member.bilibili.com/upload/multipart/part","bodyType":"String"},{"via":"xhr","url":"https://jscs-luffy-upcdnbd.bilivideo.com/fxmetalf/n261031s31zynb7wecti6s2ih830q5mr.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&","bodyType":"Blob"},{"via":"xhr","url":"/x/vupre/web/archive/videocheck?t=1793442697861&x-bili-locale-json=%7B%22c_locale%22:%7B%22language%22:%22zh%22,%22scrip","bodyType":"String"},{"via":"xhr","url":"https://jscs-luffy-upcdnbd.bilivideo.com/ugcfxever/n261031s32wzie82yye1ki2gpbu3t5ux.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256","bodyType":"Blob"},{"via":"xhr","url":"//member.bilibili.com/upload/multipart/complete","bodyType":"String"},{"via":"fetch","url":"//data.bilibili.com/v2/log/web?content_type=pbrequest&logid=021436&disable_compression=true","bodyType":"Uint8Array"},{"via":"xhr","url":"//e17962d5cstx.esheep.com/svfboss/n261031txcniao76i5colblg6zrx2s4l.zip?partNumber=1&uploadId=2074ebaf9e900e57&chunk=0&ch","bodyType":"Blob"},{"via":"xhr","url":"//e17962d5cstx.esheep.com/svfboss/n261031txcniao76i5colblg6zrx2s4l.zip?output=json&name=frames_3747573749779036_17934426","bodyType":"String"},{"via":"xhr","url":"/x/vupre/web/archive/types/predict?t=1793442700933&x-bili-locale-json=%7B%22c_locale%22:%7B%22language%22:%22zh%22,%22sc","bodyType":"FormData"},{"via":"xhr","url":"/x/vu/web/cover/up?t=1793442711077&x-bili-locale-json=%7B%22c_locale%22:%7B%22language%22:%22zh%22,%22script%22:%22Hans%","bodyType":"FormData"},{"via":"xhr","url":"/x/vu/web/cover/up?t=1793442711077&x-bili-locale-json=%7B%22c_locale%22:%7B%22language%22:%22zh%22,%22script%22:%22Hans%","bodyType":"FormData"},{"via":"xhr","url":"//member.bilibili.com/x/vu/web/add/v3?web_location=333.1024&t=1793442714553&csrf=56111a1092fb7aa0a481be216aeac20d&x-bili","bodyType":"String"}]
+[10:31:59] 诊断 add 相关请求: [{"url":"https://member.bilibili.com/x/vupre/web/archive/human/type2/list?t=1793442683921&x-bili-locale-json=%7B%22c_locale%22:%7B%22langua","status":200,"dur":127},{"url":"https://member.bilibili.com/x/vupre/web/archive/adorder/list?t=1793442683955&x-bili-locale-json=%7B%22c_locale%22:%7B%22language%2","status":200,"dur":147},{"url":"https://member.bilibili.com/x/vupre/web/archive/precheck?content=zone_test&check_item=1&t=1793442697315&x-bili-locale-json=%7B%22c","status":200,"dur":54},{"url":"https://member.bilibili.com/x/vupre/web/archive/types/predict?t=1793442697317&x-bili-locale-json=%7B%22c_locale%22:%7B%22language%","status":200,"dur":131},{"url":"https://member.bilibili.com/x/vupre/web/archive/precheck?content=zone_test&check_item=2&t=1793442697519&x-bili-locale-json=%7B%22c","status":200,"dur":69},{"url":"https://member.bilibili.com/x/vupre/web/archive/aicover/taskquery?cid=43208345479&filename=n261031s32wzie82yye1ki2gpbu3t5ux&source","status":200,"dur":140},{"url":"https://member.bilibili.com/x/vupre/web/archive/videocheck?t=1793442697861&x-bili-locale-json=%7B%22c_locale%22:%7B%22language%22:","status":200,"dur":59},{"url":"https://member.bilibili.com/x/app/h5/archive/tag/info?tag_name=%E5%AD%A6%E4%B9%A0&t=1793442698397&x-bili-locale-json=%7B%22c_local","status":200,"dur":95},{"url":"https://member.bilibili.com/x/vupre/web/archive/types/upload?upload_id=3747573749779036_1793442697165_5179&filename=n261031s32wzie","status":200,"dur":58},{"url":"https://member.bilibili.com/x/vupre/web/archive/types/predict?t=1793442700933&x-bili-locale-json=%7B%22c_locale%22:%7B%22language%","status":200,"dur":133}]
+[10:31:59] 投稿返回 ok=false errors=[]
+[10:32:01] FATAL 投稿未成功，见截图/回执：组，发布后 10 分钟内删除。6 秒色板，请忽略。 43 /2000 定时发布 (可选择距离当前最早≥5分钟/最晚≤15天的时间，花火、预约、互动视频稿件不可修改/取消) 加入合集 合集功能可用于收集整理系列性稿件 开通合集功能需满足权益中心等级达Lv2，您可前往创作中心-权益中心查看相关数据 商业推广 增加商业推广信息 更多设置 （含声明与权益、视频元素、互动管理等） 存草稿 立即投稿 遇到问题

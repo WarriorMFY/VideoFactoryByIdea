@@ -1,0 +1,29 @@
+[10:58:53] 浏览器 msedge｜profile=F:\AgentWorkArea\WorkBuddy\VideoFactory\Workspace\run\bili_profile
+[10:58:53] 已登录 UID=3747573749779036
+[10:59:09] 未见草稿恢复弹窗（干净进入）
+[10:59:09] 投稿页 file input × 3
+[10:59:09] 已挂载 final.mp4（18.6MB），等转码/表单
+[10:59:10] 表单就绪（1s）
+[10:59:10] 标题 OK（20 字）
+[10:59:10] 已布防 tid 改写（全格式）：提交请求体里的 tid → 122（UI 显示仅作参考，落库以回读校验为准）
+[10:59:10] 简介 OK：5 个立刻能用的剪辑提速技巧，每一个都来自真实工作流： 1) 跟着节拍剪，不要跟…
+[10:59:10] 标签第 1 轮：多余 [] 缺 [剪辑,影视剪辑,教程,剪辑技巧,视频剪辑]
+[10:59:17] 标签「视频剪辑」第 1 次输入被吞（框内="剪辑"），清空重来
+[10:59:19] 标签第 2 轮：多余 [生活记录,校园,记录] 缺 []
+[10:59:21] 标签 OK（5）：剪辑 / 影视剪辑 / 教程 / 剪辑技巧 / 视频剪辑
+[10:59:21] 分区已是「知识」
+[10:59:22] 创作声明 = 含AI生成内容
+[10:59:24] 封面已传入，等裁剪界面
+[10:59:28] 封面第 1 步：完成
+[10:59:31] 封面完成
+[10:59:31] 表单回读 {"title":"剪辑提速的 5 个小技巧，每条都能立刻用","zone":"知识","decl":"含AI生成内容","descLen":209,"coverSet":true}
+[10:59:32] 已点投稿
+[10:59:32] [net] add 请求 POST https://member.bilibili.com/x/vu/web/add/v3?web_location=333.1024&t=1793444371958&csrf=56111a1092fb7aa0a481be2
+[10:59:32] [net] add 请求体: {"cover":"https://archive.biliimg.com/bfs/archive/9877033a7bd8105b9106215e8ec9e065aa28b966.jpg","cover43":"https://archive.biliimg.com/bfs/archive/9221a15ce35c59bf318c134857eaa57eb267c74c.jpg","ai_cover":0,"is_ab_cover":0,"ab_cover_info":null,"title":"剪辑提速的 5 个小技巧，每条都能立刻用","copyright":3,"creation_statement":{"id":1},"human_type2":1010,"tid":122,"tag":"剪辑,影视剪辑,教程,剪辑技巧,视频剪辑","desc":"5 个立刻能用的剪辑提速技巧，每一个都来自真实工作流：\n1) 跟着节拍剪，不要跟着静音剪\n2) 字幕放进安全区（离底边至少 40px）\n3) 响度归一到 −16 LUFS，对白峰值不超 −1 dB\n4) 导出 15 Mbps，发布前先看开头 3 秒\n5) 关掉声音再看一遍自己的片子\n\n英文原声 + 中英双语字幕，当前词高亮，适合边看边练。\n（声明：画面素材 CC-BY 授权，语音为合成音。）\n","dynamic":"","recreate":0,"interactive":0,"videos":[{"filename":"n261031s32ngnkim5dcnbd2p0vok8cxu","title":"剪辑提速的 5 个小技巧，每条都能立刻用","desc":"","cid":43209002038}],"act_reserve_create":0,"act_reserve_create_titl
+[10:59:32] [net] add 响应 200: {"code":0,"message":"OK","ttl":1,"data":{"aid":117535169121557,"bvid":"BV1VRx16WEyn"}}
+[10:59:37] 投稿返回 ok=true errors=[]
+[10:59:41] 提交 tid 留痕：seen=[] rewritten=[]
+[10:59:41] 带体请求：[{"via":"fetch","url":"//data.bilibili.com/v2/log/web?content_type=pbrequest&logid=021436&disable_compression=true","bodyType":"Uint8Array"},{"via":"xhr","url":"//member.bilibili.com/upload/multipart/part","bodyType":"String"},{"via":"xhr","url":"//member.bilibili.com/upload/multipart/part","bodyType":"String"},{"via":"xhr","url":"https://jscs-luffy-upcdnbldsa.bilivideo.com/ugcfxever/n261031s32ngnkim5dcnbd2p0vok8cxu.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA","bodyType":"Blob"},{"via":"xhr","url":"https://jscs-luffy-upcdntx.bilivideo.com/ugcfxever/n261031s32ngnkim5dcnbd2p0vok8cxu.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256","bodyType":"Blob"},{"via":"xhr","url":"https://jscs-luffy-upcdnbldsa.bilivideo.com/fxmetalf/n261031s32dac2z420uxu026oa3lylb3.txt?X-Amz-Algorithm=AWS4-HMAC-SHA2","bodyType":"Blob"},{"via":"xhr","url":"/x/vupre/web/archive/videocheck?t=1793444351825&x-bili-locale-json=%7B%22c_locale%22:%7B%22language%22:%22zh%22,%22scrip","bodyType":"String"},{"via":"xhr","url":"//upos-cs-upcdnbldsa.bilivideo.com/svfboss/n261031sa99nejtpcyorzhvl13fosvjf.zip?partNumber=1&uploadId=21beebb005f036c4&c","bodyType":"Blob"},{"via":"xhr","url":"//upos-cs-upcdnbldsa.bilivideo.com/svfboss/n261031sa99nejtpcyorzhvl13fosvjf.zip?output=json&name=frames_3747573749779036","bodyType":"String"},{"via":"xhr","url":"/x/vupre/web/archive/types/predict?t=1793444356087&x-bili-locale-json=%7B%22c_locale%22:%7B%22language%22:%22zh%22,%22sc","bodyType":"FormData"},{"via":"xhr","url":"//member.bilibili.com/upload/multipart/complete","bodyType":"String"},{"via":"xhr","url":"/x/vu/web/cover/up?t=1793444368422&x-bili-locale-json=%7B%22c_locale%22:%7B%22language%22:%22zh%22,%22script%22:%22Hans%","bodyType":"FormData"},{"via":"xhr","url":"/x/vu/web/cover/up?t=1793444368422&x-bili-locale-json=%7B%22c_locale%22:%7B%22language%22:%22zh%22,%22script%22:%22Hans%","bodyType":"FormData"},{"via":"xhr","url":"//member.bilibili.com/x/vu/web/add/v3?web_location=333.1024&t=1793444371958&csrf=56111a1092fb7aa0a481be216aeac20d&x-bili","bodyType":"String"},{"tid":"122"}]
+[10:59:41] ⚠ 期望 tid=122 但提交请求里既没见到它也没发生改写——落库分区大概率不对，发布后必须回读校验
+[10:59:41] 已上线 https://www.bilibili.com/video/BV1VRx16WEyn/
+[10:59:42] 回执 Workspace/tmp/republish_receipt.json

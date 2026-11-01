@@ -1,0 +1,27 @@
+[10:35:30] 浏览器 msedge｜profile=F:\AgentWorkArea\WorkBuddy\VideoFactory\Workspace\run\bili_profile
+[10:35:30] 已登录 UID=3747573749779036
+[10:35:38] 草稿恢复弹窗 → 选「不用了」（从空表单开始，避免串上次的标题/标签/多P）
+[10:35:38] 投稿页 file input × 3
+[10:35:38] 已挂载 zone_test.mp4（0.1MB），等转码/表单
+[10:35:38] 表单就绪（0s）
+[10:35:38] 标题 OK（13 字）
+[10:35:38] 已布防 tid 改写（全格式）：提交请求体里的 tid → 122（UI 显示仅作参考，落库以回读校验为准）
+[10:35:38] 简介 OK：【系统测试稿 I】分区配对实验，发布后 10 分钟内删除。6 秒色板，请忽略。 …
+[10:35:38] 标签第 1 轮：多余 [] 缺 [学习]
+[10:35:41] 标签第 2 轮：多余 [VAN,鬼畜素材,YTPMV] 缺 []
+[10:35:42] 标签 OK（1）：学习
+[10:35:45] 分区 音乐 → 知识
+[10:35:46] 创作声明 = 含AI生成内容
+[10:35:48] 封面已传入，等裁剪界面
+[10:35:52] 封面第 1 步：完成
+[10:35:55] 封面完成
+[10:35:55] 表单回读 {"title":"分区验证测试稿I，稍后删除","zone":"知识","decl":"含AI生成内容","descLen":42,"coverSet":true}
+[10:35:56] 已点投稿
+[10:35:56] [net] add 请求 POST https://member.bilibili.com/x/vu/web/add/v3?web_location=333.1024&t=1793442955848&csrf=56111a1092fb7aa0a481be2
+[10:35:56] [net] add 请求体: {"cover":"https://archive.biliimg.com/bfs/archive/6886fa379739b73bca05112c0ee93c5536c407cd.jpg","cover43":"https://archive.biliimg.com/bfs/archive/7a4da6831492bfbaa63890e456187f6e2a9e53e5.jpg","ai_cover":0,"is_ab_cover":0,"ab_cover_info":null,"title":"分区验证测试稿I，稍后删除","copyright":3,"creation_statement":{"id":1},"human_type2":1019,"tid":122,"tag":"学习","desc":"【系统测试稿 I】分区配对实验，发布后 10 分钟内删除。6 秒色板，请忽略。\n","dynamic":"","recreate":0,"interactive":0,"videos":[{"filename":"n261031s3zfpco0gxsfzb2uf6n7ml11z","title":"分区验证测试稿I，稍后删除","desc":"","cid":43208474822}],"act_reserve_create":0,"act_reserve_create_title":"","no_disturbance":0,"is_only_self":0,"space_hidden":2,"watermark":{"state":0},"subtitle":{"open":0,"lan":""},"no_reprint":0,"up_selection_reply":false,"up_close_reply":false,"up_close_danmu":fa
+[10:35:56] [net] add 响应 200: {"code":0,"message":"OK","ttl":1,"data":{"aid":117535068457613,"bvid":"BV1sYx16BEMh"}}
+[10:36:01] 投稿返回 ok=true errors=[]
+[10:36:05] 提交 tid 留痕：seen=[] rewritten=[{"orig":"231","to":"122"},{"orig":"htype:1010","to":"htype:1019"}]
+[10:36:05] 带体请求：[{"via":"xhr","url":"https://jscs-luffy-upcdnbd.bilivideo.com/fxmetalf/n261031s3va2xf69usukm2co3guekera.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&","bodyType":"Blob"},{"via":"xhr","url":"/x/vupre/web/archive/videocheck?t=1793442939163&x-bili-locale-json=%7B%22c_locale%22:%7B%22language%22:%22zh%22,%22scrip","bodyType":"String"},{"via":"xhr","url":"//member.bilibili.com/upload/multipart/part","bodyType":"String"},{"via":"xhr","url":"https://jscs-luffy-upcdnbldsa.bilivideo.com/ugcfxever/n261031s3zfpco0gxsfzb2uf6n7ml11z.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA","bodyType":"Blob"},{"via":"fetch","url":"//data.bilibili.com/v2/log/web?content_type=pbrequest&logid=021436&disable_compression=true","bodyType":"Uint8Array"},{"via":"xhr","url":"//member.bilibili.com/upload/multipart/complete","bodyType":"String"},{"via":"xhr","url":"//bb27c891csbd.aikobo.cn/svfboss/n261031bd39sqr5asrzvuh347xx6vjk1.zip?partNumber=1&uploadId=60a4ebafad9007bc&chunk=0&chu","bodyType":"Blob"},{"via":"xhr","url":"//bb27c891csbd.aikobo.cn/svfboss/n261031bd39sqr5asrzvuh347xx6vjk1.zip?output=json&name=frames_3747573749779036_179344293","bodyType":"String"},{"via":"xhr","url":"/x/vupre/web/archive/types/predict?t=1793442942482&x-bili-locale-json=%7B%22c_locale%22:%7B%22language%22:%22zh%22,%22sc","bodyType":"FormData"},{"via":"xhr","url":"/x/vu/web/cover/up?t=1793442952377&x-bili-locale-json=%7B%22c_locale%22:%7B%22language%22:%22zh%22,%22script%22:%22Hans%","bodyType":"FormData"},{"via":"xhr","url":"/x/vu/web/cover/up?t=1793442952378&x-bili-locale-json=%7B%22c_locale%22:%7B%22language%22:%22zh%22,%22script%22:%22Hans%","bodyType":"FormData"},{"via":"xhr","url":"//member.bilibili.com/x/vu/web/add/v3?web_location=333.1024&t=1793442955848&csrf=56111a1092fb7aa0a481be216aeac20d&x-bili","bodyType":"String"},{"tid":"231"},{"via":"fetch","url":"//data.bilibili.com/v2/log/web?content_type=pbrequest&logid=021436&disable_compression=true","bodyType":"Uint8Array"},{"via":"fetch","url":"//data.bilibili.com/v2/log/web?content_type=pbrequest&logid=021436&disable_compression=true","bodyType":"Uint8Array"}]
+[10:36:05] 已上线 https://www.bilibili.com/video/BV1sYx16BEMh/
+[10:36:06] 回执 Workspace/tmp/zone_test_receipt10.json

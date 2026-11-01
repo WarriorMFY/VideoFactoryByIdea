@@ -1,0 +1,12 @@
+[10:15:58] 浏览器 msedge｜profile=F:\AgentWorkArea\WorkBuddy\VideoFactory\Workspace\run\bili_profile
+[10:15:58] 已登录 UID=3747573749779036
+[10:16:07] 草稿恢复弹窗 → 选「不用了」（从空表单开始，避免串上次的标题/标签/多P）
+[10:16:07] 投稿页 file input × 3
+[10:16:07] 已挂载 zone_test.mp4（0.1MB），等转码/表单
+[10:16:07] 表单就绪（0s）
+[10:16:07] 标题 OK（12 字）
+[10:16:07] 简介 OK：【系统测试稿】本稿件仅用于验证投稿分区落库行为，发布后 10 分钟内删除。 内容…
+[10:16:07] 标签第 1 轮：多余 [] 缺 [学习]
+[10:16:09] 标签第 2 轮：多余 [生活记录] 缺 []
+[10:16:11] 标签 OK（1）：学习
+[10:16:13] FATAL page.evaluate: Target page, context or browser has been closed
