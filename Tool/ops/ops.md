@@ -16,7 +16,14 @@
 | `collect_feedback.mjs` | **反馈采集**（小循环 12 收尾新增）：零登录读 B 站公开接口 —— `web-interface/view`（播放/点赞/投币/收藏/评论数/分享/弹幕数）、`v2/reply`（热评原文）、`v1/dm/list.so`（弹幕原文 + 出现秒数）、`relation/stat`（粉丝总数）→ 写 `feedback.csv`（一天一行，同日重跑只刷新、人工备注保留；数据无变化不落快照）+ `History/runs/feedback/ticks.jsonl`（**一次一行**，高频唤醒时的日内时序，判断推荐流从哪刻起没再推）+ `latest.json`（最新快照，规划器的输入） |
 | `plan_next_loop.mjs` | **下一轮规划**：把「播放增量 / 点赞率 / 收藏率 / 评论弹幕命中类别 / 弹幕时间聚集」翻成**可执行任务书**（R1–R10 共 10 条规则）→ `History/loops/next/plan.md`：目标 / 改哪个脚本哪个参数 / 验收阈值 / 成本 / 风险。`--demo` 用内置合成样本验证规则 |
 | `watch_feedback.mjs` | **一键编排**：采集 → 诊断 → 规划，任一步失败会指明断在哪、前序产物是否还在。定时任务只需要挂这一条 |
+| `collect_creator_stats.mjs` | **平台判卷**（小循环 13 新增）：登录态打 `/x/web/data/archive_diagnose/compare` → 完播率 / 平均播放时长 / 跳出率 / 点击转化 / 互动率，**并附同类中位数 `*_med` 与分位 `*_p50`** → `History/runs/creator/<date>.json` + `series.jsonl`。这是公开接口永远拿不到的那部分（`collect_feedback` 的"采集缺口 P1"）。`not_ready_field` 里的字段一律 `null`，绝不用 0 冒充；平台是 **T+1 每日 12:00** 更新 |
+| `bench_peers.mjs` | **赛道基线**（小循环 13 新增）：双组采样 —— `HOT`（`order=click`，剔除长合集）取**形态范式**，`FRESH`（`order=pubdate` 近 30 天）取**新稿播放水位** → `History/bench/peers_<date>.md`：时长/标题/收藏率中位数 + 「我们的稿偏离了哪几条」。走登录态浏览器防风控（零登录直连 4 词有 2 词返回 HTML） |
+| `ted_fetch.mjs` | **素材入袋一条命令**（小循环 15 新增）：`--pm <id>` → ffmpeg 拉 f11 视频 + f12 音频 `-c copy` 混流 → `talk_720p.mp4`，再调 `ted_subs` 抓官方双语字幕，落 `talk.meta.json`（清单 URL / 时长 / fps / 字节 / 授权线索）。`--probe` 只探测清单，`--t N` 冒烟限长。视频抓取从 loop14 的手工步骤固化为脚本 |
+| `trace_text.mjs` | **写稿原料导出**（小循环 15 新增）：几百条碎 cue 导成「带时间戳的分桶全文」（`--bucket 45`），可选 `--bilingual` 中英并排、`--from/--to` 截段。写摘要稿时替代 loop14 每次临写的 node -e |
+| `ted_subs.mjs` | **TED 字幕/清单抓取**（小循环 14 新增）：给 `project_masters` id 就能拉全片 HLS 字幕段并合并 → `full_<lang>.vtt` + `cues_<lang>.json`。内置两个必踩的坑：段边界重复 cue 去重、**恒定预卷偏移**（`--offset`，不是按 EXTINF 累加）。视频用 ffmpeg 拉 `index-f11-v1.m3u8` + `index-f12-a1.m3u8`（直链 `py.tedcdn.com` 403） |
 | `publish_bilibili.mjs` | **投稿发布**（小循环 12 新增）：Playwright + 系统 Edge 驱动创作中心网页端 —— 扫码登录（登录态持久化在 `Workspace/run/bili_profile`）→ 上传成片 → 标题/简介/7 标签 → 分区 → 创作声明 → 封面（4:3 与 16:9 同步）→ 投稿 → 回执（BV 号 + 逐项回读）。`status` 查登录态、`login` 出二维码、`publish --dry-run` 停在投稿前、`verify --bvid` 校验线上页 |
+| `make_digest.mjs` | **3 分钟摘要报告流水线**（小循环 14 新增）：spec JSON 驱动 —— 30 段中文解说 Edge TTS × 原片精选帧 Ken Burns × 章节角标 + 右上「原片 mm:ss」导航角标 × 片头/尾导流卡 → 成片 + 简介（含 `?t=` 章节跳转表）。音画同步模型：音频 `[T] seg [GAP]…[E]` ↔ 视频 `Vk=seg+2·GAP`，xfade 转场恰好填满句间静音，零漂移。改 spec 重跑约 2 分钟 |
+| `bili_comment.mjs` | **评论 + 置顶**（小循环 14 新增）：走 API（`x/v2/reply/add` + `x/v2/reply/top`），Playwright `ctx.request` 共享登录 cookie，免网页表单自动化。`add --bvid BV --text-file f [--pin]` / `pin --bvid BV --rpid N`。用于稿件间互挂导航链接 |
 
 ## 最短链路
 
@@ -59,7 +66,7 @@ node Tool\ops\track_feedback.mjs --selftest
    现在 `num()` 对空串返回 `null`，比率算不出来就显示 `—`，缺失单独归到"采集缺口"（P1）而不是内容问题。
 2. **旧表没有新列时字段是 `undefined`**，`Number(undefined)` → `NaN`，一路把 `new_followers` 写成 `"NaN"`。
    读 CSV 一律走 `numOr()`，`undefined` / `''` / 非数字统一归 `null`。
-3. **增量基线要能跨"同日多次采集"**。定时唤醒一天跑很多次（现为每 30 分钟），若拿"当天旧行"当基线，第二次跑 `views_delta` 就变 0，
+3. **增量基线要能跨"同日多次采集"**。定时唤醒一天跑多次（现为每 4 小时），若拿"当天旧行"当基线，第二次跑 `views_delta` 就变 0，
    R1（没进推荐）和 R2（在推但没人买账）会判反。做法：当天行已带 delta 时反推原始基线 = 当日值 − 当日 delta。
 4. **"开头不错"不是"开头留人失败"**。分类正则里混着中性话题词（开头/字幕/语速），拿它判负会把好评吃成差评。
    单独维护 `NEGATIVE` 明确负面词表：`正向词 && !NEGATIVE` 才算好评，其余才进问题分类。
@@ -67,10 +74,27 @@ node Tool\ops\track_feedback.mjs --selftest
    占比 ≥30% 且总数 ≥5 才判"某段被集中吐槽"——弹幕少时全是噪声。
 6. **拿不到的指标就写"拿不到"**：完播率/平均播放时长只在登录态创作中心里，公开接口没有。
    采集器留空并提示 `--avg-watch <秒>` 补录，绝不估一个。
-7. **高频唤醒 ≠ 高频落盘**。每 30 分钟一跑时：`feedback.csv` 若也跟着 30 分钟一行，环比全变噪声；
+7. **高频唤醒 ≠ 高频落盘**。30 分钟一跑时：`feedback.csv` 若也跟着 30 分钟一行，环比全变噪声；
    可它一天一行又丢掉"哪半小时涨得快"。做法是拆成两个文件——CSV 保持**一天一行**（诊断口径不变），
    另开 `ticks.jsonl` **一次一行**（日内时序）；`plan_history.jsonl` 则只在**提案集合变化**时追加，
    否则一天 48 行全是同一个 R0 重复。判据：留痕的价值在"结论变了"，不在"跑过一次"。
+8. **唤醒频率由"信息到达速率"定，不由"想早点看到"定**。实测两条 30 分钟间隔的 tick 数值完全一致
+   （播放 4、互动全 0），说明 B 站 stat 有小时级缓存；而播放/点赞/评论都是**单调累计量**，
+   采稀一点不会丢数据，只会晚一点看到结论。故定 **4 小时一次**（6 次/天，跨过夜间也够）：
+   既覆盖"发布后 72h 起量拐点"的判断需求，又把 48 次/天的空跑降到 6 次。
+   若连续 3 天日增播放 < 10 且零互动，降为每日 1 次；若单日播放翻倍或 ≥3 条评论，恢复 4 小时一次。
+9. **搜索接口零登录会被风控，随机返回 HTML 页**。实测 4 个关键词里 2 个被打回（`<!DOCTYPE` 开头）。
+   走 `Workspace/run/bili_profile` 的登录态 + 绝对地址 `api.bilibili.com` 后 4/4 通。
+   注意用 `www.bilibili.com/x/...` 相对路径会 404（该路由只在 `api.` 上）。
+10. **阈值不能凭空定**。`likeLow` 原本拍脑袋写 2%，而赛道点赞率中位就是 2.17% ——
+   阈值卡在人群中间，等于把一半以上的合格稿判成"进来了但不买账"；`favStrong` 写 5%，
+   而实际中位 1.67%，5% 是 P90+，永远够不着，工具型内容永不被识别。
+   2026-10-31 用 113 条 HOT 样本校准为 1.0% / 2.5%（依据 `History/bench/peers_2026-10-31.md`）。
+   **定阈值前先量人群分布**，别凭印象。
+11. **平台判卷是 T+1，反复刷新没有意义**。`archive_diagnose/compare` 返回 53 个字段，
+   发布 2 小时时有 37 个在 `not_ready_field` 里（完播率、均播、跳出率、点击转化全在里面），
+   创作中心首页也写「每日 12 点更新」。要等就按天等，别做成半小时轮询——
+   那不是"更快拿到答案"，是"更频繁地确认还没有答案"。
 
 ### 发布链（`publish_bilibili.mjs`）踩过的坑
 
@@ -91,3 +115,32 @@ node Tool\ops\track_feedback.mjs --selftest
 8. **浏览器句柄必须 try/finally 关**：任何异常路径漏关，node 进程会挂着不退出（`--dry-run` 时踩过）。
 9. **`verify` 解析线上页时别把 meta 属性顺序写死**：线上是 `<meta data-vue-meta="true" name="..." content="...">`。
 10. **登录态查 cookie**：`SESSDATA` + `DedeUserID` 同时在才算登录；profile 存在 `Workspace/run/bili_profile`，删掉即换号。
+
+---
+
+## 字幕坑（TED 链路，2026-11-01 补）
+
+11. **TED 字幕清单首条是"预卷占位段"，段号不能拿下标猜**。`subtitles/{lang}.m3u8` 的第 1 条是
+    `#EXTINF:3.5040` + `vtt?segment=-2&duration=30`，真正的 30s 段从 `segment=0` 才开始。
+    旧版 `ted_subs.mjs` 用「第 i 条 ↔ segment=i」，于是把 3.5s 套给了 `segment=0`，服务器按短窗口
+    只返回起点 <4s 的 cue —— 每片开头约 20-80s 的对白整段没有字幕（且下游 align 因为真值缺句，
+    ASR 词无处归属被丢弃，表现为"成片这段完全没字幕"）。
+    **修法**：直接解析清单里 EXTINF 后面那行的 URI（已带真实 segment 号），不要自己拼。
+    **影响面**（用 ASR 词流交叉验证"空白里有词"）：EP-B 23.1s/58词、EP-C 24.7s/70词、
+    EP-D 42.7s/100词、EP-E 77.3s/172词；EP-A 手工抓的，无损失。
+12. **素材阶段 `ted_subs` 必须 `--offset 0`**，偏移由 `estimate_offset` 在流水线里标定并统一施加
+    （`ted_episode` 步骤 2-3）。素材阶段就带偏移 → gt 被加两次 → 整体错位。
+13. **中文字幕不要按字数硬切**：`make_subs` 的 `maxZh` 切分会在末尾留下纯标点块（单独一行「，」），
+    且中文块数少于英文 cue 数时后半条中文为空。已修：纯标点碎片并回前块 + 按英文块数重切中文
+    （`resplitZh`，切不干净则退回"块中心归属"）。审计口径：空中文 0 / 纯标点 0。
+14. **`make_cover --bg --inset` 的嵌入帧会整块静默丢失**：lavfi `color` 主输入 + `-ss` 前置 seek 的视频流，
+    在 `-frames:v 1` 下两路 pts 配不上，overlay 首帧直接过 —— 输出是纯色底 + 文字，**零报错**
+    （`-loglevel error` 全静默，只看尺寸变小才会发现）。
+    **修法**：先把目标帧抽成单帧 jpg（pts 恒 0）再作独立输入叠加（已固化进 `make_cover.mjs`，
+    临时文件 `<out>.ins_tmp.jpg`）。
+15. **摘要选帧别靠猜**：`frame_sheet.mjs --every 40` 先看全片画面构成（避开黑帧/转场/观众席），
+    再 `--times "15,52,25"` 按 spec 顺序复核精选帧（每格带序号+时间戳），一张图看完 30 格。
+
+16. **ffmpeg 拉 TED HLS 必须把 `httpproxy` 加进 `-protocol_whitelist`**：本机带 `http_proxy` 时 ffmpeg
+    走代理协议，白名单只有 `file,http,https,tcp,tls,crypto` 的话直接
+    `Protocol 'httpproxy' not on whitelist`，输入都打不开。已固化进 `ted_fetch.mjs`。

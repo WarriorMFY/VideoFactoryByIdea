@@ -236,12 +236,46 @@ function splitZhSent(zh) {
     parts.push(chars.slice(i, end).join(''));
     i = end;
   }
+  // 纯标点碎片并回前一块：按 maxZh 硬切时，末尾常只剩一个「，」「。」，
+  // 在双语字幕里会单独成行（看起来像字幕卡了一下）。标点不单独成行。
+  for (let i = parts.length - 1; i > 0; i--) {
+    if (!parts[i].replace(/[，。；：、？！,.;:?!"'“”（）()\[\]\s]/g, '')) {
+      parts[i - 1] += parts[i];
+      parts.splice(i, 1);
+    }
+  }
   const total = chars.length || 1;
   let acc = 0;
   return parts.map((t) => { const w0 = acc / total; acc += [...t].length; return { text: t, w0, w1: acc / total }; });
 }
-function splitEnSent(en) {
-  const ws = en.split(/\s+/).filter(Boolean);
+// 中文块数少于英文 cue 数时（英文长句切两块、中文一句没切开），
+// 把中文按目标块数重切，让每块 cue 都有中文——否则后半块只剩英文高亮。
+// 只接受"每块都是实词"的结果，切不干净就返回 null（退回中心归属，宁缺不错切）。
+function resplitZh(zh, n) {
+  const chars = [...String(zh || '')];
+  if (n <= 1 || chars.length < n * 3) return null;
+  const PUNCT = '，。；：、？！,.;:?!';
+  const cand = [];
+  for (let i = 1; i < chars.length; i++) if (PUNCT.includes(chars[i - 1])) cand.push(i);
+  let pts = [];
+  if (cand.length >= n - 1) {
+    for (let k = 1; k < n; k++) {
+      const ideal = Math.round((chars.length * k) / n);
+      let best = cand[0];
+      for (const c of cand) if (Math.abs(c - ideal) < Math.abs(best - ideal)) best = c;
+      if (!pts.includes(best)) pts.push(best);
+    }
+    pts = [...new Set(pts)].sort((a, b) => a - b);
+  }
+  if (pts.length !== n - 1) pts = Array.from({ length: n - 1 }, (_, k) => Math.round((chars.length * (k + 1)) / n));
+  const out = []; let prev = 0;
+  for (const p of pts) { out.push(chars.slice(prev, p).join('')); prev = p; }
+  out.push(chars.slice(prev).join(''));
+  const clean = out.filter((s) => /[^\s，。；：、？！,.;:?!]/.test(s));
+  if (clean.length !== n) return null;
+  return clean.map((t, i) => ({ text: t, w0: i / n, w1: (i + 1) / n }));
+}
+function splitEnSent(en) {  const ws = en.split(/\s+/).filter(Boolean);
   const parts = [];
   let cur = [];
   for (const w of ws) {
@@ -258,16 +292,27 @@ function splitEnSent(en) {
   });
 }
 const mapByRange = (parts, r0, r1) => parts.filter((p) => p.w1 > r0 + 1e-6 && p.w0 < r1 - 1e-6 && p.text.trim()).map((p) => p.text.trim()).join('');
+// 中文块数少于英文 cue 数时，按"块中心落在哪个区间"归属：
+// 用 mapByRange 会让同一句中文落到多个 cue 上（重复显示），中心归属则每块只出现一次。
+const mapByRangeOnce = (parts, r0, r1) => parts.filter((p) => {
+  const mid = (p.w0 + p.w1) / 2;
+  return mid >= r0 - 1e-6 && mid < r1 - 1e-6;
+}).map((p) => p.text.trim()).join('');
 
 const cues = [];
 for (const s of sentences) {
   const dur = Math.max(0.2, s.end - s.start);
-  const zhParts = splitZhSent(s.zh);
+  const zhPartsRaw = splitZhSent(s.zh);
   const enParts = splitEnSent(s.en);
+  let zhParts = zhPartsRaw;
+  if (enParts.length > zhPartsRaw.length) {
+    const rs = resplitZh(s.zh, enParts.length);
+    if (rs) zhParts = rs;
+  }
   const n = Math.max(zhParts.length, enParts.length, 1);
   for (let k = 0; k < n; k++) {
     const r0 = k / n, r1 = (k + 1) / n;
-    const zhText = zhParts.length === n ? zhParts[k].text : mapByRange(zhParts, r0, r1);
+    const zhText = zhParts.length === n ? zhParts[k].text : mapByRangeOnce(zhParts, r0, r1);
     const enText = enParts.length === n ? enParts[k].text : mapByRange(enParts, r0, r1);
     let start = s.start + dur * r0, end = s.start + dur * r1;
     if (end - start < TH.minCue) {
