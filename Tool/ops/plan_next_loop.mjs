@@ -33,12 +33,15 @@ const REPORT = path.resolve(ROOT, getOpt('--report', 'Prototype/loop12_market_lo
 const OUTDIR = path.resolve(ROOT, getOpt('--out-dir', 'History/loops/next'));
 
 // ---------------- 阈值（都在这里，改一行就能换口径） ----------------
+// 2026-10-31 用赛道基线校准过一次（证据：History/bench/peers_2026-10-31.md，HOT 113 条 / FRESH 63 条）。
+// 校准前这几个数是"凭感觉"定的，代价是：点赞率阈值 2% 一压，几乎每条稿都会被判"进来了但不买账"，
+// 而赛道点赞率中位本来就只有 2.17% —— 阈值定在人群中间，等于把正常人全判成病人。
 const T = {
   coldStartDays: 2,        // 发布满 2 天才谈"没起来"
-  coldStartViews: 500,     // 播放 < 500 视为没进推荐流
+  coldStartViews: 200,     // 播放 < 200 视为没进推荐流（依据：FRESH 新稿 P75=224，中位仅 68）
   flowDelta: 100,          // 单次快照播放增量 >= 100 视为"推荐流在推"
-  likeLow: 0.02,           // 点赞率 < 2% 视为"进来了但不买账"
-  favStrong: 0.05,         // 收藏率 >= 5% 视为工具型内容
+  likeLow: 0.010,          // 点赞率 < 1.0% 视为"进来了但不买账"（依据：HOT 中位 2.17%，取不足中位一半）
+  favStrong: 0.025,        // 收藏率 >= 2.5% 视为工具型内容（依据：HOT 中位 1.67%，约 P75）
   hitMin: 2,               // 同一类吐槽 >= 2 条才升级为 P0（1 条只记 P2，避免单条带偏）
   dmBurstRatio: 0.3,       // 某 5 秒桶占全部弹幕 >= 30% 视为"某处被集中吐槽"
   dmBurstMin: 5,           // 且弹幕总数 >= 5 条才有统计意义

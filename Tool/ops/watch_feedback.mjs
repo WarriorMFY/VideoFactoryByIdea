@@ -24,7 +24,8 @@ const args = process.argv.slice(2);
 const getOpt = (k, d) => (args.includes(k) ? args[args.indexOf(k) + 1] : d);
 const BRIEF = args.includes('--brief');
 
-const CASE = path.join('Prototype', 'loop12_market_loop', 'case_ep01');
+// 2026-11-01 起 loop13：跟踪重投稿 BV1VRx16WEyn（旧稿 BV1AaxC6hExH 已下架）
+const CASE = path.join('Prototype', 'loop13_feedback_clock');
 const CSV = getOpt('--csv', path.join(CASE, 'feedback.csv'));
 
 function step(label, script, argv) {
