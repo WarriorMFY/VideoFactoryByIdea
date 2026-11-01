@@ -415,3 +415,15 @@
 | 新坑 | 16：本机带 http_proxy 时 ffmpeg `-protocol_whitelist` 必须含 `httpproxy`，否则 HLS 输入直接打不开（已固化进 ted_fetch） |
 | 产物 | `Prototype/loop15_export/{build_package.mjs, verify_package.mjs, seed/}`（可重建整包）、`History/loops/loop15/plan.md` |
 | 遗留 | 包内 Idea/Idea.md 为代拟稿待人终审；素材源片不入包（CC BY-NC-ND 再分发风险+体积），换机重跑需经 ted_fetch 重抓 |
+
+## 小循环 16 · 把「能力打包迁移」沉淀为 Skill（2026-11-01 15:58–16:05）
+
+| 项 | 内容 |
+| --- | --- |
+| 初始目标 | 人指令：把 loop15 的「打包迁移」做成 Skill 放根目录 `Skills/`，**只写方法论流程、不复制工具**，工具按目录路径引用；同步更新 AGENTS.md 引用 |
+| 结束结果 | 建成 `Skills/capability-packaging/`（`SKILL.md` 176 行 + `references/checklist.md` 32 条勾选项）。内容：三条硬判据（能独立跑/能重建/能被质疑）、流程七步、三个必须让人拍板的决策点、七条静默失败坑、5 条仓库路径引用、8 条完成判据。**正文零实现代码**，全部改路径引用 |
+| 新增守卫 | `Prototype/loop16_skills/check_skill.mjs`：查 frontmatter 完整性与触发条件、`name` 与目录名一致、引用路径可解析、无大段代码/行数上限。首跑抓出 5 条（3 条自身误报 + 2 条脚本缺陷），两边都修；**反向验证**：造坏技能 → 报 2 问题、退出码 1 |
+| 自动发现 | `.workbuddy/skills/capability-packaging` → `Skills/capability-packaging`（NTFS 目录联接），两边 inode 相同，无副本 |
+| AGENTS.md | 四处：目录约定加 `Skills\`、原则加「方法论进 Skills」、新增规则 6（Skills 与 Tool 的分工 + 命名 + 自动发现前提）、文件地图加一行 |
+| 人工反馈 | 待回填 |
+| 遗留 | 单技能样本（多技能路由未验）；`check_skill.mjs` 暂在 Prototype，稳定后可升 `Tool/ops/` |
