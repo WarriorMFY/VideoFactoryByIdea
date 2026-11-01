@@ -1,0 +1,24 @@
+{
+ "pm": "9260",
+ "intro": "9294",
+ "talk": "fei_fei_li_with_spatial_intelligence_ai_will_understand_the_real_world",
+ "talk_id": 130471,
+ "title": "With spatial intelligence, AI will understand the real world",
+ "speaker": "李飞飞（Fei-Fei Li）",
+ "event": "TED2024",
+ "url_video": "https://hls.ted.com/project_masters/9260/index-f11-v1.m3u8?intro_master_id=9294",
+ "url_audio": "https://hls.ted.com/project_masters/9260/index-f12-a1.m3u8?intro_master_id=9294",
+ "langs": ["en", "zh-cn"],
+ "playlist": {
+  "video": { "segs": 153, "dur": 911.66 },
+  "audio": { "segs": 153, "dur": 911.74 }
+ },
+ "media": {
+  "duration_s": 911.7,
+  "fps": "24000/1001",
+  "size": "1280x720",
+  "audio": "aac"
+ },
+ "note": "本 meta 由 loop14 素材档案（History/loops/loop14/ep_a/manifest.md）与清单探测重建——EP-A 抓取早于 ted_fetch.mjs 固化。许可 CC BY-NC-ND，发布授权记录见同档案。",
+ "reconstructed_at": "2026-11-01"
+}
