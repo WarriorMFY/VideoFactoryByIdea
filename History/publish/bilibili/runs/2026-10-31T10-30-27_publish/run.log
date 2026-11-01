@@ -1,0 +1,26 @@
+[10:30:28] 浏览器 msedge｜profile=F:\AgentWorkArea\WorkBuddy\VideoFactory\Workspace\run\bili_profile
+[10:30:28] 已登录 UID=3747573749779036
+[10:30:36] 草稿恢复弹窗 → 选「不用了」（从空表单开始，避免串上次的标题/标签/多P）
+[10:30:36] 投稿页 file input × 3
+[10:30:37] 已挂载 zone_test.mp4（0.1MB），等转码/表单
+[10:30:37] 表单就绪（0s）
+[10:30:37] 标题 OK（13 字）
+[10:30:37] 已布防 tid 改写（全格式）：提交请求体里的 tid → 231（UI 显示仅作参考，落库以回读校验为准）
+[10:30:37] 简介 OK：【系统测试稿 F】投稿通道对照实验，发布后 10 分钟内删除。6 秒色板，请忽略…
+[10:30:37] 标签第 1 轮：多余 [] 缺 [学习]
+[10:30:38] 标签「学习」第 1 次输入被吞（框内=""），清空重来
+[10:30:40] 标签第 2 轮：多余 [生活记录,记录] 缺 []
+[10:30:41] 标签 OK（1）：学习
+[10:30:44] 分区 音乐 → 知识
+[10:30:45] 创作声明 = 含AI生成内容
+[10:30:47] 封面已传入，等裁剪界面
+[10:30:51] 封面第 1 步：完成
+[10:30:54] 封面完成
+[10:30:54] 表单回读 {"title":"分区验证测试稿F，稍后删除","zone":"知识","decl":"含AI生成内容","descLen":44,"coverSet":true}
+[10:30:54] 已点投稿
+[10:30:59] 投稿返回 ok=true errors=[]
+[10:31:03] 提交 tid 留痕：seen=[] rewritten=[]
+[10:31:03] 带体请求：[{"via":"xhr","url":"//member.bilibili.com/upload/multipart/new","bodyType":"String"},{"via":"xhr","url":"//member.bilibili.com/upload/multipart/part","bodyType":"String"},{"via":"xhr","url":"https://jscs-luffy-upcdnbldsa.bilivideo.com/fxmetalf/n261031s3v91j81m2yx202o59lnmbncs.txt?X-Amz-Algorithm=AWS4-HMAC-SHA2","bodyType":"Blob"},{"via":"xhr","url":"/x/vupre/web/archive/videocheck?t=1793442637930&x-bili-locale-json=%7B%22c_locale%22:%7B%22language%22:%22zh%22,%22scrip","bodyType":"String"},{"via":"xhr","url":"https://cnsh-cos-upcdnbd.bilivideo.com/ugcfxever/n261031s332hhojq42qtpv2mobl4clh9.mp4.d/3f36cbe6-46f4-40d9-8e5f-34ff03ae","bodyType":"Blob"},{"via":"fetch","url":"//data.bilibili.com/v2/log/web?content_type=pbrequest&logid=021436&disable_compression=true","bodyType":"Uint8Array"},{"via":"xhr","url":"//bb27c891csbd.aikobo.cn/svfboss/n261031bdlj6pzj253rp01j6cw01pwp4.zip?partNumber=1&uploadId=2068ebaf9ad00d51&chunk=0&chu","bodyType":"Blob"},{"via":"xhr","url":"//member.bilibili.com/upload/multipart/complete","bodyType":"String"},{"via":"xhr","url":"//bb27c891csbd.aikobo.cn/svfboss/n261031bdlj6pzj253rp01j6cw01pwp4.zip?output=json&name=frames_3747573749779036_179344263","bodyType":"String"},{"via":"xhr","url":"/x/vupre/web/archive/types/predict?t=1793442641119&x-bili-locale-json=%7B%22c_locale%22:%7B%22language%22:%22zh%22,%22sc","bodyType":"FormData"},{"via":"xhr","url":"/x/vu/web/cover/up?t=1793442651323&x-bili-locale-json=%7B%22c_locale%22:%7B%22language%22:%22zh%22,%22script%22:%22Hans%","bodyType":"FormData"},{"via":"xhr","url":"/x/vu/web/cover/up?t=1793442651324&x-bili-locale-json=%7B%22c_locale%22:%7B%22language%22:%22zh%22,%22script%22:%22Hans%","bodyType":"FormData"},{"via":"xhr","url":"//member.bilibili.com/x/vu/web/add/v3?web_location=333.1024&t=1793442654791&csrf=56111a1092fb7aa0a481be216aeac20d&x-bili","bodyType":"String"},{"tid":"231"},{"via":"fetch","url":"//data.bilibili.com/v2/log/web?content_type=pbrequest&logid=021436&disable_compression=true","bodyType":"Uint8Array"}]
+[10:31:03] ⚠ 期望 tid=231 但提交请求里既没见到它也没发生改写——落库分区大概率不对，发布后必须回读校验
+[10:31:03] 已上线 https://www.bilibili.com/video/BV1crx16AEav/
+[10:31:05] 回执 Workspace/tmp/zone_test_receipt7.json

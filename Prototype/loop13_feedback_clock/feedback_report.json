@@ -1,0 +1,62 @@
+{
+  "generated_at": "2026-11-01T05:02:07.025Z",
+  "csv": "Prototype\\loop13_feedback_clock\\feedback.csv",
+  "snaps": [
+    {
+      "date": "2026-11-01",
+      "views": 6,
+      "duration_s": 38,
+      "avg_watch_s": null,
+      "retention": null,
+      "like_rate": 0,
+      "fav_rate": 0,
+      "comment_rate": 0,
+      "share_rate": 0,
+      "fans_per_1k": null,
+      "notes": "评论:无"
+    }
+  ],
+  "last": {
+    "date": "2026-11-01",
+    "views": 6,
+    "duration_s": 38,
+    "avg_watch_s": null,
+    "retention": null,
+    "like_rate": 0,
+    "fav_rate": 0,
+    "comment_rate": 0,
+    "share_rate": 0,
+    "fans_per_1k": null,
+    "notes": "评论:无",
+    "raw": {
+      "date": "2026-11-01",
+      "duration_s": "38",
+      "views": "6",
+      "avg_watch_s": "",
+      "likes": "0",
+      "favorites": "0",
+      "comments": "0",
+      "shares": "0",
+      "new_followers": "",
+      "notes": "评论:无",
+      "danmaku": "0",
+      "coins": "0",
+      "fans_total": "1",
+      "views_delta": "",
+      "snapshot_at": "2026-11-01T05:02:06.396Z"
+    }
+  },
+  "prev": null,
+  "actions": [
+    {
+      "priority": "P1",
+      "action": "补 avg_watch_s（去创作中心抄「平均播放时长」，或 collect_feedback --avg-watch）",
+      "because": "完播率算不出来，最强指标缺席；这是采集缺口，不是内容问题"
+    },
+    {
+      "priority": "P1",
+      "action": "改标题/封面（点击进来的人不买账）",
+      "because": "点赞率 0.00% < 3%"
+    }
+  ]
+}
