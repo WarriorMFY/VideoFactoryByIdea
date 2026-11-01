@@ -27,6 +27,8 @@ node Tool\acceptance\run_multi_speech_acceptance.mjs   # 小循环 4：7 样本�
 node Tool\ops\recon_bilibili.mjs               # B 站公开数据侦查：今天什么火、我们能不能快速做
 node Tool\ops\make_cover.mjs --video out\final.mp4 --out cover.jpg --title "标题"   # 封面
 node Tool\ops\watch_feedback.mjs               # 反馈闭环：采集 B 站数据 → 诊断 → 排下一轮（一条命令）
+node Tool\ops\collect_creator_stats.mjs        # 平台判卷（登录态）：完播率/均播/跳出率 vs 同类中位，T+1 才有
+node Tool\ops\bench_peers.mjs                  # 赛道基线：爆款形态 + 新稿播放水位，用来定"及格线"
 
 # ⑤ 同步/克隆仓库（网络时通时不通，交给脚本管超时与换端点）
 node Tool\Git\gitnet.mjs pull --check          # 只看差距
@@ -43,7 +45,7 @@ node Tool\Git\gitnet.mjs clone WarriorMFY/VideoFactoryByIdea
 | `edit/` | 要做剪辑/出片 | [`edit/edit.md`](edit/edit.md) — 主流水线 `vfactory.mjs`、决策时间轴图 |
 | `subtitle/` | 要做识别/翻译/字幕（含**双语逐词高亮** karaoke 样式） | [`subtitle/subtitle.md`](subtitle/subtitle.md) — ASR、字幕生成、ASS 逐词高亮、时间轴重映射、字幕验收 |
 | `acceptance/` | 要"证明它是对的" | [`acceptance/acceptance.md`](acceptance/acceptance.md) — 三个一键验收 + 真值比对 + 成片质检 |
-| `ops/` | 要看市场、要交付、要发布、要追踪反馈 | [`ops/ops.md`](ops/ops.md) — `recon_bilibili`（B 站侦查）、`make_episode`（造样片素材）、`make_cover`（封面）、`publish_bilibili`（扫码登录/上传/填表/封面/投稿/回执）、`watch_feedback`（采集→诊断→规划一条龙：`collect_feedback` / `track_feedback` / `plan_next_loop`） |
+| `ops/` | 要看市场、要交付、要发布、要追踪反馈、要定及格线 | [`ops/ops.md`](ops/ops.md) — `recon_bilibili`（B 站侦查）、`make_episode`（造样片素材）、`make_cover`（封面）、`publish_bilibili`（扫码登录/上传/填表/封面/投稿/回执）、`watch_feedback`（采集→诊断→规划一条龙：`collect_feedback` / `track_feedback` / `plan_next_loop`）、`collect_creator_stats`（平台判卷：完播率等，T+1）、`bench_peers`（赛道基线与新稿水位） |
 | `lib/` | 要改脚本的公共层 | [`lib/lib.md`](lib/lib.md) — 子进程调用封装（fd 重定向）、fontconfig、SRT/CSV/单位规范化 |
 | `Git/` | clone/pull 卡住、克隆第三方项目 | [`Git/Git.md`](Git/Git.md) — `gitnet.mjs`：端点学习 + 无进展看门狗 + 镜像回退 |
 | 环境约束 | 遇到"为什么跑不通" | [`env.md`](env.md) — 出网/管道/字体/模型源等实测坑 |

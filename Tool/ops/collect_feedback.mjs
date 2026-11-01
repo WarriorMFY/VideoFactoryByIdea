@@ -40,8 +40,9 @@ const args = process.argv.slice(2);
 const getOpt = (k, d) => (args.includes(k) ? args[args.indexOf(k) + 1] : d);
 const has = (k) => args.includes(k);
 
-const DEFAULT_CSV = 'Prototype/loop12_market_loop/case_ep01/feedback.csv';
-const DEFAULT_BVID = 'BV1AaxC6hExH';
+const DEFAULT_CSV = 'Prototype/loop13_feedback_clock/feedback.csv';
+// 2026-11-01 起跟踪重投稿 BV1VRx16WEyn（tid=122 正确分区）；旧稿 BV1AaxC6hExH 已下架（62012）
+const DEFAULT_BVID = 'BV1VRx16WEyn';
 const DEFAULT_UID = '3747573749779036';
 const RUNS = path.join(ROOT, 'History', 'runs', 'feedback');
 
