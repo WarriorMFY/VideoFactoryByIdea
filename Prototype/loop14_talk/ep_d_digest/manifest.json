@@ -1,0 +1,303 @@
+{
+  "generated_at": "2026-11-01T06:16:52.537Z",
+  "tool": "Tool/ops/make_digest.mjs",
+  "spec": "Prototype\\loop14_talk\\ep_d_digest\\digest.json",
+  "source": {
+    "file": "Workspace\\tmp\\ted_batch\\altman\\talk_720p.mp4",
+    "origin_bvid": "BV19Gxp6XE4T",
+    "origin_dur": 2835
+  },
+  "duration_s": 171.7,
+  "voice": {
+    "engine": "edge-tts",
+    "name": "zh-CN-YunyangNeural",
+    "rate": "+5%"
+  },
+  "segments": [
+    {
+      "chapter": "第1章 · 开场演示",
+      "src": 20,
+      "text": "开场克里斯就放出 Sora 生成的视频，全场笑作一团。",
+      "tts_dur": 4.4,
+      "digest_t": 3.4
+    },
+    {
+      "src": 70,
+      "text": "新图像模型已并入 GPT-4o：它不只会画画，它带着全部核心智能。",
+      "tts_dur": 5.67,
+      "digest_t": 8.3
+    },
+    {
+      "src": 110,
+      "text": "对普通职业的判断：岗位期望值会被抬高，但你的能力提升更快。",
+      "tts_dur": 4.49,
+      "digest_t": 14.47
+    },
+    {
+      "src": 130,
+      "text": "新模型的写作质量，也在悄悄跨过一个新台阶。",
+      "tts_dur": 3.36,
+      "digest_t": 19.46
+    },
+    {
+      "chapter": "第2章 · 创作者的怒火",
+      "src": 250,
+      "text": "现场火药味最浓的是版权：记者当众发难——我不同意，凭什么学我？",
+      "tts_dur": 4.75,
+      "digest_t": 23.32
+    },
+    {
+      "src": 380,
+      "text": "奥尔特曼当场承诺：在世艺术家的风格，未经授权不允许点名生成。",
+      "tts_dur": 5.1,
+      "digest_t": 28.57
+    },
+    {
+      "src": 420,
+      "text": "他说人类创作从来都站在前人肩膀上，界限要用新模式来厘清。",
+      "tts_dur": 5.35,
+      "digest_t": 34.17
+    },
+    {
+      "src": 430,
+      "text": "授权、分成、付费——让创作者从被放大中受益，值得认真探索。",
+      "tts_dur": 5.28,
+      "digest_t": 40.02
+    },
+    {
+      "chapter": "第3章 · 开源与增长",
+      "src": 490,
+      "text": "DeepSeek 冲击来了，他宣布：我们要做一个接近前沿的强大开源模型。",
+      "tts_dur": 4.78,
+      "digest_t": 45.8
+    },
+    {
+      "src": 545,
+      "text": "但我整天在打电话，恳求别人多卖给我们一些 GPU。",
+      "tts_dur": 3.73,
+      "digest_t": 51.08
+    },
+    {
+      "src": 560,
+      "text": "有人质疑烧钱保持领先是否必要，他的回应是：DeepSeek 发布后，增长一点没受影响。",
+      "tts_dur": 6.16,
+      "digest_t": 55.31
+    },
+    {
+      "src": 580,
+      "text": "ChatGPT 周活跃用户五亿，还在飞速增长——他从没见过这样的曲线。",
+      "tts_dur": 5.11,
+      "digest_t": 61.97
+    },
+    {
+      "chapter": "第4章 · 下一个爆点",
+      "src": 805,
+      "text": "他个人最期待的是科学领域的 AI：新科学发现，是生活变好的最大推动力。",
+      "tts_dur": 5.85,
+      "digest_t": 67.58
+    },
+    {
+      "src": 850,
+      "text": "室温超导？他的回答是：不违反物理定律，理论上有可能。",
+      "tts_dur": 4.63,
+      "digest_t": 73.93
+    },
+    {
+      "src": 875,
+      "text": "而几个月内的大爆点，是智能体软件工程真的要来了。",
+      "tts_dur": 3.93,
+      "digest_t": 79.06
+    },
+    {
+      "src": 900,
+      "text": "有工程师一下午干完了两年的活。他说：那一刻我真切感到，AGI 要来了。",
+      "tts_dur": 6.16,
+      "digest_t": 83.49
+    },
+    {
+      "chapter": "第5章 · AGI 是什么",
+      "src": 1130,
+      "text": "为什么 ChatGPT 还不算 AGI？它不能持续学习，也替不了你在电脑上把活干完。",
+      "tts_dur": 6.76,
+      "digest_t": 90.15
+    },
+    {
+      "src": 1175,
+      "text": "他自嘲：十个 OpenAI 研究员共处一室，能给出十四个 AGI 定义。",
+      "tts_dur": 4.8,
+      "digest_t": 97.41
+    },
+    {
+      "src": 1240,
+      "text": "重要的不是定义和时刻，而是这条指数曲线不会停，会一路越过所谓的 AGI。",
+      "tts_dur": 5.86,
+      "digest_t": 102.71
+    },
+    {
+      "src": 1270,
+      "text": "社会真正的课题：既拿到巨大利益，又搞清楚怎么保证安全。",
+      "tts_dur": 4.5,
+      "digest_t": 109.08
+    },
+    {
+      "chapter": "第6章 · 智能体与信任",
+      "src": 1400,
+      "text": "智能体会替你上网订餐厅、填表下单——它犯错时，代价也更高了。",
+      "tts_dur": 5.1,
+      "digest_t": 114.08
+    },
+    {
+      "src": 1445,
+      "text": "他说好产品必须是安全的产品：不信它不会清空你的账户，你就不会用它。",
+      "tts_dur": 4.95,
+      "digest_t": 119.68
+    },
+    {
+      "src": 1500,
+      "text": "被问到智能体自我复制的红线，他指向《准备框架》：最危险的类别已经写明。",
+      "tts_dur": 5.53,
+      "digest_t": 125.13
+    },
+    {
+      "chapter": "第7章 · 魔戒与父亲",
+      "src": 2065,
+      "text": "马斯克送他一枚《指环王》的至尊魔戒：你已经被权力腐蚀了。",
+      "tts_dur": 3.89,
+      "digest_t": 131.17
+    },
+    {
+      "src": 2130,
+      "text": "他反问全场：你们觉得，我被权力腐蚀了吗？",
+      "tts_dur": 2.79,
+      "digest_t": 135.55
+    },
+    {
+      "src": 2265,
+      "text": "红按钮之问：给儿子最美妙的人生，但留下一成毁掉他的可能——他答：不按。",
+      "tts_dur": 5.74,
+      "digest_t": 138.85
+    },
+    {
+      "src": 2280,
+      "text": "有了孩子之后，他说自己更有责任，为全人类的未来尽所能。",
+      "tts_dur": 4.42,
+      "digest_t": 145.09
+    },
+    {
+      "src": 2720,
+      "text": "结尾他讲了一个细节：候诊室里的小孩，对着纸质杂志做触屏动作。",
+      "tts_dur": 4.82,
+      "digest_t": 150.01
+    },
+    {
+      "src": 2760,
+      "text": "他希望孩子回看我们时会想：他们过得也太苦了，啥也没有。",
+      "tts_dur": 4.02,
+      "digest_t": 155.33
+    },
+    {
+      "src": 2790,
+      "text": "那将是一个物质丰富、个体能力被放大的世界——讲到这里，他笑了。",
+      "tts_dur": 4.81,
+      "digest_t": 159.85
+    }
+  ],
+  "chapters": [
+    {
+      "no": 1,
+      "title": "第1章 · 开场演示",
+      "digest_t": 3.4,
+      "src_t": 20
+    },
+    {
+      "no": 2,
+      "title": "第2章 · 创作者的怒火",
+      "digest_t": 23.3,
+      "src_t": 250
+    },
+    {
+      "no": 3,
+      "title": "第3章 · 开源与增长",
+      "digest_t": 45.8,
+      "src_t": 490
+    },
+    {
+      "no": 4,
+      "title": "第4章 · 下一个爆点",
+      "digest_t": 67.6,
+      "src_t": 805
+    },
+    {
+      "no": 5,
+      "title": "第5章 · AGI 是什么",
+      "digest_t": 90.2,
+      "src_t": 1130
+    },
+    {
+      "no": 6,
+      "title": "第6章 · 智能体与信任",
+      "digest_t": 114.1,
+      "src_t": 1400
+    },
+    {
+      "no": 7,
+      "title": "第7章 · 魔戒与父亲",
+      "digest_t": 131.2,
+      "src_t": 2065
+    }
+  ],
+  "nav_links": [
+    {
+      "no": 1,
+      "title": "第1章 · 开场演示",
+      "digest_t": 3.4,
+      "src_t": 20,
+      "origin_url": "https://www.bilibili.com/video/BV19Gxp6XE4T?t=20"
+    },
+    {
+      "no": 2,
+      "title": "第2章 · 创作者的怒火",
+      "digest_t": 23.3,
+      "src_t": 250,
+      "origin_url": "https://www.bilibili.com/video/BV19Gxp6XE4T?t=250"
+    },
+    {
+      "no": 3,
+      "title": "第3章 · 开源与增长",
+      "digest_t": 45.8,
+      "src_t": 490,
+      "origin_url": "https://www.bilibili.com/video/BV19Gxp6XE4T?t=490"
+    },
+    {
+      "no": 4,
+      "title": "第4章 · 下一个爆点",
+      "digest_t": 67.6,
+      "src_t": 805,
+      "origin_url": "https://www.bilibili.com/video/BV19Gxp6XE4T?t=805"
+    },
+    {
+      "no": 5,
+      "title": "第5章 · AGI 是什么",
+      "digest_t": 90.2,
+      "src_t": 1130,
+      "origin_url": "https://www.bilibili.com/video/BV19Gxp6XE4T?t=1130"
+    },
+    {
+      "no": 6,
+      "title": "第6章 · 智能体与信任",
+      "digest_t": 114.1,
+      "src_t": 1400,
+      "origin_url": "https://www.bilibili.com/video/BV19Gxp6XE4T?t=1400"
+    },
+    {
+      "no": 7,
+      "title": "第7章 · 魔戒与父亲",
+      "digest_t": 131.2,
+      "src_t": 2065,
+      "origin_url": "https://www.bilibili.com/video/BV19Gxp6XE4T?t=2065"
+    }
+  ],
+  "timings_ms": {
+    "total": 235623
+  }
+}

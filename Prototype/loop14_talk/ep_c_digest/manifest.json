@@ -1,0 +1,309 @@
+{
+  "generated_at": "2026-11-01T06:12:52.048Z",
+  "tool": "Tool/ops/make_digest.mjs",
+  "spec": "Prototype\\loop14_talk\\ep_c_digest\\digest.json",
+  "source": {
+    "file": "Workspace\\tmp\\ted_batch\\suleyman\\talk_720p.mp4",
+    "origin_bvid": "BV1oSxp6tEPQ",
+    "origin_dur": 1294
+  },
+  "duration_s": 178.7,
+  "voice": {
+    "engine": "edge-tts",
+    "name": "zh-CN-YunyangNeural",
+    "rate": "+5%"
+  },
+  "segments": [
+    {
+      "chapter": "第1章 · 一个尴尬的领域",
+      "src": 15,
+      "text": "十五年前，在人工智能领域工作，是一件让人尴尬的事。",
+      "tts_dur": 3.92,
+      "digest_t": 3.4
+    },
+    {
+      "src": 30,
+      "text": "共识是：我们只是在做机器学习，AGI？那是科幻小说里的词。",
+      "tts_dur": 5.22,
+      "digest_t": 7.82
+    },
+    {
+      "src": 52,
+      "text": "可短短几年，AI 就开始战胜人类：识图、翻译、下棋，甚至诊断疾病。",
+      "tts_dur": 6.02,
+      "digest_t": 13.54
+    },
+    {
+      "src": 80,
+      "text": "人们开始追问：它能解决气候危机吗？该害怕吗？问题一个比一个尖锐。",
+      "tts_dur": 5.9,
+      "digest_t": 20.06
+    },
+    {
+      "chapter": "第2章 · 早餐桌上的难题",
+      "src": 100,
+      "text": "但让苏莱曼真正困惑的，是一个更简单的问题。",
+      "tts_dur": 3.16,
+      "digest_t": 26.46
+    },
+    {
+      "src": 118,
+      "text": "一天早上，他六岁的侄子塞满一嘴炒蛋，直视着他问：AI 到底是什么？",
+      "tts_dur": 5.36,
+      "digest_t": 30.12
+    },
+    {
+      "src": 150,
+      "text": "他下意识给出标准答案：像印刷术、蒸汽机一样的通用技术，一个好工具。",
+      "tts_dur": 5.18,
+      "digest_t": 35.99
+    },
+    {
+      "src": 200,
+      "text": "可他马上觉得这些话太冠冕堂皇——我们到底在创造什么，竟然说不清楚。",
+      "tts_dur": 5.75,
+      "digest_t": 41.66
+    },
+    {
+      "src": 245,
+      "text": "而比喻、心理模型和名字，恰恰决定了我们能不能管住它。",
+      "tts_dur": 4.39,
+      "digest_t": 47.91
+    },
+    {
+      "chapter": "第3章 · 一个大胆的比喻",
+      "src": 290,
+      "text": "于是他提出一个大胆的比喻：把 AI 当作一种新的数字物种。",
+      "tts_dur": 4.33,
+      "digest_t": 52.8
+    },
+    {
+      "src": 400,
+      "text": "从石斧、火，到语言、写作，再到计算机，人类与技术一路缠绕前行。",
+      "tts_dur": 6.31,
+      "digest_t": 57.64
+    },
+    {
+      "src": 420,
+      "text": "而人工智能，是其中最快、冲击最大的一波浪潮。",
+      "tts_dur": 3.79,
+      "digest_t": 64.44
+    },
+    {
+      "src": 440,
+      "text": "短短十八个月，超过十亿人用上了大语言模型——史上没有任何技术这么快。",
+      "tts_dur": 5.26,
+      "digest_t": 68.73
+    },
+    {
+      "chapter": "第4章 · 指数增长",
+      "src": 460,
+      "text": "有人说 AI 永远不会有创造力，现在它写诗、作画、作曲信手拈来。",
+      "tts_dur": 5.55,
+      "digest_t": 74.49
+    },
+    {
+      "src": 480,
+      "text": "有人说它永远学不会共情，如今数百万人天天在跟 AI 谈心。",
+      "tts_dur": 4.85,
+      "digest_t": 80.54
+    },
+    {
+      "src": 520,
+      "text": "支撑这一切的算力，十年翻了九个数量级：每年翻十倍，整整翻了十年。",
+      "tts_dur": 5.24,
+      "digest_t": 85.89
+    },
+    {
+      "src": 532,
+      "text": "人类一辈子不吃不睡能读八十亿个词，最先进的模型一个月读八万亿。",
+      "tts_dur": 5.26,
+      "digest_t": 91.64
+    },
+    {
+      "chapter": "第5章 · 从工具到同伴",
+      "src": 560,
+      "text": "很快，每个人的口袋里都会有一位全天候的导师、医生和律师。",
+      "tts_dur": 4.26,
+      "digest_t": 97.39
+    },
+    {
+      "src": 600,
+      "text": "真正的转折是 AQ，行动商：AI 不再只是回答，而是替你把事办成。",
+      "tts_dur": 5.47,
+      "digest_t": 102.16
+    },
+    {
+      "src": 640,
+      "text": "不止人类：每家企业、每座城市、每个物体，都会有自己的 AI。",
+      "tts_dur": 4.51,
+      "digest_t": 108.13
+    },
+    {
+      "src": 680,
+      "text": "它们会成为同伴、同事和朋友，能帮你点外卖，也能运营发电厂。",
+      "tts_dur": 4.62,
+      "digest_t": 113.14
+    },
+    {
+      "chapter": "第6章 · 为什么工具不够",
+      "src": 730,
+      "text": "苏莱曼说，把这一切叫作工具，已经装不下了。",
+      "tts_dur": 3.3,
+      "digest_t": 118.26
+    },
+    {
+      "src": 780,
+      "text": "它们有记忆、有性格、有创造力，还能推理、制定计划。",
+      "tts_dur": 4.4,
+      "digest_t": 122.06
+    },
+    {
+      "src": 795,
+      "text": "说 AI 只是数学和代码，就像说人只是碳和水——没错，但以偏概全。",
+      "tts_dur": 5.95,
+      "digest_t": 126.96
+    },
+    {
+      "src": 825,
+      "text": "这个比喻的用处，是逼我们直面三个问题：风险在哪？边界在哪？想创造什么？",
+      "tts_dur": 6.22,
+      "digest_t": 133.41
+    },
+    {
+      "chapter": "第7章 · AI 就是我们",
+      "src": 900,
+      "text": "过去每一次增长，都伴随着殖民、血汗工厂和被污染的地球。",
+      "tts_dur": 4.77,
+      "digest_t": 140.13
+    },
+    {
+      "src": 930,
+      "text": "而这一次是从零开始建造，我们有机会把它做得更好。",
+      "tts_dur": 3.97,
+      "digest_t": 145.4
+    },
+    {
+      "src": 970,
+      "text": "数据不是新石油——AI 之于思想，就像核聚变之于能源：无限、丰盛。",
+      "tts_dur": 5.41,
+      "digest_t": 149.87
+    },
+    {
+      "src": 990,
+      "text": "因为它本身，就是一个没有上限的发明家。",
+      "tts_dur": 2.76,
+      "digest_t": 155.78
+    },
+    {
+      "src": 1050,
+      "text": "所以这个故事的结尾并不神秘：AI 不是局外人，它就是我们所有人。",
+      "tts_dur": 4.95,
+      "digest_t": 159.04
+    },
+    {
+      "src": 1090,
+      "text": "把同理心、善良、好奇和创造力注入它——这是 21 世纪最大的挑战，也是最美的机会。",
+      "tts_dur": 7.19,
+      "digest_t": 164.49
+    }
+  ],
+  "chapters": [
+    {
+      "no": 1,
+      "title": "第1章 · 一个尴尬的领域",
+      "digest_t": 3.4,
+      "src_t": 15
+    },
+    {
+      "no": 2,
+      "title": "第2章 · 早餐桌上的难题",
+      "digest_t": 26.5,
+      "src_t": 100
+    },
+    {
+      "no": 3,
+      "title": "第3章 · 一个大胆的比喻",
+      "digest_t": 52.8,
+      "src_t": 290
+    },
+    {
+      "no": 4,
+      "title": "第4章 · 指数增长",
+      "digest_t": 74.5,
+      "src_t": 460
+    },
+    {
+      "no": 5,
+      "title": "第5章 · 从工具到同伴",
+      "digest_t": 97.4,
+      "src_t": 560
+    },
+    {
+      "no": 6,
+      "title": "第6章 · 为什么工具不够",
+      "digest_t": 118.3,
+      "src_t": 730
+    },
+    {
+      "no": 7,
+      "title": "第7章 · AI 就是我们",
+      "digest_t": 140.1,
+      "src_t": 900
+    }
+  ],
+  "nav_links": [
+    {
+      "no": 1,
+      "title": "第1章 · 一个尴尬的领域",
+      "digest_t": 3.4,
+      "src_t": 15,
+      "origin_url": "https://www.bilibili.com/video/BV1oSxp6tEPQ?t=15"
+    },
+    {
+      "no": 2,
+      "title": "第2章 · 早餐桌上的难题",
+      "digest_t": 26.5,
+      "src_t": 100,
+      "origin_url": "https://www.bilibili.com/video/BV1oSxp6tEPQ?t=100"
+    },
+    {
+      "no": 3,
+      "title": "第3章 · 一个大胆的比喻",
+      "digest_t": 52.8,
+      "src_t": 290,
+      "origin_url": "https://www.bilibili.com/video/BV1oSxp6tEPQ?t=290"
+    },
+    {
+      "no": 4,
+      "title": "第4章 · 指数增长",
+      "digest_t": 74.5,
+      "src_t": 460,
+      "origin_url": "https://www.bilibili.com/video/BV1oSxp6tEPQ?t=460"
+    },
+    {
+      "no": 5,
+      "title": "第5章 · 从工具到同伴",
+      "digest_t": 97.4,
+      "src_t": 560,
+      "origin_url": "https://www.bilibili.com/video/BV1oSxp6tEPQ?t=560"
+    },
+    {
+      "no": 6,
+      "title": "第6章 · 为什么工具不够",
+      "digest_t": 118.3,
+      "src_t": 730,
+      "origin_url": "https://www.bilibili.com/video/BV1oSxp6tEPQ?t=730"
+    },
+    {
+      "no": 7,
+      "title": "第7章 · AI 就是我们",
+      "digest_t": 140.1,
+      "src_t": 900,
+      "origin_url": "https://www.bilibili.com/video/BV1oSxp6tEPQ?t=900"
+    }
+  ],
+  "timings_ms": {
+    "total": 239205
+  }
+}

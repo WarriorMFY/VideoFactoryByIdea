@@ -1,0 +1,29 @@
+[04:23:30] 浏览器 msedge｜profile=F:\AgentWorkArea\WorkBuddy\VideoFactory\Workspace\run\bili_profile
+[04:23:30] 已登录 UID=3747573749779036
+[04:23:46] 未见草稿恢复弹窗（干净进入）
+[04:23:46] 投稿页 file input × 3
+[04:23:46] 已挂载 final.mp4（24.3MB），等转码/表单
+[04:23:46] 上传 0%  0.0MB/s
+[04:23:49] 上传 33%  0.1MB/s
+[04:23:52] 表单就绪（6s）
+[04:23:52] 标题 OK（30 字）
+[04:23:52] 已布防 tid 改写（全格式）：提交请求体里的 tid → 231（UI 显示仅作参考，落库以回读校验为准）
+[04:23:52] 简介 OK：李飞飞 TED2024 演讲《With spatial intelligence…
+[04:23:52] 标签第 1 轮：多余 [生活记录,校园,记录] 缺 [AI,人工智能,李飞飞,TED,空间智能,演讲]
+[04:24:02] 标签 OK（6）：AI / 人工智能 / 李飞飞 / TED / 空间智能 / 演讲
+[04:24:02] 分区已是「人工智能」
+[04:24:04] 创作声明 = 含AI生成内容
+[04:24:06] 封面已传入，等裁剪界面
+[04:24:09] 封面第 1 步：完成
+[04:24:12] 封面完成
+[04:24:12] 表单回读 {"title":"李飞飞 TED 3分钟摘要：AI 的下一个突破口，是空间智能","zone":"人工智能","decl":"含AI生成内容","descLen":969,"coverSet":true}
+[04:24:13] 已点投稿
+[04:24:13] [net] add 请求 POST https://member.bilibili.com/x/vu/web/add/v3?web_location=333.1024&t=1793507053422&csrf=56111a1092fb7aa0a481be2
+[04:24:13] [net] add 请求体: {"cover":"https://archive.biliimg.com/bfs/archive/88c23520c7eaad2d59f6844de885464fb94348f7.jpg","cover43":"https://archive.biliimg.com/bfs/archive/7923b08503eec83fc4cca27a05d2bf727629696b.jpg","ai_cover":0,"is_ab_cover":0,"ab_cover_info":null,"title":"李飞飞 TED 3分钟摘要：AI 的下一个突破口，是空间智能","copyright":3,"creation_statement":{"id":1},"human_type2":1011,"tid":231,"tag":"AI,人工智能,李飞飞,TED,空间智能,演讲","desc":"李飞飞 TED2024 演讲《With spatial intelligence, AI will understand the 3D world》3 分钟中文摘要报告。解说与字幕为本频道原创整理，画面取自 TED 官方演讲视频（CC BY–NC–ND 4.0，非商业摘要引用）。\n\n完整原片（15:02）：https://www.bilibili.com/video/BV113xW6VEv6?t=0\n\n【快速导航通道】本片每章右上角标注了对应原片时间，按下表可直接跳到原片完整论述：\n01 第1章 · 五亿年前的黑暗 ｜ 摘要 00:03 → 原片 00:15  https://www.bilibili.com/video/BV113xW6VEv6?t=15\n02 第2章 · 看见，点燃智能 ｜ 摘要 00:20 → 原片 01:35  https://www.bilibili.com
+[04:24:14] [net] add 响应 200: {"code":0,"message":"OK","ttl":1,"data":{"aid":117539262693615,"bvid":"BV1DExp6UEdb"}}
+[04:24:18] 投稿返回 ok=true errors=[]
+[04:24:22] 提交 tid 留痕：seen=[] rewritten=[]
+[04:24:22] 带体请求：[{"via":"xhr","url":"/x/vupre/web/archive/types/predict?t=1793507033855&x-bili-locale-json=%7B%22c_locale%22:%7B%22language%22:%22zh%22,%22sc","bodyType":"FormData"},{"via":"xhr","url":"/x/vu/web/cover/up?t=1793507049914&x-bili-locale-json=%7B%22c_locale%22:%7B%22language%22:%22zh%22,%22script%22:%22Hans%","bodyType":"FormData"},{"via":"xhr","url":"/x/vu/web/cover/up?t=1793507049914&x-bili-locale-json=%7B%22c_locale%22:%7B%22language%22:%22zh%22,%22script%22:%22Hans%","bodyType":"FormData"},{"via":"xhr","url":"//member.bilibili.com/x/vu/web/add/v3?web_location=333.1024&t=1793507053422&csrf=56111a1092fb7aa0a481be216aeac20d&x-bili","bodyType":"String"},{"via":"fetch","url":"//data.bilibili.com/v2/log/web?content_type=pbrequest&logid=021436&disable_compression=true","bodyType":"Uint8Array"},{"via":"fetch","url":"//data.bilibili.com/v2/log/web?content_type=pbrequest&logid=021436&disable_compression=true","bodyType":"Uint8Array"}]
+[04:24:22] ✓ 提交请求确认带 tid=231（原生或改写），仍以发布后回读为准
+[04:24:22] 已上线 https://www.bilibili.com/video/BV1DExp6UEdb/
+[04:24:23] 回执 F:\AgentWorkArea\WorkBuddy\VideoFactory\History\publish\bilibili\runs\2026-11-01T04-23-29_publish\receipt.json

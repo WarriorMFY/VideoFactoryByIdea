@@ -1,0 +1,29 @@
+[06:27:59] 浏览器 msedge｜profile=F:\AgentWorkArea\WorkBuddy\VideoFactory\Workspace\run\bili_profile
+[06:28:00] 已登录 UID=3747573749779036
+[06:28:15] 未见草稿恢复弹窗（干净进入）
+[06:28:15] 投稿页 file input × 3
+[06:28:15] 已挂载 final.mp4（25.4MB），等转码/表单
+[06:28:15] 上传 0%  0.0MB/s
+[06:28:18] 上传 98%  7.4MB/s
+[06:28:21] 表单就绪（6s）
+[06:28:21] 标题 OK（28 字）
+[06:28:21] 已布防 tid 改写（全格式）：提交请求体里的 tid → 231（UI 显示仅作参考，落库以回读校验为准）
+[06:28:21] 简介 OK：山姆·奥尔特曼 TED2025 现场对谈（TED 官方播放 2.86M）3 分钟…
+[06:28:21] 标签第 1 轮：多余 [生活记录,校园,记录] 缺 [AI,人工智能,奥尔特曼,TED,OpenAI]
+[06:28:30] 标签 OK（5）：AI / 人工智能 / 奥尔特曼 / TED / OpenAI
+[06:28:30] 分区已是「人工智能」
+[06:28:32] 创作声明 = 含AI生成内容
+[06:28:34] 封面已传入，等裁剪界面
+[06:28:37] 封面第 1 步：完成
+[06:28:40] 封面完成
+[06:28:40] 表单回读 {"title":"奥尔特曼 TED 3分钟摘要：AGI、五亿用户与那枚魔戒","zone":"人工智能","decl":"含AI生成内容","descLen":939,"coverSet":true}
+[06:28:41] 已点投稿
+[06:28:41] [net] add 请求 POST https://member.bilibili.com/x/vu/web/add/v3?web_location=333.1024&t=1793514521386&csrf=56111a1092fb7aa0a481be2
+[06:28:41] [net] add 请求体: {"cover":"https://archive.biliimg.com/bfs/archive/95d40e0490e974d0c90f917c3aa7764de8f0ce55.jpg","cover43":"https://archive.biliimg.com/bfs/archive/b1d4fb9da8eb21d65cebebefb95af9e9f22caf55.jpg","ai_cover":0,"is_ab_cover":0,"ab_cover_info":null,"title":"奥尔特曼 TED 3分钟摘要：AGI、五亿用户与那枚魔戒","copyright":3,"creation_statement":{"id":1},"human_type2":1011,"tid":231,"tag":"AI,人工智能,奥尔特曼,TED,OpenAI","desc":"山姆·奥尔特曼 TED2025 现场对谈（TED 官方播放 2.86M）3 分钟中文摘要报告。解说与字幕为本频道原创整理，画面取自 TED 官方视频（CC BY–NC–ND 4.0，非商业摘要引用）。\n\n完整原片（47:15）：https://www.bilibili.com/video/BV19Gxp6XE4T?t=0\n\n【快速导航通道】本片每章右上角标注了对应原片时间，按下表可直接跳到原片完整论述：\n01 第1章 · 开场演示 ｜ 摘要 00:03 → 原片 00:20  https://www.bilibili.com/video/BV19Gxp6XE4T?t=20\n02 第2章 · 创作者的怒火 ｜ 摘要 00:23 → 原片 04:10  https://www.bilibili.com/video/BV19Gxp6XE4T?t=250\n03 第3章 · 开源与增长 ｜ 摘要
+[06:28:42] [net] add 响应 200: {"code":0,"message":"OK","ttl":1,"data":{"aid":117539766011419,"bvid":"BV1rCxs6gEEb"}}
+[06:28:46] 投稿返回 ok=true errors=[]
+[06:28:50] 提交 tid 留痕：seen=[] rewritten=[]
+[06:28:50] 带体请求：[{"via":"xhr","url":"/x/vu/web/cover/up?t=1793514517878&x-bili-locale-json=%7B%22c_locale%22:%7B%22language%22:%22zh%22,%22script%22:%22Hans%","bodyType":"FormData"},{"via":"xhr","url":"/x/vu/web/cover/up?t=1793514517878&x-bili-locale-json=%7B%22c_locale%22:%7B%22language%22:%22zh%22,%22script%22:%22Hans%","bodyType":"FormData"},{"via":"xhr","url":"//member.bilibili.com/x/vu/web/add/v3?web_location=333.1024&t=1793514521386&csrf=56111a1092fb7aa0a481be216aeac20d&x-bili","bodyType":"String"},{"via":"fetch","url":"//data.bilibili.com/v2/log/web?content_type=pbrequest&logid=021436&disable_compression=true","bodyType":"Uint8Array"},{"via":"fetch","url":"//data.bilibili.com/v2/log/web?content_type=pbrequest&logid=021436&disable_compression=true","bodyType":"Uint8Array"}]
+[06:28:50] ✓ 提交请求确认带 tid=231（原生或改写），仍以发布后回读为准
+[06:28:50] 已上线 https://www.bilibili.com/video/BV1rCxs6gEEb/
+[06:28:51] 回执 Prototype/loop14_talk/ep_d_digest/receipt.json

@@ -1,0 +1,9 @@
+{
+ "dir": "Workspace/tmp/ted_batch/altman",
+ "out": "Prototype/loop14_talk/ep_d",
+ "offset_s": 3.456,
+ "asr_words": 8598,
+ "sentences": 919,
+ "final_exists": true,
+ "elapsed_s": 1892
+}

@@ -1,0 +1,309 @@
+{
+  "generated_at": "2026-11-01T06:21:14.036Z",
+  "tool": "Tool/ops/make_digest.mjs",
+  "spec": "Prototype\\loop14_talk\\ep_e_digest\\digest.json",
+  "source": {
+    "file": "Workspace\\tmp\\ted_batch\\musk\\talk_720p.mp4",
+    "origin_bvid": "BV1fwxp68EQB",
+    "origin_dur": 3157
+  },
+  "duration_s": 160,
+  "voice": {
+    "engine": "edge-tts",
+    "name": "zh-CN-YunyangNeural",
+    "rate": "+5%"
+  },
+  "segments": [
+    {
+      "chapter": "第1章 · 前一天深夜的工厂",
+      "src": 15,
+      "text": "TED 开幕前夜，克里斯独自走进刚落成的德州超级工厂。",
+      "tts_dur": 4.31,
+      "digest_t": 3.4
+    },
+    {
+      "src": 30,
+      "text": "他管这里叫『制造机器的机器』——也是马斯克眼中，通向可持续未来的路。",
+      "tts_dur": 5.11,
+      "digest_t": 8.21
+    },
+    {
+      "chapter": "第2章 · 从汽车到机器人",
+      "src": 100,
+      "text": "谈到自动驾驶的预测，马斯克笑了：我并不总是对的。",
+      "tts_dur": 3.63,
+      "digest_t": 13.82
+    },
+    {
+      "src": 130,
+      "text": "进度像一条对数曲线：你以为搞定了，其实只是碰到天花板。",
+      "tts_dur": 4.19,
+      "digest_t": 17.96
+    },
+    {
+      "src": 190,
+      "text": "他的结论是：要解决自动驾驶，必须先解决现实世界里的人工智能。",
+      "tts_dur": 4.78,
+      "digest_t": 22.65
+    },
+    {
+      "src": 290,
+      "text": "而为一辆车解决了现实 AI，它本质上就是一台装了四个轮子的机器人。",
+      "tts_dur": 5.07,
+      "digest_t": 27.93
+    },
+    {
+      "src": 310,
+      "text": "于是有了 Optimus——他断言：这个业务的规模，会比汽车更宏大。",
+      "tts_dur": 4.35,
+      "digest_t": 33.5
+    },
+    {
+      "src": 410,
+      "text": "安全上他坚持一颗上不了网的芯片：喊停，机器人就必须停下。",
+      "tts_dur": 4.63,
+      "digest_t": 38.35
+    },
+    {
+      "chapter": "第3章 · 两万五千美元的同事",
+      "src": 500,
+      "text": "第一批上岗的，是危险、无聊、重复的工作。",
+      "tts_dur": 3.31,
+      "digest_t": 43.48
+    },
+    {
+      "src": 520,
+      "text": "价格呢？他估计：还不到一辆车。",
+      "tts_dur": 2.79,
+      "digest_t": 47.29
+    },
+    {
+      "src": 540,
+      "text": "一次性两万五千美元，买一个不休假不下班的劳动力——账算得太通了。",
+      "tts_dur": 4.85,
+      "digest_t": 50.58
+    },
+    {
+      "src": 560,
+      "text": "但他认为不是抢饭碗：未来仍是劳动力短缺，而商品会便宜得离谱。",
+      "tts_dur": 5.08,
+      "digest_t": 55.93
+    },
+    {
+      "chapter": "第4章 · 几小时前的决定",
+      "src": 630,
+      "text": "登台前几个小时，他刚刚提出收购推特——全场哗然。",
+      "tts_dur": 3.92,
+      "digest_t": 61.51
+    },
+    {
+      "src": 680,
+      "text": "他的理由：推特已经是事实上的城镇广场，算法必须开源。",
+      "tts_dur": 4.41,
+      "digest_t": 65.94
+    },
+    {
+      "src": 810,
+      "text": "他反复强调：这不是生意——我根本不在乎经济效益。",
+      "tts_dur": 3.78,
+      "digest_t": 70.85
+    },
+    {
+      "src": 1830,
+      "text": "被问有没有计划 B，他笑着卖了个关子：下次再说。",
+      "tts_dur": 3.68,
+      "digest_t": 75.13
+    },
+    {
+      "chapter": "第5章 · 睡在工厂地板的三年",
+      "src": 1865,
+      "text": "复盘人生最糟决策，他说：当年没有只跟 JB 一起创办特斯拉。",
+      "tts_dur": 4.67,
+      "digest_t": 79.31
+    },
+    {
+      "src": 1990,
+      "text": "他提醒所有人：造出原型不难，难的是不破产地量产——美国车企百年没做到。",
+      "tts_dur": 5.67,
+      "digest_t": 84.48
+    },
+    {
+      "src": 2050,
+      "text": "Model 3 量产地狱里，他在工厂的地板上睡了三年。",
+      "tts_dur": 3.64,
+      "digest_t": 90.65
+    },
+    {
+      "src": 2155,
+      "text": "2017 到 2019，是他一生最漫长的痛苦——但没有别的办法。",
+      "tts_dur": 4.24,
+      "digest_t": 94.79
+    },
+    {
+      "src": 2230,
+      "text": "代价换来了底气：论制造业，我比地球上任何活着的人都懂。",
+      "tts_dur": 4.42,
+      "digest_t": 99.54
+    },
+    {
+      "chapter": "第6章 · 三百太瓦时",
+      "src": 2290,
+      "text": "可持续能源必须规模化：风、光、水、地热，加上他力挺的核能。",
+      "tts_dur": 5.45,
+      "digest_t": 104.46
+    },
+    {
+      "src": 2350,
+      "text": "他的估算：把整个经济转为全电驱动，需要约三百太瓦时的电池。",
+      "tts_dur": 4.84,
+      "digest_t": 110.42
+    },
+    {
+      "src": 2370,
+      "text": "那是当前装机量的一千倍——而回收，会让原料循环起来。",
+      "tts_dur": 4.07,
+      "digest_t": 115.76
+    },
+    {
+      "chapter": "第7章 · 痴迷真相的大脑",
+      "src": 2500,
+      "text": "他公开自己是阿斯伯格：看不懂社交信号，只按字面理解世界。",
+      "tts_dur": 4.6,
+      "digest_t": 120.32
+    },
+    {
+      "src": 2560,
+      "text": "没有快乐的童年，是书本和整夜整夜的编程陪着他。",
+      "tts_dur": 3.65,
+      "digest_t": 125.43
+    },
+    {
+      "src": 2780,
+      "text": "他说自己对真相痴迷：物理学，研究的是宇宙里可证明的真理。",
+      "tts_dur": 4.8,
+      "digest_t": 129.58
+    },
+    {
+      "src": 2880,
+      "text": "少年时他为生命的意义而沮丧，最后在《银河系漫游指南》里找到了答案。",
+      "tts_dur": 5.18,
+      "digest_t": 134.88
+    },
+    {
+      "src": 2960,
+      "text": "那本书说：比答案更重要的，是问题本身。",
+      "tts_dur": 2.84,
+      "digest_t": 140.56
+    },
+    {
+      "src": 2985,
+      "text": "所以他的人生哲学是：扩大意识的范围与规模，去提出更好的问题。",
+      "tts_dur": 4.65,
+      "digest_t": 143.9
+    },
+    {
+      "src": 3060,
+      "text": "结尾他说：我热爱人类，我们应该为人类的美好未来而战。",
+      "tts_dur": 3.94,
+      "digest_t": 149.05
+    }
+  ],
+  "chapters": [
+    {
+      "no": 1,
+      "title": "第1章 · 前一天深夜的工厂",
+      "digest_t": 3.4,
+      "src_t": 15
+    },
+    {
+      "no": 2,
+      "title": "第2章 · 从汽车到机器人",
+      "digest_t": 13.8,
+      "src_t": 100
+    },
+    {
+      "no": 3,
+      "title": "第3章 · 两万五千美元的同事",
+      "digest_t": 43.5,
+      "src_t": 500
+    },
+    {
+      "no": 4,
+      "title": "第4章 · 几小时前的决定",
+      "digest_t": 61.5,
+      "src_t": 630
+    },
+    {
+      "no": 5,
+      "title": "第5章 · 睡在工厂地板的三年",
+      "digest_t": 79.3,
+      "src_t": 1865
+    },
+    {
+      "no": 6,
+      "title": "第6章 · 三百太瓦时",
+      "digest_t": 104.5,
+      "src_t": 2290
+    },
+    {
+      "no": 7,
+      "title": "第7章 · 痴迷真相的大脑",
+      "digest_t": 120.3,
+      "src_t": 2500
+    }
+  ],
+  "nav_links": [
+    {
+      "no": 1,
+      "title": "第1章 · 前一天深夜的工厂",
+      "digest_t": 3.4,
+      "src_t": 15,
+      "origin_url": "https://www.bilibili.com/video/BV1fwxp68EQB?t=15"
+    },
+    {
+      "no": 2,
+      "title": "第2章 · 从汽车到机器人",
+      "digest_t": 13.8,
+      "src_t": 100,
+      "origin_url": "https://www.bilibili.com/video/BV1fwxp68EQB?t=100"
+    },
+    {
+      "no": 3,
+      "title": "第3章 · 两万五千美元的同事",
+      "digest_t": 43.5,
+      "src_t": 500,
+      "origin_url": "https://www.bilibili.com/video/BV1fwxp68EQB?t=500"
+    },
+    {
+      "no": 4,
+      "title": "第4章 · 几小时前的决定",
+      "digest_t": 61.5,
+      "src_t": 630,
+      "origin_url": "https://www.bilibili.com/video/BV1fwxp68EQB?t=630"
+    },
+    {
+      "no": 5,
+      "title": "第5章 · 睡在工厂地板的三年",
+      "digest_t": 79.3,
+      "src_t": 1865,
+      "origin_url": "https://www.bilibili.com/video/BV1fwxp68EQB?t=1865"
+    },
+    {
+      "no": 6,
+      "title": "第6章 · 三百太瓦时",
+      "digest_t": 104.5,
+      "src_t": 2290,
+      "origin_url": "https://www.bilibili.com/video/BV1fwxp68EQB?t=2290"
+    },
+    {
+      "no": 7,
+      "title": "第7章 · 痴迷真相的大脑",
+      "digest_t": 120.3,
+      "src_t": 2500,
+      "origin_url": "https://www.bilibili.com/video/BV1fwxp68EQB?t=2500"
+    }
+  ],
+  "timings_ms": {
+    "total": 224622
+  }
+}

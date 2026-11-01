@@ -1,0 +1,65 @@
+{
+  "at": "2026-11-01T03:43:56.116Z",
+  "video": "Prototype\\loop14_talk\\ep_e\\final.mp4",
+  "videoSizeMB": 815.16,
+  "title": "马斯克：人形机器人会比汽车更大，多数人还没意识到",
+  "tags": [
+    "AI",
+    "人工智能",
+    "马斯克",
+    "TED",
+    "科技",
+    "机器人"
+  ],
+  "zone": "人工智能",
+  "declaration": "含AI生成内容",
+  "cover": "Prototype\\loop14_talk\\ep_e\\cover.jpg",
+  "coverUploaded": true,
+  "dryRun": false,
+  "runDir": "History\\publish\\bilibili\\runs\\2026-11-01T03-41-25_publish",
+  "tidExpected": "231",
+  "tidTrace": {
+    "forced": "231",
+    "htype": "1011",
+    "seen": [],
+    "rewritten": [],
+    "reqs": [
+      {
+        "via": "xhr",
+        "url": "//member.bilibili.com/upload/multipart/complete",
+        "bodyType": "String"
+      },
+      {
+        "via": "xhr",
+        "url": "/x/vu/web/cover/up?t=1793504633132&x-bili-locale-json=%7B%22c_locale%22:%7B%22language%22:%22zh%22,%22script%22:%22Hans%",
+        "bodyType": "FormData"
+      },
+      {
+        "via": "xhr",
+        "url": "/x/vu/web/cover/up?t=1793504633132&x-bili-locale-json=%7B%22c_locale%22:%7B%22language%22:%22zh%22,%22script%22:%22Hans%",
+        "bodyType": "FormData"
+      },
+      {
+        "via": "xhr",
+        "url": "//member.bilibili.com/x/vu/web/add/v3?web_location=333.1024&t=1793504636642&csrf=56111a1092fb7aa0a481be216aeac20d&x-bili",
+        "bodyType": "String"
+      },
+      {
+        "tid": "231"
+      },
+      {
+        "via": "fetch",
+        "url": "//data.bilibili.com/v2/log/web?content_type=pbrequest&logid=021436&disable_compression=true",
+        "bodyType": "Uint8Array"
+      },
+      {
+        "via": "fetch",
+        "url": "//data.bilibili.com/v2/log/web?content_type=pbrequest&logid=021436&disable_compression=true",
+        "bodyType": "Uint8Array"
+      }
+    ]
+  },
+  "published": true,
+  "bvid": "BV1fwxp68EQB",
+  "url": "https://www.bilibili.com/video/BV1fwxp68EQB/"
+}

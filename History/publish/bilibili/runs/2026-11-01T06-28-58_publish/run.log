@@ -1,0 +1,28 @@
+[06:28:59] 浏览器 msedge｜profile=F:\AgentWorkArea\WorkBuddy\VideoFactory\Workspace\run\bili_profile
+[06:29:00] 已登录 UID=3747573749779036
+[06:29:15] 未见草稿恢复弹窗（干净进入）
+[06:29:15] 投稿页 file input × 3
+[06:29:15] 已挂载 final.mp4（20.4MB），等转码/表单
+[06:29:15] 上传 0%  0.0MB/s
+[06:29:18] 表单就绪（3s）
+[06:29:18] 标题 OK（31 字）
+[06:29:18] 已布防 tid 改写（全格式）：提交请求体里的 tid → 231（UI 显示仅作参考，落库以回读校验为准）
+[06:29:18] 简介 OK：埃隆·马斯克 TED2022 现场对谈（收购推特提议数小时后登台）3 分钟中文摘…
+[06:29:18] 标签第 1 轮：多余 [生活记录,校园,记录] 缺 [AI,人工智能,马斯克,TED,特斯拉]
+[06:29:27] 标签 OK（5）：AI / 人工智能 / 马斯克 / TED / 特斯拉
+[06:29:29] 分区 影视 → 人工智能
+[06:29:31] 创作声明 = 含AI生成内容
+[06:29:33] 封面已传入，等裁剪界面
+[06:29:37] 封面第 1 步：完成
+[06:29:39] 封面完成
+[06:29:39] 表单回读 {"title":"马斯克 TED 3分钟摘要：机器人比汽车更大，真相比答案更重要","zone":"人工智能","decl":"含AI生成内容","descLen":947,"coverSet":true}
+[06:29:40] 已点投稿
+[06:29:40] [net] add 请求 POST https://member.bilibili.com/x/vu/web/add/v3?web_location=333.1024&t=1793514580520&csrf=56111a1092fb7aa0a481be2
+[06:29:40] [net] add 请求体: {"cover":"https://archive.biliimg.com/bfs/archive/ea7e1374734d02da91e31250165905372474577d.jpg","cover43":"https://archive.biliimg.com/bfs/archive/621193a295bd2ee35eb9631cf908cf2627f975ea.jpg","ai_cover":0,"is_ab_cover":0,"ab_cover_info":null,"title":"马斯克 TED 3分钟摘要：机器人比汽车更大，真相比答案更重要","copyright":3,"creation_statement":{"id":1},"human_type2":1011,"tid":231,"tag":"AI,人工智能,马斯克,TED,特斯拉","desc":"埃隆·马斯克 TED2022 现场对谈（收购推特提议数小时后登台）3 分钟中文摘要报告。解说与字幕为本频道原创整理，画面取自 TED 官方视频（CC BY–NC–ND 4.0，非商业摘要引用）。\n\n完整原片（52:37）：https://www.bilibili.com/video/BV1fwxp68EQB?t=0\n\n【快速导航通道】本片每章右上角标注了对应原片时间，按下表可直接跳到原片完整论述：\n01 第1章 · 前一天深夜的工厂 ｜ 摘要 00:03 → 原片 00:15  https://www.bilibili.com/video/BV1fwxp68EQB?t=15\n02 第2章 · 从汽车到机器人 ｜ 摘要 00:14 → 原片 01:40  https://www.bilibili.com/video/BV1fwxp68EQB?t=100\n03 第3章 · 两万五千美元的同事
+[06:29:41] [net] add 响应 200: {"code":0,"message":"OK","ttl":1,"data":{"aid":117539766143830,"bvid":"BV1HCxs63EwV"}}
+[06:29:45] 投稿返回 ok=true errors=[]
+[06:29:49] 提交 tid 留痕：seen=[] rewritten=[]
+[06:29:49] 带体请求：[{"via":"xhr","url":"//upos-cs-upcdntx.bilivideo.com/svfboss/n261101tx392kjh3hstitq2xf5g1l7ts.zip?partNumber=1&uploadId=5898ebc129e02d72&chun","bodyType":"Blob"},{"via":"xhr","url":"//upos-cs-upcdntx.bilivideo.com/svfboss/n261101tx392kjh3hstitq2xf5g1l7ts.zip?output=json&name=frames_3747573749779036_17","bodyType":"String"},{"via":"xhr","url":"/x/vupre/web/archive/types/predict?t=1793514561739&x-bili-locale-json=%7B%22c_locale%22:%7B%22language%22:%22zh%22,%22sc","bodyType":"FormData"},{"via":"xhr","url":"/x/vu/web/cover/up?t=1793514577015&x-bili-locale-json=%7B%22c_locale%22:%7B%22language%22:%22zh%22,%22script%22:%22Hans%","bodyType":"FormData"},{"via":"xhr","url":"/x/vu/web/cover/up?t=1793514577016&x-bili-locale-json=%7B%22c_locale%22:%7B%22language%22:%22zh%22,%22script%22:%22Hans%","bodyType":"FormData"},{"via":"xhr","url":"//member.bilibili.com/x/vu/web/add/v3?web_location=333.1024&t=1793514580520&csrf=56111a1092fb7aa0a481be216aeac20d&x-bili","bodyType":"String"},{"via":"fetch","url":"//data.bilibili.com/v2/log/web?content_type=pbrequest&logid=021436&disable_compression=true","bodyType":"Uint8Array"},{"via":"fetch","url":"//data.bilibili.com/v2/log/web?content_type=pbrequest&logid=021436&disable_compression=true","bodyType":"Uint8Array"}]
+[06:29:49] ✓ 提交请求确认带 tid=231（原生或改写），仍以发布后回读为准
+[06:29:49] 已上线 https://www.bilibili.com/video/BV1HCxs63EwV/
+[06:29:50] 回执 Prototype/loop14_talk/ep_e_digest/receipt.json

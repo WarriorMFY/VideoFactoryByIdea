@@ -1,0 +1,60 @@
+{
+  "at": "2026-11-01T02:56:19.347Z",
+  "video": "Prototype\\loop14_talk\\ep_c\\final.mp4",
+  "videoSizeMB": 320.82,
+  "title": "苏莱曼：AI 不是工具，人类正在造一种新物种",
+  "tags": [
+    "AI",
+    "人工智能",
+    "苏莱曼",
+    "TED",
+    "科技",
+    "微软"
+  ],
+  "zone": "人工智能",
+  "declaration": "含AI生成内容",
+  "cover": "Prototype\\loop14_talk\\ep_c\\cover.jpg",
+  "coverUploaded": true,
+  "dryRun": false,
+  "runDir": "History\\publish\\bilibili\\runs\\2026-11-01T02-54-49_publish",
+  "tidExpected": "231",
+  "tidTrace": {
+    "forced": "231",
+    "htype": "1011",
+    "seen": [],
+    "rewritten": [],
+    "reqs": [
+      {
+        "via": "xhr",
+        "url": "/x/vu/web/cover/up?t=1793501776381&x-bili-locale-json=%7B%22c_locale%22:%7B%22language%22:%22zh%22,%22script%22:%22Hans%",
+        "bodyType": "FormData"
+      },
+      {
+        "via": "xhr",
+        "url": "/x/vu/web/cover/up?t=1793501776381&x-bili-locale-json=%7B%22c_locale%22:%7B%22language%22:%22zh%22,%22script%22:%22Hans%",
+        "bodyType": "FormData"
+      },
+      {
+        "via": "xhr",
+        "url": "//member.bilibili.com/x/vu/web/add/v3?web_location=333.1024&t=1793501779873&csrf=56111a1092fb7aa0a481be216aeac20d&x-bili",
+        "bodyType": "String"
+      },
+      {
+        "tid": "231"
+      },
+      {
+        "via": "fetch",
+        "url": "//data.bilibili.com/v2/log/web?content_type=pbrequest&logid=021436&disable_compression=true",
+        "bodyType": "Uint8Array"
+      },
+      {
+        "via": "fetch",
+        "url": "//data.bilibili.com/v2/log/web?content_type=pbrequest&logid=021436&disable_compression=true",
+        "bodyType": "Uint8Array"
+      }
+    ]
+  },
+  "published": true,
+  "bvid": "BV1oSxp6tEPQ",
+  "url": "https://www.bilibili.com/video/BV1oSxp6tEPQ/"
+}

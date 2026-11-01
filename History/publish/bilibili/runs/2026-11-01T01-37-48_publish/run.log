@@ -1,0 +1,38 @@
+[01:37:49] 浏览器 msedge｜profile=F:\AgentWorkArea\WorkBuddy\VideoFactory\Workspace\run\bili_profile
+[01:37:49] 已登录 UID=3747573749779036
+[01:38:05] 未见草稿恢复弹窗（干净进入）
+[01:38:05] 投稿页 file input × 3
+[01:38:05] 已挂载 final.mp4（237.9MB），等转码/表单
+[01:38:05] 上传 0%  0.0MB/s
+[01:38:08] 上传 4%  0.3MB/s
+[01:38:11] 上传 16%  11.2MB/s
+[01:38:14] 上传 25%  7.2MB/s
+[01:38:17] 上传 34%  7.3MB/s
+[01:38:20] 上传 44%  7.1MB/s
+[01:38:23] 上传 53%  7.2MB/s
+[01:38:26] 上传 62%  7.3MB/s
+[01:38:29] 上传 71%  7.4MB/s
+[01:38:32] 上传 80%  7.2MB/s
+[01:38:35] 上传 90%  7.3MB/s
+[01:38:38] 上传 99%  7.2MB/s
+[01:38:41] 表单就绪（36s）
+[01:38:41] 标题 OK（15 字）
+[01:38:41] 已布防 tid 改写（全格式）：提交请求体里的 tid → 231（UI 显示仅作参考，落库以回读校验为准）
+[01:38:41] 简介 OK：「AI 的下一个前沿，是让机器真正理解我们生活的三维世界。」 AI 先锋、斯坦福…
+[01:38:41] 标签第 1 轮：多余 [生活记录,校园,记录] 缺 [AI,人工智能,李飞飞,TED,科技]
+[01:38:50] 标签 OK（5）：AI / 人工智能 / 李飞飞 / TED / 科技
+[01:38:52] 分区 家装房产 → 人工智能
+[01:38:54] 创作声明 = 含AI生成内容
+[01:38:56] 封面已传入，等裁剪界面
+[01:38:59] 封面第 1 步：完成
+[01:39:02] 封面完成
+[01:39:02] 表单回读 {"title":"李飞飞：AI 即将真正看懂世界","zone":"人工智能","decl":"含AI生成内容","descLen":348,"coverSet":true}
+[01:39:03] 已点投稿
+[01:39:03] [net] add 请求 POST https://member.bilibili.com/x/vu/web/add/v3?web_location=333.1024&t=1793497143134&csrf=56111a1092fb7aa0a481be2
+[01:39:03] [net] add 请求体: {"cover":"https://archive.biliimg.com/bfs/archive/b9b2df303721fa7358b2772d476f6c5a181db07c.jpg","cover43":"https://archive.biliimg.com/bfs/archive/8b2558bb7cfc1137a3aedd97452eead8d06f351c.jpg","ai_cover":0,"is_ab_cover":0,"ab_cover_info":null,"title":"李飞飞：AI 即将真正看懂世界","copyright":3,"creation_statement":{"id":1},"human_type2":1011,"tid":231,"tag":"AI,人工智能,李飞飞,TED,科技","desc":"「AI 的下一个前沿，是让机器真正理解我们生活的三维世界。」\n\nAI 先锋、斯坦福教授李飞飞在 TED2024 的演讲：从 5 亿年前生命第一次\"看见\"世界讲起，解释空间智能（Spatial Intelligence）为什么是 AI 的下一场爆发，并现场展示她团队把一张照片变成可交互 3D 场景的最新成果。\n\n英文字幕为 TED 官方转录，中文为 TED 官方翻译（简体），逐词高亮跟随语流，适合边看边学。\n演讲原文（CC BY-NC-ND）：https://www.ted.com/talks/fei_fei_li_with_spatial_intelligence_ai_will_understand_the_real_world\n本视频仅用于学习交流，非商业用途。\n","dynamic":"","recreate":0,"interactive":0,"videos":[{"filename":"n261101s3
+[01:39:03] [net] add 响应 200: {"code":0,"message":"OK","ttl":1,"data":{"aid":117538625227320,"bvid":"BV113xW6VEv6"}}
+[01:39:08] 投稿返回 ok=true errors=[]
+[01:39:12] 提交 tid 留痕：seen=[] rewritten=[{"orig":"122","to":"231"}]
+[01:39:12] 带体请求：[{"via":"xhr","url":"/x/vu/web/cover/up?t=1793497139643&x-bili-locale-json=%7B%22c_locale%22:%7B%22language%22:%22zh%22,%22script%22:%22Hans%","bodyType":"FormData"},{"via":"xhr","url":"/x/vu/web/cover/up?t=1793497139643&x-bili-locale-json=%7B%22c_locale%22:%7B%22language%22:%22zh%22,%22script%22:%22Hans%","bodyType":"FormData"},{"via":"xhr","url":"//member.bilibili.com/x/vu/web/add/v3?web_location=333.1024&t=1793497143134&csrf=56111a1092fb7aa0a481be216aeac20d&x-bili","bodyType":"String"},{"via":"fetch","url":"//data.bilibili.com/v2/log/web?content_type=pbrequest&logid=021436&disable_compression=true","bodyType":"Uint8Array"},{"via":"fetch","url":"//data.bilibili.com/v2/log/web?content_type=pbrequest&logid=021436&disable_compression=true","bodyType":"Uint8Array"}]
+[01:39:12] 已上线 https://www.bilibili.com/video/BV113xW6VEv6/
+[01:39:13] 回执 Workspace/tmp/ep_a_receipt3.json

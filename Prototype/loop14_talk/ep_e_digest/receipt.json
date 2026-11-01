@@ -1,0 +1,74 @@
+{
+  "at": "2026-11-01T06:29:39.991Z",
+  "video": "Prototype\\loop14_talk\\ep_e_digest\\final.mp4",
+  "videoSizeMB": 20.36,
+  "title": "马斯克 TED 3分钟摘要：机器人比汽车更大，真相比答案更重要",
+  "tags": [
+    "AI",
+    "人工智能",
+    "马斯克",
+    "TED",
+    "特斯拉"
+  ],
+  "zone": "人工智能",
+  "declaration": "含AI生成内容",
+  "cover": "Prototype\\loop14_talk\\ep_e_digest\\cover.jpg",
+  "coverUploaded": true,
+  "dryRun": false,
+  "runDir": "History\\publish\\bilibili\\runs\\2026-11-01T06-28-58_publish",
+  "tidExpected": "231",
+  "tidTrace": {
+    "forced": "231",
+    "htype": "1011",
+    "seen": [],
+    "rewritten": [],
+    "reqs": [
+      {
+        "via": "xhr",
+        "url": "//upos-cs-upcdntx.bilivideo.com/svfboss/n261101tx392kjh3hstitq2xf5g1l7ts.zip?partNumber=1&uploadId=5898ebc129e02d72&chun",
+        "bodyType": "Blob"
+      },
+      {
+        "via": "xhr",
+        "url": "//upos-cs-upcdntx.bilivideo.com/svfboss/n261101tx392kjh3hstitq2xf5g1l7ts.zip?output=json&name=frames_3747573749779036_17",
+        "bodyType": "String"
+      },
+      {
+        "via": "xhr",
+        "url": "/x/vupre/web/archive/types/predict?t=1793514561739&x-bili-locale-json=%7B%22c_locale%22:%7B%22language%22:%22zh%22,%22sc",
+        "bodyType": "FormData"
+      },
+      {
+        "via": "xhr",
+        "url": "/x/vu/web/cover/up?t=1793514577015&x-bili-locale-json=%7B%22c_locale%22:%7B%22language%22:%22zh%22,%22script%22:%22Hans%",
+        "bodyType": "FormData"
+      },
+      {
+        "via": "xhr",
+        "url": "/x/vu/web/cover/up?t=1793514577016&x-bili-locale-json=%7B%22c_locale%22:%7B%22language%22:%22zh%22,%22script%22:%22Hans%",
+        "bodyType": "FormData"
+      },
+      {
+        "via": "xhr",
+        "url": "//member.bilibili.com/x/vu/web/add/v3?web_location=333.1024&t=1793514580520&csrf=56111a1092fb7aa0a481be216aeac20d&x-bili",
+        "bodyType": "String"
+      },
+      {
+        "tid": "231"
+      },
+      {
+        "via": "fetch",
+        "url": "//data.bilibili.com/v2/log/web?content_type=pbrequest&logid=021436&disable_compression=true",
+        "bodyType": "Uint8Array"
+      },
+      {
+        "via": "fetch",
+        "url": "//data.bilibili.com/v2/log/web?content_type=pbrequest&logid=021436&disable_compression=true",
+        "bodyType": "Uint8Array"
+      }
+    ]
+  },
+  "published": true,
+  "bvid": "BV1HCxs63EwV",
+  "url": "https://www.bilibili.com/video/BV1HCxs63EwV/"
+}

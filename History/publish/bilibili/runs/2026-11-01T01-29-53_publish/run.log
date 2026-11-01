@@ -1,0 +1,25 @@
+[01:29:54] 浏览器 msedge｜profile=F:\AgentWorkArea\WorkBuddy\VideoFactory\Workspace\run\bili_profile
+[01:29:54] 已登录 UID=3747573749779036
+[01:30:09] 未见草稿恢复弹窗（干净进入）
+[01:30:09] 投稿页 file input × 3
+[01:30:10] 已挂载 final.mp4（237.9MB），等转码/表单
+[01:30:11] 表单就绪（2s）
+[01:30:12] 标题 OK（15 字）
+[01:30:12] 已布防 tid 改写（全格式）：提交请求体里的 tid → 231（UI 显示仅作参考，落库以回读校验为准）
+[01:30:12] 简介 OK：「AI 的下一个前沿，是让机器真正理解我们生活的三维世界。」 AI 先锋、斯坦福…
+[01:30:12] 标签第 1 轮：多余 [] 缺 [AI,人工智能,李飞飞,TED,科技]
+[01:30:19] 标签第 2 轮：多余 [生活记录,校园,记录] 缺 []
+[01:30:21] 标签 OK（5）：AI / 人工智能 / 李飞飞 / TED / 科技
+[01:30:21] 分区已是「人工智能」
+[01:30:23] 创作声明 = 含AI生成内容
+[01:30:25] 封面已传入，等裁剪界面
+[01:30:28] 封面第 1 步：完成
+[01:30:31] 封面完成
+[01:30:31] 表单回读 {"title":"李飞飞：AI 即将真正看懂世界","zone":"人工智能","decl":"含AI生成内容","descLen":348,"coverSet":true}
+[01:30:32] 已点投稿
+[01:30:37] 投稿返回 ok=true errors=[]
+[01:30:41] 提交 tid 留痕：seen=[] rewritten=[]
+[01:30:41] 带体请求：[{"via":"xhr","url":"//member.bilibili.com/upload/multipart/part","bodyType":"String"},{"via":"xhr","url":"//member.bilibili.com/upload/multipart/part","bodyType":"String"},{"via":"xhr","url":"//member.bilibili.com/upload/multipart/part","bodyType":"String"},{"via":"xhr","url":"//member.bilibili.com/upload/multipart/part","bodyType":"String"},{"via":"xhr","url":"https://cnsh-cos-upcdntx.bilivideo.com/ugcfxever/n261101s3qdrxthap9mo32ggp2875ze0.mp4.d/90d7ff07-4ad5-451e-bcbf-9a3d43c3","bodyType":"Blob"},{"via":"xhr","url":"https://cnsh-cos-upcdnbd.bilivideo.com/ugcfxever/n261101s3qdrxthap9mo32ggp2875ze0.mp4.d/90d7ff07-4ad5-451e-bcbf-9a3d43c3","bodyType":"Blob"},{"via":"xhr","url":"https://cnsh-cos-upcdntx.esheep.com/ugcfxever/n261101s3qdrxthap9mo32ggp2875ze0.mp4.d/90d7ff07-4ad5-451e-bcbf-9a3d43c3846","bodyType":"Blob"},{"via":"xhr","url":"//member.bilibili.com/upload/multipart/part","bodyType":"String"},{"via":"xhr","url":"//member.bilibili.com/upload/multipart/part","bodyType":"String"},{"via":"xhr","url":"https://cnsh-cos-upcdnbd.bilivideo.com/ugcfxever/n261101s3qdrxthap9mo32ggp2875ze0.mp4.d/90d7ff07-4ad5-451e-bcbf-9a3d43c3","bodyType":"Blob"},{"via":"xhr","url":"https://cnsh-cos-upcdnbd.bilivideo.com/ugcfxever/n261101s3qdrxthap9mo32ggp2875ze0.mp4.d/90d7ff07-4ad5-451e-bcbf-9a3d43c3","bodyType":"Blob"},{"via":"xhr","url":"//member.bilibili.com/upload/multipart/part","bodyType":"String"},{"via":"xhr","url":"https://cnsh-cos-upcdnbd.bilivideo.com/ugcfxever/n261101s3qdrxthap9mo32ggp2875ze0.mp4.d/90d7ff07-4ad5-451e-bcbf-9a3d43c3","bodyType":"Blob"},{"via":"xhr","url":"//member.bilibili.com/upload/multipart/part","bodyType":"String"},{"via":"xhr","url":"https://cnsh-cos-upcdnbd.bilivideo.com/ugcfxever/n261101s3qdrxthap9mo32ggp2875ze0.mp4.d/90d7ff07-4ad5-451e-bcbf-9a3d43c3","bodyType":"Blob"}]
+[01:30:41] ⚠ 期望 tid=231 但提交请求里既没见到它也没发生改写——落库分区大概率不对，发布后必须回读校验
+[01:30:41] 已上线 https://www.bilibili.com/video/BVHgBzVhbcto/
+[01:30:42] 回执 Workspace/tmp/ep_a_receipt2.json

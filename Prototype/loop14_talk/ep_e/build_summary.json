@@ -1,0 +1,9 @@
+{
+ "dir": "Workspace/tmp/ted_batch/musk",
+ "out": "Prototype/loop14_talk/ep_e",
+ "offset_s": 3.609,
+ "asr_words": 8377,
+ "sentences": 948,
+ "final_exists": true,
+ "elapsed_s": 2077
+}
