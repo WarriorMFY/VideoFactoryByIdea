@@ -51,6 +51,7 @@ const OPT = {
   protect: args.protect ? path.resolve(args.protect) : '', // ASR transcript.json：有语音的区间禁止切除
   protectPad: Number(args['protect-pad'] || 0.25),         // 语音保护的两侧余量（秒）
   protectConf: Number(args['protect-conf'] || 0.5),       // 只有置信度 ≥ 该值的词才用于保护（防 ASR 噪声误保护）
+  planOnly: !!args['plan-only'],                          // 只分析出 EDL，不渲染（烧字幕需要先有 EDL，两跑一渲染省一半时间）
 };
 
 // ---------------- 决策参数（剪辑规则） ----------------
@@ -482,6 +483,19 @@ function main() {
   console.log('[decide] 应用剪辑规则 ...');
   const dec = decide(sig, pr.duration);
   fs.writeFileSync(path.join(OUT, 'signals.json'), JSON.stringify(sig, null, 2));
+
+  // 只出剪辑计划：供 make_ass --edl 先重映射字幕，再带 --srt 渲染一次（避免渲染两遍）
+  if (OPT.planOnly) {
+    const keepDur = dec.kept.reduce((a, k) => a + (k.end - k.start), 0);
+    fs.writeFileSync(path.join(OUT, 'edits.json'), JSON.stringify({
+      generated_at: new Date().toISOString(), tool: 'vfactory.mjs', mode: 'plan-only',
+      source: path.resolve(SRC), duration: r3(pr.duration),
+      decision: { params: DECISION, rule: 'black→cut; freeze∧silence→cut; freeze-only or silence-only→keep; snap to scene cuts; drop keeps<minKeep; speech-protection; guard maxCutRatio', protect: OPT.protect || null },
+      kept: dec.kept, cut: dec.cut, cut_reasons: dec.reasons || [], guard: null,
+    }, null, 2));
+    console.log(`[plan-only] kept=${dec.kept.length} cut=${dec.cut.length} 预计成片 ${keepDur.toFixed(2)}s → EDL 已写，跳过渲染`);
+    process.exit(0);
+  }
 
   const work = path.join(OUT, '.work');
   fs.mkdirSync(work, { recursive: true });

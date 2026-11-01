@@ -265,12 +265,15 @@ async function uploadVideo(page, video, timeoutMin = 15) {
         const t = document.body.innerText;
         return {
           ready: /添加封面|稿件标题/.test(t),
+          // 上传仍在进行：进度条带「上传中」或「剩余时间」字样（大文件上传时表单早已就绪，
+          // 2026-11-01 实测 238MB 片 93% 时表单已可填，直接提交会卡死在 99.7%——必须等上传完成）
+          uploading: /上传中|剩余时间|已上传\s+\d/.test(t) && !/上传完成|100%/.test(t),
           pct: (t.match(/(\d+(?:\.\d+)?)\s*%/) || [])[1] || null,
           speed: (t.match(/([\d.]+)\s*MB\/s/) || [])[1] || null,
         };
       })
-      .catch(() => ({ ready: false, pct: null, speed: null }));
-    if (st.ready) {
+      .catch(() => ({ ready: false, uploading: true, pct: null, speed: null }));
+    if (st.ready && !st.uploading) {
       // 0 秒就绪通常是「秒传」（同文件已上传过）或恢复了上次的草稿，记一笔便于判断
       const hint = await page
         .evaluate(() => (/继续编辑|不用了/.test(document.body.innerText) ? '（有草稿恢复弹窗）' : ''))
@@ -435,7 +438,12 @@ async function setZone(page, zone) {
   await page.keyboard.press('Escape').catch(() => {});
   await sleep(300);
   const now = await page.evaluate(() => document.querySelector('.select-controller')?.innerText.trim() || '');
-  if (!picked) throw new Error(`分区列表里没有「${zone}」`);
+  if (!picked) {
+    const names = await page.evaluate(() =>
+      [...document.querySelectorAll('.drop-list-v2-item')].map((e) => (e.innerText || '').trim()).filter(Boolean)
+    );
+    throw new Error(`分区列表里没有「${zone}」（实际项：${names.join('、') || '空'}）`);
+  }
   log(`分区 ${cur || '?'} → ${now}`);
   return now;
 }
@@ -557,6 +565,13 @@ async function setCover(page, coverPath) {
 
 // ---------- 投稿 ----------
 async function submit(page) {
+  // 提交前硬门槛：上传必须真正完成（实测 93% 时表单可填但投稿会卡死）
+  for (let i = 0; i < 100; i++) {
+    const t = await page.evaluate(() => document.body.innerText).catch(() => '');
+    if (!/上传中|剩余时间/.test(t)) break;
+    if (i === 0) log('上传未完成，等它跑完再点投稿…');
+    await sleep(5000);
+  }
   // 用 bbox 中心的真实鼠标点击：合成 click 会被残留遮罩吃掉（实测第一次点没反应）
   const clicked = await realClick(page, '立即投稿');
   if (!clicked) throw new Error('找不到「立即投稿」');
@@ -571,6 +586,23 @@ async function submit(page) {
       .map((e) => (e.innerText || '').replace(/\s+/g, ' ').trim())
       .filter(Boolean)
   );
+  if (!ok) {
+    // 失败诊断：hook 是否拦到提交请求、响应码是多少
+    const diag = await page.evaluate(() => {
+      const t = window.__tidRewrite || null;
+      const perf = performance.getEntriesByType('resource')
+        .filter((e) => /add|submit|archive/.test(e.name))
+        .map((e) => ({ url: e.name.slice(0, 130), status: e.responseStatus ?? null, dur: Math.round(e.duration) }));
+      return { tidRewrite: t, addReqs: perf.slice(-10) };
+    }).catch(() => null);
+    if (diag) {
+      log(`诊断 tidRewrite: ${JSON.stringify({ seen: diag.tidRewrite?.seen, rewritten: diag.tidRewrite?.rewritten })}`);
+      log(`诊断 reqs: ${JSON.stringify((diag.tidRewrite?.reqs || []).slice(0, 12))}`);
+      const resp = (diag.tidRewrite?.reqs || []).filter((r) => r.resp).slice(-5);
+      if (resp.length) log(`诊断 提交类响应: ${JSON.stringify(resp)}`);
+      log(`诊断 add 相关请求: ${JSON.stringify(diag.addReqs)}`);
+    }
+  }
   await shot(page, 'submit');
   return { ok, errors, tail: txt.slice(-200) };
 }
@@ -614,6 +646,88 @@ async function cmdStatus() {
   if (!st.loggedIn) process.exitCode = 1;
 }
 
+/** 在表单页（goto 之后）安装提交请求 tid 抓取/改写 hook。
+ *  实证：投稿 UI 显示的分区与落库 tid 会脱钩（UI「知识」实测落库 tid=231 科技），
+ *  UI 文本不可信；--tid N 时把提交请求体里的 tid 强制改写为 N，并在回执留痕。 */
+async function installTidHook(page, tid, htype) {
+  await page.evaluate(({ tid, htype }) => {
+    window.__tidRewrite = { forced: tid, htype: htype || null, seen: [], rewritten: [], reqs: [] };
+    const ts = String(tid);
+    const th = htype == null ? null : String(htype);
+    const patch = (b) => {
+      try {
+        if (b == null) return b;
+        const note = (v) => window.__tidRewrite.reqs.push({ tid: String(v) });
+        if (typeof b === 'string') {
+          if (b.trimStart().startsWith('{')) {
+            try {
+              const j = JSON.parse(b);
+              if ('tid' in j) {
+                note(j.tid);
+                if (ts !== String(j.tid)) {
+                  window.__tidRewrite.rewritten.push({ orig: String(j.tid), to: ts });
+                  j.tid = Number(tid);
+                  // 新分类 id 必须与 tid 配对改写，否则后端 21001 参数错误（human_type2 与 tid 映射不一致）
+                  if (th != null && 'human_type2' in j && String(j.human_type2) !== th) {
+                    window.__tidRewrite.rewritten.push({ orig: 'htype:' + j.human_type2, to: 'htype:' + th });
+                    j.human_type2 = Number(th);
+                  }
+                  return JSON.stringify(j);
+                }
+              }
+            } catch {}
+            return b;
+          }
+          const m = b.match(/(^|&)tid=(\d+)/);
+          if (m) {
+            note(m[2]);
+            if (ts !== m[2]) { window.__tidRewrite.rewritten.push({ orig: m[2], to: ts }); return b.replace(/(^|&)tid=\d+/, '$1tid=' + ts); }
+          }
+          return b;
+        }
+        if (typeof FormData !== 'undefined' && b instanceof FormData) {
+          if (b.has('tid')) {
+            note(b.get('tid'));
+            if (ts !== String(b.get('tid'))) { window.__tidRewrite.rewritten.push({ orig: String(b.get('tid')), to: ts }); b.set('tid', ts); }
+          }
+          return b;
+        }
+        if (typeof URLSearchParams !== 'undefined' && b instanceof URLSearchParams) {
+          if (b.has('tid')) {
+            note(b.get('tid'));
+            if (ts !== b.get('tid')) { window.__tidRewrite.rewritten.push({ orig: b.get('tid'), to: ts }); b.set('tid', ts); }
+          }
+          return b;
+        }
+      } catch {}
+      return b;
+    };
+    const oo = XMLHttpRequest.prototype.open;
+    XMLHttpRequest.prototype.open = function (m, u) { this.__u = u; return oo.apply(this, arguments); };
+    const os = XMLHttpRequest.prototype.send;
+    XMLHttpRequest.prototype.send = function (b) {
+      try { if (b) window.__tidRewrite.reqs.push({ via: 'xhr', url: String(this.__u || '').slice(0, 120), bodyType: (b.constructor && b.constructor.name) || typeof b }); } catch {}
+      const xhr = this;
+      xhr.addEventListener('load', () => {
+        try {
+          const u = String(xhr.__u || '');
+          if (/add|submit|archive\/(v\d|web)/.test(u) || /member\.bilibili\.com\/x\/vu/.test(u)) {
+            window.__tidRewrite.reqs.push({ resp: u.slice(0, 140), status: xhr.status, body: String(xhr.responseText || '').slice(0, 500) });
+          }
+        } catch {}
+      });
+      return os.call(this, patch(b));
+    };
+    const of = window.fetch;
+    window.fetch = function (u, o) {
+      try { if (o && o.body) window.__tidRewrite.reqs.push({ via: 'fetch', url: String(u).slice(0, 120), bodyType: (o.body.constructor && o.body.constructor.name) || typeof o.body }); } catch {}
+      if (o && o.body) o = { ...o, body: patch(o.body) };
+      return of.call(this, u, o);
+    };
+  }, { tid, htype });
+  log(`已布防 tid 改写（全格式）：提交请求体里的 tid → ${tid}（UI 显示仅作参考，落库以回读校验为准）`);
+}
+
 async function cmdPublish() {
   const video = path.resolve(getOpt('--video', ''));
   const cover = getOpt('--cover', '');
@@ -623,6 +737,8 @@ async function cmdPublish() {
   const tags = (getOpt('--tags', '') || '').split(/[,，]/).map((s) => s.trim()).filter(Boolean);
   const zone = getOpt('--zone', '知识');
   const decl = getOpt('--decl', '');
+  const tidForce = getOpt('--tid', '');
+  const htypeForce = getOpt('--htype', '');
   const dryRun = has('--dry-run');
   const headless = bool('--headless', true);
   const receiptPath = getOpt('--receipt', path.join(RUN, 'receipt.json'));
@@ -641,6 +757,8 @@ async function cmdPublish() {
 
   await uploadVideo(page, video);
   await setTitle(page, title);
+  // tid hook 必须在 goto 之后安装：goto 会换文档、evaluate 装的 hook 会随文档销毁
+  if (tidForce) await installTidHook(page, tidForce, htypeForce || null);
   await setDesc(page, desc);
   const finalTags = tags.length ? await enforceTags(page, tags) : [];
   const finalZone = await setZone(page, zone);
@@ -652,6 +770,20 @@ async function cmdPublish() {
   } else {
     log('⚠ 未传 --cover，B 站会自动截帧做封面');
   }
+
+  // Playwright 原生网络监听：投稿接口的请求体与响应（比页面内 hook 可靠，跨 frame 也能抓）
+  page.on('request', (r) => {
+    if (/x\/vu\/web\/add|archive\/add/.test(r.url())) {
+      log(`[net] add 请求 ${r.method()} ${r.url().slice(0, 110)}`);
+      log(`[net] add 请求体: ${(r.postData() || '').slice(0, 800)}`);
+    }
+  });
+  page.on('response', async (r) => {
+    if (/x\/vu\/web\/add|archive\/add/.test(r.url())) {
+      const body = await r.text().catch(() => '<取响应失败>');
+      log(`[net] add 响应 ${r.status()}: ${body.slice(0, 600)}`);
+    }
+  });
 
   // 提交前全表单回读
   const snapshot = await page.evaluate(() => ({
@@ -699,9 +831,25 @@ async function cmdPublish() {
 
   const bvid = await grabBvid(page);
   const url = bvid ? `https://www.bilibili.com/video/${bvid}/` : null;
+  // 提交请求里实际带出去的 tid（含改写留痕）——UI 会撒谎，请求体不会
+  let tidTrace = null;
+  try {
+    tidTrace = await page.evaluate(() => JSON.parse(JSON.stringify(window.__tidRewrite || null)));
+    if (tidTrace) {
+      log(`提交 tid 留痕：seen=[${[...new Set(tidTrace.seen)].join(',')}] rewritten=${JSON.stringify(tidTrace.rewritten)}`);
+      const allTids = [...new Set([...(tidTrace.seen || []), ...(tidTrace.reqs || []).filter((r) => r.tid).map((r) => String(r.tid))])];
+      const bodyReqs = (tidTrace.reqs || []).filter((r) => r.bodyType || r.resp).slice(0, 15);
+      if (bodyReqs.length) log(`带体请求：${JSON.stringify(bodyReqs)}`);
+      if (tidForce && !tidTrace.rewritten.length && !allTids.includes(tidForce)) {
+        log(`⚠ 期望 tid=${tidForce} 但提交请求里既没见到它也没发生改写——落库分区大概率不对，发布后必须回读校验`);
+      } else if (tidForce && allTids.includes(tidForce)) {
+        log(`✓ 提交请求确认带 tid=${tidForce}（原生或改写），仍以发布后回读为准`);
+      }
+    }
+  } catch {}
   log(bvid ? `已上线 ${url}` : '⚠ 未抓到 BV 号（可能还在审核），去创作中心稿件管理页看');
   await shot(page, 'after_submit');
-  fs.writeFileSync(receiptPath, JSON.stringify({ ...base, published: true, bvid, url }, null, 2));
+  fs.writeFileSync(receiptPath, JSON.stringify({ ...base, tidExpected: tidForce || null, tidTrace, published: true, bvid, url }, null, 2));
   await closeBrowser();
   log(`回执 ${receiptPath}`);
 }
@@ -726,11 +874,45 @@ async function cmdVerify() {
     keywords: (meta('keywords') || '').split(',').filter(Boolean),
     descHead: (meta('description') || '').split(', 视频播放量')[0] || null,
     cover: strip((html.match(/"pic":"(.*?)"/) || [])[1]),
+    tid: (html.match(/"tid":(\d+)/) || [])[1] || null,
     publishedAt: (html.match(/"pubdate":(\d+)/) || [])[1] || null,
     durationS: (html.match(/"duration":(\d+)/) || [])[1] || null,
   };
   console.log(JSON.stringify(out, null, 2));
   fs.writeFileSync(path.join(RUN, 'verify.json'), JSON.stringify(out, null, 2));
+}
+
+async function cmdDelete() {
+  const bvid = getOpt('--bvid', '') || (argv[1] && /^BV/.test(argv[1]) ? argv[1] : '');
+  if (!bvid) throw new Error('缺 --bvid');
+  const UA = { 'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120 Safari/537.36', referer: 'https://www.bilibili.com/' };
+  const v = await (await fetch(`https://api.bilibili.com/x/web-interface/view?bvid=${bvid}`, { headers: UA })).json();
+  if (v.code !== 0) throw new Error(`查不到稿件（${v.code} ${v.message}），可能已删除`);
+  const aid = v.data.aid;
+  log(`目标：${bvid} aid=${aid}「${v.data.title.slice(0, 30)}」tid=${v.data.tid}`);
+
+  const { ctx } = await open({ headless: true });
+  const page = await ctx.newPage();
+  await page.goto('https://member.bilibili.com/platform/upload-manager/article', { waitUntil: 'domcontentloaded', timeout: 60000 });
+  await sleep(2500);
+  const csrf = await page.evaluate(() => document.cookie.match(/bili_jct=([^;]+)/)?.[1] || null);
+  if (!csrf) throw new Error('拿不到 csrf（bili_jct cookie 缺失）');
+  const res = await page.evaluate(
+    async ({ aid, csrf }) => {
+      const r = await fetch('https://member.bilibili.com/x/web/archives/del', {
+        method: 'POST',
+        credentials: 'include',
+        headers: { 'content-type': 'application/x-www-form-urlencoded' },
+        body: `aid=${aid}&csrf=${csrf}`,
+      });
+      return await r.json();
+    },
+    { aid, csrf }
+  );
+  log(`删除返回 code=${res.code} ${res.message || ''}`);
+  await closeBrowser();
+  if (res.code !== 0) throw new Error('删除失败：' + JSON.stringify(res).slice(0, 200));
+  log(`已删除 ${bvid}`);
 }
 
 function usage() {
@@ -739,9 +921,11 @@ function usage() {
   status                                   看登录态
   login  [--wait 300] [--headless 1]       扫码登录（导出二维码，自动刷新失效码）
   publish --video <mp4> --cover <jpg> --title "..." --desc-file <txt>
-          [--tags "a,b,c"] [--zone 知识] [--decl "含AI生成内容"]
+          [--tags "a,b,c"] [--zone 知识] [--tid 122] [--decl "含AI生成内容"]
           [--dry-run] [--headless 1] [--receipt out.json]
-  verify --bvid BV1xxxxxxxxx               线上页校验（标题/简介/封面/时长）
+          # --tid N：强制把提交请求体里的 tid 改写为 N（UI 分区会与落库脱钩，务必用 --tid 钉死）
+  verify --bvid BV1xxxxxxxxx               线上页校验（标题/简介/封面/时长/tid）
+  delete --bvid BV1xxxxxxxxx               删除稿件（不可逆！分区错误重投时用）
 
 产物目录：History/publish/bilibili/runs/<时间戳>_<命令>/（截图 + run.log + 回执）
 `);
@@ -753,6 +937,7 @@ try {
   else if (CMD === 'login') await cmdLogin();
   else if (CMD === 'publish') await cmdPublish();
   else if (CMD === 'verify') await cmdVerify();
+  else if (CMD === 'delete') await cmdDelete();
   else usage();
 } catch (e) {
   log('FATAL ' + (e.message || e));
