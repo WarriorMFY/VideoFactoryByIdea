@@ -1,0 +1,664 @@
+{
+  "generated_at": "2026-11-01T01:13:32.933Z",
+  "tool": "vfactory v0.1",
+  "source": {
+    "file": "\\Workspace\\tmp\\ted_feifei\\talk_720p.mp4",
+    "duration": 911.722667,
+    "video": {
+      "codec": "h264",
+      "width": 1280,
+      "height": 720,
+      "fps": "24000/1001",
+      "pix_fmt": "yuv420p",
+      "nb_frames": "21858"
+    },
+    "audio": {
+      "codec": "aac",
+      "sample_rate": "48000",
+      "channels": 2,
+      "bitrate": "160482"
+    }
+  },
+  "output": {
+    "file": "\\Prototype\\loop14_talk\\ep_a\\final.mp4",
+    "duration": 901.8,
+    "width": 1280,
+    "height": 720,
+    "fps": 30,
+    "transition": "xfade(fade,0.4s)"
+  },
+  "decision": {
+    "params": {
+      "blackPixTh": 0.04,
+      "blackPicTh": 0.98,
+      "blackMinDur": 0.3,
+      "freezeNoise": 0.003,
+      "freezeMinDur": 0.35,
+      "silenceDb": -35,
+      "silenceMinDur": 0.5,
+      "sceneTh": 8,
+      "snapWindow": 0.6,
+      "minGap": 0.4,
+      "minKeep": 1.2,
+      "headroom": 0
+    },
+    "rule": "black→cut; freeze∧silence→cut; freeze-only or silence-only→keep; snap to scene cuts; drop keeps<minKeep; speech-protection(no cut where ASR found words); guard maxCutRatio",
+    "protect": "\\Workspace\\tmp\\ted_feifei\\tr.json",
+    "protect_pad": 0.25,
+    "protect_conf": 0.5,
+    "protected_spans": [
+      {
+        "start": 4.16,
+        "end": 18.1
+      },
+      {
+        "start": 18.59,
+        "end": 25.87
+      },
+      {
+        "start": 27.41,
+        "end": 48.28
+      },
+      {
+        "start": 48.98,
+        "end": 57.04
+      },
+      {
+        "start": 57.8,
+        "end": 65.83
+      },
+      {
+        "start": 66.23,
+        "end": 67.87
+      },
+      {
+        "start": 69.11,
+        "end": 73.244014
+      },
+      {
+        "start": 73.73,
+        "end": 91.48
+      },
+      {
+        "start": 92.15,
+        "end": 130.03
+      },
+      {
+        "start": 130.49,
+        "end": 145.18
+      },
+      {
+        "start": 145.58,
+        "end": 181.78
+      },
+      {
+        "start": 182.39,
+        "end": 188.74
+      },
+      {
+        "start": 189.2,
+        "end": 207.19
+      },
+      {
+        "start": 207.62,
+        "end": 273.67
+      },
+      {
+        "start": 274.07,
+        "end": 289.96
+      },
+      {
+        "start": 290.54,
+        "end": 301.39
+      },
+      {
+        "start": 304.25,
+        "end": 345.58
+      },
+      {
+        "start": 346.01,
+        "end": 353.59
+      },
+      {
+        "start": 354.02,
+        "end": 362.95
+      },
+      {
+        "start": 364.01,
+        "end": 379.6
+      },
+      {
+        "start": 380.33,
+        "end": 402.07
+      },
+      {
+        "start": 402.65,
+        "end": 416.77
+      },
+      {
+        "start": 417.2,
+        "end": 448.54
+      },
+      {
+        "start": 448.91,
+        "end": 462.88
+      },
+      {
+        "start": 463.46,
+        "end": 482.59
+      },
+      {
+        "start": 483.17,
+        "end": 496.33
+      },
+      {
+        "start": 496.85,
+        "end": 519.94
+      },
+      {
+        "start": 520.4,
+        "end": 526.66
+      },
+      {
+        "start": 527.21,
+        "end": 551.5
+      },
+      {
+        "start": 552.35,
+        "end": 573.34
+      },
+      {
+        "start": 574.19,
+        "end": 600.25
+      },
+      {
+        "start": 600.9,
+        "end": 633.92
+      },
+      {
+        "start": 634.35,
+        "end": 639.44
+      },
+      {
+        "start": 640.8,
+        "end": 680.78
+      },
+      {
+        "start": 681.45,
+        "end": 693.83
+      },
+      {
+        "start": 694.53,
+        "end": 718.49
+      },
+      {
+        "start": 719.31,
+        "end": 748.22
+      },
+      {
+        "start": 748.59,
+        "end": 754.97
+      },
+      {
+        "start": 755.4,
+        "end": 789.92
+      },
+      {
+        "start": 796.14,
+        "end": 811.04
+      },
+      {
+        "start": 811.38,
+        "end": 816.98
+      },
+      {
+        "start": 817.56,
+        "end": 834.29
+      },
+      {
+        "start": 834.9,
+        "end": 850.79
+      },
+      {
+        "start": 851.37,
+        "end": 884.84
+      },
+      {
+        "start": 885.42,
+        "end": 906.2
+      }
+    ]
+  },
+  "kept": [
+    {
+      "start": 0,
+      "end": 3.128,
+      "dur": 3.128,
+      "signals": {
+        "black": false,
+        "freeze": false,
+        "silence": false,
+        "speech": false
+      }
+    },
+    {
+      "start": 3.67,
+      "end": 67.87,
+      "dur": 64.2,
+      "signals": {
+        "black": false,
+        "freeze": true,
+        "silence": true,
+        "speech": true
+      }
+    },
+    {
+      "start": 69.11,
+      "end": 91.8,
+      "dur": 22.69,
+      "signals": {
+        "black": false,
+        "freeze": true,
+        "silence": true,
+        "speech": true
+      }
+    },
+    {
+      "start": 92.15,
+      "end": 145.18,
+      "dur": 53.03,
+      "signals": {
+        "black": false,
+        "freeze": true,
+        "silence": true,
+        "speech": true
+      }
+    },
+    {
+      "start": 145.58,
+      "end": 188.74,
+      "dur": 43.16,
+      "signals": {
+        "black": false,
+        "freeze": true,
+        "silence": true,
+        "speech": true
+      }
+    },
+    {
+      "start": 189.2,
+      "end": 207.19,
+      "dur": 17.99,
+      "signals": {
+        "black": false,
+        "freeze": true,
+        "silence": true,
+        "speech": true
+      }
+    },
+    {
+      "start": 207.62,
+      "end": 526.693,
+      "dur": 319.073,
+      "signals": {
+        "black": false,
+        "freeze": true,
+        "silence": true,
+        "speech": true
+      }
+    },
+    {
+      "start": 527.21,
+      "end": 754.97,
+      "dur": 227.76,
+      "signals": {
+        "black": false,
+        "freeze": true,
+        "silence": true,
+        "speech": true
+      }
+    },
+    {
+      "start": 755.4,
+      "end": 816.98,
+      "dur": 61.58,
+      "signals": {
+        "black": false,
+        "freeze": true,
+        "silence": true,
+        "speech": true
+      }
+    },
+    {
+      "start": 817.442,
+      "end": 850.933,
+      "dur": 33.491,
+      "signals": {
+        "black": false,
+        "freeze": true,
+        "silence": true,
+        "speech": true
+      }
+    },
+    {
+      "start": 851.37,
+      "end": 884.84,
+      "dur": 33.47,
+      "signals": {
+        "black": false,
+        "freeze": true,
+        "silence": true,
+        "speech": true
+      }
+    },
+    {
+      "start": 885.093,
+      "end": 911.244,
+      "dur": 26.151,
+      "signals": {
+        "black": false,
+        "freeze": true,
+        "silence": true,
+        "speech": true
+      }
+    }
+  ],
+  "cut": [
+    {
+      "start": 3.128,
+      "end": 3.67
+    },
+    {
+      "start": 67.87,
+      "end": 69.11
+    },
+    {
+      "start": 91.8,
+      "end": 92.15
+    },
+    {
+      "start": 145.18,
+      "end": 145.58
+    },
+    {
+      "start": 188.74,
+      "end": 189.2
+    },
+    {
+      "start": 207.19,
+      "end": 207.62
+    },
+    {
+      "start": 526.693,
+      "end": 527.21
+    },
+    {
+      "start": 754.97,
+      "end": 755.4
+    },
+    {
+      "start": 816.98,
+      "end": 817.442
+    },
+    {
+      "start": 850.933,
+      "end": 851.37
+    },
+    {
+      "start": 884.84,
+      "end": 885.093
+    },
+    {
+      "start": 911.244,
+      "end": 911.723
+    }
+  ],
+  "cut_reasons": [
+    {
+      "start": 3.12812,
+      "end": 3.67032,
+      "why": "black（无画面）"
+    },
+    {
+      "start": 911.244,
+      "end": 911.619,
+      "why": "black（无画面）"
+    },
+    {
+      "start": 9.885,
+      "end": 10.526,
+      "why": "freeze∧silence（两路都无信息）"
+    },
+    {
+      "start": 14.89,
+      "end": 15.37,
+      "why": "freeze∧silence（两路都无信息）"
+    },
+    {
+      "start": 17.733,
+      "end": 18.143,
+      "why": "freeze∧silence（两路都无信息）"
+    },
+    {
+      "start": 47.172,
+      "end": 47.789,
+      "why": "freeze∧silence（两路都无信息）"
+    },
+    {
+      "start": 50.348,
+      "end": 50.887,
+      "why": "freeze∧silence（两路都无信息）"
+    },
+    {
+      "start": 51.896,
+      "end": 52.741,
+      "why": "freeze∧silence（两路都无信息）"
+    },
+    {
+      "start": 54.261,
+      "end": 54.772,
+      "why": "freeze∧silence（两路都无信息）"
+    },
+    {
+      "start": 68.068,
+      "end": 69.401,
+      "why": "freeze∧silence（两路都无信息）"
+    },
+    {
+      "start": 77.911,
+      "end": 78.537,
+      "why": "freeze∧silence（两路都无信息）"
+    },
+    {
+      "start": 92.384,
+      "end": 92.445,
+      "why": "freeze∧silence（两路都无信息）"
+    },
+    {
+      "start": 103.016,
+      "end": 103.353,
+      "why": "freeze∧silence（两路都无信息）"
+    },
+    {
+      "start": 144.853,
+      "end": 145.847,
+      "why": "freeze∧silence（两路都无信息）"
+    },
+    {
+      "start": 154.591,
+      "end": 155.448,
+      "why": "freeze∧silence（两路都无信息）"
+    },
+    {
+      "start": 159.262,
+      "end": 159.576,
+      "why": "freeze∧silence（两路都无信息）"
+    },
+    {
+      "start": 162.962,
+      "end": 163.571,
+      "why": "freeze∧silence（两路都无信息）"
+    },
+    {
+      "start": 169.089,
+      "end": 169.669,
+      "why": "freeze∧silence（两路都无信息）"
+    },
+    {
+      "start": 170.715,
+      "end": 171.046,
+      "why": "freeze∧silence（两路都无信息）"
+    },
+    {
+      "start": 189.272,
+      "end": 189.503,
+      "why": "freeze∧silence（两路都无信息）"
+    },
+    {
+      "start": 194.105,
+      "end": 194.319,
+      "why": "freeze∧silence（两路都无信息）"
+    },
+    {
+      "start": 194.528,
+      "end": 194.968,
+      "why": "freeze∧silence（两路都无信息）"
+    },
+    {
+      "start": 206.839,
+      "end": 207.624,
+      "why": "freeze∧silence（两路都无信息）"
+    },
+    {
+      "start": 232.524,
+      "end": 232.872,
+      "why": "freeze∧silence（两路都无信息）"
+    },
+    {
+      "start": 245.19,
+      "end": 245.579,
+      "why": "freeze∧silence（两路都无信息）"
+    },
+    {
+      "start": 248.435,
+      "end": 248.707,
+      "why": "freeze∧silence（两路都无信息）"
+    },
+    {
+      "start": 306.503,
+      "end": 306.64,
+      "why": "freeze∧silence（两路都无信息）"
+    },
+    {
+      "start": 329.575,
+      "end": 330.164,
+      "why": "freeze∧silence（两路都无信息）"
+    },
+    {
+      "start": 336.119,
+      "end": 336.503,
+      "why": "freeze∧silence（两路都无信息）"
+    },
+    {
+      "start": 341.207,
+      "end": 341.591,
+      "why": "freeze∧silence（两路都无信息）"
+    },
+    {
+      "start": 345.268,
+      "end": 345.345,
+      "why": "freeze∧silence（两路都无信息）"
+    },
+    {
+      "start": 353.645,
+      "end": 353.898,
+      "why": "freeze∧silence（两路都无信息）"
+    },
+    {
+      "start": 390.432,
+      "end": 390.754,
+      "why": "freeze∧silence（两路都无信息）"
+    },
+    {
+      "start": 398.86,
+      "end": 399.149,
+      "why": "freeze∧silence（两路都无信息）"
+    },
+    {
+      "start": 526.901,
+      "end": 527.492,
+      "why": "freeze∧silence（两路都无信息）"
+    },
+    {
+      "start": 530.905,
+      "end": 531.454,
+      "why": "freeze∧silence（两路都无信息）"
+    },
+    {
+      "start": 536.434,
+      "end": 537.035,
+      "why": "freeze∧silence（两路都无信息）"
+    },
+    {
+      "start": 639.161,
+      "end": 639.305,
+      "why": "freeze∧silence（两路都无信息）"
+    },
+    {
+      "start": 654.671,
+      "end": 654.946,
+      "why": "freeze∧silence（两路都无信息）"
+    },
+    {
+      "start": 678.386,
+      "end": 678.823,
+      "why": "freeze∧silence（两路都无信息）"
+    },
+    {
+      "start": 680.995,
+      "end": 681.222,
+      "why": "freeze∧silence（两路都无信息）"
+    },
+    {
+      "start": 747.664,
+      "end": 747.734,
+      "why": "freeze∧silence（两路都无信息）"
+    },
+    {
+      "start": 754.796,
+      "end": 755.463,
+      "why": "freeze∧silence（两路都无信息）"
+    },
+    {
+      "start": 811.394,
+      "end": 811.66,
+      "why": "freeze∧silence（两路都无信息）"
+    },
+    {
+      "start": 816.69,
+      "end": 817.15,
+      "why": "freeze∧silence（两路都无信息）"
+    },
+    {
+      "start": 817.442,
+      "end": 817.817,
+      "why": "freeze∧silence（两路都无信息）"
+    },
+    {
+      "start": 851.142,
+      "end": 851.601,
+      "why": "freeze∧silence（两路都无信息）"
+    },
+    {
+      "start": 884.528,
+      "end": 885.093,
+      "why": "freeze∧silence（两路都无信息）"
+    },
+    {
+      "start": 0,
+      "end": 911.723,
+      "why": "语音保护：45 段语音区间已锁定，切除量 22.28s → 6.00s（恢复 16.28s）"
+    }
+  ],
+  "guard": null
+}
