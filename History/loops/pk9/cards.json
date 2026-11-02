@@ -1,0 +1,43 @@
+{
+  "cards": [
+    {
+      "frame": "History/loops/pk8/frames_raw/pm9155/f_00250.jpg",
+      "big": true,
+      "kicker": "微软AI CEO · 11月2日 X 长文",
+      "headline": ["AI 模型没有意识", "开发者也不该让它有"],
+      "bullets": [
+        "据《商业内幕》11月2日报道，微软AI CEO苏莱曼在X发表长文，明确反对制造有意识的AI",
+        "原话：「如果开发具有意识的AI成为可能，那么这样做将是鲁莽的，我们不应该开发这类AI」"
+      ],
+      "footer": "引语均为原文直译 ｜ 热点信号来自本号感知器"
+    },
+    {
+      "frame": "History/loops/pk8/frames_raw/pm9155/f_00292.jpg",
+      "kicker": "核心主张",
+      "headline": ["意识萌芽一出现", "就该暂停开发"],
+      "bullets": [
+        "「若训练中出现意识萌芽，我会呼吁所有人暂停AI开发，直到能通过设计去除这些特性」",
+        "「一旦有证据表明模型已产生意识，必须立即向公众披露」"
+      ]
+    },
+    {
+      "frame": "History/loops/pk8/frames_raw/pm9155/f_01253.jpg",
+      "kicker": "最重的一句话",
+      "headline": ["80亿人", "没同意这场实验"],
+      "bullets": [
+        "「我们完全没有权利，把一种有意识的新物种带到这个世界上」",
+        "「80亿有意识的人类，并没有同意参与这场实验」"
+      ]
+    },
+    {
+      "frame": "History/loops/pk8/frames_raw/pm9155/f_00752.jpg",
+      "kicker": "背景 · 一个人的两条边界",
+      "headline": ["TED讲数字物种", "今天踩下意识刹车"],
+      "bullets": [
+        "TED里他把AI比作「数字新物种」；今晨自己划线：物种可以造，意识不能造",
+        "Anthropic 去年已立项研究「模型福祉」"
+      ],
+      "footer": "你怎么看？评论区聊聊 ｜ 原片与PK视频见动态链接"
+    }
+  ]
+}

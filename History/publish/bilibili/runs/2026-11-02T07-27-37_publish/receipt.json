@@ -1,0 +1,60 @@
+{
+  "at": "2026-11-02T07:28:42.319Z",
+  "video": "Prototype\\ep_salkhan_digest\\final.mp4",
+  "videoSizeMB": 22.36,
+  "title": "可汗学院创始人 TED 3分钟摘要：AI 时代，人还剩什么",
+  "tags": [
+    "TED",
+    "可汗学院",
+    "SalKhan",
+    "AI",
+    "人工智能",
+    "演讲"
+  ],
+  "zone": "人工智能",
+  "declaration": "含AI生成内容",
+  "cover": "Prototype\\ep_salkhan_digest\\cover.jpg",
+  "coverUploaded": true,
+  "dryRun": false,
+  "runDir": "History\\publish\\bilibili\\runs\\2026-11-02T07-27-37_publish",
+  "tidExpected": "231",
+  "tidTrace": {
+    "forced": "231",
+    "htype": null,
+    "seen": [],
+    "rewritten": [],
+    "reqs": [
+      {
+        "via": "xhr",
+        "url": "/x/vu/web/cover/up?t=1793604519362&x-bili-locale-json=%7B%22c_locale%22:%7B%22language%22:%22zh%22,%22script%22:%22Hans%",
+        "bodyType": "FormData"
+      },
+      {
+        "via": "xhr",
+        "url": "/x/vu/web/cover/up?t=1793604519362&x-bili-locale-json=%7B%22c_locale%22:%7B%22language%22:%22zh%22,%22script%22:%22Hans%",
+        "bodyType": "FormData"
+      },
+      {
+        "via": "xhr",
+        "url": "//member.bilibili.com/x/vu/web/add/v3?web_location=333.1024&t=1793604522852&csrf=2e1dbec89a9cb044e0a82f11daf4e06e&x-bili",
+        "bodyType": "String"
+      },
+      {
+        "tid": "231"
+      },
+      {
+        "via": "fetch",
+        "url": "//data.bilibili.com/v2/log/web?content_type=pbrequest&logid=021436&disable_compression=true",
+        "bodyType": "Uint8Array"
+      },
+      {
+        "via": "fetch",
+        "url": "//data.bilibili.com/v2/log/web?content_type=pbrequest&logid=021436&disable_compression=true",
+        "bodyType": "Uint8Array"
+      }
+    ]
+  },
+  "published": true,
+  "bvid": "BV1pp4F6rExH",
+  "url": "https://www.bilibili.com/video/BV1pp4F6rExH/"
+}

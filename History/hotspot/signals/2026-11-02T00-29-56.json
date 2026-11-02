@@ -1,0 +1,43 @@
+{
+  "run": "2026-11-02T00-29-56",
+  "generated_at": "2026-11-01T16:29:56.142Z",
+  "window_hours": 24,
+  "counts": {
+    "total": 3,
+    "fresh": 3,
+    "repeat": 0
+  },
+  "sources_status": "all_ok",
+  "signals": [
+    {
+      "key": "https://macaubusiness.com/shedding-light-on-digital-cobwebs",
+      "source": "websearch",
+      "kind": "采访/报道",
+      "title": "澳门商业·SailPoint CEO麦克莱恩香港媒体见面会：AI代理让机器身份超人类100倍，企业都在油门与刹车之间",
+      "url": "https://macaubusiness.com/shedding-light-on-digital-cobwebs",
+      "published": "2026-11-02",
+      "note": "纳斯达克上市身份安全公司SailPoint创始人兼CEO麦克莱恩谈AI代理治理：非人类身份数量最高达员工100倍，传统防火墙失效，需从静态授权转向零常设特权与实时上下文校验。",
+      "repeat": false
+    },
+    {
+      "key": "https://www.mrjjxw.com/articles/2026-11-01/4633603.html",
+      "source": "websearch",
+      "kind": "采访/报道",
+      "title": "每日经济新闻·专访京东零售AIGC负责人：双11赛博晚会用《清明上河图》做AI晚会，ROI只做到0.8到1",
+      "url": "https://www.mrjjxw.com/articles/2026-11-01/4633603.html",
+      "published": "2026-11-01",
+      "note": "京东第二场大型AI晚会由百位外部AI创作者供给内容，海尔从友情合作升级特约赞助，但负责人坦言形式太新、植入高度非标，品牌预算周期跟不上技术迭代。",
+      "repeat": false
+    },
+    {
+      "key": "https://quote.eastmoney.com/zs000123.html",
+      "source": "websearch",
+      "kind": "采访/报道",
+      "title": "中证头条·马斯克披露Neuralink最新产品路线：首款心灵感应Telepathy、第二款盲视Blindsight",
+      "url": "https://quote.eastmoney.com/zs000123.html?jump_to_web=true",
+      "published": "2026-11-01 22:55",
+      "note": "马斯克称Telepathy可仅凭意念与电脑或人交流，并预测其输出带宽几年内将超过人类说话与打字；第二款产品Blindsight瞄准视觉重建。",
+      "repeat": false
+    }
+  ]
+}

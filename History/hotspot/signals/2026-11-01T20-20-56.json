@@ -1,0 +1,54 @@
+{
+  "run": "2026-11-01T20-20-56",
+  "generated_at": "2026-11-01T12:20:56.300Z",
+  "window_hours": 24,
+  "counts": {
+    "total": 4,
+    "fresh": 3,
+    "repeat": 1
+  },
+  "sources_status": "all_ok",
+  "signals": [
+    {
+      "key": "https://timesofindia.indiatimes.com/technology/tech-news/nvidia-ceo-jensen-huang-wants-all-the-worlds-great-minds-to-be-able-come-to-america-wants-immigration-that-is-done-lawfully-and-/articleshow/135419868.cms",
+      "source": "websearch",
+      "kind": "采访/报道",
+      "title": "印度时报·英伟达CEO黄仁勋做客BG2播客：欢迎全球人才合法赴美",
+      "url": "https://timesofindia.indiatimes.com/technology/tech-news/nvidia-ceo-jensen-huang-wants-all-the-worlds-great-minds-to-be-able-come-to-america-wants-immigration-that-is-done-lawfully-and-/articleshow/135419868.cms",
+      "published": "2026-11-01 12:00",
+      "note": "黄仁勋称吸引全球优秀人才是美国超级实力，移民须合法且平衡，回应PERM计划被暂停争议",
+      "repeat": false
+    },
+    {
+      "key": "https://aitoolbriefing.com/industry/big-tech-superintelligence-rebrand-altman-2026",
+      "source": "websearch",
+      "kind": "采访/报道",
+      "title": "AI Tool Briefing·奥特曼拒绝superintelligence更名风潮：Politico播客访谈",
+      "url": "https://aitoolbriefing.com/industry/big-tech-superintelligence-rebrand-altman-2026",
+      "published": "2026-11-01 10:00",
+      "note": "Altman在Politico Decoded播客称OpenAI无意改名，质疑superintelligence只是营销话术；马斯克、扎克伯格、黄仁勋则跟进行政令措辞",
+      "repeat": false
+    },
+    {
+      "key": "https://www.nfnews.com/content/EynGgGjd3Z.html",
+      "source": "websearch",
+      "kind": "采访/报道",
+      "title": "南方+·张学记院士大湾区论坛主旨演讲《从智能传感走向人类文明形态》",
+      "url": "https://www.nfnews.com/content/EynGgGjd3Z.html",
+      "published": "2026-11-01",
+      "note": "深圳大学讲席教授张学记：生物传感器、AI与脑机接口交叉融合正拓展健康监测与脑联网研究空间",
+      "repeat": false
+    },
+    {
+      "key": "https://www.nfnews.com/content/EynGgGjd3Z.html",
+      "source": "websearch",
+      "kind": "采访/报道",
+      "title": "南方+·作家何建明大湾区论坛主旨演讲：AI创新需要人文温度",
+      "url": "https://www.nfnews.com/content/EynGgGjd3Z.html",
+      "published": "2026-11-01",
+      "note": "著名作家何建明：人工智能发展需吸收人文思想与文学创作灵感，更好回应人的精神需求",
+      "repeat": true,
+      "first_seen": "2026-11-01T20-20-56"
+    }
+  ]
+}

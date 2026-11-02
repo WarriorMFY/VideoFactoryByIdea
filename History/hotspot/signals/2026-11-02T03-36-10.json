@@ -1,0 +1,33 @@
+{
+  "run": "2026-11-02T03-36-10",
+  "generated_at": "2026-11-01T19:36:10.916Z",
+  "window_hours": 24,
+  "counts": {
+    "total": 2,
+    "fresh": 2,
+    "repeat": 0
+  },
+  "sources_status": "all_ok",
+  "signals": [
+    {
+      "key": "https://www.163.com/dy/article/LAMB9APU0514A42S.html",
+      "source": "websearch",
+      "kind": "采访/报道",
+      "title": "新闻晨报·智元联席总裁姚卯青谈具身智能：大模型要击穿我们，那就成为AI那一侧",
+      "url": "https://www.163.com/dy/article/LAMB9APU0514A42S.html",
+      "published": "2026-11-01 22:06",
+      "note": "智元创新日主论坛演讲：回应通用大模型对机器人公司的冲击，提出生产力三标准（可衡量/可复制/可持续）与物理AI数据规模化思路",
+      "repeat": false
+    },
+    {
+      "key": "https://www.jinantimes.com.cn/news-98-10965913.html",
+      "source": "websearch",
+      "kind": "采访/报道",
+      "title": "济南时报·李开复未来投资大会主旨演讲：AI是最强参谋长，但被企业大材小用",
+      "url": "https://www.jinantimes.com.cn/news-98-10965913.html",
+      "published": "2026-11-01",
+      "note": "零一万物CEO在2026未来投资大会演讲：AI应进入企业核心决策层而非只做客服审文件，CEO须成为首位AI使用者与企业AI总指挥",
+      "repeat": false
+    }
+  ]
+}

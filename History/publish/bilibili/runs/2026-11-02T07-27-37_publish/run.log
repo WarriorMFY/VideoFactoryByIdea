@@ -1,0 +1,36 @@
+[07:27:38] 浏览器 msedge｜profile=F:\AgentWorkArea\WorkBuddy\TalkFactory\Workspace\run\bili_profile
+[07:27:39] 已登录 UID=3747573749779036
+[07:27:54] 未见草稿恢复弹窗（干净进入）
+[07:27:54] 投稿页 file input × 3
+[07:27:54] 已挂载 final.mp4（22.4MB），等转码/表单
+[07:27:54] 上传 0%  0.0MB/s
+[07:27:57] 上传 17%  0.2MB/s
+[07:28:00] 上传 30%  2.2MB/s
+[07:28:03] 上传 40%  0.7MB/s
+[07:28:06] 上传 44%  0.4MB/s
+[07:28:09] 上传 53%  0.7MB/s
+[07:28:12] 上传 62%  0.5MB/s
+[07:28:15] 上传 79%  1.3MB/s
+[07:28:18] 上传 96%  0.9MB/s
+[07:28:21] 表单就绪（27s）
+[07:28:21] 标题 OK（29 字）
+[07:28:21] 已布防 tid 改写（全格式）：提交请求体里的 tid → 231（UI 显示仅作参考，落库以回读校验为准）
+[07:28:21] 简介 OK：可汗学院创始人萨尔·汗（Sal Khan）× 心理治疗师埃丝特·佩瑞尔（Esth…
+[07:28:21] 标签第 1 轮：多余 [生活记录,校园,记录] 缺 [TED,可汗学院,SalKhan,AI,人工智能,演讲]
+[07:28:32] 标签 OK（6）：TED / 可汗学院 / SalKhan / AI / 人工智能 / 演讲
+[07:28:32] 分区已是「人工智能」
+[07:28:33] 创作声明 = 含AI生成内容
+[07:28:35] 封面已传入，等裁剪界面
+[07:28:39] 封面第 1 步：完成
+[07:28:42] 封面完成
+[07:28:42] 表单回读 {"title":"可汗学院创始人 TED 3分钟摘要：AI 时代，人还剩什么","zone":"人工智能","decl":"含AI生成内容","descLen":961,"coverSet":true}
+[07:28:43] 已点投稿
+[07:28:43] [net] add 请求 POST https://member.bilibili.com/x/vu/web/add/v3?web_location=333.1024&t=1793604522852&csrf=2e1dbec89a9cb044e0a82f1
+[07:28:43] [net] add 请求体: {"cover":"https://archive.biliimg.com/bfs/archive/3db5aa840faebcceb6a5a962ac5df747332f8dd2.jpg","cover43":"https://archive.biliimg.com/bfs/archive/9bdf4a40a2f4b943f4e4c3b49c68aa76254c154e.jpg","ai_cover":0,"is_ab_cover":0,"ab_cover_info":null,"title":"可汗学院创始人 TED 3分钟摘要：AI 时代，人还剩什么","copyright":3,"creation_statement":{"id":1},"human_type2":1011,"tid":231,"tag":"TED,可汗学院,SalKhan,AI,人工智能,演讲","desc":"可汗学院创始人萨尔·汗（Sal Khan）× 心理治疗师埃丝特·佩瑞尔（Esther Perel）TED《交汇》对谈 3 分钟中文摘要。解说为本频道原创整理，画面取自 TED 官方视频（CC BY–NC–ND 4.0，非商业摘要引用）。\n\n完整原片（20:51）：https://www.bilibili.com/video/BV1CH4F6GEUT?t=0\n\n【快速导航通道】本片每章右上角标注了对应原片时间，按下表可直接跳到原片完整论述：\n01 第1章 · 去身体化的世界 ｜ 摘要 00:03 → 原片 04:40  https://www.bilibili.com/video/BV1CH4F6GEUT?t=280\n02 第2章 · 重造教育这台旧机器 ｜ 摘要 00:20 → 原片 02:02  https://www.bilibili.com/video/BV1CH4F6G
+[07:28:43] [net] add 响应 200: {"code":0,"message":"OK","ttl":1,"data":{"aid":117545654814380,"bvid":"BV1pp4F6rExH"}}
+[07:28:48] 投稿返回 ok=true errors=[]
+[07:28:52] 提交 tid 留痕：seen=[] rewritten=[]
+[07:28:52] 带体请求：[{"via":"xhr","url":"/x/vu/web/cover/up?t=1793604519362&x-bili-locale-json=%7B%22c_locale%22:%7B%22language%22:%22zh%22,%22script%22:%22Hans%","bodyType":"FormData"},{"via":"xhr","url":"/x/vu/web/cover/up?t=1793604519362&x-bili-locale-json=%7B%22c_locale%22:%7B%22language%22:%22zh%22,%22script%22:%22Hans%","bodyType":"FormData"},{"via":"xhr","url":"//member.bilibili.com/x/vu/web/add/v3?web_location=333.1024&t=1793604522852&csrf=2e1dbec89a9cb044e0a82f11daf4e06e&x-bili","bodyType":"String"},{"via":"fetch","url":"//data.bilibili.com/v2/log/web?content_type=pbrequest&logid=021436&disable_compression=true","bodyType":"Uint8Array"},{"via":"fetch","url":"//data.bilibili.com/v2/log/web?content_type=pbrequest&logid=021436&disable_compression=true","bodyType":"Uint8Array"}]
+[07:28:52] ✓ 提交请求确认带 tid=231（原生或改写），仍以发布后回读为准
+[07:28:52] 已上线 https://www.bilibili.com/video/BV1pp4F6rExH/
+[07:28:53] 回执 F:\AgentWorkArea\WorkBuddy\TalkFactory\History\publish\bilibili\runs\2026-11-02T07-27-37_publish\receipt.json

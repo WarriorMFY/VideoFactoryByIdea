@@ -1,0 +1,67 @@
+{
+  "at": "2026-11-01T07:47:51.432Z",
+  "account": {
+    "mid": "3747573749779036",
+    "name": "今天AI又离谱了",
+    "sign": "日更：每天挑一条最离谱的 AI 新闻，一句话讲清事实，再补一句人话。",
+    "follower": 1,
+    "like_num": 4,
+    "archive_count": 18
+  },
+  "counts": {
+    "works": 2,
+    "visible": 2,
+    "hidden": 0
+  },
+  "totals": {
+    "view": 31,
+    "like": 1,
+    "coin": 0,
+    "favorite": 0,
+    "share": 0,
+    "reply": 2,
+    "danmaku": 0
+  },
+  "items": [
+    {
+      "bvid": "BV113xW6VEv6",
+      "aid": 117538625227320,
+      "ok": true,
+      "title": "李飞飞：AI 即将真正看懂世界",
+      "pubdate": 1793497182,
+      "duration": 902,
+      "tid": 231,
+      "tname": "",
+      "state": 0,
+      "stat": {
+        "view": 28,
+        "like": 1,
+        "coin": 0,
+        "favorite": 0,
+        "share": 0,
+        "reply": 1,
+        "danmaku": 0
+      }
+    },
+    {
+      "bvid": "BV1yvxs61Eaw",
+      "aid": 117539581462799,
+      "ok": true,
+      "title": "李飞飞 TED 3分钟摘要：AI 的下一个突破口，是空间智能",
+      "pubdate": 1793511731,
+      "duration": 171,
+      "tid": 231,
+      "tname": "",
+      "state": 0,
+      "stat": {
+        "view": 3,
+        "like": 0,
+        "coin": 0,
+        "favorite": 0,
+        "share": 0,
+        "reply": 1,
+        "danmaku": 0
+      }
+    }
+  ]
+}

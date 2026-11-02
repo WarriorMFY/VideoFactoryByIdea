@@ -1,0 +1,23 @@
+{
+  "run": "2026-11-02T04-37-48",
+  "generated_at": "2026-11-01T20:37:48.964Z",
+  "window_hours": 24,
+  "counts": {
+    "total": 1,
+    "fresh": 1,
+    "repeat": 0
+  },
+  "sources_status": "all_ok",
+  "signals": [
+    {
+      "key": "https://news.qq.com/rain/a/20261102A00J3100",
+      "source": "websearch",
+      "kind": "采访/报道",
+      "title": "腾讯新闻·芯流解读：斯坦福神经科学家Andrew Huberman播客论断“OpenAI、Anthropic终局都是生物技术公司”",
+      "url": "https://news.qq.com/rain/a/20261102A00J3100",
+      "published": "2026-11-02 04:00",
+      "note": "Huberman在播客访谈中称大模型巨头终局将转向生物技术（神经科学/药物研发为核心），文章同日梳理字节Anew Labs、百度百图生科等国内四巨头AI制药布局作为印证",
+      "repeat": false
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "run": "2026-11-01T19-19-16",
+  "generated_at": "2026-11-01T11:19:16.634Z",
+  "window_hours": 24,
+  "counts": {
+    "total": 3,
+    "fresh": 3,
+    "repeat": 0
+  },
+  "sources_status": "all_ok",
+  "signals": [
+    {
+      "key": "https://finance.sina.com.cn/stock/bxjj/2026-11-01/doc-inixeyiz3195613.shtml",
+      "source": "websearch",
+      "kind": "采访/报道",
+      "title": "新浪财经·苹果CEO特努斯采访：不会为了做AI而做产品",
+      "url": "https://finance.sina.com.cn/stock/bxjj/2026-11-01/doc-inixeyiz3195613.shtml",
+      "published": "2026-11-01",
+      "note": "苹果新CEO约翰·特努斯为AI布局辩护：一定会在产品中用AI，但拒绝为AI而AI，强调做出用户真正喜爱的产品",
+      "repeat": false
+    },
+    {
+      "key": "https://www.163.com/dy/article/LAKSU7UJ0511CPVM.html",
+      "source": "websearch",
+      "kind": "采访/报道",
+      "title": "快科技·OpenAI CEO奥特曼专访：DRAM放在PC是资源浪费 应优先供给AI数据中心",
+      "url": "https://www.163.com/dy/article/LAKSU7UJ0511CPVM.html",
+      "published": "2026-11-01 08:36",
+      "note": "奥特曼接受《Cheeky Pint》专访：PC闲置DRAM利用率仅5%是浪费，存储应集中云端；还谈超级智能倾向多AI制衡、代理按任务计价等话题",
+      "repeat": false
+    },
+    {
+      "key": "https://timesofindia.indiatimes.com/technology/tech-news/microsoft-ceo-satya-nadella-says-that-when-dario-amodei-ilya-sutskever-sam-altman-greg-brockman-and-elon-musk-were-all-i-guess-one-happy-family-they-were-really-/articleshow/135424109.cms",
+      "source": "websearch",
+      "kind": "采访/报道",
+      "title": "印度时报·微软CEO纳德拉演讲：AI对齐不会自然达成 我改变了想法",
+      "url": "https://timesofindia.indiatimes.com/technology/tech-news/microsoft-ceo-satya-nadella-says-that-when-dario-amodei-ilya-sutskever-sam-altman-greg-brockman-and-elon-musk-were-all-i-guess-one-happy-family-they-were-really-/articleshow/135424109.cms",
+      "published": "2026-11-01",
+      "note": "纳德拉在德国行业活动演讲：回顾2018-19年与Amodei/Sutskever/Altman等scaling law信奉者的渊源，坦言最大转变是不再认为AI对齐会自然fall out，对齐是更难的问题",
+      "repeat": false
+    }
+  ]
+}

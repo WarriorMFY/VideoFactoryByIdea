@@ -1,0 +1,209 @@
+{
+  "at": "2026-11-02T07:30:34.653Z",
+  "prevAt": "2026-11-02T05:47:03.893Z",
+  "gapH": 1.725211111111111,
+  "totals": {
+    "now": {
+      "view": 208,
+      "like": 3,
+      "coin": 0,
+      "favorite": 0,
+      "share": 1,
+      "reply": 16,
+      "danmaku": 0
+    },
+    "delta": {
+      "view": 5,
+      "like": 0,
+      "favorite": 0,
+      "coin": 0,
+      "reply": 1,
+      "share": 0,
+      "danmaku": 0
+    }
+  },
+  "rows": [
+    {
+      "bvid": "BV113xW6VEv6",
+      "title": "李飞飞：AI 即将真正看懂世界",
+      "view": 57,
+      "deltaView": 1,
+      "engagement": 5.263157894736842
+    },
+    {
+      "bvid": "BV1fwxp68EQB",
+      "title": "马斯克：人形机器人会比汽车更大，多数人还没意识到",
+      "view": 30,
+      "deltaView": 1,
+      "engagement": 6.666666666666667
+    },
+    {
+      "bvid": "BV1tKxW62EhT",
+      "title": "李开复：AI 抢走常规工作后，人类只剩这一条路",
+      "view": 26,
+      "deltaView": 1,
+      "engagement": 7.6923076923076925
+    },
+    {
+      "bvid": "BV1J8xt62Emf",
+      "title": "AI大佬吵起来了：李开复说15年内取代你，马斯克说根本不用愁",
+      "view": 13,
+      "deltaView": 1,
+      "engagement": 0
+    },
+    {
+      "bvid": "BV1cCxs63ESU",
+      "title": "李开复 TED 3分钟摘要：AI 抢走工作后，人凭什么立足",
+      "view": 6,
+      "deltaView": 1,
+      "engagement": 16.666666666666664
+    },
+    {
+      "bvid": "BV1DExp6UEdb",
+      "title": "李飞飞 TED 3分钟摘要：AI 的下一个突破口，是空间智能",
+      "view": 14,
+      "deltaView": 0,
+      "engagement": 14.285714285714285
+    },
+    {
+      "bvid": "BV1HCxs63EwV",
+      "title": "马斯克 TED 3分钟摘要：机器人比汽车更大，真相比答案更重要",
+      "view": 10,
+      "deltaView": 0,
+      "engagement": 10
+    },
+    {
+      "bvid": "BV1oSxp6tEPQ",
+      "title": "苏莱曼：AI 不是工具，人类正在造一种新物种",
+      "view": 9,
+      "deltaView": 0,
+      "engagement": 11.11111111111111
+    },
+    {
+      "bvid": "BV1yvxs61Eaw",
+      "title": "李飞飞 TED 3分钟摘要：AI 的下一个突破口，是空间智能",
+      "view": 8,
+      "deltaView": 0,
+      "engagement": 12.5
+    },
+    {
+      "bvid": "BV1VRx16WEyn",
+      "title": "剪辑提速的 5 个小技巧，每条都能立刻用",
+      "view": 8,
+      "deltaView": 0,
+      "engagement": 0
+    },
+    {
+      "bvid": "BV1wFxs66EpB",
+      "title": "Cloudflare CEO：AI 正在杀死互联网的流量生意",
+      "view": 7,
+      "deltaView": 0,
+      "engagement": 14.285714285714285
+    },
+    {
+      "bvid": "BV1cwxs6uECu",
+      "title": "Cloudflare CEO TED 3分钟摘要：AI 正在杀死互联网的流量生意",
+      "view": 6,
+      "deltaView": 0,
+      "engagement": 16.666666666666664
+    },
+    {
+      "bvid": "BV19Gxp6XE4T",
+      "title": "奥尔特曼：AI 超越人类只是时间问题",
+      "view": 5,
+      "deltaView": 0,
+      "engagement": 20
+    },
+    {
+      "bvid": "BV1rCxs6gEEb",
+      "title": "奥尔特曼 TED 3分钟摘要：AGI、五亿用户与那枚魔戒",
+      "view": 3,
+      "deltaView": 0,
+      "engagement": 33.33333333333333
+    },
+    {
+      "bvid": "BV1DYxb6eEFs",
+      "title": "10 亿美元没搞定教育，AI 三年给答案｜Netflix 创始人 TED 摘要 3 分钟",
+      "view": 2,
+      "deltaView": 0,
+      "engagement": 0
+    },
+    {
+      "bvid": "BV1Qbxb6KE2S",
+      "title": "Netflix 创始人：10 亿美元砸进教育没搞定，AI 三年给出答案",
+      "view": 2,
+      "deltaView": 0,
+      "engagement": 50
+    },
+    {
+      "bvid": "BV1qDxs6vEUS",
+      "title": "苏莱曼 TED 3分钟摘要：AI 不是工具，是新的数字物种",
+      "view": 1,
+      "deltaView": 0,
+      "engagement": 100
+    },
+    {
+      "bvid": "BV1crx16AEav",
+      "title": "分区验证测试稿F，稍后删除",
+      "view": 1,
+      "deltaView": 0,
+      "engagement": 0
+    },
+    {
+      "bvid": "BV1wBx16NEoC",
+      "title": "分区验证测试稿C，稍后删除",
+      "view": 0,
+      "deltaView": 0,
+      "engagement": null
+    },
+    {
+      "bvid": "BV1wBx16KEhf",
+      "title": "分区验证测试稿B，稍后删除",
+      "view": 0,
+      "deltaView": 0,
+      "engagement": null
+    },
+    {
+      "bvid": "BV1pp4F6rExH",
+      "title": "可汗学院创始人 TED 3分钟摘要：AI 时代，人还剩什么",
+      "view": 0,
+      "deltaView": null,
+      "engagement": null
+    },
+    {
+      "bvid": "BV1CH4F6GEUT",
+      "title": "可汗学院创始人对谈心理大师：AI 拿走一切之后，人还剩什么",
+      "view": 0,
+      "deltaView": null,
+      "engagement": null
+    },
+    {
+      "bvid": "BV1sYx16BEMh",
+      "title": null,
+      "view": null,
+      "deltaView": null,
+      "engagement": null
+    },
+    {
+      "bvid": "BV1wzx16eEjd",
+      "title": null,
+      "view": null,
+      "deltaView": null,
+      "engagement": null
+    },
+    {
+      "bvid": "BV1AaxC6hExH",
+      "title": null,
+      "view": null,
+      "deltaView": null,
+      "engagement": null
+    }
+  ],
+  "alerts": [
+    "**BV1pp4F6rExH**「可汗学院创始人 TED 3分钟摘要：AI 时代，人还剩什么」首次进入跟踪（新发布或此前漏采）",
+    "**BV1CH4F6GEUT**「可汗学院创始人对谈心理大师：AI 拿走一切之后，人还剩什么」首次进入跟踪（新发布或此前漏采）",
+    "**BV1sYx16BEMh** 取不到数据（62012 仅UP主自己可见（state=-50，审核中或被设为私享））——审核中、已删除或仅自己可见，去创作中心确认",
+    "**BV1wzx16eEjd** 取不到数据（62012 仅UP主自己可见（state=-50，审核中或被设为私享））——审核中、已删除或仅自己可见，去创作中心确认",
+    "**BV1AaxC6hExH** 取不到数据（62012 仅UP主自己可见（state=-50，审核中或被设为私享））——审核中、已删除或仅自己可见，去创作中心确认"
+  ]
+}

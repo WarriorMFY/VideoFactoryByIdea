@@ -1,0 +1,64 @@
+{
+  "gap": 0.45,
+  "voice": "zh-CN-YunyangNeural",
+  "rate": "+6%",
+  "title_card": {
+    "dur": 3.6,
+    "lines": [
+      { "style": "T1", "text": "物种可以造，意识不能造" },
+      { "style": "T2", "text": "苏莱曼今晨长文，给AI亲手划线" }
+    ]
+  },
+  "segments": [
+    {
+      "frame": "History/loops/pk8/frames_raw/pm9155/f_00250.jpg",
+      "topic": "上月TED",
+      "speaker": "穆斯塔法·苏莱曼 · 微软AI CEO",
+      "quote_en": "A new digital species",
+      "text": "上个月在TED，他把AI称作一种全新的数字物种，教人类怎么和它共处。"
+    },
+    {
+      "frame": "History/loops/pk8/frames_raw/pm9155/f_00292.jpg",
+      "topic": "今晨长文",
+      "text": "今晨，这位微软AI CEO突然发长文，亲手给这条路线划了一道线：AI模型没有意识，也不该有。"
+    },
+    {
+      "frame": "History/loops/pk9/bg_sul/q1.jpg",
+      "text": "长文原话：我们这些AI开发者，完全没有权利把一个有意识的新物种带到这个世界上。"
+    },
+    {
+      "frame": "History/loops/pk9/bg_sul/q2.jpg",
+      "text": "因为地球上80亿有意识的人类，并没有同意参与这场实验。"
+    },
+    {
+      "frame": "History/loops/pk9/bg_sul/q3.jpg",
+      "text": "他甚至承诺：如果训练中出现意识萌芽，我会呼吁所有人暂停AI开发。"
+    },
+    {
+      "frame": "History/loops/pk8/frames_raw/pm9155/f_00960.jpg",
+      "topic": "怎么理解",
+      "text": "这不是自我打脸。在他看来，这是一枚硬币的两面：物种可以造，意识不能造。"
+    },
+    {
+      "frame": "History/loops/pk8/frames_raw/pm9155/f_01253.jpg",
+      "text": "他还给行业留了三个动作：出现意识迹象立即披露、开发意识检测基准、把保护人类放在第一位。"
+    },
+    {
+      "frame": "History/loops/pk8/frames_raw/pm9155/f_00752.jpg",
+      "text": "也许不久之后，AI有没有意识会从一道哲学题变成一道工程题。到那天，你希望答案是哪个？"
+    }
+  ],
+  "end_card": {
+    "dur": 5.0,
+    "lines": [
+      { "style": "T2", "text": "AI该不该有意识？评论区聊聊" },
+      { "style": "T3", "text": "他的TED原片与5大佬观点PK视频见简介" }
+    ]
+  },
+  "desc_head": "微软AI CEO穆斯塔法·苏莱曼今晨发布长文：AI模型没有意识，开发者也不该让它有。上月他还在TED讲「数字物种」，今天亲手给这条路线划线。本片引语均为其长文原话与TED原话，无断章取义。",
+  "sources": [
+    { "name": "苏莱曼 Mustafa Suleyman《What is an AI anyway?》TED2024", "bvid": "BV1oSxp6tEPQ" },
+    { "name": "观点PK视频《AI大佬吵起来了》", "bvid": "BV1J8xt62Emf" }
+  ],
+  "desc_tail": "本片为观点评述，解说文案原创；画面来自TED演讲（CC BY-NC-ND）与自绘引语卡，仅作评论用途。热点信号来自本号感知器。"
+}

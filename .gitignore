@@ -17,3 +17,6 @@ Workspace/run/
 Thumbs.db
 desktop.ini
 *.tmp
+
+# 代理运行状态（记忆/会话），非项目产物
+.workbuddy/

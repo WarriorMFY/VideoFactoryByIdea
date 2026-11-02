@@ -1,0 +1,53 @@
+{
+  "run": "2026-11-01T22-26-12",
+  "generated_at": "2026-11-01T14:26:12.538Z",
+  "window_hours": 24,
+  "counts": {
+    "total": 4,
+    "fresh": 4,
+    "repeat": 0
+  },
+  "sources_status": "all_ok",
+  "signals": [
+    {
+      "key": "https://www.toutiao.com/article/7703180952268292671",
+      "source": "websearch",
+      "kind": "采访/报道",
+      "title": "中国青年报·郑纬民院士2026“人工智能+”大会主旨报告：国产算力有卡难用，需统一软件栈",
+      "url": "https://www.toutiao.com/article/7703180952268292671",
+      "published": "2026-11-01 20:36",
+      "note": "直击国产算力“有卡难用”“烟囱式适配”痛点，提出统一软件栈、一套代码跨平台运行",
+      "repeat": false
+    },
+    {
+      "key": "https://www.ai-digest-1.com/news/zhipu-ai-co-founder-tang-jie-says-ai-should-scale-correctness-instead-of-followi-20677",
+      "source": "websearch",
+      "kind": "采访/报道",
+      "title": "智谱AI联合创始人唐杰：在世界顶尖科学家论坛提出“scaled correctness”取代缩放定律",
+      "url": "https://www.ai-digest-1.com/news/zhipu-ai-co-founder-tang-jie-says-ai-should-scale-correctness-instead-of-followi-20677",
+      "published": "2026-11-01 15:00",
+      "note": "主张行业从 scaling law 转向“可扩展的正确性”，把正确率而非参数规模当第一目标",
+      "repeat": false
+    },
+    {
+      "key": "https://news.dayoo.com/gzrbrmt/202611/01/170628_55019081.htm",
+      "source": "websearch",
+      "kind": "采访/报道",
+      "title": "广州日报·中科院院长侯建国2026大湾区科学论坛开幕式主旨演讲：聚焦AI等五大领域全链条协同攻关",
+      "url": "https://news.dayoo.com/gzrbrmt/202611/01/170628_55019081.htm",
+      "published": "2026-11-01 10:00",
+      "note": "未来5年是科技强国关键攻坚期，中科院将聚焦AI、先进材料、生物医药、新能源与湾区共建",
+      "repeat": false
+    },
+    {
+      "key": "https://www.163.com/dy/article/LAL7CG3K05118O92.html",
+      "source": "websearch",
+      "kind": "采访/报道",
+      "title": "钛媒体·亚马逊CEO贾西财报电话会：AWS未来两年增速均超40%，5-10年冲向万亿营收",
+      "url": "https://www.163.com/dy/article/LAL7CG3K05118O92.html",
+      "published": "2026-11-01 11:38",
+      "note": "AWS年化收入已达1840亿美元，2027/2028年同比增速均指引高于40%",
+      "repeat": false
+    }
+  ]
+}

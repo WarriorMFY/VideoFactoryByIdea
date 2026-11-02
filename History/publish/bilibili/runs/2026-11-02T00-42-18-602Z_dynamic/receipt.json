@@ -1,0 +1,57 @@
+{
+  "cmd": "post",
+  "at": "2026-11-02T00:42:18.607Z",
+  "uid": "3747573749779036",
+  "textLen": 646,
+  "images": [
+    {
+      "file": "card_01.jpg",
+      "w": 1080,
+      "h": 1440,
+      "kb": 182.305,
+      "url": "http://i0.hdslb.com/bfs/new_dyn/8e9eb28e237efa1282b737fc7c5a0c393747573749779036.jpg"
+    },
+    {
+      "file": "card_02.jpg",
+      "w": 1080,
+      "h": 1440,
+      "kb": 188.996,
+      "url": "http://i0.hdslb.com/bfs/new_dyn/cb27d24f2a7263a35af53a2f037ccbee3747573749779036.jpg"
+    },
+    {
+      "file": "card_03.jpg",
+      "w": 1080,
+      "h": 1440,
+      "kb": 161.183,
+      "url": "http://i0.hdslb.com/bfs/new_dyn/e2da0601e60cffd6cbbe3d80db053fe23747573749779036.jpg"
+    },
+    {
+      "file": "card_04.jpg",
+      "w": 1080,
+      "h": 1440,
+      "kb": 176.017,
+      "url": "http://i0.hdslb.com/bfs/new_dyn/9a911224ed58cd4bb81557f0e0481cdd3747573749779036.jpg"
+    }
+  ],
+  "dynReq": {
+    "scene": 2,
+    "pics": 4,
+    "upload_id": "3747573749779036_1793580139_3751",
+    "text_head": "【今早热点】奥特曼突访韩国：一人见完三星、SK两大财阀\n\nOpenAI CEO奥特曼一年来首次访韩，行程密度罕见：\n\n·"
+  },
+  "create": {
+    "code": 0,
+    "message": "OK",
+    "data": {
+      "dyn_id": 1265906134095495200,
+      "dyn_id_str": "1265906134095495175",
+      "dyn_type": 2,
+      "dyn_rid": 414136902
+    }
+  },
+  "dyn_id": "1265906134095495175",
+  "verify": {
+    "found": true,
+    "items": 12
+  }
+}

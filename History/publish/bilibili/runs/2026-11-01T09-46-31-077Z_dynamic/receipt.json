@@ -1,0 +1,57 @@
+{
+  "cmd": "post",
+  "at": "2026-11-01T09:46:31.078Z",
+  "uid": "3747573749779036",
+  "textLen": 410,
+  "images": [
+    {
+      "file": "card_01.jpg",
+      "w": 1080,
+      "h": 1440,
+      "kb": 112.221,
+      "url": "http://i0.hdslb.com/bfs/new_dyn/986616504ad4bce916c96ddb5e9ad7293747573749779036.jpg"
+    },
+    {
+      "file": "card_02.jpg",
+      "w": 1080,
+      "h": 1440,
+      "kb": 102.104,
+      "url": "http://i0.hdslb.com/bfs/new_dyn/d9addeead4d3924d1ad3dd2417d50b9b3747573749779036.jpg"
+    },
+    {
+      "file": "card_03.jpg",
+      "w": 1080,
+      "h": 1440,
+      "kb": 159.803,
+      "url": "http://i0.hdslb.com/bfs/new_dyn/920a423b731fe47dd726228f1e54b65e3747573749779036.jpg"
+    },
+    {
+      "file": "card_04.jpg",
+      "w": 1080,
+      "h": 1440,
+      "kb": 157.156,
+      "url": "http://i0.hdslb.com/bfs/new_dyn/be11c57857411bb24d722dfe2e02df873747573749779036.jpg"
+    }
+  ],
+  "dynReq": {
+    "scene": 2,
+    "pics": 4,
+    "upload_id": "3747573749779036_1793526392_3968",
+    "text_head": "【3 分钟总结】李开复：AI 抢走常规工作后，人凭什么立足\n\n1983 年 12 月 16 日晚 11 点，他在哥伦比亚"
+  },
+  "create": {
+    "code": 0,
+    "message": "OK",
+    "data": {
+      "dyn_id": 1265675288219484200,
+      "dyn_id_str": "1265675288219484169",
+      "dyn_type": 2,
+      "dyn_rid": 414071113
+    }
+  },
+  "dyn_id": "1265675288219484169",
+  "verify": {
+    "found": true,
+    "items": 12
+  }
+}

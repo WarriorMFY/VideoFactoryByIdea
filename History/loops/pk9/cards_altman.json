@@ -1,0 +1,43 @@
+{
+  "cards": [
+    {
+      "frame": "History/loops/pk8/frames_raw/pm10110/f_00905.jpg",
+      "big": true,
+      "kicker": "一年来首次访韩 · 首尔经济日报",
+      "headline": ["奥特曼突访韩国", "一人见完两大财阀"],
+      "bullets": [
+        "10月31日，三星龙仁研修院：约50位三星系公司社长到场听他讲AI",
+        "前一天与SK会长崔泰源午宴，海力士、SK电讯作陪"
+      ],
+      "footer": "热点信号来自本号感知器 ｜ 图为TED2025演讲资料"
+    },
+    {
+      "frame": "History/loops/pk8/frames_raw/pm10110/f_00934.jpg",
+      "kicker": "谈了什么",
+      "headline": ["ChatGPT进企业", "HBM是头号议题"],
+      "bullets": [
+        "三星场主题：「未来十年AI将改变什么——企业的选择」，聚焦ChatGPT在企业侧落地",
+        "SK场未公开细节，但涵盖HBM扩供与AI数据中心两大既有合作"
+      ]
+    },
+    {
+      "frame": "History/loops/pk8/frames_raw/pm10110/f_01740.jpg",
+      "kicker": "为什么是现在",
+      "headline": ["HBM再涨1.2倍", "OpenAI要IPO"],
+      "bullets": [
+        "TrendForce预测：明年HBM均价约涨1.2倍；三星明年HBM已售罄，海力士到2029被长约锁死",
+        "据WSJ：OpenAI融资目标300亿美元只落定约110亿，估值预期降到约1.25万亿"
+      ]
+    },
+    {
+      "frame": "History/loops/pk8/frames_raw/pm10110/f_00905.jpg",
+      "kicker": "我们的角度",
+      "headline": ["算力战争下半场", "从抢卡到抢产能"],
+      "bullets": [
+        "去年10月OpenAI已与三星、SK签下Stargate合作；分析师认为这次在谈成本分摊与新资本合作",
+        "AI竞争的脖子，正在从「有多少卡」变成「能锁多少年的存储产能」"
+      ],
+      "footer": "你怎么看？评论区聊聊 ｜ 奥特曼TED原片见动态链接"
+    }
+  ]
+}

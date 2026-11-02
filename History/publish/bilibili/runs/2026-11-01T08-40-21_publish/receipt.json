@@ -1,0 +1,65 @@
+{
+  "at": "2026-11-01T08:41:05.306Z",
+  "video": "Prototype\\ep_prince_digest\\final.mp4",
+  "videoSizeMB": 18.51,
+  "title": "Cloudflare CEO TED 3分钟摘要：AI 正在杀死互联网的流量生意",
+  "tags": [
+    "AI",
+    "人工智能",
+    "Cloudflare",
+    "TED",
+    "科技",
+    "互联网"
+  ],
+  "zone": "人工智能",
+  "declaration": "含AI生成内容",
+  "cover": "Prototype\\ep_prince_digest\\cover.jpg",
+  "coverUploaded": true,
+  "dryRun": false,
+  "runDir": "History\\publish\\bilibili\\runs\\2026-11-01T08-40-21_publish",
+  "tidExpected": "231",
+  "tidTrace": {
+    "forced": "231",
+    "htype": "1011",
+    "seen": [],
+    "rewritten": [],
+    "reqs": [
+      {
+        "via": "xhr",
+        "url": "/x/vupre/web/archive/types/predict?t=1793522446165&x-bili-locale-json=%7B%22c_locale%22:%7B%22language%22:%22zh%22,%22sc",
+        "bodyType": "FormData"
+      },
+      {
+        "via": "xhr",
+        "url": "/x/vu/web/cover/up?t=1793522462335&x-bili-locale-json=%7B%22c_locale%22:%7B%22language%22:%22zh%22,%22script%22:%22Hans%",
+        "bodyType": "FormData"
+      },
+      {
+        "via": "xhr",
+        "url": "/x/vu/web/cover/up?t=1793522462336&x-bili-locale-json=%7B%22c_locale%22:%7B%22language%22:%22zh%22,%22script%22:%22Hans%",
+        "bodyType": "FormData"
+      },
+      {
+        "via": "xhr",
+        "url": "//member.bilibili.com/x/vu/web/add/v3?web_location=333.1024&t=1793522465835&csrf=2e1dbec89a9cb044e0a82f11daf4e06e&x-bili",
+        "bodyType": "String"
+      },
+      {
+        "tid": "231"
+      },
+      {
+        "via": "fetch",
+        "url": "//data.bilibili.com/v2/log/web?content_type=pbrequest&logid=021436&disable_compression=true",
+        "bodyType": "Uint8Array"
+      },
+      {
+        "via": "fetch",
+        "url": "//data.bilibili.com/v2/log/web?content_type=pbrequest&logid=021436&disable_compression=true",
+        "bodyType": "Uint8Array"
+      }
+    ]
+  },
+  "published": true,
+  "bvid": "BV1cwxs6uECu",
+  "url": "https://www.bilibili.com/video/BV1cwxs6uECu/"
+}

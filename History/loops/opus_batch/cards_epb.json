@@ -1,0 +1,18 @@
+{
+  "cards": [
+    { "frame": "Workspace/tmp/fr_epb/f_00246.jpg", "kicker": "TED 2018 ｜ 李开复",
+      "headline": ["AI 拿走常规工作", "拿不走这两样"],
+      "bullets": ["创造力：AI 只会优化已知答案", "同情心：它不懂爱，也不会爱"],
+      "footer": "完整演讲 14:40 ｜ 3 分钟摘要见文末链接" },
+    { "frame": "Workspace/tmp/fr_epb/f_00405.jpg", "kicker": "核心观点",
+      "headline": ["解药是共存", "不是人机对抗"],
+      "bullets": ["常规、重复、可优化的工作先被替代", "创意型 + 同情心型工作最安全"] },
+    { "frame": "Workspace/tmp/fr_epb/f_00563.jpg", "kicker": "他自己的故事",
+      "headline": ["癌症四期", "重新定义「工作」"],
+      "bullets": ["2013 年确诊淋巴瘤", "病后才懂：爱与被爱才是人的意义"] },
+    { "frame": "Workspace/tmp/fr_epb/f_00722.jpg", "kicker": "3 分钟看完",
+      "headline": ["1983 年机器认不出猫", "三十年后它赢了世界冠军"],
+      "bullets": ["他从大学宿舍里第一个 AI 项目讲起", "失业潮不是预告，是转型契机"],
+      "footer": "完整版 + 摘要版链接见动态正文" }
+  ]
+}

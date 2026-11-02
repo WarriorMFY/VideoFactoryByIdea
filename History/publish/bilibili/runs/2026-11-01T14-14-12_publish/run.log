@@ -1,0 +1,39 @@
+[14:14:13] 浏览器 msedge｜profile=F:\AgentWorkArea\WorkBuddy\TalkFactory\Workspace\run\bili_profile
+[14:14:13] 已登录 UID=3747573749779036
+[14:14:28] 未见草稿恢复弹窗（干净进入）
+[14:14:28] 投稿页 file input × 3
+[14:14:28] 已挂载 final.mp4（243.0MB），等转码/表单
+[14:14:28] 上传 0%  0.0MB/s
+[14:14:31] 上传 4%  0.3MB/s
+[14:14:34] 上传 16%  11.3MB/s
+[14:14:37] 上传 24%  7.5MB/s
+[14:14:40] 上传 34%  7.1MB/s
+[14:14:43] 上传 42%  7.1MB/s
+[14:14:46] 上传 51%  7.2MB/s
+[14:14:49] 上传 60%  7.2MB/s
+[14:14:52] 上传 69%  7.2MB/s
+[14:14:55] 上传 78%  7.2MB/s
+[14:14:58] 上传 87%  7.3MB/s
+[14:15:01] 上传 96%  6.7MB/s
+[14:15:04] 表单就绪（36s）
+[14:15:04] 标题 OK（35 字）
+[14:15:04] 已布防 tid 改写（全格式）：提交请求体里的 tid → 231（UI 显示仅作参考，落库以回读校验为准）
+[14:15:05] 简介 OK：Netflix 创始人里德·哈斯廷斯 × 可汗学院创始人萨尔·汗，TED 舞台对…
+[14:15:05] 标签第 1 轮：多余 [生活记录,校园,记录] 缺 [AI,人工智能,TED,Netflix,教育,英语听力]
+[14:15:15] 标签 OK（6）：AI / 人工智能 / TED / Netflix / 教育 / 英语听力
+[14:15:17] 分区 体育运动 → 人工智能
+[14:15:19] 创作声明 = 含AI生成内容
+[14:15:21] 封面已传入，等裁剪界面
+[14:15:24] 封面第 1 步：完成
+[14:15:27] 封面完成
+[14:15:27] 表单回读 {"title":"Netflix 创始人：10 亿美元砸进教育没搞定，AI 三年给出答案","zone":"人工智能","decl":"含AI生成内容","descLen":899,"coverSet":true}
+[14:15:28] 已点投稿
+[14:15:28] [net] add 请求 POST https://member.bilibili.com/x/vu/web/add/v3?web_location=333.1024&t=1793542528379&csrf=2e1dbec89a9cb044e0a82f1
+[14:15:28] [net] add 请求体: {"cover":"https://archive.biliimg.com/bfs/archive/78b60e84492eb92190d016ea23977613cf659a5c.jpg","cover43":"https://archive.biliimg.com/bfs/archive/534d9ec420a185504d7dbc5748aaef97c21a0982.jpg","ai_cover":0,"is_ab_cover":0,"ab_cover_info":null,"title":"Netflix 创始人：10 亿美元砸进教育没搞定，AI 三年给出答案","copyright":3,"creation_statement":{"id":1},"human_type2":1011,"tid":231,"tag":"AI,人工智能,TED,Netflix,教育,英语听力","desc":"Netflix 创始人里德·哈斯廷斯 × 可汗学院创始人萨尔·汗，TED 舞台对谈完整版（16:20）。中英双语字幕，英文逐词卡拉OK高亮，全篇中文为本站精译。\n\n二十五年前，哈斯廷斯开始往教育里投钱：慈善、特许学校、教育科技，累计超过十亿美元。他的结论很扎心：钱花完了，整体结果比起点还低。\n\n这场对谈里，他讲了三个很少在公开场合说透的判断：\n\n· 十八世纪的工厂换上电动机，生产率一点没涨——因为瓶颈不是发动机，是动力分配。今天的课堂，就是那根转轴。\n· 一对一导师能让孩子学完整个高中课程，但一个孩子一年要十万美元，无法普及；AI 是唯一可能把这个成本打下来的东西。\n· 如果 AI 成功，我们会同时看到高增长、高股市和高失业——他提议学阿拉斯加石油基金，把增长的税收变成惠及所有人的红利。\n\n他还是 Anthropic 的董事，也正面回应了那个问题：闭门会议里
+[14:15:28] [net] add 响应 200: {"code":0,"message":"OK","ttl":1,"data":{"aid":117541594728321,"bvid":"BV1Qbxb6KE2S"}}
+[14:15:33] 投稿返回 ok=true errors=[]
+[14:15:37] 提交 tid 留痕：seen=[] rewritten=[]
+[14:15:37] 带体请求：[{"via":"xhr","url":"/x/vu/web/cover/up?t=1793542524863&x-bili-locale-json=%7B%22c_locale%22:%7B%22language%22:%22zh%22,%22script%22:%22Hans%","bodyType":"FormData"},{"via":"xhr","url":"/x/vu/web/cover/up?t=1793542524863&x-bili-locale-json=%7B%22c_locale%22:%7B%22language%22:%22zh%22,%22script%22:%22Hans%","bodyType":"FormData"},{"via":"xhr","url":"//member.bilibili.com/x/vu/web/add/v3?web_location=333.1024&t=1793542528379&csrf=2e1dbec89a9cb044e0a82f11daf4e06e&x-bili","bodyType":"String"},{"via":"fetch","url":"//data.bilibili.com/v2/log/web?content_type=pbrequest&logid=021434&disable_compression=true","bodyType":"Uint8Array"},{"via":"fetch","url":"//data.bilibili.com/v2/log/web?content_type=pbrequest&logid=021436&disable_compression=true","bodyType":"Uint8Array"},{"via":"fetch","url":"//data.bilibili.com/v2/log/web?content_type=pbrequest&logid=021436&disable_compression=true","bodyType":"Uint8Array"}]
+[14:15:37] ✓ 提交请求确认带 tid=231（原生或改写），仍以发布后回读为准
+[14:15:37] 已上线 https://www.bilibili.com/video/BV1Qbxb6KE2S/
+[14:15:38] 回执 F:\AgentWorkArea\WorkBuddy\TalkFactory\History\publish\bilibili\runs\2026-11-01T14-14-12_publish\receipt.json

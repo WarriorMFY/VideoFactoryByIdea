@@ -1,0 +1,57 @@
+{
+  "cmd": "post",
+  "at": "2026-11-01T09:46:59.059Z",
+  "uid": "3747573749779036",
+  "textLen": 391,
+  "images": [
+    {
+      "file": "card_01.jpg",
+      "w": 1080,
+      "h": 1440,
+      "kb": 134.094,
+      "url": "http://i0.hdslb.com/bfs/new_dyn/ee85f5817973c7631b0a06c277fa8c9e3747573749779036.jpg"
+    },
+    {
+      "file": "card_02.jpg",
+      "w": 1080,
+      "h": 1440,
+      "kb": 151.853,
+      "url": "http://i0.hdslb.com/bfs/new_dyn/ee1986ea3c6873759754e735f78771413747573749779036.jpg"
+    },
+    {
+      "file": "card_03.jpg",
+      "w": 1080,
+      "h": 1440,
+      "kb": 99.219,
+      "url": "http://i0.hdslb.com/bfs/new_dyn/50c6b469a25bc61ec8ed63efe5d6de5c3747573749779036.jpg"
+    },
+    {
+      "file": "card_04.jpg",
+      "w": 1080,
+      "h": 1440,
+      "kb": 128.169,
+      "url": "http://i0.hdslb.com/bfs/new_dyn/fd339d3e5dcc898430ade432dfa99e1b3747573749779036.jpg"
+    }
+  ],
+  "dynReq": {
+    "scene": 2,
+    "pics": 4,
+    "upload_id": "3747573749779036_1793526420_6413",
+    "text_head": "【3 分钟总结】奥尔特曼 TED 现场对谈 47 分钟：AGI、智能体与权力的边界\n\n· AGI 比大多数人以为的更近，"
+  },
+  "create": {
+    "code": 0,
+    "message": "OK",
+    "data": {
+      "dyn_id": 1265675408428236800,
+      "dyn_id_str": "1265675408428236809",
+      "dyn_type": 2,
+      "dyn_rid": 414072143
+    }
+  },
+  "dyn_id": "1265675408428236809",
+  "verify": {
+    "found": true,
+    "items": 12
+  }
+}

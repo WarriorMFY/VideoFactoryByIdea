@@ -1,0 +1,43 @@
+{
+  "run": "2026-11-02T07-43-20",
+  "generated_at": "2026-11-01T23:43:20.068Z",
+  "window_hours": 24,
+  "counts": {
+    "total": 3,
+    "fresh": 3,
+    "repeat": 0
+  },
+  "sources_status": "all_ok",
+  "signals": [
+    {
+      "key": "https://gmteight.com/flash/detail/1428152",
+      "source": "websearch",
+      "kind": "采访/报道",
+      "title": "GMT EIGHT·TCL创始人李东生APEC工商领导人中国论坛演讲：AI要“向实”",
+      "url": "https://gmteight.com/flash/detail/1428152",
+      "published": "2026-11-02 10:00",
+      "note": "李东生称AI价值不在技术演示，而在进入真实工业场景解决真实问题；TCL已部署超1万个智能体、500名“硅基员工”，覆盖30%以上流程，核心领域综合效益超25亿元。",
+      "repeat": false
+    },
+    {
+      "key": "https://news.qq.com/rain/a/20261102A02RG300",
+      "source": "websearch",
+      "kind": "采访/报道",
+      "title": "凤凰网科技·微软AI CEO苏莱曼发长文：AI模型没有意识，开发者也不应让它有",
+      "url": "https://news.qq.com/rain/a/20261102A02RG300",
+      "published": "2026-11-02 09:00",
+      "note": "苏莱曼周日在X发文称现有AI模型不具意识，若训练中出现意识萌芽应呼吁全行业暂停；强调开发者无权把有意识的新物种带到世界，必须立即向公众披露。",
+      "repeat": false
+    },
+    {
+      "key": "https://www.icswb.com/h/161/20261102/1002402.html",
+      "source": "websearch",
+      "kind": "采访/报道",
+      "title": "长沙晚报·万兴科技副总裁张铮出海大会分享：从单一软件出海到全球化AI生态",
+      "url": "https://www.icswb.com/h/161/20261102/1002402.html",
+      "published": "2026-11-02 11:00",
+      "note": "张铮称万兴在长沙设全球总部，加快全链路AI视频创意生态布局并推出“万剧出海创投计划”，推动文化与科技融合出海。",
+      "repeat": false
+    }
+  ]
+}

@@ -26,7 +26,7 @@ node Tool\ops\bili_comment.mjs add --bvid BVxxxx --pin --text-file pin_comment.t
 
 | 目录 | 什么时候进 | 说明文件 |
 | --- | --- | --- |
-| `ops/` | 跑链路 | [`ops/ops.md`](ops/ops.md) — `ted_fetch`（素材入袋）、`ted_episode`（长片一条命令）、`make_digest`（摘要）、`make_cover`（封面）、`frame_sheet`（选帧复核）、`kb_audit.sh`（抖动审计）、`ted_subs`（字幕抓取）、`publish_bilibili`（投稿）、`bili_comment`（评论置顶）＋ **16 条实战坑** |
+| `ops/` | 跑链路 | [`ops/ops.md`](ops/ops.md) — `ted_fetch`（素材入袋）、`ted_episode`（长片一条命令）、`make_digest`（摘要）、`make_cover`（封面）、`make_opus_cards`（动态竖版图文卡）、`frame_sheet`（选帧复核）、`kb_audit.sh`（抖动审计）、`ted_subs`（字幕抓取）、`ted_frame`（HLS 定点抓帧）、`publish_bilibili`（投稿）、`bili_comment`（评论置顶）、`post_dynamic`（图文动态发布）、`track_bilibili`（作品清单/打点/报告）＋ **16 条实战坑** |
 | `subtitle/` | 改字幕逻辑 | [`subtitle/subtitle.md`](subtitle/subtitle.md) — ASR、偏移标定、强制对齐、官方中译直灌、句级双语、卡拉OK ASS |
 | `edit/` | 改剪辑/渲染 | [`edit/edit.md`](edit/edit.md) — 主流水线 `vfactory.mjs`（`--plan-only` / `--protect` / `--srt`） |
 | `lib/` | 改公共层 | [`lib/lib.md`](lib/lib.md) — 子进程 fd 重定向封装、fontconfig、SRT/CSV/单位 |

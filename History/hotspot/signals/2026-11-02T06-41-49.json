@@ -1,0 +1,53 @@
+{
+  "run": "2026-11-02T06-41-49",
+  "generated_at": "2026-11-01T22:41:49.948Z",
+  "window_hours": 24,
+  "counts": {
+    "total": 4,
+    "fresh": 4,
+    "repeat": 0
+  },
+  "sources_status": "all_ok",
+  "signals": [
+    {
+      "key": "https://finance.people.com.cn/n1/2026/1102/c1004-40825532.html",
+      "source": "websearch",
+      "kind": "采访/报道",
+      "title": "人民日报·科大讯飞董事长刘庆峰专访：AI要从问答工具变成工作助手，关键在软硬一体+自主可控底座",
+      "url": "https://finance.people.com.cn/n1/2026/1102/c1004-40825532.html",
+      "published": "2026-11-02 06:00",
+      "note": "刘庆峰在人民日报「咖说科技」专栏提出：只有把感知、交互、大模型和终端一起打磨，AI才能从问答工具变成工作助手；十五五开局之年要在自主可控底座上持续创新。",
+      "repeat": false
+    },
+    {
+      "key": "https://en.sedaily.com/finance/2026/11/02/openais-altman-makes-surprise-korea-visit-to-meet-samsung-sk",
+      "source": "websearch",
+      "kind": "采访/报道",
+      "title": "首尔经济·OpenAI奥特曼突访韩国：向三星约50位社长闭门演讲「未来十年AI将改变什么」",
+      "url": "https://en.sedaily.com/finance/2026/11/02/openais-altman-makes-surprise-korea-visit-to-meet-samsung-sk",
+      "published": "2026-11-02 05:30",
+      "note": "奥特曼10-31在三星人力开发院以「未来十年AI将改变什么：企业的选择」为题演讲，并密会SK崔泰源谈HBM供应与AI数据中心；OpenAI本轮募资仅拿到110亿美元、远低于300亿目标。",
+      "repeat": false
+    },
+    {
+      "key": "https://dy.163.com/article/LAMI9E1S05198JD9.html",
+      "source": "websearch",
+      "kind": "采访/报道",
+      "title": "网易·秦朔朋友圈：菲尔茨奖得主邓煜炮轰OpenAI「只许自己蒸馏全人类，不许别人看思维链」",
+      "url": "https://dy.163.com/article/LAMI9E1S05198JD9.html",
+      "published": "2026-11-02 00:08",
+      "note": "继陶哲轩之后又一位菲尔茨奖得主公开批评OpenAI：模型公司抓取全人类文献训练却对思维链加密，直言「不能你蒸馏全世界就不让别人蒸馏你」；文中还访谈多位美国高校数学家谈数学价值贬值。",
+      "repeat": false
+    },
+    {
+      "key": "https://dzb.henandaily.cn/html5/2026-11/02/content_21_1817675.htm",
+      "source": "websearch",
+      "kind": "采访/报道",
+      "title": "河南日报·专访汉威科技董事长任红军：给机器人装上AI电子鼻，具身智能传感器矩阵量产进全球第一梯队",
+      "url": "https://dzb.henandaily.cn/html5/2026-11/02/content_21_1817675.htm",
+      "published": "2026-11-01 08:00",
+      "note": "郑州企业家日「成长型企业家」任红军谈全产业链自主可控：触觉/嗅觉/平衡/力控/视觉五大系列具身智能传感器已布局，年产传感器超1亿支，下一步布局垂域物理AI模型与全球研发基地。",
+      "repeat": false
+    }
+  ]
+}

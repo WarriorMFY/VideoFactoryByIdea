@@ -1,0 +1,106 @@
+{
+  "voice": "zh-CN-YunyangNeural",
+  "rate": "+5%",
+  "gap": 0.5,
+  "title_card": {
+    "dur": 3.8,
+    "lines": [
+      { "text": "5位AI大佬，观点PK", "style": "T1" },
+      { "text": "同一件事，说法完全相反", "style": "T2" },
+      { "text": "AI是什么 × 会不会失业 × 要不要刹车", "style": "T3" }
+    ]
+  },
+  "end_card": {
+    "dur": 5.5,
+    "lines": [
+      { "text": "原声出处见简介", "style": "T2" },
+      { "text": "关注我，每周带你看AI大佬原声演讲", "style": "T3" }
+    ]
+  },
+  "desc_head": "他们说的好像不是同一个AI。本片把 5 位大佬在 TED 原声演讲中的对立观点放进三个议题对撞，所有引语均为原话（右上角标注原片时间，出处链接见下）。",
+  "desc_tail": "观点没有对错，只有角度。你更认同谁？评论区聊聊。",
+  "sources": [
+    { "name": "苏莱曼 Mustafa Suleyman《What is an AI anyway?》TED2024", "bvid": "BV1oSxp6tEPQ" },
+    { "name": "李飞飞《With spatial intelligence, AI will understand the real world》TED2024", "bvid": "BV113xW6VEv6" },
+    { "name": "李开复《AI and how humans can work with it》TED2023", "bvid": "BV1tKxW62EhT" },
+    { "name": "马斯克《Elon Musk talks Twitter, Tesla and how his brain works》TED2022", "bvid": "BV1fwxp68EQB" },
+    { "name": "奥尔特曼《Sam Altman: ChatGPT, AI agents and superintelligence》TED2025", "bvid": "BV19Gxp6XE4T" }
+  ],
+  "segments": [
+    {
+      "frame": "History/loops/pk8/frames_raw/pm9155/f_00250.jpg",
+      "speaker": "",
+      "text": "同一场AI浪潮，大佬们说的却像两件完全不同的事。我们翻了五场TED演讲的原声，把三个吵得最凶的问题，摆上了同一张桌子。"
+    },
+    {
+      "topic": "议题一 · AI到底是什么",
+      "frame": "History/loops/pk8/frames_raw/pm9155/f_00752.jpg",
+      "speaker": "",
+      "text": "第一回合：AI到底是什么？"
+    },
+    {
+      "frame": "History/loops/pk8/frames_raw/pm9155/f_00292.jpg",
+      "speaker": "苏莱曼 · 微软AI副总裁",
+      "quote_en": "I think AI should best be understood as something like a new digital species.",
+      "text": "微软AI副总裁苏莱曼，给出了一个大胆的比喻：AI，最好被理解为一种全新的数字物种。不是工具，是物种。"
+    },
+    {
+      "frame": "History/loops/pk8/frames_raw/pm9260/f_00880.jpg",
+      "speaker": "李飞飞 · 斯坦福教授",
+      "quote_en": "They will not only be useful tools, but also trusted partners.",
+      "text": "李飞飞不同意。她说，由空间智能驱动的计算机和机器人，不仅是实用的工具，更是值得信赖的伙伴。在她看来，AI从头到尾都是人类的造物，为人类服务。"
+    },
+    {
+      "topic": "议题二 · AI会抢走你的工作吗",
+      "frame": "History/loops/pk8/frames_raw/pm3235/f_00760.jpg",
+      "speaker": "",
+      "text": "第二回合：AI会抢走你的工作吗？"
+    },
+    {
+      "frame": "History/loops/pk8/frames_raw/pm3235/f_00510.jpg",
+      "speaker": "李开复 · 创新工场",
+      "quote_en": "AI completely replaces the individual jobs.",
+      "text": "李开复的判断很直接：AI会完全取代个体岗位。货车司机、电话销售、客服，甚至放射科医生，未来十五年内都会逐渐被取代。他还提醒，比失业更严重的，是失去人生的意义。"
+    },
+    {
+      "frame": "History/loops/pk8/frames_raw/pm7789/f_00577.jpg",
+      "speaker": "马斯克 · 特斯拉与SpaceX",
+      "quote_en": "I wouldn't worry about the putting people out of a job thing.",
+      "text": "马斯克却耸耸肩：我根本不担心失业这回事。他说，世界真正缺的是劳动力。AI带来的将是一个物质极大丰富的时代，商品和服务会便宜到不可思议。"
+    },
+    {
+      "topic": "议题三 · 要不要踩一脚刹车",
+      "frame": "History/loops/pk8/frames_raw/pm10110/f_00905.jpg",
+      "speaker": "",
+      "text": "第三回合：离AGI最近的那个男人，怕过吗？"
+    },
+    {
+      "frame": "History/loops/pk8/frames_raw/pm10110/f_01740.jpg",
+      "speaker": "奥尔特曼 · OpenAI",
+      "quote_en": "There have been moments of awe. How far is this going to go?",
+      "text": "奥尔特曼承认，新模型让他有过震撼时刻，甚至有一点点可怕。但他选择边踩油门边装刹车：让最先进的模型接受外部安全测试，一旦接近危险区，要能及时停下来。"
+    },
+    {
+      "frame": "History/loops/pk8/frames_raw/pm9155/f_01253.jpg",
+      "speaker": "苏莱曼 · 微软AI副总裁",
+      "quote_en": "There's no evidence that we're anywhere near anything like that.",
+      "text": "有意思的是，物种论的发明者自己泼了盆冷水：所谓智能爆炸只是假想，没有证据表明我们临近它。他还说，自我复制这种危险能力，我们应该主动放弃。最危险的，是工程师故意把它设计进去。"
+    },
+    {
+      "topic": "总结 · 不一样的观点，只是不同的角度",
+      "frame": "History/loops/pk8/frames_raw/pm3235/f_00760.jpg",
+      "speaker": "",
+      "text": "三个回合下来，你发现了吗：他们谁也没有说错。"
+    },
+    {
+      "frame": "History/loops/pk8/frames_raw/pm9260/f_00866.jpg",
+      "speaker": "",
+      "text": "苏莱曼站在技术进化的一端，李飞飞站在人类本位的一端；李开复看到的是岗位，马斯克看到的是资源；奥尔特曼盯着加速度，苏莱曼又回到了方向盘。不一样的观点，只是从不同的角度，看同一个正在发生的事实。"
+    },
+    {
+      "frame": "History/loops/pk8/frames_raw/pm9155/f_00752.jpg",
+      "speaker": "",
+      "text": "就像盲人摸象，每个人摸到的都是真的大象。观点的碰撞，不是为了让你选边站，而是帮我们把AI看得更完整。你更认同谁的角度？评论区聊聊。"
+    }
+  ]
+}

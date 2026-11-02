@@ -1,0 +1,63 @@
+{
+  "run": "2026-11-02T09-56-48",
+  "generated_at": "2026-11-02T01:56:48.275Z",
+  "window_hours": 24,
+  "counts": {
+    "total": 5,
+    "fresh": 5,
+    "repeat": 0
+  },
+  "sources_status": "all_ok",
+  "signals": [
+    {
+      "key": "https://www.gulf-times.com/article/737297/qatar/humanoid-robots-can-transform-workplaces-for-better-despite-concerns-on-other-fronts",
+      "source": "websearch",
+      "kind": "采访/报道",
+      "title": "Gulf Times·禾赛CEO李一帆CNN多哈对话：人形机器人应优先做通用廉价平台",
+      "url": "https://www.gulf-times.com/article/737297/qatar/humanoid-robots-can-transform-workplaces-for-better-despite-concerns-on-other-fronts",
+      "published": "2026-11-02 06:00",
+      "note": "在CNN Global Perspectives多哈场与Richard Quest对谈，主张先做可负担的通用人形平台而非大量专用机器人，称机器人冲击要看宏观生产率而非单点失业",
+      "repeat": false
+    },
+    {
+      "key": "https://econotimes.com/Julius-Baer-CEO-Says-AI-Bubble-Poses-Greater-Risk-Than-Banking-Crisis-1768314",
+      "source": "websearch",
+      "kind": "采访/报道",
+      "title": "EconoTimes·瑞士宝盛CEO博林格：AI泡沫风险已高于银行业危机",
+      "url": "https://econotimes.com/Julius-Baer-CEO-Says-AI-Bubble-Poses-Greater-Risk-Than-Banking-Crisis-1768314",
+      "published": "2026-11-02 08:00",
+      "note": "11月2日刊出访谈中称银行体系很安全，真正风险在AI项目表外融资链条，若项目收益不达预期将传导至保险、基金与放贷银行",
+      "repeat": false
+    },
+    {
+      "key": "https://m.thepaper.cn/newsDetail_forward_34351832",
+      "source": "websearch",
+      "kind": "采访/报道",
+      "title": "澎湃新闻·Rokid创始人祝铭明专访：AI眼镜隐私是矛与盾的博弈",
+      "url": "https://m.thepaper.cn/newsDetail_forward_34351832",
+      "published": "2026-11-02 09:37",
+      "note": "称眼镜是AI时代最好形态、行业远未到抢最后几条鱼，隐私防护只能抬高犯错成本，乐奇不参与云端大模型正面竞争而押注端侧SLM",
+      "repeat": false
+    },
+    {
+      "key": "https://k.sina.com.cn/article_5787187353_158f1789902002aeme.html",
+      "source": "websearch",
+      "kind": "采访/报道",
+      "title": "羊城晚报·超维影像龙新远专访：AI短剧导演的“人味”生意",
+      "url": "https://k.sina.com.cn/article_5787187353_158f1789902002aeme.html",
+      "published": "2026-11-02 08:00",
+      "note": "中国首部AIGC电影导演称AI跑不出人味儿，海外打脸题材须第二集反转，前8个月国内上线微短剧43万部、AI生成占比超九成",
+      "repeat": false
+    },
+    {
+      "key": "https://www.163.com/dy/article/LANIFFFK05564T5T.html",
+      "source": "websearch",
+      "kind": "采访/报道",
+      "title": "网易·腾讯吴文达谈医疗AI进入Agent时代：真正考验才刚开始",
+      "url": "https://www.163.com/dy/article/LANIFFFK05564T5T.html",
+      "published": "2026-11-02",
+      "note": "会前受访称AI单点价值已验证，但需从单点工具升级为全领域系统级协同，并发布医疗AI Agent工具箱把能力原子化供各平台调用",
+      "repeat": false
+    }
+  ]
+}

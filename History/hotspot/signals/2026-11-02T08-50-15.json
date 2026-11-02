@@ -1,0 +1,12 @@
+{
+  "run": "2026-11-02T08-50-15",
+  "generated_at": "2026-11-02T00:50:15.150Z",
+  "window_hours": 24,
+  "counts": {
+    "total": 0,
+    "fresh": 0,
+    "repeat": 0
+  },
+  "sources_status": "all_ok",
+  "signals": []
+}

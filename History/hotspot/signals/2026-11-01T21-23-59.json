@@ -1,0 +1,63 @@
+{
+  "run": "2026-11-01T21-23-59",
+  "generated_at": "2026-11-01T13:23:59.842Z",
+  "window_hours": 24,
+  "counts": {
+    "total": 5,
+    "fresh": 5,
+    "repeat": 0
+  },
+  "sources_status": "all_ok",
+  "signals": [
+    {
+      "key": "https://www.163.com/dy/article/LAL63RCA0511838M.html",
+      "source": "websearch",
+      "kind": "采访/报道",
+      "title": "媒体·鸿海董事长刘扬伟CNBC专访：未来18个月AI服务器产能已订满",
+      "url": "https://www.163.com/dy/article/LAL63RCA0511838M.html",
+      "published": "2026-11-01 11:16",
+      "note": "AI需求强劲，鸿海计划将全球AI服务器市占率从40%提升至45%并冲击50%；已与Altman会面谈合作，直言过度投资会害死公司",
+      "repeat": false
+    },
+    {
+      "key": "https://news.qq.com/rain/a/20261101A0AKL300",
+      "source": "websearch",
+      "kind": "采访/报道",
+      "title": "媒体·《人类简史》作者赫拉利深度访谈：真正的AI危机是官僚体系的静默渗透",
+      "url": "https://news.qq.com/rain/a/20261101A0AKL300",
+      "published": "2026-11-01",
+      "note": "赫拉利提出AI不是工具而是智能体，是异质的外星智能；警告未来10-20年AI将迭代出人类无法读懂的金融、法律系统",
+      "repeat": false
+    },
+    {
+      "key": "https://n24.com.tr/en/companies/nvidia-targets-german-startups-in-10-billion-dollar-europe-push-238",
+      "source": "websearch",
+      "kind": "采访/报道",
+      "title": "媒体·黄仁勋柏林演讲宣布10亿欧元级欧洲AI计划：投资4家德国初创",
+      "url": "https://n24.com.tr/en/companies/nvidia-targets-german-startups-in-10-billion-dollar-europe-push-238",
+      "published": "2026-11-01",
+      "note": "黄仁勋在柏林宣布投资Agile Robots等4家德国初创，押注物理AI与工业制造融合，欧洲累计拟投资初创达13家",
+      "repeat": false
+    },
+    {
+      "key": "https://wearethefrontier.org/world/2026/11/01/industrial-ai-scaling-data-barrier",
+      "source": "websearch",
+      "kind": "采访/报道",
+      "title": "媒体·西门子CEO Busch与Naver CEO崔秀妍首尔APK 2026对谈：工业AI卡在数据而非模型",
+      "url": "https://wearethefrontier.org/world/2026/11/01/industrial-ai-scaling-data-barrier",
+      "published": "2026-11-01",
+      "note": "两位CEO在APK 2026演讲呼吁企业走出AI试点：先组织好旧数据再谈规模化，Naver已在总部运营200+配送机器人",
+      "repeat": false
+    },
+    {
+      "key": "https://www.163.com/dy/article/LAKUL0IP0511FQO9.html",
+      "source": "websearch",
+      "kind": "采访/报道",
+      "title": "媒体·CSDN创始人蒋涛长沙1024程序员日主题演讲：硅基时间下的开发者红利",
+      "url": "https://www.163.com/dy/article/LAKUL0IP0511FQO9.html",
+      "published": "2026-11-01 09:05",
+      "note": "蒋涛提出硅基时间概念：METR测得AI可独立完成17小时任务，一人28天用AI造出4万行Rust编程智能体，时间第一次可以被采购",
+      "repeat": false
+    }
+  ]
+}

@@ -1,0 +1,345 @@
+{
+  "at": "2026-11-01T07:49:22.229Z",
+  "account": {
+    "mid": "3747573749779036",
+    "name": "今天AI又离谱了",
+    "sign": "日更：每天挑一条最离谱的 AI 新闻，一句话讲清事实，再补一句人话。",
+    "follower": 1,
+    "like_num": 4,
+    "archive_count": 18
+  },
+  "counts": {
+    "works": 18,
+    "visible": 15,
+    "hidden": 3
+  },
+  "totals": {
+    "view": 74,
+    "like": 2,
+    "coin": 0,
+    "favorite": 0,
+    "share": 0,
+    "reply": 12,
+    "danmaku": 0
+  },
+  "items": [
+    {
+      "bvid": "BV1cCxs63ESU",
+      "aid": 117539766077328,
+      "ok": true,
+      "title": "李开复 TED 3分钟摘要：AI 抢走工作后，人凭什么立足",
+      "pubdate": 1793514665,
+      "duration": 176,
+      "tid": 231,
+      "tname": "",
+      "state": 0,
+      "stat": {
+        "view": 1,
+        "like": 0,
+        "coin": 0,
+        "favorite": 0,
+        "share": 0,
+        "reply": 1,
+        "danmaku": 0
+      }
+    },
+    {
+      "bvid": "BV1HCxs63EwV",
+      "aid": 117539766143830,
+      "ok": true,
+      "title": "马斯克 TED 3分钟摘要：机器人比汽车更大，真相比答案更重要",
+      "pubdate": 1793514608,
+      "duration": 161,
+      "tid": 231,
+      "tname": "",
+      "state": 0,
+      "stat": {
+        "view": 2,
+        "like": 0,
+        "coin": 0,
+        "favorite": 0,
+        "share": 0,
+        "reply": 1,
+        "danmaku": 0
+      }
+    },
+    {
+      "bvid": "BV1rCxs6gEEb",
+      "aid": 117539766011419,
+      "ok": true,
+      "title": "奥尔特曼 TED 3分钟摘要：AGI、五亿用户与那枚魔戒",
+      "pubdate": 1793514548,
+      "duration": 172,
+      "tid": 231,
+      "tname": "",
+      "state": 0,
+      "stat": {
+        "view": 0,
+        "like": 0,
+        "coin": 0,
+        "favorite": 0,
+        "share": 0,
+        "reply": 1,
+        "danmaku": 0
+      }
+    },
+    {
+      "bvid": "BV1qDxs6vEUS",
+      "aid": 117539749232861,
+      "ok": true,
+      "title": "苏莱曼 TED 3分钟摘要：AI 不是工具，是新的数字物种",
+      "pubdate": 1793514507,
+      "duration": 179,
+      "tid": 231,
+      "tname": "",
+      "state": 0,
+      "stat": {
+        "view": 0,
+        "like": 0,
+        "coin": 0,
+        "favorite": 0,
+        "share": 0,
+        "reply": 1,
+        "danmaku": 0
+      }
+    },
+    {
+      "bvid": "BV1yvxs61Eaw",
+      "aid": 117539581462799,
+      "ok": true,
+      "title": "李飞飞 TED 3分钟摘要：AI 的下一个突破口，是空间智能",
+      "pubdate": 1793511731,
+      "duration": 171,
+      "tid": 231,
+      "tname": "",
+      "state": 0,
+      "stat": {
+        "view": 3,
+        "like": 0,
+        "coin": 0,
+        "favorite": 0,
+        "share": 0,
+        "reply": 1,
+        "danmaku": 0
+      }
+    },
+    {
+      "bvid": "BV1DExp6UEdb",
+      "aid": 117539262693615,
+      "ok": true,
+      "title": "李飞飞 TED 3分钟摘要：AI 的下一个突破口，是空间智能",
+      "pubdate": 1793507101,
+      "duration": 171,
+      "tid": 231,
+      "tname": "",
+      "state": 0,
+      "stat": {
+        "view": 7,
+        "like": 0,
+        "coin": 0,
+        "favorite": 0,
+        "share": 0,
+        "reply": 1,
+        "danmaku": 0
+      }
+    },
+    {
+      "bvid": "BV1fwxp68EQB",
+      "aid": 117539111698558,
+      "ok": true,
+      "title": "马斯克：人形机器人会比汽车更大，多数人还没意识到",
+      "pubdate": 1793504707,
+      "duration": 3158,
+      "tid": 231,
+      "tname": "",
+      "state": 0,
+      "stat": {
+        "view": 5,
+        "like": 1,
+        "coin": 0,
+        "favorite": 0,
+        "share": 0,
+        "reply": 1,
+        "danmaku": 0
+      }
+    },
+    {
+      "bvid": "BV19Gxp6XE4T",
+      "aid": 117539061369768,
+      "ok": true,
+      "title": "奥尔特曼：AI 超越人类只是时间问题",
+      "pubdate": 1793503997,
+      "duration": 2836,
+      "tid": 231,
+      "tname": "",
+      "state": 0,
+      "stat": {
+        "view": 3,
+        "like": 0,
+        "coin": 0,
+        "favorite": 0,
+        "share": 0,
+        "reply": 1,
+        "danmaku": 0
+      }
+    },
+    {
+      "bvid": "BV1oSxp6tEPQ",
+      "aid": 117538927214677,
+      "ok": true,
+      "title": "苏莱曼：AI 不是工具，人类正在造一种新物种",
+      "pubdate": 1793501840,
+      "duration": 1295,
+      "tid": 231,
+      "tname": "",
+      "state": 0,
+      "stat": {
+        "view": 5,
+        "like": 0,
+        "coin": 0,
+        "favorite": 0,
+        "share": 0,
+        "reply": 1,
+        "danmaku": 0
+      }
+    },
+    {
+      "bvid": "BV1tKxW62EhT",
+      "aid": 117538742601468,
+      "ok": true,
+      "title": "李开复：AI 抢走常规工作后，人类只剩这一条路",
+      "pubdate": 1793499185,
+      "duration": 873,
+      "tid": 231,
+      "tname": "",
+      "state": 0,
+      "stat": {
+        "view": 13,
+        "like": 0,
+        "coin": 0,
+        "favorite": 0,
+        "share": 0,
+        "reply": 2,
+        "danmaku": 0
+      }
+    },
+    {
+      "bvid": "BV113xW6VEv6",
+      "aid": 117538625227320,
+      "ok": true,
+      "title": "李飞飞：AI 即将真正看懂世界",
+      "pubdate": 1793497182,
+      "duration": 902,
+      "tid": 231,
+      "tname": "",
+      "state": 0,
+      "stat": {
+        "view": 28,
+        "like": 1,
+        "coin": 0,
+        "favorite": 0,
+        "share": 0,
+        "reply": 1,
+        "danmaku": 0
+      }
+    },
+    {
+      "bvid": "BV1VRx16WEyn",
+      "aid": 117535169121557,
+      "ok": true,
+      "title": "剪辑提速的 5 个小技巧，每条都能立刻用",
+      "pubdate": 1793444398,
+      "duration": 38,
+      "tid": 122,
+      "tname": "",
+      "state": 0,
+      "stat": {
+        "view": 6,
+        "like": 0,
+        "coin": 0,
+        "favorite": 0,
+        "share": 0,
+        "reply": 0,
+        "danmaku": 0
+      }
+    },
+    {
+      "bvid": "BV1sYx16BEMh",
+      "ok": false,
+      "code": 62012,
+      "message": "62012"
+    },
+    {
+      "bvid": "BV1crx16AEav",
+      "aid": 117535051612255,
+      "ok": true,
+      "title": "分区验证测试稿F，稍后删除",
+      "pubdate": 1793442680,
+      "duration": 7,
+      "tid": 231,
+      "tname": "",
+      "state": 0,
+      "stat": {
+        "view": 1,
+        "like": 0,
+        "coin": 0,
+        "favorite": 0,
+        "share": 0,
+        "reply": 0,
+        "danmaku": 0
+      }
+    },
+    {
+      "bvid": "BV1wBx16NEoC",
+      "aid": 117535018057883,
+      "ok": true,
+      "title": "分区验证测试稿C，稍后删除",
+      "pubdate": 1793442227,
+      "duration": 7,
+      "tid": 231,
+      "tname": "",
+      "state": 0,
+      "stat": {
+        "view": 0,
+        "like": 0,
+        "coin": 0,
+        "favorite": 0,
+        "share": 0,
+        "reply": 0,
+        "danmaku": 0
+      }
+    },
+    {
+      "bvid": "BV1wBx16KEhf",
+      "aid": 117535018257430,
+      "ok": true,
+      "title": "分区验证测试稿B，稍后删除",
+      "pubdate": 1793442096,
+      "duration": 7,
+      "tid": 231,
+      "tname": "",
+      "state": 0,
+      "stat": {
+        "view": 0,
+        "like": 0,
+        "coin": 0,
+        "favorite": 0,
+        "share": 0,
+        "reply": 0,
+        "danmaku": 0
+      }
+    },
+    {
+      "bvid": "BV1wzx16eEjd",
+      "ok": false,
+      "code": 62012,
+      "message": "62012"
+    },
+    {
+      "bvid": "BV1AaxC6hExH",
+      "ok": false,
+      "code": 62012,
+      "message": "62012"
+    }
+  ]
+}

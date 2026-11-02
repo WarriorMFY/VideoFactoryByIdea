@@ -1,0 +1,29 @@
+[08:40:22] 浏览器 msedge｜profile=F:\AgentWorkArea\WorkBuddy\TalkFactory\Workspace\run\bili_profile
+[08:40:22] 已登录 UID=3747573749779036
+[08:40:38] 未见草稿恢复弹窗（干净进入）
+[08:40:38] 投稿页 file input × 3
+[08:40:38] 已挂载 final.mp4（18.5MB），等转码/表单
+[08:40:38] 上传 0%  0.0MB/s
+[08:40:41] 上传 31%  0.4MB/s
+[08:40:44] 表单就绪（6s）
+[08:40:44] 标题 OK（40 字）
+[08:40:44] 已布防 tid 改写（全格式）：提交请求体里的 tid → 231（UI 显示仅作参考，落库以回读校验为准）
+[08:40:44] 简介 OK：Cloudflare 联合创始人兼 CEO 马修·普林斯（Matthew Pri…
+[08:40:44] 标签第 1 轮：多余 [生活记录,校园,记录] 缺 [AI,人工智能,Cloudflare,TED,科技,互联网]
+[08:40:55] 标签 OK（6）：AI / 人工智能 / Cloudflare / TED / 科技 / 互联网
+[08:40:55] 分区已是「人工智能」
+[08:40:56] 创作声明 = 含AI生成内容
+[08:40:58] 封面已传入，等裁剪界面
+[08:41:02] 封面第 1 步：完成
+[08:41:05] 封面完成
+[08:41:05] 表单回读 {"title":"Cloudflare CEO TED 3分钟摘要：AI 正在杀死互联网的流量生意","zone":"人工智能","decl":"含AI生成内容","descLen":983,"coverSet":true}
+[08:41:06] 已点投稿
+[08:41:06] [net] add 请求 POST https://member.bilibili.com/x/vu/web/add/v3?web_location=333.1024&t=1793522465835&csrf=2e1dbec89a9cb044e0a82f1
+[08:41:06] [net] add 请求体: {"cover":"https://archive.biliimg.com/bfs/archive/c8286f967db1bcea568527ce26c4aa063374bc64.jpg","cover43":"https://archive.biliimg.com/bfs/archive/b04d09302a9c75f4477d50d27194452cd288d487.jpg","ai_cover":0,"is_ab_cover":0,"ab_cover_info":null,"title":"Cloudflare CEO TED 3分钟摘要：AI 正在杀死互联网的流量生意","copyright":3,"creation_statement":{"id":1},"human_type2":1011,"tid":231,"tag":"AI,人工智能,Cloudflare,TED,科技,互联网","desc":"Cloudflare 联合创始人兼 CEO 马修·普林斯（Matthew Prince）TED 演讲《How AI is breaking the internet》3 分钟中文摘要报告。解说与字幕为本频道原创整理，画面取自 TED 官方演讲视频（CC BY–NC–ND 4.0，非商业摘要引用）。\n\n完整原片（12:41）：https://www.bilibili.com/video/BV1wFxs66EpB?t=0\n\n【快速导航通道】本片每章右上角标注了对应原片时间，按下表可直接跳到原片完整论述：\n01 第1章 · 互联网的地基 ｜ 摘要 00:03 → 原片 00:40  https://www.bilibili.com/video/BV1wFxs66EpB?t=40\n02 第2章 · 答案引擎抢走流量 ｜ 摘要 00:33 → 原片 02:48 
+[08:41:06] [net] add 响应 200: {"code":0,"message":"OK","ttl":1,"data":{"aid":117540286105122,"bvid":"BV1cwxs6uECu"}}
+[08:41:11] 投稿返回 ok=true errors=[]
+[08:41:15] 提交 tid 留痕：seen=[] rewritten=[]
+[08:41:15] 带体请求：[{"via":"xhr","url":"/x/vupre/web/archive/types/predict?t=1793522446165&x-bili-locale-json=%7B%22c_locale%22:%7B%22language%22:%22zh%22,%22sc","bodyType":"FormData"},{"via":"xhr","url":"/x/vu/web/cover/up?t=1793522462335&x-bili-locale-json=%7B%22c_locale%22:%7B%22language%22:%22zh%22,%22script%22:%22Hans%","bodyType":"FormData"},{"via":"xhr","url":"/x/vu/web/cover/up?t=1793522462336&x-bili-locale-json=%7B%22c_locale%22:%7B%22language%22:%22zh%22,%22script%22:%22Hans%","bodyType":"FormData"},{"via":"xhr","url":"//member.bilibili.com/x/vu/web/add/v3?web_location=333.1024&t=1793522465835&csrf=2e1dbec89a9cb044e0a82f11daf4e06e&x-bili","bodyType":"String"},{"via":"fetch","url":"//data.bilibili.com/v2/log/web?content_type=pbrequest&logid=021436&disable_compression=true","bodyType":"Uint8Array"},{"via":"fetch","url":"//data.bilibili.com/v2/log/web?content_type=pbrequest&logid=021436&disable_compression=true","bodyType":"Uint8Array"}]
+[08:41:15] ✓ 提交请求确认带 tid=231（原生或改写），仍以发布后回读为准
+[08:41:15] 已上线 https://www.bilibili.com/video/BV1cwxs6uECu/
+[08:41:16] 回执 F:\AgentWorkArea\WorkBuddy\TalkFactory\History\publish\bilibili\runs\2026-11-01T08-40-21_publish\receipt.json

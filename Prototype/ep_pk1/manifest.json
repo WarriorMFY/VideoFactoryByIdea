@@ -1,0 +1,142 @@
+{
+  "generated_at": "2026-11-01T16:01:20.575Z",
+  "tool": "Tool/ops/make_pk.mjs",
+  "spec": "History\\loops\\pk8\\pk.json",
+  "duration_s": 141.7,
+  "voice": {
+    "engine": "edge-tts",
+    "name": "zh-CN-YunyangNeural",
+    "rate": "+5%"
+  },
+  "segments": [
+    {
+      "speaker": null,
+      "topic": null,
+      "quote_en": null,
+      "src_t": null,
+      "tts_dur": 9.75,
+      "pk_t": 3.8
+    },
+    {
+      "speaker": null,
+      "topic": "议题一 · AI到底是什么",
+      "quote_en": null,
+      "src_t": null,
+      "tts_dur": 1.88,
+      "pk_t": 14.05
+    },
+    {
+      "speaker": "苏莱曼 · 微软AI副总裁",
+      "topic": null,
+      "quote_en": "I think AI should best be understood as something like a new digital species.",
+      "src_t": null,
+      "tts_dur": 8.72,
+      "pk_t": 16.43
+    },
+    {
+      "speaker": "李飞飞 · 斯坦福教授",
+      "topic": null,
+      "quote_en": "They will not only be useful tools, but also trusted partners.",
+      "src_t": null,
+      "tts_dur": 12.66,
+      "pk_t": 25.65
+    },
+    {
+      "speaker": null,
+      "topic": "议题二 · AI会抢走你的工作吗",
+      "quote_en": null,
+      "src_t": null,
+      "tts_dur": 2.45,
+      "pk_t": 38.8
+    },
+    {
+      "speaker": "李开复 · 创新工场",
+      "topic": null,
+      "quote_en": "AI completely replaces the individual jobs.",
+      "src_t": null,
+      "tts_dur": 14.59,
+      "pk_t": 41.75
+    },
+    {
+      "speaker": "马斯克 · 特斯拉与SpaceX",
+      "topic": null,
+      "quote_en": "I wouldn't worry about the putting people out of a job thing.",
+      "src_t": null,
+      "tts_dur": 11.81,
+      "pk_t": 56.83
+    },
+    {
+      "speaker": null,
+      "topic": "议题三 · 要不要踩一脚刹车",
+      "quote_en": null,
+      "src_t": null,
+      "tts_dur": 3.17,
+      "pk_t": 69.14
+    },
+    {
+      "speaker": "奥尔特曼 · OpenAI",
+      "topic": null,
+      "quote_en": "There have been moments of awe. How far is this going to go?",
+      "src_t": null,
+      "tts_dur": 12.95,
+      "pk_t": 72.82
+    },
+    {
+      "speaker": "苏莱曼 · 微软AI副总裁",
+      "topic": null,
+      "quote_en": "There's no evidence that we're anywhere near anything like that.",
+      "src_t": null,
+      "tts_dur": 15.26,
+      "pk_t": 86.27
+    },
+    {
+      "speaker": null,
+      "topic": "总结 · 不一样的观点，只是不同的角度",
+      "quote_en": null,
+      "src_t": null,
+      "tts_dur": 3.21,
+      "pk_t": 102.03
+    },
+    {
+      "speaker": null,
+      "topic": null,
+      "quote_en": null,
+      "src_t": null,
+      "tts_dur": 16.61,
+      "pk_t": 105.74
+    },
+    {
+      "speaker": null,
+      "topic": null,
+      "quote_en": null,
+      "src_t": null,
+      "tts_dur": 12.32,
+      "pk_t": 122.85
+    }
+  ],
+  "sources": [
+    {
+      "name": "苏莱曼 Mustafa Suleyman《What is an AI anyway?》TED2024",
+      "bvid": "BV1oSxp6tEPQ"
+    },
+    {
+      "name": "李飞飞《With spatial intelligence, AI will understand the real world》TED2024",
+      "bvid": "BV113xW6VEv6"
+    },
+    {
+      "name": "李开复《AI and how humans can work with it》TED2023",
+      "bvid": "BV1tKxW62EhT"
+    },
+    {
+      "name": "马斯克《Elon Musk talks Twitter, Tesla and how his brain works》TED2022",
+      "bvid": "BV1fwxp68EQB"
+    },
+    {
+      "name": "奥尔特曼《Sam Altman: ChatGPT, AI agents and superintelligence》TED2025",
+      "bvid": "BV19Gxp6XE4T"
+    }
+  ],
+  "timings_ms": {
+    "total": 150251
+  }
+}

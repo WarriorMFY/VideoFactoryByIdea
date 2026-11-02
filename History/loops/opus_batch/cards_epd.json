@@ -1,0 +1,18 @@
+{
+  "cards": [
+    { "frame": "Workspace/tmp/fr_epd/f_02496.jpg", "kicker": "TED 2025 ｜ 奥尔特曼",
+      "headline": ["AGI 不是概念题", "是日程表问题"],
+      "bullets": ["「好的产品就是安全的产品」", "写代码的方式两年间已彻底改变"],
+      "footer": "完整对谈 47:16 ｜ 3 分钟摘要见文末链接" },
+    { "frame": "Workspace/tmp/fr_epd/f_00170.jpg", "kicker": "47 分钟现场对谈",
+      "headline": ["聊透了四件事"],
+      "bullets": ["AGI 怎么定义——比多数人以为的更近", "软件正在被重写，下一波几个月内就来"] },
+    { "frame": "Workspace/tmp/fr_epd/f_01078.jpg", "kicker": "被追问的部分",
+      "headline": ["他没有回避"],
+      "bullets": ["安全团队离职、董事会风波", "OpenAI 权力的边界在哪里"] },
+    { "frame": "Workspace/tmp/fr_epd/f_02042.jpg", "kicker": "3 分钟看完",
+      "headline": ["更强的工具", "给到创造者"],
+      "bullets": ["历史上每次都让创造产出更好", "这次也不会例外——如果你信得过这几年"],
+      "footer": "完整版 + 摘要版链接见动态正文" }
+  ]
+}

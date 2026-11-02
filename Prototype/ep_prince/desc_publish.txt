@@ -1,0 +1,18 @@
+Cloudflare 联合创始人兼 CEO 马修·普林斯（Matthew Prince）TED 演讲完整版，中英双语字幕，英文逐词卡拉OK高亮。
+
+流量是互联网的货币——但 AI 答案引擎正在掐断这条命脉。普林斯用 Cloudflare 的全网数据算了笔账：同样的内容，想在谷歌拿到过去的流量难 5.2 倍，OpenAI 难 750 倍，Anthropic 难 32,000 倍。他把大语言模型比作一块瑞士奶酪：奶酪是已知，洞是未知；AI 公司愿意花钱让人"填洞"，而不是奖励把奶酪点着的标题党。
+
+· 03:00 答案引擎：搜索不再给你藏宝图
+· 04:00 拿流量的难度：谷歌 5.2 倍 / OpenAI 750 倍 / Anthropic 32,000 倍
+· 05:30 瑞士奶酪与大奶酪奖
+· 07:00 乔布斯的 99 美分与 Spotify 的 100 亿美元
+· 09:00 他买下家乡快倒闭的报纸，唯一 KPI 是投票率
+· 11:00 谷歌：OpenAI 每看一页，它看三页
+· 12:00 只收 AI 公司"追上谷歌"的钱——互联网的 iTunes 时刻？
+
+原片：TED官方《How AI is breaking the internet (and what to do about it)》（Matthew Prince, 2026）
+https://www.ted.com/talks/matthew_prince_how_ai_is_breaking_the_internet_and_what_to_do_about_it
+
+版权说明：TED 素材采用 CC BY-NC-ND 4.0 许可，本视频为非商业使用，版权归原作者所有；中文字幕参考官方译本整理。
+
+#AI# #Cloudflare# #TED# #互联网# #科技#

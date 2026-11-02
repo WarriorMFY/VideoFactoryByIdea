@@ -1,0 +1,57 @@
+{
+  "cmd": "post",
+  "at": "2026-11-01T09:47:13.049Z",
+  "uid": "3747573749779036",
+  "textLen": 393,
+  "images": [
+    {
+      "file": "card_01.jpg",
+      "w": 1080,
+      "h": 1440,
+      "kb": 170.674,
+      "url": "http://i0.hdslb.com/bfs/new_dyn/0743b654a4ae27be714fd4dd37d4787f3747573749779036.jpg"
+    },
+    {
+      "file": "card_02.jpg",
+      "w": 1080,
+      "h": 1440,
+      "kb": 117.728,
+      "url": "http://i0.hdslb.com/bfs/new_dyn/039805ae1a1b686e71377944cef1aa4c3747573749779036.jpg"
+    },
+    {
+      "file": "card_03.jpg",
+      "w": 1080,
+      "h": 1440,
+      "kb": 115.833,
+      "url": "http://i0.hdslb.com/bfs/new_dyn/9c1b1a271d70d33e54cb6e2f27c9a06a3747573749779036.jpg"
+    },
+    {
+      "file": "card_04.jpg",
+      "w": 1080,
+      "h": 1440,
+      "kb": 118.138,
+      "url": "http://i0.hdslb.com/bfs/new_dyn/d7dc568739898b45ecc2c92701c1f9573747573749779036.jpg"
+    }
+  ],
+  "dynReq": {
+    "scene": 2,
+    "pics": 4,
+    "upload_id": "3747573749779036_1793526434_7973",
+    "text_head": "【3 分钟总结】马斯克 TED 对谈：为什么说机器人比汽车更大\n\n提出收购 Twitter 的几个小时后，他坐上了 TE"
+  },
+  "create": {
+    "code": 0,
+    "message": "OK",
+    "data": {
+      "dyn_id": 1265675468585042000,
+      "dyn_id_str": "1265675468585041929",
+      "dyn_type": 2,
+      "dyn_rid": 414072154
+    }
+  },
+  "dyn_id": "1265675468585041929",
+  "verify": {
+    "found": true,
+    "items": 12
+  }
+}

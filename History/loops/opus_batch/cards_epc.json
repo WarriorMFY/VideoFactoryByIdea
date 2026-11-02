@@ -1,0 +1,18 @@
+{
+  "cards": [
+    { "frame": "Workspace/tmp/fr_epc/f_01088.jpg", "kicker": "TED 2024 ｜ 苏莱曼",
+      "headline": ["AI 不是工具", "是新的数字物种"],
+      "bullets": ["它比印刷术、蒸汽机更具涌现性", "工具完全受控，物种会自主演化"],
+      "footer": "完整演讲 21:35 ｜ 3 分钟摘要见文末链接" },
+    { "frame": "Workspace/tmp/fr_epc/f_00389.jpg", "kicker": "一条历史线索",
+      "headline": ["每一波技术浪潮", "都在加速"],
+      "bullets": ["农业 → 印刷 → 蒸汽 → 计算", "这一次，浪潮正在到来"] },
+    { "frame": "Workspace/tmp/fr_epc/f_00622.jpg", "kicker": "关键之问",
+      "headline": ["我们要给它", "立什么边界？"],
+      "bullets": ["我们想造出什么样的 AI", "怎么把人的能动性放回中心"] },
+    { "frame": "Workspace/tmp/fr_epc/f_00855.jpg", "kicker": "3 分钟看完",
+      "headline": ["别把它当工具", "去低估它"],
+      "bullets": ["断言：AI 将逐渐被当作数字物种", "前提：边界先于能力"],
+      "footer": "完整版 + 摘要版链接见动态正文" }
+  ]
+}

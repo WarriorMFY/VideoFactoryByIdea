@@ -1,0 +1,33 @@
+{
+  "run": "2026-11-02T01-32-29",
+  "generated_at": "2026-11-01T17:32:29.109Z",
+  "window_hours": 24,
+  "counts": {
+    "total": 2,
+    "fresh": 2,
+    "repeat": 0
+  },
+  "sources_status": "all_ok",
+  "signals": [
+    {
+      "key": "https://superpowerdaily.com/posts/trump-withholds-full-backing-for-nvidia-s-huang-after-alleged-chinese-spy-plot",
+      "source": "websearch",
+      "kind": "采访/报道",
+      "title": "Superpower Daily·特朗普就黄仁勋涉华间谍指控表态 称局势非常复杂未全力背书",
+      "url": "https://superpowerdaily.com/posts/trump-withholds-full-backing-for-nvidia-s-huang-after-alleged-chinese-spy-plot",
+      "published": "2026-11-01",
+      "note": "特朗普11月1日就NYT报道的英伟达CEO黄仁勋被中国情报人员接近事件表态称局势复杂、未明确力挺，英伟达否认芯片转移指控",
+      "repeat": false
+    },
+    {
+      "key": "https://en.prnasia.com/releases/apac/huawei-and-longgang-international-arts-center-unveil-a-global-intelligent-venue-showcase-554117.shtml",
+      "source": "websearch",
+      "kind": "采访/报道",
+      "title": "PR Newswire·华为副总裁Michael Ma龙岗国际艺术中心全球智慧场馆展示暨D+开幕仪式主题演讲",
+      "url": "https://en.prnasia.com/releases/apac/huawei-and-longgang-international-arts-center-unveil-a-global-intelligent-venue-showcase-554117.shtml",
+      "published": "2026-11-02",
+      "note": "华为副总裁Michael Ma与校园团队CEO Eric He在深圳龙岗国际艺术中心D+开幕式发表主题演讲，讲智慧场馆与AI、OpenHarmony融合的科技+艺术新范式",
+      "repeat": false
+    }
+  ]
+}

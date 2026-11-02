@@ -1,0 +1,57 @@
+{
+  "cmd": "post",
+  "at": "2026-11-01T09:04:17.792Z",
+  "uid": "3747573749779036",
+  "textLen": 487,
+  "images": [
+    {
+      "file": "card_01.jpg",
+      "w": 1080,
+      "h": 1440,
+      "kb": 205.257,
+      "url": "http://i0.hdslb.com/bfs/new_dyn/d6069ae53f9da0b52959a48f51bd6d973747573749779036.jpg"
+    },
+    {
+      "file": "card_02.jpg",
+      "w": 1080,
+      "h": 1440,
+      "kb": 118.827,
+      "url": "http://i0.hdslb.com/bfs/new_dyn/69e3f54b9de5606dd57cbad88058e0fb3747573749779036.jpg"
+    },
+    {
+      "file": "card_03.jpg",
+      "w": 1080,
+      "h": 1440,
+      "kb": 194.582,
+      "url": "http://i0.hdslb.com/bfs/new_dyn/73487367f7f96bc7179d2ed8813a1c1a3747573749779036.jpg"
+    },
+    {
+      "file": "card_04.jpg",
+      "w": 1080,
+      "h": 1440,
+      "kb": 142.844,
+      "url": "http://i0.hdslb.com/bfs/new_dyn/1333eda6482ace7c04f00359fec886123747573749779036.jpg"
+    }
+  ],
+  "dynReq": {
+    "scene": 2,
+    "pics": 4,
+    "upload_id": "3747573749779036_1793523859_8480",
+    "text_head": "【3 分钟总结】李飞飞：AI 缺的不是语言，是「空间智能」\n\n能生成视频的 AI，还不算\"看懂世界\"。李飞飞在 TED "
+  },
+  "create": {
+    "code": 0,
+    "message": "OK",
+    "data": {
+      "dyn_id": 1265664404724121600,
+      "dyn_id_str": "1265664404724121605",
+      "dyn_type": 2,
+      "dyn_rid": 414067148
+    }
+  },
+  "dyn_id": "1265664404724121605",
+  "verify": {
+    "found": true,
+    "items": 12
+  }
+}

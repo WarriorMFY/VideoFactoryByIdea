@@ -1,0 +1,18 @@
+{
+  "cards": [
+    { "frame": "Workspace/tmp/fr_epe/f_00189.jpg", "kicker": "TED 2022 ｜ 马斯克",
+      "headline": ["机器人会比汽车更大", "多数人还没意识到"],
+      "bullets": ["第一批先干危险、无聊、重复的活", "「任何商品和服务，都会便宜到想要就有」"],
+      "footer": "完整对谈 52:38 ｜ 3 分钟摘要见文末链接" },
+    { "frame": "Workspace/tmp/fr_epe/f_00695.jpg", "kicker": "为什么买 Twitter",
+      "headline": ["文明风险的下降", "取决于平台可信度"],
+      "bullets": ["公共对话平台是文明的地基", "提出收购当天，他上了 TED 的舞台"] },
+    { "frame": "Workspace/tmp/fr_epe/f_01200.jpg", "kicker": "关于 AI 安全",
+      "headline": ["该有监管机构", "该有物理开关"],
+      "bullets": ["远程无法更新的物理停机开关", "不是限制创新，是给创新上保险"] },
+    { "frame": "Workspace/tmp/fr_epe/f_02779.jpg", "kicker": "3 分钟看完",
+      "headline": ["一个富足的世界", "是怎么来的"],
+      "bullets": ["人形机器人把劳动力成本打下来", "物质丰富之后，工作需要重新定义"],
+      "footer": "完整版 + 摘要版链接见动态正文" }
+  ]
+}

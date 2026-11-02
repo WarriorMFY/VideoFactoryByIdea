@@ -24,6 +24,10 @@
 | `publish_bilibili.mjs` | **投稿发布**（小循环 12 新增）：Playwright + 系统 Edge 驱动创作中心网页端 —— 扫码登录（登录态持久化在 `Workspace/run/bili_profile`）→ 上传成片 → 标题/简介/7 标签 → 分区 → 创作声明 → 封面（4:3 与 16:9 同步）→ 投稿 → 回执（BV 号 + 逐项回读）。`status` 查登录态、`login` 出二维码、`publish --dry-run` 停在投稿前、`verify --bvid` 校验线上页 |
 | `make_digest.mjs` | **3 分钟摘要报告流水线**（小循环 14 新增）：spec JSON 驱动 —— 30 段中文解说 Edge TTS × 原片精选帧 Ken Burns × 章节角标 + 右上「原片 mm:ss」导航角标 × 片头/尾导流卡 → 成片 + 简介（含 `?t=` 章节跳转表）。音画同步模型：音频 `[T] seg [GAP]…[E]` ↔ 视频 `Vk=seg+2·GAP`，xfade 转场恰好填满句间静音，零漂移。改 spec 重跑约 2 分钟 |
 | `bili_comment.mjs` | **评论 + 置顶**（小循环 14 新增）：走 API（`x/v2/reply/add` + `x/v2/reply/top`），Playwright `ctx.request` 共享登录 cookie，免网页表单自动化。`add --bvid BV --text-file f [--pin]` / `pin --bvid BV --rpid N`。用于稿件间互挂导航链接 |
+| `ted_frame.mjs` | **HLS 定点抓帧**（小循环 16 新增）：不下载整片，`--pm <id> --at 100,300` 或 `--fracs 0.1,0.5 --dur 880` 直接从 TED HLS 取单帧（约 4.6s/帧），可 `--sheet` 出带时间戳联系表。素材被清理后回捞画面、做动态卡片底图 |
+| `make_opus_cards.mjs` | **动态竖版图文卡**（小循环 16 新增）：spec JSON 驱动 —— 原片抽帧 + 深色面板 + kicker/两行大标题/要点/页脚，CJK 自动折行、标题自动缩字号。1080×1440。**卡片文案禁 emoji**（SimHei 无字形 → 豆腐块） |
+| `post_dynamic.mjs` | **图文动态发布**（小循环 16 新增）：走 API 两步 —— `x/dynamic/feed/draw/upload_bfs`（multipart `file_up`，不是 `upload/image`，那个 404）→ `x/dynamic/feed/create/dyn?platform=web&csrf=`（JSON `{dyn_req:{content,scene:2,pics,upload_id}}`）→ 回读空间动态列表校验。`post --text-file f --image a.jpg [--image b.jpg]` / `verify --dyn-id`。正文里的 B 站视频链接会被平台自动转成带标题的卡片 |
+| `track_bilibili.mjs` | **作品跟踪**（小循环 15 尾新增）：`roster`（创作中心枚举全量，需登录）/ `snap`（公开接口打点，免登录）/ `report`（增量对比 + 异常提醒）/ `run` 一条龙 → `History/publish/bilibili/track/`。枚举需登录、打点不需要——cookie 过期不阻断日常跑，只阻断发现新作品。**每轮跟踪结束须手写追加 `track/insights.md`**（市场感知日志，只增不删，规则见 `track/README.md`）——report.md 会被下次覆盖，insights.md 才是趋势留存 |
 
 ## 最短链路
 

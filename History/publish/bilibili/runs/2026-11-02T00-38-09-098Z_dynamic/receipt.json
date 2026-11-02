@@ -1,0 +1,57 @@
+{
+  "cmd": "post",
+  "at": "2026-11-02T00:38:09.200Z",
+  "uid": "3747573749779036",
+  "textLen": 582,
+  "images": [
+    {
+      "file": "card_01.jpg",
+      "w": 1080,
+      "h": 1440,
+      "kb": 175.843,
+      "url": "http://i0.hdslb.com/bfs/new_dyn/f04a2dd9db70fa10881671965375f25f3747573749779036.jpg"
+    },
+    {
+      "file": "card_02.jpg",
+      "w": 1080,
+      "h": 1440,
+      "kb": 145.55,
+      "url": "http://i0.hdslb.com/bfs/new_dyn/4f39982355563f01b820b9eb1a3aee033747573749779036.jpg"
+    },
+    {
+      "file": "card_03.jpg",
+      "w": 1080,
+      "h": 1440,
+      "kb": 142.939,
+      "url": "http://i0.hdslb.com/bfs/new_dyn/54ab551d5d8604df8f1ab22571af26b53747573749779036.jpg"
+    },
+    {
+      "file": "card_04.jpg",
+      "w": 1080,
+      "h": 1440,
+      "kb": 143.839,
+      "url": "http://i0.hdslb.com/bfs/new_dyn/4f7081b2268589a9c7d9db6a055eed413747573749779036.jpg"
+    }
+  ],
+  "dynReq": {
+    "scene": 2,
+    "pics": 4,
+    "upload_id": "3747573749779036_1793579890_4217",
+    "text_head": "【今早热点】微软AI CEO：谁都不许造有意识的AI\n\n11月2日，微软AI CEO苏莱曼在X发长文，把话说得很死：现在"
+  },
+  "create": {
+    "code": 0,
+    "message": "OK",
+    "data": {
+      "dyn_id": 1265905064677998600,
+      "dyn_id_str": "1265905064677998595",
+      "dyn_type": 2,
+      "dyn_rid": 414137170
+    }
+  },
+  "dyn_id": "1265905064677998595",
+  "verify": {
+    "found": true,
+    "items": 12
+  }
+}

@@ -1,0 +1,30 @@
+[08:29:31] 浏览器 msedge｜profile=F:\AgentWorkArea\WorkBuddy\TalkFactory\Workspace\run\bili_profile
+[08:29:31] 已登录 UID=3747573749779036
+[08:29:47] 未见草稿恢复弹窗（干净进入）
+[08:29:47] 投稿页 file input × 3
+[08:29:47] 已挂载 final.mp4（126.6MB），等转码/表单
+[08:29:47] 表单就绪（0s）
+[08:29:47] 标题 OK（30 字）
+[08:29:47] 已布防 tid 改写（全格式）：提交请求体里的 tid → 231（UI 显示仅作参考，落库以回读校验为准）
+[08:29:47] 简介 OK：Cloudflare 联合创始人兼 CEO 马修·普林斯（Matthew Pri…
+[08:29:47] 标签第 1 轮：多余 [] 缺 [AI,人工智能,Cloudflare,TED,科技,互联网]
+[08:29:58] 标签第 2 轮：多余 [流量] 缺 []
+[08:29:59] 标签 OK（6）：互联网 / AI / 人工智能 / Cloudflare / TED / 科技
+[08:29:59] 分区已是「人工智能」
+[08:30:01] 创作声明 = 含AI生成内容
+[08:30:03] 封面已传入，等裁剪界面
+[08:30:07] 封面第 1 步：完成
+[08:30:10] 封面第 2 步：完成
+[08:30:12] 已确认 16:9 同步
+[08:30:15] 封面完成
+[08:30:15] 表单回读 {"title":"Cloudflare CEO：AI 正在杀死互联网的流量生意","zone":"人工智能","decl":"含AI生成内容","descLen":806,"coverSet":true}
+[08:30:16] 已点投稿
+[08:30:16] [net] add 请求 POST https://member.bilibili.com/x/vu/web/add/v3?web_location=333.1024&t=1793521816367&csrf=2e1dbec89a9cb044e0a82f1
+[08:30:16] [net] add 请求体: {"cover":"https://archive.biliimg.com/bfs/archive/42697608e389ee78a961cc9684b7118483435d13.jpg","cover43":"https://archive.biliimg.com/bfs/archive/4bd6e2d163952d32bc4c1488fde87f458444cd5c.jpg","ai_cover":0,"is_ab_cover":0,"ab_cover_info":null,"title":"Cloudflare CEO：AI 正在杀死互联网的流量生意","copyright":3,"creation_statement":{"id":1},"human_type2":1011,"tid":231,"tag":"互联网,AI,人工智能,Cloudflare,TED,科技","desc":"Cloudflare 联合创始人兼 CEO 马修·普林斯（Matthew Prince）TED 演讲完整版，中英双语字幕，英文逐词卡拉OK高亮。\n\n流量是互联网的货币——但 AI 答案引擎正在掐断这条命脉。普林斯用 Cloudflare 的全网数据算了笔账：同样的内容，想在谷歌拿到过去的流量难 5.2 倍，OpenAI 难 750 倍，Anthropic 难 32,000 倍。他把大语言模型比作一块瑞士奶酪：奶酪是已知，洞是未知；AI 公司愿意花钱让人\"填洞\"，而不是奖励把奶酪点着的标题党。\n\n· 03:00 答案引擎：搜索不再给你藏宝图\n· 04:00 拿流量的难度：谷歌 5.2 倍 / OpenAI 750 倍 / Anthropic 32,000 倍\n· 05:30 瑞士奶酪与大奶酪奖\n· 07:00 乔布斯的 99 美分与 Spotify 的 100 亿美元
+[08:30:17] [net] add 响应 200: {"code":0,"message":"OK","ttl":1,"data":{"aid":117540235773594,"bvid":"BV1wFxs66EpB"}}
+[08:30:21] 投稿返回 ok=true errors=[]
+[08:30:25] 提交 tid 留痕：seen=[] rewritten=[]
+[08:30:25] 带体请求：[{"via":"xhr","url":"https://hdaa.shuzilm.cn/report?v=1.2.0&e=1&c=1&r=cd2670b0-15ad-4fb4-9dfd-6ea68bb42b7f","bodyType":"ArrayBuffer"},{"via":"xhr","url":"https://hdaa.shuzilm.cn/valid?v=1.2.0&e=1&c=1","bodyType":"ArrayBuffer"},{"via":"xhr","url":"//member.bilibili.com/upload/multipart/new","bodyType":"String"},{"via":"fetch","url":"//data.bilibili.com/v2/log/web?content_type=pbrequest&logid=021436&disable_compression=true","bodyType":"Uint8Array"},{"via":"xhr","url":"//member.bilibili.com/upload/multipart/part","bodyType":"String"},{"via":"xhr","url":"//member.bilibili.com/upload/multipart/part","bodyType":"String"},{"via":"xhr","url":"//member.bilibili.com/upload/multipart/part","bodyType":"String"},{"via":"xhr","url":"//member.bilibili.com/upload/multipart/part","bodyType":"String"},{"via":"xhr","url":"https://jscs-luffy-upcdnbd.bilivideo.com/ugcfxever/n261101s3f08prdiwz7lv23z0idjhbh7.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256","bodyType":"Blob"},{"via":"xhr","url":"https://jscs-luffy-upcdnbldsa.bilivideo.com/ugcfxever/n261101s3f08prdiwz7lv23z0idjhbh7.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA","bodyType":"Blob"},{"via":"xhr","url":"https://jscs-luffy-upcdntx.bilivideo.com/ugcfxever/n261101s3f08prdiwz7lv23z0idjhbh7.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256","bodyType":"Blob"},{"via":"xhr","url":"https://jscs-luffy-upcdnbd.aikobo.cn/ugcfxever/n261101s3f08prdiwz7lv23z0idjhbh7.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-A","bodyType":"Blob"},{"via":"xhr","url":"//member.bilibili.com/upload/multipart/part","bodyType":"String"},{"via":"xhr","url":"https://jscs-luffy-upcdnbd.bilivideo.com/ugcfxever/n261101s3f08prdiwz7lv23z0idjhbh7.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256","bodyType":"Blob"},{"via":"xhr","url":"//member.bilibili.com/upload/multipart/part","bodyType":"String"}]
+[08:30:25] ✓ 提交请求确认带 tid=231（原生或改写），仍以发布后回读为准
+[08:30:25] 已上线 https://www.bilibili.com/video/BV1wFxs66EpB/
+[08:30:26] 回执 F:\AgentWorkArea\WorkBuddy\TalkFactory\History\publish\bilibili\runs\2026-11-01T08-29-30_publish\receipt.json

@@ -1,0 +1,347 @@
+{
+  "generated_at": "2026-11-02T07:24:39.473Z",
+  "tool": "Tool/ops/make_digest.mjs",
+  "spec": "Prototype\\ep_salkhan_digest\\digest.json",
+  "source": {
+    "file": "Workspace\\tmp\\ted_salkhan\\talk_720p.mp4",
+    "origin_bvid": "BV1CH4F6GEUT",
+    "origin_dur": 1251
+  },
+  "duration_s": 174.63,
+  "voice": {
+    "engine": "edge-tts",
+    "name": "zh-CN-YunyangNeural",
+    "rate": "+5%"
+  },
+  "segments": [
+    {
+      "chapter": "第1章 · 去身体化的世界",
+      "src": 280,
+      "text": "可汗学院创始人萨尔·汗，和心理治疗大师埃丝特·佩瑞尔，坐进 TED《交汇》栏目。",
+      "tts_dur": 6.14,
+      "digest_t": 3.4
+    },
+    {
+      "chapter": "第1章 · 去身体化的世界",
+      "src": 480,
+      "text": "佩瑞尔开场就发难：我们正活在越来越「去身体化」的世界里。",
+      "tts_dur": 3.71,
+      "digest_t": 10.04
+    },
+    {
+      "chapter": "第1章 · 去身体化的世界",
+      "src": 20,
+      "text": "聚会变少、共餐变少——美国餐厅做的饭，四分之三被带出门吃。",
+      "tts_dur": 4.99,
+      "digest_t": 14.24
+    },
+    {
+      "chapter": "第2章 · 重造教育这台旧机器",
+      "src": 122,
+      "text": "萨尔·汗选教育：两千年前，只有王子请得起亚里士多德当私教。",
+      "tts_dur": 5.07,
+      "digest_t": 19.73
+    },
+    {
+      "chapter": "第2章 · 重造教育这台旧机器",
+      "src": 155,
+      "text": "大规模公立教育是妥协——所有孩子按同一进度齐步走。",
+      "tts_dur": 4.08,
+      "digest_t": 25.3
+    },
+    {
+      "chapter": "第2章 · 重造教育这台旧机器",
+      "src": 172,
+      "text": "一门课考了 C，就永远记在成绩单上，没学会也得接着往下学。",
+      "tts_dur": 4.62,
+      "digest_t": 29.88
+    },
+    {
+      "chapter": "第2章 · 重造教育这台旧机器",
+      "src": 200,
+      "text": "他的药方是「掌握式学习」：像练乐器一样，学会为止。",
+      "tts_dur": 3.59,
+      "digest_t": 35
+    },
+    {
+      "chapter": "第2章 · 重造教育这台旧机器",
+      "src": 182,
+      "text": "学历只该问你懂什么，不问你在椅子上坐了多久。",
+      "tts_dur": 3.41,
+      "digest_t": 39.09
+    },
+    {
+      "chapter": "第3章 · 软技能翻身记",
+      "src": 240,
+      "text": "成绩单上从来不写：你擅长协作、擅长倾听。",
+      "tts_dur": 3.43,
+      "digest_t": 43
+    },
+    {
+      "chapter": "第3章 · 软技能翻身记",
+      "src": 252,
+      "text": "佩瑞尔说，关系能力曾是「软技能」，而软技能常被当成女性技能。",
+      "tts_dur": 5.02,
+      "digest_t": 46.92
+    },
+    {
+      "chapter": "第3章 · 软技能翻身记",
+      "src": 268,
+      "text": "原则上被推崇、现实中被忽视——如今它第一次进了企业损益表。",
+      "tts_dur": 5.07,
+      "digest_t": 52.45
+    },
+    {
+      "chapter": "第3章 · 软技能翻身记",
+      "src": 300,
+      "text": "雇主改口叫「持久技能」：沟通、协作、创造力、倾听。",
+      "tts_dur": 4.11,
+      "digest_t": 58.01
+    },
+    {
+      "chapter": "第4章 · 希望不是策略",
+      "src": 365,
+      "text": "谈到 AI 冲击，萨尔·汗判断：未来五到十年，几乎所有领域都会震一遍。",
+      "tts_dur": 5.56,
+      "digest_t": 62.63
+    },
+    {
+      "chapter": "第4章 · 希望不是策略",
+      "src": 375,
+      "text": "网约车司机、客服、程序员——这些岗位会被重塑，也可能萎缩。",
+      "tts_dur": 4.77,
+      "digest_t": 68.68
+    },
+    {
+      "chapter": "第4章 · 希望不是策略",
+      "src": 390,
+      "text": "有人说新岗位总会出现，他的回应很冷：希望不是策略。",
+      "tts_dur": 3.93,
+      "digest_t": 73.95
+    },
+    {
+      "chapter": "第4章 · 希望不是策略",
+      "src": 415,
+      "text": "全球化用三十年完成的撕裂，这次可能只给三五年——社会来不及建缓冲。",
+      "tts_dur": 5.5,
+      "digest_t": 78.39
+    },
+    {
+      "chapter": "第5章 · 关系没有登月计划",
+      "src": 452,
+      "text": "佩瑞尔把镜头拉回亲密关系：规范正在我们脚下松动。",
+      "tts_dur": 3.98,
+      "digest_t": 84.38
+    },
+    {
+      "chapter": "第5章 · 关系没有登月计划",
+      "src": 490,
+      "text": "从「父母之命」到自由协商——自由变多了，门槛也变高了。",
+      "tts_dur": 4.17,
+      "digest_t": 88.87
+    },
+    {
+      "chapter": "第5章 · 关系没有登月计划",
+      "src": 522,
+      "text": "她说，哪里都有登月计划，唯独关系没有登月计划。",
+      "tts_dur": 3.63,
+      "digest_t": 93.54
+    },
+    {
+      "chapter": "第5章 · 关系没有登月计划",
+      "src": 548,
+      "text": "什么是家庭、要不要孩子、去谁家过年，全要逐条谈出来。",
+      "tts_dur": 4.38,
+      "digest_t": 97.67
+    },
+    {
+      "chapter": "第5章 · 关系没有登月计划",
+      "src": 583,
+      "text": "而新问题已经来了：AI 伴侣，算什么？",
+      "tts_dur": 2.76,
+      "digest_t": 102.55
+    },
+    {
+      "chapter": "第5章 · 关系没有登月计划",
+      "src": 620,
+      "text": "她担心一个「无接触世界」：不出门就能工作、健身、购物、吃饭。",
+      "tts_dur": 4.71,
+      "digest_t": 105.81
+    },
+    {
+      "chapter": "第5章 · 关系没有登月计划",
+      "src": 660,
+      "text": "人开始要求关系像 App 一样完美、可预测——但人不是 App。",
+      "tts_dur": 4.42,
+      "digest_t": 111.02
+    },
+    {
+      "chapter": "第5章 · 关系没有登月计划",
+      "src": 672,
+      "text": "让她兴奋的是小团体的复兴：人们厌倦屏幕，重新线下相聚。",
+      "tts_dur": 4.72,
+      "digest_t": 115.94
+    },
+    {
+      "chapter": "第6章 · 奇点另一头的确定性",
+      "src": 725,
+      "text": "萨尔·汗的判断更狠：AI、基因、生物技术同时收敛——奇点已至。",
+      "tts_dur": 5.2,
+      "digest_t": 121.15
+    },
+    {
+      "chapter": "第6章 · 奇点另一头的确定性",
+      "src": 770,
+      "text": "佩瑞尔说，不确定从来都有，过去靠宗教替人消化未知。",
+      "tts_dur": 4.41,
+      "digest_t": 126.85
+    },
+    {
+      "chapter": "第6章 · 奇点另一头的确定性",
+      "src": 790,
+      "text": "真正丢掉的不是确定性，而是处理不确定的机制——仪式与文化。",
+      "tts_dur": 4.75,
+      "digest_t": 131.76
+    },
+    {
+      "chapter": "第6章 · 奇点另一头的确定性",
+      "src": 915,
+      "text": "该从「人类对抗 AI」，改成「人类加强版」（human plus）。",
+      "tts_dur": 3.89,
+      "digest_t": 137.02
+    },
+    {
+      "chapter": "第7章 · 别把爱情做成投资",
+      "src": 995,
+      "text": "最后一问，也是全场最好的一问：我们是更会生活了，还是更会优化了？",
+      "tts_dur": 4.63,
+      "digest_t": 141.41
+    },
+    {
+      "chapter": "第7章 · 别把爱情做成投资",
+      "src": 1010,
+      "text": "佩瑞尔的观察：亲密正在被优化成可管理、可测量、可丢弃的东西。",
+      "tts_dur": 5.21,
+      "digest_t": 146.54
+    },
+    {
+      "chapter": "第7章 · 别把爱情做成投资",
+      "src": 1030,
+      "text": "爱是从没被数据定义过的东西，如今被套上了指标和市场。",
+      "tts_dur": 4.4,
+      "digest_t": 152.24
+    },
+    {
+      "chapter": "第7章 · 别把爱情做成投资",
+      "src": 1100,
+      "text": "她管这叫情感资本主义：拿着购物清单，去找一个人生伴侣。",
+      "tts_dur": 4.19,
+      "digest_t": 157.15
+    },
+    {
+      "chapter": "第7章 · 别把爱情做成投资",
+      "src": 1208,
+      "text": "萨尔·汗用自造词收尾——「怀希望的乐观派」，两人约好同乘这趟希望列车。",
+      "tts_dur": 5.8,
+      "digest_t": 161.83
+    }
+  ],
+  "chapters": [
+    {
+      "no": 1,
+      "title": "第1章 · 去身体化的世界",
+      "digest_t": 3.4,
+      "src_t": 280
+    },
+    {
+      "no": 2,
+      "title": "第2章 · 重造教育这台旧机器",
+      "digest_t": 19.7,
+      "src_t": 122
+    },
+    {
+      "no": 3,
+      "title": "第3章 · 软技能翻身记",
+      "digest_t": 43,
+      "src_t": 240
+    },
+    {
+      "no": 4,
+      "title": "第4章 · 希望不是策略",
+      "digest_t": 62.6,
+      "src_t": 365
+    },
+    {
+      "no": 5,
+      "title": "第5章 · 关系没有登月计划",
+      "digest_t": 84.4,
+      "src_t": 452
+    },
+    {
+      "no": 6,
+      "title": "第6章 · 奇点另一头的确定性",
+      "digest_t": 121.2,
+      "src_t": 725
+    },
+    {
+      "no": 7,
+      "title": "第7章 · 别把爱情做成投资",
+      "digest_t": 141.4,
+      "src_t": 995
+    }
+  ],
+  "nav_links": [
+    {
+      "no": 1,
+      "title": "第1章 · 去身体化的世界",
+      "digest_t": 3.4,
+      "src_t": 280,
+      "origin_url": "https://www.bilibili.com/video/BV1CH4F6GEUT?t=280"
+    },
+    {
+      "no": 2,
+      "title": "第2章 · 重造教育这台旧机器",
+      "digest_t": 19.7,
+      "src_t": 122,
+      "origin_url": "https://www.bilibili.com/video/BV1CH4F6GEUT?t=122"
+    },
+    {
+      "no": 3,
+      "title": "第3章 · 软技能翻身记",
+      "digest_t": 43,
+      "src_t": 240,
+      "origin_url": "https://www.bilibili.com/video/BV1CH4F6GEUT?t=240"
+    },
+    {
+      "no": 4,
+      "title": "第4章 · 希望不是策略",
+      "digest_t": 62.6,
+      "src_t": 365,
+      "origin_url": "https://www.bilibili.com/video/BV1CH4F6GEUT?t=365"
+    },
+    {
+      "no": 5,
+      "title": "第5章 · 关系没有登月计划",
+      "digest_t": 84.4,
+      "src_t": 452,
+      "origin_url": "https://www.bilibili.com/video/BV1CH4F6GEUT?t=452"
+    },
+    {
+      "no": 6,
+      "title": "第6章 · 奇点另一头的确定性",
+      "digest_t": 121.2,
+      "src_t": 725,
+      "origin_url": "https://www.bilibili.com/video/BV1CH4F6GEUT?t=725"
+    },
+    {
+      "no": 7,
+      "title": "第7章 · 别把爱情做成投资",
+      "digest_t": 141.4,
+      "src_t": 995,
+      "origin_url": "https://www.bilibili.com/video/BV1CH4F6GEUT?t=995"
+    }
+  ],
+  "timings_ms": {
+    "total": 241603
+  }
+}

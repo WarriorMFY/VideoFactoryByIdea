@@ -1,0 +1,65 @@
+{
+  "at": "2026-11-01T14:15:27.856Z",
+  "video": "Prototype\\ep_hastings\\final.mp4",
+  "videoSizeMB": 243.04,
+  "title": "Netflix 创始人：10 亿美元砸进教育没搞定，AI 三年给出答案",
+  "tags": [
+    "AI",
+    "人工智能",
+    "TED",
+    "Netflix",
+    "教育",
+    "英语听力"
+  ],
+  "zone": "人工智能",
+  "declaration": "含AI生成内容",
+  "cover": "Prototype\\ep_hastings\\cover.jpg",
+  "coverUploaded": true,
+  "dryRun": false,
+  "runDir": "History\\publish\\bilibili\\runs\\2026-11-01T14-14-12_publish",
+  "tidExpected": "231",
+  "tidTrace": {
+    "forced": "231",
+    "htype": "1011",
+    "seen": [],
+    "rewritten": [],
+    "reqs": [
+      {
+        "via": "xhr",
+        "url": "/x/vu/web/cover/up?t=1793542524863&x-bili-locale-json=%7B%22c_locale%22:%7B%22language%22:%22zh%22,%22script%22:%22Hans%",
+        "bodyType": "FormData"
+      },
+      {
+        "via": "xhr",
+        "url": "/x/vu/web/cover/up?t=1793542524863&x-bili-locale-json=%7B%22c_locale%22:%7B%22language%22:%22zh%22,%22script%22:%22Hans%",
+        "bodyType": "FormData"
+      },
+      {
+        "via": "xhr",
+        "url": "//member.bilibili.com/x/vu/web/add/v3?web_location=333.1024&t=1793542528379&csrf=2e1dbec89a9cb044e0a82f11daf4e06e&x-bili",
+        "bodyType": "String"
+      },
+      {
+        "tid": "231"
+      },
+      {
+        "via": "fetch",
+        "url": "//data.bilibili.com/v2/log/web?content_type=pbrequest&logid=021434&disable_compression=true",
+        "bodyType": "Uint8Array"
+      },
+      {
+        "via": "fetch",
+        "url": "//data.bilibili.com/v2/log/web?content_type=pbrequest&logid=021436&disable_compression=true",
+        "bodyType": "Uint8Array"
+      },
+      {
+        "via": "fetch",
+        "url": "//data.bilibili.com/v2/log/web?content_type=pbrequest&logid=021436&disable_compression=true",
+        "bodyType": "Uint8Array"
+      }
+    ]
+  },
+  "published": true,
+  "bvid": "BV1Qbxb6KE2S",
+  "url": "https://www.bilibili.com/video/BV1Qbxb6KE2S/"
+}

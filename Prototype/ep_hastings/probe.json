@@ -1,0 +1,21 @@
+{
+  "file": "F:\\AgentWorkArea\\WorkBuddy\\TalkFactory\\Workspace\\tmp\\ted_hastings\\talk_720p.mp4",
+  "duration": 984.249922,
+  "format": "mov,mp4,m4a,3gp,3g2,mj2",
+  "size": 390236263,
+  "bitrate": 3171846,
+  "video": {
+    "codec": "h264",
+    "width": 1280,
+    "height": 720,
+    "fps": "24000/1001",
+    "pix_fmt": "yuv420p",
+    "nb_frames": "29477"
+  },
+  "audio": {
+    "codec": "aac",
+    "sample_rate": "48000",
+    "channels": 2,
+    "bitrate": "161430"
+  }
+}

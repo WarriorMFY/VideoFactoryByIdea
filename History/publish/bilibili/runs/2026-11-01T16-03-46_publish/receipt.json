@@ -1,0 +1,24 @@
+{
+  "at": "2026-11-01T16:04:33.120Z",
+  "video": "Prototype\\ep_pk1\\final.mp4",
+  "videoSizeMB": 15.5,
+  "title": "AI大佬吵起来了：李开复说15年内取代你，马斯克说根本不用愁",
+  "tags": [
+    "AI",
+    "马斯克",
+    "李开复",
+    "观点",
+    "TED演讲"
+  ],
+  "zone": "知识",
+  "declaration": "含AI生成内容",
+  "cover": "Prototype\\ep_pk1\\cover.jpg",
+  "coverUploaded": true,
+  "dryRun": false,
+  "runDir": "History\\publish\\bilibili\\runs\\2026-11-01T16-03-46_publish",
+  "tidExpected": null,
+  "tidTrace": null,
+  "published": true,
+  "bvid": "BV1J8xt62Emf",
+  "url": "https://www.bilibili.com/video/BV1J8xt62Emf/"
+}

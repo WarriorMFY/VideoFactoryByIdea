@@ -1,0 +1,57 @@
+{
+  "cmd": "post",
+  "at": "2026-11-02T00:45:04.458Z",
+  "uid": "3747573749779036",
+  "textLen": 473,
+  "images": [
+    {
+      "file": "card_01.jpg",
+      "w": 1080,
+      "h": 1440,
+      "kb": 139.242,
+      "url": "http://i0.hdslb.com/bfs/new_dyn/4b250c3712f78d6c47d2193f7599e7f23747573749779036.jpg"
+    },
+    {
+      "file": "card_02.jpg",
+      "w": 1080,
+      "h": 1440,
+      "kb": 127.529,
+      "url": "http://i0.hdslb.com/bfs/new_dyn/39ddf457ad9a2ef3f7abc5b1ef7e79c13747573749779036.jpg"
+    },
+    {
+      "file": "card_03.jpg",
+      "w": 1080,
+      "h": 1440,
+      "kb": 120.415,
+      "url": "http://i0.hdslb.com/bfs/new_dyn/51f5142105a0272dde1f151837e82d9e3747573749779036.jpg"
+    },
+    {
+      "file": "card_04.jpg",
+      "w": 1080,
+      "h": 1440,
+      "kb": 133.235,
+      "url": "http://i0.hdslb.com/bfs/new_dyn/1516ee8f0be86021b880f9fcfc3c8d573747573749779036.jpg"
+    }
+  ],
+  "dynReq": {
+    "scene": 2,
+    "pics": 4,
+    "upload_id": "3747573749779036_1793580305_5366",
+    "text_head": "【热点】微软CEO改口了：「我不再相信AI对齐会自然产生」\n\n纳德拉在20VC播客里被问「过去一年你改变了什么看法」，他"
+  },
+  "create": {
+    "code": 0,
+    "message": "OK",
+    "data": {
+      "dyn_id": 1265906842778730500,
+      "dyn_id_str": "1265906842778730504",
+      "dyn_type": 2,
+      "dyn_rid": 414137372
+    }
+  },
+  "dyn_id": "1265906842778730504",
+  "verify": {
+    "found": true,
+    "items": 12
+  }
+}

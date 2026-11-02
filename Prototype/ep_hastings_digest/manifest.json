@@ -1,0 +1,321 @@
+{
+  "generated_at": "2026-11-01T14:19:31.248Z",
+  "tool": "Tool/ops/make_digest.mjs",
+  "spec": "Prototype\\ep_hastings_digest\\digest.json",
+  "source": {
+    "file": "Workspace\\tmp\\ted_hastings\\talk_720p.mp4",
+    "origin_bvid": "BV1Qbxb6KE2S",
+    "origin_dur": 980
+  },
+  "duration_s": 142.4,
+  "voice": {
+    "engine": "edge-tts",
+    "name": "zh-CN-YunyangNeural",
+    "rate": "+5%"
+  },
+  "segments": [
+    {
+      "chapter": "第1章 · 十亿美元与一台蒸汽机",
+      "src": 12,
+      "text": "他叫里德·哈斯廷斯，Netflix 创始人，也是可汗学院的董事。",
+      "tts_dur": 4.59,
+      "digest_t": 3.4
+    },
+    {
+      "src": 26,
+      "text": "二十五年、十亿美元砸进教育，他说结果比起点还低。",
+      "tts_dur": 4.12,
+      "digest_t": 8.49
+    },
+    {
+      "src": 48,
+      "text": "他讲了个十八世纪的故事：工厂换上电动机，生产率一点没涨。",
+      "tts_dur": 4.48,
+      "digest_t": 13.11
+    },
+    {
+      "src": 67,
+      "text": "因为瓶颈从来不在发动机。",
+      "tts_dur": 1.84,
+      "digest_t": 18.09
+    },
+    {
+      "src": 79,
+      "text": "而在动力分配——那些贯穿全厂的转轴、滑轮和皮带。",
+      "tts_dur": 3.94,
+      "digest_t": 20.43
+    },
+    {
+      "src": 91,
+      "text": "拆掉传动、给每台机器装小电机，效率才真正爆发。",
+      "tts_dur": 4.07,
+      "digest_t": 24.87
+    },
+    {
+      "chapter": "第2章 · 二十五个孩子卡在同一进度",
+      "src": 108,
+      "text": "他说，今天的课堂就是那根转轴。",
+      "tts_dur": 2.61,
+      "digest_t": 29.44
+    },
+    {
+      "src": 117,
+      "text": "二十五个孩子被钉在同一个进度上。",
+      "tts_dur": 2.23,
+      "digest_t": 32.55
+    },
+    {
+      "src": 123,
+      "text": "三分之一跟不上，三分之一觉得无聊，这就是根本摩擦。",
+      "tts_dur": 4.08,
+      "digest_t": 35.28
+    },
+    {
+      "chapter": "第3章 · 一个孩子一年十万美元",
+      "src": 129,
+      "text": "解法其实早就有了：给每个孩子一个专属导师。",
+      "tts_dur": 3.22,
+      "digest_t": 39.86
+    },
+    {
+      "src": 152,
+      "text": "布卢姆四十年前就证明过，效果会大幅提升。",
+      "tts_dur": 3.09,
+      "digest_t": 43.58
+    },
+    {
+      "src": 233,
+      "text": "但真人导师，一个孩子一年要十万美元。",
+      "tts_dur": 3.08,
+      "digest_t": 47.17
+    },
+    {
+      "src": 240,
+      "text": "于是问题变成：能不能用 AI 逼近那个真人？",
+      "tts_dur": 3.08,
+      "digest_t": 50.75
+    },
+    {
+      "src": 249,
+      "text": "他很直接：现在的 AI 还不行。",
+      "tts_dur": 2.16,
+      "digest_t": 54.33
+    },
+    {
+      "chapter": "第4章 · AI 三年走完的路",
+      "src": 252,
+      "text": "可这三年，从 GPT-3.5 连高中数学都勉强，",
+      "tts_dur": 3.92,
+      "digest_t": 56.99
+    },
+    {
+      "src": 261,
+      "text": "到今天这种智能，而且还在继续翻倍。",
+      "tts_dur": 2.75,
+      "digest_t": 61.41
+    },
+    {
+      "src": 274,
+      "text": "他判断：AI 迟早会追平、甚至超过一对一家教。",
+      "tts_dur": 3.77,
+      "digest_t": 64.66
+    },
+    {
+      "chapter": "第5章 · 学校只剩三件事",
+      "src": 297,
+      "text": "那学校还剩下什么？他说学校有三个目的。",
+      "tts_dur": 3.51,
+      "digest_t": 68.93
+    },
+    {
+      "src": 312,
+      "text": "培养好公民、给经济机会、完成社会化——只有第一件适合线上。",
+      "tts_dur": 4.76,
+      "digest_t": 72.94
+    },
+    {
+      "src": 399,
+      "text": "老师的位置往上移：不再做「讲台上的圣人」。",
+      "tts_dur": 2.93,
+      "digest_t": 78.21
+    },
+    {
+      "src": 407,
+      "text": "而是陪孩子成熟、练人际、把价值理清楚。",
+      "tts_dur": 3.23,
+      "digest_t": 81.64
+    },
+    {
+      "chapter": "第6章 · Anthropic 董事会里聊什么",
+      "src": 470,
+      "text": "他还是 Anthropic 的董事。",
+      "tts_dur": 1.73,
+      "digest_t": 85.37
+    },
+    {
+      "src": 503,
+      "text": "他说那里的使命很清楚：不是利润最大化，是让人类成功穿过 AI 这道门。",
+      "tts_dur": 5.61,
+      "digest_t": 87.6
+    },
+    {
+      "src": 547,
+      "text": "一边管住风险，一边把好处铺开：自动驾驶、基因编辑、治愈癌症。",
+      "tts_dur": 5.15,
+      "digest_t": 93.71
+    },
+    {
+      "src": 642,
+      "text": "他甚至提到，内部有个产品基本是 AI 自己做出来的。",
+      "tts_dur": 3.8,
+      "digest_t": 99.35
+    },
+    {
+      "src": 222,
+      "text": "他形容这是互联网浪潮的放大版，只是大得多、猛得多。",
+      "tts_dur": 4.24,
+      "digest_t": 103.66
+    },
+    {
+      "chapter": "第7章 · 辛顿错判与「高失业+高增长」",
+      "src": 769,
+      "text": "至于失业，他先泼冷水：辛顿 2016 年说别再培养放射科医生。",
+      "tts_dur": 4.7,
+      "digest_t": 108.39
+    },
+    {
+      "src": 794,
+      "text": "结果 AI 让核磁便宜到三百美元一次，检查量暴涨。",
+      "tts_dur": 3.8,
+      "digest_t": 113.59
+    },
+    {
+      "src": 807,
+      "text": "放射科医生反而短缺，年薪涨到五十万。",
+      "tts_dur": 2.81,
+      "digest_t": 117.9
+    },
+    {
+      "src": 926,
+      "text": "但这次可能真不一样。",
+      "tts_dur": 1.5,
+      "digest_t": 121.21
+    },
+    {
+      "src": 934,
+      "text": "如果 AI 成功，会是高增长、高股市，和高失业同时出现。",
+      "tts_dur": 4.62,
+      "digest_t": 123.2
+    },
+    {
+      "src": 940,
+      "text": "所以他提议学阿拉斯加石油基金、挪威主权基金：",
+      "tts_dur": 3.5,
+      "digest_t": 128.33
+    },
+    {
+      "src": 953,
+      "text": "把增长的税收，变成惠及全体公民的红利。",
+      "tts_dur": 3.06,
+      "digest_t": 132.32
+    }
+  ],
+  "chapters": [
+    {
+      "no": 1,
+      "title": "第1章 · 十亿美元与一台蒸汽机",
+      "digest_t": 3.4,
+      "src_t": 12
+    },
+    {
+      "no": 2,
+      "title": "第2章 · 二十五个孩子卡在同一进度",
+      "digest_t": 29.4,
+      "src_t": 108
+    },
+    {
+      "no": 3,
+      "title": "第3章 · 一个孩子一年十万美元",
+      "digest_t": 39.9,
+      "src_t": 129
+    },
+    {
+      "no": 4,
+      "title": "第4章 · AI 三年走完的路",
+      "digest_t": 57,
+      "src_t": 252
+    },
+    {
+      "no": 5,
+      "title": "第5章 · 学校只剩三件事",
+      "digest_t": 68.9,
+      "src_t": 297
+    },
+    {
+      "no": 6,
+      "title": "第6章 · Anthropic 董事会里聊什么",
+      "digest_t": 85.4,
+      "src_t": 470
+    },
+    {
+      "no": 7,
+      "title": "第7章 · 辛顿错判与「高失业+高增长」",
+      "digest_t": 108.4,
+      "src_t": 769
+    }
+  ],
+  "nav_links": [
+    {
+      "no": 1,
+      "title": "第1章 · 十亿美元与一台蒸汽机",
+      "digest_t": 3.4,
+      "src_t": 12,
+      "origin_url": "https://www.bilibili.com/video/BV1Qbxb6KE2S?t=12"
+    },
+    {
+      "no": 2,
+      "title": "第2章 · 二十五个孩子卡在同一进度",
+      "digest_t": 29.4,
+      "src_t": 108,
+      "origin_url": "https://www.bilibili.com/video/BV1Qbxb6KE2S?t=108"
+    },
+    {
+      "no": 3,
+      "title": "第3章 · 一个孩子一年十万美元",
+      "digest_t": 39.9,
+      "src_t": 129,
+      "origin_url": "https://www.bilibili.com/video/BV1Qbxb6KE2S?t=129"
+    },
+    {
+      "no": 4,
+      "title": "第4章 · AI 三年走完的路",
+      "digest_t": 57,
+      "src_t": 252,
+      "origin_url": "https://www.bilibili.com/video/BV1Qbxb6KE2S?t=252"
+    },
+    {
+      "no": 5,
+      "title": "第5章 · 学校只剩三件事",
+      "digest_t": 68.9,
+      "src_t": 297,
+      "origin_url": "https://www.bilibili.com/video/BV1Qbxb6KE2S?t=297"
+    },
+    {
+      "no": 6,
+      "title": "第6章 · Anthropic 董事会里聊什么",
+      "digest_t": 85.4,
+      "src_t": 470,
+      "origin_url": "https://www.bilibili.com/video/BV1Qbxb6KE2S?t=470"
+    },
+    {
+      "no": 7,
+      "title": "第7章 · 辛顿错判与「高失业+高增长」",
+      "digest_t": 108.4,
+      "src_t": 769,
+      "origin_url": "https://www.bilibili.com/video/BV1Qbxb6KE2S?t=769"
+    }
+  ],
+  "timings_ms": {
+    "total": 225243
+  }
+}

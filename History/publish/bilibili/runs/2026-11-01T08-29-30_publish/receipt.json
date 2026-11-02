@@ -1,0 +1,240 @@
+{
+  "at": "2026-11-01T08:30:15.839Z",
+  "video": "Prototype\\ep_prince\\final.mp4",
+  "videoSizeMB": 126.64,
+  "title": "Cloudflare CEO：AI 正在杀死互联网的流量生意",
+  "tags": [
+    "互联网",
+    "AI",
+    "人工智能",
+    "Cloudflare",
+    "TED",
+    "科技"
+  ],
+  "zone": "人工智能",
+  "declaration": "含AI生成内容",
+  "cover": "Prototype\\ep_prince\\cover.jpg",
+  "coverUploaded": true,
+  "dryRun": false,
+  "runDir": "History\\publish\\bilibili\\runs\\2026-11-01T08-29-30_publish",
+  "tidExpected": "231",
+  "tidTrace": {
+    "forced": "231",
+    "htype": "1011",
+    "seen": [],
+    "rewritten": [],
+    "reqs": [
+      {
+        "via": "xhr",
+        "url": "https://hdaa.shuzilm.cn/report?v=1.2.0&e=1&c=1&r=cd2670b0-15ad-4fb4-9dfd-6ea68bb42b7f",
+        "bodyType": "ArrayBuffer"
+      },
+      {
+        "via": "xhr",
+        "url": "https://hdaa.shuzilm.cn/valid?v=1.2.0&e=1&c=1",
+        "bodyType": "ArrayBuffer"
+      },
+      {
+        "via": "xhr",
+        "url": "//member.bilibili.com/upload/multipart/new",
+        "bodyType": "String"
+      },
+      {
+        "via": "fetch",
+        "url": "//data.bilibili.com/v2/log/web?content_type=pbrequest&logid=021436&disable_compression=true",
+        "bodyType": "Uint8Array"
+      },
+      {
+        "via": "xhr",
+        "url": "//member.bilibili.com/upload/multipart/part",
+        "bodyType": "String"
+      },
+      {
+        "via": "xhr",
+        "url": "//member.bilibili.com/upload/multipart/part",
+        "bodyType": "String"
+      },
+      {
+        "via": "xhr",
+        "url": "//member.bilibili.com/upload/multipart/part",
+        "bodyType": "String"
+      },
+      {
+        "via": "xhr",
+        "url": "//member.bilibili.com/upload/multipart/part",
+        "bodyType": "String"
+      },
+      {
+        "via": "xhr",
+        "url": "https://jscs-luffy-upcdnbd.bilivideo.com/ugcfxever/n261101s3f08prdiwz7lv23z0idjhbh7.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256",
+        "bodyType": "Blob"
+      },
+      {
+        "via": "xhr",
+        "url": "https://jscs-luffy-upcdnbldsa.bilivideo.com/ugcfxever/n261101s3f08prdiwz7lv23z0idjhbh7.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA",
+        "bodyType": "Blob"
+      },
+      {
+        "via": "xhr",
+        "url": "https://jscs-luffy-upcdntx.bilivideo.com/ugcfxever/n261101s3f08prdiwz7lv23z0idjhbh7.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256",
+        "bodyType": "Blob"
+      },
+      {
+        "via": "xhr",
+        "url": "https://jscs-luffy-upcdnbd.aikobo.cn/ugcfxever/n261101s3f08prdiwz7lv23z0idjhbh7.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-A",
+        "bodyType": "Blob"
+      },
+      {
+        "via": "xhr",
+        "url": "//member.bilibili.com/upload/multipart/part",
+        "bodyType": "String"
+      },
+      {
+        "via": "xhr",
+        "url": "https://jscs-luffy-upcdnbd.bilivideo.com/ugcfxever/n261101s3f08prdiwz7lv23z0idjhbh7.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256",
+        "bodyType": "Blob"
+      },
+      {
+        "via": "xhr",
+        "url": "//member.bilibili.com/upload/multipart/part",
+        "bodyType": "String"
+      },
+      {
+        "via": "xhr",
+        "url": "https://jscs-luffy-upcdnbd.bilivideo.com/ugcfxever/n261101s3f08prdiwz7lv23z0idjhbh7.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256",
+        "bodyType": "Blob"
+      },
+      {
+        "via": "xhr",
+        "url": "//member.bilibili.com/upload/multipart/part",
+        "bodyType": "String"
+      },
+      {
+        "via": "xhr",
+        "url": "https://jscs-luffy-upcdnbd.bilivideo.com/ugcfxever/n261101s3f08prdiwz7lv23z0idjhbh7.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256",
+        "bodyType": "Blob"
+      },
+      {
+        "via": "xhr",
+        "url": "//e17962d5cstx.esheep.com/svfboss/n261101txxl5rf28r3gb83997tkiv019.zip?partNumber=1&uploadId=5e3eebc2ee0021c1&chunk=0&ch",
+        "bodyType": "Blob"
+      },
+      {
+        "via": "xhr",
+        "url": "//e17962d5cstx.esheep.com/svfboss/n261101txxl5rf28r3gb83997tkiv019.zip?output=json&name=frames_3747573749779036_17935217",
+        "bodyType": "String"
+      },
+      {
+        "via": "xhr",
+        "url": "//member.bilibili.com/upload/multipart/part",
+        "bodyType": "String"
+      },
+      {
+        "via": "xhr",
+        "url": "https://jscs-luffy-upcdnbd.bilivideo.com/ugcfxever/n261101s3f08prdiwz7lv23z0idjhbh7.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256",
+        "bodyType": "Blob"
+      },
+      {
+        "via": "xhr",
+        "url": "/x/vupre/web/archive/types/predict?t=1793521797499&x-bili-locale-json=%7B%22c_locale%22:%7B%22language%22:%22zh%22,%22sc",
+        "bodyType": "FormData"
+      },
+      {
+        "via": "xhr",
+        "url": "https://jscs-luffy-upcdntx.bilivideo.com/fxmetalf/n261101s31eu169rc1xq82r5u6zbwv4k.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&",
+        "bodyType": "Blob"
+      },
+      {
+        "via": "xhr",
+        "url": "/x/vupre/web/archive/videocheck?t=1793521797827&x-bili-locale-json=%7B%22c_locale%22:%7B%22language%22:%22zh%22,%22scrip",
+        "bodyType": "String"
+      },
+      {
+        "via": "xhr",
+        "url": "//member.bilibili.com/upload/multipart/part",
+        "bodyType": "String"
+      },
+      {
+        "via": "xhr",
+        "url": "https://jscs-luffy-upcdnbd.bilivideo.com/ugcfxever/n261101s3f08prdiwz7lv23z0idjhbh7.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256",
+        "bodyType": "Blob"
+      },
+      {
+        "via": "xhr",
+        "url": "//member.bilibili.com/upload/multipart/part",
+        "bodyType": "String"
+      },
+      {
+        "via": "xhr",
+        "url": "https://jscs-luffy-upcdnbd.bilivideo.com/ugcfxever/n261101s3f08prdiwz7lv23z0idjhbh7.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256",
+        "bodyType": "Blob"
+      },
+      {
+        "via": "xhr",
+        "url": "//member.bilibili.com/upload/multipart/part",
+        "bodyType": "String"
+      },
+      {
+        "via": "xhr",
+        "url": "https://jscs-luffy-upcdnbd.bilivideo.com/ugcfxever/n261101s3f08prdiwz7lv23z0idjhbh7.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256",
+        "bodyType": "Blob"
+      },
+      {
+        "via": "xhr",
+        "url": "//member.bilibili.com/upload/multipart/part",
+        "bodyType": "String"
+      },
+      {
+        "via": "xhr",
+        "url": "https://jscs-luffy-upcdnbd.bilivideo.com/ugcfxever/n261101s3f08prdiwz7lv23z0idjhbh7.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256",
+        "bodyType": "Blob"
+      },
+      {
+        "via": "xhr",
+        "url": "//member.bilibili.com/upload/multipart/part",
+        "bodyType": "String"
+      },
+      {
+        "via": "xhr",
+        "url": "https://jscs-luffy-upcdnbd.bilivideo.com/ugcfxever/n261101s3f08prdiwz7lv23z0idjhbh7.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256",
+        "bodyType": "Blob"
+      },
+      {
+        "via": "xhr",
+        "url": "//member.bilibili.com/upload/multipart/complete",
+        "bodyType": "String"
+      },
+      {
+        "via": "xhr",
+        "url": "/x/vu/web/cover/up?t=1793521810056&x-bili-locale-json=%7B%22c_locale%22:%7B%22language%22:%22zh%22,%22script%22:%22Hans%",
+        "bodyType": "FormData"
+      },
+      {
+        "via": "xhr",
+        "url": "/x/vu/web/cover/up?t=1793521810057&x-bili-locale-json=%7B%22c_locale%22:%7B%22language%22:%22zh%22,%22script%22:%22Hans%",
+        "bodyType": "FormData"
+      },
+      {
+        "via": "xhr",
+        "url": "//member.bilibili.com/x/vu/web/add/v3?web_location=333.1024&t=1793521816367&csrf=2e1dbec89a9cb044e0a82f11daf4e06e&x-bili",
+        "bodyType": "String"
+      },
+      {
+        "tid": "231"
+      },
+      {
+        "via": "fetch",
+        "url": "//data.bilibili.com/v2/log/web?content_type=pbrequest&logid=021436&disable_compression=true",
+        "bodyType": "Uint8Array"
+      },
+      {
+        "via": "fetch",
+        "url": "//data.bilibili.com/v2/log/web?content_type=pbrequest&logid=021436&disable_compression=true",
+        "bodyType": "Uint8Array"
+      }
+    ]
+  },
+  "published": true,
+  "bvid": "BV1wFxs66EpB",
+  "url": "https://www.bilibili.com/video/BV1wFxs66EpB/"
+}

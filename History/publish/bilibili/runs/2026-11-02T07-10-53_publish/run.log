@@ -1,0 +1,67 @@
+[07:10:54] 浏览器 msedge｜profile=F:\AgentWorkArea\WorkBuddy\TalkFactory\Workspace\run\bili_profile
+[07:10:54] 已登录 UID=3747573749779036
+[07:11:11] 未见草稿恢复弹窗（干净进入）
+[07:11:11] 投稿页 file input × 3
+[07:11:12] 已挂载 final.mp4（293.6MB），等转码/表单
+[07:11:12] 上传 0%  0.0MB/s
+[07:11:15] 上传 2%  0.1MB/s
+[07:11:18] 上传 4%  3.6MB/s
+[07:11:21] 上传 6%  2.3MB/s
+[07:11:24] 上传 8%  2.1MB/s
+[07:11:27] 上传 10%  1.5MB/s
+[07:11:30] 上传 13%  3.3MB/s
+[07:11:33] 上传 15%  2.2MB/s
+[07:11:36] 上传 18%  2.2MB/s
+[07:11:39] 上传 20%  2.8MB/s
+[07:11:42] 上传 23%  2.7MB/s
+[07:11:45] 上传 26%  2.6MB/s
+[07:11:48] 上传 28%  2.9MB/s
+[07:11:51] 上传 29%  1.5MB/s
+[07:11:54] 上传 32%  2.7MB/s
+[07:11:57] 上传 35%  2.7MB/s
+[07:12:00] 上传 38%  3.3MB/s
+[07:12:03] 上传 40%  2.5MB/s
+[07:12:06] 上传 42%  2.0MB/s
+[07:12:09] 上传 44%  1.6MB/s
+[07:12:12] 上传 47%  2.6MB/s
+[07:12:15] 上传 49%  2.2MB/s
+[07:12:18] 上传 52%  2.5MB/s
+[07:12:21] 上传 54%  2.2MB/s
+[07:12:24] 上传 57%  2.6MB/s
+[07:12:27] 上传 60%  2.5MB/s
+[07:12:30] 上传 62%  2.2MB/s
+[07:12:33] 上传 65%  2.4MB/s
+[07:12:36] 上传 67%  2.5MB/s
+[07:12:39] 上传 70%  2.9MB/s
+[07:12:42] 上传 73%  2.2MB/s
+[07:12:45] 上传 76%  3.0MB/s
+[07:12:48] 上传 80%  3.5MB/s
+[07:12:51] 上传 83%  3.3MB/s
+[07:12:54] 上传 86%  2.9MB/s
+[07:12:57] 上传 88%  2.4MB/s
+[07:13:00] 上传 90%  2.0MB/s
+[07:13:03] 上传 92%  2.2MB/s
+[07:13:06] 上传 94%  2.6MB/s
+[07:13:09] 上传 98%  3.0MB/s
+[07:13:12] 表单就绪（120s）
+[07:13:12] 标题 OK（29 字）
+[07:13:12] 已布防 tid 改写（全格式）：提交请求体里的 tid → 231（UI 显示仅作参考，落库以回读校验为准）
+[07:13:12] 简介 OK：可汗学院创始人萨尔·汗（Sal Khan）× 心理治疗师埃丝特·佩瑞尔（Esth…
+[07:13:12] 标签第 1 轮：多余 [生活记录,校园,记录] 缺 [TED,可汗学院,SalKhan,AI,人工智能,演讲]
+[07:13:22] 标签 OK（6）：TED / 可汗学院 / SalKhan / AI / 人工智能 / 演讲
+[07:13:22] 分区已是「人工智能」
+[07:13:24] 创作声明 = 含AI生成内容
+[07:13:26] 封面已传入，等裁剪界面
+[07:13:29] 封面第 1 步：完成
+[07:13:32] 封面完成
+[07:13:32] 表单回读 {"title":"可汗学院创始人对谈心理大师：AI 拿走一切之后，人还剩什么","zone":"人工智能","decl":"含AI生成内容","descLen":690,"coverSet":true}
+[07:13:33] 已点投稿
+[07:13:33] [net] add 请求 POST https://member.bilibili.com/x/vu/web/add/v3?web_location=333.1024&t=1793603613444&csrf=2e1dbec89a9cb044e0a82f1
+[07:13:33] [net] add 请求体: {"cover":"https://archive.biliimg.com/bfs/archive/16772fd63f59fd2989cc1fac1cf84154f090fdc4.jpg","cover43":"https://archive.biliimg.com/bfs/archive/aa510753099daf0a556bcf3504fb38d539edd2aa.jpg","ai_cover":0,"is_ab_cover":0,"ab_cover_info":null,"title":"可汗学院创始人对谈心理大师：AI 拿走一切之后，人还剩什么","copyright":3,"creation_statement":{"id":1},"human_type2":1011,"tid":231,"tag":"TED,可汗学院,SalKhan,AI,人工智能,演讲","desc":"可汗学院创始人萨尔·汗（Sal Khan）× 心理治疗师埃丝特·佩瑞尔（Esther Perel）TED《交汇》栏目完整对谈，中英双语字幕，英文逐词卡拉OK高亮。\n\nAI 拿走一切之后，人还剩什么？两位各看一个领域：汗说教育要改成「掌握式」，学历只该问你懂什么；佩瑞尔说关系能力第一次进了企业损益表。两人还聊到：希望不是策略、关系没有登月计划、奇点另一头靠什么消化不确定，以及为什么说我们正把爱情优化成「可管理、可测量、可丢弃」的东西。\n\n· 00:45 开场：越来越「去身体化」的世界\n· 01:35 重造教育：从王子私教到掌握式学习\n· 04:00 「软技能」翻身：第一次写进损益表\n· 06:00 五到十年，工作大洗牌：希望不是策略\n· 07:30 关系没有登月计划：AI 伴侣算什么\n· 11:45 奇点已至：我们丢掉的不是确定性，是消化不确定的机制\n· 16:35 别把
+[07:13:33] [net] add 响应 200: {"code":0,"message":"OK","ttl":1,"data":{"aid":117545604546590,"bvid":"BV1CH4F6GEUT"}}
+[07:13:38] 投稿返回 ok=true errors=[]
+[07:13:42] 提交 tid 留痕：seen=[] rewritten=[]
+[07:13:42] 带体请求：[{"via":"xhr","url":"//member.bilibili.com/upload/multipart/complete","bodyType":"String"},{"via":"xhr","url":"/x/vu/web/cover/up?t=1793603609965&x-bili-locale-json=%7B%22c_locale%22:%7B%22language%22:%22zh%22,%22script%22:%22Hans%","bodyType":"FormData"},{"via":"xhr","url":"/x/vu/web/cover/up?t=1793603609965&x-bili-locale-json=%7B%22c_locale%22:%7B%22language%22:%22zh%22,%22script%22:%22Hans%","bodyType":"FormData"},{"via":"xhr","url":"//member.bilibili.com/x/vu/web/add/v3?web_location=333.1024&t=1793603613444&csrf=2e1dbec89a9cb044e0a82f11daf4e06e&x-bili","bodyType":"String"},{"via":"fetch","url":"//data.bilibili.com/v2/log/web?content_type=pbrequest&logid=021436&disable_compression=true","bodyType":"Uint8Array"},{"via":"fetch","url":"//data.bilibili.com/v2/log/web?content_type=pbrequest&logid=021436&disable_compression=true","bodyType":"Uint8Array"}]
+[07:13:42] ✓ 提交请求确认带 tid=231（原生或改写），仍以发布后回读为准
+[07:13:42] 已上线 https://www.bilibili.com/video/BV1CH4F6GEUT/
+[07:13:43] 回执 F:\AgentWorkArea\WorkBuddy\TalkFactory\History\publish\bilibili\runs\2026-11-02T07-10-53_publish\receipt.json

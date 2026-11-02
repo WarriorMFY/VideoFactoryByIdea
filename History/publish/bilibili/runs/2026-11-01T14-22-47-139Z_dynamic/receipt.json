@@ -1,0 +1,57 @@
+{
+  "cmd": "post",
+  "at": "2026-11-01T14:22:47.141Z",
+  "uid": "3747573749779036",
+  "textLen": 585,
+  "images": [
+    {
+      "file": "card_01.jpg",
+      "w": 1080,
+      "h": 1440,
+      "kb": 132.858,
+      "url": "http://i0.hdslb.com/bfs/new_dyn/7346279a2f108ffea2a449abf8b275923747573749779036.jpg"
+    },
+    {
+      "file": "card_02.jpg",
+      "w": 1080,
+      "h": 1440,
+      "kb": 121.102,
+      "url": "http://i0.hdslb.com/bfs/new_dyn/0fcdb1aae294cf4479e96c637cf8bdd13747573749779036.jpg"
+    },
+    {
+      "file": "card_03.jpg",
+      "w": 1080,
+      "h": 1440,
+      "kb": 117.166,
+      "url": "http://i0.hdslb.com/bfs/new_dyn/a8f16b604cfbc2e0b5c2c10ad3b498873747573749779036.jpg"
+    },
+    {
+      "file": "card_04.jpg",
+      "w": 1080,
+      "h": 1440,
+      "kb": 133.451,
+      "url": "http://i0.hdslb.com/bfs/new_dyn/d3885642e4b1091677ccee2678ceee823747573749779036.jpg"
+    }
+  ],
+  "dynReq": {
+    "scene": 2,
+    "pics": 4,
+    "upload_id": "3747573749779036_1793542968_5436",
+    "text_head": "【3 分钟总结】Netflix 创始人：AI 时代，学校只剩三件事\n\n里德·哈斯廷斯给教育捐了 25 年钱，超过 10 "
+  },
+  "create": {
+    "code": 0,
+    "message": "OK",
+    "data": {
+      "dyn_id": 1265746481571168300,
+      "dyn_id_str": "1265746481571168257",
+      "dyn_type": 2,
+      "dyn_rid": 414104837
+    }
+  },
+  "dyn_id": "1265746481571168257",
+  "verify": {
+    "found": true,
+    "items": 12
+  }
+}

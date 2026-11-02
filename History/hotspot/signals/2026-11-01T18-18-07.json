@@ -1,0 +1,13 @@
+{
+  "run": "2026-11-01T18-18-07",
+  "generated_at": "2026-11-01T10:18:07.738Z",
+  "window_hours": 24,
+  "counts": {
+    "total": 0,
+    "fresh": 0,
+    "repeat": 0
+  },
+  "sources_status": "all_ok",
+  "signals": [],
+  "note": "18:18 曾写入一条 add 通道测试占位条目（example.com），同轮移除——仅验证通道用，非真实信号"
+}

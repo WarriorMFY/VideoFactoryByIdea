@@ -1,0 +1,29 @@
+[14:20:04] 浏览器 msedge｜profile=F:\AgentWorkArea\WorkBuddy\TalkFactory\Workspace\run\bili_profile
+[14:20:04] 已登录 UID=3747573749779036
+[14:20:19] 未见草稿恢复弹窗（干净进入）
+[14:20:19] 投稿页 file input × 3
+[14:20:19] 已挂载 final.mp4（19.5MB），等转码/表单
+[14:20:19] 上传 0%  0.0MB/s
+[14:20:22] 上传 47%  0.4MB/s
+[14:20:25] 表单就绪（6s）
+[14:20:25] 标题 OK（44 字）
+[14:20:25] 已布防 tid 改写（全格式）：提交请求体里的 tid → 231（UI 显示仅作参考，落库以回读校验为准）
+[14:20:25] 简介 OK：Netflix 创始人里德·哈斯廷斯 × 可汗学院创始人萨尔·汗，TED 舞台对…
+[14:20:25] 标签第 1 轮：多余 [生活记录,校园,记录] 缺 [AI,人工智能,TED,Netflix,教育,英语听力]
+[14:20:36] 标签 OK（6）：AI / 人工智能 / TED / Netflix / 教育 / 英语听力
+[14:20:36] 分区已是「人工智能」
+[14:20:37] 创作声明 = 含AI生成内容
+[14:20:39] 封面已传入，等裁剪界面
+[14:20:43] 封面第 1 步：完成
+[14:20:46] 封面完成
+[14:20:46] 表单回读 {"title":"10 亿美元没搞定教育，AI 三年给答案｜Netflix 创始人 TED 摘要 3 分钟","zone":"人工智能","decl":"含AI生成内容","descLen":899,"coverSet":true}
+[14:20:47] 已点投稿
+[14:20:47] [net] add 请求 POST https://member.bilibili.com/x/vu/web/add/v3?web_location=333.1024&t=1793542846978&csrf=2e1dbec89a9cb044e0a82f1
+[14:20:47] [net] add 请求体: {"cover":"https://archive.biliimg.com/bfs/archive/24456b04cce2b02ca2dafbf3fcf55efdf40abce4.jpg","cover43":"https://archive.biliimg.com/bfs/archive/670bc66f77aa0dbab5b2105c68b4ecd543a15be5.jpg","ai_cover":0,"is_ab_cover":0,"ab_cover_info":null,"title":"10 亿美元没搞定教育，AI 三年给答案｜Netflix 创始人 TED 摘要 3 分钟","copyright":3,"creation_statement":{"id":1},"human_type2":1011,"tid":231,"tag":"AI,人工智能,TED,Netflix,教育,英语听力","desc":"Netflix 创始人里德·哈斯廷斯 × 可汗学院创始人萨尔·汗，TED 舞台对谈完整版（16:20）。中英双语字幕，英文逐词卡拉OK高亮，全篇中文为本站精译。\n\n二十五年前，哈斯廷斯开始往教育里投钱：慈善、特许学校、教育科技，累计超过十亿美元。他的结论很扎心：钱花完了，整体结果比起点还低。\n\n这场对谈里，他讲了三个很少在公开场合说透的判断：\n\n· 十八世纪的工厂换上电动机，生产率一点没涨——因为瓶颈不是发动机，是动力分配。今天的课堂，就是那根转轴。\n· 一对一导师能让孩子学完整个高中课程，但一个孩子一年要十万美元，无法普及；AI 是唯一可能把这个成本打下来的东西。\n· 如果 AI 成功，我们会同时看到高增长、高股市和高失业——他提议学阿拉斯加石油基金，把增长的税收变成惠及所有人的红利。\n\n他还是 Anthropic 的董事，也正面回应了那
+[14:20:47] [net] add 响应 200: {"code":0,"message":"OK","ttl":1,"data":{"aid":117541611701951,"bvid":"BV1DYxb6eEFs"}}
+[14:20:52] 投稿返回 ok=true errors=[]
+[14:20:56] 提交 tid 留痕：seen=[] rewritten=[]
+[14:20:56] 带体请求：[{"via":"xhr","url":"/x/vupre/web/archive/types/predict?t=1793542826691&x-bili-locale-json=%7B%22c_locale%22:%7B%22language%22:%22zh%22,%22sc","bodyType":"FormData"},{"via":"xhr","url":"//member.bilibili.com/upload/multipart/complete","bodyType":"String"},{"via":"xhr","url":"/x/vu/web/cover/up?t=1793542843475&x-bili-locale-json=%7B%22c_locale%22:%7B%22language%22:%22zh%22,%22script%22:%22Hans%","bodyType":"FormData"},{"via":"xhr","url":"/x/vu/web/cover/up?t=1793542843475&x-bili-locale-json=%7B%22c_locale%22:%7B%22language%22:%22zh%22,%22script%22:%22Hans%","bodyType":"FormData"},{"via":"xhr","url":"//member.bilibili.com/x/vu/web/add/v3?web_location=333.1024&t=1793542846978&csrf=2e1dbec89a9cb044e0a82f11daf4e06e&x-bili","bodyType":"String"},{"via":"fetch","url":"//data.bilibili.com/v2/log/web?content_type=pbrequest&logid=021436&disable_compression=true","bodyType":"Uint8Array"},{"via":"fetch","url":"//data.bilibili.com/v2/log/web?content_type=pbrequest&logid=021436&disable_compression=true","bodyType":"Uint8Array"}]
+[14:20:56] ✓ 提交请求确认带 tid=231（原生或改写），仍以发布后回读为准
+[14:20:56] 已上线 https://www.bilibili.com/video/BV1DYxb6eEFs/
+[14:20:57] 回执 F:\AgentWorkArea\WorkBuddy\TalkFactory\History\publish\bilibili\runs\2026-11-01T14-20-03_publish\receipt.json
