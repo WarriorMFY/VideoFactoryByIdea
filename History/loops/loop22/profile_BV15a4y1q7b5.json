@@ -1,0 +1,31 @@
+{
+  "label": "BV15a4y1q7b5.mp4",
+  "video": "Workspace/tmp/loop22_dl/BV15a4y1q7b5.mp4",
+  "duration_s": 208.8,
+  "params": {
+    "th": 0.25,
+    "fps": 10
+  },
+  "cuts": {
+    "count": 0,
+    "per_min": 0,
+    "times": []
+  },
+  "shots": {
+    "count": 1,
+    "asl_s": 208.75,
+    "median_s": 208.75,
+    "p10_s": 208.75,
+    "p90_s": 208.75,
+    "max_s": 208.75,
+    "min_s": 208.75,
+    "under3_ratio": 0
+  },
+  "motion": {
+    "mean": 13.339,
+    "median": 12.828,
+    "p95": 20.583,
+    "zero_ratio": 0
+  },
+  "elapsed_s": 4.2
+}

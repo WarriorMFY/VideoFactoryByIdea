@@ -1,0 +1,34 @@
+{
+  "label": "BV1cv4y1H7c3.mp4",
+  "video": "Workspace/tmp/loop21_dl/BV1cv4y1H7c3.mp4",
+  "duration_s": 485,
+  "params": {
+    "th": 0.25,
+    "fps": 10
+  },
+  "cuts": {
+    "count": 2,
+    "per_min": 0.25,
+    "times": [
+      227,
+      426.8
+    ]
+  },
+  "shots": {
+    "count": 3,
+    "asl_s": 161.68,
+    "median_s": 199.8,
+    "p10_s": 58.23,
+    "p90_s": 227,
+    "max_s": 227,
+    "min_s": 58.23,
+    "under3_ratio": 0
+  },
+  "motion": {
+    "mean": 8.22,
+    "median": 6.477,
+    "p95": 20.182,
+    "zero_ratio": 0
+  },
+  "elapsed_s": 29
+}

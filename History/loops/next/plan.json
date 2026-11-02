@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-11-01T05:02:07.135Z",
-  "snapshot": "2026-11-01T05:02:06.396Z",
+  "generated_at": "2026-11-02T03:22:51.284Z",
+  "snapshot": "2026-11-02T03:22:50.571Z",
   "bvid": "BV1VRx16WEyn",
   "context": {
-    "ageDays": 0.7514860648137551,
-    "views": 6,
+    "ageDays": 1.6825529050937404,
+    "views": 8,
     "viewsDelta": 0,
     "likeRate": 0,
     "favRate": 0,
     "commentRate": 0,
     "shareRate": 0,
-    "fansDelta": 0,
+    "fansDelta": 1,
     "danmakuCount": 0,
     "commentCount": 0,
     "texts": [],
@@ -32,9 +32,9 @@
       "id": "R0",
       "pri": "—",
       "title": "信号不足，本轮不排新循环",
-      "goal": "当前无评论/弹幕（播放 6），样本量不足以判断内容好坏。",
+      "goal": "当前无评论/弹幕（播放 8），样本量不足以判断内容好坏。",
       "evidence": [
-        "播放 6，评论 0，弹幕 0",
+        "播放 8，评论 0，弹幕 0",
         "点赞率 0.00%，收藏率 0.00%",
         "文本反馈 0 条"
       ],

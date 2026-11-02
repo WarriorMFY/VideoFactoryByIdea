@@ -1,0 +1,33 @@
+{
+  "label": "我们的摘要(2:51)",
+  "video": "Prototype/loop14_talk/ep_a_digest/final.mp4",
+  "duration_s": 170.9,
+  "params": {
+    "th": 0.15,
+    "fps": 10
+  },
+  "cuts": {
+    "count": 1,
+    "per_min": 0.35,
+    "times": [
+      112.7
+    ]
+  },
+  "shots": {
+    "count": 2,
+    "asl_s": 85.45,
+    "median_s": 112.7,
+    "p10_s": 58.2,
+    "p90_s": 112.7,
+    "max_s": 112.7,
+    "min_s": 58.2,
+    "under3_ratio": 0
+  },
+  "motion": {
+    "mean": 2.939,
+    "median": 1.526,
+    "p95": 11.597,
+    "zero_ratio": 0.002
+  },
+  "elapsed_s": 5.9
+}

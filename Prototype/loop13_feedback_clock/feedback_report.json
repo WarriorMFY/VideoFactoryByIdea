@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-01T05:02:07.025Z",
+  "generated_at": "2026-11-02T03:22:51.199Z",
   "csv": "Prototype\\loop13_feedback_clock\\feedback.csv",
   "snaps": [
     {
       "date": "2026-11-01",
-      "views": 6,
+      "views": 8,
       "duration_s": 38,
       "avg_watch_s": null,
       "retention": null,
@@ -14,11 +14,54 @@
       "share_rate": 0,
       "fans_per_1k": null,
       "notes": "评论:无"
+    },
+    {
+      "date": "2026-11-02",
+      "views": 8,
+      "duration_s": 38,
+      "avg_watch_s": null,
+      "retention": null,
+      "like_rate": 0,
+      "fav_rate": 0,
+      "comment_rate": 0,
+      "share_rate": 0,
+      "fans_per_1k": 125,
+      "notes": "评论:无"
     }
   ],
   "last": {
+    "date": "2026-11-02",
+    "views": 8,
+    "duration_s": 38,
+    "avg_watch_s": null,
+    "retention": null,
+    "like_rate": 0,
+    "fav_rate": 0,
+    "comment_rate": 0,
+    "share_rate": 0,
+    "fans_per_1k": 125,
+    "notes": "评论:无",
+    "raw": {
+      "date": "2026-11-02",
+      "duration_s": "38",
+      "views": "8",
+      "avg_watch_s": "",
+      "likes": "0",
+      "favorites": "0",
+      "comments": "0",
+      "shares": "0",
+      "new_followers": "1",
+      "notes": "评论:无",
+      "danmaku": "0",
+      "coins": "0",
+      "fans_total": "2",
+      "views_delta": "0",
+      "snapshot_at": "2026-11-02T03:22:50.571Z"
+    }
+  },
+  "prev": {
     "date": "2026-11-01",
-    "views": 6,
+    "views": 8,
     "duration_s": 38,
     "avg_watch_s": null,
     "retention": null,
@@ -31,7 +74,7 @@
     "raw": {
       "date": "2026-11-01",
       "duration_s": "38",
-      "views": "6",
+      "views": "8",
       "avg_watch_s": "",
       "likes": "0",
       "favorites": "0",
@@ -43,10 +86,9 @@
       "coins": "0",
       "fans_total": "1",
       "views_delta": "",
-      "snapshot_at": "2026-11-01T05:02:06.396Z"
+      "snapshot_at": "2026-11-01T13:09:48.435Z"
     }
   },
-  "prev": null,
   "actions": [
     {
       "priority": "P1",

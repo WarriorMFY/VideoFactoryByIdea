@@ -15,7 +15,11 @@
  *   xfade 交叉淡化=GAP，转场恰好落在句间静音里，解说起点=画面定格起点，零漂移。
  *
  * 用法：
- *   node Tool/ops/make_digest.mjs --spec <digest.json> --out <dir>
+ *   node Tool/ops/make_digest.mjs --spec <digest.json> --out <dir>          # v1 静帧+Ken Burns+xfade
+ *   node Tool/ops/make_digest.mjs --spec <digest.json> --out <dir> --v2     # v2 真机位+硬切+hook+关键词+进度条（loop18）
+ *
+ * v2 模式：TTS 阶段共用；时间轴/渲染/物料在 Tool/ops/digest_v2.mjs。
+ * v2 spec 增量字段：hook {src,text,kw:[[字位,词]],min}；segments[i] 增 kw/min（min=该段最短展示秒数）。
  *
  * spec 字段：
  *   source      原片视频（抽帧用，须与已发布稿件同源）
@@ -94,6 +98,13 @@ for (let i = 0; i < spec.segments.length; i++) {
   durs.push(durationOf(wav, log(`dur_${i}`)));
 }
 tick(`TTS ${spec.segments.length} 段 共${durs.reduce((a, b) => a + b, 0).toFixed(1)}s`, Date.now() - t);
+
+// ---------- v2 分发（loop18：真机位窗口/硬切/冷开场/关键词/进度条） ----------
+if (args.includes('--v2')) {
+  const { runV2 } = await import('./digest_v2.mjs');
+  await runV2({ spec, SPEC, OUT, durs, work, args });
+  process.exit(0);
+}
 
 // ---------- ② 时间轴推导 ----------
 // 音频单元：u0=T(片头静音) u1..uN=各段 u_{N+1}=E(片尾静音)，单元间 GAP

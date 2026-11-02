@@ -1,0 +1,34 @@
+{
+  "label": "BV15V411w79f.mp4",
+  "video": "Workspace/tmp/loop19_dl/BV15V411w79f.mp4",
+  "duration_s": 1253.9,
+  "params": {
+    "th": 0.25,
+    "fps": 10
+  },
+  "cuts": {
+    "count": 2,
+    "per_min": 0.1,
+    "times": [
+      80,
+      622.4
+    ]
+  },
+  "shots": {
+    "count": 3,
+    "asl_s": 417.96,
+    "median_s": 542.4,
+    "p10_s": 80,
+    "p90_s": 631.48,
+    "max_s": 631.48,
+    "min_s": 80,
+    "under3_ratio": 0
+  },
+  "motion": {
+    "mean": 2.479,
+    "median": 1.783,
+    "p95": 7.57,
+    "zero_ratio": 0.058
+  },
+  "elapsed_s": 23.3
+}

@@ -20,10 +20,14 @@
 | `bench_peers.mjs` | **赛道基线**（小循环 13 新增）：双组采样 —— `HOT`（`order=click`，剔除长合集）取**形态范式**，`FRESH`（`order=pubdate` 近 30 天）取**新稿播放水位** → `History/bench/peers_<date>.md`：时长/标题/收藏率中位数 + 「我们的稿偏离了哪几条」。走登录态浏览器防风控（零登录直连 4 词有 2 词返回 HTML） |
 | `ted_fetch.mjs` | **素材入袋一条命令**（小循环 15 新增）：`--pm <id>` → ffmpeg 拉 f11 视频 + f12 音频 `-c copy` 混流 → `talk_720p.mp4`，再调 `ted_subs` 抓官方双语字幕，落 `talk.meta.json`（清单 URL / 时长 / fps / 字节 / 授权线索）。`--probe` 只探测清单，`--t N` 冒烟限长。视频抓取从 loop14 的手工步骤固化为脚本 |
 | `trace_text.mjs` | **写稿原料导出**（小循环 15 新增）：几百条碎 cue 导成「带时间戳的分桶全文」（`--bucket 45`），可选 `--bilingual` 中英并排、`--from/--to` 截段。写摘要稿时替代 loop14 每次临写的 node -e |
+| `shot_profile.mjs` | **剪辑节奏画像**（小循环 17 新增）：镜头切分（ffmpeg scene + showinfo）→ 镜头数 / ASL / 长度分布 / 切点密度 / 运动能量，`--json` 落档。口径注意：th=0.15 对多机位演讲片经人工核对精度 ~92%；静帧动效片（Ken Burns）切点天然少，是真实差异不是漏检。用法：`node Tool/ops/shot_profile.mjs --video x.mp4 --th 0.15 --json out.json` |
 | `ted_subs.mjs` | **TED 字幕/清单抓取**（小循环 14 新增）：给 `project_masters` id 就能拉全片 HLS 字幕段并合并 → `full_<lang>.vtt` + `cues_<lang>.json`。内置两个必踩的坑：段边界重复 cue 去重、**恒定预卷偏移**（`--offset`，不是按 EXTINF 累加）。视频用 ffmpeg 拉 `index-f11-v1.m3u8` + `index-f12-a1.m3u8`（直链 `py.tedcdn.com` 403） |
 | `publish_bilibili.mjs` | **投稿发布**（小循环 12 新增）：Playwright + 系统 Edge 驱动创作中心网页端 —— 扫码登录（登录态持久化在 `Workspace/run/bili_profile`）→ 上传成片 → 标题/简介/7 标签 → 分区 → 创作声明 → 封面（4:3 与 16:9 同步）→ 投稿 → 回执（BV 号 + 逐项回读）。`status` 查登录态、`login` 出二维码、`publish --dry-run` 停在投稿前、`verify --bvid` 校验线上页 |
-| `make_digest.mjs` | **3 分钟摘要报告流水线**（小循环 14 新增）：spec JSON 驱动 —— 30 段中文解说 Edge TTS × 原片精选帧 Ken Burns × 章节角标 + 右上「原片 mm:ss」导航角标 × 片头/尾导流卡 → 成片 + 简介（含 `?t=` 章节跳转表）。音画同步模型：音频 `[T] seg [GAP]…[E]` ↔ 视频 `Vk=seg+2·GAP`，xfade 转场恰好填满句间静音，零漂移。改 spec 重跑约 2 分钟 |
+| `make_digest.mjs` | **3 分钟摘要报告流水线**（小循环 14 新增）：spec JSON 驱动 —— 30 段中文解说 Edge TTS × 原片精选帧 Ken Burns × 章节角标 + 右上「原片 mm:ss」导航角标 × 片头/尾导流卡 → 成片 + 简介（含 `?t=` 章节跳转表）。音画同步模型：音频 `[T] seg [GAP]…[E]` ↔ 视频 `Vk=seg+2·GAP`，xfade 转场恰好填满句间静音，零漂移。改 spec 重跑约 2 分钟。**`--v2`**（小循环 18 新增）：摘要片 v2 剪辑语言（实现拆在 `digest_v2.mjs`，TTS 共用）—— 真机位时间窗替代静帧 Ken Burns、硬切替代 xfade、冷开场 hook（spec.hook）、关键词橙色弹出（spec.segments[i].kw）、底部进度条、切点 whoosh/impact 音效。EP-A 实测 ASL 85.45s→5.66s、切点 0.35→10.32/min |
+| `digest_v2.mjs` | **摘要片 v2 管线**（小循环 18 新增，由 make_digest `--v2` 调用）：逐单元串行切片（-ss/-t）→ 音频单独预混 wav → 终混 concat+subtitles 只带 M+1 路输入。产物与 v1 同构（final.mp4/digest.ass/zh.srt/manifest.json/desc_publish.txt）。**禁止单图多 trim 分支并行解码**（坑 17） |
 | `bili_comment.mjs` | **评论 + 置顶**（小循环 14 新增）：走 API（`x/v2/reply/add` + `x/v2/reply/top`），Playwright `ctx.request` 共享登录 cookie，免网页表单自动化。`add --bvid BV --text-file f [--pin]` / `pin --bvid BV --rpid N`。用于稿件间互挂导航链接 |
+| `make_essay.mjs` | **散文影像成片主链**（小循环 24 升格，源自 loop23）：spec JSON 驱动 —— 图片/版式卡 + 分段旁白 → 逐 shot 串行渲染（zoompan 镜头内运动 + colortemperature 叙事调色）→ concat demuxer → 三级音频（人声 asplit / 切点 whoosh+章节 impact / 合成 BGM sidechain ducking）→ ASS 双层字幕（日记层 + 花字弹出）→ 两处**视频流**时长校验。参数：`--spec/--out/--work/--reuse-tts/--no-bgm/--crf/--preset`；默认跑 loop23《光偷走的那两小时》。自带 spec 前置校验（id 唯一 / kind 合法 / 素材在位 / 逐 clip 时长漂移 ≤0.2s）与降级分支（无音效素材、无 tts、无 colortemperature） |
+| `render_cards.mjs` | **版式卡批量截图**（小循环 24 升格）：Playwright 打开一页 HTML，把指定 id 的整屏块逐个截成 1920×1080 PNG。`--html/--out/--ids/--size/--wait/--copy/--from`；非整屏元素会告警（成片必失真）。用于标题卡/金句卡/双栏数据卡/SVG 图表卡/片尾卡 —— 排版交给浏览器，别在 ffmpeg 里画 drawtext |
 
 ## 最短链路
 
@@ -50,6 +54,19 @@ node Tool\ops\collect_feedback.mjs --avg-watch 12.4
 # 只验证规则能跑，不碰真实数据
 node Tool\ops\plan_next_loop.mjs --demo
 node Tool\ops\track_feedback.mjs --selftest
+```
+
+### 散文影像（图 + 旁白 → 2 分钟短片）
+
+```powershell
+# 1) 版式卡：先排 HTML，再整屏截图（每块必须 1920x1080）
+node Tool\ops\render_cards.mjs --html <目录>\cards.html --out <目录>\cards --ids title,quote1,info1,chart,end
+# 2) 出片（spec 见 Skills/essay-film-production/references/spec-schema.md）
+node Tool\ops\make_essay.mjs --spec <目录>\spec.json
+# 3) 只改旁白不想重跑 TTS：--reuse-tts（跨目录复用要先拷 .work/*.wav，坑 18）
+node Tool\ops\make_essay.mjs --spec <目录>\spec.json --reuse-tts
+# 4) 节奏验收：min ≤0.7s 且 p90 ≥4s 才算双峰
+node Tool\ops\shot_profile.mjs --video <目录>\out\final.mp4 --th 0.15 --json <目录>\profile.json
 ```
 
 ## 坑
@@ -144,3 +161,45 @@ node Tool\ops\track_feedback.mjs --selftest
 16. **ffmpeg 拉 TED HLS 必须把 `httpproxy` 加进 `-protocol_whitelist`**：本机带 `http_proxy` 时 ffmpeg
     走代理协议，白名单只有 `file,http,https,tcp,tls,crypto` 的话直接
     `Protocol 'httpproxy' not on whitelist`，输入都打不开。已固化进 `ted_fetch.mjs`。
+
+17. **单图多 trim 分支并行解码会静默截断视频流**：`[0:v]trim=A…[x];[0:v]trim=B…[y];…concat=n=33`
+    单图 33 分支架构下，33 个分支共享解码器各自缓冲解码帧，叠加 x264 + 大 amix 会把
+    h264 解码器内存打爆（日志深处 `thread_get_buffer() failed`），丢帧被吞、**退出码 0**，
+    视频流只剩 177s/209s，容器时长被音频撑住完全看不出。
+    **修法**（已固化进 `digest_v2.mjs`）：逐单元串行切片文件 → 音频单独预混 wav →
+    终混只带 M+1 路输入；**成片校验必须看视频流时长**（`ffprobe -select_streams v:0
+    -show_entries stream=duration`），不能只看容器时长。
+    **连带教训**：管道里每个 ffmpeg 调用必须带 `-y`——丢了 `-y` 时 ffmpeg 对已存在输出
+    交互询问后退出（状态码仍走错误分支但脚本若只看部分日志会误判），校验会跑在旧文件上，
+    造成「修了也没用」的假象。
+
+18. **`--reuse-tts` 按输出目录隔离**：TTS wav 存在各自 OUT 的 `.work/` 下，换输出目录时
+    `--reuse-tts` 找不到文件会**静默退化为全量重跑 TTS**（网络抖动时直接失败）。
+    跨目录复用（如同一 spec 渲两个变体做 A/B）先把旧目录 `.work/*.wav` 拷进新目录再跑。
+
+19. **跨域检索被"同形词"污染**：搜「美食 vlog 治愈」前排会被动漫美食剪辑占据（同形不同质）。
+    下载前先看一条搜索快照（标题+UP+分区），抽帧前先目验 1 帧，发现域错位立即整域补样。
+
+20. **能量峰 ≠ 音乐节拍**：用 astats/asetnsamples 能量突增做"近似 onset"可以量化"切点-音频对齐度"，
+    但它测的是能量包络不是乐理节拍（鼓点在混音里可能被压平）。判「踩点」类结论时必须注明检测方式，
+    结论只能写到「未检测到对齐」，不能写「不存在对齐」——本轮实测 625w 踩点混剪辑点落峰仅 1.1× 随机，
+    诚实结论是：踩点的"点"更可能是动作/画面语义，BGM 只负责匹配剪速。
+    工具：History/loops/loop22/s4_beat_align.mjs（可复用）。
+
+21. **filter_complex 的 label 只能消费一次**：`[voice]` 同时喂 sidechaincompress（触发）与 amix（混音）
+    会报 `Invalid stream specifier: voice` / `matches no streams`，且报错指向图尾部难以定位。
+    修法：`[voice]asplit=2[voiceSc][voiceMix]` 再分别引用。
+    **连带教训**：spawnSync 的 cwd 继承 node 进程——传给 ffmpeg 的**一切文件路径必须绝对化**，
+    否则换目录运行就静默失败（本轮 card 分支因此漏渲染 6 个 clip，concat 只拼出 3.8s）。
+    每个渲染分支都要检查返回状态，img 分支有检查、card 分支没有→静默。
+
+22. **就地转码被 ffmpeg 拒绝，而脚本没检查就当成成功了**：`ffmpeg -i a.wav -ac 2 -ar 48000 a.wav` 会直接
+    报 `Output … same as Input #0 - exiting`（退出码非 0，但**文件没坏、时长照常**）。
+    loop23 原脚本这一步没查返回状态，于是「TTS 归一化」从未真正执行，靠末尾 loudnorm 兜住听感才没暴露；
+    升格成 `make_essay.mjs` 时一加状态检查立刻炸出来。
+    **修法**：raw → 归一化两段式（`<id>.raw.wav` → `<id>.wav`），每步检查状态。
+    **general 教训**：任何「输入输出同名」的转码都不成立；管道里每个 ffmpeg 调用都必须看 `status`。
+
+23. **版式卡不能进调色层**：`colortemperature` 会把设计稿的米色 / 橙色推成脏黄，卡与照片的视觉断层一眼可见。
+    卡走 `scale + setsar` 直通，只有照片吃 `k`。同理，花字的 `\pos(960,200)` 是**死坐标**——
+    图表卡顶部自带标题时两者会轻微重叠（loop23 成片遗留问题），改版式时给图表卡单独一个 y 或挪到右下。

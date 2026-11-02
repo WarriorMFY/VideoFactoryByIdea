@@ -1,0 +1,395 @@
+{
+  "generated_at": "2026-11-02T13:57:54.341Z",
+  "tool": "Tool/ops/make_digest.mjs --v2 (digest_v2.mjs)",
+  "spec": "Prototype\\loop21_craft_experiments\\ep_a_spec_quotes.json",
+  "source": {
+    "file": "Workspace\\tmp\\ted_feifei\\talk_720p.mp4",
+    "origin_bvid": "BV113xW6VEv6",
+    "origin_dur": 902
+  },
+  "mode": "v2",
+  "features": [
+    "P1 真机位窗口",
+    "P2 硬切",
+    "P3 冷开场hook",
+    "P4 关键词强调",
+    "P5 进度条",
+    "音效转场"
+  ],
+  "duration_s": 209.4,
+  "voice": {
+    "engine": "edge-tts",
+    "name": "zh-CN-YunyangNeural",
+    "rate": "+5%"
+  },
+  "hook": {
+    "src": 392,
+    "digest_t": 0
+  },
+  "segments": [
+    {
+      "chapter": "第1章 · 五亿年前的黑暗",
+      "src": 15,
+      "text": "五亿四千万年前，海洋里没有一双眼睛。",
+      "kw": [
+        [
+          15,
+          "眼睛"
+        ]
+      ],
+      "quote": "五亿年前，海洋没有一双眼睛",
+      "tts_dur": 2.78,
+      "digest_t": 10.4,
+      "vis_dur": 5.5
+    },
+    {
+      "src": 52,
+      "text": "阳光能照进千米深的海底，却没有生命看得见它。",
+      "tts_dur": 3.6,
+      "digest_t": 15.9,
+      "vis_dur": 5.5
+    },
+    {
+      "src": 25,
+      "text": "没有视网膜，没有晶状体——每一束光，都白白穿过这片生命之海。",
+      "tts_dur": 4.77,
+      "digest_t": 21.4,
+      "vis_dur": 6.02
+    },
+    {
+      "src": 72,
+      "text": "直到三叶虫出现，它们是第一批能感光的生物。",
+      "tts_dur": 3.33,
+      "digest_t": 27.42,
+      "vis_dur": 5.5
+    },
+    {
+      "chapter": "第2章 · 看见，点燃智能",
+      "src": 95,
+      "text": "看见，让生命第一次意识到：除了自己，世界上还有别的东西。",
+      "kw": [
+        [
+          0,
+          "看见"
+        ]
+      ],
+      "quote": "看见，点燃智能",
+      "tts_dur": 4.39,
+      "digest_t": 32.92,
+      "vis_dur": 5.64
+    },
+    {
+      "src": 80,
+      "text": "视觉被认为点燃了寒武纪大爆发：看见变成理解，理解带来行动，行动催生了智能。",
+      "tts_dur": 6.15,
+      "digest_t": 38.56,
+      "vis_dur": 7.4
+    },
+    {
+      "chapter": "第3章 · 九年前，同一舞台",
+      "src": 145,
+      "text": "九年前，李飞飞站上同一个舞台，报告的是计算机视觉的早期进展。",
+      "kw": [
+        [
+          4,
+          "李飞飞"
+        ]
+      ],
+      "quote": "三股力量，第一次汇流",
+      "tts_dur": 5.24,
+      "digest_t": 45.97,
+      "vis_dur": 6.49
+    },
+    {
+      "src": 160,
+      "text": "神经网络、GPU、大数据——三股力量第一次汇流，共同开创了现代 AI 时代。",
+      "tts_dur": 6.09,
+      "digest_t": 52.45,
+      "vis_dur": 7.34
+    },
+    {
+      "src": 195,
+      "text": "她实验室整理的 ImageNet，让机器第一次大规模地学会看见。",
+      "tts_dur": 4.42,
+      "digest_t": 59.79,
+      "vis_dur": 5.67
+    },
+    {
+      "src": 222,
+      "text": "一年一度的 ImageNet 挑战赛上，机器识图的成绩一年一个台阶，错误率一路被打下去。",
+      "tts_dur": 5.93,
+      "digest_t": 65.46,
+      "vis_dur": 7.18
+    },
+    {
+      "chapter": "第4章 · 看见不等于理解",
+      "src": 271,
+      "text": "今天的 AI，一句话就能生成照片和视频，Sora 的成果震惊了所有人。",
+      "kw": [
+        [
+          4,
+          "AI"
+        ]
+      ],
+      "quote": "看见，不等于理解",
+      "tts_dur": 5.32,
+      "digest_t": 72.64,
+      "vis_dur": 6.57
+    },
+    {
+      "src": 300,
+      "text": "她的团队其实更早做出了 W.A.L.T 生成模型——那只猫已经能在水下游泳，而不会被弄湿。",
+      "tts_dur": 7.45,
+      "digest_t": 79.21,
+      "vis_dur": 8.7
+    },
+    {
+      "src": 322,
+      "text": "但李飞飞说：拍照，不等于看见；看见，也不等于理解。",
+      "tts_dur": 4.37,
+      "digest_t": 87.92,
+      "vis_dur": 5.62
+    },
+    {
+      "src": 330,
+      "text": "仅仅看见是不够的——看见，是为了去做、去学。",
+      "tts_dur": 3.67,
+      "digest_t": 93.54,
+      "vis_dur": 5.5
+    },
+    {
+      "chapter": "第5章 · 空间智能",
+      "src": 368,
+      "text": "她给出的答案是四个字：空间智能。",
+      "kw": [
+        [
+          11,
+          "空间智能"
+        ]
+      ],
+      "quote": "答案是四个字：空间智能",
+      "tts_dur": 2.43,
+      "digest_t": 99.04,
+      "vis_dur": 5.5
+    },
+    {
+      "src": 362,
+      "text": "此刻你看着桌上这个杯子：大脑只用一秒，就算出了它的形状、位置，和它与周围一切的关系——还预测了接下来会发生什么。",
+      "tts_dur": 9.31,
+      "digest_t": 104.54,
+      "vis_dur": 10.56
+    },
+    {
+      "src": 398,
+      "text": "空间智能，把感知和行动连成了一个循环。",
+      "tts_dur": 3.19,
+      "digest_t": 115.1,
+      "vis_dur": 5.5
+    },
+    {
+      "src": 381,
+      "text": "所以，我们需要的不是会看、会说的 AI，而是能动手做事的 AI。",
+      "tts_dur": 4.75,
+      "digest_t": 120.6,
+      "vis_dur": 6
+    },
+    {
+      "chapter": "第6章 · 雏形已经出现",
+      "src": 449,
+      "text": "这条路已经有雏形：一张照片，可以还原出三维的形状。",
+      "kw": [
+        [
+          19,
+          "三维"
+        ]
+      ],
+      "quote": "雏形，已经出现",
+      "tts_dur": 3.78,
+      "digest_t": 126.6,
+      "vis_dur": 5.5
+    },
+    {
+      "src": 475,
+      "text": "一句话，可以生成一整个可以走进去的房间。",
+      "tts_dur": 2.9,
+      "digest_t": 132.1,
+      "vis_dur": 5.5
+    },
+    {
+      "src": 521,
+      "text": "仿真环境让机器人拥有无限次试错的机会，在三维世界里学会行动。",
+      "tts_dur": 4.88,
+      "digest_t": 137.6,
+      "vis_dur": 6.13
+    },
+    {
+      "src": 626,
+      "text": "现实中的机械臂，已经能听懂人话：开抽屉、拔手机充电器，还能做一份三明治。",
+      "tts_dur": 5.88,
+      "digest_t": 143.73,
+      "vis_dur": 7.13
+    },
+    {
+      "src": 679,
+      "text": "在医院里，空间智能是多几双帮忙的眼睛：提醒医生洗手，发现病人跌倒。",
+      "tts_dur": 5.26,
+      "digest_t": 150.86,
+      "vis_dur": 6.51
+    },
+    {
+      "src": 765,
+      "text": "最惊人的实验里，瘫痪病人戴上脑电帽，用意念操控机械臂，做完了整道寿喜烧。",
+      "tts_dur": 5.91,
+      "digest_t": 157.37,
+      "vis_dur": 7.16
+    },
+    {
+      "src": 430,
+      "text": "这条路并不容易——大自然花了数亿年，才把二维的光，变成三维的理解。",
+      "tts_dur": 5.22,
+      "digest_t": 164.53,
+      "vis_dur": 6.47
+    },
+    {
+      "chapter": "第7章 · 数字寒武纪",
+      "src": 814,
+      "text": "五亿年前，视觉的出现照亮了黑暗的海洋，开启了动物智力的进化。",
+      "kw": [
+        [
+          5,
+          "视觉"
+        ]
+      ],
+      "quote": "数字寒武纪，正在到来",
+      "tts_dur": 4.7,
+      "digest_t": 171,
+      "vis_dur": 5.95
+    },
+    {
+      "src": 826,
+      "text": "今天，同样的这束光，正照进数字大脑。",
+      "tts_dur": 3.07,
+      "digest_t": 176.95,
+      "vis_dur": 5.5
+    },
+    {
+      "src": 800,
+      "text": "李飞飞相信：只有让机器掌握空间智能，这场数字寒武纪大爆发，才会释放全部潜力。",
+      "tts_dur": 6.25,
+      "digest_t": 182.45,
+      "vis_dur": 7.5
+    },
+    {
+      "src": 854,
+      "text": "前提是，技术必须始终以人为中心——它们不该只是好用的工具，而该是值得信赖的伙伴。",
+      "tts_dur": 6.34,
+      "digest_t": 189.95,
+      "vis_dur": 7.59
+    },
+    {
+      "src": 897,
+      "text": "在她期待的未来里，AI 将和我们一起，创造一个更美好的世界。",
+      "tts_dur": 4.61,
+      "digest_t": 197.54,
+      "vis_dur": 5.86
+    }
+  ],
+  "chapters": [
+    {
+      "no": 1,
+      "title": "第1章 · 五亿年前的黑暗",
+      "digest_t": 10.4,
+      "src_t": 15
+    },
+    {
+      "no": 2,
+      "title": "第2章 · 看见，点燃智能",
+      "digest_t": 32.9,
+      "src_t": 95
+    },
+    {
+      "no": 3,
+      "title": "第3章 · 九年前，同一舞台",
+      "digest_t": 46,
+      "src_t": 145
+    },
+    {
+      "no": 4,
+      "title": "第4章 · 看见不等于理解",
+      "digest_t": 72.6,
+      "src_t": 271
+    },
+    {
+      "no": 5,
+      "title": "第5章 · 空间智能",
+      "digest_t": 99,
+      "src_t": 368
+    },
+    {
+      "no": 6,
+      "title": "第6章 · 雏形已经出现",
+      "digest_t": 126.6,
+      "src_t": 449
+    },
+    {
+      "no": 7,
+      "title": "第7章 · 数字寒武纪",
+      "digest_t": 171,
+      "src_t": 814
+    }
+  ],
+  "nav_links": [
+    {
+      "no": 1,
+      "title": "第1章 · 五亿年前的黑暗",
+      "digest_t": 10.4,
+      "src_t": 15,
+      "origin_url": "https://www.bilibili.com/video/BV113xW6VEv6?t=15"
+    },
+    {
+      "no": 2,
+      "title": "第2章 · 看见，点燃智能",
+      "digest_t": 32.9,
+      "src_t": 95,
+      "origin_url": "https://www.bilibili.com/video/BV113xW6VEv6?t=95"
+    },
+    {
+      "no": 3,
+      "title": "第3章 · 九年前，同一舞台",
+      "digest_t": 46,
+      "src_t": 145,
+      "origin_url": "https://www.bilibili.com/video/BV113xW6VEv6?t=145"
+    },
+    {
+      "no": 4,
+      "title": "第4章 · 看见不等于理解",
+      "digest_t": 72.6,
+      "src_t": 271,
+      "origin_url": "https://www.bilibili.com/video/BV113xW6VEv6?t=271"
+    },
+    {
+      "no": 5,
+      "title": "第5章 · 空间智能",
+      "digest_t": 99,
+      "src_t": 368,
+      "origin_url": "https://www.bilibili.com/video/BV113xW6VEv6?t=368"
+    },
+    {
+      "no": 6,
+      "title": "第6章 · 雏形已经出现",
+      "digest_t": 126.6,
+      "src_t": 449,
+      "origin_url": "https://www.bilibili.com/video/BV113xW6VEv6?t=449"
+    },
+    {
+      "no": 7,
+      "title": "第7章 · 数字寒武纪",
+      "digest_t": 171,
+      "src_t": 814,
+      "origin_url": "https://www.bilibili.com/video/BV113xW6VEv6?t=814"
+    }
+  ],
+  "timings_ms": {
+    "total": 87190
+  }
+}

@@ -1,0 +1,157 @@
+{
+ "title": "光偷走的那两小时",
+ "total_s": 127.77,
+ "voice": {
+  "name": "zh-CN-YunjianNeural",
+  "rate": "-10%"
+ },
+ "shots": [
+  {
+   "id": "s01",
+   "start": 0,
+   "dur": 0.7,
+   "chapter": "序",
+   "has_tts": false
+  },
+  {
+   "id": "s02",
+   "start": 0.7,
+   "dur": 0.7,
+   "chapter": "序",
+   "has_tts": false
+  },
+  {
+   "id": "s03",
+   "start": 1.4,
+   "dur": 0.6,
+   "chapter": "序",
+   "has_tts": false
+  },
+  {
+   "id": "s04",
+   "start": 2,
+   "dur": 0.6,
+   "chapter": "序",
+   "has_tts": false
+  },
+  {
+   "id": "s05",
+   "start": 2.6,
+   "dur": 0.7,
+   "chapter": "序",
+   "has_tts": false
+  },
+  {
+   "id": "s06",
+   "start": 3.3,
+   "dur": 0.5,
+   "chapter": "序",
+   "has_tts": false
+  },
+  {
+   "id": "s07",
+   "start": 3.8,
+   "dur": 4,
+   "chapter": "序",
+   "has_tts": false
+  },
+  {
+   "id": "s08",
+   "start": 7.8,
+   "dur": 14.53,
+   "chapter": "在电之前",
+   "has_tts": true
+  },
+  {
+   "id": "s09",
+   "start": 22.33,
+   "dur": 3.2,
+   "chapter": "在电之前",
+   "has_tts": false
+  },
+  {
+   "id": "s10",
+   "start": 25.53,
+   "dur": 17.1,
+   "chapter": "白炽灯",
+   "has_tts": true
+  },
+  {
+   "id": "s11",
+   "start": 42.62,
+   "dur": 5,
+   "chapter": "白炽灯",
+   "has_tts": false
+  },
+  {
+   "id": "s12",
+   "start": 47.62,
+   "dur": 12.99,
+   "chapter": "荧光与电视",
+   "has_tts": true
+  },
+  {
+   "id": "s13",
+   "start": 60.62,
+   "dur": 11.12,
+   "chapter": "荧光与电视",
+   "has_tts": true
+  },
+  {
+   "id": "s14",
+   "start": 71.74,
+   "dur": 5,
+   "chapter": "荧光与电视",
+   "has_tts": false
+  },
+  {
+   "id": "s15",
+   "start": 76.74,
+   "dur": 16.23,
+   "chapter": "屏幕",
+   "has_tts": true
+  },
+  {
+   "id": "s16",
+   "start": 92.97,
+   "dur": 7.76,
+   "chapter": "屏幕",
+   "has_tts": true
+  },
+  {
+   "id": "s17",
+   "start": 100.73,
+   "dur": 5,
+   "chapter": "屏幕",
+   "has_tts": false
+  },
+  {
+   "id": "s18",
+   "start": 105.73,
+   "dur": 8.12,
+   "chapter": "所以",
+   "has_tts": true
+  },
+  {
+   "id": "s19",
+   "start": 113.85,
+   "dur": 4,
+   "chapter": "所以",
+   "has_tts": false
+  },
+  {
+   "id": "s20",
+   "start": 117.85,
+   "dur": 4.86,
+   "chapter": "尾声",
+   "has_tts": true
+  },
+  {
+   "id": "s21",
+   "start": 122.7,
+   "dur": 5,
+   "chapter": "尾声",
+   "has_tts": false
+  }
+ ]
+}

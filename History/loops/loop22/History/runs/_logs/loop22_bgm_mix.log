@@ -1,0 +1,47 @@
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '../../../Prototype/loop21_craft_experiments/b1_kw25/final.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf60.16.100
+  Duration: 00:03:29.40, start: 0.000000, bitrate: 1617 kb/s
+  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1280x720 [SAR 1:1 DAR 16:9], 1482 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc60.31.102 libx264
+  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 126 kb/s (default)
+    Metadata:
+      handler_name    : SoundHandler
+      vendor_id       : [0][0][0][0]
+[aist#1:0/pcm_s16le @ 000001f5406bb300] Guessed Channel Layout: stereo
+Input #1, wav, from '../../../Workspace/bgm/proxy_bed.wav':
+  Metadata:
+    encoder         : Lavf60.16.100
+  Duration: 00:00:25.00, bitrate: 1536 kb/s
+  Stream #1:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 48000 Hz, 2 channels, s16, 1536 kb/s
+Stream mapping:
+  Stream #0:1 (aac) -> sidechaincompress
+  Stream #0:1 (aac) -> amix
+  Stream #1:0 (pcm_s16le) -> volume:default
+  Stream #0:0 -> #0:0 (copy)
+  loudnorm:default -> Stream #0:1 (aac)
+Press [q] to stop, [?] for help
+Output #0, mp4, to '../../../Prototype/loop22_cross_domain/b3_bgm_full.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf60.16.100
+  Stream #0:0(und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1280x720 [SAR 1:1 DAR 16:9], q=2-31, 1482 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc60.31.102 libx264
+  Stream #0:1: Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 160 kb/s
+    Metadata:
+      encoder         : Lavc60.31.102 aac
+size=       0kB time=00:00:02.96 bitrate=   0.1kbits/s speed=35.9x    size=     512kB time=00:00:07.76 bitrate= 540.1kbits/s speed=13.3x    size=    1024kB time=00:00:13.83 bitrate= 606.4kbits/s speed=12.8x    size=    2048kB time=00:00:19.26 bitrate= 870.8kbits/s speed=12.1x    size=    2816kB time=00:00:24.70 bitrate= 934.0kbits/s speed=11.8x    size=    3840kB time=00:00:29.56 bitrate=1064.0kbits/s speed=11.4x    size=    4608kB time=00:00:34.60 bitrate=1091.0kbits/s speed=11.2x    size=    5376kB time=00:00:39.56 bitrate=1113.1kbits/s speed=  11x    size=    6144kB time=00:00:44.26 bitrate=1137.0kbits/s speed=10.8x    size=    7424kB time=00:00:49.30 bitrate=1233.6kbits/s speed=10.7x    size=    8192kB time=00:00:54.10 bitrate=1240.5kbits/s speed=10.6x    size=    8704kB time=00:00:58.96 bitrate=1209.2kbits/s speed=10.5x    size=    9472kB time=00:01:03.46 bitrate=1222.6kbits/s speed=10.4x    size=    9984kB time=00:01:08.16 bitrate=1199.8kbits/s speed=10.3x    size=   11264kB time=00:01:12.86 bitrate=1266.4kbits/s speed=10.2x    size=   12288kB time=00:01:17.80 bitrate=1293.9kbits/s speed=10.2x    size=   13312kB time=00:01:22.90 bitrate=1315.5kbits/s speed=10.2x    size=   14336kB time=00:01:27.50 bitrate=1342.2kbits/s speed=10.1x    size=   15616kB time=00:01:32.50 bitrate=1383.0kbits/s speed=10.1x    size=   16640kB time=00:01:37.76 bitrate=1394.3kbits/s speed=10.1x    size=   17408kB time=00:01:43.26 bitrate=1381.0kbits/s speed=10.2x    size=   18432kB time=00:01:49.06 bitrate=1384.4kbits/s speed=10.2x    size=   19200kB time=00:01:53.76 bitrate=1382.5kbits/s speed=10.2x    size=   19968kB time=00:01:58.83 bitrate=1376.5kbits/s speed=10.2x    size=   21248kB time=00:02:04.36 bitrate=1399.6kbits/s speed=10.2x    size=   22528kB time=00:02:09.00 bitrate=1430.6kbits/s speed=10.2x    size=   24576kB time=00:02:14.20 bitrate=1500.2kbits/s speed=10.2x    size=   25600kB time=00:02:19.06 bitrate=1508.0kbits/s speed=10.2x    size=   28160kB time=00:02:24.40 bitrate=1597.6kbits/s speed=10.2x    size=   29952kB time=00:02:29.66 bitrate=1639.4kbits/s speed=10.2x    size=   30720kB time=00:02:34.86 bitrate=1625.0kbits/s speed=10.2x    size=   31488kB time=00:02:39.70 bitrate=1615.2kbits/s speed=10.2x    size=   32512kB time=00:02:44.70 bitrate=1617.1kbits/s speed=10.2x    size=   33536kB time=00:02:49.56 bitrate=1620.2kbits/s speed=10.2x    size=   34816kB time=00:02:54.66 bitrate=1632.9kbits/s speed=10.2x    size=   35584kB time=00:02:59.60 bitrate=1623.1kbits/s speed=10.2x    size=   36864kB time=00:03:04.90 bitrate=1633.3kbits/s speed=10.2x    size=   37888kB time=00:03:10.13 bitrate=1632.4kbits/s speed=10.2x    size=   39168kB time=00:03:15.46 bitrate=1641.5kbits/s speed=10.2x    size=   40448kB time=00:03:20.80 bitrate=1650.2kbits/s speed=10.2x    size=   41728kB time=00:03:25.43 bitrate=1664.0kbits/s speed=10.2x    [mp4 @ 000001f542509680] Starting second pass: moving the moov atom to the beginning of the file
+[out#0/mp4 @ 000001f5406f2fc0] video:37896kB audio:4220kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.535578%
+size=   42342kB time=00:03:29.39 bitrate=1656.5kbits/s speed=10.1x    
+[aac @ 000001f54070a280] Qavg: 651.570

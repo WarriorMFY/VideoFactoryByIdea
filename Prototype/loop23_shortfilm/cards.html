@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#000; font-family:"Microsoft YaHei","PingFang SC",sans-serif; color:#fff; }
+  .frame { width:1920px; height:1080px; position:relative; overflow:hidden; background:#000; }
+  .small { font-size:26px; color:#9a9a9a; letter-spacing:6px; }
+
+  /* 标题卡 */
+  #title { display:flex; flex-direction:column; justify-content:center; align-items:center; gap:34px; }
+  #title .kicker { font-size:30px; color:#c8956a; letter-spacing:14px; }
+  #title h1 { font-size:110px; font-weight:700; letter-spacing:10px; }
+  #title .sub { font-size:32px; color:#8a8a8a; letter-spacing:4px; }
+  #title .bar { width:120px; height:3px; background:#c8956a; }
+
+  /* 金句卡 */
+  .quote { display:flex; justify-content:center; align-items:center; }
+  .quote p { font-size:84px; font-weight:600; letter-spacing:8px; text-align:center; line-height:1.5; }
+  .quote .dim { color:#e8e8e8; }
+
+  /* 双栏信息卡：右侧面板，左侧透出画面 */
+  .info { display:flex; }
+  .info .left { width:56%; height:100%; }
+  .info .left img { width:100%; height:100%; object-fit:cover; }
+  .info .panel { width:44%; height:100%; background:linear-gradient(90deg, rgba(8,8,10,0.55), rgba(8,8,10,0.92) 30%); padding:120px 90px; display:flex; flex-direction:column; justify-content:center; gap:44px; }
+  .info .era { font-size:30px; color:#c8956a; letter-spacing:8px; }
+  .info .big { font-size:150px; font-weight:700; line-height:1; }
+  .info .big small { font-size:48px; color:#aaa; font-weight:400; }
+  .info .row { border-top:1px solid rgba(255,255,255,0.18); padding-top:26px; }
+  .info .row .k { font-size:26px; color:#8a8a8a; letter-spacing:3px; margin-bottom:10px; }
+  .info .row .v { font-size:52px; font-weight:600; }
+  .info .row .v em { font-style:normal; color:#e0a060; }
+
+  /* 图表卡 */
+  #chart { display:flex; flex-direction:column; justify-content:center; align-items:center; gap:30px; background:#050507; }
+  #chart h2 { font-size:44px; font-weight:500; letter-spacing:6px; color:#ddd; }
+  #chart svg text { font-family:"Microsoft YaHei",sans-serif; }
+
+  /* 片尾卡 */
+  #end { display:flex; flex-direction:column; justify-content:center; align-items:center; gap:40px; }
+  #end .name { font-size:56px; font-weight:600; letter-spacing:6px; }
+  #end .src { font-size:24px; color:#777; line-height:2; text-align:center; letter-spacing:2px; }
+  #end .tag { font-size:22px; color:#555; letter-spacing:4px; }
+</style>
+</head>
+<body>
+
+<div class="frame" id="title">
+  <div class="kicker">一 部 睡 眠 的 剪 史</div>
+  <h1>光偷走的那两小时</h1>
+  <div class="bar"></div>
+  <div class="sub">1942 → 2013，人类的夜晚发生了什么</div>
+</div>
+
+<div class="frame quote" id="quote1"><p class="dim">天黑，就是信号</p></div>
+
+<div class="frame info" id="info1">
+  <div class="left"><img src="cards_src/img03_1940s.png"></div>
+  <div class="panel">
+    <div class="era">白 炽 灯 时 代</div>
+    <div class="big">7.9<small> 小时 / 晚</small></div>
+    <div class="row"><div class="k">盖洛普 1942 · 美国成年人平均睡眠</div><div class="v">1942 年</div></div>
+    <div class="row"><div class="k">每晚不足 5 小时的人群占比</div><div class="v"><em>3%</em></div></div>
+    <div class="row"><div class="k">典型光源</div><div class="v">白炽灯 · 2700K</div></div>
+  </div>
+</div>
+
+<div class="frame" id="chart">
+  <h2>平均每晚睡眠时长（美国，盖洛普）</h2>
+  <svg width="1400" height="560" viewBox="0 0 1400 560">
+    <defs>
+      <linearGradient id="fill" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#c8956a" stop-opacity="0.35"/>
+        <stop offset="100%" stop-color="#c8956a" stop-opacity="0"/>
+      </linearGradient>
+    </defs>
+    <!-- 网格：6h 与 8h -->
+    <line x1="120" y1="120" x2="1320" y2="120" stroke="#333" stroke-width="1"/>
+    <line x1="120" y1="440" x2="1320" y2="440" stroke="#333" stroke-width="1"/>
+    <text x="60" y="128" fill="#777" font-size="24">8h</text>
+    <text x="60" y="448" fill="#777" font-size="24">6h</text>
+    <!-- 曲线：1942=7.9h(y=152) → 2013=6.8h(y=384) -->
+    <path d="M160,152 C 500,170 760,240 1240,384" stroke="#e8c9a0" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <path d="M160,152 C 500,170 760,240 1240,384 L1240,440 L160,440 Z" fill="url(#fill)"/>
+    <circle cx="160" cy="152" r="12" fill="#e8c9a0"/>
+    <circle cx="1240" cy="384" r="12" fill="#e0a060"/>
+    <text x="160" y="110" fill="#fff" font-size="34" text-anchor="middle" font-weight="bold">7.9h</text>
+    <text x="160" y="500" fill="#999" font-size="28" text-anchor="middle">1942</text>
+    <text x="1240" y="342" fill="#fff" font-size="34" text-anchor="middle" font-weight="bold">6.8h</text>
+    <text x="1240" y="500" fill="#999" font-size="28" text-anchor="middle">2013</text>
+    <!-- 虚线落差 -->
+    <line x1="160" y1="152" x2="160" y2="384" stroke="#e0a060" stroke-width="2" stroke-dasharray="8 8" opacity="0.6"/>
+    <line x1="160" y1="384" x2="1240" y2="384" stroke="#e0a060" stroke-width="2" stroke-dasharray="8 8" opacity="0.6"/>
+    <text x="700" y="370" fill="#e0a060" font-size="30" text-anchor="middle" letter-spacing="4">−1.1 小时</text>
+  </svg>
+</div>
+
+<div class="frame info" id="info2">
+  <div class="left"><img src="cards_src/img07_phone.png"></div>
+  <div class="panel">
+    <div class="era">屏 幕 时 代</div>
+    <div class="big">6.8<small> 小时 / 晚</small></div>
+    <div class="row"><div class="k">盖洛普 2013 · 美国成年人平均睡眠</div><div class="v">2013 年</div></div>
+    <div class="row"><div class="k">每晚不足 5 小时的人群占比</div><div class="v">3% <em>→ 14%</em></div></div>
+    <div class="row"><div class="k">睡不到 7 小时的成年人（CDC 2016）</div><div class="v">三分之一</div></div>
+  </div>
+</div>
+
+<div class="frame quote" id="quote2"><p class="dim">灯灭了，<br>夜才回来</p></div>
+
+<div class="frame" id="end">
+  <div class="name">光偷走的那两小时</div>
+  <div class="src">数据来源：Gallup Poll 1942 / 2013 · CDC 2016 · National Sleep Foundation<br>画面为 AI 生成 · 仅用于剪辑技术研究</div>
+  <div class="tag">剪辑技术验证片 · v1 · 2026</div>
+</div>
+
+</body>
+</html>

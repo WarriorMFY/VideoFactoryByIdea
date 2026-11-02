@@ -1,0 +1,24 @@
+[15:41:54] 浏览器 msedge｜profile=F:\AgentWorkArea\WorkBuddy\VideoFactory\Workspace\run\bili_profile
+[15:41:54] 已登录 UID=3747573749779036
+[15:42:02] 草稿恢复弹窗 → 选「不用了」（从空表单开始，避免串上次的标题/标签/多P）
+[15:42:02] 投稿页 file input × 3
+[15:42:02] 已挂载 final.mp4（21.3MB），等转码/表单
+[15:42:02] 上传 0%  0.0MB/s
+[15:42:05] 表单就绪（3s）
+[15:42:05] 标题 OK（33 字）
+[15:42:05] 简介 OK：一条用「光」讲历史的短片：从 1800K 的烛光，到 2700K 的白炽灯、43…
+[15:42:05] 标签第 1 轮：多余 [生活记录,校园,记录] 缺 [光影氛围,剪辑,短片,睡眠,科普,AI影像,冷知识,色温]
+[15:42:18] 标签 OK（8）：光影氛围 / 剪辑 / 短片 / 睡眠 / 科普 / AI影像 / 冷知识 / 色温
+[15:42:20] 分区 影视 → 知识
+[15:42:21] 创作声明 = 含AI生成内容
+[15:42:23] 封面已传入，等裁剪界面
+[15:42:27] 封面第 1 步：完成
+[15:42:30] 封面完成
+[15:42:30] 表单回读 {"title":"光偷走的那两小时｜光影氛围化剪辑：从烛光1800K到屏幕7500K","zone":"知识","decl":"含AI生成内容","descLen":379,"coverSet":true}
+[15:42:31] 已点投稿
+[15:42:31] [net] add 请求 POST https://member.bilibili.com/x/vu/web/add/v3?web_location=333.1024&t=1793634151005&csrf=56111a1092fb7aa0a481be2
+[15:42:31] [net] add 请求体: {"cover":"https://archive.biliimg.com/bfs/archive/da7252b6add4b55708a11a11601b8adb62bea04e.jpg","cover43":"https://archive.biliimg.com/bfs/archive/ed67d8b0dccf450837683bea6dcdbabcdd661162.jpg","ai_cover":0,"is_ab_cover":0,"ab_cover_info":null,"title":"光偷走的那两小时｜光影氛围化剪辑：从烛光1800K到屏幕7500K","copyright":3,"creation_statement":{"id":1},"human_type2":1010,"tid":231,"tag":"光影氛围,剪辑,短片,睡眠,科普,AI影像,冷知识,色温","desc":"一条用「光」讲历史的短片：从 1800K 的烛光，到 2700K 的白炽灯、4300K 的荧光灯，再到 7500K 的深夜屏幕——睡眠史，就是一部光的调色史。\n\n全片以色温为叙事线：每个时代一种光，画面冷暖随时代推进；节奏刻意做成双峰——开场 0.6 秒的极限快切，与数据卡前的长停；每一次切点都落了音效标点，BGM 只做氛围床。\n\n00:00 序\n00:08 在电之前\n00:26 白炽灯\n00:48 荧光与电视\n01:17 屏幕\n01:46 所以\n01:58 尾声\n\n数据来源：Gallup Poll（1942 / 2013）· CDC 2016 · National Sleep Foundation\n画面为 AI 生成、旁白为 AI 语音合成，已按平台要求作出创作声明；BGM 与音效均为程序合成，不含版权素材。\n","dynamic":"","recr
+[15:42:31] [net] add 响应 200: {"code":0,"message":"OK","ttl":1,"data":{"aid":117547600971623,"bvid":"BV1BZ4A65Ef5"}}
+[15:42:36] 投稿返回 ok=true errors=[]
+[15:42:40] 已上线 https://www.bilibili.com/video/BV1BZ4A65Ef5/
+[15:42:41] 回执 Prototype/loop23_shortfilm/out/publish_receipt.json

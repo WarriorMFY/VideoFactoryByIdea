@@ -1,0 +1,495 @@
+ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+  built with gcc 12.2.0 (Rev10, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --pkg-config=pkgconf --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-zlib --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-sdl2 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxvid --enable-libaom --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-ffnvcodec --enable-nvdec --enable-nvenc --enable-dxva2 --enable-d3d11va --enable-libvpl --enable-libgme --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libtheora --enable-libvo-amrwbenc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-librubberband
+  libavutil      58. 29.100 / 58. 29.100
+  libavcodec     60. 31.102 / 60. 31.102
+  libavformat    60. 16.100 / 60. 16.100
+  libavdevice    60.  3.100 / 60.  3.100
+  libavfilter     9. 12.100 /  9. 12.100
+  libswscale      7.  5.100 /  7.  5.100
+  libswresample   4. 12.100 /  4. 12.100
+  libpostproc    57.  3.100 / 57.  3.100
+[Parsed_subtitles_1 @ 000001bdb72e6c40] libass API version: 0x1701000
+[Parsed_subtitles_1 @ 000001bdb72e6c40] libass source: commit: 0.17.0-63-gc047dd2ea16f73abb4f448e6db3637158c1226d0
+[Parsed_subtitles_1 @ 000001bdb72e6c40] Shaper: FriBidi 1.0.13 (SIMPLE) HarfBuzz-ng 8.3.0 (COMPLEX)
+[Parsed_subtitles_1 @ 000001bdb72e6c40] Using font provider directwrite (with GDI)
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'Prototype/loop18_digest_v2/ep_a_v2/.work/u00.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf60.16.100
+  Duration: 00:00:08.00, start: 0.000000, bitrate: 2109 kb/s
+  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1280x720 [SAR 1:1 DAR 16:9], 2105 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc60.31.102 libx264
+Input #1, mov,mp4,m4a,3gp,3g2,mj2, from 'Prototype/loop18_digest_v2/ep_a_v2/.work/u01.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf60.16.100
+  Duration: 00:00:02.40, start: 0.000000, bitrate: 17 kb/s
+  Stream #1:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1280x720 [SAR 1:1 DAR 16:9], 12 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc60.31.102 libx264
+Input #2, mov,mp4,m4a,3gp,3g2,mj2, from 'Prototype/loop18_digest_v2/ep_a_v2/.work/u02.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf60.16.100
+  Duration: 00:00:05.50, start: 0.000000, bitrate: 2863 kb/s
+  Stream #2:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1280x720 [SAR 1:1 DAR 16:9], 2859 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc60.31.102 libx264
+Input #3, mov,mp4,m4a,3gp,3g2,mj2, from 'Prototype/loop18_digest_v2/ep_a_v2/.work/u03.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf60.16.100
+  Duration: 00:00:05.50, start: 0.000000, bitrate: 2572 kb/s
+  Stream #3:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1280x720 [SAR 1:1 DAR 16:9], 2568 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc60.31.102 libx264
+Input #4, mov,mp4,m4a,3gp,3g2,mj2, from 'Prototype/loop18_digest_v2/ep_a_v2/.work/u04.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf60.16.100
+  Duration: 00:00:06.03, start: 0.000000, bitrate: 3442 kb/s
+  Stream #4:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1280x720 [SAR 1:1 DAR 16:9], 3438 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc60.31.102 libx264
+Input #5, mov,mp4,m4a,3gp,3g2,mj2, from 'Prototype/loop18_digest_v2/ep_a_v2/.work/u05.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf60.16.100
+  Duration: 00:00:05.50, start: 0.000000, bitrate: 2003 kb/s
+  Stream #5:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1280x720 [SAR 1:1 DAR 16:9], 1999 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc60.31.102 libx264
+Input #6, mov,mp4,m4a,3gp,3g2,mj2, from 'Prototype/loop18_digest_v2/ep_a_v2/.work/u06.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf60.16.100
+  Duration: 00:00:05.63, start: 0.000000, bitrate: 2541 kb/s
+  Stream #6:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1280x720 [SAR 1:1 DAR 16:9], 2537 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc60.31.102 libx264
+Input #7, mov,mp4,m4a,3gp,3g2,mj2, from 'Prototype/loop18_digest_v2/ep_a_v2/.work/u07.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf60.16.100
+  Duration: 00:00:07.40, start: 0.000000, bitrate: 3460 kb/s
+  Stream #7:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1280x720 [SAR 1:1 DAR 16:9], 3456 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc60.31.102 libx264
+Input #8, mov,mp4,m4a,3gp,3g2,mj2, from 'Prototype/loop18_digest_v2/ep_a_v2/.work/u08.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf60.16.100
+  Duration: 00:00:06.50, start: 0.000000, bitrate: 2894 kb/s
+  Stream #8:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1280x720 [SAR 1:1 DAR 16:9], 2890 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc60.31.102 libx264
+Input #9, mov,mp4,m4a,3gp,3g2,mj2, from 'Prototype/loop18_digest_v2/ep_a_v2/.work/u09.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf60.16.100
+  Duration: 00:00:07.33, start: 0.000000, bitrate: 2077 kb/s
+  Stream #9:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1280x720 [SAR 1:1 DAR 16:9], 2074 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc60.31.102 libx264
+Input #10, mov,mp4,m4a,3gp,3g2,mj2, from 'Prototype/loop18_digest_v2/ep_a_v2/.work/u10.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf60.16.100
+  Duration: 00:00:05.67, start: 0.000000, bitrate: 1932 kb/s
+  Stream #10:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1280x720 [SAR 1:1 DAR 16:9], 1928 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc60.31.102 libx264
+Input #11, mov,mp4,m4a,3gp,3g2,mj2, from 'Prototype/loop18_digest_v2/ep_a_v2/.work/u11.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf60.16.100
+  Duration: 00:00:07.17, start: 0.000000, bitrate: 4470 kb/s
+  Stream #11:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1280x720 [SAR 1:1 DAR 16:9], 4466 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc60.31.102 libx264
+Input #12, mov,mp4,m4a,3gp,3g2,mj2, from 'Prototype/loop18_digest_v2/ep_a_v2/.work/u12.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf60.16.100
+  Duration: 00:00:06.57, start: 0.000000, bitrate: 2710 kb/s
+  Stream #12:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1280x720 [SAR 1:1 DAR 16:9], 2706 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc60.31.102 libx264
+Input #13, mov,mp4,m4a,3gp,3g2,mj2, from 'Prototype/loop18_digest_v2/ep_a_v2/.work/u13.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf60.16.100
+  Duration: 00:00:08.70, start: 0.000000, bitrate: 3315 kb/s
+  Stream #13:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1280x720 [SAR 1:1 DAR 16:9], 3311 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc60.31.102 libx264
+Input #14, mov,mp4,m4a,3gp,3g2,mj2, from 'Prototype/loop18_digest_v2/ep_a_v2/.work/u14.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf60.16.100
+  Duration: 00:00:05.63, start: 0.000000, bitrate: 3484 kb/s
+  Stream #14:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1280x720 [SAR 1:1 DAR 16:9], 3479 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc60.31.102 libx264
+Input #15, mov,mp4,m4a,3gp,3g2,mj2, from 'Prototype/loop18_digest_v2/ep_a_v2/.work/u15.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf60.16.100
+  Duration: 00:00:05.50, start: 0.000000, bitrate: 2437 kb/s
+  Stream #15:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1280x720 [SAR 1:1 DAR 16:9], 2433 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc60.31.102 libx264
+Input #16, mov,mp4,m4a,3gp,3g2,mj2, from 'Prototype/loop18_digest_v2/ep_a_v2/.work/u16.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf60.16.100
+  Duration: 00:00:05.50, start: 0.000000, bitrate: 2571 kb/s
+  Stream #16:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1280x720 [SAR 1:1 DAR 16:9], 2567 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc60.31.102 libx264
+Input #17, mov,mp4,m4a,3gp,3g2,mj2, from 'Prototype/loop18_digest_v2/ep_a_v2/.work/u17.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf60.16.100
+  Duration: 00:00:10.57, start: 0.000000, bitrate: 2422 kb/s
+  Stream #17:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1280x720 [SAR 1:1 DAR 16:9], 2418 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc60.31.102 libx264
+Input #18, mov,mp4,m4a,3gp,3g2,mj2, from 'Prototype/loop18_digest_v2/ep_a_v2/.work/u18.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf60.16.100
+  Duration: 00:00:05.50, start: 0.000000, bitrate: 3545 kb/s
+  Stream #18:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1280x720 [SAR 1:1 DAR 16:9], 3541 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc60.31.102 libx264
+Input #19, mov,mp4,m4a,3gp,3g2,mj2, from 'Prototype/loop18_digest_v2/ep_a_v2/.work/u19.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf60.16.100
+  Duration: 00:00:06.00, start: 0.000000, bitrate: 3616 kb/s
+  Stream #19:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1280x720 [SAR 1:1 DAR 16:9], 3612 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc60.31.102 libx264
+Input #20, mov,mp4,m4a,3gp,3g2,mj2, from 'Prototype/loop18_digest_v2/ep_a_v2/.work/u20.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf60.16.100
+  Duration: 00:00:05.50, start: 0.000000, bitrate: 5695 kb/s
+  Stream #20:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1280x720 [SAR 1:1 DAR 16:9], 5691 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc60.31.102 libx264
+Input #21, mov,mp4,m4a,3gp,3g2,mj2, from 'Prototype/loop18_digest_v2/ep_a_v2/.work/u21.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf60.16.100
+  Duration: 00:00:05.50, start: 0.000000, bitrate: 3271 kb/s
+  Stream #21:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1280x720 [SAR 1:1 DAR 16:9], 3267 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc60.31.102 libx264
+Input #22, mov,mp4,m4a,3gp,3g2,mj2, from 'Prototype/loop18_digest_v2/ep_a_v2/.work/u22.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf60.16.100
+  Duration: 00:00:06.13, start: 0.000000, bitrate: 7613 kb/s
+  Stream #22:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1280x720 [SAR 1:1 DAR 16:9], 7609 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc60.31.102 libx264
+Input #23, mov,mp4,m4a,3gp,3g2,mj2, from 'Prototype/loop18_digest_v2/ep_a_v2/.work/u23.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf60.16.100
+  Duration: 00:00:07.13, start: 0.000000, bitrate: 2739 kb/s
+  Stream #23:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1280x720 [SAR 1:1 DAR 16:9], 2735 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc60.31.102 libx264
+Input #24, mov,mp4,m4a,3gp,3g2,mj2, from 'Prototype/loop18_digest_v2/ep_a_v2/.work/u24.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf60.16.100
+  Duration: 00:00:06.50, start: 0.000000, bitrate: 2567 kb/s
+  Stream #24:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1280x720 [SAR 1:1 DAR 16:9], 2563 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc60.31.102 libx264
+Input #25, mov,mp4,m4a,3gp,3g2,mj2, from 'Prototype/loop18_digest_v2/ep_a_v2/.work/u25.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf60.16.100
+  Duration: 00:00:07.17, start: 0.000000, bitrate: 2943 kb/s
+  Stream #25:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1280x720 [SAR 1:1 DAR 16:9], 2939 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc60.31.102 libx264
+Input #26, mov,mp4,m4a,3gp,3g2,mj2, from 'Prototype/loop18_digest_v2/ep_a_v2/.work/u26.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf60.16.100
+  Duration: 00:00:06.47, start: 0.000000, bitrate: 3610 kb/s
+  Stream #26:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1280x720 [SAR 1:1 DAR 16:9], 3606 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc60.31.102 libx264
+Input #27, mov,mp4,m4a,3gp,3g2,mj2, from 'Prototype/loop18_digest_v2/ep_a_v2/.work/u27.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf60.16.100
+  Duration: 00:00:05.97, start: 0.000000, bitrate: 3048 kb/s
+  Stream #27:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1280x720 [SAR 1:1 DAR 16:9], 3044 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc60.31.102 libx264
+Input #28, mov,mp4,m4a,3gp,3g2,mj2, from 'Prototype/loop18_digest_v2/ep_a_v2/.work/u28.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf60.16.100
+  Duration: 00:00:05.50, start: 0.000000, bitrate: 3427 kb/s
+  Stream #28:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1280x720 [SAR 1:1 DAR 16:9], 3422 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc60.31.102 libx264
+Input #29, mov,mp4,m4a,3gp,3g2,mj2, from 'Prototype/loop18_digest_v2/ep_a_v2/.work/u29.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf60.16.100
+  Duration: 00:00:07.50, start: 0.000000, bitrate: 4163 kb/s
+  Stream #29:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1280x720 [SAR 1:1 DAR 16:9], 4159 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc60.31.102 libx264
+Input #30, mov,mp4,m4a,3gp,3g2,mj2, from 'Prototype/loop18_digest_v2/ep_a_v2/.work/u30.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf60.16.100
+  Duration: 00:00:07.60, start: 0.000000, bitrate: 3706 kb/s
+  Stream #30:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1280x720 [SAR 1:1 DAR 16:9], 3702 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc60.31.102 libx264
+Input #31, mov,mp4,m4a,3gp,3g2,mj2, from 'Prototype/loop18_digest_v2/ep_a_v2/.work/u31.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf60.16.100
+  Duration: 00:00:05.87, start: 0.000000, bitrate: 3720 kb/s
+  Stream #31:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1280x720 [SAR 1:1 DAR 16:9], 3716 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc60.31.102 libx264
+Input #32, mov,mp4,m4a,3gp,3g2,mj2, from 'Prototype/loop18_digest_v2/ep_a_v2/.work/u32.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf60.16.100
+  Duration: 00:00:06.00, start: 0.000000, bitrate: 14 kb/s
+  Stream #32:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1280x720 [SAR 1:1 DAR 16:9], 10 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc60.31.102 libx264
+Input #33, lavfi, from 'anullsrc=r=48000:cl=stereo':
+  Duration: N/A, start: 0.000000, bitrate: 768 kb/s
+  Stream #33:0: Audio: pcm_u8, 48000 Hz, stereo, u8, 768 kb/s
+Stream mapping:
+  Stream #0:0 (h264) -> concat
+  Stream #1:0 (h264) -> concat
+  Stream #2:0 (h264) -> concat
+  Stream #3:0 (h264) -> concat
+  Stream #4:0 (h264) -> concat
+  Stream #5:0 (h264) -> concat
+  Stream #6:0 (h264) -> concat
+  Stream #7:0 (h264) -> concat
+  Stream #8:0 (h264) -> concat
+  Stream #9:0 (h264) -> concat
+  Stream #10:0 (h264) -> concat
+  Stream #11:0 (h264) -> concat
+  Stream #12:0 (h264) -> concat
+  Stream #13:0 (h264) -> concat
+  Stream #14:0 (h264) -> concat
+  Stream #15:0 (h264) -> concat
+  Stream #16:0 (h264) -> concat
+  Stream #17:0 (h264) -> concat
+  Stream #18:0 (h264) -> concat
+  Stream #19:0 (h264) -> concat
+  Stream #20:0 (h264) -> concat
+  Stream #21:0 (h264) -> concat
+  Stream #22:0 (h264) -> concat
+  Stream #23:0 (h264) -> concat
+  Stream #24:0 (h264) -> concat
+  Stream #25:0 (h264) -> concat
+  Stream #26:0 (h264) -> concat
+  Stream #27:0 (h264) -> concat
+  Stream #28:0 (h264) -> concat
+  Stream #29:0 (h264) -> concat
+  Stream #30:0 (h264) -> concat
+  Stream #31:0 (h264) -> concat
+  Stream #32:0 (h264) -> concat
+  Stream #33:0 (pcm_u8) -> atrim:default
+  subtitles:default -> Stream #0:0 (libx264)
+  atrim:default -> Stream #0:1 (aac)
+Press [q] to stop, [?] for help
+[Parsed_subtitles_1 @ 000001bd9e202fc0] libass API version: 0x1701000
+[Parsed_subtitles_1 @ 000001bd9e202fc0] libass source: commit: 0.17.0-63-gc047dd2ea16f73abb4f448e6db3637158c1226d0
+[Parsed_subtitles_1 @ 000001bd9e202fc0] Shaper: FriBidi 1.0.13 (SIMPLE) HarfBuzz-ng 8.3.0 (COMPLEX)
+[Parsed_subtitles_1 @ 000001bd9e202fc0] Using font provider directwrite (with GDI)
+[Parsed_subtitles_1 @ 000001bd9e202fc0] fontselect: (SimHei, 700, 0) -> SimHei, 0, SimHei
+[libx264 @ 000001bdd0dedc80] using SAR=1/1
+[libx264 @ 000001bdd0dedc80] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 000001bdd0dedc80] profile High, level 3.1, 4:2:0, 8-bit
+[libx264 @ 000001bdd0dedc80] 264 - core 164 r3172 c1c9931 - H.264/MPEG-4 AVC codec - Copyleft 2003-2023 - http://www.videolan.org/x264.html - options: cabac=1 ref=1 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=2 psy=1 psy_rd=1.00:0.00 mixed_ref=0 me_range=16 chroma_me=1 trellis=0 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=0 threads=18 lookahead_threads=5 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=1 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=10 rc=crf mbtree=1 crf=19.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'Prototype/loop18_digest_v2/test_simple_audio.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf60.16.100
+  Stream #0:0: Video: h264 (avc1 / 0x31637661), yuv420p(progressive), 1280x720 [SAR 1:1 DAR 16:9], q=2-31, 30 fps, 15360 tbn
+    Metadata:
+      encoder         : Lavc60.31.102 libx264
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+  Stream #0:1: Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 160 kb/s
+    Metadata:
+      encoder         : Lavc60.31.102 aac
+frame=    0 fps=0.0 q=0.0 size=       0kB time=N/A bitrate=N/A speed=N/A    frame=  121 fps=0.0 q=25.0 size=     256kB time=00:00:05.01 bitrate= 418.4kbits/s speed=5.09x    [Parsed_subtitles_1 @ 000001bd9e202fc0] fontselect: (SimHei, 400, 0) -> SimHei, 0, SimHei
+frame=  300 fps=202 q=25.0 size=     768kB time=00:00:10.98 bitrate= 572.7kbits/s speed=7.38x    frame=  466 fps=234 q=22.0 size=    1536kB time=00:00:16.51 bitrate= 762.1kbits/s speed= 8.3x    frame=  633 fps=254 q=25.0 size=    2304kB time=00:00:22.08 bitrate= 854.8kbits/s speed=8.87x    frame=  792 fps=263 q=25.0 size=    3328kB time=00:00:26.92 bitrate=1012.7kbits/s speed=8.95x    frame=  973 fps=277 q=25.0 size=    4096kB time=00:00:33.42 bitrate=1003.8kbits/s speed=9.52x    frame= 1126 fps=280 q=25.0 size=    4864kB time=00:00:38.05 bitrate=1047.0kbits/s speed=9.47x    frame= 1276 fps=282 q=25.0 size=    5376kB time=00:00:43.52 bitrate=1012.0kbits/s speed=9.63x    frame= 1421 fps=283 q=25.0 size=    6656kB time=00:00:48.36 bitrate=1127.4kbits/s speed=9.63x    frame= 1569 fps=284 q=25.0 size=    7168kB time=00:00:53.29 bitrate=1101.9kbits/s speed=9.65x    frame= 1716 fps=285 q=25.0 size=    7936kB time=00:00:58.19 bitrate=1117.1kbits/s speed=9.66x    frame= 1880 fps=288 q=25.0 size=    8448kB time=00:01:03.65 bitrate=1087.1kbits/s speed=9.76x    frame= 2032 fps=289 q=25.0 size=    9472kB time=00:01:08.71 bitrate=1129.2kbits/s speed=9.78x    frame= 2173 fps=289 q=25.0 size=   10496kB time=00:01:13.42 bitrate=1171.0kbits/s speed=9.75x    frame= 2312 fps=288 q=25.0 size=   11264kB time=00:01:18.05 bitrate=1182.1kbits/s speed=9.72x    frame= 2460 fps=288 q=25.0 size=   12288kB time=00:01:22.98 bitrate=1213.0kbits/s speed=9.73x    frame= 2606 fps=289 q=25.0 size=   13056kB time=00:01:27.57 bitrate=1221.3kbits/s speed= 9.7x    frame= 2756 fps=289 q=25.0 size=   14080kB time=00:01:32.86 bitrate=1242.1kbits/s speed=9.74x    frame= 2939 fps=293 q=25.0 size=   15104kB time=00:01:38.49 bitrate=1256.2kbits/s speed= 9.8x    frame= 3105 fps=294 q=25.0 size=   15872kB time=00:01:44.02 bitrate=1250.0kbits/s speed=9.85x    frame= 3229 fps=292 q=25.0 size=   16640kB time=00:01:48.62 bitrate=1254.9kbits/s speed=9.82x    frame= 3370 fps=291 q=22.0 size=   17152kB time=00:01:53.32 bitrate=1239.9kbits/s speed= 9.8x    frame= 3528 fps=292 q=25.0 size=   17920kB time=00:01:58.59 bitrate=1237.9kbits/s speed=9.83x    frame= 3678 fps=293 q=25.0 size=   19200kB time=00:02:03.60 bitrate=1272.5kbits/s speed=9.84x    frame= 3821 fps=292 q=25.0 size=   20480kB time=00:02:08.36 bitrate=1307.0kbits/s speed=9.82x    frame= 3959 fps=292 q=25.0 size=   22016kB time=00:02:12.94 bitrate=1356.6kbits/s speed= 9.8x    frame= 4113 fps=292 q=25.0 size=   23040kB time=00:02:18.09 bitrate=1366.8kbits/s speed=9.81x    frame= 4242 fps=291 q=25.0 size=   25344kB time=00:02:22.40 bitrate=1458.0kbits/s speed=9.77x    frame= 4382 fps=291 q=25.0 size=   26880kB time=00:02:27.05 bitrate=1497.5kbits/s speed=9.76x    frame= 4523 fps=290 q=25.0 size=   27392kB time=00:02:31.76 bitrate=1478.6kbits/s speed=9.74x    frame= 4660 fps=290 q=25.0 size=   28160kB time=00:02:36.33 bitrate=1475.6kbits/s speed=9.72x    frame= 4799 fps=289 q=25.0 size=   28928kB time=00:02:40.96 bitrate=1472.3kbits/s speed=9.71x    frame= 4936 fps=289 q=25.0 size=   29696kB time=00:02:45.52 bitrate=1469.7kbits/s speed=9.69x    frame= 5067 fps=288 q=25.0 size=   30720kB time=00:02:49.89 bitrate=1481.2kbits/s speed=9.66x    frame= 5201 fps=288 q=25.0 size=   31744kB time=00:02:54.35 bitrate=1491.5kbits/s speed=9.64x    frame= 5344 fps=288 q=25.0 size=   32512kB time=00:02:59.11 bitrate=1487.0kbits/s speed=9.64x    frame= 5494 fps=288 q=25.0 size=   33536kB time=00:03:04.12 bitrate=1492.0kbits/s speed=9.65x    frame= 5625 fps=287 q=25.0 size=   34304kB time=00:03:08.48 bitrate=1491.0kbits/s speed=9.62x    frame= 5758 fps=287 q=25.0 size=   35328kB time=00:03:12.91 bitrate=1500.2kbits/s speed= 9.6x    frame= 5896 fps=286 q=25.0 size=   36352kB time=00:03:17.03 bitrate=1511.4kbits/s speed=9.57x    frame= 6023 fps=285 q=25.0 size=   37120kB time=00:03:21.74 bitrate=1507.3kbits/s speed=9.56x    frame= 6154 fps=285 q=25.0 size=   37888kB time=00:03:26.12 bitrate=1505.8kbits/s speed=9.54x    [mp4 @ 000001bdba55b880] Starting second pass: moving the moov atom to the beginning of the file
+[out#0/mp4 @ 000001bdccc1c240] video:37922kB audio:58kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.593860%
+frame= 6282 fps=285 q=-1.0 Lsize=   38206kB time=00:03:29.38 bitrate=1494.8kbits/s speed=9.51x    
+[libx264 @ 000001bdd0dedc80] frame I:36    Avg QP:12.46  size: 84432
+[libx264 @ 000001bdd0dedc80] frame P:2166  Avg QP:16.06  size: 12276
+[libx264 @ 000001bdd0dedc80] frame B:4080  Avg QP:18.28  size:  2255
+[libx264 @ 000001bdd0dedc80] consecutive B-frames:  2.8% 29.9%  5.4% 61.8%
+[libx264 @ 000001bdd0dedc80] mb I  I16..4: 45.1% 21.2% 33.7%
+[libx264 @ 000001bdd0dedc80] mb P  I16..4: 13.2%  5.2%  1.6%  P16..4: 22.7%  5.2%  3.2%  0.0%  0.0%    skip:48.8%
+[libx264 @ 000001bdd0dedc80] mb B  I16..4:  0.9%  0.4%  0.1%  B16..8:  8.8%  1.8%  0.2%  direct: 8.6%  skip:79.2%  L0:46.8% L1:43.9% BI: 9.3%
+[libx264 @ 000001bdd0dedc80] 8x8 transform intra:26.0% inter:21.3%
+[libx264 @ 000001bdd0dedc80] coded y,uvDC,uvAC intra: 29.9% 71.0% 40.0% inter: 3.8% 13.9% 0.9%
+[libx264 @ 000001bdd0dedc80] i16 v,h,dc,p: 72% 16%  9%  3%
+[libx264 @ 000001bdd0dedc80] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 20% 21% 40%  3%  4%  3%  4%  3%  3%
+[libx264 @ 000001bdd0dedc80] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 24% 25% 13%  6%  7%  7%  7%  5%  6%
+[libx264 @ 000001bdd0dedc80] i8c dc,h,v,p: 41% 18% 35%  5%
+[libx264 @ 000001bdd0dedc80] Weighted P-Frames: Y:0.6% UV:0.0%
+[libx264 @ 000001bdd0dedc80] kb/s:1483.55
+[aac @ 000001bdd0dee880] Qavg: 65536.000
