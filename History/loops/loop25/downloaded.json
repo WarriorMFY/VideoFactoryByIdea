@@ -1,0 +1,392 @@
+[
+ {
+  "name": "李子柒",
+  "phase": "early",
+  "cands": [
+   {
+    "bvid": "BV1Ws41117av",
+    "title": "可以吃的树叶",
+    "date": "2016-07-25",
+    "len_s": 206,
+    "play": 2079933,
+    "phase": "early"
+   },
+   {
+    "bvid": "BV1ws411y7yQ",
+    "title": "【独家】纯手工费列罗",
+    "date": "2016-08-08",
+    "len_s": 171,
+    "play": 1374640,
+    "phase": "early"
+   },
+   {
+    "bvid": "BV1Ax411q7rH",
+    "title": "【李子柒】家里做了几十年四川腊肉和川味香肠的方子交给你们了",
+    "date": "2017-07-24",
+    "len_s": 298,
+    "play": 1373865,
+    "phase": "early"
+   }
+  ],
+  "file": "vids/李子柒_early.mp4",
+  "used": {
+   "bvid": "BV1Ws41117av",
+   "title": "可以吃的树叶",
+   "date": "2016-07-25",
+   "len_s": 206,
+   "play": 2079933,
+   "phase": "early"
+  }
+ },
+ {
+  "name": "李子柒",
+  "phase": "late",
+  "cands": [
+   {
+    "bvid": "BV14UUAYmExC",
+    "title": "送给所有知道我名字的人",
+    "date": "2024-11-13",
+    "len_s": 748,
+    "play": 33251478,
+    "phase": "late"
+   },
+   {
+    "bvid": "BV1TsmtY7Egu",
+    "title": "雕漆隐花，雕出紫气东来！",
+    "date": "2024-11-12",
+    "len_s": 841,
+    "play": 10947096,
+    "phase": "late"
+   },
+   {
+    "bvid": "BV1jNmtYcEbY",
+    "title": "拿柴房造了一个森林衣帽间",
+    "date": "2024-11-12",
+    "len_s": 875,
+    "play": 8376226,
+    "phase": "late"
+   }
+  ],
+  "file": "vids/李子柒_late.mp4",
+  "used": {
+   "bvid": "BV14UUAYmExC",
+   "title": "送给所有知道我名字的人",
+   "date": "2024-11-13",
+   "len_s": 748,
+   "play": 33251478,
+   "phase": "late"
+  }
+ },
+ {
+  "name": "伊丽莎白鼠",
+  "phase": "early",
+  "cands": [
+   {
+    "bvid": "BV15s411f7Er",
+    "title": "【毫无鬼畜】油腻的师姐在哪里？",
+    "date": "2013-06-30",
+    "len_s": 117,
+    "play": 1826868,
+    "phase": "early"
+   },
+   {
+    "bvid": "BV1ks411f7pd",
+    "title": "【治愈向】喜羊羊教你打野战",
+    "date": "2013-09-05",
+    "len_s": 60,
+    "play": 1285618,
+    "phase": "early"
+   },
+   {
+    "bvid": "BV1Rs411f7o1",
+    "title": "【3分钟完整版】华少x初音未来的消失",
+    "date": "2013-09-11",
+    "len_s": 189,
+    "play": 1031120,
+    "phase": "early"
+   }
+  ],
+  "file": "vids/伊丽莎白鼠_early.mp4",
+  "used": {
+   "bvid": "BV15s411f7Er",
+   "title": "【毫无鬼畜】油腻的师姐在哪里？",
+   "date": "2013-06-30",
+   "len_s": 117,
+   "play": 1826868,
+   "phase": "early"
+  }
+ },
+ {
+  "name": "伊丽莎白鼠",
+  "phase": "late",
+  "cands": [
+   {
+    "bvid": "BV1La41197wZ",
+    "title": "⚡领 导 讲 话⚡",
+    "date": "2022-07-09",
+    "len_s": 83,
+    "play": 17073264,
+    "phase": "late"
+   },
+   {
+    "bvid": "BV1h24y127fa",
+    "title": "⚡考 研 秘 籍⚡",
+    "date": "2022-11-14",
+    "len_s": 104,
+    "play": 16067081,
+    "phase": "late"
+   },
+   {
+    "bvid": "BV1924y1X7k4",
+    "title": "⚡每天一遍，家长升天⚡",
+    "date": "2022-10-02",
+    "len_s": 112,
+    "play": 12202402,
+    "phase": "late"
+   }
+  ],
+  "file": "vids/伊丽莎白鼠_late.mp4",
+  "used": {
+   "bvid": "BV1La41197wZ",
+   "title": "⚡领 导 讲 话⚡",
+   "date": "2022-07-09",
+   "len_s": 83,
+   "play": 17073264,
+   "phase": "late"
+  }
+ },
+ {
+  "name": "硬核的半佛仙人",
+  "phase": "early",
+  "cands": [
+   {
+    "bvid": "BV1T7411W7ca",
+    "title": "【半佛】瑞幸咖啡是如何暴打资本主义的？",
+    "date": "2020-02-04",
+    "len_s": 880,
+    "play": 12382049,
+    "phase": "early"
+   },
+   {
+    "bvid": "BV1c7411B72c",
+    "title": "【半佛】揭秘近期的口罩骗局！警惕！警惕！警惕！",
+    "date": "2020-01-30",
+    "len_s": 579,
+    "play": 2968922,
+    "phase": "early"
+   },
+   {
+    "bvid": "BV1CJ411J7HX",
+    "title": "【半佛】知道影视投资是怎么骗你钱的吗？",
+    "date": "2020-01-15",
+    "len_s": 831,
+    "play": 2393735,
+    "phase": "early"
+   }
+  ],
+  "file": "vids/硬核的半佛仙人_early.mp4",
+  "used": {
+   "bvid": "BV1T7411W7ca",
+   "title": "【半佛】瑞幸咖啡是如何暴打资本主义的？",
+   "date": "2020-02-04",
+   "len_s": 880,
+   "play": 12382049,
+   "phase": "early"
+  }
+ },
+ {
+  "name": "硬核的半佛仙人",
+  "phase": "late",
+  "cands": [
+   {
+    "bvid": "BV1QjhWzmEcC",
+    "title": "【半佛】营养工厂，暴打保健品",
+    "date": "2025-08-02",
+    "len_s": 480,
+    "play": 20529866,
+    "phase": "late"
+   },
+   {
+    "bvid": "BV1cw411U7Yt",
+    "title": "【半佛】瑞幸加茅台，华尔街跪下来",
+    "date": "2023-09-05",
+    "len_s": 456,
+    "play": 7257287,
+    "phase": "late"
+   },
+   {
+    "bvid": "BV1Mc411r76y",
+    "title": "【半佛】电动牙刷的韭菜，还要割多久？",
+    "date": "2023-11-22",
+    "len_s": 725,
+    "play": 6660778,
+    "phase": "late"
+   }
+  ],
+  "file": "vids/硬核的半佛仙人_late.mp4",
+  "used": {
+   "bvid": "BV1QjhWzmEcC",
+   "title": "【半佛】营养工厂，暴打保健品",
+   "date": "2025-08-02",
+   "len_s": 480,
+   "play": 20529866,
+   "phase": "late"
+  }
+ },
+ {
+  "name": "老番茄",
+  "phase": "early",
+  "cands": [
+   {
+    "bvid": "BV1is411o7o8",
+    "title": "你可见过如此丧病的口袋妖怪解说？",
+    "date": "2013-11-09",
+    "len_s": 522,
+    "play": 3708980,
+    "phase": "early"
+   },
+   {
+    "bvid": "BV1hs411Z7f3",
+    "title": "如果植物大战僵尸变成网游",
+    "date": "2014-04-04",
+    "len_s": 513,
+    "play": 3268960,
+    "phase": "early"
+   },
+   {
+    "bvid": "BV1Qx411T7Gq",
+    "title": "【老番茄】良心厂商成长记",
+    "date": "2014-07-04",
+    "len_s": 806,
+    "play": 2626617,
+    "phase": "early"
+   }
+  ],
+  "file": "vids/老番茄_early.mp4",
+  "used": {
+   "bvid": "BV1is411o7o8",
+   "title": "你可见过如此丧病的口袋妖怪解说？",
+   "date": "2013-11-09",
+   "len_s": 522,
+   "play": 3708980,
+   "phase": "early"
+  }
+ },
+ {
+  "name": "老番茄",
+  "phase": "late",
+  "cands": [
+   {
+    "bvid": "BV16F411S7dW",
+    "title": "【老番茄】我结婚啦！！！",
+    "date": "2023-09-09",
+    "len_s": 501,
+    "play": 19099175,
+    "phase": "late"
+   },
+   {
+    "bvid": "BV1YBvhBhE1f",
+    "title": "史上最无聊比赛",
+    "date": "2025-12-30",
+    "len_s": 773,
+    "play": 13699347,
+    "phase": "late"
+   },
+   {
+    "bvid": "BV1NFN1euERc",
+    "title": "作业做不完了啊!!!!!!!",
+    "date": "2025-02-09",
+    "len_s": 771,
+    "play": 12318274,
+    "phase": "late"
+   }
+  ],
+  "file": "vids/老番茄_late.mp4",
+  "used": {
+   "bvid": "BV16F411S7dW",
+   "title": "【老番茄】我结婚啦！！！",
+   "date": "2023-09-09",
+   "len_s": 501,
+   "play": 19099175,
+   "phase": "late"
+  }
+ },
+ {
+  "name": "影视飓风",
+  "phase": "early",
+  "cands": [
+   {
+    "bvid": "BV19x411w74P",
+    "title": "《影视飓风》5分速递(1)： 跳切，贴合切与离切",
+    "date": "2015-01-16",
+    "len_s": 187,
+    "play": 567691,
+    "phase": "early"
+   },
+   {
+    "bvid": "BV1Ps41127Wn",
+    "title": "【影视飓风】索尼A7R MarkII简评",
+    "date": "2015-10-03",
+    "len_s": 407,
+    "play": 329233,
+    "phase": "early"
+   },
+   {
+    "bvid": "BV13x411A7ee",
+    "title": "影视理论(3)：数码相机的工作原理与设置",
+    "date": "2015-02-02",
+    "len_s": 842,
+    "play": 243234,
+    "phase": "early"
+   }
+  ],
+  "file": "vids/影视飓风_early.mp4",
+  "used": {
+   "bvid": "BV19x411w74P",
+   "title": "《影视飓风》5分速递(1)： 跳切，贴合切与离切",
+   "date": "2015-01-16",
+   "len_s": 187,
+   "play": 567691,
+   "phase": "early"
+  }
+ },
+ {
+  "name": "影视飓风",
+  "phase": "late",
+  "cands": [
+   {
+    "bvid": "BV1XY546vE1o",
+    "title": "3台高速机VS刘谦手速！谁更胜一筹？",
+    "date": "2026-05-11",
+    "len_s": 834,
+    "play": 15430851,
+    "phase": "late"
+   },
+   {
+    "bvid": "BV1ymux6BEFU",
+    "title": "家里的旧光盘，为什么播不出来了？",
+    "date": "2026-08-07",
+    "len_s": 772,
+    "play": 14102227,
+    "phase": "late"
+   },
+   {
+    "bvid": "BV1y7qwBuEBw",
+    "title": "我们拍到了，中国自己的可回收火箭。",
+    "date": "2026-01-08",
+    "len_s": 871,
+    "play": 11863840,
+    "phase": "late"
+   }
+  ],
+  "file": "vids/影视飓风_late.mp4",
+  "used": {
+   "bvid": "BV1XY546vE1o",
+   "title": "3台高速机VS刘谦手速！谁更胜一筹？",
+   "date": "2026-05-11",
+   "len_s": 834,
+   "play": 15430851,
+   "phase": "late"
+  }
+ }
+]

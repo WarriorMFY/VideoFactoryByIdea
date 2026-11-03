@@ -1,0 +1,36 @@
+{
+  "label": "伊丽莎白鼠_late.mp4",
+  "video": "vids/伊丽莎白鼠_late.mp4",
+  "duration_s": 82.6,
+  "params": {
+    "th": 0.15,
+    "fps": 10
+  },
+  "cuts": {
+    "count": 4,
+    "per_min": 2.9,
+    "times": [
+      2,
+      65.3,
+      75.6,
+      76.2
+    ]
+  },
+  "shots": {
+    "count": 5,
+    "asl_s": 16.52,
+    "median_s": 6.42,
+    "p10_s": 0.6,
+    "p90_s": 63.3,
+    "max_s": 63.3,
+    "min_s": 0.6,
+    "under3_ratio": 0.4
+  },
+  "motion": {
+    "mean": 5.404,
+    "median": 3.903,
+    "p95": 14.206,
+    "zero_ratio": 0.024
+  },
+  "elapsed_s": 1.3
+}
