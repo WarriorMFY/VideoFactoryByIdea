@@ -1,0 +1,13 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>*{margin:0;padding:0;box-sizing:border-box}
+body{background:#050607;font:34px/1.75 "Cascadia Mono","Consolas",monospace}
+.win{background:#0d1013;border:1px solid #262c33;border-radius:12px;overflow:hidden;box-shadow:0 30px 90px rgba(0,0,0,.7);display:flex;flex-direction:column}
+.bar{flex:0 0 48px;display:flex;align-items:center;gap:9px;background:#141920;padding:0 18px;border-bottom:1px solid #262c33}
+.dot{width:13px;height:13px;border-radius:50%}
+.dot:nth-child(1){background:#ff5f57}.dot:nth-child(2){background:#febc2e}.dot:nth-child(3){background:#28c840}
+.bar span{margin-left:12px;color:#7d8894;font-size:24px}
+.body{padding:24px 32px;white-space:pre-wrap;word-break:break-all}
+.think{color:#e0b45c}.cmd{color:#5fb3ff}.out{color:#c9d4dd}.ok{color:#7ec97e}.warn{color:#e0905c}.err{color:#e06c6c}.dim{color:#6b7683}
+.cmd::before{content:'$ ';color:#54636f}
+.think::before{content:'? ';color:#8a6d3b}
+.b{width:1920px;height:1080px;display:flex;align-items:center;justify-content:center;background:#050607}
+</style></head><body><div class="b" id="s05_wrong"><div class="win" style="width:1640px"><div class="bar"><div class="dot"></div><div class="dot"></div><div class="dot"></div><span>agent — 翻车一：同名小号</span></div><div class="body"><div class="cmd">search bili_user "半佛仙人"</div><div class="out">命中 → mid=24189353  fans=11</div><div class="warn">11 个粉？这不对。</div><div class="think">搜索命中了同名的旁观者小号，不是本人。</div><div class="think">根因：解析逻辑是「精确匹配失败就取首位结果」——这里埋着雷。</div><div class="cmd">search bili_user "硬核的半佛仙人" → mid=37663924 fans=771w</div><div class="ok">这才对。给采集器加「降级命中」告警，下次先报再降。</div></div></div></div></body></html>

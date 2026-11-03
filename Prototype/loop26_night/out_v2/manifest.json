@@ -1,0 +1,190 @@
+{
+ "title": "AI工坊的一夜 v2",
+ "spec": "Prototype/loop26_night/spec_v2.json",
+ "total_s": 109.6,
+ "size": "1920x1080",
+ "fps": 30,
+ "voice": null,
+ "shots": [
+  {
+   "id": "v2_00_title",
+   "start": 0,
+   "dur": 3,
+   "kind": "card",
+   "chapter": "夜",
+   "k": null,
+   "has_tts": false
+  },
+  {
+   "id": "v2_01_t1",
+   "start": 3,
+   "dur": 1.6,
+   "kind": "card",
+   "chapter": "接令",
+   "k": null,
+   "has_tts": false
+  },
+  {
+   "id": "v2_02_wake",
+   "start": 4.6,
+   "dur": 8.5,
+   "kind": "card",
+   "chapter": "接令",
+   "k": null,
+   "has_tts": false
+  },
+  {
+   "id": "v2_03_seed",
+   "start": 13.1,
+   "dur": 7,
+   "kind": "card",
+   "chapter": "接令",
+   "k": null,
+   "has_tts": false
+  },
+  {
+   "id": "v2_04_t2",
+   "start": 20.1,
+   "dur": 1.5,
+   "kind": "card",
+   "chapter": "采集",
+   "k": null,
+   "has_tts": false
+  },
+  {
+   "id": "v2_05_risk",
+   "start": 21.6,
+   "dur": 7.5,
+   "kind": "card",
+   "chapter": "采集",
+   "k": null,
+   "has_tts": false
+  },
+  {
+   "id": "v2_06_crawl",
+   "start": 29.1,
+   "dur": 8.5,
+   "kind": "card",
+   "chapter": "采集",
+   "k": null,
+   "has_tts": false
+  },
+  {
+   "id": "v2_07_t3",
+   "start": 37.6,
+   "dur": 1.5,
+   "kind": "card",
+   "chapter": "翻车一",
+   "k": null,
+   "has_tts": false
+  },
+  {
+   "id": "v2_08_wrong",
+   "start": 39.1,
+   "dur": 7.5,
+   "kind": "card",
+   "chapter": "翻车一",
+   "k": null,
+   "has_tts": false
+  },
+  {
+   "id": "v2_09_t4",
+   "start": 46.6,
+   "dur": 1.5,
+   "kind": "card",
+   "chapter": "判卷",
+   "k": null,
+   "has_tts": false
+  },
+  {
+   "id": "v2_10_quant",
+   "start": 48.1,
+   "dur": 8.5,
+   "kind": "card",
+   "chapter": "判卷",
+   "k": null,
+   "has_tts": false
+  },
+  {
+   "id": "v2_11_verdict",
+   "start": 56.6,
+   "dur": 7.5,
+   "kind": "card",
+   "chapter": "判卷",
+   "k": null,
+   "has_tts": false
+  },
+  {
+   "id": "v2_12_t5",
+   "start": 64.1,
+   "dur": 1.5,
+   "kind": "card",
+   "chapter": "翻车二",
+   "k": null,
+   "has_tts": false
+  },
+  {
+   "id": "v2_13_build",
+   "start": 65.6,
+   "dur": 7,
+   "kind": "card",
+   "chapter": "翻车二",
+   "k": null,
+   "has_tts": false
+  },
+  {
+   "id": "v2_14_crash",
+   "start": 72.6,
+   "dur": 9,
+   "kind": "card",
+   "chapter": "翻车二",
+   "k": null,
+   "has_tts": false
+  },
+  {
+   "id": "v2_15_fix",
+   "start": 81.6,
+   "dur": 7,
+   "kind": "card",
+   "chapter": "翻车二",
+   "k": null,
+   "has_tts": false
+  },
+  {
+   "id": "v2_16_t6",
+   "start": 88.6,
+   "dur": 1.5,
+   "kind": "card",
+   "chapter": "天亮",
+   "k": null,
+   "has_tts": false
+  },
+  {
+   "id": "v2_17_qc",
+   "start": 90.1,
+   "dur": 7.5,
+   "kind": "card",
+   "chapter": "天亮",
+   "k": null,
+   "has_tts": false
+  },
+  {
+   "id": "v2_18_wait",
+   "start": 97.6,
+   "dur": 7,
+   "kind": "card",
+   "chapter": "天亮",
+   "k": null,
+   "has_tts": false
+  },
+  {
+   "id": "v2_19_end",
+   "start": 104.6,
+   "dur": 5,
+   "kind": "card",
+   "chapter": "天亮",
+   "k": null,
+   "has_tts": false
+  }
+ ]
+}

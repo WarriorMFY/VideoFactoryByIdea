@@ -1,0 +1,13 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>*{margin:0;padding:0;box-sizing:border-box}
+body{background:#050607;font:34px/1.75 "Cascadia Mono","Consolas",monospace}
+.win{background:#0d1013;border:1px solid #262c33;border-radius:12px;overflow:hidden;box-shadow:0 30px 90px rgba(0,0,0,.7);display:flex;flex-direction:column}
+.bar{flex:0 0 48px;display:flex;align-items:center;gap:9px;background:#141920;padding:0 18px;border-bottom:1px solid #262c33}
+.dot{width:13px;height:13px;border-radius:50%}
+.dot:nth-child(1){background:#ff5f57}.dot:nth-child(2){background:#febc2e}.dot:nth-child(3){background:#28c840}
+.bar span{margin-left:12px;color:#7d8894;font-size:24px}
+.body{padding:24px 32px;white-space:pre-wrap;word-break:break-all}
+.think{color:#e0b45c}.cmd{color:#5fb3ff}.out{color:#c9d4dd}.ok{color:#7ec97e}.warn{color:#e0905c}.err{color:#e06c6c}.dim{color:#6b7683}
+.cmd::before{content:'$ ';color:#54636f}
+.think::before{content:'? ';color:#8a6d3b}
+.b{width:1920px;height:1080px;display:flex;align-items:center;justify-content:center;background:#050607}
+</style></head><body><div class="b" id="s10_fix"><div class="win" style="width:1640px"><div class="bar"><div class="dot"></div><div class="dot"></div><div class="dot"></div><span>agent — 修复与通过</span></div><div class="body"><div class="cmd">gen_screens 加 height / font 参数 → 重生成 ×5</div><div class="cmd">重截 → 1920x1080 / 2160 / 1448 全部对齐，无告警</div><div class="cmd">make_essay 重渲</div><div class="out">[56.5s] 29 个 clip · [57.2s] concat 校验 69.80s</div><div class="ok">[70.8s] 成片 69.80s · 13.4MB（视频流校验通过）</div><div class="cmd">amix：whoosh/impact + ambience → loudnorm → final.mp4</div></div></div></div></body></html>

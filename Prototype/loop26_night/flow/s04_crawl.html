@@ -1,0 +1,13 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>*{margin:0;padding:0;box-sizing:border-box}
+body{background:#050607;font:34px/1.75 "Cascadia Mono","Consolas",monospace}
+.win{background:#0d1013;border:1px solid #262c33;border-radius:12px;overflow:hidden;box-shadow:0 30px 90px rgba(0,0,0,.7);display:flex;flex-direction:column}
+.bar{flex:0 0 48px;display:flex;align-items:center;gap:9px;background:#141920;padding:0 18px;border-bottom:1px solid #262c33}
+.dot{width:13px;height:13px;border-radius:50%}
+.dot:nth-child(1){background:#ff5f57}.dot:nth-child(2){background:#febc2e}.dot:nth-child(3){background:#28c840}
+.bar span{margin-left:12px;color:#7d8894;font-size:24px}
+.body{padding:24px 32px;white-space:pre-wrap;word-break:break-all}
+.think{color:#e0b45c}.cmd{color:#5fb3ff}.out{color:#c9d4dd}.ok{color:#7ec97e}.warn{color:#e0905c}.err{color:#e06c6c}.dim{color:#6b7683}
+.cmd::before{content:'$ ';color:#54636f}
+.think::before{content:'? ';color:#8a6d3b}
+.b{width:1920px;height:1080px;display:flex;align-items:center;justify-content:center;background:#050607}
+</style></head><body><div class="b" id="s04_crawl"><div class="win" style="width:1640px"><div class="bar"><div class="dot"></div><div class="dot"></div><div class="dot"></div><span>agent — 全量时间线 · 2432 条</span></div><div class="body"><div class="cmd">wbi 签名 → x/space/wbi/arc/search (ps=50, order=pubdate)</div><div class="out">影视飓风   p1/40 +50 … p40/40 +37   （上限 2000 条，防失控）</div><div class="out">硬核的半佛仙人 p1/33 +50 … 全量 1652 条</div><div class="out">老番茄 … 李子柒 … 伊丽莎白鼠 …</div><div class="ok">五人合计 2432 条投稿，按时间正序重排</div><div class="think">光有列表没有用，要找的是「爬坡点」。</div><div class="think">定义：播放量 &gt; 前5条均值 ×8 且 ≥50w —— 突变才有信息量。</div><div class="cmd">年度聚合 + 爬坡点扫描 → timeline_&lt;mid&gt;.json ×5</div></div></div></div></body></html>

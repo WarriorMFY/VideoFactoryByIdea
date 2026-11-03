@@ -1,0 +1,35 @@
+{
+  "title": "AI工坊的一夜 v2",
+  "size": "1920x1080",
+  "fps": 30,
+  "card_dir": "Prototype/loop26_night/flow",
+  "shots": [
+    { "id": "v2_00_title", "kind": "card", "card": "title2.png", "dur": 3.0, "chapter": "夜" },
+
+    { "id": "v2_01_t1",    "kind": "card", "card": "t1.png",      "dur": 1.6, "chapter": "接令" },
+    { "id": "v2_02_wake",  "kind": "card", "card": "s01_wake.png",  "dur": 8.5, "chapter": "接令" },
+    { "id": "v2_03_seed",  "kind": "card", "card": "s02_seed.png",  "dur": 7.0, "chapter": "接令" },
+
+    { "id": "v2_04_t2",    "kind": "card", "card": "t2.png",      "dur": 1.5, "chapter": "采集" },
+    { "id": "v2_05_risk",  "kind": "card", "card": "s03_risk.png",  "dur": 7.5, "chapter": "采集" },
+    { "id": "v2_06_crawl", "kind": "card", "card": "s04_crawl.png", "dur": 8.5, "chapter": "采集" },
+
+    { "id": "v2_07_t3",    "kind": "card", "card": "t3.png",      "dur": 1.5, "chapter": "翻车一" },
+    { "id": "v2_08_wrong", "kind": "card", "card": "s05_wrong.png", "dur": 7.5, "chapter": "翻车一" },
+
+    { "id": "v2_09_t4",    "kind": "card", "card": "t4.png",      "dur": 1.5, "chapter": "判卷" },
+    { "id": "v2_10_quant", "kind": "card", "card": "s06_quant.png", "dur": 8.5, "chapter": "判卷" },
+    { "id": "v2_11_verdict","kind": "card", "card": "s07_verdict.png","dur": 7.5, "chapter": "判卷" },
+
+    { "id": "v2_12_t5",    "kind": "card", "card": "t5.png",      "dur": 1.5, "chapter": "翻车二" },
+    { "id": "v2_13_build", "kind": "card", "card": "s08_build.png", "dur": 7.0, "chapter": "翻车二" },
+    { "id": "v2_14_crash", "kind": "card", "card": "s09_crash.png", "dur": 9.0, "chapter": "翻车二" },
+    { "id": "v2_15_fix",   "kind": "card", "card": "s10_fix.png",   "dur": 7.0, "chapter": "翻车二" },
+
+    { "id": "v2_16_t6",    "kind": "card", "card": "t6.png",      "dur": 1.5, "chapter": "天亮" },
+    { "id": "v2_17_qc",    "kind": "card", "card": "s11_qc.png",    "dur": 7.5, "chapter": "天亮" },
+    { "id": "v2_18_wait",  "kind": "card", "card": "s12_wait.png",  "dur": 7.0, "chapter": "天亮" },
+
+    { "id": "v2_19_end",   "kind": "card", "card": "end2.png",    "dur": 5.0, "chapter": "天亮" }
+  ]
+}
