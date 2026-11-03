@@ -28,6 +28,9 @@
 | `bili_comment.mjs` | **评论 + 置顶**（小循环 14 新增）：走 API（`x/v2/reply/add` + `x/v2/reply/top`），Playwright `ctx.request` 共享登录 cookie，免网页表单自动化。`add --bvid BV --text-file f [--pin]` / `pin --bvid BV --rpid N`。用于稿件间互挂导航链接 |
 | `make_essay.mjs` | **散文影像成片主链**（小循环 24 升格，源自 loop23）：spec JSON 驱动 —— 图片/版式卡 + 分段旁白 → 逐 shot 串行渲染（zoompan 镜头内运动 + colortemperature 叙事调色）→ concat demuxer → 三级音频（人声 asplit / 切点 whoosh+章节 impact / 合成 BGM sidechain ducking）→ ASS 双层字幕（日记层 + 花字弹出）→ 两处**视频流**时长校验。参数：`--spec/--out/--work/--reuse-tts/--no-bgm/--crf/--preset`；默认跑 loop23《光偷走的那两小时》。自带 spec 前置校验（id 唯一 / kind 合法 / 素材在位 / 逐 clip 时长漂移 ≤0.2s）与降级分支（无音效素材、无 tts、无 colortemperature） |
 | `render_cards.mjs` | **版式卡批量截图**（小循环 24 升格）：Playwright 打开一页 HTML，把指定 id 的整屏块逐个截成 1920×1080 PNG。`--html/--out/--ids/--size/--wait/--copy/--from`；非整屏元素会告警（成片必失真）。用于标题卡/金句卡/双栏数据卡/SVG 图表卡/片尾卡 —— 排版交给浏览器，别在 ffmpeg 里画 drawtext |
+| `bili_up_timeline.mjs` | **UP主全量投稿时间线**（小循环 25 升格，源自 loop25）：名单 → search bili_user 解析 mid → wbi 签名分页拉全量投稿（默认上限 2000 条/人）→ 年度聚合 + 播放爬坡点。`--out`（必填）`--names` `--max-pages` `--spike-ratio` `--spike-min-play`。**必须走登录态 profile**（游客 -352）；`timeline_<mid>.json` 存在即跳过，重采先删文件；同名小号风险（搜「半佛仙人」命中 11 粉小号）脚本会告警 |
+| `bili_phase_select.mjs` | **早期 vs 成熟期选样**（小循环 25 升格）：读 `timeline_*.json`，早期 = 开号头 15 条播放最高、成熟期 = 近 4 年播放前 3，时长窗口 60–900s 过滤直播/切片。`--dir`（必填）`--early-n/--late-years/--min-len/--max-len/--cands`。产出 selection.json 供批量下载 |
+| `dl_bili.mjs` | **B站样本下载**（小循环 25 升格，源自 loop19）：公开 html5 低清通道（480p durl，带 Referer），零登录。dash-only 视频不支持此通道会报「无 durl」，换样本即可。`node Tool/ops/dl_bili.mjs BV out.mp4` |
 
 ## 最短链路
 
@@ -67,6 +70,17 @@ node Tool\ops\make_essay.mjs --spec <目录>\spec.json
 node Tool\ops\make_essay.mjs --spec <目录>\spec.json --reuse-tts
 # 4) 节奏验收：min ≤0.7s 且 p90 ≥4s 才算双峰
 node Tool\ops\shot_profile.mjs --video <目录>\out\final.mp4 --th 0.15 --json <目录>\profile.json
+```
+
+### UP主成长图谱（投稿史 → 成长路径）
+
+```powershell
+# 1) 拉时间线（游客必被 -352，走登录态；已拉过的 mid 走缓存）
+node Tool\ops\bili_up_timeline.mjs --out History\loops\<loop> --names "影视飓风,老番茄"
+# 2) 选早期/成熟期代表（各 3 候选，下载失败按序补位）
+node Tool\ops\bili_phase_select.mjs --dir History\loops\<loop>
+# 3) 批量下载（候选循环补位）→ shot_profile 量化 → frame_sheet 抽帧目验
+# 4) 量化口径见 loop25 REPORT：看 ASL + p90（成熟=分布收窄）+ 短镜占比，单样本标"初步"
 ```
 
 ## 坑
@@ -203,3 +217,10 @@ node Tool\ops\shot_profile.mjs --video <目录>\out\final.mp4 --th 0.15 --json <
 23. **版式卡不能进调色层**：`colortemperature` 会把设计稿的米色 / 橙色推成脏黄，卡与照片的视觉断层一眼可见。
     卡走 `scale + setsar` 直通，只有照片吃 `k`。同理，花字的 `\pos(960,200)` 是**死坐标**——
     图表卡顶部自带标题时两者会轻微重叠（loop23 成片遗留问题），改版式时给图表卡单独一个 y 或挪到右下。
+
+24. **工具脚本里的相对路径按「脚本自己的 __dirname」解析，不按 cwd**（loop25 实踩）：
+    `frame_sheet.mjs` 的 `--out frames_x.jpg` 相对它内部的 ROOT 落到别处，10 连跑半数崩在写文件；
+    同理 `execFileSync('node', ['dl_bili.mjs', …])` 写相对脚本路径会**静默全败**（ENOENT 被当下载失败吞掉），
+    一轮 10 个任务全军覆没且日志看起来"只是都失败了"。
+    **修法**：编排脚本里所有路径要么绝对化（`path.resolve(ROOT, …)`），要么先 `process.chdir`；
+    子进程失败要把 stderr 打出来看第一行，别只数成功数。

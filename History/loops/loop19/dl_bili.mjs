@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 /**
  * dl_bili.mjs — loop19：下载 B站样本视频（公开 html5 低清通道，带 Referer）
+ * ⚠ 已于小循环 25 升格为 Tool/ops/dl_bili.mjs；本文件冻结为快照，只作复现留档，不再维护。
  * 用法: node dl_bili.mjs BV1xxx out.mp4
  */
 import fs from 'node:fs';

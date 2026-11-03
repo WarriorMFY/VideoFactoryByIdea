@@ -190,18 +190,28 @@
   },
   "spikes": [
    {
-    "date": "2022-05-27",
+    "bvid": "BV1yB4y1Q7ZN",
+    "aid": 596920474,
     "title": "【半佛】活着就是熬着，活下去就是一切",
+    "created": 1653640300,
+    "length_s": 715,
     "play": 16229851,
-    "ratio": 10.8,
-    "bvid": "BV1yB4y1Q7ZN"
+    "video_review": 11152,
+    "base": 1506077,
+    "ratio": 10.776242516152893,
+    "date": "2022-05-27"
    },
    {
-    "date": "2025-08-02",
+    "bvid": "BV1QjhWzmEcC",
+    "aid": 114954145435559,
     "title": "【半佛】营养工厂，暴打保健品",
+    "created": 1754125200,
+    "length_s": 480,
     "play": 20529866,
-    "ratio": 16.6,
-    "bvid": "BV1QjhWzmEcC"
+    "video_review": 4159,
+    "base": 1239610.6,
+    "ratio": 16.56154440757444,
+    "date": "2025-08-02"
    }
   ]
  },
