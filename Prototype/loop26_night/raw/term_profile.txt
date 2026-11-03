@@ -1,0 +1,8 @@
+
+[final.mp4]  127.8s
+  镜头 18 个 | ASL 7.1s | 切点 17 次（7.98/min）
+  镜头长度: min 0.6 / p10 0.6 / 中位 5 / p90 16.2 / max 22.1
+  短镜头(<3s)占比 22.2%
+  运动能量: mean 1.614 / median 1.528 / p95 3.234 / 静止帧占比 15.2%
+  耗时 8.1s
+  → Prototype/loop26_night/raw/profile.json

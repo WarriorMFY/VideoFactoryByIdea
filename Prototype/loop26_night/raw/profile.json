@@ -1,0 +1,49 @@
+{
+  "label": "final.mp4",
+  "video": "Prototype/loop23_shortfilm/out/final.mp4",
+  "duration_s": 127.8,
+  "params": {
+    "th": 0.15,
+    "fps": 10
+  },
+  "cuts": {
+    "count": 17,
+    "per_min": 7.98,
+    "times": [
+      1.4,
+      2,
+      2.6,
+      3.3,
+      7.8,
+      22.3,
+      25.5,
+      47.6,
+      60.6,
+      71.8,
+      76.8,
+      93,
+      100.8,
+      105.8,
+      113.9,
+      117.9,
+      122.8
+    ]
+  },
+  "shots": {
+    "count": 18,
+    "asl_s": 7.1,
+    "median_s": 5,
+    "p10_s": 0.6,
+    "p90_s": 16.2,
+    "max_s": 22.1,
+    "min_s": 0.6,
+    "under3_ratio": 0.222
+  },
+  "motion": {
+    "mean": 1.614,
+    "median": 1.528,
+    "p95": 3.234,
+    "zero_ratio": 0.152
+  },
+  "elapsed_s": 8.1
+}

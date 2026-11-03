@@ -1,0 +1,33 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0d0f12;font:46px/1.55 "Cascadia Mono","Consolas",monospace;color:#c9d4dd}
+.win{border:1px solid #2a3038;border-radius:10px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.55);background:#12151a;height:2160px;display:flex;flex-direction:column;}
+.bar{display:flex;align-items:center;gap:8px;height:38px;flex:0 0 38px;background:#1a1f26;padding:0 14px;border-bottom:1px solid #2a3038}
+.dot{width:12px;height:12px;border-radius:50%}
+.dot:nth-child(1){background:#ff5f57}.dot:nth-child(2){background:#febc2e}.dot:nth-child(3){background:#28c840}
+.bar span{margin-left:10px;color:#8a94a0;font-size:13px}
+.body{padding:18px 22px;white-space:pre;overflow:hidden;flex:1;word-break:break-all;white-space:pre-wrap}
+.p{color:#5fb3ff}.ok{color:#7ec97e}.dim{color:#6b7683}.warn{color:#e0b45c}
+i.c{color:#6b7a6b;font-style:normal}i.k{color:#c792ea;font-style:normal}i.s{color:#a5d6a7;font-style:normal}i.n{color:#f2b26b;font-style:normal}
+</style></head><body><div class="win" id="encode"><div class="bar"><div class="dot"></div><div class="dot"></div><div class="dot"></div><span>ffmpeg — 渲染中</span></div><div class="body"><span class="p">PS> ffmpeg -i final.mp4 -c:v libx264 -preset veryfast -crf 19 -progress pipe:</span>
+<span class="dim">ffmpeg version 6.1 … libx264 · yuv420p · 1920x1080 · 30 fps</span>
+<span class="warn">frame=  53 fps= 31 q=24.0 size=     256kB time=00:00:01.76 bitrate=1189.7kbits/s speed=1.03x</span>
+frame=0
+fps=0.00
+dup_frames=0
+drop_frames=0
+frame=53
+fps=0.00
+out_time_us=1700000
+out_time_ms=1700000
+out_time=00:00:01.700000
+dup_frames=0
+drop_frames=0
+frame=180
+fps=0.00
+out_time_us=5900000
+out_time_ms=5900000
+out_time=00:00:05.900000
+dup_frames=0
+drop_frames=0
+<span class="ok">✓ 编码完成 · 视频流时长校验通过（127.77s）</span></div></div></body></html>

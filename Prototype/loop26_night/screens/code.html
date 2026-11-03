@@ -1,0 +1,71 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0d0f12;font:15px/1.55 "Cascadia Mono","Consolas",monospace;color:#c9d4dd}
+.win{border:1px solid #2a3038;border-radius:10px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.55);background:#12151a;height:1448px;display:flex;flex-direction:column;}
+.bar{display:flex;align-items:center;gap:8px;height:38px;flex:0 0 38px;background:#1a1f26;padding:0 14px;border-bottom:1px solid #2a3038}
+.dot{width:12px;height:12px;border-radius:50%}
+.dot:nth-child(1){background:#ff5f57}.dot:nth-child(2){background:#febc2e}.dot:nth-child(3){background:#28c840}
+.bar span{margin-left:10px;color:#8a94a0;font-size:13px}
+.body{padding:18px 22px;white-space:pre;overflow:hidden;flex:1;word-break:break-all;white-space:pre-wrap}
+.p{color:#5fb3ff}.ok{color:#7ec97e}.dim{color:#6b7683}.warn{color:#e0b45c}
+i.c{color:#6b7a6b;font-style:normal}i.k{color:#c792ea;font-style:normal}i.s{color:#a5d6a7;font-style:normal}i.n{color:#f2b26b;font-style:normal}
+</style></head><body><div class="win" id="code"><div class="bar"><div class="dot"></div><div class="dot"></div><div class="dot"></div><span>make_essay.mjs — Tool/ops — 渲染主链</span></div><div class="body">
+<i class=<i class="s">"c"</i>>// ---------- ② 时间轴 ----------</i>
+<i class="k">let</i> T = <i class="n">0</i>;
+<i class="k">for</i> (<i class="k">const</i> s <i class="k">of</i> SPEC.shots) {
+  s.start = T;
+  s.dur_a = s.tts ? Math.max(Number(s.dur) || <i class="n">0.5</i>, s._dur + <i class="n">0.8</i>) : Number(s.dur) || <i class="n">0.5</i>;
+  T += s.dur_a;
+}
+<i class="k">const</i> TOTAL = T;
+console.log(<i class="s">`时间轴 ${TOTAL.toFixed(<i class="n">2</i>)}s，${SPEC.shots.length} 个镜头（${W}x${H}@${FPS}）`</i>);
+
+<i class=<i class="s">"c"</i>>// ---------- ③ 逐 shot 渲染 clip ----------</i>
+<i class="k">const</i> HAS_CT = hasFilter(<i class="s">'colortemperature'</i>, log(<i class="s">'ct_probe'</i>));
+<i class="k">if</i> (SPEC.shots.some((s) =&gt; s.k) &amp;&amp; !HAS_CT) console.log(<i class="s">'⚠ 当前 ffmpeg 无 colortemperature 滤镜，色温层全部跳过'</i>);
+<i class="k">const</i> clips = [];
+<i class="k">const</i> encode = [<i class="s">'-c:v'</i>, <i class="s">'libx264'</i>, <i class="s">'-preset'</i>, PRESET, <i class="s">'-crf'</i>, CRF, <i class="s">'-pix_fmt'</i>, <i class="s">'yuv420p'</i>, <i class="s">'-an'</i>];
+<i class="k">for</i> (<i class="k">const</i> s <i class="k">of</i> SPEC.shots) {
+  <i class="k">const</i> clip = path.join(WORK, <i class="s">`${s.id}.mp4`</i>);
+  clips.push(clip);
+  <i class="k">const</i> frames = Math.max(<i class="n">1</i>, Math.round(s.dur_a * FPS));
+  <i class="k">let</i> vfilter = null;
+  <i class="k">let</i> input = null;
+
+  <i class="k">if</i> (s.kind === <i class="s">'black'</i>) {
+    input = [<i class="s">'-f'</i>, <i class="s">'lavfi'</i>, <i class="s">'-i'</i>, <i class="s">`color=c=black:s=${W}x${H}:r=${FPS}`</i>];
+  } <i class="k">else</i> <i class="k">if</i> (s.kind === <i class="s">'card'</i> || s.kind === <i class="s">'info'</i>) {
+    <i class=<i class="s">"c"</i>>// 版式卡：整屏静帧，沿用设计原色（不套色温，避免把设计稿调黄/调蓝）</i>
+    input = [<i class="s">'-loop'</i>, <i class="s">'<i class="n">1</i>'</i>, <i class="s">'-framerate'</i>, String(FPS), <i class="s">'-i'</i>, path.join(CARD_DIR, s.card)];
+    vfilter = <i class="s">`scale=${W}:${H},setsar=<i class="n">1</i>`</i>;
+  } <i class="k">else</i> {
+    <i class=<i class="s">"c"</i>>// 图片：crop 顶部区域（默认裁掉底部水印带）→ 超采样 → zoompan 运动 → 色温</i>
+    <i class="k">const</i> crop = s.crop || SPEC.img_crop || <i class="s">'crop=<i class="n">1536</i>:<i class="n">864</i>:<i class="n">0</i>:<i class="n">0</i>'</i>;
+    <i class="k">const</i> ct = HAS_CT &amp;&amp; s.k ? <i class="s">`,colortemperature=temperature=${s.k}`</i> : <i class="s">''</i>;
+    <i class="k">const</i> zf = frames;
+    <i class=<i class="s">"c"</i>>// pan 运镜支持自定义变焦基数（<i class="s">'pan-d@<i class="n">1.5</i>'</i>）：<i class="n">1.10</i> 时纵向行程只有 <i class="n">10</i>%，长图滚动感不足</i>
+    <i class="k">const</i> [zName, zArg] = String(s.zoom || <i class="s">''</i>).split(<i class="s">'@'</i>);
+    <i class="k">const</i> Z = Number(zArg) || <i class="n">1.10</i>;
+    <i class="k">let</i> zexpr;
+    <i class="k">switch</i> (zName) {
+      <i class="k">case</i> <i class="s">'in'</i>:    zexpr = <i class="s">`zoompan=z='min(<i class="n">1</i>+<i class="n">0.0009</i>*on,<i class="n">1.10</i>)':x='iw/<i class="n">2</i>-(iw/zoom/<i class="n">2</i>)':y='ih/<i class="n">2</i>-(ih/zoom/<i class="n">2</i>)'`</i>; <i class="k">break</i>;
+      <i class="k">case</i> <i class="s">'out'</i>:   zexpr = <i class="s">`zoompan=z='max(<i class="n">1.10</i>-<i class="n">0.0009</i>*on,<i class="n">1.0</i>)':x='iw/<i class="n">2</i>-(iw/zoom/<i class="n">2</i>)':y='ih/<i class="n">2</i>-(ih/zoom/<i class="n">2</i>)'`</i>; <i class="k">break</i>;
+      <i class="k">case</i> <i class="s">'pan-l'</i>: zexpr = <i class="s">`zoompan=z='${Z}':x='(iw-iw/zoom)*(<i class="n">1</i>-on/${zf})':y='(ih-ih/zoom)/<i class="n">2</i>'`</i>; <i class="k">break</i>;
+      <i class="k">case</i> <i class="s">'pan-r'</i>: zexpr = <i class="s">`zoompan=z='${Z}':x='(iw-iw/zoom)*(on/${zf})':y='(ih-ih/zoom)/<i class="n">2</i>'`</i>; <i class="k">break</i>;
+      <i class="k">case</i> <i class="s">'pan-d'</i>: zexpr = <i class="s">`zoompan=z='${Z}':x='(iw-iw/zoom)/<i class="n">2</i>':y='(ih-ih/zoom)*(on/${zf})'`</i>; <i class="k">break</i>;   <i class=<i class="s">"c"</i>>// 纵向下摇：终端日志/代码长图滚动感</i>
+      <i class="k">case</i> <i class="s">'pan-u'</i>: zexpr = <i class="s">`zoompan=z='${Z}':x='(iw-iw/zoom)/<i class="n">2</i>':y='(ih-ih/zoom)*(<i class="n">1</i>-on/${zf})'`</i>; <i class="k">break</i>;
+      <i class="k">default</i>:      zexpr = <i class="s">`zoompan=z='<i class="n">1.0</i>':x='iw/<i class="n">2</i>-(iw/zoom/<i class="n">2</i>)':y='ih/<i class="n">2</i>-(ih/zoom/<i class="n">2</i>)'`</i>;
+    }
+    <i class=<i class="s">"c"</i>>// 超采样到 <i class="n">2400</i> 宽是必须的：直接 <i class="n">1920</i> 推近 <i class="n">1.10</i>× 等于放大原图，边缘会糊</i>
+    vfilter = <i class="s">`${crop},scale=<i class="n">2400</i>:-<i class="n">2</i>,${zexpr}:d=<i class="n">1</i>:s=${W}x${H}:fps=${FPS},setsar=<i class="n">1</i>${ct}`</i>;
+    input = [<i class="s">'-loop'</i>, <i class="s">'<i class="n">1</i>'</i>, <i class="s">'-framerate'</i>, String(FPS), <i class="s">'-i'</i>, path.join(IMG_DIR, s.img)];
+  }
+
+  <i class="k">const</i> args = [<i class="s">'-hide_banner'</i>, <i class="s">'-loglevel'</i>, <i class="s">'error'</i>, <i class="s">'-y'</i>, ...input, <i class="s">'-t'</i>, s.dur_a.toFixed(<i class="n">3</i>)];
+  <i class="k">if</i> (vfilter) args.push(<i class="s">'-vf'</i>, vfilter);
+  args.push(...encode, clip);
+  <i class="k">const</i> r = ffmpeg(args, log(s.id));
+  <i class=<i class="s">"c"</i>>// 每个分支都必须检查状态：漏检查的后果是 concat 静默少片（坑 <i class="n">21</i> 连带）</i>
+  <i class="k">if</i> (r.status !== <i class="n">0</i>) die(<i class="s">`clip ${s.id} 渲染失败: ${(r.text || '').slice(-<i class="n">300</i>)}`</i>);
+  <i class="k">const</i> cd = durationOf(clip, log(<i class="s">`cdur_${s.id}`</i>));
+  <i class="k">if</i> (Math.abs(cd - s.dur_a) &gt; <i class="n">0.2</i>) die(<i class="s">`clip ${s.id} 时长漂移 ${cd.toFixed(<i class="n">2</i>)} ≠ ${s.dur_a.toFixed(<i class="n">2</i>)}`</i>);</div></div></body></html>

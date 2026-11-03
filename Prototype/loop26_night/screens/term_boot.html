@@ -1,0 +1,33 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0d0f12;font:29px/1.55 "Cascadia Mono","Consolas",monospace;color:#c9d4dd}
+.win{border:1px solid #2a3038;border-radius:10px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.55);background:#12151a;height:1080px;display:flex;flex-direction:column;}
+.bar{display:flex;align-items:center;gap:8px;height:38px;flex:0 0 38px;background:#1a1f26;padding:0 14px;border-bottom:1px solid #2a3038}
+.dot{width:12px;height:12px;border-radius:50%}
+.dot:nth-child(1){background:#ff5f57}.dot:nth-child(2){background:#febc2e}.dot:nth-child(3){background:#28c840}
+.bar span{margin-left:10px;color:#8a94a0;font-size:13px}
+.body{padding:18px 22px;white-space:pre;overflow:hidden;flex:1;word-break:break-all;white-space:pre-wrap}
+.p{color:#5fb3ff}.ok{color:#7ec97e}.dim{color:#6b7683}.warn{color:#e0b45c}
+i.c{color:#6b7a6b;font-style:normal}i.k{color:#c792ea;font-style:normal}i.s{color:#a5d6a7;font-style:normal}i.n{color:#f2b26b;font-style:normal}
+</style></head><body><div class="win" id="boot"><div class="bar"><div class="dot"></div><div class="dot"></div><div class="dot"></div><span>Windows PowerShell — 工作站</span></div><div class="body"><span class="p">PS F:\AgentWorkArea\WorkBuddy\VideoFactory&gt; node Tool/ops/bili_up_timeline.mjs --out History/loops/loop25</span>
+<span class="">影视飓风 → mid=946974 fans=1890w
+硬核的半佛仙人 → mid=37663924 fans=771w
+老番茄 → mid=546195 fans=2087w
+李子柒 → mid=19577966 fans=1026w
+伊丽莎白鼠 → mid=375375 fans=716w
+影视飓风 已有缓存，跳过
+硬核的半佛仙人 已有缓存，跳过
+老番茄 已有缓存，跳过
+李子柒 已有缓存，跳过
+伊丽莎白鼠 已有缓存，跳过
+完成 → History/loops/loop25</span>
+<span class="p">PS F:\AgentWorkArea\WorkBuddy\VideoFactory&gt; node Tool/ops/shot_profile.mjs --video Prototype/loop23_shortfilm/out/final.mp4 --th 0.15 --json out/profile.json</span>
+<span class="">
+[final.mp4]  127.8s
+  镜头 18 个 | ASL 7.1s | 切点 17 次（7.98/min）
+  镜头长度: min 0.6 / p10 0.6 / 中位 5 / p90 16.2 / max 22.1
+  短镜头(&lt;3s)占比 22.2%
+  运动能量: mean 1.614 / median 1.528 / p95 3.234 / 静止帧占比 15.2%
+  耗时 8.1s
+  → Prototype/loop26_night/raw/profile.json</span>
+<span class="ok">✓ 素材清单 4/4 · 全部为真实运行产物</span></div></div></body></html>

@@ -25,7 +25,7 @@
 | `card` | card、info | 版式卡文件名（相对 `card_dir`）；`info` 用的是已合成好的双栏整屏卡 |
 | `dur` | 全部 | 目标秒数（有 tts 时是**下限**，真值取 `max(dur, 语音+0.8)`） |
 | `k` | 否 | 色温 K，仅对 `img` 生效；`card`/`info` 不调色 |
-| `zoom` | 否 | `in` / `out` / `pan-l` / `pan-r` / `still` |
+| `zoom` | 否 | `in` / `out` / `pan-l` / `pan-r` / `pan-u` / `pan-d` / `still`；pan-u/pan-d 纵向运镜，用于终端日志/代码等竖长截图的滚动感（小循环 26 新增） |
 | `crop` | 否 | 单镜裁切，覆盖 `img_crop` |
 | `chapter` | 否 | 章节名；相邻镜头章节变化时该切点加 impact 重音 |
 | `tts` | 否 | 旁白文本 → 日记层字幕 + 语音轨 |

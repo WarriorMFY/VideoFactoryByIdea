@@ -162,12 +162,17 @@ for (const s of SPEC.shots) {
     const crop = s.crop || SPEC.img_crop || 'crop=1536:864:0:0';
     const ct = HAS_CT && s.k ? `,colortemperature=temperature=${s.k}` : '';
     const zf = frames;
+    // pan 运镜支持自定义变焦基数（'pan-d@1.5'）：1.10 时纵向行程只有 10%，长图滚动感不足
+    const [zName, zArg] = String(s.zoom || '').split('@');
+    const Z = Number(zArg) || 1.10;
     let zexpr;
-    switch (s.zoom) {
+    switch (zName) {
       case 'in':    zexpr = `zoompan=z='min(1+0.0009*on,1.10)':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)'`; break;
       case 'out':   zexpr = `zoompan=z='max(1.10-0.0009*on,1.0)':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)'`; break;
-      case 'pan-l': zexpr = `zoompan=z='1.10':x='(iw-iw/zoom)*(1-on/${zf})':y='(ih-ih/zoom)/2'`; break;
-      case 'pan-r': zexpr = `zoompan=z='1.10':x='(iw-iw/zoom)*(on/${zf})':y='(ih-ih/zoom)/2'`; break;
+      case 'pan-l': zexpr = `zoompan=z='${Z}':x='(iw-iw/zoom)*(1-on/${zf})':y='(ih-ih/zoom)/2'`; break;
+      case 'pan-r': zexpr = `zoompan=z='${Z}':x='(iw-iw/zoom)*(on/${zf})':y='(ih-ih/zoom)/2'`; break;
+      case 'pan-d': zexpr = `zoompan=z='${Z}':x='(iw-iw/zoom)/2':y='(ih-ih/zoom)*(on/${zf})'`; break;   // 纵向下摇：终端日志/代码长图滚动感
+      case 'pan-u': zexpr = `zoompan=z='${Z}':x='(iw-iw/zoom)/2':y='(ih-ih/zoom)*(1-on/${zf})'`; break;
       default:      zexpr = `zoompan=z='1.0':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)'`;
     }
     // 超采样到 2400 宽是必须的：直接 1920 推近 1.10× 等于放大原图，边缘会糊

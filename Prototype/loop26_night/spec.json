@@ -1,0 +1,52 @@
+{
+  "title": "AI工坊的一夜",
+  "size": "1920x1080",
+  "fps": 30,
+  "img_dir": "Prototype/loop26_night/img",
+  "card_dir": "Prototype/loop26_night/cards",
+  "shots": [
+    { "id": "c1_01_title",   "kind": "card", "card": "title.png",              "dur": 3.6, "chapter": "入夜" },
+    { "id": "c1_02_lamp",    "kind": "img",  "img": "lamp.png",                "dur": 2.4, "k": 2100, "zoom": "in",    "chapter": "入夜",
+      "overlays": [{ "at": 0.4, "dur": 2.0, "style": "cap", "text": "23:14，工坊还剩一盏灯" }] },
+    { "id": "c1_03_room",    "kind": "img",  "img": "room_warm.png",           "dur": 2.6, "k": 2300, "zoom": "pan-r", "chapter": "入夜" },
+    { "id": "c1_04_boot",    "kind": "card", "card": "boot.png",               "dur": 3.4, "chapter": "入夜",
+      "overlays": [{ "at": 0.3, "dur": 1.4, "style": "num", "text": "23:14" }] },
+    { "id": "c1_05_lamp2",   "kind": "img",  "img": "lamp.png",                "dur": 1.4, "k": 2600, "zoom": "out",   "chapter": "入夜" },
+
+    { "id": "c2_01_code",    "kind": "img",  "img": "code.png",    "crop": "crop=1920:1448:0:0", "dur": 6.8, "k": 4600, "zoom": "pan-d@1.35", "chapter": "开工",
+      "overlays": [{ "at": 0.5, "dur": 2.4, "style": "cap", "text": "把成长图谱的结论，写进流水线" }] },
+    { "id": "c2_02_encode",  "kind": "img",  "img": "encode.png",  "crop": "crop=1920:2160:0:0", "dur": 5.6, "k": 5000, "zoom": "pan-d@1.25", "chapter": "开工",
+      "overlays": [{ "at": 0.4, "dur": 1.3, "style": "num", "text": "RENDER" }] },
+    { "id": "c2_03_manifest","kind": "card", "card": "manifest.png",           "dur": 2.6, "chapter": "开工",
+      "overlays": [{ "at": 0.4, "dur": 2.0, "style": "cap", "text": "视频流时长校验通过" }] },
+    { "id": "c2_04_qc",      "kind": "img",  "img": "qc_sheet.jpg", "crop": "crop=1940:540:0:0", "dur": 2.8, "k": 5200, "zoom": "pan-l", "chapter": "开工" },
+    { "id": "c2_05_lamp3",   "kind": "img",  "img": "lamp.png",                "dur": 0.9, "k": 4200, "zoom": "in",    "chapter": "开工" },
+
+    { "id": "c3_01_screen",  "kind": "img",  "img": "night_screen.png",        "dur": 2.6, "k": 6600, "zoom": "in",    "chapter": "生成",
+      "overlays": [{ "at": 0.3, "dur": 1.4, "style": "num", "text": "00:41" }] },
+    { "id": "c3_02_frames",  "kind": "img",  "img": "frames_lizi.jpg", "crop": "crop=1940:2020:0:0", "dur": 2.2, "k": 6000, "zoom": "in", "chapter": "生成",
+      "overlays": [{ "at": 0.3, "dur": 1.8, "style": "cap", "text": "竞品帧表：短镜流 83%" }] },
+    { "id": "c3_03_kitchen", "kind": "img",  "img": "kitchen_cold.png",        "dur": 1.1, "k": 7000, "zoom": "pan-l", "chapter": "生成" },
+    { "id": "c3_04_screen2", "kind": "img",  "img": "night_screen.png",        "dur": 0.8, "k": 7200, "zoom": "out",   "chapter": "生成" },
+    { "id": "c3_05_kitchen2","kind": "img",  "img": "kitchen_cold.png",        "dur": 0.9, "k": 6800, "zoom": "in",    "chapter": "生成" },
+    { "id": "c3_06_qc2",     "kind": "img",  "img": "qc_sheet.jpg", "crop": "crop=1940:540:0:0", "dur": 1.0, "k": 7200, "zoom": "pan-r", "chapter": "生成" },
+    { "id": "c3_07_screen3", "kind": "img",  "img": "night_screen.png",        "dur": 1.2, "k": 7000, "zoom": "in",    "chapter": "生成" },
+
+    { "id": "c4_01_encode2", "kind": "img",  "img": "encode.png",  "crop": "crop=1920:2160:0:0", "dur": 4.2, "k": 7500, "zoom": "pan-u@1.25", "chapter": "渲染",
+      "overlays": [{ "at": 0.3, "dur": 1.4, "style": "num", "text": "03:26" }] },
+    { "id": "c4_02_manifest","kind": "card", "card": "manifest.png",           "dur": 1.3, "chapter": "渲染" },
+    { "id": "c4_03_code2",   "kind": "img",  "img": "code.png",    "crop": "crop=1920:1448:0:0", "dur": 2.6, "k": 7500, "zoom": "pan-u@1.35", "chapter": "渲染" },
+    { "id": "c4_04_kitchen", "kind": "img",  "img": "kitchen_cold.png",        "dur": 0.8, "k": 7600, "zoom": "in",    "chapter": "渲染" },
+    { "id": "c4_05_screen",  "kind": "img",  "img": "night_screen.png",        "dur": 1.0, "k": 7500, "zoom": "out",   "chapter": "渲染" },
+    { "id": "c4_06_qc",      "kind": "img",  "img": "qc_sheet.jpg", "crop": "crop=1940:540:0:0", "dur": 0.9, "k": 7500, "zoom": "pan-l", "chapter": "渲染" },
+    { "id": "c4_07_kitchen2","kind": "img",  "img": "kitchen_cold.png",        "dur": 1.1, "k": 7400, "zoom": "out",   "chapter": "渲染" },
+
+    { "id": "c5_01_api",     "kind": "card", "card": "api.png",                "dur": 3.4, "chapter": "天亮",
+      "overlays": [{ "at": 0.3, "dur": 1.4, "style": "num", "text": "05:58" }] },
+    { "id": "c5_02_cover",   "kind": "img",  "img": "cover_published.jpg", "crop": "crop=1280:720:0:0", "dur": 2.6, "k": 3400, "zoom": "in", "chapter": "天亮",
+      "overlays": [{ "at": 0.4, "dur": 2.0, "style": "cap", "text": "封面过审，文字在安全区" }] },
+    { "id": "c5_03_dawn",    "kind": "img",  "img": "dawn.png",                "dur": 3.2, "k": 2400, "zoom": "pan-r", "chapter": "天亮" },
+    { "id": "c5_04_dawn2",   "kind": "img",  "img": "dawn.png",                "dur": 2.2, "k": 1900, "zoom": "out",   "chapter": "天亮" },
+    { "id": "c5_05_end",     "kind": "card", "card": "end.png",                "dur": 4.6, "chapter": "天亮" }
+  ]
+}

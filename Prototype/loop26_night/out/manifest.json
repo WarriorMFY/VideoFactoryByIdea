@@ -1,0 +1,271 @@
+{
+ "title": "AI工坊的一夜",
+ "spec": "Prototype/loop26_night/spec.json",
+ "total_s": 69.8,
+ "size": "1920x1080",
+ "fps": 30,
+ "voice": null,
+ "shots": [
+  {
+   "id": "c1_01_title",
+   "start": 0,
+   "dur": 3.6,
+   "kind": "card",
+   "chapter": "入夜",
+   "k": null,
+   "has_tts": false
+  },
+  {
+   "id": "c1_02_lamp",
+   "start": 3.6,
+   "dur": 2.4,
+   "kind": "img",
+   "chapter": "入夜",
+   "k": 2100,
+   "has_tts": false
+  },
+  {
+   "id": "c1_03_room",
+   "start": 6,
+   "dur": 2.6,
+   "kind": "img",
+   "chapter": "入夜",
+   "k": 2300,
+   "has_tts": false
+  },
+  {
+   "id": "c1_04_boot",
+   "start": 8.6,
+   "dur": 3.4,
+   "kind": "card",
+   "chapter": "入夜",
+   "k": null,
+   "has_tts": false
+  },
+  {
+   "id": "c1_05_lamp2",
+   "start": 12,
+   "dur": 1.4,
+   "kind": "img",
+   "chapter": "入夜",
+   "k": 2600,
+   "has_tts": false
+  },
+  {
+   "id": "c2_01_code",
+   "start": 13.4,
+   "dur": 6.8,
+   "kind": "img",
+   "chapter": "开工",
+   "k": 4600,
+   "has_tts": false
+  },
+  {
+   "id": "c2_02_encode",
+   "start": 20.2,
+   "dur": 5.6,
+   "kind": "img",
+   "chapter": "开工",
+   "k": 5000,
+   "has_tts": false
+  },
+  {
+   "id": "c2_03_manifest",
+   "start": 25.8,
+   "dur": 2.6,
+   "kind": "card",
+   "chapter": "开工",
+   "k": null,
+   "has_tts": false
+  },
+  {
+   "id": "c2_04_qc",
+   "start": 28.4,
+   "dur": 2.8,
+   "kind": "img",
+   "chapter": "开工",
+   "k": 5200,
+   "has_tts": false
+  },
+  {
+   "id": "c2_05_lamp3",
+   "start": 31.2,
+   "dur": 0.9,
+   "kind": "img",
+   "chapter": "开工",
+   "k": 4200,
+   "has_tts": false
+  },
+  {
+   "id": "c3_01_screen",
+   "start": 32.1,
+   "dur": 2.6,
+   "kind": "img",
+   "chapter": "生成",
+   "k": 6600,
+   "has_tts": false
+  },
+  {
+   "id": "c3_02_frames",
+   "start": 34.7,
+   "dur": 2.2,
+   "kind": "img",
+   "chapter": "生成",
+   "k": 6000,
+   "has_tts": false
+  },
+  {
+   "id": "c3_03_kitchen",
+   "start": 36.9,
+   "dur": 1.1,
+   "kind": "img",
+   "chapter": "生成",
+   "k": 7000,
+   "has_tts": false
+  },
+  {
+   "id": "c3_04_screen2",
+   "start": 38,
+   "dur": 0.8,
+   "kind": "img",
+   "chapter": "生成",
+   "k": 7200,
+   "has_tts": false
+  },
+  {
+   "id": "c3_05_kitchen2",
+   "start": 38.8,
+   "dur": 0.9,
+   "kind": "img",
+   "chapter": "生成",
+   "k": 6800,
+   "has_tts": false
+  },
+  {
+   "id": "c3_06_qc2",
+   "start": 39.7,
+   "dur": 1,
+   "kind": "img",
+   "chapter": "生成",
+   "k": 7200,
+   "has_tts": false
+  },
+  {
+   "id": "c3_07_screen3",
+   "start": 40.7,
+   "dur": 1.2,
+   "kind": "img",
+   "chapter": "生成",
+   "k": 7000,
+   "has_tts": false
+  },
+  {
+   "id": "c4_01_encode2",
+   "start": 41.9,
+   "dur": 4.2,
+   "kind": "img",
+   "chapter": "渲染",
+   "k": 7500,
+   "has_tts": false
+  },
+  {
+   "id": "c4_02_manifest",
+   "start": 46.1,
+   "dur": 1.3,
+   "kind": "card",
+   "chapter": "渲染",
+   "k": null,
+   "has_tts": false
+  },
+  {
+   "id": "c4_03_code2",
+   "start": 47.4,
+   "dur": 2.6,
+   "kind": "img",
+   "chapter": "渲染",
+   "k": 7500,
+   "has_tts": false
+  },
+  {
+   "id": "c4_04_kitchen",
+   "start": 50,
+   "dur": 0.8,
+   "kind": "img",
+   "chapter": "渲染",
+   "k": 7600,
+   "has_tts": false
+  },
+  {
+   "id": "c4_05_screen",
+   "start": 50.8,
+   "dur": 1,
+   "kind": "img",
+   "chapter": "渲染",
+   "k": 7500,
+   "has_tts": false
+  },
+  {
+   "id": "c4_06_qc",
+   "start": 51.8,
+   "dur": 0.9,
+   "kind": "img",
+   "chapter": "渲染",
+   "k": 7500,
+   "has_tts": false
+  },
+  {
+   "id": "c4_07_kitchen2",
+   "start": 52.7,
+   "dur": 1.1,
+   "kind": "img",
+   "chapter": "渲染",
+   "k": 7400,
+   "has_tts": false
+  },
+  {
+   "id": "c5_01_api",
+   "start": 53.8,
+   "dur": 3.4,
+   "kind": "card",
+   "chapter": "天亮",
+   "k": null,
+   "has_tts": false
+  },
+  {
+   "id": "c5_02_cover",
+   "start": 57.2,
+   "dur": 2.6,
+   "kind": "img",
+   "chapter": "天亮",
+   "k": 3400,
+   "has_tts": false
+  },
+  {
+   "id": "c5_03_dawn",
+   "start": 59.8,
+   "dur": 3.2,
+   "kind": "img",
+   "chapter": "天亮",
+   "k": 2400,
+   "has_tts": false
+  },
+  {
+   "id": "c5_04_dawn2",
+   "start": 63,
+   "dur": 2.2,
+   "kind": "img",
+   "chapter": "天亮",
+   "k": 1900,
+   "has_tts": false
+  },
+  {
+   "id": "c5_05_end",
+   "start": 65.2,
+   "dur": 4.6,
+   "kind": "card",
+   "chapter": "天亮",
+   "k": null,
+   "has_tts": false
+  }
+ ]
+}
