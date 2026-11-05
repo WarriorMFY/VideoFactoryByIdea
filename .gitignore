@@ -48,3 +48,6 @@ History/runs/feedback/latest.json
 Material/library/*
 Material/quarantine/*
 Material/inbox/*
+
+# ffprobe 临时日志（每次运行重生成）
+History/runs/materials/_probe_*.log
