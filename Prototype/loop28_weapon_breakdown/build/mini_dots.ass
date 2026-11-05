@@ -1,0 +1,24 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1280
+PlayResY: 720
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Chain,Microsoft YaHei,10,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,2,0,7,0,0,0,1
+Style: Mark,Microsoft YaHei,10,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,1,0,0,0,100,100,0,0,1,2,0,7,0,0,0,1
+Style: FrameNo,Consolas,22,&H00E8DFD2,&H000000FF,&H96000000,&H00000000,1,0,0,0,100,100,1,0,3,4,0,9,20,20,20,1
+Style: ActName,Microsoft YaHei,38,&H00FFFFFF,&H000000FF,&H96000000,&H00000000,1,0,0,0,100,100,2,0,3,6,0,8,60,0,52,1
+Style: Legend,Microsoft YaHei,24,&H00D8CFBF,&H000000FF,&H96000000,&H00000000,0,0,0,0,100,100,1,0,3,5,0,2,60,0,40,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 1,0:00:00.00,0:00:01.00,Mark,,0,0,0,,{\p1\bord0\1c&HFFFFFF&\1a&H30&\pos(750,475)}m 3 0 b 3 1.7 1.7 3 0 3 b -1.7 3 -3 1.7 -3 0 b -3 -1.7 -1.7 -3 0 -3 b 1.7 -3 3 -1.7 3 0{\p0}
+Dialogue: 1,0:00:00.00,0:00:01.00,Mark,,0,0,0,,{\p1\bord0\1c&HFFFFFF&\1a&H50&\pos(771,362)}m 3 0 b 3 1.7 1.7 3 0 3 b -1.7 3 -3 1.7 -3 0 b -3 -1.7 -1.7 -3 0 -3 b 1.7 -3 3 -1.7 3 0{\p0}
+Dialogue: 1,0:00:00.00,0:00:01.00,Mark,,0,0,0,,{\p1\bord0\1c&HFFFFFF&\1a&H70&\pos(753,285)}m 3 0 b 3 1.7 1.7 3 0 3 b -1.7 3 -3 1.7 -3 0 b -3 -1.7 -1.7 -3 0 -3 b 1.7 -3 3 -1.7 3 0{\p0}
+Dialogue: 1,0:00:00.00,0:00:01.00,Mark,,0,0,0,,{\p1\bord0\1c&HFFFFFF&\1a&H90&\pos(840,255)}m 3 0 b 3 1.7 1.7 3 0 3 b -1.7 3 -3 1.7 -3 0 b -3 -1.7 -1.7 -3 0 -3 b 1.7 -3 3 -1.7 3 0{\p0}
+Dialogue: 1,0:00:00.00,0:00:01.00,Mark,,0,0,0,,{\p1\bord0\1c&HFFFFFF&\1a&H10&\pos(885,232)}m 3 0 b 3 1.7 1.7 3 0 3 b -1.7 3 -3 1.7 -3 0 b -3 -1.7 -1.7 -3 0 -3 b 1.7 -3 3 -1.7 3 0{\p0}
+Dialogue: 1,0:00:00.00,0:00:01.00,Mark,,0,0,0,,{\p1\bord0\1c&HFFFFFF&\1a&H30&\blur3\pos(763,328)}m 3 0 b 3 1.7 1.7 3 0 3 b -1.7 3 -3 1.7 -3 0 b -3 -1.7 -1.7 -3 0 -3 b 1.7 -3 3 -1.7 3 0{\p0}
+Dialogue: 1,0:00:00.00,0:00:01.00,Mark,,0,0,0,,{\p1\bord0\1c&HFFFFFF&\1a&H30&\blur3\pos(878,236)}m 3 0 b 3 1.7 1.7 3 0 3 b -1.7 3 -3 1.7 -3 0 b -3 -1.7 -1.7 -3 0 -3 b 1.7 -3 3 -1.7 3 0{\p0}

@@ -252,3 +252,14 @@ node Tool\ops\bili_phase_select.mjs --dir History\loops\<loop>
     每路先 `fps=30,format=yuv420p` 统一规格，一次成型无中间件。
     连带：concat 滤镜的一个输出 label 只能消费一次，静音垫底要 `anullsrc` 多路输入或 `asplit`；
     concat demuxer 的 list.txt 内路径相对**列表文件**而非 cwd。
+
+29. **libass drawing 是「填充多边形」语义，画不了开放曲线**（loop28 v2 实踩，连环三坑）：
+    ① `m/l` 路径**自动闭合**、`\bord` 描的是闭合轮廓——数据是平滑开放折线，
+    渲染却是闭合 V 形/菱形；`Borderstyle: 3` 还会额外给 drawing 画不透明底盒（白色大块）。
+    **画"线"的正解：沿曲线法向偏移 ±halfW 构造闭合带状多边形再 fill**（光晕层宽带+blur、主线层细带）。
+    ② 曲线平滑别用 Catmull-Rom：锚点间距悬殊（腰肩近、剑尖远）时严重过冲折返，
+    **Chaikin 切角 3 轮**不过冲且够平滑。
+    ③ 逐帧叠加层（每帧一条 Dialogue 的动效字幕）量级 ~4k 事件/段，libass 无压力；
+    逐帧事件里做淡入淡出只能逐帧改 `\alpha`，`\fad` 无效（单帧事件没有过渡时间）。
+    连带：**锚点标定图必须够大**——4x6 小拼图读出的坐标偏差 100px+，弧线整体悬空；
+    2x2 大图（每格 640x360 原尺寸 + 64px 网格）读数才可靠。

@@ -632,3 +632,14 @@
 | 坑（ops.md 28） | 异源拼接 concat demuxer -c copy 时基错乱（39.5s→68s 静默拉长）+ 音频流损坏 → 单命令 filter_complex + concat 滤镜统一规格一次成型；连带 anullsrc 输出只能消费一次、list.txt 相对路径 |
 | 产物 | `Prototype/loop28_weapon_breakdown/`（out.mp4 + REPORT.md + cards + build.sh + ASS） |
 | 遗留 | 反馈点：对照口径/竖屏版/1080p 登录态通道/兵器谱系列化 |
+
+## 小循环 28b · 逐帧慢放+动力链（2026-11-05 19:25–20:05）
+
+| 项 | 内容 |
+| --- | --- |
+| 初始目标 | 人指令：v1 基础上每个招式每个动作逐帧慢放，叠加"动力链"白色弧线（足→腰→肩→剑尖）帮助理解发力模式 |
+| 重选窗口 | v1 三个窗口有 1.5s 混入上一段场景（377.5s 才切绝技）；v2 重标：壹 302.4-305.4（连续白弧/机位稳）/ 贰 319.5-321.5（金环→蓝气→斜劈）/ 叁 378.4-380.9（起手→金丝→剑阵，γ1.35 提亮） |
+| 工线 | 锚点关键帧标定（足/腰/肩/手/尖五点×14 帧）→ smoothstep 逐帧插值 → Chaikin 平滑 → 法向偏移带状闭合多边形（fill 白）→ 每帧 ASS 事件（~10k 条）烧录 0.25× 慢放；atempo 两级 0.25× 低沉慢音效 |
+| 坑（ops.md 29） | libass drawing 填充语义：m/l 自动闭合+bord 描闭合轮廓（开放折线渲染成闭合 V）；BorderStyle 3 给 drawing 画白底盒；Catmull-Rom 过冲折返→Chaikin；小拼图锚点读数偏差 100px+ |
+| 产物 | `Prototype/loop28_weapon_breakdown/`：out_v2.mp4（39.5s/11.9MB）+ gen_chain.mjs + chainA/B/C.ass + build_v2.sh + REPORT.md v2 章节 |
+| 遗留 | 弧线形态可再加"发力段变色"（足段暗→剑尖段亮已做）；1080p 登录态通道仍待升级 |

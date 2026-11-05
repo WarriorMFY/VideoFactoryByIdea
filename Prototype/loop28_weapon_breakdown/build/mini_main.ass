@@ -1,0 +1,18 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1280
+PlayResY: 720
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Chain,Microsoft YaHei,10,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,2,0,7,0,0,0,1
+Style: Mark,Microsoft YaHei,10,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,1,0,0,0,100,100,0,0,1,2,0,7,0,0,0,1
+Style: FrameNo,Consolas,22,&H00E8DFD2,&H000000FF,&H96000000,&H00000000,1,0,0,0,100,100,1,0,3,4,0,9,20,20,20,1
+Style: ActName,Microsoft YaHei,38,&H00FFFFFF,&H000000FF,&H96000000,&H00000000,1,0,0,0,100,100,2,0,3,6,0,8,60,0,52,1
+Style: Legend,Microsoft YaHei,24,&H00D8CFBF,&H000000FF,&H96000000,&H00000000,0,0,0,0,100,100,1,0,3,5,0,2,60,0,40,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:01.00,Chain,,0,0,0,,{\p1\bord3\3c&HFFFFFF&\1a&HFF&\blur2.5}m 750 475 l 750 473 l 751 469 l 752 464 l 753 457 l 755 448 l 757 438 l 759 425 l 762 411 l 764 398 l 765 385 l 766 373 l 766 361 l 766 349 l 765 339 l 763 328 l 761 319 l 760 310 l 761 301 l 764 294 l 768 287 l 774 281 l 782 276 l 791 272 l 802 268 l 812 264 l 822 261 l 831 257 l 839 254 l 847 251 l 853 248 l 860 245 l 865 242 l 870 240 l 874 238 l 878 236 l 880 234 l 883 233 l 884 233 l 885 232{\p0}
