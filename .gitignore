@@ -51,3 +51,6 @@ Material/inbox/*
 
 # ffprobe 临时日志（每次运行重生成）
 History/runs/materials/_probe_*.log
+
+# 古谱生成原图（成品已裁剪入库，原图大且水印已除）
+Prototype/loop28_weapon_breakdown/plates_raw/

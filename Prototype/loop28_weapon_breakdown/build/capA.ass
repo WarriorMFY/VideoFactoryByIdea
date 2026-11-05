@@ -1,0 +1,19 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1280
+PlayResY: 720
+WrapStyle: 0
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: ActName,Microsoft YaHei,38,&H00FFFFFF,&H000000FF,&H96000000,&H00000000,1,0,0,0,100,100,2,0,3,6,0,2,60,0,52,1
+Style: ActSub,Microsoft YaHei,24,&H00D8CFBF,&H000000FF,&H96000000,&H00000000,0,0,0,0,100,100,1,0,3,5,0,2,60,0,24,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 2,0:00:00.30,0:00:04.00,ActName,,0,0,0,,{\fad(220,300)}壹之① 横撩起手 —— 力从地起
+Dialogue: 2,0:00:00.30,0:00:04.00,ActSub,,0,0,0,,{\fad(220,300)}右下古谱 · 弓步斜撩
+Dialogue: 2,0:00:04.20,0:00:07.80,ActName,,0,0,0,,{\fad(220,300)}壹之② 低位连环 —— 腰马合一
+Dialogue: 2,0:00:04.20,0:00:07.80,ActSub,,0,0,0,,{\fad(220,300)}右下古谱 · 马步平扫
+Dialogue: 2,0:00:08.00,0:00:11.70,ActName,,0,0,0,,{\fad(220,300)}壹之③ 回旋劈杀 —— 力达剑锋
+Dialogue: 2,0:00:08.00,0:00:11.70,ActSub,,0,0,0,,{\fad(220,300)}右下古谱 · 转身下劈

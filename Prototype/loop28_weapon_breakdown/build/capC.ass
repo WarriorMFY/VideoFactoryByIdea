@@ -1,0 +1,19 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1280
+PlayResY: 720
+WrapStyle: 0
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: ActName,Microsoft YaHei,38,&H00FFFFFF,&H000000FF,&H96000000,&H00000000,1,0,0,0,100,100,2,0,3,6,0,2,60,0,52,1
+Style: ActSub,Microsoft YaHei,24,&H00D8CFBF,&H000000FF,&H96000000,&H00000000,0,0,0,0,100,100,1,0,3,5,0,2,60,0,24,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 2,0:00:00.30,0:00:03.40,ActName,,0,0,0,,{\fad(220,300)}叁之① 引剑问龙 —— 意在剑先
+Dialogue: 2,0:00:00.30,0:00:03.40,ActSub,,0,0,0,,{\fad(220,300)}右下古谱 · 平举引势
+Dialogue: 2,0:00:03.60,0:00:06.60,ActName,,0,0,0,,{\fad(220,300)}叁之② 金丝缠身 —— 气贯长虹
+Dialogue: 2,0:00:03.60,0:00:06.60,ActSub,,0,0,0,,{\fad(220,300)}右下古谱 · 旋身缠剑
+Dialogue: 2,0:00:06.80,0:00:09.70,ActName,,0,0,0,,{\fad(220,300)}叁之③ 栖龙剑阵成 —— 万剑归一
+Dialogue: 2,0:00:06.80,0:00:09.70,ActSub,,0,0,0,,{\fad(220,300)}右下古谱 · 举剑向天

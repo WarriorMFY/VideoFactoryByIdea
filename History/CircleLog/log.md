@@ -643,3 +643,14 @@
 | 坑（ops.md 29） | libass drawing 填充语义：m/l 自动闭合+bord 描闭合轮廓（开放折线渲染成闭合 V）；BorderStyle 3 给 drawing 画白底盒；Catmull-Rom 过冲折返→Chaikin；小拼图锚点读数偏差 100px+ |
 | 产物 | `Prototype/loop28_weapon_breakdown/`：out_v2.mp4（39.5s/11.9MB）+ gen_chain.mjs + chainA/B/C.ass + build_v2.sh + REPORT.md v2 章节 |
 | 遗留 | 弧线形态可再加"发力段变色"（足段暗→剑尖段亮已做）；1080p 登录态通道仍待升级 |
+
+## 小循环 28c · 古谱纸笺版（2026-11-05 20:25–20:36）
+
+| 项 | 内容 |
+| --- | --- |
+| 初始目标 | 人反馈：v2 动力链效果一般，去掉；改每动作慢放+右下角贴黑白古朴的古代招式动作图 |
+| 实现 | ImageGen 生成 9 张明代兵书木刻版画风插图（统一提示词模板，一动作一图）→ ffmpeg 后处理成纸笺（去水印/灰度/米色宣纸调/墨框/微旋转）→ overlay enable 按小节切换+alpha 淡入出 |
+| 结构 | 慢放与窗口沿用 v2；动作字幕保留，新增"右下古谱 · 招式名"副行 |
+| 产物 | `out_v3.mp4`（39.5s/11.2MB）+ plates/ ×9 + cap{A,B,C}.ass + build_v3.sh |
+| 成本 | ImageGen 10 次生成（1 张试风格 + 1 张弃用重生成），约 50-100 credits |
+| 遗留 | 竖屏版 / 1080p 登录态通道 / 兵器谱系列化仍待裁决 |
