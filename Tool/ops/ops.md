@@ -244,3 +244,11 @@ node Tool\ops\bili_phase_select.mjs --dir History\loops\<loop>
     修法：kind 必须以源的 mediaType 为准（不要在合并轮转时硬编码）；图片条目 `duration` 一律置 null；
     画质地板（视频 540p / 图片 500px）在 probe 后把关，wiki 视频的地板**前移到 derivatives 选档**——
     档位高度不达 540p 的连下载都不开始。
+
+28. **异源拼接别走 concat demuxer `-c copy`**（loop28 实踩）：图片卡段（PNG loop，25fps）与视频段（30fps）
+    时基不一致，`-c copy` 拼接会把 39.5s 静默拉长到 68s；改重编码又因音频流已被拼坏报 AAC
+    `Number of bands exceeds limit` 解码错——错的不是编码，是**中间件已经烂了**。
+    **修法：单命令 filter_complex + concat 滤镜**（`[v0][a0][v1][a1]…concat=n=N:v=1:a=1`），
+    每路先 `fps=30,format=yuv420p` 统一规格，一次成型无中间件。
+    连带：concat 滤镜的一个输出 label 只能消费一次，静音垫底要 `anullsrc` 多路输入或 `asplit`；
+    concat demuxer 的 list.txt 内路径相对**列表文件**而非 cwd。

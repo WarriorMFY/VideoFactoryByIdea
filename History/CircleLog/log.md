@@ -619,3 +619,16 @@
 | 坑（ops.md 25-27） | ①配额满后进程挂死：在途大文件+Retry-After 大值被原样 sleep → AbortController 中止+硬顶 8s+每主机并发闸；curl -I 被代理截断只回 CONNECT；②Commons url 带 ?utm_source 污染转码派生，静默回退 946MB 原片白下 125s → cleanUrl+官方 videoinfo derivatives 选档；③ffprobe 给静态图也报 0.04s duration，NASA 图片被当视频误杀 → kind 以 mediaType 为准+图片 duration 置 null |
 | 产物 | `Tool/ops/collect_material.mjs`；`Prototype/loop27_material_line/`（README+library_sheet.jpg）；ops.md 工具表+坑 25-27 |
 | 遗留 | 反馈点 4 条待人裁决：①代价层级命名/积分量化 ②L2 promote 子命令 ③Pexels/Pixabay 接 key（1080p 免费视频主力源）④L3 简报 prompt 风格 |
+
+## 小循环 28 · 紫冥剑三招拆解（2026-11-05 17:09–18:55）
+
+| 项 | 内容 |
+| --- | --- |
+| 初始目标 | 人指令：拆解 IGN《影之刃零》全单手武器招式演示（BV1gFxv6nEde），结合传统武术与古兵器，出一支「一武器三招式」剪辑短视频 |
+| 拆解发现 | 演示片每武器固定四段式：普通连段(LV15/25)→杀气连段→绝技→处决技，标注自带手柄输入序列；与 IGN wiki 互证（30 武器独立模组/甄子丹动捕）。标注区半透明叠加，逐帧哈希失效，改裁切放大目读建时间表 |
+| 选材 | 紫冥剑（剑=古兵器最佳载体）：普通连段 295-305 / 杀气连段 315-325（腾身回斩）/ 绝技·栖龙剑阵 376-386 |
+| 成片 | 39.5s / 1280×720：片头卡 + 三段（ASS 三行花字：招式名/对照/古籍引文）+ 尾卡；响度归一 -16LUFS；游戏原声保留 |
+| 对照口径 | 壹·连环↔剑术连环（越女论剑引文）；贰·变招↔挂/劈/崩连变；叁·剑阵↔剑器舞/七星阵的浪漫化想象；声明「对照联想非溯源教学」 |
+| 坑（ops.md 28） | 异源拼接 concat demuxer -c copy 时基错乱（39.5s→68s 静默拉长）+ 音频流损坏 → 单命令 filter_complex + concat 滤镜统一规格一次成型；连带 anullsrc 输出只能消费一次、list.txt 相对路径 |
+| 产物 | `Prototype/loop28_weapon_breakdown/`（out.mp4 + REPORT.md + cards + build.sh + ASS） |
+| 遗留 | 反馈点：对照口径/竖屏版/1080p 登录态通道/兵器谱系列化 |

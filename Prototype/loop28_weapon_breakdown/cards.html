@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #0a0a0a; font-family: "Microsoft YaHei", "SimHei", sans-serif; }
+  .card { width: 1280px; height: 720px; position: relative; overflow: hidden; }
+
+  /* ---------- intro ---------- */
+  #intro {
+    background:
+      radial-gradient(ellipse 900px 500px at 72% 30%, rgba(196,110,40,.20), transparent 60%),
+      radial-gradient(ellipse 700px 420px at 20% 85%, rgba(70,60,50,.25), transparent 65%),
+      linear-gradient(160deg, #14110d 0%, #0c0a08 55%, #100d0a 100%);
+    color: #e8dfd2;
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 0 110px;
+  }
+  #intro .kicker {
+    font-size: 20px; letter-spacing: 6px; color: #c4772f; font-weight: 600;
+    border-left: 4px solid #c4772f; padding-left: 14px; margin-bottom: 34px;
+  }
+  #intro h1 { font-size: 76px; font-weight: 800; letter-spacing: 4px; line-height: 1.25; }
+  #intro h1 .accent { color: #d98e3f; }
+  #intro .sub { font-size: 26px; color: #a89c8a; margin-top: 26px; letter-spacing: 2px; }
+  #intro .divider { width: 84px; height: 3px; background: #c4772f; margin: 38px 0 26px; }
+  #intro .three { display: flex; gap: 34px; }
+  #intro .three div {
+    font-size: 21px; color: #8d8271; letter-spacing: 3px;
+    padding: 10px 22px; border: 1px solid #3a332a; border-radius: 3px;
+  }
+  #intro .three b { color: #d9c9ae; font-weight: 700; margin-right: 10px; }
+  #intro .src { position: absolute; bottom: 36px; left: 110px; font-size: 16px; color: #6d6355; letter-spacing: 1px; }
+
+  /* ---------- outro ---------- */
+  #outro {
+    background:
+      radial-gradient(ellipse 800px 460px at 85% 80%, rgba(196,110,40,.14), transparent 60%),
+      linear-gradient(200deg, #12100c 0%, #0b0908 60%, #0e0c09 100%);
+    color: #e8dfd2; display: flex; flex-direction: column; justify-content: center;
+    padding: 0 110px;
+  }
+  #outro .motto { font-size: 52px; font-weight: 800; letter-spacing: 5px; color: #d9c9ae; }
+  #outro .motto .accent { color: #d98e3f; }
+  #outro ul { list-style: none; margin-top: 44px; }
+  #outro li {
+    font-size: 24px; color: #b3a68f; letter-spacing: 2px; line-height: 1.6;
+    padding: 14px 0 14px 26px; border-left: 3px solid #3a332a; margin-bottom: 6px;
+  }
+  #outro li b { color: #d98e3f; font-weight: 700; margin-right: 14px; }
+  #outro li span { color: #e2d6c0; }
+  #outro .src { position: absolute; bottom: 34px; left: 110px; font-size: 16px; color: #6d6355; letter-spacing: 1px; }
+</style>
+</head>
+<body>
+  <div class="card" id="intro">
+    <div class="kicker">影之刃零 · 武器拆解 01</div>
+    <h1>一把紫冥剑<span class="accent">，</span>三个招式</h1>
+    <div class="sub">《影之刃零》单手武器演示 × 传统剑术与古兵器对照</div>
+    <div class="divider"></div>
+    <div class="three">
+      <div><b>壹</b>连环</div>
+      <div><b>贰</b>变招</div>
+      <div><b>叁</b>剑阵</div>
+    </div>
+    <div class="src">拆解素材：IGN中国《影之刃零》全单手武器招式演示 · 仅作学习分析</div>
+  </div>
+
+  <div class="card" id="outro">
+    <div class="motto">剑为百兵之君<span class="accent">——</span>刺为其骨，变为其魂</div>
+    <ul>
+      <li><b>壹 · 连环</b><span>普通连段：连击不断、剑走轻灵，是剑术「连环」的底子</span></li>
+      <li><b>贰 · 变招</b><span>杀气连段：步催剑进、腾身回斩，对应剑术「挂 / 劈 / 崩」的连变思路</span></li>
+      <li><b>叁 · 剑阵</b><span>栖龙剑阵：剑气成阵，从公孙大娘剑器舞到七星剑阵的浪漫化想象</span></li>
+    </ul>
+    <div class="src">游戏动作含艺术夸张，非武术教学 · 拆解素材：IGN中国《影之刃零》官方演示 · 剪辑：本工厂自动化工序</div>
+  </div>
+</body>
+</html>
