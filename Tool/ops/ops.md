@@ -263,3 +263,17 @@ node Tool\ops\bili_phase_select.mjs --dir History\loops\<loop>
     逐帧事件里做淡入淡出只能逐帧改 `\alpha`，`\fad` 无效（单帧事件没有过渡时间）。
     连带：**锚点标定图必须够大**——4x6 小拼图读出的坐标偏差 100px+，弧线整体悬空；
     2x2 大图（每格 640x360 原尺寸 + 64px 网格）读数才可靠。
+
+30. **input seek 在下载源上不逐帧丢弃，帧号坐标系会整体崩塌**（loop29 实踩，取证级事故）：
+    `-ss` 放 `-i` 前对 YT 下载 mp4 只落 keyframe——不同 `-ss` 值输出**相同画面**，
+    拼图的帧号标签（按 `帧号=时间×30` 手工换算）与内容全部错位，第一轮取证整体作废。
+    **修法（绝对时间码验证法）**：input 粗跳到 keyframe 前 + `-ss` 放 `-i` 后做 output 逐帧精调，
+    `drawtext='%{pts\:hms}'` 把真实时间码印在每格画面上，**按时间码读内容，永不手工换算帧号**。
+    连带：loop28 的 fps=10 粗拼图帧号同样不可信；成片按画面内容剪的不受影响，
+    但报告中的"绝对帧号"应一律改写为时间码。
+
+31. **filter_complex 里的 select 不带输入标签会静默失效**（loop29 实踩）：
+    `filter_complex "select=…,tile=…"` 不写 `[0:v]…[v]` 标签时 select 不过滤、输出从头算，
+    且不报错——画面重复却带着"正确"的新标签，极难察觉（靠内容与旧图重复才暴露）。
+    修法：要么 filter_complex_script + `[0:v]…[v]` 完整标签，要么干脆用 output seek 裁区间 + showinfo
+    验 `duration_time≈1/30` 确认流连续，不依赖 select。

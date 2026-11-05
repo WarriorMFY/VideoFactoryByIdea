@@ -1,0 +1,24 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1280
+PlayResY: 720
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: M,Consolas,24,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,1,0,1,0,0,7,0,0,0,1
+Style: Y,Microsoft YaHei,24,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,1,0,1,0,0,7,0,0,0,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 1,0:00:00.15,0:00:01.17,M,,0,0,0,,{\an7\pos(40,646)\fs24\1c&H0027A2C9\bord1\3c&H000000&\3a&H80&\fad(120,120)}05:02.45
+Dialogue: 1,0:00:00.15,0:00:01.17,Y,,0,0,0,,{\an9\pos(1240,150)\fs23\1c&H00FFFFFF\bord1\3c&H000000&\3a&H80&\fad(120,120)}01 原速 · 观众所见　[ 实录 ]
+Dialogue: 1,0:00:00.15,0:00:01.17,M,,0,0,0,,{\an3\pos(1240,646)\fs30\1c&H0027A2C9\bord1\3c&H000000&\3a&H80&\fad(120,120)}× 1.00
+Dialogue: 1,0:00:00.20,0:00:01.12,M,,0,0,0,,{\an7\pos(150,586)\p1\1c&H000000&\1a&H58&\bord0\shad0}m 0 0 l 980 0 l 980 96 l 0 96{\p0}
+Dialogue: 2,0:00:00.20,0:00:01.12,Y,,0,0,0,,{\an8\pos(640,596)\fs31\1c&H00FFFFFF\bord0\shad0\fad(180,180)}游戏里，这一秒就是这样过去的。
+Dialogue: 2,0:00:00.28,0:00:01.12,Y,,0,0,0,,{\an8\pos(640,644)\fs19\1c&H00A8ADB2\bord0\shad0\fad(180,180)}35 帧 · 302.45–303.62
+Dialogue: 0,0:00:00.00,0:00:01.17,M,,0,0,0,,{\an7\pos(28,28)\p1\1c&H00FFFFFF\1a&H60&\bord0\shad0}m 0 0 l 46 0 l 46 2 l 2 2 l 2 46 l 0 46{\p0}
+Dialogue: 0,0:00:00.00,0:00:01.17,M,,0,0,0,,{\an7\pos(1252,28)\p1\1c&H00FFFFFF\1a&H60&\bord0\shad0}m 0 0 l -46 0 l -46 2 l -2 2 l -2 46 l 0 46{\p0}
+Dialogue: 0,0:00:00.00,0:00:01.17,M,,0,0,0,,{\an7\pos(28,692)\p1\1c&H00FFFFFF\1a&H60&\bord0\shad0}m 0 0 l 46 0 l 46 -2 l 2 -2 l 2 -46 l 0 -46{\p0}
+Dialogue: 0,0:00:00.00,0:00:01.17,M,,0,0,0,,{\an7\pos(1252,692)\p1\1c&H00FFFFFF\1a&H60&\bord0\shad0}m 0 0 l -46 0 l -46 -2 l -2 -2 l -2 -46 l 0 -46{\p0}

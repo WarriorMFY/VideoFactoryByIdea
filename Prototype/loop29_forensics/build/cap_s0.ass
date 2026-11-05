@@ -1,0 +1,22 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1280
+PlayResY: 720
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: M,Consolas,24,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,1,0,1,0,0,7,0,0,0,1
+Style: Y,Microsoft YaHei,24,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,1,0,1,0,0,7,0,0,0,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 3,0:00:00.25,0:00:02.60,Y,,0,0,0,,{\an5\pos(640,316)\fs46\b1\1c&H00FFFFFF\bord0\shad0\fad(300,320)}紫冥剑 · 壹
+Dialogue: 3,0:00:00.55,0:00:02.60,M,,0,0,0,,{\an5\pos(640,268)\fs20\1c&H0027A2C9\bord0\shad0\fad(300,320)}取 证 试 片 · 非 成 片
+Dialogue: 3,0:00:00.75,0:00:02.60,M,,0,0,0,,{\an5\pos(640,378)\fs20\1c&H00A8ADB2\bord0\shad0\fad(300,320)}302.40 – 305.40s　|　30fps　|　源 640×360
+Dialogue: 3,0:00:00.95,0:00:02.60,Y,,0,0,0,,{\an5\pos(640,414)\fs18\1c&H00A8ADB2\bord0\shad0\fad(300,320)}5 处实录 · 2 处推断 · 3 处不可取证
+Dialogue: 0,0:00:00.00,0:00:02.60,M,,0,0,0,,{\an7\pos(28,28)\p1\1c&H00FFFFFF\1a&H60&\bord0\shad0}m 0 0 l 46 0 l 46 2 l 2 2 l 2 46 l 0 46{\p0}
+Dialogue: 0,0:00:00.00,0:00:02.60,M,,0,0,0,,{\an7\pos(1252,28)\p1\1c&H00FFFFFF\1a&H60&\bord0\shad0}m 0 0 l -46 0 l -46 2 l -2 2 l -2 46 l 0 46{\p0}
+Dialogue: 0,0:00:00.00,0:00:02.60,M,,0,0,0,,{\an7\pos(28,692)\p1\1c&H00FFFFFF\1a&H60&\bord0\shad0}m 0 0 l 46 0 l 46 -2 l 2 -2 l 2 -46 l 0 -46{\p0}
+Dialogue: 0,0:00:00.00,0:00:02.60,M,,0,0,0,,{\an7\pos(1252,692)\p1\1c&H00FFFFFF\1a&H60&\bord0\shad0}m 0 0 l -46 0 l -46 -2 l -2 -2 l -2 -46 l 0 -46{\p0}
