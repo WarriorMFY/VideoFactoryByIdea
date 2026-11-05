@@ -1,0 +1,33 @@
+{
+  "need": "重史诗感",
+  "type": "any",
+  "count": 4,
+  "generated_at": "2026-11-05T04:40:49.800Z",
+  "note": "L3 简报：agent 用 ImageGen/VideoGen 执行后，逐个 collect_material.mjs register --cost L3 入库",
+  "items": [
+    {
+      "idx": 1,
+      "base_query": "epic landscape aerial",
+      "image_prompt": "epic landscape aerial, cinematic composition, dramatic lighting, high detail, no text no watermark",
+      "video_prompt": "epic landscape aerial, slow cinematic camera push-in, epic atmosphere, wide establishing shot"
+    },
+    {
+      "idx": 2,
+      "base_query": "mountain clouds aerial",
+      "image_prompt": "mountain clouds aerial, cinematic composition, dramatic lighting, high detail, no text no watermark",
+      "video_prompt": "mountain clouds aerial, slow cinematic camera push-in, epic atmosphere, gentle parallax"
+    },
+    {
+      "idx": 3,
+      "base_query": "storm supercell timelapse",
+      "image_prompt": "storm supercell timelapse, cinematic composition, dramatic lighting, high detail, no text no watermark",
+      "video_prompt": "storm supercell timelapse, slow cinematic camera push-in, epic atmosphere, wide establishing shot"
+    },
+    {
+      "idx": 4,
+      "base_query": "canyon aerial view",
+      "image_prompt": "canyon aerial view, cinematic composition, dramatic lighting, high detail, no text no watermark",
+      "video_prompt": "canyon aerial view, slow cinematic camera push-in, epic atmosphere, gentle parallax"
+    }
+  ]
+}

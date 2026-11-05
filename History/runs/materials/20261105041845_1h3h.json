@@ -1,0 +1,63 @@
+{
+  "run_id": "20261105041845_1h3h",
+  "need": "重史诗感",
+  "type": "any",
+  "limit": 6,
+  "concurrency": 6,
+  "sources": [
+    "nasa",
+    "wiki"
+  ],
+  "candidates": 12,
+  "saved": 0,
+  "quarantined": 3,
+  "dups": 0,
+  "failed": 9,
+  "ms": 16489,
+  "ids": [
+    "0ce6cc6209",
+    "cbc04a379e",
+    "5e55a51ff6"
+  ],
+  "detail": {
+    "dups": [],
+    "failed": [
+      {
+        "title": "Ant Nebula",
+        "why": "时长过短 0.04s"
+      },
+      {
+        "title": "Trifid Nebula",
+        "why": "时长过短 0.04s"
+      },
+      {
+        "title": "Planetary Nebula",
+        "why": "时长过短 0.04s"
+      },
+      {
+        "title": "Weighing in on the Dumbbell Nebula",
+        "why": "时长过短 0.04s"
+      },
+      {
+        "title": "NGC 7293, the Helix Nebula",
+        "why": "时长过短 0.04s"
+      },
+      {
+        "title": "File:Aerial - clouds over the Cascade Mountains 06 (9796019636).jpg",
+        "why": "HTTP 429"
+      },
+      {
+        "title": "Planetary Nebula NGC 7293 also Known as the Helix Nebula",
+        "why": "时长过短 0.04s"
+      },
+      {
+        "title": "File:Clouds surround a mountain (Unsplash).jpg",
+        "why": "HTTP 429"
+      },
+      {
+        "title": "File:Sukhoi SuperJet 100 (5114478300).jpg",
+        "why": "HTTP 429"
+      }
+    ]
+  }
+}

@@ -43,3 +43,8 @@ History/publish/**/adhoc/
 # 采集的"最新一次快照"：每半小时一 tick 都会刷新（含 collected_at 时间戳），入库只会天天产生
 # 无意义的 diff。真正的时序留痕在 ticks.jsonl（一 tick 一行），它才入库。
 History/runs/feedback/latest.json
+
+# 素材采集线（loop27）：素材实体文件大且可再生，只入库总账与简报
+Material/library/*
+Material/quarantine/*
+Material/inbox/*

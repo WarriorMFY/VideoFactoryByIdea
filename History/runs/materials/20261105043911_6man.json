@@ -1,0 +1,47 @@
+{
+  "run_id": "20261105043911_6man",
+  "need": "重史诗感",
+  "type": "image",
+  "limit": 6,
+  "concurrency": 6,
+  "sources": [
+    "nasa",
+    "wiki"
+  ],
+  "candidates": 12,
+  "saved": 5,
+  "quarantined": 1,
+  "dups": 0,
+  "failed": 0,
+  "cancelled": 5,
+  "ms": 39357,
+  "ids": [
+    "67b44141fd",
+    "67fb274001",
+    "20c4fb5a46",
+    "97a49cbbae",
+    "32deff3be5",
+    "01e6b25814"
+  ],
+  "detail": {
+    "dups": [],
+    "failed": [],
+    "cancelled": [
+      {
+        "title": "N44C nebula"
+      },
+      {
+        "title": "File:Aerial - clouds over the Cascade Mountains 06 (9796019636).jpg"
+      },
+      {
+        "title": "File:Sukhoi SuperJet 100 (5114478300).jpg"
+      },
+      {
+        "title": "File:Clouds surround a mountain (Unsplash).jpg"
+      },
+      {
+        "title": "File:Glacier Peak (aerial view).jpg"
+      }
+    ]
+  }
+}

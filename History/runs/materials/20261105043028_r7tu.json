@@ -1,0 +1,31 @@
+{
+  "run_id": "20261105043028_r7tu",
+  "need": "重史诗感",
+  "type": "video",
+  "limit": 2,
+  "concurrency": 2,
+  "sources": [
+    "nasa",
+    "wiki"
+  ],
+  "candidates": 5,
+  "saved": 2,
+  "quarantined": 0,
+  "dups": 0,
+  "failed": 0,
+  "cancelled": 1,
+  "ms": 8570,
+  "ids": [
+    "c4a409f5b4",
+    "c6dbc4f30c"
+  ],
+  "detail": {
+    "dups": [],
+    "failed": [],
+    "cancelled": [
+      {
+        "title": "File:Madison Alabama from Above in 4K 60 fps Ultra HD -Epic Drone Footage part-1 -Huntsville- AeroVenture.webm"
+      }
+    ]
+  }
+}

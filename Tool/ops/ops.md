@@ -31,6 +31,7 @@
 | `bili_up_timeline.mjs` | **UP主全量投稿时间线**（小循环 25 升格，源自 loop25）：名单 → search bili_user 解析 mid → wbi 签名分页拉全量投稿（默认上限 2000 条/人）→ 年度聚合 + 播放爬坡点。`--out`（必填）`--names` `--max-pages` `--spike-ratio` `--spike-min-play`。**必须走登录态 profile**（游客 -352）；`timeline_<mid>.json` 存在即跳过，重采先删文件；同名小号风险（搜「半佛仙人」命中 11 粉小号）脚本会告警 |
 | `bili_phase_select.mjs` | **早期 vs 成熟期选样**（小循环 25 升格）：读 `timeline_*.json`，早期 = 开号头 15 条播放最高、成熟期 = 近 4 年播放前 3，时长窗口 60–900s 过滤直播/切片。`--dir`（必填）`--early-n/--late-years/--min-len/--max-len/--cands`。产出 selection.json 供批量下载 |
 | `dl_bili.mjs` | **B站样本下载**（小循环 25 升格，源自 loop19）：公开 html5 低清通道（480p durl，带 Referer），零登录。dash-only 视频不支持此通道会报「无 durl」，换样本即可。`node Tool/ops/dl_bili.mjs BV out.mp4` |
+| `collect_material.mjs` | **素材采集线**（小循环 27 新增）：四级代价方案卡（L0 库内复用 / L1 开放授权网采 NASA+Wikimedia / L2 待核授权隔离区 / L3 AI 生成简报）→ 人选方案 → `fetch` 最大限速采集（并发池 + 每主机并发闸 + 配额即中止 + sha256 去重 + ffprobe 质检 + 授权自动登记）→ `Material/manifest.jsonl` 总账。子命令 `plan/fetch/list/register/brief`；L3 走 ImageGen/VideoGen 后 `register --cost L3` 强制 ai_generated=true（AI 声明纪律）。视频画质地板 540p / 图片 500px，单文件上限 `--max-mb`（默认 120），Wikimedia 视频自动选官方转码档、图片取 1920px 缩略 |
 
 ## 最短链路
 
@@ -224,3 +225,22 @@ node Tool\ops\bili_phase_select.mjs --dir History\loops\<loop>
     一轮 10 个任务全军覆没且日志看起来"只是都失败了"。
     **修法**：编排脚本里所有路径要么绝对化（`path.resolve(ROOT, …)`），要么先 `process.chdir`；
     子进程失败要把 stderr 打出来看第一行，别只数成功数。
+
+## 素材采集线（`collect_material.mjs`）踩过的坑
+
+25. **「达到配额后进程挂死」**：`limit` 满了，但其余 worker 仍在拖 NASA `~orig.mp4` 大文件，
+    且 429 的 `Retry-After` 大值被原样 sleep（实测能到分钟级）。修法三件套：
+    ① AbortController 配额中止——够了就掐在途下载（AbortError 不重试、直接进 cancelled）；
+    ② Retry-After 硬顶 8s，只做参考不当命令；
+    ③ 每主机并发闸（`upload.wikimedia.org` 限 2 路，其余全并发）。
+    **连带**：`curl -I` 在本机代理下只回 `200 Connection Established`，测体积/探活必须用 node fetch 的 HEAD 或 Range。
+
+26. **URL 查询串污染派生**：Commons API 的 `imageinfo.url` 带 `?utm_source=…`，拿它拼转码/缩略图 URL
+    全部 404，又静默回退 946MB 原片——白下 125s 才撞单文件上限。修法：`cleanUrl` 先剥查询串；
+    视频选档放弃猜 URL，改用官方 `prop=videoinfo&viprop=derivatives`（带 `extmetadata` 可同请求拿授权，
+    `viextmetadatafilter` 与 `iiextmetadatafilter` 两个都带上最稳）。
+
+27. **ffprobe 对静态图也报 duration（0.04s）**：v1 按 kind 判视频，NASA 图片全被「时长过短 0.04s」误杀。
+    修法：kind 必须以源的 mediaType 为准（不要在合并轮转时硬编码）；图片条目 `duration` 一律置 null；
+    画质地板（视频 540p / 图片 500px）在 probe 后把关，wiki 视频的地板**前移到 derivatives 选档**——
+    档位高度不达 540p 的连下载都不开始。

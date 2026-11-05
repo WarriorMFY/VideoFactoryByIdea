@@ -1,0 +1,47 @@
+{
+  "run_id": "20261105043003_ocl0",
+  "need": "重史诗感",
+  "type": "any",
+  "limit": 6,
+  "concurrency": 6,
+  "sources": [
+    "nasa",
+    "wiki"
+  ],
+  "candidates": 12,
+  "saved": 6,
+  "quarantined": 0,
+  "dups": 0,
+  "failed": 0,
+  "cancelled": 5,
+  "ms": 21287,
+  "ids": [
+    "67b44141fd",
+    "67fb274001",
+    "20c4fb5a46",
+    "6ef54d0a8f",
+    "32deff3be5",
+    "358505e48c"
+  ],
+  "detail": {
+    "dups": [],
+    "failed": [],
+    "cancelled": [
+      {
+        "title": "File:Aerial - clouds over the Cascade Mountains 05 (9796102903).jpg"
+      },
+      {
+        "title": "File:Aerial - clouds over the Cascade Mountains 06 (9796019636).jpg"
+      },
+      {
+        "title": "File:Sukhoi SuperJet 100 (5114478300).jpg"
+      },
+      {
+        "title": "File:Clouds surround a mountain (Unsplash).jpg"
+      },
+      {
+        "title": "File:Glacier Peak (aerial view).jpg"
+      }
+    ]
+  }
+}

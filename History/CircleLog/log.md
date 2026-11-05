@@ -607,3 +607,15 @@
 - 修两处后上传：`>_` 圆裁切角 → 提示符移到细胞正下方居中；下划线字符天然贴基线错位 → 换方块光标元素 + flex 对齐（排查中发现第一次替换误命中 avA 的 .cu，avC 漏改，逐行核对修正）。
 - 上传流程（登录态 Playwright）：更换头像 → **选择本地图片** → input[type=file]（首次 run 挂错隐藏 input，改挂 last）→ 裁剪页「更新」**不是 button 标签**，button 定位超时两轮 → 改 getByText 精确匹配点中提交。
 - 核验：nav face URL 779278…→12c554…，下载线上图目验完整（绿虫+>▮）。默认头像正式退役。
+
+## 小循环 27 · 素材采集线 collect_material（2026-11-05 12:10–12:45）
+
+| 项 | 内容 |
+| --- | --- |
+| 初始目标 | 人指令：建立稳定"素材采集线"——采集方式分「工具网搜（低代价）/AI 生成（高代价积分）」，素材含视频/图片；采集器要能"给出不同代价下的方案→人选→最大限速采集"，服务内容创造 |
+| 形态 | `Tool/ops/collect_material.mjs` 五子命令：plan（四级方案卡=闸门，不选不动）/ fetch（并发池+每主机并发闸+配额即中止+sha256 去重+ffprobe 质检）/ list（L0 复用检索）/ register（AI 产物登记，强制 ai_generated）/ brief（L3 采集简报）。库：`Material/manifest.jsonl` 总账（入库）+ library/quarantine/inbox 实体（gitignore）+ 回执 `History/runs/materials/` |
+| 代价分级 | L0 库内复用（0/0）→ L1 开放授权网采 NASA(PD)+Wikimedia（0 积分，授权署名自动登记）→ L2 待核授权（NC/ND/未知只进隔离区，promote 前不得发布）→ L3 AI 生成（积分，AI 声明纪律） |
+| 实测（重史诗感） | 图片 6：5 NASA 星云 PD 入库 + 1 wiki CC BY-SA 隔离；视频 2：NASA 猎户座 1080p/128s PD + wiki 航拍 1080p/174s CC BY 入库（NASA 存档视频多为 320p 被 540p 地板拦下）；brief×4；register 用 B站头像演示 L3 登记成功；库预览 4×2 全格有效 |
+| 坑（ops.md 25-27） | ①配额满后进程挂死：在途大文件+Retry-After 大值被原样 sleep → AbortController 中止+硬顶 8s+每主机并发闸；curl -I 被代理截断只回 CONNECT；②Commons url 带 ?utm_source 污染转码派生，静默回退 946MB 原片白下 125s → cleanUrl+官方 videoinfo derivatives 选档；③ffprobe 给静态图也报 0.04s duration，NASA 图片被当视频误杀 → kind 以 mediaType 为准+图片 duration 置 null |
+| 产物 | `Tool/ops/collect_material.mjs`；`Prototype/loop27_material_line/`（README+library_sheet.jpg）；ops.md 工具表+坑 25-27 |
+| 遗留 | 反馈点 4 条待人裁决：①代价层级命名/积分量化 ②L2 promote 子命令 ③Pexels/Pixabay 接 key（1080p 免费视频主力源）④L3 简报 prompt 风格 |

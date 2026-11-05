@@ -1,0 +1,45 @@
+{
+  "run_id": "20261105043355_1axn",
+  "need": "重史诗感",
+  "type": "video",
+  "limit": 2,
+  "concurrency": 3,
+  "sources": [
+    "nasa",
+    "wiki"
+  ],
+  "candidates": 5,
+  "saved": 0,
+  "quarantined": 0,
+  "dups": 0,
+  "failed": 5,
+  "cancelled": 0,
+  "ms": 20769,
+  "ids": [],
+  "detail": {
+    "dups": [],
+    "failed": [
+      {
+        "title": "KSC-04-S-00193",
+        "why": "画质过低 320x212（底线 540p）"
+      },
+      {
+        "title": "Dust and Drama in the Orion Nebula from NASA and ESA Images",
+        "why": "画质过低 320x180（底线 540p）"
+      },
+      {
+        "title": "First Images from the James Webb Space Telescope (Official NASA Highlights)",
+        "why": "画质过低 320x180（底线 540p）"
+      },
+      {
+        "title": "Stars of Cepheus as Seen by NASA's Spitzer Space Telescope",
+        "why": "画质过低 320x180（底线 540p）"
+      },
+      {
+        "title": "File:Madison Alabama from Above in 4K 60 fps Ultra HD -Epic Drone Footage part-1 -Huntsville- AeroVenture.webm",
+        "why": "文件过大 946MB > 上限 120MB"
+      }
+    ],
+    "cancelled": []
+  }
+}
