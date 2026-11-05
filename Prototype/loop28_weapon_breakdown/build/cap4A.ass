@@ -1,0 +1,15 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1280
+PlayResY: 720
+WrapStyle: 0
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: ActName,Microsoft YaHei,34,&H00FFFFFF,&H000000FF,&H96000000,&H00000000,1,0,0,0,100,100,2,0,3,6,0,2,60,0,46,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 2,0:00:00.12,0:00:01.45,ActName,,0,0,0,,{\fad(120,100)}壹之① 横撩起手
+Dialogue: 2,0:00:01.47,0:00:02.78,ActName,,0,0,0,,{\fad(100,100)}壹之② 低位连环
+Dialogue: 2,0:00:02.80,0:00:04.18,ActName,,0,0,0,,{\fad(100,120)}壹之③ 回旋劈杀
