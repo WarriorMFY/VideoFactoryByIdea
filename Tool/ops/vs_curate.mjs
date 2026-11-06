@@ -53,14 +53,16 @@ const C_A = bgr(sides.a.color || 'FFC850'), C_B = bgr(sides.b.color || 'FF6B5A')
 const ts = s => `0:${String(Math.floor(s / 60)).padStart(2, '0')}:${(s % 60).toFixed(2).padStart(5, '0')}`;
 
 // 渲染一组（960x540 左右分屏 + 组号/语义小标注）
+// 组时长 c.dur（缺省 DUR）；侧变速 c.x.fit（>1 加速）：trim 侧原始时长后 setpts=PTS/fit
 const renderGroup = (c, i) => {
   const id = String(i + 1).padStart(2, '0');
+  const gdur = c.dur ?? DUR;
   const tag = c.tag || { a: '', b: '' };
   const lines = [
-    `Dialogue: 0,0:00:00.05,0:00:${DUR.toFixed(2)},N,,0,0,0,,{\\an7\\pos(20,34)\\fs26\\1c&H${C_A}&\\bord1.2\\3c&H000000&\\3a&H50&}#${id} ${tag.a || ''}`,
-    `Dialogue: 0,0:00:00.05,0:00:${DUR.toFixed(2)},N,,0,0,0,,{\\an7\\pos(500,34)\\fs26\\1c&H${C_B}&\\bord1.2\\3c&H000000&\\3a&H50&}#${id} ${tag.b || ''}`,
-    `Dialogue: 0,0:00:00.05,0:00:${DUR.toFixed(2)},N,,0,0,0,,{\\an7\\pos(20,66)\\fs18\\1c&H${C_G}&\\bord1\\3c&H000000&\\3a&H50&}${sides.a.pack || ''}`,
-    `Dialogue: 0,0:00:00.05,0:00:${DUR.toFixed(2)},N,,0,0,0,,{\\an7\\pos(500,66)\\fs18\\1c&H${C_G}&\\bord1\\3c&H000000&\\3a&H50&}${sides.b.pack || ''}`,
+    `Dialogue: 0,0:00:00.05,0:00:${gdur.toFixed(2)},N,,0,0,0,,{\\an7\\pos(20,34)\\fs26\\1c&H${C_A}&\\bord1.2\\3c&H000000&\\3a&H50&}#${id} ${tag.a || ''}`,
+    `Dialogue: 0,0:00:00.05,0:00:${gdur.toFixed(2)},N,,0,0,0,,{\\an7\\pos(500,34)\\fs26\\1c&H${C_B}&\\bord1.2\\3c&H000000&\\3a&H50&}#${id} ${tag.b || ''}`,
+    `Dialogue: 0,0:00:00.05,0:00:${gdur.toFixed(2)},N,,0,0,0,,{\\an7\\pos(20,66)\\fs18\\1c&H${C_G}&\\bord1\\3c&H000000&\\3a&H50&}${sides.a.pack || ''}`,
+    `Dialogue: 0,0:00:00.05,0:00:${gdur.toFixed(2)},N,,0,0,0,,{\\an7\\pos(500,66)\\fs18\\1c&H${C_G}&\\bord1\\3c&H000000&\\3a&H50&}${sides.b.pack || ''}`,
   ];
   writeFileSync(join(OUTDIR, `grp_${id}.ass`), `[Script Info]
 ScriptType: v4.00+
@@ -76,14 +78,17 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 ${lines.join('\n')}
 `, 'utf8');
   const ca = planCrop(sides.a, c.a || {}), cb = planCrop(sides.b, c.b || {});
-  const chain = (idx, side, cpl) =>
-    `[${idx}:v]trim=duration=${DUR},setpts=PTS-STARTPTS,crop=${cpl.cw}:${cpl.ch}:${cpl.x}:${cpl.y},scale=${SRC_W}:${SRC_H}:flags=lanczos,setsar=1[${side}]`;
+  const chain = (idx, side, cpl, spec) => {
+    const sdur = spec?.dur ?? gdur;
+    const fit = spec?.fit && Math.abs(spec.fit - 1) > 0.02 ? `,setpts=PTS/${spec.fit.toFixed(4)}` : '';
+    return `[${idx}:v]trim=duration=${sdur},setpts=PTS-STARTPTS${fit},crop=${cpl.cw}:${cpl.ch}:${cpl.x}:${cpl.y},scale=${SRC_W}:${SRC_H}:flags=lanczos,setsar=1[${side}]`;
+  };
   run([
     j(FF), '-y',
     '-ss', String(c.a?.t ?? 0), '-i', j(sides.a.src),
     '-ss', String(c.b?.t ?? 0), '-i', j(sides.b.src),
     '-filter_complex',
-    `${chain(0, 'x', ca)};${chain(1, 'y', cb)};[x][y]hstack,drawbox=x=${SRC_W - 3}:y=0:w=3:h=${PH}:color=black:t=fill,ass=grp_${id}.ass,format=yuv420p[v]`,
+    `${chain(0, 'x', ca, c.a)};${chain(1, 'y', cb, c.b)};[x][y]hstack,drawbox=x=${SRC_W - 3}:y=0:w=3:h=${PH}:color=black:t=fill,ass=grp_${id}.ass,format=yuv420p[v]`,
     '-map', '[v]', '-an', '-c:v', 'libx264', '-preset', 'fast', '-crf', '20', '-pix_fmt', 'yuv420p',
     '-movflags', '+faststart', j(join(OUTDIR, `grp_${id}.mp4`)),
   ].join(' '), OUTDIR);
@@ -97,8 +102,8 @@ const rows = [];
     组: `#${id}`,
     维度: c.dim || '',
     标签: `${(c.tag?.a || '')} / ${(c.tag?.b || '')}`,
-    中式段: `${sides.a.pack}@${(c.a?.t ?? 0).toFixed(1)}s`,
-    西式段: `${sides.b.pack}@${(c.b?.t ?? 0).toFixed(1)}s`,
+    中式段: `${sides.a.pack}@${(c.a?.t ?? 0).toFixed(2)}s+${(c.a?.dur ?? c.dur ?? DUR).toFixed(1)}s${c.a?.fit ? `(${c.a.fit}x)` : ''}`,
+    西式段: `${sides.b.pack}@${(c.b?.t ?? 0).toFixed(2)}s+${(c.b?.dur ?? c.dur ?? DUR).toFixed(1)}s${c.b?.fit ? `(${c.b.fit}x)` : ''}`,
     状态: c.status || '新',
     备注: c.note || '',
     风险: c.risk || '',
@@ -147,7 +152,7 @@ const html = `<!DOCTYPE html>
 <body>
 <header>
   <h1><span class="a">${sides.a.pack}</span> × <span class="b">${sides.b.pack}</span> 对位候选池</h1>
-  <p class="sub">共 ${rows.length} 组候选 · 每组 ${DUR}s 左右分屏预览 · 请核验后反馈保留/换段/调整</p>
+  <p class="sub">共 ${rows.length} 组候选 · 完整处决单位版 · 请核验后反馈保留/换段/调整</p>
 </header>
 <div class="howto">
   <b>核验方式：</b>逐组点开小片（左右分屏，左=${sides.a.pack}，右=${sides.b.pack}），判断——①对位语义是否成立 ②两侧主体是否在画面内 ③有无 UI/水印抢戏。<br>

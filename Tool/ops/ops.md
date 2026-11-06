@@ -323,6 +323,10 @@ node Tool\ops\bili_phase_select.mjs --dir History\loops\<loop>
     （琥珀 FFC850 → 渲染成蓝）。填色时交换 R/B（50C8FF）；vs_split.mjs 的 bgr()
     已内置自动转换，配置里直接写 RGB。
 
+37. **mjpeg(jpg) 输入直接 vstack/hstack 会无报错崩退**（loop37 实踩）：jpg 解码后
+    pix_fmt 不被拼图滤镜接受 → 先统一转 png 中转再拼。取证条带拼接一律走 png。
+    另：ffmpeg cwd 切到输出目录后，脚本内输入/输出路径必须绝对路径（坑33 同源）。
+
 —— 工具 ——
 - vs_split.mjs：双源对比剪辑流生成器（loop35 提炼）。配置驱动：lr/tb 版式 × A/B 两侧
   （源/片名/侧色 RGB）× 逐组对位（t + cropX + 语义标签）× 片头双标题卡 × 片尾对位

@@ -1,0 +1,6 @@
+file 'F:/AgentWorkArea/WorkBuddy/VideoFactory/Prototype/loop35_compare/vs_build/seg_00.mp4'
+file 'F:/AgentWorkArea/WorkBuddy/VideoFactory/Prototype/loop35_compare/vs_build/seg_01.mp4'
+file 'F:/AgentWorkArea/WorkBuddy/VideoFactory/Prototype/loop35_compare/vs_build/seg_02.mp4'
+file 'F:/AgentWorkArea/WorkBuddy/VideoFactory/Prototype/loop35_compare/vs_build/seg_03.mp4'
+file 'F:/AgentWorkArea/WorkBuddy/VideoFactory/Prototype/loop35_compare/vs_build/seg_04.mp4'
+file 'F:/AgentWorkArea/WorkBuddy/VideoFactory/Prototype/loop35_compare/vs_build/seg_tail.mp4'

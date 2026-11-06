@@ -1,0 +1,6 @@
+[0:v]split=3[s0][s1][s2];
+[s0]trim=start=0:end=0.9,setpts=PTS-STARTPTS,scale=1920:1080:flags=lanczos,fps=30,ass=shot_0.ass,format=yuv420p[m0];
+[s1]trim=start=0.9:end=1.55,setpts=PTS-STARTPTS,scale=3840:2160:flags=lanczos,zoompan=z='38.4000+(-23.0400)*(if(lt(min(on/19,1),0.5),2*(min(on/19,1))*(min(on/19,1)),1-pow(-2*(min(on/19,1))+2,2)/2))':x='clip(2304+(1152)*(if(lt(min(on/19,1),0.5),2*(min(on/19,1))*(min(on/19,1)),1-pow(-2*(min(on/19,1))+2,2)/2)),0,in_w-in_w/zoom)':y='clip(1296+(648)*(if(lt(min(on/19,1),0.5),2*(min(on/19,1))*(min(on/19,1)),1-pow(-2*(min(on/19,1))+2,2)/2)),0,in_h-in_h/zoom)':d=1:s=1920x1080:fps=30,setpts=2.85714*PTS,fps=30,tmix=frames=3:weights='1 1 1',colortemperature=temperature=9500,eq=saturation=0.82,ass=shot_1.ass,format=yuv420p[m1];
+[s2]trim=start=1.55:end=3.2,setpts=PTS-STARTPTS,scale=1920:1080:flags=lanczos,fps=30,ass=shot_2.ass,format=yuv420p[m2];
+[m0][m1][m2]concat=n=3:v=1:a=0[vc];
+[vc]null,drawbox=x=0:y=0:w=1920:h=138:color=black:t=fill,drawbox=x=0:y=942:w=1920:h=138:color=black:t=fill,format=yuv420p[v]

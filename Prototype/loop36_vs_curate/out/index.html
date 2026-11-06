@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>对比候选池核验 · 影之刃零 × 战神4</title>
+<style>
+  :root { --amber:#ffc850; --red:#ff6b5a; --gray:#9a9a94; --bg:#0b0b0c; --panel:#141416; --line:#26262a; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:var(--bg); color:#e8e8e4; font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif; padding:32px 16px 64px; }
+  header { max-width:1040px; margin:0 auto 20px; text-align:center; }
+  h1 { font-size:clamp(19px,3.4vw,28px); font-weight:600; letter-spacing:.04em; }
+  h1 .a { color:var(--amber); } h1 .b { color:var(--red); }
+  .sub { margin-top:10px; font-size:12.5px; color:var(--gray); line-height:1.8; }
+  .tbl { max-width:1040px; margin:0 auto; display:flex; flex-direction:column; gap:14px; }
+  .grp { background:var(--panel); border:1px solid var(--line); border-radius:10px; overflow:hidden; }
+  .head { display:grid; grid-template-columns:64px 1fr auto; gap:10px; align-items:baseline; padding:12px 16px; border-bottom:1px solid var(--line); }
+  .no { font-size:20px; font-weight:700; color:#55555a; }
+  .tags { font-size:15px; font-weight:600; letter-spacing:.04em; }
+  .tags .a { color:var(--amber); } .tags .b { color:var(--red); } .tags .s { color:#4a4a4e; margin:0 .5em; }
+  .meta { font-size:11.5px; color:var(--gray); text-align:right; line-height:1.7; }
+  .meta .st { display:inline-block; padding:1px 8px; border-radius:9px; border:1px solid var(--line); }
+  video { display:block; width:100%; aspect-ratio:16/9; background:#000; }
+  .foot { padding:10px 16px 14px; font-size:12px; color:var(--gray); line-height:1.8; }
+  .foot b { color:#cfcfc9; font-weight:500; }
+  .risk { color:#e0a24a; }
+  .howto { max-width:1040px; margin:0 auto 18px; background:var(--panel); border:1px dashed var(--line); border-radius:10px; padding:14px 18px; font-size:12.5px; color:var(--gray); line-height:2; }
+  .howto b { color:#cfcfc9; }
+</style>
+</head>
+<body>
+<header>
+  <h1><span class="a">影之刃零</span> × <span class="b">战神4</span> 对位候选池</h1>
+  <p class="sub">共 11 组候选 · 每组 3.2s 左右分屏预览 · 请核验后反馈保留/换段/调整</p>
+</header>
+<div class="howto">
+  <b>核验方式：</b>逐组点开小片（左右分屏，左=影之刃零，右=战神4），判断——①对位语义是否成立 ②两侧主体是否在画面内 ③有无 UI/水印抢戏。<br>
+  <b>反馈格式：</b>「保留 #1#2#4，#5 中式换 55s，#9 右侧右移」即可，我用 vs_split 按最终清单合成正式版。
+</div>
+<div class="tbl">
+  <div class="grp" id="g01">
+    <div class="head">
+      <div class="no">#01</div>
+      <div class="tags"><span class="a">泼染</span><span class="s">×</span><span class="b">糊屏</span><span style="color:var(--gray);font-size:12px;font-weight:400;margin-left:10px">色彩</span></div>
+      <div class="meta"><span class="st">v1已验证</span><br>影之刃零@59.4s · 战神4@55.2s</div>
+    </div>
+    <video controls preload="metadata" src="grp_01.mp4"></video>
+    <div class="foot"><b>备注：</b>红绸血雾跃杀 vs 瀑布贴脸拔角——血是写意的墨还是写实的证<br></div>
+  </div>
+  <div class="grp" id="g02">
+    <div class="head">
+      <div class="no">#02</div>
+      <div class="tags"><span class="a">爆发</span><span class="s">×</span><span class="b">劈杀</span><span style="color:var(--gray);font-size:12px;font-weight:400;margin-left:10px">爆发</span></div>
+      <div class="meta"><span class="st">v1已验证</span><br>影之刃零@69.2s · 战神4@23.8s</div>
+    </div>
+    <video controls preload="metadata" src="grp_02.mp4"></video>
+    <div class="foot"><b>备注：</b>山道火焰泼染 vs 雪原大斧劈落<br><b class="risk">⚠ 中式侧有BOSS名横幅（实录感，可接受）</b></div>
+  </div>
+  <div class="grp" id="g03">
+    <div class="head">
+      <div class="no">#03</div>
+      <div class="tags"><span class="a">收势</span><span class="s">×</span><span class="b">怒吼</span><span style="color:var(--gray);font-size:12px;font-weight:400;margin-left:10px">杀后</span></div>
+      <div class="meta"><span class="st">v1已验证</span><br>影之刃零@151.5s · 战神4@26.8s</div>
+    </div>
+    <video controls preload="metadata" src="grp_03.mp4"></video>
+    <div class="foot"><b>备注：</b>杀后静立留白 vs 染血举锤咆哮——价值观差异最强的一组<br></div>
+  </div>
+  <div class="grp" id="g04">
+    <div class="head">
+      <div class="no">#04</div>
+      <div class="tags"><span class="a">刺杀</span><span class="s">×</span><span class="b">屠戮</span><span style="color:var(--gray);font-size:12px;font-weight:400;margin-left:10px">终结</span></div>
+      <div class="meta"><span class="st">v1已验证</span><br>影之刃零@94.5s · 战神4@159.5s</div>
+    </div>
+    <video controls preload="metadata" src="grp_04.mp4"></video>
+    <div class="foot"><b>备注：</b>夜战利落一刺 vs 地狱火巨魔屠戮——冷快净 vs 暗烫满<br></div>
+  </div>
+  <div class="grp" id="g05">
+    <div class="head">
+      <div class="no">#05</div>
+      <div class="tags"><span class="a">剑气</span><span class="s">×</span><span class="b">寒洞</span><span style="color:var(--gray);font-size:12px;font-weight:400;margin-left:10px">冷调</span></div>
+      <div class="meta"><span class="st">新</span><br>影之刃零@57.5s · 战神4@85.0s</div>
+    </div>
+    <video controls preload="metadata" src="grp_05.mp4"></video>
+    <div class="foot"><b>备注：</b>同为冷色系：中式雪桥红剑气=冷中一点血；西式冰洞贴脸=冷中一股狠<br></div>
+  </div>
+  <div class="grp" id="g06">
+    <div class="head">
+      <div class="no">#06</div>
+      <div class="tags"><span class="a">连斩</span><span class="s">×</span><span class="b">压杀</span><span style="color:var(--gray);font-size:12px;font-weight:400;margin-left:10px">轻重</span></div>
+      <div class="meta"><span class="st">新</span><br>影之刃零@75.0s · 战神4@127.5s</div>
+    </div>
+    <video controls preload="metadata" src="grp_06.mp4"></video>
+    <div class="foot"><b>备注：</b>轻与重：双刀连斩的路径感 vs 骑乘压杀的重量感<br></div>
+  </div>
+  <div class="grp" id="g07">
+    <div class="head">
+      <div class="no">#07</div>
+      <div class="tags"><span class="a">绿刃</span><span class="s">×</span><span class="b">岩浆</span><span style="color:var(--gray);font-size:12px;font-weight:400;margin-left:10px">色彩</span></div>
+      <div class="meta"><span class="st">新</span><br>影之刃零@77.5s · 战神4@152.0s</div>
+    </div>
+    <video controls preload="metadata" src="grp_07.mp4"></video>
+    <div class="foot"><b>备注：</b>高温色对位：绿刀红雾的写意泼染 vs 火山岩浆的实景灼烧<br><b class="risk">⚠ 两侧均偏暗，需核验主体</b></div>
+  </div>
+  <div class="grp" id="g08">
+    <div class="head">
+      <div class="no">#08</div>
+      <div class="tags"><span class="a">血墙</span><span class="s">×</span><span class="b">吞没</span><span style="color:var(--gray);font-size:12px;font-weight:400;margin-left:10px">大色块</span></div>
+      <div class="meta"><span class="st">新</span><br>影之刃零@110.0s · 战神4@107.5s</div>
+    </div>
+    <video controls preload="metadata" src="grp_08.mp4"></video>
+    <div class="foot"><b>备注：</b>满屏大色块：血泊泼墨墙 vs 火焰吞没——同为「糊满」，一红血一红火<br></div>
+  </div>
+  <div class="grp" id="g09">
+    <div class="head">
+      <div class="no">#09</div>
+      <div class="tags"><span class="a">狐面</span><span class="s">×</span><span class="b">白骨</span><span style="color:var(--gray);font-size:12px;font-weight:400;margin-left:10px">白</span></div>
+      <div class="meta"><span class="st">新</span><br>影之刃零@145.0s · 战神4@162.5s</div>
+    </div>
+    <video controls preload="metadata" src="grp_09.mp4"></video>
+    <div class="foot"><b>备注：</b>白色对位：白狐面具+雪地红染 vs 沙漠白骨——雪白之杀 vs 骨白之死<br></div>
+  </div>
+  <div class="grp" id="g10">
+    <div class="head">
+      <div class="no">#10</div>
+      <div class="tags"><span class="a">灯笼</span><span class="s">×</span><span class="b">黄昏</span><span style="color:var(--gray);font-size:12px;font-weight:400;margin-left:10px">暖调</span></div>
+      <div class="meta"><span class="st">新</span><br>影之刃零@162.5s · 战神4@132.5s</div>
+    </div>
+    <video controls preload="metadata" src="grp_10.mp4"></video>
+    <div class="foot"><b>备注：</b>暖调场景对位：红灯堂内斩 vs 黄昏巨兽角力<br><b class="risk">⚠ 中式侧有游戏内竖排文字提示</b></div>
+  </div>
+  <div class="grp" id="g11">
+    <div class="head">
+      <div class="no">#11</div>
+      <div class="tags"><span class="a">紫电</span><span class="s">×</span><span class="b">金光</span><span style="color:var(--gray);font-size:12px;font-weight:400;margin-left:10px">特效</span></div>
+      <div class="meta"><span class="st">新</span><br>影之刃零@55.0s · 战神4@116.9s</div>
+    </div>
+    <video controls preload="metadata" src="grp_11.mp4"></video>
+    <div class="foot"><b>备注：</b>特效色对位：紫电爆裂 vs 金光爆发——异色系冲击的两种语法<br></div>
+  </div>
+</div>
+</body>
+</html>

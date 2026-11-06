@@ -1,0 +1,6 @@
+file 'seg_card1.mp4'
+file 'seg_o.mp4'
+file 'seg_v1.mp4'
+file 'seg_v2.mp4'
+file 'seg_v3.mp4'
+file 'seg_card2.mp4'
