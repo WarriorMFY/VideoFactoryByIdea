@@ -1,0 +1,449 @@
+{
+ "src": "../../Workspace/tmp/loop35_compare/yzl_exec.mp4",
+ "pack": "影之刃零",
+ "outDir": "clips",
+ "units": [
+  {
+   "id": 1,
+   "t": 0.08,
+   "dur": 3.65,
+   "scene": "夜祭坛",
+   "move": "镰刃连杀蓝发大汉",
+   "conf": "cut-verified",
+   "kind": "标准"
+  },
+  {
+   "id": 2,
+   "t": 3.85,
+   "dur": 2.28,
+   "scene": "黄昏海滩",
+   "move": "大剑横扫群敌",
+   "conf": "cut-verified",
+   "kind": "快杀"
+  },
+  {
+   "id": 3,
+   "t": 6.25,
+   "dur": 2.11,
+   "scene": "石板巷",
+   "move": "补刀倒地敌",
+   "conf": "cut-verified",
+   "kind": "快杀"
+  },
+  {
+   "id": 4,
+   "t": 8.48,
+   "dur": 3.55,
+   "scene": "崖桥",
+   "move": "双大剑交叉斩蓝衣敌",
+   "conf": "cut-verified",
+   "kind": "标准"
+  },
+  {
+   "id": 5,
+   "t": 12.15,
+   "dur": 4.58,
+   "scene": "竹林",
+   "move": "金色法器砸杀",
+   "conf": "cut-verified",
+   "kind": "标准"
+  },
+  {
+   "id": 6,
+   "t": 16.85,
+   "dur": 2.01,
+   "scene": "夜巷",
+   "move": "紫色雷法处决",
+   "conf": "cut-verified",
+   "kind": "快杀"
+  },
+  {
+   "id": 7,
+   "t": 18.98,
+   "dur": 1.65,
+   "scene": "雪地红叶",
+   "move": "长枪贯杀",
+   "conf": "cut-verified",
+   "kind": "快杀"
+  },
+  {
+   "id": 8,
+   "t": 20.75,
+   "dur": 1.64,
+   "scene": "红叶雪地",
+   "move": "红绸血环双杀",
+   "conf": "cut-verified",
+   "kind": "快杀"
+  },
+  {
+   "id": 9,
+   "t": 22.51,
+   "dur": 4.42,
+   "scene": "林间",
+   "move": "巨斧连杀",
+   "conf": "cut-verified",
+   "kind": "标准"
+  },
+  {
+   "id": 10,
+   "t": 27.05,
+   "dur": 2.84,
+   "scene": "崖边",
+   "move": "飞踢坠杀",
+   "conf": "cut-verified",
+   "kind": "标准"
+  },
+  {
+   "id": 11,
+   "t": 30.01,
+   "dur": 2.32,
+   "scene": "山道",
+   "move": "青绿光鞭卷杀",
+   "conf": "cut-verified",
+   "kind": "快杀"
+  },
+  {
+   "id": 12,
+   "t": 33.11,
+   "dur": 3.35,
+   "scene": "红土滩",
+   "move": "摔掷白衣巨汉",
+   "conf": "cut-verified",
+   "kind": "标准"
+  },
+  {
+   "id": 13,
+   "t": 36.58,
+   "dur": 5.81,
+   "scene": "火场",
+   "move": "大头锤敌连杀",
+   "conf": "cut-verified",
+   "kind": "仪式级"
+  },
+  {
+   "id": 14,
+   "t": 42.51,
+   "dur": 3.52,
+   "scene": "火场",
+   "move": "跳劈连杀",
+   "conf": "cut-verified",
+   "kind": "标准"
+  },
+  {
+   "id": 15,
+   "t": 46.15,
+   "dur": 1.88,
+   "scene": "山崖",
+   "move": "崖边大剑杀",
+   "conf": "cut-verified",
+   "kind": "快杀"
+  },
+  {
+   "id": 16,
+   "t": 48.81,
+   "dur": 4.28,
+   "scene": "红灯笼夜殿",
+   "move": "书法「斩」群杀",
+   "conf": "cut-verified",
+   "kind": "标准"
+  },
+  {
+   "id": 17,
+   "t": 54.0,
+   "dur": 8.05,
+   "scene": "崖瀑",
+   "move": "三段跃杀（紫电→腾空→红电→红绸血雾）",
+   "conf": "verified",
+   "kind": "仪式级"
+  },
+  {
+   "id": 18,
+   "t": 62.11,
+   "dur": 2.92,
+   "scene": "夜桥",
+   "move": "蓝衣敌杀",
+   "conf": "cut-verified",
+   "kind": "标准"
+  },
+  {
+   "id": 19,
+   "t": 65.15,
+   "dur": 2.74,
+   "scene": "废墟桥",
+   "move": "白象巨兽骑杀",
+   "conf": "cut-verified",
+   "kind": "标准"
+  },
+  {
+   "id": 20,
+   "t": 68.88,
+   "dur": 3.65,
+   "scene": "崖村火场",
+   "move": "金光斩连杀",
+   "conf": "cut-verified",
+   "kind": "标准"
+  },
+  {
+   "id": 21,
+   "t": 72.65,
+   "dur": 2.68,
+   "scene": "屋檐夜",
+   "move": "夜擒白衣官",
+   "conf": "cut-verified",
+   "kind": "标准"
+  },
+  {
+   "id": 22,
+   "t": 75.45,
+   "dur": 4.11,
+   "scene": "火场",
+   "move": "红衣尸挂旗连杀",
+   "conf": "cut-verified",
+   "kind": "标准"
+  },
+  {
+   "id": 23,
+   "t": 79.68,
+   "dur": 0.81,
+   "scene": "红叶火场",
+   "move": "补刀",
+   "conf": "cut-verified",
+   "kind": "快杀"
+  },
+  {
+   "id": 24,
+   "t": 80.61,
+   "dur": 2.78,
+   "scene": "红叶坡",
+   "move": "白衣敌绿光杀",
+   "conf": "cut-verified",
+   "kind": "标准"
+  },
+  {
+   "id": 25,
+   "t": 83.5,
+   "dur": 4.0,
+   "scene": "夜雨白骨林",
+   "move": "一刀劈杀白发巨剑敌，书法「斩」",
+   "conf": "verified",
+   "kind": "标准"
+  },
+  {
+   "id": 26,
+   "t": 87.81,
+   "dur": 1.58,
+   "scene": "屋前石阶",
+   "move": "紫衣敌腾空杀",
+   "conf": "cut-verified",
+   "kind": "快杀"
+  },
+  {
+   "id": 27,
+   "t": 89.51,
+   "dur": 3.22,
+   "scene": "灰烬坡",
+   "move": "斧劈连杀",
+   "conf": "cut-verified",
+   "kind": "标准"
+  },
+  {
+   "id": 28,
+   "t": 93.55,
+   "dur": 3.01,
+   "scene": "海边木栈道",
+   "move": "击杀",
+   "conf": "cut-verified",
+   "kind": "标准"
+  },
+  {
+   "id": 29,
+   "t": 96.68,
+   "dur": 0.81,
+   "scene": "崖边",
+   "move": "尸落血溅",
+   "conf": "cut-verified",
+   "kind": "快杀"
+  },
+  {
+   "id": 30,
+   "t": 97.61,
+   "dur": 4.92,
+   "scene": "木台崖边",
+   "move": "群杀走离",
+   "conf": "cut-verified",
+   "kind": "标准"
+  },
+  {
+   "id": 31,
+   "t": 102.65,
+   "dur": 1.64,
+   "scene": "火场",
+   "move": "绿光鞭扫",
+   "conf": "cut-verified",
+   "kind": "快杀"
+  },
+  {
+   "id": 32,
+   "t": 104.41,
+   "dur": 1.75,
+   "scene": "火场",
+   "move": "白衣敌跪杀",
+   "conf": "cut-verified",
+   "kind": "快杀"
+  },
+  {
+   "id": 33,
+   "t": 106.3,
+   "dur": 5.3,
+   "scene": "竹林水畔",
+   "move": "拖拽敌人钉上树干",
+   "conf": "verified",
+   "kind": "标准"
+  },
+  {
+   "id": 34,
+   "t": 110.81,
+   "dur": 3.05,
+   "scene": "洞穴",
+   "move": "血泊金甲尸",
+   "conf": "cut-verified",
+   "kind": "标准"
+  },
+  {
+   "id": 35,
+   "t": 114.31,
+   "dur": 2.75,
+   "scene": "夜廊桥",
+   "move": "蓝焰女妖杀",
+   "conf": "cut-verified",
+   "kind": "标准"
+  },
+  {
+   "id": 36,
+   "t": 117.18,
+   "dur": 3.65,
+   "scene": "崖边",
+   "move": "摔掷巨汉连杀",
+   "conf": "cut-verified",
+   "kind": "标准"
+  },
+  {
+   "id": 37,
+   "t": 121.31,
+   "dur": 1.62,
+   "scene": "红叶雪地",
+   "move": "摔掷连斩",
+   "conf": "cut-verified",
+   "kind": "快杀"
+  },
+  {
+   "id": 38,
+   "t": 123.05,
+   "dur": 3.01,
+   "scene": "雪地",
+   "move": "白衣巨斧双杀",
+   "conf": "cut-verified",
+   "kind": "标准"
+  },
+  {
+   "id": 39,
+   "t": 126.18,
+   "dur": 6.81,
+   "scene": "雪屋",
+   "move": "紫光爆血连杀",
+   "conf": "cut-verified",
+   "kind": "仪式级"
+  },
+  {
+   "id": 40,
+   "t": 133.11,
+   "dur": 3.58,
+   "scene": "红叶木台",
+   "move": "青色剑气荡开",
+   "conf": "cut-verified",
+   "kind": "标准"
+  },
+  {
+   "id": 41,
+   "t": 136.81,
+   "dur": 3.35,
+   "scene": "火场木台",
+   "move": "爆燃+雪地巨锤",
+   "conf": "cut-verified",
+   "kind": "标准"
+  },
+  {
+   "id": 42,
+   "t": 140.81,
+   "dur": 2.25,
+   "scene": "红叶",
+   "move": "绿光斩",
+   "conf": "cut-verified",
+   "kind": "快杀"
+  },
+  {
+   "id": 43,
+   "t": 144.7,
+   "dur": 4.8,
+   "scene": "红川",
+   "move": "白敌倒落红川、白袍染血",
+   "conf": "verified",
+   "kind": "标准"
+  },
+  {
+   "id": 44,
+   "t": 149.81,
+   "dur": 2.85,
+   "scene": "红川",
+   "move": "白袍走离+长爪敌杀",
+   "conf": "cut-verified",
+   "kind": "标准"
+  },
+  {
+   "id": 45,
+   "t": 152.78,
+   "dur": 4.58,
+   "scene": "夜屋木桥",
+   "move": "蓝焰雾杀",
+   "conf": "cut-verified",
+   "kind": "标准"
+  },
+  {
+   "id": 46,
+   "t": 157.4,
+   "dur": 2.0,
+   "scene": "红叶桥",
+   "move": "蓝衣杀+大刀脱手+书法「斩」",
+   "conf": "verified",
+   "kind": "快杀"
+  },
+  {
+   "id": 47,
+   "t": 159.61,
+   "dur": 2.02,
+   "scene": "夜村",
+   "move": "蓝焰女妖双杀",
+   "conf": "cut-verified",
+   "kind": "快杀"
+  },
+  {
+   "id": 48,
+   "t": 161.75,
+   "dur": 2.28,
+   "scene": "红调室内",
+   "move": "长枪贯杀",
+   "conf": "cut-verified",
+   "kind": "快杀"
+  },
+  {
+   "id": 49,
+   "t": 164.15,
+   "dur": 4.21,
+   "scene": "火海",
+   "move": "巨兽终局演出",
+   "conf": "cut-verified",
+   "note": "存疑：带台词字幕，疑似剧情演出而非玩家处决，入库前需人工判定",
+   "kind": "标准"
+  }
+ ]
+}

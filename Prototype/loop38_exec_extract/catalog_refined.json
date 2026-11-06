@@ -1,0 +1,935 @@
+{
+  "src": "../../Workspace/tmp/loop35_compare/yzl_exec.mp4",
+  "pack": "影之刃零",
+  "outDir": "clips",
+  "units": [
+    {
+      "id": 1,
+      "t": 0.453,
+      "dur": 5.164,
+      "scene": "夜祭坛",
+      "move": "镰刃连杀蓝发大汉",
+      "_refine": {
+        "motion": [
+          0.633,
+          5.067
+        ],
+        "startSnap": null,
+        "endSnap": null,
+        "cutsNear": [
+          3.77
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "t": 3.767,
+      "dur": 5.35,
+      "scene": "黄昏海滩",
+      "move": "大剑横扫群敌",
+      "_refine": {
+        "motion": [
+          3.767,
+          8.567
+        ],
+        "startSnap": 3.767,
+        "endSnap": null,
+        "cutsNear": [
+          3.77
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "t": 5.987,
+      "dur": 5.63,
+      "scene": "石板巷",
+      "move": "补刀倒地敌",
+      "_refine": {
+        "motion": [
+          6.167,
+          11.067
+        ],
+        "startSnap": null,
+        "endSnap": null,
+        "cutsNear": [
+          12.07
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "t": 8.487,
+      "dur": 4.396,
+      "scene": "崖桥",
+      "move": "双大剑交叉斩蓝衣敌",
+      "_refine": {
+        "motion": [
+          8.667,
+          12.333
+        ],
+        "startSnap": null,
+        "endSnap": null,
+        "cutsNear": [
+          12.07
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "t": 15.587,
+      "dur": 3.03,
+      "scene": "竹林",
+      "move": "金色法器砸杀祭坛敌",
+      "_refine": {
+        "motion": [
+          15.767,
+          18.067
+        ],
+        "startSnap": null,
+        "endSnap": null,
+        "cutsNear": []
+      }
+    },
+    {
+      "id": 6,
+      "t": 16.253,
+      "dur": 5.464,
+      "scene": "夜巷",
+      "move": "紫色雷法处决",
+      "_refine": {
+        "motion": [
+          16.433,
+          21.167
+        ],
+        "startSnap": null,
+        "endSnap": null,
+        "cutsNear": []
+      }
+    },
+    {
+      "id": 7,
+      "t": 18.72,
+      "dur": 6.097,
+      "scene": "雪地红叶",
+      "move": "长枪贯杀",
+      "_refine": {
+        "motion": [
+          18.9,
+          24.267
+        ],
+        "startSnap": null,
+        "endSnap": null,
+        "cutsNear": []
+      }
+    },
+    {
+      "id": 8,
+      "t": 21.587,
+      "dur": 6.23,
+      "scene": "林间",
+      "move": "巨斧跳劈",
+      "_refine": {
+        "motion": [
+          21.767,
+          27.267
+        ],
+        "startSnap": null,
+        "endSnap": null,
+        "cutsNear": []
+      }
+    },
+    {
+      "id": 9,
+      "t": 26.787,
+      "dur": 3.83,
+      "scene": "崖边",
+      "move": "飞踢坠杀灰衣敌",
+      "_refine": {
+        "motion": [
+          26.967,
+          30.067
+        ],
+        "startSnap": null,
+        "endSnap": null,
+        "cutsNear": []
+      }
+    },
+    {
+      "id": 10,
+      "t": 28.087,
+      "dur": 2.43,
+      "scene": "山道",
+      "move": "青绿光鞭卷杀",
+      "_refine": {
+        "motion": [
+          28.267,
+          29.967
+        ],
+        "startSnap": null,
+        "endSnap": null,
+        "cutsNear": []
+      }
+    },
+    {
+      "id": 11,
+      "t": 30.32,
+      "dur": 4.997,
+      "scene": "红叶坡",
+      "move": "巨尸倒地补刀",
+      "_refine": {
+        "motion": [
+          30.5,
+          34.767
+        ],
+        "startSnap": null,
+        "endSnap": null,
+        "cutsNear": []
+      }
+    },
+    {
+      "id": 12,
+      "t": 32.187,
+      "dur": 2.33,
+      "scene": "红土滩",
+      "move": "摔掷白衣巨汉",
+      "_refine": {
+        "motion": [
+          32.367,
+          33.967
+        ],
+        "startSnap": null,
+        "endSnap": null,
+        "cutsNear": []
+      }
+    },
+    {
+      "id": 13,
+      "t": 35.52,
+      "dur": 2.697,
+      "scene": "火场",
+      "move": "大头娃娃锤敌",
+      "_refine": {
+        "motion": [
+          35.7,
+          37.667
+        ],
+        "startSnap": null,
+        "endSnap": null,
+        "cutsNear": [
+          36.5
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "t": 39.153,
+      "dur": 5.264,
+      "scene": "火场",
+      "move": "火中斩飞尸",
+      "_refine": {
+        "motion": [
+          39.333,
+          43.867
+        ],
+        "startSnap": null,
+        "endSnap": null,
+        "cutsNear": []
+      }
+    },
+    {
+      "id": 15,
+      "t": 41.287,
+      "dur": 5.63,
+      "scene": "火场",
+      "move": "跳劈",
+      "_refine": {
+        "motion": [
+          41.467,
+          46.367
+        ],
+        "startSnap": null,
+        "endSnap": null,
+        "cutsNear": []
+      }
+    },
+    {
+      "id": 16,
+      "t": 43.887,
+      "dur": 5.43,
+      "scene": "山崖",
+      "move": "巨锤敌崖边大剑杀",
+      "_refine": {
+        "motion": [
+          44.067,
+          48.767
+        ],
+        "startSnap": null,
+        "endSnap": null,
+        "cutsNear": [
+          48.73
+        ]
+      }
+    },
+    {
+      "id": 17,
+      "t": 47.487,
+      "dur": 3.83,
+      "scene": "红灯笼夜殿",
+      "move": "夜殿杀",
+      "_refine": {
+        "motion": [
+          47.667,
+          50.767
+        ],
+        "startSnap": null,
+        "endSnap": null,
+        "cutsNear": [
+          48.73
+        ]
+      }
+    },
+    {
+      "id": 18,
+      "t": 52.187,
+      "dur": 4.03,
+      "scene": "夜殿蛛网",
+      "move": "书法「斩」红雾群杀",
+      "_refine": {
+        "motion": [
+          52.367,
+          55.667
+        ],
+        "startSnap": null,
+        "endSnap": null,
+        "cutsNear": [
+          53.13
+        ]
+      }
+    },
+    {
+      "id": 19,
+      "t": 57.82,
+      "dur": 4.797,
+      "scene": "崖瀑",
+      "move": "三段跃杀（紫电→腾空→红电→红绸血雾）",
+      "_refine": {
+        "motion": [
+          58,
+          62.067
+        ],
+        "startSnap": null,
+        "endSnap": null,
+        "cutsNear": [
+          58.47,
+          62.03
+        ]
+      }
+    },
+    {
+      "id": 20,
+      "t": 60.887,
+      "dur": 5.83,
+      "scene": "夜桥",
+      "move": "蓝衣敌击杀",
+      "_refine": {
+        "motion": [
+          61.067,
+          66.167
+        ],
+        "startSnap": null,
+        "endSnap": null,
+        "cutsNear": [
+          62.03
+        ]
+      }
+    },
+    {
+      "id": 21,
+      "t": 63.753,
+      "dur": 6.164,
+      "scene": "废墟桥",
+      "move": "白象巨兽骑杀矛插",
+      "_refine": {
+        "motion": [
+          63.933,
+          69.367
+        ],
+        "startSnap": null,
+        "endSnap": null,
+        "cutsNear": []
+      }
+    },
+    {
+      "id": 22,
+      "t": 67.753,
+      "dur": 4.664,
+      "scene": "崖村",
+      "move": "尸挂屋檐+金光斩",
+      "_refine": {
+        "motion": [
+          67.933,
+          71.867
+        ],
+        "startSnap": null,
+        "endSnap": null,
+        "cutsNear": []
+      }
+    },
+    {
+      "id": 23,
+      "t": 69.787,
+      "dur": 3.43,
+      "scene": "火场夜战",
+      "move": "连杀摔掷",
+      "_refine": {
+        "motion": [
+          69.967,
+          72.667
+        ],
+        "startSnap": null,
+        "endSnap": null,
+        "cutsNear": []
+      }
+    },
+    {
+      "id": 24,
+      "t": 74.453,
+      "dur": 1.664,
+      "scene": "屋檐夜",
+      "move": "夜擒白衣官",
+      "_refine": {
+        "motion": [
+          74.633,
+          75.567
+        ],
+        "startSnap": null,
+        "endSnap": null,
+        "cutsNear": []
+      }
+    },
+    {
+      "id": 25,
+      "t": 76.92,
+      "dur": 3.897,
+      "scene": "火场",
+      "move": "红衣尸挂旗连杀",
+      "_refine": {
+        "motion": [
+          77.1,
+          80.267
+        ],
+        "startSnap": null,
+        "endSnap": null,
+        "cutsNear": []
+      }
+    },
+    {
+      "id": 26,
+      "t": 78.087,
+      "dur": 4.13,
+      "scene": "红叶火场",
+      "move": "补刀",
+      "_refine": {
+        "motion": [
+          78.267,
+          81.667
+        ],
+        "startSnap": null,
+        "endSnap": null,
+        "cutsNear": []
+      }
+    },
+    {
+      "id": 27,
+      "t": 78.853,
+      "dur": 2.264,
+      "scene": "红叶坡",
+      "move": "白衣尸+绿光",
+      "_refine": {
+        "motion": [
+          79.033,
+          80.567
+        ],
+        "startSnap": null,
+        "endSnap": null,
+        "cutsNear": []
+      }
+    },
+    {
+      "id": 28,
+      "t": 83.253,
+      "dur": 6.18,
+      "scene": "夜雨白骨林",
+      "move": "雨夜斩白骸（一刀劈杀白发巨剑敌，书法「斩」）",
+      "_refine": {
+        "motion": [
+          83.433,
+          89.067
+        ],
+        "startSnap": null,
+        "endSnap": 89.433,
+        "cutsNear": [
+          85.63,
+          89.43
+        ]
+      }
+    },
+    {
+      "id": 29,
+      "t": 87.287,
+      "dur": 4.23,
+      "scene": "屋前石阶",
+      "move": "紫衣敌腾空倒飞",
+      "_refine": {
+        "motion": [
+          87.467,
+          90.967
+        ],
+        "startSnap": null,
+        "endSnap": null,
+        "cutsNear": [
+          89.43
+        ]
+      }
+    },
+    {
+      "id": 30,
+      "t": 91.853,
+      "dur": 2.964,
+      "scene": "灰烬坡",
+      "move": "斧劈连杀",
+      "_refine": {
+        "motion": [
+          92.033,
+          94.267
+        ],
+        "startSnap": null,
+        "endSnap": null,
+        "cutsNear": []
+      }
+    },
+    {
+      "id": 31,
+      "t": 91.687,
+      "dur": 3.663,
+      "scene": "海边木栈道",
+      "move": "击杀",
+      "_refine": {
+        "motion": [
+          91.867,
+          94.8
+        ],
+        "startSnap": null,
+        "endSnap": null,
+        "cutsNear": []
+      }
+    },
+    {
+      "id": 32,
+      "t": 96.42,
+      "dur": 4.197,
+      "scene": "木台",
+      "move": "红尸飘血蓝焰",
+      "_refine": {
+        "motion": [
+          96.6,
+          100.067
+        ],
+        "startSnap": null,
+        "endSnap": null,
+        "cutsNear": []
+      }
+    },
+    {
+      "id": 33,
+      "t": 98.753,
+      "dur": 1.497,
+      "scene": "崖边",
+      "move": "大剑双尸走离",
+      "_refine": {
+        "motion": [
+          98.933,
+          99.7
+        ],
+        "startSnap": null,
+        "endSnap": null,
+        "cutsNear": []
+      }
+    },
+    {
+      "id": 34,
+      "t": 102.387,
+      "dur": 5.43,
+      "scene": "火场",
+      "move": "绿光鞭扫白衣敌",
+      "_refine": {
+        "motion": [
+          102.567,
+          107.267
+        ],
+        "startSnap": null,
+        "endSnap": null,
+        "cutsNear": []
+      }
+    },
+    {
+      "id": 35,
+      "t": 104.987,
+      "dur": 8.73,
+      "scene": "竹林水畔",
+      "move": "树上刺穿（拖拽钉树）",
+      "_refine": {
+        "motion": [
+          105.167,
+          113.167
+        ],
+        "startSnap": null,
+        "endSnap": null,
+        "cutsNear": []
+      }
+    },
+    {
+      "id": 36,
+      "t": 110.553,
+      "dur": 5.164,
+      "scene": "洞穴",
+      "move": "血泊金甲尸",
+      "_refine": {
+        "motion": [
+          110.733,
+          115.167
+        ],
+        "startSnap": null,
+        "endSnap": null,
+        "cutsNear": []
+      }
+    },
+    {
+      "id": 37,
+      "t": 113.72,
+      "dur": 2.397,
+      "scene": "夜廊桥",
+      "move": "蓝焰女妖",
+      "_refine": {
+        "motion": [
+          113.9,
+          115.567
+        ],
+        "startSnap": null,
+        "endSnap": null,
+        "cutsNear": []
+      }
+    },
+    {
+      "id": 38,
+      "t": 116.92,
+      "dur": 4.897,
+      "scene": "崖边",
+      "move": "摔掷巨汉连杀",
+      "_refine": {
+        "motion": [
+          117.1,
+          121.267
+        ],
+        "startSnap": null,
+        "endSnap": null,
+        "cutsNear": [
+          120.87
+        ]
+      }
+    },
+    {
+      "id": 39,
+      "t": 118.587,
+      "dur": 6.23,
+      "scene": "红叶雪地",
+      "move": "摔掷连斩",
+      "_refine": {
+        "motion": [
+          118.767,
+          124.267
+        ],
+        "startSnap": null,
+        "endSnap": null,
+        "cutsNear": [
+          120.87
+        ]
+      }
+    },
+    {
+      "id": 40,
+      "t": 121.853,
+      "dur": 2.43,
+      "scene": "雪地",
+      "move": "白衣巨斧双杀",
+      "_refine": {
+        "motion": [
+          122.033,
+          123.733
+        ],
+        "startSnap": null,
+        "endSnap": null,
+        "cutsNear": []
+      }
+    },
+    {
+      "id": 41,
+      "t": 124.62,
+      "dur": 6.397,
+      "scene": "雪屋",
+      "move": "紫光魔法爆血红花",
+      "_refine": {
+        "motion": [
+          124.8,
+          130.467
+        ],
+        "startSnap": null,
+        "endSnap": null,
+        "cutsNear": []
+      }
+    },
+    {
+      "id": 42,
+      "t": 128.187,
+      "dur": 5.63,
+      "scene": "雪地",
+      "move": "双尸补刀",
+      "_refine": {
+        "motion": [
+          128.367,
+          133.267
+        ],
+        "startSnap": null,
+        "endSnap": null,
+        "cutsNear": []
+      }
+    },
+    {
+      "id": 43,
+      "t": 131.953,
+      "dur": 4.864,
+      "scene": "雪夜",
+      "move": "血雾扑面+青色剑气",
+      "_refine": {
+        "motion": [
+          132.133,
+          136.267
+        ],
+        "startSnap": null,
+        "endSnap": null,
+        "cutsNear": []
+      }
+    },
+    {
+      "id": 44,
+      "t": 135.187,
+      "dur": 2.596,
+      "scene": "火场木台",
+      "move": "爆燃杀",
+      "_refine": {
+        "motion": [
+          135.367,
+          137.233
+        ],
+        "startSnap": null,
+        "endSnap": null,
+        "cutsNear": []
+      }
+    },
+    {
+      "id": 45,
+      "t": 140.2,
+      "dur": 1.917,
+      "scene": "雪地",
+      "move": "巨锤敌杀",
+      "_refine": {
+        "motion": [
+          140.2,
+          141.567
+        ],
+        "startSnap": 140.2,
+        "endSnap": null,
+        "cutsNear": [
+          140.2,
+          140.73
+        ]
+      }
+    },
+    {
+      "id": 46,
+      "t": 140.2,
+      "dur": 1.217,
+      "scene": "雪地",
+      "move": "书法「斩」连杀",
+      "_refine": {
+        "motion": [
+          140.2,
+          140.867
+        ],
+        "startSnap": 140.2,
+        "endSnap": null,
+        "cutsNear": [
+          140.2,
+          140.73
+        ]
+      }
+    },
+    {
+      "id": 47,
+      "t": 142.253,
+      "dur": 5.464,
+      "scene": "红叶溪",
+      "move": "绿光斩红叶桥",
+      "_refine": {
+        "motion": [
+          142.433,
+          147.167
+        ],
+        "startSnap": null,
+        "endSnap": null,
+        "cutsNear": []
+      }
+    },
+    {
+      "id": 48,
+      "t": 143.653,
+      "dur": 7.964,
+      "scene": "红川",
+      "move": "血染红川（白敌倒落红川、白袍染血）",
+      "_refine": {
+        "motion": [
+          143.833,
+          151.067
+        ],
+        "startSnap": null,
+        "endSnap": null,
+        "cutsNear": []
+      }
+    },
+    {
+      "id": 49,
+      "t": 148.92,
+      "dur": 4.897,
+      "scene": "红川",
+      "move": "白袍长爪敌杀",
+      "_refine": {
+        "motion": [
+          149.1,
+          153.267
+        ],
+        "startSnap": null,
+        "endSnap": null,
+        "cutsNear": []
+      }
+    },
+    {
+      "id": 50,
+      "t": 151.153,
+      "dur": 2.997,
+      "scene": "夜屋",
+      "move": "蓝焰雾杀",
+      "_refine": {
+        "motion": [
+          151.333,
+          153.6
+        ],
+        "startSnap": null,
+        "endSnap": null,
+        "cutsNear": []
+      }
+    },
+    {
+      "id": 51,
+      "t": 156.12,
+      "dur": 3.413,
+      "scene": "木桥",
+      "move": "红尸挂桥+灰烬滩",
+      "_refine": {
+        "motion": [
+          156.3,
+          159.167
+        ],
+        "startSnap": null,
+        "endSnap": 159.533,
+        "cutsNear": [
+          157.4,
+          158.9,
+          159.53
+        ]
+      }
+    },
+    {
+      "id": 52,
+      "t": 157.4,
+      "dur": 4.117,
+      "scene": "红叶桥",
+      "move": "蓝衣杀+书法「斩」",
+      "_refine": {
+        "motion": [
+          157.4,
+          160.967
+        ],
+        "startSnap": 157.4,
+        "endSnap": null,
+        "cutsNear": [
+          157.4,
+          158.9,
+          159.53
+        ]
+      }
+    },
+    {
+      "id": 53,
+      "t": 158.9,
+      "dur": 3.35,
+      "scene": "夜村",
+      "move": "蓝焰女妖双杀",
+      "_refine": {
+        "motion": [
+          158.9,
+          161.7
+        ],
+        "startSnap": 158.9,
+        "endSnap": null,
+        "cutsNear": [
+          158.9,
+          159.53
+        ]
+      }
+    },
+    {
+      "id": 54,
+      "t": 160.387,
+      "dur": 5.33,
+      "scene": "红调室内",
+      "move": "长枪贯杀",
+      "_refine": {
+        "motion": [
+          160.567,
+          165.167
+        ],
+        "startSnap": null,
+        "endSnap": null,
+        "cutsNear": []
+      }
+    },
+    {
+      "id": 55,
+      "t": 162.92,
+      "dur": 6.163,
+      "scene": "火海",
+      "move": "巨兽终局演出",
+      "note": "存疑：带台词字幕，可能是剧情演出而非玩家处决，入库前需人工判定",
+      "_refine": {
+        "motion": [
+          163.1,
+          168.533
+        ],
+        "startSnap": null,
+        "endSnap": null,
+        "cutsNear": []
+      }
+    }
+  ]
+}
