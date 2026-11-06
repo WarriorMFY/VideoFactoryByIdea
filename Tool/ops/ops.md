@@ -312,6 +312,11 @@ node Tool\ops\bili_phase_select.mjs --dir History\loops\<loop>
     判断实际拿到多少帧必须 probe 落地文件（r_frame_rate），不能信页面标注的「1080P60」。
     60 帧对帧级动作取证有意义；30→60 插帧（minterpolate）会造假帧，取证场景禁用。
 
+41. **局部变量遮蔽工具函数 → 静默 catch 全盘失败**（loop38 归档实踩）：probeMedia 里写
+    `const j = JSON.parse(...)`，把全局的引号助手 `j()` 遮蔽成 TDZ，模板串先调 `j(FP)` 直接
+    ReferenceError，被 `catch { return null }` 吞掉 → 185 个文件全部报「probe失败」、0.4s 跑完。
+    排查信号：**耗时异常短 + 全部同一种错误**就是异常被吞，先把 catch 里打日志再跑。
+
 —— 工具 ——
 - recam.mjs：镜头语言重加工工具（loop34 由 loop33 三版手法提炼）。配置驱动：
   full/crop(固定窗·摇移·跟随)/zoom(推拉·缓动) × speed(变速斜坡) × blur(拖影)
@@ -344,6 +349,11 @@ node Tool\ops\bili_phase_select.mjs --dir History\loops\<loop>
     非大会员，playurl 会正常返回但 dash 里最高只有 id=80（1080P 30fps），不报错。
     判断实际拿到多少帧必须 probe 落地文件（r_frame_rate），不能信页面标注的「1080P60」。
     60 帧对帧级动作取证有意义；30→60 插帧（minterpolate）会造假帧，取证场景禁用。
+
+41. **局部变量遮蔽工具函数 → 静默 catch 全盘失败**（loop38 归档实踩）：probeMedia 里写
+    `const j = JSON.parse(...)`，把全局的引号助手 `j()` 遮蔽成 TDZ，模板串先调 `j(FP)` 直接
+    ReferenceError，被 `catch { return null }` 吞掉 → 185 个文件全部报「probe失败」、0.4s 跑完。
+    排查信号：**耗时异常短 + 全部同一种错误**就是异常被吞，先把 catch 里打日志再跑。
 
 —— 工具 ——
 - vs_split.mjs：双源对比剪辑流生成器（loop35 提炼）。配置驱动：lr/tb 版式 × A/B 两侧

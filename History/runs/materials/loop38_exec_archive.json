@@ -1,0 +1,13 @@
+{
+  "run_id": "loop38_exec_archive",
+  "at": "2026-11-06T16:57:20.031Z",
+  "catalog": "Prototype\\loop38_exec_extract\\catalog_60.json",
+  "clips": "Prototype\\loop38_exec_extract\\clips1080p60",
+  "frames": "Prototype\\loop38_exec_extract\\frames1080p60",
+  "src": "Workspace\\tmp\\loop38_hd60\\yzl_exec_60.mp4",
+  "added": 0,
+  "skipped": 185,
+  "bytes": 0,
+  "items": [],
+  "errors": []
+}

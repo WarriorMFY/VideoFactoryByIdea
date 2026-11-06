@@ -24,6 +24,12 @@
  *       按 catalog 里的精确边界剪出每单位 1280x720 片 + 中位缩略图 + ASS 时间码 HUD
  *       + catalog.csv + index.html（含视频的核验/入库页）
  *
+ *   node exec_extract.mjs archive <catalog.json> [--clips clips1080p60] [--frames frames1080p60]
+ *                                 [--src 源片] [--source-url 出处] [--attribution 署名]
+ *                                 [--license 授权] [--bvid BV号] [--fps 60] [--run 批次名]
+ *       原始源片 + 处决镜头片段 + 关键帧 → 归档进 Material/library 并写 manifest.jsonl
+ *       （与 collect_material.mjs 同一账本；按 sha256 去重，可重复执行）
+ *
  * catalog.json 结构：
  * {
  *   "src": "../../Workspace/tmp/xxx.mp4",
@@ -38,6 +44,7 @@
  */
 import fs from 'node:fs';
 import path from 'node:path';
+import crypto from 'node:crypto';
 import { execSync } from 'node:child_process';
 
 const ROOT = path.resolve(import.meta.dirname, '../..');
@@ -345,6 +352,143 @@ function refine(cfgPath) {
   console.log('→', out);
 }
 
+// ---------- 归档到素材库（Material/manifest.jsonl，与 collect_material 同账本格式） ----------
+const MATERIAL = path.join(ROOT, 'Material');
+const MANIFEST = path.join(MATERIAL, 'manifest.jsonl');
+
+function sha256File(f) {
+  return new Promise((res, rej) => {
+    const h = crypto.createHash('sha256');
+    const s = fs.createReadStream(f);
+    s.on('data', d => h.update(d));
+    s.on('end', () => res(h.digest('hex')));
+    s.on('error', rej);
+  });
+}
+function slugify(s) {
+  return String(s).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 40) || 'mat';
+}
+function probeMedia(f) {
+  try {
+    const meta = JSON.parse(execSync(`${j(FP)} -v quiet -show_format -show_streams -of json ${j(f)}`).toString());
+    const v = (meta.streams || []).find(s => s.codec_type === 'video');
+    if (!v || !v.width) return null;
+    return { w: v.width, h: v.height, dur: Math.round((Number(meta.format?.duration) || 0) * 100) / 100, codec: v.codec_name };
+  } catch { return null; }
+}
+function readManifestSha() {
+  if (!fs.existsSync(MANIFEST)) return new Set();
+  const set = new Set();
+  for (const line of fs.readFileSync(MANIFEST, 'utf8').split('\n')) {
+    if (!line.trim()) continue;
+    try { const m = JSON.parse(line); if (m.sha256) set.add(m.sha256); } catch { /* 跳过坏行 */ }
+  }
+  return set;
+}
+
+async function archiveOne(file, opts, known, stat) {
+  if (!fs.existsSync(file)) return null;
+  const p = probeMedia(file);
+  if (!p) return { skipped: 'probe失败', file };
+  const sha = await sha256File(file);
+  if (known.has(sha)) return { skipped: '已入库', file };
+  const isVideo = p.dur > 0 && /\.(mp4|webm|mov|mkv|avi)$/i.test(file);
+  const type = isVideo ? 'video' : 'image';
+  const dir = path.join(MATERIAL, 'library', type);
+  fs.mkdirSync(dir, { recursive: true });
+  const dest = path.join(dir, `${sha.slice(0, 8)}_${slugify(path.basename(file, path.extname(file)))}${path.extname(file)}`);
+  fs.copyFileSync(file, dest);
+  const entry = {
+    id: sha.slice(0, 10), need: opts.need || '', run_id: opts.runId, tier: 'L0',
+    type, source: opts.source || 'bilibili-derivative', source_url: opts.sourceUrl || '', file_url: '',
+    license: opts.license || '版权归原作者 · 研究/评论引用（非商业）', license_raw: opts.attribution || '',
+    attribution: opts.attribution || '',
+    width: p.w, height: p.h, duration: isVideo ? (p.dur || null) : null, codec: p.codec,
+    bytes: fs.statSync(file).size, sha256: sha, path: path.relative(MATERIAL, dest).replace(/\\/g, '/'),
+    ai_generated: false, tags: opts.tags || ['未分类'],
+    acquired_at: new Date().toISOString(), note: opts.note || '',
+  };
+  fs.appendFileSync(MANIFEST, JSON.stringify(entry) + '\n');
+  known.add(sha);
+  stat.added++;
+  stat.bytes += entry.bytes;
+  return entry;
+}
+
+async function archiveToLibrary(cfgPath, opts) {
+  const cfg = JSON.parse(fs.readFileSync(cfgPath, 'utf8'));
+  const base = path.dirname(path.resolve(cfgPath));
+  const pack = cfg.pack || '影之刃零';
+  const known = readManifestSha();
+  const stat = { added: 0, bytes: 0, skip: 0 };
+  const log = [];
+
+  // 1) 原始源片
+  const srcFile = path.resolve(base, opts.src || cfg.src);
+  const srcEntry = await archiveOne(srcFile, {
+    need: `${pack}·处决原始素材`, runId: opts.runId, source: 'bilibili',
+    sourceUrl: opts.sourceUrl, attribution: opts.attribution, license: opts.license,
+    tags: ['处决素材', pack, '源片', opts.resTag || '1080p60', opts.bvid || ''],
+    note: `原始处决合集源片（${opts.bvid || ''}），本库全部处决镜头的母带`,
+  }, known, stat);
+  log.push(['源片', srcFile, srcEntry]);
+  if (srcEntry?.skipped) stat.skip++;
+
+  // 2) 处决镜头片段
+  const clipsDir = path.resolve(base, opts.clips || 'clips1080p60');
+  if (fs.existsSync(clipsDir)) {
+    for (const u of cfg.units) {
+      const id = String(u.id).padStart(2, '0');
+      const f = path.join(clipsDir, `u${id}.mp4`);
+      const r = await archiveOne(f, {
+        need: `${pack}·处决镜头`, runId: opts.runId,
+        sourceUrl: opts.sourceUrl, attribution: opts.attribution, license: opts.license,
+        tags: ['处决镜头', pack, u.kind || '未分级', u.scene || '', `u${id}`, '1080p60'],
+        note: `#${id} ${u.scene || ''} · ${u.move || ''} · 源 [${u.t.toFixed(2)}, ${(u.t + u.dur).toFixed(2)}] ${u.dur.toFixed(2)}s`,
+      }, known, stat);
+      if (r?.skipped) stat.skip++;
+      log.push([`片段 u${id}`, f, r]);
+    }
+  }
+
+  // 3) 关键帧（a 起手 / b 命中 / c 收招）
+  const framesDir = path.resolve(base, opts.frames || 'frames1080p60');
+  if (fs.existsSync(framesDir)) {
+    const phase = { a: '起手', b: '命中', c: '收招' };
+    for (const u of cfg.units) {
+      const id = String(u.id).padStart(2, '0');
+      const end = u.t + u.dur;
+      const tOf = { a: u.t + Math.min(0.3, u.dur * 0.15), b: u.t + u.dur * 0.5, c: end - 0.2 };
+      for (const ph of ['a', 'b', 'c']) {
+        const f = path.join(framesDir, `u${id}_${ph}.png`);
+        const r = await archiveOne(f, {
+          need: `${pack}·处决镜头帧`, runId: opts.runId,
+          sourceUrl: opts.sourceUrl, attribution: opts.attribution, license: opts.license,
+          tags: ['处决帧', pack, phase[ph], u.scene || '', `u${id}`, '1080p60'],
+          note: `#${id} ${u.scene || ''} · ${phase[ph]}帧 @ ${tOf[ph].toFixed(2)}s · ${u.move || ''}`,
+        }, known, stat);
+        if (r?.skipped) stat.skip++;
+        log.push([`帧 u${id}_${ph}`, f, r]);
+      }
+    }
+  }
+
+  // 回执
+  const recDir = path.join(ROOT, 'History/runs/materials');
+  fs.mkdirSync(recDir, { recursive: true });
+  const receipt = {
+    run_id: opts.runId, at: new Date().toISOString(), catalog: path.relative(ROOT, path.resolve(cfgPath)),
+    clips: path.relative(ROOT, clipsDir), frames: path.relative(ROOT, framesDir), src: path.relative(ROOT, srcFile),
+    added: stat.added, skipped: stat.skip, bytes: stat.bytes,
+    items: log.filter(([, , r]) => r && !r.skipped).map(([label, f, r]) => ({ label, id: r.id, path: r.path })),
+    errors: log.filter(([, , r]) => r && r.skipped && r.skipped !== '已入库').map(([label, f, r]) => ({ label, file: f, reason: r.skipped })),
+  };
+  fs.writeFileSync(path.join(recDir, `${opts.runId}.json`), JSON.stringify(receipt, null, 2), 'utf8');
+  console.log(`\n归档完成：新增 ${stat.added} 条 / 跳过 ${stat.skip} 条 / ${(stat.bytes / 1024 / 1024).toFixed(1)} MB`);
+  console.log(`账本: ${path.relative(ROOT, MANIFEST)}（共 ${readManifestSha().size} 条唯一素材）`);
+  console.log(`回执: History/runs/materials/${opts.runId}.json`);
+}
+
 // ---------- CLI ----------
 const [mode, ...rest] = process.argv.slice(2);
 const arg = (k, d) => { const i = rest.indexOf(`--${k}`); return i >= 0 ? rest[i + 1] : d; };
@@ -364,6 +508,18 @@ if (mode === 'scan') {
   refine(positional[0]);
 } else if (mode === 'export') {
   exportUnits(positional[0], positional[1], positional[2]);
+} else if (mode === 'archive') {
+  await archiveToLibrary(positional[0], {
+    clips: arg('clips', 'clips1080p60'),
+    frames: arg('frames', 'frames1080p60'),
+    src: arg('src', null),
+    sourceUrl: arg('source-url', ''),
+    attribution: arg('attribution', ''),
+    license: arg('license', ''),
+    bvid: arg('bvid', ''),
+    fps: Number(arg('fps', 0)),
+    runId: arg('run', `exec_archive_${new Date().toISOString().replace(/[-:T]/g, '').slice(0, 14)}`),
+  });
 } else {
   console.error('未知模式', mode);
   process.exit(1);
