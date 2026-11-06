@@ -277,3 +277,34 @@ node Tool\ops\bili_phase_select.mjs --dir History\loops\<loop>
     且不报错——画面重复却带着"正确"的新标签，极难察觉（靠内容与旧图重复才暴露）。
     修法：要么 filter_complex_script + `[0:v]…[v]` 完整标签，要么干脆用 output seek 裁区间 + showinfo
     验 `duration_time≈1/30` 确认流连续，不依赖 select。
+
+32. **drawtext 中文在 Windows 工具链下必然失败**（loop33 实踩，第三次数码撞墙）：
+    node execSync → cmd.exe 传参会损坏 UTF-8（方框/黑屏/乱码），叠加 fontconfig 缺失后
+    bash 直传也会渲染失败。**中文标注一律走 libass**：生成 UTF-8 ASS 文件 + `ass=xxx.ass`
+    滤镜；ass 用**相对路径 + cwd 切到 build 目录**，绕开绝对路径冒号转义地狱。
+    英文/数字短标注仍可用 drawtext（arial.ttf，loop28/29 惯例）。
+
+33. **concat 滤镜拼接 lavfi 段与素材段时全局时间轴会错位**（loop33 实踩）：
+    `color` 源与 mp4 段 concat 后，ASS 全局时间轴与画面错开约 2s（尾卡字幕压在游戏画面上）。
+    修法（loop29 模式）：**每段独立用 ass 滤镜贴自己的字幕 → concat demuxer 无损拼接**
+    （concat.txt 的 file 列表必须用正斜杠）。连带两条：
+    (a) trim 分段前必须先切出 PTS 归零的干净中间文件，不要在双 seek 输出流上 trim；
+    (b) execSync 传参在 cmd.exe 下只给含空格参数加引号，`-f lavfi` 必须拆成 `-f` `lavfi`
+    两个 token，整个 flag 带引号会被当成未知选项。
+
+34. **zoompan 之后接 setpts 拉伸 + fps 复制会触发内存分配崩溃**（loop34 实踩）：
+    链路 `zoompan → setpts=k*PTS → fps=30 → tmix` 在本机 ffmpeg 构建上必报
+    `Cannot allocate memory`（x264 malloc 11MB 失败，物理内存/commit 均有余量），
+    单输入也一样；同一条 zoompan 不接慢放、或慢放放在 zoompan 之前都正常。
+    **修法：变速一律放在相机链（zoompan/crop）之前**，zoom 镜帧数按慢放后的
+    输出时长计算（recam.mjs 已内置该顺序）。
+    连带（同 loop 实踩）：split=N + trim 大滤镜图中若混有慢滤镜（zoompan@4K 超采），
+    上游解码会持续向各分支推帧、队列堆积上千缓冲直至 OOM——**逐镜加工一律拆成
+    独立单输入单输出的中间文件再 concat demuxer，不要走 filter_complex 混拼**
+    （坑33 的加强版理由）。
+
+—— 工具 ——
+- recam.mjs：镜头语言重加工工具（loop34 由 loop33 三版手法提炼）。配置驱动：
+  full/crop(固定窗·摇移·跟随)/zoom(推拉·缓动) × speed(变速斜坡) × blur(拖影)
+  × 逐镜调色/遮幅/暗角 × 逐镜 ASS 标注；自动双 seek 切段、逐镜独立渲染、
+  concat demuxer 拼接。用法 `node recam.mjs <input> <shots.json> [out.mp4]`。

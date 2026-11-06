@@ -1,0 +1,18 @@
+{
+  "source": { "in": 299.0, "dur": 3.2 },
+  "out": { "w": 1920, "h": 1080, "fps": 30, "crf": 19 },
+  "look": { "letterbox": 2.39 },
+  "shots": [
+    { "t": [0, 0.45], "cam": { "type": "full" },
+      "label": { "text": "① 全景 · 原机位", "size": 32, "color": "C8B890" } },
+    { "t": [0.45, 0.72], "cam": { "type": "crop", "win": [1344, 756], "from": [380, 0] },
+      "label": { "text": "② 中景 · 右上跟随", "size": 32, "color": "C8B890" } },
+    { "t": [0.72, 1.10], "cam": { "type": "crop", "win": [1920, 810], "from": [0, 200] },
+      "label": { "text": "③ 低机位", "size": 32, "color": "C8B890" } },
+    { "t": [1.10, 1.45], "cam": { "type": "crop", "win": [1152, 648], "from": [100, 400] },
+      "label": { "text": "④ 剑光特写", "size": 32, "color": "FFC850" } },
+    { "t": [1.45, 3.2], "cam": { "type": "crop", "win": [1728, 972], "from": [40, 90], "to": [160, 90], "ease": "inout" },
+      "look": { "vignette": true },
+      "label": { "text": "⑤ 收势缓摇", "size": 32, "color": "C8B890" } }
+  ]
+}
