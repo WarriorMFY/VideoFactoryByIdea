@@ -219,6 +219,8 @@ function exportUnits(cfgPath) {
   const outDir = path.join(base, cfg.outDir || 'clips');
   fs.mkdirSync(outDir, { recursive: true });
   const W = 1280, H = 720;
+  const vdim = execSync(`${j(FP)} -v quiet -select_streams v -show_entries stream=width,height -of csv=p=0 ${j(src)}`).toString().trim().split(',');
+  const SW = Number(vdim[0]), SH = Number(vdim[1]);
   const rows = [];
 
   for (const u of cfg.units) {
@@ -226,12 +228,22 @@ function exportUnits(cfgPath) {
     const ass = path.join(outDir, `u${id}.ass`);
     assFile(u, W, H, ass);
     const clip = path.join(outDir, `u${id}.mp4`);
-    const cw = Math.round(H * (16 / 9));                 // 保持 16:9 裁窗
-    const cx = u.cropX ?? Math.max(0, Math.round((1920 - cw) / 2));
-    const vf = `crop=${cw}:${H}:${cx}:0,scale=${W}:${H}:flags=lanczos,setsar=1,ass=u${id}.ass`;
+    // 默认整幅 16:9 缩放（保留原始构图，人物多在中下部，顶部对齐裁窗会切脚）；
+    // 仅当 unit.crop 为 true 时才按 cropX/cropY 裁窗（cropY 支持 'bottom'|0-1 比例|像素）
+    let geom;
+    if (u.crop) {
+      const cw = Math.round(H * (16 / 9));
+      const cx = u.cropX ?? Math.max(0, Math.round((SW - cw) / 2));
+      const cy = u.cropY == null || u.cropY === 'bottom' ? SH - H
+        : (typeof u.cropY === 'number' && u.cropY <= 1 ? Math.round((SH - H) * u.cropY) : Math.round(u.cropY));
+      geom = `crop=${cw}:${H}:${cx}:${cy},scale=${W}:${H}:flags=lanczos`;
+    } else {
+      geom = `scale=${W}:${H}:flags=lanczos`;
+    }
+    const vf = `${geom},setsar=1,ass=u${id}.ass`;
     run(`${j(FF)} -y -ss ${u.t.toFixed(3)} -t ${u.dur.toFixed(3)} -i ${j(src)} -vf ${j(vf)} -an -c:v libx264 -crf 18 -preset medium -pix_fmt yuv420p ${j(clip)}`, outDir);
     const thumb = path.join(outDir, `u${id}.jpg`);
-    run(`${j(FF)} -y -ss ${(u.t + u.dur / 2).toFixed(3)} -i ${j(src)} -vf "crop=${cw}:${H}:${cx}:0,scale=640:360,setsar=1" -frames:v 1 ${j(thumb)}`, outDir);
+    run(`${j(FF)} -y -ss ${(u.t + u.dur / 2).toFixed(3)} -i ${j(src)} -vf "${geom},scale=640:360,setsar=1" -frames:v 1 ${j(thumb)}`, outDir);
     const real = Number(execSync(`${j(FP)} -v quiet -show_entries format=duration -of csv=p=0 ${j(clip)}`).toString().trim());
     rows.push({ ...u, file: `u${id}.mp4`, durOut: num(real, 2) });
     console.log(`#${id} ${u.t}s +${u.dur}s → u${id}.mp4 (${real.toFixed(2)}s) ${u.scene || ''}`);
