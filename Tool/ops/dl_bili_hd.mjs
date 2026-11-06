@@ -9,6 +9,8 @@
  */
 import fs from 'node:fs';
 import path from 'node:path';
+import { Readable } from 'node:stream';
+import { pipeline } from 'node:stream/promises';
 import { execSync } from 'node:child_process';
 import { launchProfile } from '../lib/pw.mjs';
 
@@ -47,17 +49,29 @@ const a = dash.audio.sort((x, y) => y.bandwidth - x.bandwidth)[0];
 console.log(`视频流: id=${v.id} ${v.width}x${v.height} ${v.frameRate}fps ${(v.bandwidth / 1e6).toFixed(2)}Mbps`);
 console.log(`音频流: id=${a.id} ${(a.bandwidth / 1e3).toFixed(0)}kbps`);
 
-const dl = async (url, dest) => {
-  const r = await fetch(url, { headers: { ...H, Range: 'bytes=0-' } });
-  if (!r.ok) { console.error('下载失败', r.status); process.exit(1); }
-  const buf = Buffer.from(await r.arrayBuffer());
-  fs.writeFileSync(dest, buf);
-  return buf.length;
+// 流式下载 + backupUrl 回退 + 重试（大文件整块 arrayBuffer 易 ECONNRESET）
+const dl = async (stream, dest) => {
+  const urls = [stream.baseUrl, ...(stream.backupUrl || [])];
+  for (const [ui, url] of urls.entries()) {
+    for (let attempt = 1; attempt <= 3; attempt++) {
+      try {
+        const r = await fetch(url, { headers: { ...H, Range: 'bytes=0-' } });
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        await pipeline(Readable.fromWeb(r.body), fs.createWriteStream(dest));
+        const size = fs.statSync(dest).size;
+        if (size < 1024) throw new Error('文件过小 ' + size);
+        return size;
+      } catch (e) {
+        if (attempt === 3 && ui === urls.length - 1) { console.error('下载失败:', e.message); process.exit(1); }
+        console.log(`  源${ui + 1} 第${attempt}次失败(${e.message})，${attempt === 3 ? '换备用源' : '重试'}`);
+      }
+    }
+  }
 };
 
 const tmpV = out + '.m4s', tmpA = out + '.aac';
-const sv = await dl(v.baseUrl, tmpV);
-const sa = await dl(a.baseUrl, tmpA);
+const sv = await dl(v, tmpV);
+const sa = await dl(a, tmpA);
 console.log(`视频 ${(sv / 1e6).toFixed(1)}MB + 音频 ${(sa / 1e6).toFixed(1)}MB，mux 中...`);
 
 execSync(`"${FF}" -hide_banner -loglevel error -y -i "${tmpV}" -i "${tmpA}" -c copy -movflags +faststart "${out}"`);
