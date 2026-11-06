@@ -307,6 +307,11 @@ node Tool\ops\bili_phase_select.mjs --dir History\loops\<loop>
     手工复制的 index.html 仍是旧表 → 线上发布后看到旧时长/旧组数。重渲染后必须
     `cp table.html index.html` 再发布，发布后用 curl 抓时长列自检（不能只看部署成功）。
 
+40. **B 站 1080P60 需大会员，无权限时 API 静默降级**（loop38 实踩）：qn=116 请求若账号
+    非大会员，playurl 会正常返回但 dash 里最高只有 id=80（1080P 30fps），不报错。
+    判断实际拿到多少帧必须 probe 落地文件（r_frame_rate），不能信页面标注的「1080P60」。
+    60 帧对帧级动作取证有意义；30→60 插帧（minterpolate）会造假帧，取证场景禁用。
+
 —— 工具 ——
 - recam.mjs：镜头语言重加工工具（loop34 由 loop33 三版手法提炼）。配置驱动：
   full/crop(固定窗·摇移·跟随)/zoom(推拉·缓动) × speed(变速斜坡) × blur(拖影)
@@ -334,6 +339,11 @@ node Tool\ops\bili_phase_select.mjs --dir History\loops\<loop>
 38. **vs_curate 重渲染后 index.html 不会自动同步**（loop37 实踩）：工具只写 table.html/csv，
     手工复制的 index.html 仍是旧表 → 线上发布后看到旧时长/旧组数。重渲染后必须
     `cp table.html index.html` 再发布，发布后用 curl 抓时长列自检（不能只看部署成功）。
+
+40. **B 站 1080P60 需大会员，无权限时 API 静默降级**（loop38 实踩）：qn=116 请求若账号
+    非大会员，playurl 会正常返回但 dash 里最高只有 id=80（1080P 30fps），不报错。
+    判断实际拿到多少帧必须 probe 落地文件（r_frame_rate），不能信页面标注的「1080P60」。
+    60 帧对帧级动作取证有意义；30→60 插帧（minterpolate）会造假帧，取证场景禁用。
 
 —— 工具 ——
 - vs_split.mjs：双源对比剪辑流生成器（loop35 提炼）。配置驱动：lr/tb 版式 × A/B 两侧
