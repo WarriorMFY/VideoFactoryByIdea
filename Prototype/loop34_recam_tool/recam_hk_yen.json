@@ -1,0 +1,32 @@
+{
+  "source": { "in": 299.0, "dur": 3.2 },
+  "out": { "w": 1920, "h": 1080, "fps": 30, "crf": 19 },
+  "look": { "letterbox": 2.39, "contrast": 1.04 },
+  "shots": [
+    { "t": [0, 0.72],
+      "cam": { "type": "crop", "win": [1536, 864], "from": [0, 80], "to": [500, 0] },
+      "label": { "text": "① 港式长镜 · 全景不剪（真功夫标签）", "size": 30, "color": "C8B890" } },
+
+    { "t": [0.72, 1.02],
+      "cam": { "type": "crop", "win": [1920, 810], "from": [0, 100],
+               "shake": { "amp": 26, "decay": 0.22, "freq": 16 } },
+      "flashin": { "d": 0.06 },
+      "label": { "text": "② 低角度碎剪 · 落地白闪", "size": 30, "color": "C8B890" } },
+
+    { "t": [1.02, 1.30],
+      "cam": { "type": "crop", "win": [1344, 756], "from": [350, 260], "to": [150, 340] },
+      "label": { "text": "③ 镜头随攻击方推进", "size": 30, "color": "C8B890" } },
+
+    { "t": [1.30, 1.62], "speed": 0.35, "blur": 3,
+      "cam": { "type": "zoom", "from": [80, 108, 1728, 972], "to": [100, 400, 1152, 648],
+               "snap": 0.12 },
+      "look": { "temperature": 9500, "saturation": 0.8, "contrast": 1.06 },
+      "flashin": { "d": 0.08 },
+      "label": { "text": "④ 急推变焦 × 升格标点（邵氏 zoom）", "size": 30, "color": "FFC850" } },
+
+    { "t": [1.62, 3.2],
+      "cam": { "type": "zoom", "from": [240, 180, 1440, 810], "to": [0, 0, 1920, 1080], "ease": "inout" },
+      "look": { "vignette": true },
+      "label": { "text": "⑤ 缓拉留白 · 对峙余韵", "size": 30, "color": "C8B890" } }
+  ]
+}

@@ -308,3 +308,8 @@ node Tool\ops\bili_phase_select.mjs --dir History\loops\<loop>
   full/crop(固定窗·摇移·跟随)/zoom(推拉·缓动) × speed(变速斜坡) × blur(拖影)
   × 逐镜调色/遮幅/暗角 × 逐镜 ASS 标注；自动双 seek 切段、逐镜独立渲染、
   concat demuxer 拼接。用法 `node recam.mjs <input> <shots.json> [out.mp4]`。
+- recam.mjs 港式定制（loop34b，调研张彻/洪金宝/袁和平/甄子丹镜头语言后新增）：
+  cam.snap（急推变焦 crash zoom，前 N 秒完成推进后保持）、cam.shake{amp,decay,freq}
+  （重击衰减正弦震镜，crop/zoom 均可）、shot.flashin/flashout（命中白/黑闪，fade 帧级，
+  闪画面不闪字幕）、look.contrast。风格配置示例 Prototype/loop34_recam_tool/recam_hk_yen.json
+  （港式五法：全景长镜不剪/低角度碎剪+白闪/镜随攻击方/急推×升格标点/缓拉留白）。

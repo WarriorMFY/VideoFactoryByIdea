@@ -95,6 +95,14 @@ const easeExpr = (ease, p) => {
   }
 };
 
+// 冲击震动：衰减正弦位移（港式重击震镜），t 为本镜输出时间
+const shakeExpr = (shake, base, t) => {
+  if (!shake) return base;
+  const { amp = 20, decay = 0.25, freq = 14 } = shake;
+  const osc = `(${amp})*exp(-${t}/${decay})*sin(2*PI*${freq}*${t})`;
+  return base === null ? osc : `(${base})+(${osc})`;
+};
+
 // ---------- 滤镜生成（逐镜独立文件 → 逐镜加工 → concat demuxer，坑33 铁律） ----------
 // 坑33 实测：split+trim 大滤镜图中慢滤镜（zoompan@4K）会令上游帧队列堆积直至 OOM，
 // 故不走 filter_complex，逐镜单独渲染。
@@ -118,17 +126,23 @@ shots.forEach((shot, i) => {
 
   if (cam.type === 'zoom') {
     // 推近/拉远：窗口 [x,y,w,h] from→to，2x 超采后 zoompan（坑：zoompan 需大图防抖动）
+    // cam.snap: 急推变焦（crash zoom，邵氏招牌）——前 snap 秒内完成推进，之后保持
     const N = Math.max(2, Math.round(outDur * O.fps));
-    const p = `min(on/${N - 1},1)`;
+    const pDenom = cam.snap ? `(${cam.snap} * ${O.fps})` : `${N - 1}`;
+    const p = `min(on/${pDenom},1)`;
     const ep = easeExpr(cam.ease, p);
     const zw = (SS * SW) / cam.from[2], zz = (SS * SW) / cam.to[2];   // zoom 因子（相对超采图）
     const x0 = cam.from[0] * SS, x1 = cam.to[0] * SS;
     const y0 = cam.from[1] * SS, y1 = cam.to[1] * SS;
+    // zoompan 表达式无 t 变量，用 on/fps 折算时间
+    const tOn = `(on/${O.fps})`;
+    const shxZ = shakeExpr(cam.shake, `${x1}+(${x0 - x1})*(${ep})`, tOn);
+    const shyZ = shakeExpr(cam.shake, `${y1}+(${y0 - y1})*(${ep})`, tOn);
     const clampX = e => `clip(${e},0,in_w-in_w/zoom)`;
     const clampY = e => `clip(${e},0,in_h-in_h/zoom)`;
     f += `scale=${SW * SS}:${SH * SS}:flags=lanczos,` +
       `zoompan=z='${zw.toFixed(4)}+(${(zz - zw).toFixed(4)})*(${ep})':` +
-      `x='${clampX(`${x1}+(${x0 - x1})*(${ep})`)}':y='${clampY(`${y1}+(${y0 - y1})*(${ep})`)}':` +
+      `x='${clampX(shxZ)}':y='${clampY(shyZ)}':` +
       `d=1:s=${O.w}x${O.h}:fps=${O.fps}`;
   } else {
     // full / crop：crop 逐帧求值 x,y（窗口恒尺寸），位置可缓动摇移
@@ -141,17 +155,23 @@ shots.forEach((shot, i) => {
         const ep = easeExpr(cam.ease, p);
         const x = x0 === x1 ? x0 : `(${x0})+(${x1 - x0})*(${ep})`;
         const y = y0 === y1 ? y0 : `(${y0})+(${y1 - y0})*(${ep})`;
-        return `crop=${w}:${h}:x='${x}':y='${y}',scale=${O.w}:${O.h}:flags=lanczos`;
+        const shx = shakeExpr(cam.shake, x, 't');
+        const shy = shakeExpr(cam.shake, y, 't');
+        return `crop=${w}:${h}:x='${shx}':y='${shy}',scale=${O.w}:${O.h}:flags=lanczos`;
       })()
       : `scale=${O.w}:${O.h}:flags=lanczos`;
     f += cropChain;
   }
+
+  // 港式重击白闪/黑闪（fade 帧级渐变）：flashin 紧跟相机链（闪画面不闪字幕）
+  if (shot.flashin) f += `,fade=t=in:st=0:d=${shot.flashin.d ?? 0.08}:color=${shot.flashin.color || 'white'}`;
 
   // 拖影（慢放后混合相邻帧）
   if (shot.blur > 1) f += `,tmix=frames=${shot.blur}:weights='${Array(shot.blur).fill(1).join(' ')}'`;
   // 逐镜调色（全局 look 已并入）
   if (look.temperature) f += `,colortemperature=temperature=${look.temperature}`;
   if (look.saturation != null) f += `,eq=saturation=${look.saturation}`;
+  if (look.contrast != null) f += `,eq=contrast=${look.contrast}`;
   if (look.vignette) f += `,vignette=PI/4.5`;
   if (look.letterbox) {
     const barH = Math.round((O.h - O.w / look.letterbox) / 2);
@@ -177,6 +197,7 @@ Dialogue: 0,0:00:00.05,0:${String(Math.floor(outDur / 60)).padStart(2, '0')}:${(
     writeFileSync(join(B, `shot_${i}.ass`), ass, 'utf8');
     f += `,ass=shot_${i}.ass`;
   }
+  if (shot.flashout) f += `,fade=t=out:st=${Math.max(0, outDur - (shot.flashout.d ?? 0.08)).toFixed(3)}:d=${shot.flashout.d ?? 0.08}:color=${shot.flashout.color || 'white'}`;
   f += `,format=yuv420p`;
 
   // Step B: 逐镜渲染 —— trim 切段 + 相机链，单输入单输出（crf16 中间件）
