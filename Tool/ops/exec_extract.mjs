@@ -20,7 +20,7 @@
  *   node exec_extract.mjs strip   <src.mp4> <t0> <t1> <n> [outPng] [--w 320]
  *       在 [t0,t1] 均匀取 n 帧拼条带（边界目验用），帧上带绝对时间码
  *
- *   node exec_extract.mjs export  <catalog.json> [outDir]
+ *   node exec_extract.mjs export  <catalog.json> [outDir] [1920x1080]
  *       按 catalog 里的精确边界剪出每单位 1280x720 片 + 中位缩略图 + ASS 时间码 HUD
  *       + catalog.csv + index.html（含视频的核验/入库页）
  *
@@ -183,6 +183,8 @@ function strip(src, t0, t1, n, outPng, w = 320) {
 
 // ---------- ASS HUD ----------
 function assFile(unit, w, h, outAss) {
+  const k = w / 1280;                                    // 相对 720p 基准的缩放系数
+  const n = v => Math.round(v * k);
   const tf = s => {
     const m = Math.floor(s / 60), sec = (s % 60).toFixed(2).padStart(5, '0');
     return `0:${String(m).padStart(2, '0')}:${sec}`;
@@ -196,29 +198,29 @@ ScaledBorderAndShadow: yes
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: H,Microsoft YaHei,26,&H00FFFFFF,&H000000FF,&H00101010,&H80000000,0,0,0,0,100,100,0,0,1,2,0,7,26,26,20,1
-Style: S,Microsoft YaHei,20,&H00C8C8C8,&H000000FF,&H00101010,&H80000000,0,0,0,0,100,100,0,0,1,2,0,7,26,26,20,1
+Style: H,Microsoft YaHei,${n(26)},&H00FFFFFF,&H000000FF,&H00101010,&H80000000,0,0,0,0,100,100,0,0,1,${n(2)},0,7,${n(26)},${n(26)},${n(20)},1
+Style: S,Microsoft YaHei,${n(20)},&H00C8C8C8,&H000000FF,&H00101010,&H80000000,0,0,0,0,100,100,0,0,1,${n(2)},0,7,${n(26)},${n(26)},${n(20)},1
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 `;
   const ev = [];
   const d = unit.dur;
-  ev.push(`Dialogue: 0,0:00:00.00,${tf(d)},H,,0,0,0,,{\\an7\\pos(26,20)\\bord2}#${String(unit.id).padStart(2, '0')} ${unit.scene || ''}`);
-  ev.push(`Dialogue: 0,0:00:00.00,${tf(d)},S,,0,0,0,,{\\an7\\pos(26,54)}${unit.move || ''}`);
-  ev.push(`Dialogue: 0,0:00:00.00,${tf(d)},S,,0,0,0,,{\\an9\\pos(${w - 26},20)}${unit.t.toFixed(2)}s + ${d.toFixed(2)}s · 源 ${unit.srcLabel || ''}`);
-  if (unit.beat) ev.push(`Dialogue: 0,0:00:00.00,${tf(d)},S,,0,0,0,,{\\an1\\pos(${w / 2},${h - 26})}${unit.beat}`);
+  ev.push(`Dialogue: 0,0:00:00.00,${tf(d)},H,,0,0,0,,{\\an7\\pos(${n(26)},${n(20)})\\bord${n(2)}}#${String(unit.id).padStart(2, '0')} ${unit.scene || ''}`);
+  ev.push(`Dialogue: 0,0:00:00.00,${tf(d)},S,,0,0,0,,{\\an7\\pos(${n(26)},${n(54)})}${unit.move || ''}`);
+  ev.push(`Dialogue: 0,0:00:00.00,${tf(d)},S,,0,0,0,,{\\an9\\pos(${w - n(26)},${n(20)})}${unit.t.toFixed(2)}s + ${d.toFixed(2)}s · 源 ${unit.srcLabel || ''}`);
+  if (unit.beat) ev.push(`Dialogue: 0,0:00:00.00,${tf(d)},S,,0,0,0,,{\\an1\\pos(${w / 2},${h - n(26)})}${unit.beat}`);
   fs.writeFileSync(outAss, head + ev.join('\n') + '\n', 'utf8');
 }
 
 // ---------- 批量导出 ----------
-function exportUnits(cfgPath) {
+function exportUnits(cfgPath, outArg, sizeArg) {
   const cfg = JSON.parse(fs.readFileSync(cfgPath, 'utf8'));
   const base = path.dirname(path.resolve(cfgPath));
   const src = path.resolve(base, cfg.src);
-  const outDir = path.join(base, cfg.outDir || 'clips');
+  const outDir = path.join(base, outArg || cfg.outDir || 'clips');
   fs.mkdirSync(outDir, { recursive: true });
-  const W = 1280, H = 720;
+  const [W, H] = sizeArg ? sizeArg.split('x').map(Number) : (cfg.size || [1280, 720]);
   const vdim = execSync(`${j(FP)} -v quiet -select_streams v -show_entries stream=width,height -of csv=p=0 ${j(src)}`).toString().trim().split(',');
   const SW = Number(vdim[0]), SH = Number(vdim[1]);
   const rows = [];
@@ -228,22 +230,23 @@ function exportUnits(cfgPath) {
     const ass = path.join(outDir, `u${id}.ass`);
     assFile(u, W, H, ass);
     const clip = path.join(outDir, `u${id}.mp4`);
-    // 默认整幅 16:9 缩放（保留原始构图，人物多在中下部，顶部对齐裁窗会切脚）；
+    // 默认整幅等比缩放（保留原始构图，人物多在中下部，顶部对齐裁窗会切脚）；
     // 仅当 unit.crop 为 true 时才按 cropX/cropY 裁窗（cropY 支持 'bottom'|0-1 比例|像素）
     let geom;
     if (u.crop) {
-      const cw = Math.round(H * (16 / 9));
+      const cw = Math.round(SW * (W / H) * (H / SH) * 1);  // 按目标宽高比裁窗
       const cx = u.cropX ?? Math.max(0, Math.round((SW - cw) / 2));
-      const cy = u.cropY == null || u.cropY === 'bottom' ? SH - H
-        : (typeof u.cropY === 'number' && u.cropY <= 1 ? Math.round((SH - H) * u.cropY) : Math.round(u.cropY));
-      geom = `crop=${cw}:${H}:${cx}:${cy},scale=${W}:${H}:flags=lanczos`;
+      const ch = Math.min(SH, Math.round(cw * H / W));
+      const cy = u.cropY == null || u.cropY === 'bottom' ? SH - ch
+        : (typeof u.cropY === 'number' && u.cropY <= 1 ? Math.round((SH - ch) * u.cropY) : Math.round(u.cropY));
+      geom = `crop=${cw}:${ch}:${cx}:${cy},scale=${W}:${H}:flags=lanczos`;
     } else {
       geom = `scale=${W}:${H}:flags=lanczos`;
     }
     const vf = `${geom},setsar=1,ass=u${id}.ass`;
     run(`${j(FF)} -y -ss ${u.t.toFixed(3)} -t ${u.dur.toFixed(3)} -i ${j(src)} -vf ${j(vf)} -an -c:v libx264 -crf 18 -preset medium -pix_fmt yuv420p ${j(clip)}`, outDir);
     const thumb = path.join(outDir, `u${id}.jpg`);
-    run(`${j(FF)} -y -ss ${(u.t + u.dur / 2).toFixed(3)} -i ${j(src)} -vf "${geom},scale=640:360,setsar=1" -frames:v 1 ${j(thumb)}`, outDir);
+    run(`${j(FF)} -y -ss ${(u.t + u.dur / 2).toFixed(3)} -i ${j(src)} -vf "${geom},scale=${Math.round(640 * W / 1280)}:${Math.round(360 * H / 720)},setsar=1" -frames:v 1 ${j(thumb)}`, outDir);
     const real = Number(execSync(`${j(FP)} -v quiet -show_entries format=duration -of csv=p=0 ${j(clip)}`).toString().trim());
     rows.push({ ...u, file: `u${id}.mp4`, durOut: num(real, 2) });
     console.log(`#${id} ${u.t}s +${u.dur}s → u${id}.mp4 (${real.toFixed(2)}s) ${u.scene || ''}`);
@@ -353,7 +356,7 @@ if (mode === 'scan') {
 } else if (mode === 'refine') {
   refine(positional[0]);
 } else if (mode === 'export') {
-  exportUnits(positional[0]);
+  exportUnits(positional[0], positional[1], positional[2]);
 } else {
   console.error('未知模式', mode);
   process.exit(1);
