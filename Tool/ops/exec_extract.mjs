@@ -223,6 +223,13 @@ function exportUnits(cfgPath, outArg, sizeArg) {
   const [W, H] = sizeArg ? sizeArg.split('x').map(Number) : (cfg.size || [1280, 720]);
   const vdim = execSync(`${j(FP)} -v quiet -select_streams v -show_entries stream=width,height -of csv=p=0 ${j(src)}`).toString().trim().split(',');
   const SW = Number(vdim[0]), SH = Number(vdim[1]);
+  // 源帧率（如实记录，不固定 -r，导出跟随源）
+  let srcFps = 0;
+  try {
+    const fr = execSync(`${j(FP)} -v quiet -select_streams v -show_entries stream=r_frame_rate -of csv=p=0 ${j(src)}`).toString().trim();
+    const [n, dn] = fr.split('/').map(Number);
+    srcFps = dn ? Math.round(n / dn) : Math.round(n);
+  } catch { /* 探测失败则留 0 */ }
   const rows = [];
 
   for (const u of cfg.units) {
@@ -248,12 +255,12 @@ function exportUnits(cfgPath, outArg, sizeArg) {
     const thumb = path.join(outDir, `u${id}.jpg`);
     run(`${j(FF)} -y -ss ${(u.t + u.dur / 2).toFixed(3)} -i ${j(src)} -vf "${geom},scale=${Math.round(640 * W / 1280)}:${Math.round(360 * H / 720)},setsar=1" -frames:v 1 ${j(thumb)}`, outDir);
     const real = Number(execSync(`${j(FP)} -v quiet -show_entries format=duration -of csv=p=0 ${j(clip)}`).toString().trim());
-    rows.push({ ...u, file: `u${id}.mp4`, durOut: num(real, 2) });
+    rows.push({ ...u, file: `u${id}.mp4`, durOut: num(real, 2), fps: srcFps, res: `${W}x${H}` });
     console.log(`#${id} ${u.t}s +${u.dur}s → u${id}.mp4 (${real.toFixed(2)}s) ${u.scene || ''}`);
   }
 
   // CSV
-  const cols = ['id', 'kind', 'scene', 'move', 't', 'dur', 'durOut', 'beat', 'note', 'file'];
+  const cols = ['id', 'kind', 'scene', 'move', 't', 'dur', 'durOut', 'res', 'fps', 'beat', 'note', 'file'];
   const csv = [cols.join(',')].concat(rows.map(r => cols.map(c => `"${String(r[c] ?? '').replace(/"/g, '""')}"`).join(','))).join('\n');
   fs.writeFileSync(path.join(outDir, 'catalog.csv'), '\ufeff' + csv, 'utf8');
 
@@ -287,7 +294,7 @@ video{width:100%;border-radius:8px;background:#000;display:block}
 </style></head><body><div class="wrap">
 <h1>${cfg.pack || '处决'} · 处决单位入库清单</h1>
 <div class="sub">共 <b>${rows.length}</b> 个完整处决单位，边界按「触发/抓取 → 命中 → 收招 → 余韵」规则逐帧核验。
-片为 1280×720 / CRF18，左上角带编号与场景、右上角带源时间码，底部为该单位的节拍标注。</div>
+片为 ${W}×${H} / ${srcFps}fps / CRF18（跟随源帧率，未插帧），左上角带编号与场景、右上角带源时间码，底部为该单位的节拍标注。</div>
 ${cards}
 <div class="foot">清单同源文件：catalog.csv（可导入资料库/表格）· uNN.mp4 为入库母版片 · uNN.jpg 为缩略图</div>
 </div></body></html>`, 'utf8');
