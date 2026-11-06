@@ -313,3 +313,20 @@ node Tool\ops\bili_phase_select.mjs --dir History\loops\<loop>
   （重击衰减正弦震镜，crop/zoom 均可）、shot.flashin/flashout（命中白/黑闪，fade 帧级，
   闪画面不闪字幕）、look.contrast。风格配置示例 Prototype/loop34_recam_tool/recam_hk_yen.json
   （港式五法：全景长镜不剪/低角度碎剪+白闪/镜随攻击方/急推×升格标点/缓拉留白）。
+
+35. **无限 lavfi 源（color=black 等）在 filter_complex 下 -shortest 不终止 ffmpeg**（loop35 实踩）：
+    `-f lavfi -i color=black:...` 与素材流 hstack 后挂 `-shortest`，ffmpeg 挂起不退出
+    （mux 层 shortest 停了但无限源仍被消费）。
+    **修法：凡含无限 lavfi 源的输出一律加 `-t <dur>` 硬限制**（vs_split.mjs 片尾黑屏已内置）。
+
+36. **ASS 颜色是 &HBBGGRR& 顺序**（loop35 实踩）：RGB 十六进制直填会让颜色翻转
+    （琥珀 FFC850 → 渲染成蓝）。填色时交换 R/B（50C8FF）；vs_split.mjs 的 bgr()
+    已内置自动转换，配置里直接写 RGB。
+
+—— 工具 ——
+- vs_split.mjs：双源对比剪辑流生成器（loop35 提炼）。配置驱动：lr/tb 版式 × A/B 两侧
+  （源/片名/侧色 RGB）× 逐组对位（t + cropX + 语义标签）× 片头双标题卡 × 片尾对位
+  （B 侧可黑屏）× BGM（起点/淡出）。自动：crop 规划（最大内接/居中/cropX）、每段独立
+  ASS、逐段独立渲染 crf16 → concat demuxer、BGM 铺底淡出。
+  用法 `node vs_split.mjs <config.json> [out.mp4]`，配置示例 Prototype/loop35_compare/vs_loop35.json。
+  方法论与流程：项目技能 .workbuddy/skills/versus-edit/SKILL.md。
