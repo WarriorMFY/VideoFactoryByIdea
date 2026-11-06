@@ -303,6 +303,10 @@ node Tool\ops\bili_phase_select.mjs --dir History\loops\<loop>
     独立单输入单输出的中间文件再 concat demuxer，不要走 filter_complex 混拼**
     （坑33 的加强版理由）。
 
+38. **vs_curate 重渲染后 index.html 不会自动同步**（loop37 实踩）：工具只写 table.html/csv，
+    手工复制的 index.html 仍是旧表 → 线上发布后看到旧时长/旧组数。重渲染后必须
+    `cp table.html index.html` 再发布，发布后用 curl 抓时长列自检（不能只看部署成功）。
+
 —— 工具 ——
 - recam.mjs：镜头语言重加工工具（loop34 由 loop33 三版手法提炼）。配置驱动：
   full/crop(固定窗·摇移·跟随)/zoom(推拉·缓动) × speed(变速斜坡) × blur(拖影)
@@ -326,6 +330,10 @@ node Tool\ops\bili_phase_select.mjs --dir History\loops\<loop>
 37. **mjpeg(jpg) 输入直接 vstack/hstack 会无报错崩退**（loop37 实踩）：jpg 解码后
     pix_fmt 不被拼图滤镜接受 → 先统一转 png 中转再拼。取证条带拼接一律走 png。
     另：ffmpeg cwd 切到输出目录后，脚本内输入/输出路径必须绝对路径（坑33 同源）。
+
+38. **vs_curate 重渲染后 index.html 不会自动同步**（loop37 实踩）：工具只写 table.html/csv，
+    手工复制的 index.html 仍是旧表 → 线上发布后看到旧时长/旧组数。重渲染后必须
+    `cp table.html index.html` 再发布，发布后用 curl 抓时长列自检（不能只看部署成功）。
 
 —— 工具 ——
 - vs_split.mjs：双源对比剪辑流生成器（loop35 提炼）。配置驱动：lr/tb 版式 × A/B 两侧
