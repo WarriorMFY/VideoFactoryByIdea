@@ -105,7 +105,7 @@ node Tool/ops/exec_extract.mjs archive <catalog.json> [--clips clips1080p60] [--
 
 ## 已知资产
 
-- 影之刃零处决合集全量清单：`Prototype/loop38_exec_extract/`（46 单位：仪式级 4/标准 25/快杀 17；5 个 verified + 41 个 cut-verified）
+- 影之刃零处决合集全量清单：`Prototype/loop38_exec_extract/`（46 单位：仪式级 4/标准 28/快杀 14；5 个 verified + 41 个 cut-verified；目录索引见该目录下 `loop38_exec_extract.md`）
 - 已归档资产：`Material/library/`（源片 1 + 处决镜头 46 + 关键帧 138，tags 可检索；账本 `Material/manifest.jsonl`）
 - 边界规则完整论证：`Prototype/loop37_exec_bound/REPORT.md`
 
