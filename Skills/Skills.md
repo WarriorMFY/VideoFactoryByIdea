@@ -32,4 +32,4 @@
 
 ## 校验
 
-`Prototype/loop16_skills/check_skill.mjs`：查 frontmatter 完整性、`name` 与目录名一致、引用路径可解析、无大段实现代码、行数上限。改动任何 SKILL.md 后跑一遍。
+`Tool/check/check_skill.mjs`：查 frontmatter 完整性、`name` 与目录名一致、引用路径可解析、无大段实现代码、行数上限。改动任何 SKILL.md 后跑一遍。

@@ -34,7 +34,7 @@
 3. **其余层补齐**：新建 [`Material/Material.md`](../../Material/Material.md)（账本 / 实体 / 分级 / 铁律 / 主题索引）、[`Skills/Skills.md`](../../Skills/Skills.md)（5 个技能的触发条件与规模）；`Tool/env.md` 按 §3.3 移入 `Tool/env/env.md` 并更新 12 处引用；`Skills/exec-extract/ARCHIVE.md` 全文并入 `SKILL.md`（原样保留 + 三处过时点加注不改原文）。
 4. **顺手修掉一个真问题**：`essay-film-production` 技能**从来没建 junction**——`.workbuddy/skills/` 下只有 4 个链接，这个技能一直不会被自动发现。已补。
 5. **引用完整性**：合并会让旧路径失效，逐处修正 7 处（`Skills/edit-craft-scouting`×2、`Skills/versus-edit`、`Skills/exec-extract`、`Tool/ops/digest_v2.mjs` 注释、`Prototype/loop1_autocut`、`Prototype/loop30_bts`）。
-6. **校验器扩到全仓**（`Tool/ops/repo_sync_check.mjs`）：新增 `E6` 导航单元缺同名索引、`E7` 第二份说明文件、`W4` 深层（≥3 级）说明文件只统计；E2 不再把 `README.md` 当索引（存量已合并，出现即 E7）。
+6. **校验器扩到全仓**（`Tool/check/repo_sync_check.mjs`）：新增 `E6` 导航单元缺同名索引、`E7` 第二份说明文件、`W4` 深层（≥3 级）说明文件只统计；E2 不再把 `README.md` 当索引（存量已合并，出现即 E7）。
 
 ## 实测读数
 

@@ -41,12 +41,12 @@
 
 ## 检查工具
 
-`Tool/ops/repo_sync_check.mjs`（只读，不改任何文件）：
+`Tool/check/repo_sync_check.mjs`（只读，不改任何文件）：
 
 ```bash
-node Tool/ops/repo_sync_check.mjs           # 人读报告，有错误时退出码 1
-node Tool/ops/repo_sync_check.mjs --json    # 机器可读
-node Tool/ops/repo_sync_check.mjs --strict  # 告警也算失败
+node Tool/check/repo_sync_check.mjs           # 人读报告，有错误时退出码 1
+node Tool/check/repo_sync_check.mjs --json    # 机器可读
+node Tool/check/repo_sync_check.mjs --strict  # 告警也算失败
 ```
 
 | 码 | 含义 |

@@ -46,19 +46,32 @@ node Tool\Git\gitnet.mjs clone WarriorMFY/VideoFactoryByIdea
 | `subtitle/` | 要做识别/翻译/字幕（含**双语逐词高亮** karaoke 样式） | [`subtitle/subtitle.md`](subtitle/subtitle.md) — ASR、字幕生成、ASS 逐词高亮、时间轴重映射、字幕验收 |
 | `acceptance/` | 要"证明它是对的" | [`acceptance/acceptance.md`](acceptance/acceptance.md) — 三个一键验收 + 真值比对 + 成片质检 |
 | `ops/` | 要看市场、要交付、要发布、要追踪反馈、要定及格线 | [`ops/ops.md`](ops/ops.md) — `recon_bilibili`（B 站侦查）、`make_episode`（造样片素材）、`make_cover`（封面）、`publish_bilibili`（扫码登录/上传/填表/封面/投稿/回执）、`watch_feedback`（采集→诊断→规划一条龙：`collect_feedback` / `track_feedback` / `plan_next_loop`）、`collect_creator_stats`（平台判卷：完播率等，T+1）、`bench_peers`（赛道基线与新稿水位） |
+| `check/` | 要自检：仓库有没有违规、技能有没有腐化、画面运动有没有退化 | [`check/check.md`](check/check.md) — `repo_sync_check`（日志/索引/清单三件套自洽）、`check_skill`（Skills 腐化检查）、`kb_audit`（Ken Burns 匀速度量）。**与 acceptance/ 的分界：acceptance 跑用例证明对，check 扫全量看坏没坏** |
 | `lib/` | 要改脚本的公共层 | [`lib/lib.md`](lib/lib.md) — 子进程调用封装（fd 重定向）、fontconfig、SRT/CSV/单位规范化 |
-| `Git/` | clone/pull 卡住、克隆第三方项目 | [`Git/Git.md`](Git/Git.md) — `gitnet.mjs`：端点学习 + 无进展看门狗 + 镜像回退 |
+| `Git/` | 准备提交、clone/pull 卡住、克隆第三方项目 | [`Git/Git.md`](Git/Git.md) — §0 本地提交纪律与核对（何时能提交见 AGENTS §1.4）；§1 起 `gitnet.mjs`：端点学习 + 无进展看门狗 + 镜像回退 |
 | 环境约束 | 遇到"为什么跑不通" | [`env/env.md`](env/env.md) — 出网/管道/字体/模型源等实测坑 |
 
 **依赖落在哪**：`Workspace/deps/`（`ffmpeg/` 二进制、`asr/` 的 koffi/vosk/edge-tts + 模型、`node_modules/` 的 playwright），素材在 `Workspace/assets/`，下载缓存在 `Workspace/cache/`，运行时临时在 `Workspace/run/`（含 B 站登录态）。
 每层谁在用、删了怎么补 → [`../Workspace/README.md`](../Workspace/README.md)。
+
+## 新工具往哪放（落位三问）
+
+`Tool/` 的九个主题目录按"服务哪个领域"分，但有些工具服务的是"干什么活"，两个维度不同。新建脚本前依次问三句，**问完再落盘**：
+
+1. **它只服务一个主题域吗？** → 进对应目录：字幕 `subtitle/`、剪辑 `edit/`、素材与基准 `bench/`、安装依赖 `setup/`、市场运营 `ops/`、git 出网 `Git/`、环境约束 `env/`。
+2. **它服务多个域、或不属于任何域吗？** → 它是**横切职责**，按行为归档：**只读的检查/度量 → `check/`**、公共代码 → `lib/`、跑用例比对真值 → `acceptance/`。
+3. **两句都归不进去？** → **说明缺一个目录，先建目录（同名索引一起建）再放工具**。禁止"先塞进最泛的那个，以后再搬"。
+
+**硬规矩：`ops/` 不再接收非市场类工具。** 只有"市场侦查 / 反馈闭环 / 发布 / 封面"四类进 `ops/`；成片管线、素材获取、分析加工、仓库自检一律不进。这条是因为它历史上当过默认落点——自述写"市场运营侧"，实际装了三分之二的非市场工具，索引也停在 loop25 没再更新。
+
+> 判据失效的典型场景：新工具写在一段无关的上下文里（比如写循环治理时顺手写了个校验器），此时"最像的目录"就是最泛的目录。所以判据要**在动手前问**，不是事后审。
 
 ## 记住这四条
 
 1. **本机网络只有 Node 能出网**：PowerShell/curl 被封；npm install 不可靠（用 `setup/` 里的 tarball 解包）。
    （例外：B 站公开接口用 Node fetch 直连可用，见 `ops/ops.md`）
 2. **子进程不能用管道**：`spawnSync` 默认 `stdio:'pipe'` 会 `EPERM`，统一走 `lib/ff.mjs` 的 fd 重定向。
-3. **判定数据不靠嘴**：决策对不对看 `verify_edl`，成片合不合格看 `qa_report`，字幕看 `verify_subs`，市场看 `track_feedback`。
+3. **判定数据不靠嘴**：决策对不对看 `verify_edl`，成片合不合格看 `qa_report`，字幕看 `verify_subs`，市场看 `track_feedback`；**仓库自洽看 `check/repo_sync_check`，技能腐化看 `check/check_skill`，画面匀速看 `check/kb_audit`**。
 4. **git 出网不稳，别手工干等**：`git clone/pull` 直连要 21–56s 才失败（TCP 通≠git 能跑），一律走
    `node Tool\Git\gitnet.mjs <clone|pull>`；镜像/端点学习/超时它都管了。
 

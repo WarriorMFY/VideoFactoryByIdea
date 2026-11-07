@@ -33,7 +33,7 @@ const MUST = [
   'Tool/subtitle/make_ass.mjs', 'Tool/subtitle/glossary_zh.json', 'Tool/subtitle/subtitle.md',
   'Tool/edit/vfactory.mjs', 'Tool/edit/edit.md',
   'Tool/ops/ted_subs.mjs', 'Tool/ops/ted_fetch.mjs', 'Tool/ops/ted_episode.mjs', 'Tool/ops/make_digest.mjs',
-  'Tool/ops/make_cover.mjs', 'Tool/ops/frame_sheet.mjs', 'Tool/ops/kb_audit.sh',
+  'Tool/ops/make_cover.mjs', 'Tool/ops/frame_sheet.mjs', 'Tool/check/kb_audit.sh',
   'Tool/ops/bili_comment.mjs', 'Tool/ops/publish_bilibili.mjs', 'Tool/ops/ops.md',
   'Tool/setup/bootstrap_ffmpeg.mjs', 'Tool/setup/bootstrap_asr.mjs', 'Tool/setup/bootstrap_playwright.mjs', 'Tool/setup/setup.md',
   'Prototype/sample_ep_a/README.md', 'Prototype/sample_ep_a/talk.meta.json',

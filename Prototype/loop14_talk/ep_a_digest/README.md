@@ -62,6 +62,6 @@ node Tool/ops/make_digest.mjs --spec Prototype/loop14_talk/ep_a_digest/digest.js
 - 时间轴全帧对齐：`fOff[k]=round(C[k]*30)`，片段帧数由相邻起点差推出（自洽整数链），单段最大量化偏差 28.9ms；xfade offset 全部落在帧栅格上
 - 中间片段 crf 20→14（减少二次压缩纹理波动）
 
-**审计工具**：`Tool/ops/kb_audit.sh <mp4>`（帧间差异曲线 + CV + 顿挫计数；crop 避开字幕区）
+**审计工具**：`Tool/check/kb_audit.sh <mp4>`（帧间差异曲线 + CV + 顿挫计数；crop 避开字幕区）
 
 **发布替换**：重制版 **BV1yvxs61Eaw**（13:42 上线，tid=231 回读 ✓）。旧版 BV1DExp6UEdb 置顶评论已改为"看重制版"导流（删除稿件接口 `archives/del` 返回 HTML 已失效；edit 接口 21009 标题不合法，疑似新版风控，均记坑）。完整版置顶评论已换指新 BV。

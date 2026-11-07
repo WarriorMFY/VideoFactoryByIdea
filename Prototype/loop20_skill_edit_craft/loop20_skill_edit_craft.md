@@ -41,7 +41,7 @@ S1 选种 → S2 拆解 → S3 假设 → S4 最小实验 → S5 判卷 → S6 �
 #### 验证证据
 
 ```text
-check_skill.mjs  → 扫描 2 个技能，✓ 全部通过
+check_skill.mjs（现 `Tool/check/`）  → 扫描 2 个技能，✓ 全部通过
   · edit-craft-scouting: 193 行，引用 13 条路径，全部解析成功
 反向验证          → 造坏技能（name 不一致 + 路径不存在）→ 报 2 问题，退出码 1
 自动发现          → .workbuddy/skills/edit-craft-scouting 为 Junction，

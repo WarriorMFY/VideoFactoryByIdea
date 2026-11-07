@@ -44,12 +44,14 @@ TalkFactory 的目录名）。把它抄进技能，下次打包别的链路就�
 
 #### 新增的守卫：`check_skill.mjs`
 
+> 2026-11-07 升格：脚本已从本目录移到 [`Tool/check/check_skill.mjs`](../../Tool/check/check_skill.mjs)（技能自检属横切职责，不属任何主题域）。本文件保留当时的设计与四类检查说明，命令路径已更新。
+
 技能最容易腐化的地方是**引用的路径失效**——半年后有人挪了 `Prototype/loop15_export/`，
 SKILL.md 还在指向老位置，读的人照着走会卡住。所以配了一个自检脚本：
 
 ```bash
-node Prototype/loop16_skills/check_skill.mjs          # 扫 Skills/ 全部技能
-node Prototype/loop16_skills/check_skill.mjs --json   # 机器可读
+node Tool/check/check_skill.mjs          # 扫 Skills/ 全部技能
+node Tool/check/check_skill.mjs --json   # 机器可读
 ```
 
 查四件事：
@@ -77,7 +79,7 @@ node Prototype/loop16_skills/check_skill.mjs --json   # 机器可读
 #### 复现
 
 ```bash
-node Prototype/loop16_skills/check_skill.mjs
+node Tool/check/check_skill.mjs
 ```
 
 改完技能内容后跑一遍；红灯说明技能在说谎。

@@ -1,6 +1,8 @@
-# ops/ — 市场运营侧（侦查 / 交付包 / 反馈追踪）
+# ops/ — 市场反馈 + 成片管线 + 素材与分析（待拆）
 
-> 工厂不只管"做出来"，还要能回答"做给谁、怎么交付、有没有效果"。这个目录放的是市场侧的稳定动作。
+> 工厂不只管"做出来"，还要能回答"做给谁、怎么交付、有没有效果"。这个目录最初只放市场侧的稳定动作。
+>
+> **⚠️ 现状与目录名不符（2026-11-07 审计）**：34 个脚本里只有 12 个属市场侧，其余是成片管线（6）、素材获取（5）、分析加工（8）、仓库自检（2，已于同日迁出到 `Tool/check/`）。按 [`Tool.md`](../Tool.md) 的落位三问，**`ops/` 此后只收市场侦查 / 反馈闭环 / 发布 / 封面四类**，非市场类一律不进。存量待拆，触发条件：脚本数涨过 45，或连续三次在里面找不到东西。
 > 原则同 `Tool/` 全局：**只读公开数据、不编数据**。
 > 唯一例外是 `publish_bilibili.mjs`：它要在**账号主本人扫码授权**后代替人手点发布（见该脚本头部的边界说明），
 > 不代填密码、不碰短信验证码、不刷互动。
@@ -32,6 +34,19 @@
 | `bili_phase_select.mjs` | **早期 vs 成熟期选样**（小循环 25 升格）：读 `timeline_*.json`，早期 = 开号头 15 条播放最高、成熟期 = 近 4 年播放前 3，时长窗口 60–900s 过滤直播/切片。`--dir`（必填）`--early-n/--late-years/--min-len/--max-len/--cands`。产出 selection.json 供批量下载 |
 | `dl_bili.mjs` | **B站样本下载**（小循环 25 升格，源自 loop19）：公开 html5 低清通道（480p durl，带 Referer），零登录。dash-only 视频不支持此通道会报「无 durl」，换样本即可。`node Tool/ops/dl_bili.mjs BV out.mp4` |
 | `collect_material.mjs` | **素材采集线**（小循环 27 新增）：四级代价方案卡（L0 库内复用 / L1 开放授权网采 NASA+Wikimedia / L2 待核授权隔离区 / L3 AI 生成简报）→ 人选方案 → `fetch` 最大限速采集（并发池 + 每主机并发闸 + 配额即中止 + sha256 去重 + ffprobe 质检 + 授权自动登记）→ `Material/manifest.jsonl` 总账。子命令 `plan/fetch/list/register/brief`；L3 走 ImageGen/VideoGen 后 `register --cost L3` 强制 ai_generated=true（AI 声明纪律）。视频画质地板 540p / 图片 500px，单文件上限 `--max-mb`（默认 120），Wikimedia 视频自动选官方转码档、图片取 1920px 缩略 |
+
+## 其余工具（2026-11-07 补齐索引——此前长期未登记）
+
+| 脚本 | 作用 |
+| --- | --- |
+| `exec_extract.mjs` | **处决单位全量抽取器**（`Skills/exec-extract/SKILL.md` 的执行体）：`scan` 切点提议 → `sheets` 取证条带 → `strip`/`refine` 边界目验 → `export` 1080p 片段 + 关键帧 + `catalog.csv` |
+| `exec_bound.mjs` | **处决边界检测器**：`tblend` 帧差曲线提议候选区间 + 生成取证条带。**提议只是候选，首尾帧必须人工目验** |
+| `recam.mjs` | **镜头重加工**（数字重摄影，动作零改动）：`full`/`crop`（固定窗·摇移）/`zoom`（推拉·缓动）× 变速 × 拖影 × 逐镜调色/遮幅/暗角/ASS 标注；逐镜独立渲染后 concat |
+| `vs_split.mjs` | **双源对比剪辑流生成器**：`lr`/`tb` 版式 + A/B 两侧逐组对位 + 片头双标题卡 + 片尾对位；语义对位规则见 `Skills/versus-edit/` |
+| `vs_curate.mjs` | **对比剪辑候选池**（三阶段流程之阶段 1）：批量渲染每组左右分屏预览 + 生成核验表格 `table.html`/`table.csv` |
+| `make_shorts.mjs` | **微稿流水线**：一条命令从「3 句话」到「可投放包」 |
+| `ted_episode.mjs` | **TED 演讲 → 双语逐词高亮成片**，一条命令跑完（素材阶段由 `ted_subs` + ffmpeg 完成，本脚本不重复下载） |
+| `dl_bili_hd.mjs` | **登录态 dash 通道下载高清** B 站视频（`dl_bili` 的升级版；低清 durl 通道见 `dl_bili`） |
 
 ## 最短链路
 
