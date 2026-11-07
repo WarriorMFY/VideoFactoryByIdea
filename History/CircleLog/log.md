@@ -844,3 +844,14 @@
 | 产物 | `History/CircleLog/log.md`（862 → 845 行）、`History/CircleLog/CircleLog.md`（删除）、`Prototype/Prototype.md`（链接修正） |
 | 收束 | 人指令「结束循环」（2026-11-07 10:30）——本轮收束，不再开新动作；提交 `f1231d3`、`db66ca4`，工作区干净 |
 | 人工反馈 | 2026-11-07 10:30 「结束循环」。同轮人改 `Idea/Idea.md`：结束日期 → 「想法驱动，时间不限」，原 168h 窗口作废、预算耗尽问题消解。未答部分：小循环 32–38 是否补录 |
+
+<a id="loop39"></a>
+## 小循环 39 · 仓库目录与循环日志的协同管理
+
+| 项 | 内容 |
+| --- | --- |
+| 开始时间 | 2026-11-07 10:35 |
+| 初始目标 | 人确认（10:35）：把「什么时候写 log.md」定成规则。接受「开工落款 / 收工补全 / 反馈回填」三段式，接受未完成条目作为中间态；本轮同步定 `Prototype\loopNN_xxx\` 与 `log.md#loopNN` 的双链形式，并改 §2.5 |
+| 动作 | ① `AGENTS.md §2.5` 重写：三时机表、过程中不写、未完成条目允许缺行（不再填「待回填」）、双链同刻创建、日志尾部即当前状态；② `§2.3` 两闸门各加一句动作指向（放行即落款建链、提报前补全）；③ 新建 `Prototype/loop39_circle_sync/loop39_circle_sync.md`（结论 / 三时机 / 双链 / 未完成样子 / 工具用法 / 首跑读数 / 待办）；④ 新建 `Tool/ops/repo_sync_check.mjs` 只读校验器（E1 断链 · E2 缺索引 · E3 无清单行 · E4 无目录；W1 进行中 · W2 缺回链；支持 `--json` `--strict`）；⑤ `Prototype.md` 清单加第 39 行、进度板改为脚本实测读数 |
+| 结束结果 | **已提报，待人工放行**（§2.3 闸门二）。实测：首跑 E2 17 / W2 22 / E1 0；补完索引与清单后复跑 E2 16 / W2 21 / W1 1（本轮）/ E1 0，**loop39 相关错误 0**，本轮三链自洽 |
+| 产物 | [Prototype/loop39_circle_sync/](../../Prototype/loop39_circle_sync/loop39_circle_sync.md) · `Tool/ops/repo_sync_check.mjs` · `AGENTS.md` §2.3 / §2.5 · `Prototype/Prototype.md` |
