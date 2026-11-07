@@ -1,81 +1,79 @@
-# Prototype/ — 每轮小循环的最终反馈
+# Prototype/ — 小循环增量目录
 
-> 按 AGENTS.md 约定：`Prototype\` 放**可运行原型 + 说明 + 复现步骤 + 验证记录**，一个子目录 = 一轮小循环的增量。
-> 这里只放"给人看/给人跑"的交付快照；**代码在 `Tool/`，过程留痕在 `History/`，依赖在 `Workspace/`**。
+> 按 AGENTS.md §3.1 / §3.3：一个子目录 = 一个小循环的增量（`loopNN_<短名>/`），本文件是该目录的唯一索引。
+> 交付快照在此；代码在 `Tool/`，过程与循环日志在 `History/`，依赖在 `Workspace/`，素材在 `Material/`。
+> 回链：[AGENTS.md](../AGENTS.md) · [循环日志索引](../History/CircleLog/CircleLog.md) · [日志正文](../History/CircleLog/log.md)
 
-## 目录结构
+## 当前进度
 
-```text
-Prototype/
-├── README.md                      # 本文件：入口索引
-├── loop1_autocut/                 # 小循环 1：自动剪辑 + 成片交付
-│   ├── README.md                  # 说明：能力 / 结果 / 用法 / 限制 / 依赖
-│   ├── reproduce.ps1              # 一键复现（装 ffmpeg → 造用例 → 跑工厂 → 验收）
-│   ├── acceptance.md              # 两用例真值验收 + 成片质检汇总（自动生成）
-│   ├── case_A_synth/              # 合成素材（7 段含病态段）→ 成片 + EDL + 时间轴图 + 真值/验收
-│   └── case_B_real/               # 真实素材 BBB(CC-BY) + 已知废镜头 → 同上
-├── loop2_subtitles/               # 小循环 2：外语视频 → 中文字幕（含随剪辑重映射）
-│   ├── README.md                  # 说明：链路 / 结果 / 用法 / 机翻vs精译 / 限制
-│   ├── reproduce.ps1              # 一键复现（装 ASR 依赖 + 拉模型 + 全链路验收）
-│   ├── acceptance_mt.md           # 机翻版验收（全自动）
-│   ├── acceptance_polished.md     # 精译版验收（人工级译文，同时间轴）
-│   └── case_C_en2zh/              # 英→中：成片 ×2 + 双语 SRT + 识别稿 + 抽帧 + 验收数据
-├── loop3_real_speech/             # 小循环 3：真实素材（真人说话）验证 + 语音保护修复
-│   ├── README.md                  # 说明：素材来源 / 暴露的问题 / 修复 / 识别实况 / 建议
-│   ├── reproduce.ps1              # 一键复现（下素材 → 识别 → 带语音保护剪辑 → 字幕 → 验收）
-│   ├── acceptance.md              # reference-free 验收（真实素材无讲稿）
-│   └── case_D_sintel_en2zh/       # Sintel 预告片(CC-BY)：成片 + 双语 SRT + 识别稿 + 保护前后 EDL 对照
-├── loop4_multi_samples/           # 小循环 4：多样本英译中（真实影视 + 多口音 TTS）
-    ├── README.md                  # 说明：样本清单 / 三个关键发现 / 修掉的 bug / 建议
-    ├── reproduce.ps1              # 一键复现（装依赖 → 下素材 → 造 TTS 样本 → 批量验收 → 快照）
-    ├── acceptance.md              # 7 样本横向对比 + 逐句译文（自动生成）
-    ├── metrics.json               # 机器可读指标（每样本一行）
-    └── cases/<7 个样本>/          # 每样本：成片 + 双语 SRT + 抽帧 + 验收/质检数据
-├── loop5_karaoke_subs/            # 小循环 5：双语 + 随语流逐词彩色高亮字幕（karaoke）
-│   ├── README.md                  # 说明：技术路线 / 三个坑 / 客观验收 / 用法
-│   ├── acceptance.md              # 两用例验收数据（高亮存在/不重影/会移动）
-│   ├── reproduce.ps1              # 一键复现（生成 ASS → 烧入 → 像素级客观验收）
-│   ├── case_E_l2_karaoke/         # TTS 素材：逐词高亮 + 3 张不同词抽帧
-│   └── case_F_real3_karaoke/      # Sintel 真实素材：25 词 + 剪辑重映射后的时间轴
-├── loop6_text_quality/            # 小循环 6：字幕文本层（标点恢复 + 精译 + 阅读速度）
-    ├── README.md                  # 说明：根因/做法/三种变体对比/残留差距
-    ├── acceptance.md              # 自动验收（标点 F1、翻译缺陷、字幕回归）
-    ├── reproduce.ps1              # 一键复现
-    └── case_l2_textquality/       # 精译版样片 + 三种变体字幕 + 验收数据
-├── loop7_short_utterance/         # 小循环 7：真实影视"短句漏识"——一条被证伪的假设
-│   ├── README.md                  # 说明：假设/做法/为什么救不回来/落地了什么
-│   ├── acceptance.md              # 自动验收（预处理链收益 + 证伪证据 + 分桶）
-│   ├── reproduce.ps1              # 一键复现（下 TOS 电影+字幕 → 三支探针 → 验收）
-│   └── case_tos_short/            # 预处理链穷举 / 干净 TTS 对照 / 链穷举 / 分桶指标
-├── loop8_review_loop/             # 小循环 8：校对回写闭环（人改中文 → 回灌时间轴）
-    ├── README.md                  # 说明：为什么要有/两个工具/5 项硬判据/限制
-    ├── acceptance.md              # 自动验收（恒等回写/改动落点/拒绝危险输入/重渲染）
-    ├── reproduce.ps1              # 一键复现
-    └── case_l2_review/            # 校对表（改前/改后）、回写 cues、双语 SRT、成片
-├── loop9_long_video/              # 小循环 9：49 分钟长视频压测 + 术语一致性审计
-    ├── README.md                  # 说明：成本表 / 长片才暴露的 2 个 bug / 术语审计 / 限制
-    ├── acceptance.md              # 自动验收（7 阶段跑通、273 行回写恒等、术语审计回归）
-    ├── reproduce.ps1              # 一键复现（冷跑约 25 分钟）
-    └── case_long/                 # 273 行 cues / 校对表 / 术语审计 / 质检 / 抽帧
-├── loop10_karaoke_scale/          # 小循环 10：逐词高亮在 49 分钟上的规模验收
-    ├── README.md                  # 说明：事件数口径修正 / 两个坑 / 结论
-    ├── acceptance.md              # 自动验收（1030 事件、120s 烧入、像素抽检 12/12）
-    ├── reproduce.ps1              # 一键复现（依赖 loop9 产物，约 1 分钟）
-    └── case_long_karaoke/         # 长片 ASS / verify_karaoke / 120s 烧入样片
-└── loop11_knowledge_content/      # 小循环 11：知识型内容链路（分诊 + 数值单位规范化 + 术语候选）
-    ├── README.md                  # 说明：为什么这类内容更稳 / 三个工具 / 8 项验收 / 限制
-    ├── acceptance.md              # 自动验收（分诊、单位规范化幂等、中文单位、术语候选）
-    ├── reproduce.ps1              # 一键复现
-    └── case_l2_knowledge/         # 分诊结果 / 规范化前后双语 SRT 对照 / 术语候选
-├── loop12_market_loop/            # 小循环 12：市场 ↔ 工厂 闭环（侦查 → 开工 → 交付包 → 反馈机制）
-    ├── README.md                  # 说明：链路状态 / 侦查数据 / 交付包 / 反馈规则 / 挂账
-    ├── acceptance.md              # 自动验收（9 项：侦查/成片/双语/高亮/交付包/反馈诚实性）
-    ├── reproduce.ps1              # 一键复现（无需登录任何平台）
-    ├── case_market/               # B 站侦查报告（榜单 + 关键词市场）与反馈规则自检
-    └── case_ep01/                 # EP01 样片：成片 37s / 封面 / 双语 SRT / 高亮 ASS / 文案 / 质检
-```
+| 项 | 状态 |
+|---|---|
+| 大循环 | 进行中（人控） |
+| 增量 | 38 轮已记，37 个目录（loop24 未建目录） |
+| 最近一轮 | loop38 · 影零处决全量抽取：46 单位 1080p60 + 138 关键帧，已入库；720p60 合集已发布 |
+| 待人工确认 | ① #46 火海巨兽终局（带台词字幕）是否入库；② 迁出包 CutFactory 四项决定 |
+| 索引欠账 | 16 个 loop 目录尚无同名索引；日志编号条目只到小循环 31（见文末） |
 
-## 十二轮结果一览
+## 增量清单
+
+`loopNN` 即小循环号（AGENTS.md §2.1）。日志列直达 `log.md` 对应条目；标「缺」表示该轮尚无编号条目。
+
+| loop | 主题 | 日志 |
+|---|---|---|
+| 1 | 自动剪辑 + 成片交付（Auto-Edit） | [小循环 1](../History/CircleLog/log.md#loop1) |
+| 2 | 外语视频 → 中文字幕（含随剪辑重映射） | [小循环 2](../History/CircleLog/log.md#loop2) |
+| 3 | 真实外语素材验证 + 语音保护 | [小循环 3](../History/CircleLog/log.md#loop3) |
+| 4 | 多样本英译中（真实影视 + 多口音 TTS） | [小循环 4](../History/CircleLog/log.md#loop4) |
+| 5 | 双语 + 逐词彩色高亮字幕（karaoke） | [小循环 5](../History/CircleLog/log.md#loop5) |
+| 6 | 字幕文本层：标点恢复 / 精译 / 阅读速度 | [小循环 6](../History/CircleLog/log.md#loop6) |
+| 7 | 真实影视短句漏识（假设被证伪） | [小循环 7](../History/CircleLog/log.md#loop7) |
+| 8 | 校对回写闭环（人改中文 → 回灌时间轴） | [小循环 8](../History/CircleLog/log.md#loop8) |
+| 9 | 49 分钟长片压测 + 术语一致性审计 | [小循环 9](../History/CircleLog/log.md#loop9) |
+| 10 | 逐词高亮长片规模验收 | [小循环 10](../History/CircleLog/log.md#loop10) |
+| 11 | 知识型内容链路：分诊 + 单位规范化 + 术语候选 | [小循环 11](../History/CircleLog/log.md#loop11) |
+| 12 | 市场 ↔ 工厂闭环（侦查 → 样片 → 交付包 → 反馈） | [小循环 12](../History/CircleLog/log.md#loop12) |
+| 13 | 反馈时钟：不等市场投票，自造判卷 | [小循环 13](../History/CircleLog/log.md#loop13) |
+| 14 | 对标优化：名人 AI 演讲 × 双语高亮字幕 | [小循环 14](../History/CircleLog/log.md#loop14) |
+| 15 | 能力迁移：TalkFactory 独立包 | [小循环 15](../History/CircleLog/log.md#loop15) |
+| 16 | 能力打包迁移沉淀为 Skill | [小循环 16](../History/CircleLog/log.md#loop16) |
+| 17 | TED 演讲剪辑创新点调研 | [小循环 17](../History/CircleLog/log.md#loop17) |
+| 18 | P1–P5 并入摘要主链 + EP-A v2 成片 | [小循环 18](../History/CircleLog/log.md#loop18) |
+| 19 | B 站同赛道剪辑技术学习 | [小循环 19](../History/CircleLog/log.md#loop19) |
+| 20 | 「师夷长技」Skill | [小循环 20](../History/CircleLog/log.md#loop20) |
+| 21 | edit-craft-scouting 首跑：金句卡流派移植 | [小循环 21](../History/CircleLog/log.md#loop21) |
+| 22 | 跨内容域剪辑技术图谱 | [小循环 22](../History/CircleLog/log.md#loop22) |
+| 23 | 首部独立成片《光偷走的那两小时》 | [小循环 23](../History/CircleLog/log.md#loop23) |
+| 24 | （未建目录）loop18 结轮 + loop23 沉淀 | [小循环 24](../History/CircleLog/log.md#loop24) |
+| 25 | 剪辑强 UP 主技术成长路径图谱 | [小循环 25](../History/CircleLog/log.md#loop25) |
+| 26 | B 路径首作《AI工坊的一夜》 | [小循环 26](../History/CircleLog/log.md#loop26) |
+| 27 | 素材采集线 collect_material | [小循环 27](../History/CircleLog/log.md#loop27) |
+| 28 | 紫冥剑三招拆解（28b 逐帧慢放 / 28c 古谱纸笺 / 28d 动捕速率） | [小循环 28](../History/CircleLog/log.md#loop28) |
+| 29 | 细节取证 + 取证试片 | [小循环 29](../History/CircleLog/log.md#loop29) |
+| 30 | 幕后专访取证 | [小循环 30](../History/CircleLog/log.md#loop30) |
+| 31 | 双游戏武术演出量化对比 | [小循环 31](../History/CircleLog/log.md#loop31) |
+| 32 | 影之刃零动作单元拆解（武器-招式） | 缺 |
+| 33 | 镜头语言重加工实验（数字重摄影） | 缺 |
+| 34 | recam 重摄影工具化 | 缺 |
+| 35 | 对比剪辑流（vs_split） | 缺 |
+| 36 | 对比策展（完整处决单位） | 缺 |
+| 37 | 处决边界检测（exec_bound） | 缺 |
+| 38 | 影零处决全量抽取（1080p60） | 缺 |
+
+## 增量目录的标准形态
+
+- **早期（loop1–12）**：`README.md`（说明：能力 / 结果 / 用法 / 限制）+ `reproduce.ps1`（一键复现）+ `acceptance.md`（验收记录）+ `case_*/`（样例与产物）。
+- **后期（loop27 起）**：单索引 `loopNN_xxx.md`（按 §3.3），复现命令写进索引正文，不再单独放 README。
+- 两种形态的共同要求：**打开就能看到结论与关键数字**，而不是让人先跑一遍。
+
+## 索引欠账
+
+- 以下 16 个目录尚无同名索引或 README，按 §3.3 待懒迁移补齐：`loop14` `loop15` `loop18` `loop19` `loop21` `loop22` `loop23` `loop25` `loop26` `loop28` `loop30` `loop31` `loop34` `loop35` `loop36` `loop37`；
+- `loop24` 有日志条目、无目录（该轮为 loop18 结轮 + loop23 沉淀，未单独建目录）；
+- 日志编号条目只到小循环 31；`loop32–38` 这 7 轮记在日志的无编号表格块中，待补条目后回填上表。
+
+## 早期成果速览（轮次 1–12）
+
+> 仅覆盖最早 12 轮（当时的验收数据最完整）。`loop13` 之后的结果看各 loop 目录的索引。
 
 | 小循环 | 增量 | 关键结果 | 耗时 |
 | --- | --- | --- | --- |
@@ -92,7 +90,7 @@ Prototype/
 | 11（16:50–17:30） | **知识型内容链路**：内容分诊（`classify_content`）+ 数值单位规范化（`normalize_units`/`lib/units`）+ 术语候选（`term_candidates`） | 分诊 **l2=knowledge 0.95 / TOS=narrative 0.17**（配乐占比 0% vs 73%）；`minus sixty sixteen l u fs` → **−16 LUFS**、`15 Mbps`（幂等、不误伤 `two hours`）；中文侧统一且对照组拿不到；术语候选：长片 61 个 / l2 31 个 | ~40 min |
 | 12（18:05–19:25，**按人要求暂停**） | **市场 ↔ 工厂闭环**：B 站公开数据侦查 → 选题 → 37s 样片（合成口播+CC-BY 画面）→ 交付包 → 反馈追踪机制 | 侦查样本 **134 条**、关键词市场「编程教程 英文」前 8 条 **2517 万**播放；样片 **12/12 行双语 + 88 条高亮事件**、QA **PASS**、WER **9.5%**/覆盖 **100%**；交付包齐全（文案/标签/分区/上传清单/合规）；反馈器空表输出「待采集」、自检 4 条动作。**上架与真实反馈仍需人工** | ~80 min |
 
-验收记录分别在 `loop1_autocut/acceptance.md`、`loop2_subtitles/acceptance_*.md`、`loop3_real_speech/acceptance.md`、`loop4_multi_samples/acceptance.md`、`loop5_karaoke_subs/acceptance.md`、`loop6_text_quality/acceptance.md`、`loop7_short_utterance/acceptance.md`、`loop8_review_loop/acceptance.md`、`loop9_long_video/acceptance.md`、`loop10_karaoke_scale/acceptance.md`、`loop11_knowledge_content/acceptance.md`、`loop12_market_loop/acceptance.md`；循环摘要见 `History/CircleLog/log.md`，阶段总结见 `History/reports/progress_report_2026-10-30.md`。
+验收记录分别在 `loop1_autocut/acceptance.md`、`loop2_subtitles/acceptance_*.md`、`loop3_real_speech/acceptance.md`、`loop4_multi_samples/acceptance.md`、`loop5_karaoke_subs/acceptance.md`、`loop6_text_quality/acceptance.md`、`loop7_short_utterance/acceptance.md`、`loop8_review_loop/acceptance.md`、`loop9_long_video/acceptance.md`、`loop10_karaoke_scale/acceptance.md`、`loop11_knowledge_content/acceptance.md`、`loop12_market_loop/acceptance.md`；循环摘要见 [循环日志](../History/CircleLog/log.md)（索引：[CircleLog.md](../History/CircleLog/CircleLog.md)），阶段总结见 `History/reports/progress_report_2026-10-30.md`。
 
 ## 怎么跑（在仓库根执行）
 
