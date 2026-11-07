@@ -2,7 +2,7 @@
 
 > 按 AGENTS.md §3.1 / §3.3：一个子目录 = 一个小循环的增量（`loopNN_<短名>/`），本文件是该目录的唯一索引。
 > 交付快照在此；代码在 `Tool/`，过程与循环日志在 `History/`，依赖在 `Workspace/`，素材在 `Material/`。
-> 回链：[AGENTS.md](../AGENTS.md) · [循环日志索引](../History/CircleLog/CircleLog.md) · [日志正文](../History/CircleLog/log.md)
+> 回链：[AGENTS.md](../AGENTS.md) · [循环日志](../History/CircleLog/log.md)
 
 ## 当前进度
 
@@ -90,7 +90,7 @@
 | 11（16:50–17:30） | **知识型内容链路**：内容分诊（`classify_content`）+ 数值单位规范化（`normalize_units`/`lib/units`）+ 术语候选（`term_candidates`） | 分诊 **l2=knowledge 0.95 / TOS=narrative 0.17**（配乐占比 0% vs 73%）；`minus sixty sixteen l u fs` → **−16 LUFS**、`15 Mbps`（幂等、不误伤 `two hours`）；中文侧统一且对照组拿不到；术语候选：长片 61 个 / l2 31 个 | ~40 min |
 | 12（18:05–19:25，**按人要求暂停**） | **市场 ↔ 工厂闭环**：B 站公开数据侦查 → 选题 → 37s 样片（合成口播+CC-BY 画面）→ 交付包 → 反馈追踪机制 | 侦查样本 **134 条**、关键词市场「编程教程 英文」前 8 条 **2517 万**播放；样片 **12/12 行双语 + 88 条高亮事件**、QA **PASS**、WER **9.5%**/覆盖 **100%**；交付包齐全（文案/标签/分区/上传清单/合规）；反馈器空表输出「待采集」、自检 4 条动作。**上架与真实反馈仍需人工** | ~80 min |
 
-验收记录分别在 `loop1_autocut/acceptance.md`、`loop2_subtitles/acceptance_*.md`、`loop3_real_speech/acceptance.md`、`loop4_multi_samples/acceptance.md`、`loop5_karaoke_subs/acceptance.md`、`loop6_text_quality/acceptance.md`、`loop7_short_utterance/acceptance.md`、`loop8_review_loop/acceptance.md`、`loop9_long_video/acceptance.md`、`loop10_karaoke_scale/acceptance.md`、`loop11_knowledge_content/acceptance.md`、`loop12_market_loop/acceptance.md`；循环摘要见 [循环日志](../History/CircleLog/log.md)（索引：[CircleLog.md](../History/CircleLog/CircleLog.md)），阶段总结见 `History/reports/progress_report_2026-10-30.md`。
+验收记录分别在 `loop1_autocut/acceptance.md`、`loop2_subtitles/acceptance_*.md`、`loop3_real_speech/acceptance.md`、`loop4_multi_samples/acceptance.md`、`loop5_karaoke_subs/acceptance.md`、`loop6_text_quality/acceptance.md`、`loop7_short_utterance/acceptance.md`、`loop8_review_loop/acceptance.md`、`loop9_long_video/acceptance.md`、`loop10_karaoke_scale/acceptance.md`、`loop11_knowledge_content/acceptance.md`、`loop12_market_loop/acceptance.md`；循环摘要见 [循环日志](../History/CircleLog/log.md)，阶段总结见 `History/reports/progress_report_2026-10-30.md`。
 
 ## 怎么跑（在仓库根执行）
 
