@@ -733,3 +733,12 @@
 | 验证 | node --check 三文件通过；无参运行只打印用法、不误建目录；--dry-run 实测账本归位成功（371B 复制，原文件保留）、未写数据 |
 | 产物 | Tool/ops/{exec_extract,exec_bound,collect_feedback}.mjs + History/runs/feedback/feedback.csv（新账本位） |
 | 收束 | 待人反馈 |
+
+| 项 | 内容 |
+| --- | --- |
+| 初始目标 | 人问（2026-11-07 09:19）根目录 .wbapp_0xiB013vLX53EoXttRJu7F.genie 是什么；确认后处置 |
+| 查明 | 是发布应用的本地标记（appId ↔ localDir 映射，175B），由发布工具固定写在 workspace 根；内含本机绝对路径；该 app 已被复用三次（EP-A 摘要 v2 → loop35 对比片 → 处决合集），名字仍停留在最初 |
+| 动作 | .gitignore 增 `.wbapp_*.genie`（含说明）；`git rm --cached` 停止跟踪，本地文件保留 |
+| 结论 | 根目录恢复为 AGENTS.md + 7 个约定目录（.genie 与 .workbuddy 均为本机文件、不入库）；应用名漂移需在「设置—数据管理—应用」手动改为「影零处决合集」 |
+| 产物 | .gitignore + 本次提交 |
+| 收束 | 待人反馈：仍余 232 项 30fps 删除与 4 张 QC 图未处理 |
