@@ -692,3 +692,11 @@
 | 结论 | 影零词汇量 2.2 倍（5.0 vs 2.3 段/分）+ 强度谱宽（极强爆发 20×）+ 姿态堆料；明末属性堆料但可读率 100%（影零约 58%）；词汇量×可读率乘积接近 |
 | 产物 | loop31_compare/REPORT.md（含动作丰富度专项增补章节）+ labels_all2.jpg + sample_mm/yz.jpg |
 | 收束 | 人定向：将来影零研究主线=「动作丰富度 与 自然发力效果」，已写入 MEMORY.md |
+
+| 项 | 内容 |
+| --- | --- |
+| 初始目标 | 人指令（2026-11-07 08:11）：先不迁出；把 .workbuddy/skills 里的技能全部转移到 AGENTS.md 规定的技能目录 Skills/ |
+| 动作 | versus-edit 实体目录移入 Skills/；exec-extract 运行态与 Skills/ 归档态一致，删 .workbuddy 实体目录；删除 Skills/exec-extract/tool/exec_extract.mjs 副本（规则 6 违规修正，工具唯一真源=Tool/ops/）；为两者建目录联接（junction）挂回 .workbuddy/skills |
+| 结论 | 四技能（capability-packaging / edit-craft-scouting / essay-film-production / exec-extract / versus-edit 共 5 个）真源全部在 Skills/，.workbuddy/skills 全部为 junction，无复制分叉；SKILL.md 内嵌代码 7/12 行均为用法片段，合规 |
+| 产物 | Skills/{exec-extract,versus-edit}/（真源）+ .workbuddy/skills 两条新 junction + 本次提交 |
+| 收束 | 待人反馈：迁出包（CutFactory）方案 v2 仍在等三项决定（迁移方式/动作线源片/Material 副本清理） |
