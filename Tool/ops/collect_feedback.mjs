@@ -40,7 +40,8 @@ const args = process.argv.slice(2);
 const getOpt = (k, d) => (args.includes(k) ? args[args.indexOf(k) + 1] : d);
 const has = (k) => args.includes(k);
 
-const DEFAULT_CSV = 'Prototype/loop13_feedback_clock/feedback.csv';
+const DEFAULT_CSV = 'History/runs/feedback/feedback.csv';
+const LEGACY_CSV = 'Prototype/loop13_feedback_clock/feedback.csv';
 // 2026-11-01 起跟踪重投稿 BV1VRx16WEyn（tid=122 正确分区）；旧稿 BV1AaxC6hExH 已下架（62012）
 const DEFAULT_BVID = 'BV1VRx16WEyn';
 const DEFAULT_UID = '3747573749779036';
@@ -111,8 +112,15 @@ function parseDanmaku(xml) {
 }
 
 async function main() {
-  const csvRel = getOpt('--csv', DEFAULT_CSV);
+  // 账本位置不写死在工具里：--csv > 环境变量 FEEDBACK_CSV > 中性默认（History/runs/feedback/）
+  const csvRel = getOpt('--csv', process.env.FEEDBACK_CSV || DEFAULT_CSV);
   const csvAbs = path.resolve(ROOT, csvRel);
+  const legacyAbs = path.resolve(ROOT, LEGACY_CSV);
+  if (!fs.existsSync(csvAbs) && fs.existsSync(legacyAbs)) {
+    fs.mkdirSync(path.dirname(csvAbs), { recursive: true });
+    fs.copyFileSync(legacyAbs, csvAbs);
+    console.log(`[collect] 账本归位：${LEGACY_CSV} → ${csvRel}（原文件保留不删）`);
+  }
   const bvid = getOpt('--bvid', '') || findBvid(csvAbs);
   const uid = getOpt('--uid', DEFAULT_UID);
   const avgWatch = getOpt('--avg-watch', '');

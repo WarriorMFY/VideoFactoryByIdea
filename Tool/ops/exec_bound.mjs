@@ -3,7 +3,7 @@
  * exec_bound.mjs —— 处决单位边界检测器（loop37）
  *
  * 依据：处决动作是「起势 → 承（位移/蓄力）→ 转（命中，可多段）→ 合（收招回待机）」的完整单位，
- * 前后必然被「战斗待机/常规移动」的低运动段包围（见 Prototype/loop37_exec_bound/REPORT.md 调研）。
+ * 前后必然被「战斗待机/常规移动」的低运动段包围（依据见 Skills/exec-extract/SKILL.md「处决单位边界规则」节）。
  * 本工具用逐帧帧差（YDIF）包络自动找出「离开待机 → 连续动势 → 回到待机」的三段，给出边界提议。
  *
  * 用法：
@@ -161,7 +161,7 @@ const [mode, src, anchorsArg, outDirArg] = process.argv.slice(2);
 if (!mode || !src) { console.error('用法: node exec_bound.mjs probe <src> <t1,t2,..> [outDir] | apply <candidates.json> [out.json]'); process.exit(1); }
 
 if (mode === 'probe') {
-  const outDir = path.resolve(outDirArg || 'Prototype/loop37_exec_bound');
+  const outDir = path.resolve(outDirArg || 'Prototype/exec_bound_out');
   fs.mkdirSync(outDir, { recursive: true });
   const anchors = anchorsArg.split(',').map(Number);
   const dur = probeDur(src);

@@ -724,3 +724,12 @@
 | 口径 | 人选定「约束说明文档版」：只约束说明类文件（README/REPORT 并入同名索引），数据产物可留目录内；递归成立；存量懒迁移 |
 | 产物 | AGENTS.md 新增全局规则 7（含 5 条细则）+ 本次提交 |
 | 收束 | 待人反馈：建议以 loop38_exec_extract（刚触达，含 REPORT.md）作首个样板改造，待确认 |
+
+| 项 | 内容 |
+| --- | --- |
+| 初始目标 | 人质疑（2026-11-07 09:13）：Tool 为啥硬编码目录，工具应通用灵活 |
+| 核查 | 更正上轮夸大：全仓 Tool 无绝对路径（F:/ 0 处），12 工具统一用 import.meta.dirname 相对锚定 ROOT；真正写死 loop 名的**仅 3 处默认值**（collect_feedback 的 DEFAULT_CSV、exec_bound/exec_extract 的 outDir 兜底），其余为注释里的出处标注 |
+| 动作 | ① 三处默认值中性化：exec_extract → Prototype/exec_extract_out、exec_bound → Prototype/exec_bound_out、collect_feedback → History/runs/feedback/feedback.csv（优先级 --csv > FEEDBACK_CSV > 中性默认）；② 旧账本一次性归位（复制不删，打印提示）；③ 两处注释出处从 loop37 REPORT 改指 Skills/exec-extract/SKILL.md（规则 6：方法论真源在 Skills） |
+| 验证 | node --check 三文件通过；无参运行只打印用法、不误建目录；--dry-run 实测账本归位成功（371B 复制，原文件保留）、未写数据 |
+| 产物 | Tool/ops/{exec_extract,exec_bound,collect_feedback}.mjs + History/runs/feedback/feedback.csv（新账本位） |
+| 收束 | 待人反馈 |

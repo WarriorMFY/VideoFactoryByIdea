@@ -5,7 +5,7 @@
  * 目的：给定一部「处决合集/实机录制」源片，自动找出**所有**处决单位，
  *       按《处决单位边界规则》给出边界提议，并批量导出可入库素材（片 + 缩略图 + 清单）。
  *
- * 依据（Prototype/loop37_exec_bound/REPORT.md）：
+ * 依据（Skills/exec-extract/SKILL.md「处决单位边界规则」节）：
  *   处决五层：触发（R3/E 提示）→ 前摇（抓取/踉跄）→ 命中（顿帧/慢放/血雾）→ 收招 → 余韵（尸体落定/染色/站定）
  *   开始帧 = min(抓取发生, 提示出现)；结束帧 = min(角色待机, 尸体落定, 镜头切走) + 0~0.4s
  *   单位长度参考：快杀 2.5-3s / 标准 4.5-5.5s / 仪式级 8-11s
@@ -493,7 +493,7 @@ async function archiveToLibrary(cfgPath, opts) {
 const [mode, ...rest] = process.argv.slice(2);
 const arg = (k, d) => { const i = rest.indexOf(`--${k}`); return i >= 0 ? rest[i + 1] : d; };
 const positional = rest.filter((x, i) => !x.startsWith('--') && !(i > 0 && rest[i - 1].startsWith('--')));
-const outDir = positional[1] || 'Prototype/loop38_exec_extract';
+const outDir = positional[1] || 'Prototype/exec_extract_out';
 
 if (!mode) { console.error('用法: scan|sheets|strip|export（见文件头注释）'); process.exit(1); }
 
