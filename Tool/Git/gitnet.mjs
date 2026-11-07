@@ -18,7 +18,7 @@
  *      所以最坏等待是「45s × 端点数」，不会是几分钟。
  *   3. **不会挂起在凭据提示**：GIT_TERMINAL_PROMPT=0 / GCM_INTERACTIVE=never。
  *   4. **不污染仓库配置**：镜像只用于传输，clone 成功后 origin 改回规范地址。
- *   5. 子进程绝不用管道 stdio（本沙箱 spawnSync 默认 'pipe' 会 EPERM，见 Tool/env.md §二）。
+ *   5. 子进程绝不用管道 stdio（本沙箱 spawnSync 默认 'pipe' 会 EPERM，见 Tool/env/env.md §二）。
  *
  * 铁律：只操作本地仓库；push 只在人明确要求时用。
  */
@@ -141,7 +141,7 @@ function describeOrder(eps, state) {
 // ---------------------------------------------------------------- git 执行器
 
 let _cfgArgs = null;
-/** 固定一组传输配置；sslBackend=openssl 见 Tool/env.md §〇（Schannel 会 SEC_E_NO_CREDENTIALS） */
+/** 固定一组传输配置；sslBackend=openssl 见 Tool/env/env.md §〇（Schannel 会 SEC_E_NO_CREDENTIALS） */
 function baseGitConfig() {
   if (_cfgArgs) return _cfgArgs;
   const has = git(['config', '--get', 'http.sslBackend'], { hardMs: 8000, tag: 'cfg' });

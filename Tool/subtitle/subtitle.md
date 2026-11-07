@@ -117,7 +117,7 @@ node Tool\acceptance\verify_karaoke.mjs out\final.mp4 work\karaoke.ass --hl 33E6
 - Vosk 结果是逐段吐出的（`final_result()` 常为空），必须逐段收集 `result` 再按时间去重。
 - ASR 无标点：断句只能靠停顿，长句会带偏翻译 → 宁可多切、别合并。
 - 音频必须是 **16k 单声道裸 PCM**（WAV 头长度不固定，按 44 字节跳会读出垃圾）。
-- 字幕样式需 `FontName=SimHei`（中文），否则方块（见 [`../env.md`](../env.md)）。
+- 字幕样式需 `FontName=SimHei`（中文），否则方块（见 [`../env/env.md`](../env/env.md)）。
 - **识别工作目录必须每次独立**（`History/asr/.../.asr_work/<输出名>_<pid>/`）：曾固定用 `.asr_work/`，
   被 kill 的 job 留下的孤儿进程和新进程抢同一个 PCM，结果 33s 片子识别出 262s 的音频、字幕时间码静默错位。
   现在还会**校验抽音频时长与输入一致**（差 >2% 直接失败）。

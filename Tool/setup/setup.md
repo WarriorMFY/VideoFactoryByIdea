@@ -1,7 +1,7 @@
 # setup/ — 第一次跑要准备的东西
 
 > 只在**新机器**或**清空 Workspace 后**需要。全部脚本幂等：已装好的会跳过。
-> 依赖一律落在 `Workspace/deps/`（`ffmpeg/`、`asr/`、`node_modules/`），素材落 `Workspace/assets/`，缓存在 `Workspace/cache/`，都可随时删、不污染仓库、不装系统级软件（本机也装不了，见 [`../env.md`](../env.md)）。
+> 依赖一律落在 `Workspace/deps/`（`ffmpeg/`、`asr/`、`node_modules/`），素材落 `Workspace/assets/`，缓存在 `Workspace/cache/`，都可随时删、不污染仓库、不装系统级软件（本机也装不了，见 [`../env/env.md`](../env/env.md)）。
 
 ## 文件
 

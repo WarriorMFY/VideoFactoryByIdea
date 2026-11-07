@@ -49,7 +49,7 @@ copyFile(path.join(SRC, 'AGENTS.md'), 'AGENTS.md');
 
 // ---------- ③ Tool：链路精简版（32 文件） ----------
 const TOOL_FILES = [
-  'Tool/env.md',
+  'Tool/env/env.md',
   // lib
   'Tool/lib/ff.mjs', 'Tool/lib/srt.mjs', 'Tool/lib/units.mjs', 'Tool/lib/vosk.mjs', 'Tool/lib/pw.mjs', 'Tool/lib/lib.md',
   // subtitle

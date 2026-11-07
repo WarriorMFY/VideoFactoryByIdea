@@ -1,7 +1,7 @@
 /**
  * digest_v2.mjs — 摘要片 v2 剪辑语言（loop18，把 loop17 验证的 P1-P5 并入主链）
  *
- * 与 v1 的差异（调研依据 Prototype/loop17_edit_research/REPORT.md）：
+ * 与 v1 的差异（调研依据 Prototype/loop17_edit_research/loop17_edit_research.md）：
  *   P1 真机位片段：段=原片时间窗（trim）而非静帧 Ken Burns，ASL 从 85s 回到 ~5s 量级
  *   P2 硬切替代软溶解：concat 直切（无 xfade），切点全部可感知
  *   P3 冷开场 hook：spec.hook 强观点句前置，标题卡后移

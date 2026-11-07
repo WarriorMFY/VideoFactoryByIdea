@@ -1,7 +1,7 @@
 # Tool/ — 稳定脚本（入口，30 秒版）
 
 > 这里只放**沉淀后可复用的脚本与配置**。过程留痕在 `History/`，交付快照在 `Prototype/`，第三方依赖在 `Workspace/`。
-> 组织方式：**渐进式披露**——本文件只回答"我现在要干什么、该进哪个目录"；每个子目录有自己的 `.md` 讲细节；环境坑单独放在 `env.md`。
+> 组织方式：**渐进式披露**——本文件只回答"我现在要干什么、该进哪个目录"；每个子目录有自己的 `.md` 讲细节；环境坑单独放在 `env/env.md`。
 
 ## 五条最短路径
 
@@ -48,7 +48,7 @@ node Tool\Git\gitnet.mjs clone WarriorMFY/VideoFactoryByIdea
 | `ops/` | 要看市场、要交付、要发布、要追踪反馈、要定及格线 | [`ops/ops.md`](ops/ops.md) — `recon_bilibili`（B 站侦查）、`make_episode`（造样片素材）、`make_cover`（封面）、`publish_bilibili`（扫码登录/上传/填表/封面/投稿/回执）、`watch_feedback`（采集→诊断→规划一条龙：`collect_feedback` / `track_feedback` / `plan_next_loop`）、`collect_creator_stats`（平台判卷：完播率等，T+1）、`bench_peers`（赛道基线与新稿水位） |
 | `lib/` | 要改脚本的公共层 | [`lib/lib.md`](lib/lib.md) — 子进程调用封装（fd 重定向）、fontconfig、SRT/CSV/单位规范化 |
 | `Git/` | clone/pull 卡住、克隆第三方项目 | [`Git/Git.md`](Git/Git.md) — `gitnet.mjs`：端点学习 + 无进展看门狗 + 镜像回退 |
-| 环境约束 | 遇到"为什么跑不通" | [`env.md`](env.md) — 出网/管道/字体/模型源等实测坑 |
+| 环境约束 | 遇到"为什么跑不通" | [`env/env.md`](env/env.md) — 出网/管道/字体/模型源等实测坑 |
 
 **依赖落在哪**：`Workspace/deps/`（`ffmpeg/` 二进制、`asr/` 的 koffi/vosk/edge-tts + 模型、`node_modules/` 的 playwright），素材在 `Workspace/assets/`，下载缓存在 `Workspace/cache/`，运行时临时在 `Workspace/run/`（含 B 站登录态）。
 每层谁在用、删了怎么补 → [`../Workspace/README.md`](../Workspace/README.md)。
@@ -62,4 +62,4 @@ node Tool\Git\gitnet.mjs clone WarriorMFY/VideoFactoryByIdea
 4. **git 出网不稳，别手工干等**：`git clone/pull` 直连要 21–56s 才失败（TCP 通≠git 能跑），一律走
    `node Tool\Git\gitnet.mjs <clone|pull>`；镜像/端点学习/超时它都管了。
 
-细节、参数表、各脚本的坑 → 进对应子目录的 `.md`；环境类问题 → [`env.md`](env.md)。
+细节、参数表、各脚本的坑 → 进对应子目录的 `.md`；环境类问题 → [`env/env.md`](env/env.md)。

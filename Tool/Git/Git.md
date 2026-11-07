@@ -99,7 +99,7 @@ node Tool\Git\gitnet.mjs run -- -C . log --oneline -5
 | **硬超时** | 每个端点每次尝试都有上限，且会 `child.kill('SIGKILL')`（实测 3ms 生效）|
 | **不挂起等凭据** | `GIT_TERMINAL_PROMPT=0` + `GCM_INTERACTIVE=never`：没凭据就失败，不会停在 password 提示上 |
 | **不误杀慢镜像** | `http.lowSpeedLimit=1024` + `http.lowSpeedTime=90`。**别调回 20s**：镜像首字节可慢到 34s，20s 会把能用的镜像误杀（实测在 22.5s 把自己人杀了） |
-| **不用管道 stdio** | 全部 fd 重定向到文件（本沙箱 `spawnSync` 默认 pipe 会 `EPERM`，见 `Tool/env.md` §二）|
+| **不用管道 stdio** | 全部 fd 重定向到文件（本沙箱 `spawnSync` 默认 pipe 会 `EPERM`，见 `Tool/env/env.md` §二）|
 
 ## 7. 端点坏了怎么办
 

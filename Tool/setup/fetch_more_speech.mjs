@@ -2,7 +2,7 @@
 /**
  * fetch_more_speech.mjs — 小循环 4：多下几个「带英文人声」的公开素材做英译中测试
  *
- * 可用站点实测见 Tool/env.md §一：media.w3.org（0.5~5MB/s）与 test-videos.co.uk 可达，
+ * 可用站点实测见 Tool/env/env.md §一：media.w3.org（0.5~5MB/s）与 test-videos.co.uk 可达，
  * Wikimedia / HuggingFace / Internet Archive 全域不可达（所以只能用 Blender 开放电影体系）。
  * media.w3.org 目录列表返回 403（不能列目录），样本 URL 只能靠已知路径逐个试。
  *

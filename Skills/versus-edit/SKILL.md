@@ -37,7 +37,7 @@ node Tool/ops/vs_curate.mjs <candidates.json> [outDir]
 - 实战单位长度：快杀 2.5–3s / 标准 4.5–5.5s / 仪式级大招 8–11s。
 - 工具：`Tool/ops/exec_bound.mjs`（tblend difference YDIF 运动曲线提议边界 + 取证条带）；
   边界提议只做候选，**首尾帧必须人工目验**（曲线分不清"处决结束"和"下一个敌人走近"）。
-- 完整报告：Prototype/loop37_exec_bound/REPORT.md。
+- 完整报告：Prototype/loop37_exec_bound/loop37_exec_bound.md。
 
 ## 三、单人道快速流程（用户明确要最快出样片时）
 

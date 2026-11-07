@@ -26,7 +26,7 @@ const ok = (msg) => console.log('  ✓ ' + msg);
 console.log('[1] 结构');
 const MUST = [
   'AGENTS.md', 'README.md', '.gitignore', 'Idea/Idea.md',
-  'Tool/Tool.md', 'Tool/env.md',
+  'Tool/Tool.md', 'Tool/env/env.md',
   'Tool/lib/ff.mjs', 'Tool/lib/srt.mjs', 'Tool/lib/units.mjs', 'Tool/lib/vosk.mjs', 'Tool/lib/pw.mjs', 'Tool/lib/lib.md',
   'Tool/subtitle/asr_vosk.mjs', 'Tool/subtitle/estimate_offset.mjs', 'Tool/subtitle/align_script.mjs',
   'Tool/subtitle/build_zh_map.mjs', 'Tool/subtitle/merge_fragments.mjs', 'Tool/subtitle/make_subs.mjs',

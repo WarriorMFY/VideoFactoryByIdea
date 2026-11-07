@@ -107,7 +107,7 @@ node Tool/ops/exec_extract.mjs archive <catalog.json> [--clips clips1080p60] [--
 
 - 影之刃零处决合集全量清单：`Prototype/loop38_exec_extract/`（46 单位：仪式级 4/标准 28/快杀 14；5 个 verified + 41 个 cut-verified；目录索引见该目录下 `loop38_exec_extract.md`）
 - 已归档资产：`Material/library/`（源片 1 + 处决镜头 46 + 关键帧 138，tags 可检索；账本 `Material/manifest.jsonl`）
-- 边界规则完整论证：`Prototype/loop37_exec_bound/REPORT.md`
+- 边界规则完整论证：`Prototype/loop37_exec_bound/loop37_exec_bound.md`
 
 ### 60fps 源（帧级取证首选）
 
@@ -117,3 +117,61 @@ node Tool/ops/exec_extract.mjs archive <catalog.json> [--clips clips1080p60] [--
   60fps 上 `-ss` 精度 1/60s，边界对位更细
 - 导出跟随源帧率（不固定 -r），catalog.csv 会带 res/fps 字段；30→60 插帧（minterpolate）
   造假帧，取证禁用
+
+## 归档记录（原 `ARCHIVE.md` 正文）
+
+> 原 `ARCHIVE.md` 按 AGENTS §3.3（一个目录只留一个说明文件）并入本节，正文原样保留；仅「运行态位置」一句按现状更正（当时是目录副本的说法，现为 junction 同一份文件）。
+
+### 处决抽帧技能 · 归档
+
+**归档时间**：2026-11-07
+**版本**：v1.2（loop37 方法论 → loop38 工具化 → loop38 收尾补 60fps / 归档能力）
+**运行态位置**：`.workbuddy/skills/exec-extract/SKILL.md`（本目录为存档快照，改动请先改运行态再同步）
+
+#### 这套技能解决什么问题
+
+给定一部「处决合集 / 实机录制」源片，把它拆成**逐个完整的处决单位**（每个单位包含触发→前摇→命中→收招→余韵），
+并批量产出可入库的 1080p 片段、关键帧与清单。核心难点不是剪，而是**边界**：
+截短了会丢前摇和收招（loop36「完整性差」的根因），截长了会带进下一场战斗。
+
+#### 沉淀了什么
+
+| 内容 | 位置 |
+|---|---|
+| 处决单位边界规则（五层解剖 + 起止帧判据 + 单位长度参考） | `SKILL.md` §二 |
+| 两条流程：快剪集锦（切点分段）/ 长镜头实机（动势收敛） | `SKILL.md` §四 |
+| 碎片合并规则（<2.5s 必须上下文条带复核） | `SKILL.md` §五 |
+| 置信度分级（verified / cut-verified / auto / 存疑） | `SKILL.md` §六 |
+| 60fps 源与帧率纪律（大会员流、静默降级、禁插帧） | `SKILL.md` §九 |
+| 工具执行体（scan / sheets / strip / refine / export / archive） | `tool/exec_extract.mjs` |
+
+> **原文两处已过时，此处只加注、不改原文**：①「运行态位置」当时说本目录是副本——实际是 junction，两边同一份文件（loop39 已核实）；② 表中的 `§二/§四/§五/§六/§九` 是当时的章节序号，本文件现为具名小节（核心依据 / 流程 / 碎片合并规则 / 置信度分级 / 60fps 源）；③ `tool/exec_extract.mjs` 已按 §3.2 收敛到唯一真源 `Tool/ops/exec_extract.mjs`。
+
+#### 工具能力一览
+
+```bash
+node Tool/ops/exec_extract.mjs scan    <src> [outDir]            # 动势曲线 + 场景切点
+node Tool/ops/exec_extract.mjs sheets  <src> [outDir] --step 1   # 带时间码的秒级网格（人工枚举）
+node Tool/ops/exec_extract.mjs strip   <src> <t0> <t1> <n>       # 边界取证条带
+node Tool/ops/exec_extract.mjs refine  <catalog.json>            # 动势包络收敛（仅长镜头片）
+node Tool/ops/exec_extract.mjs export  <catalog.json> [dir] [1920x1080]
+node Tool/ops/exec_extract.mjs archive <catalog.json> [--clips --frames --src --source-url]
+```
+
+`export` 跟随源帧率、HUD 随分辨率等比缩放；`archive` 直接写 `Material/manifest.jsonl` 账本（按 sha256 去重，可重复执行）。
+
+#### 首个验证案例（loop38）
+
+- 源片：《👹 处决！处决！处决！》BV1ydx26rEWv（UP 余掌事），1080P60 / 173.035s / 10381 帧
+- 产出：46 个处决单位（仪式级 4 / 标准 25 / 快杀 17），46 条 1080p60 片段 + 138 张关键帧（起手/命中/收招）
+- 边界置信度：5 条逐帧 verified，41 条 cut-verified（边界=真实剪辑切点），1 条存疑（火海巨兽终局疑剧情演出）
+- 已知局限：该合集为快剪结构，源片在击杀后 0.1–0.2s 即切镜，**收招落地帧在源片里不存在**，无法补回；
+  需要完整收招的素材应换长镜头实机源
+
+#### 依赖
+
+- ffmpeg / ffprobe：`Workspace/deps/ffmpeg/`
+- 素材账本：`Material/manifest.jsonl`（与 `Tool/ops/collect_material.mjs` 同一格式）
+- 下游技能：`versus-edit`（对比剪辑流，处决单位边界规则为其对位前提）
+
+

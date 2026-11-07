@@ -213,9 +213,9 @@ Agent 的默认动作是**停在这里等人**，不替人做"这条经验值得
 | 抽帧拼图（普查 + 精选复核） | `Tool/ops/frame_sheet.mjs` |
 | 摘要/长片渲染主链（v1/v2） | `Tool/ops/make_digest.mjs`、`Tool/ops/digest_v2.mjs` |
 | 工具表与坑位清单 | `Tool/ops/ops.md` |
-| 手法分类与优先级矩阵（20 条） | `Prototype/loop17_edit_research/REPORT.md` |
+| 手法分类与优先级矩阵（20 条） | `Prototype/loop17_edit_research/loop17_edit_research.md` |
 | B站采样与下载脚本（待升格） | `History/loops/loop19/fetch_samples.mjs`、`History/loops/loop19/dl_bili.mjs` |
-| B站赛道研究实盘 | `Prototype/loop19_bilibili_study/REPORT.md` |
+| B站赛道研究实盘 | `Prototype/loop19_bilibili_study/loop19_bilibili_study.md` |
 | 静默截断事故复盘 | `History/loops/loop18/notes.md` |
 | Skill 写法范式对照 | `Skills/capability-packaging/SKILL.md` |
 

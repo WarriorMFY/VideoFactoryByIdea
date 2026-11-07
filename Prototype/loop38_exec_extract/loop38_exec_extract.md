@@ -1,6 +1,7 @@
 # loop38_exec_extract · 影零处决全量抽取（1080p60）
 
 上级：[`../`](../)（Prototype 实验区）｜方法论真源：[`Skills/exec-extract/SKILL.md`](../../Skills/exec-extract/SKILL.md)
+日志：`log.md` 暂无 loop38 条目（loop32–38 七轮历史欠账，见 [`Prototype.md` 待人工确认](../Prototype.md)），故本索引无 `#loop38` 回链——补录后再挂。
 
 用途：把影之刃零中式处决源片按「处决单位边界」全量抽出为独立片段 + 关键帧，并拼成可发布的合集示片。本目录是 loop38 一次实验的全部产物，不含工具实现（工具在 `Tool/ops/exec_extract.mjs`）。
 

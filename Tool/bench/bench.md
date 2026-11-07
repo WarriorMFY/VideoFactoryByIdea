@@ -38,5 +38,5 @@ node Tool\bench\make_l2_bench.mjs --voice en-GB-SoniaNeural --out History\bench\
 
 - **TTS 每句首尾自带约 0.8s 静音**，必须 `silenceremove` 再去测时长，否则"真值句时长"混入静音，覆盖率指标会虚低（实测从 82.9% 修到 99.8%）。
 - TTS 合成要**幂等**（`make_l2_bench.mjs` 会复用已存在的 mp3）：Edge TTS 偶发网络抖动，重跑时不该从零开始。
-- `anullsrc` 多段静音必须用不同标签（见 [`../env.md`](../env.md)）。
+- `anullsrc` 多段静音必须用不同标签（见 [`../env/env.md`](../env/env.md)）。
 - 合成素材里"黑场+静音""冻帧+静音"要成对设计，否则测不出"两路都无信息才剪"的分界。
