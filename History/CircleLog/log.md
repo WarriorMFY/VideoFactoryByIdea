@@ -700,3 +700,11 @@
 | 结论 | 四技能（capability-packaging / edit-craft-scouting / essay-film-production / exec-extract / versus-edit 共 5 个）真源全部在 Skills/，.workbuddy/skills 全部为 junction，无复制分叉；SKILL.md 内嵌代码 7/12 行均为用法片段，合规 |
 | 产物 | Skills/{exec-extract,versus-edit}/（真源）+ .workbuddy/skills 两条新 junction + 本次提交 |
 | 收束 | 待人反馈：迁出包（CutFactory）方案 v2 仍在等三项决定（迁移方式/动作线源片/Material 副本清理） |
+
+| 项 | 内容 |
+| --- | --- |
+| 初始目标 | 人指令（2026-11-07 09:01）：Material 目录添加到 AGENTS.md，只放索引链接 |
+| 动作 | AGENTS.md 规则 3 新增 `Material\` 条目（只放 manifest.jsonl 机器账 + INDEX-<主题>.md 人读索引，实体落 library/ 且 gitignore 排除）；原则口诀补「素材只留索引进 Material」；文件地图加一行 |
+| 结论 | 现有入库内容即符合新规：git 跟踪 Material 仅 3 个索引文件（INDEX-影零处决.md、briefs 简报、manifest.jsonl），library/inbox/quarantine 实体均在 .gitignore |
+| 产物 | AGENTS.md（3 处改动）+ 本次提交 |
+| 收束 | 待人反馈：迁出包四项决定仍挂起；237 项未提交改动与分支分叉未处理 |
