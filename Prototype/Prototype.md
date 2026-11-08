@@ -66,3 +66,4 @@
 | 39 | 仓库目录与循环日志协同管理 | 三段式写入 + 双链 + 校验器（E1 断链 0、W1 归零）；另附：`Prototype.md` 204→66 行只留进度与清单、`Idea/State.md` 独立成「走到哪」 | [小循环 39](../History/CircleLog/log.md#loop39) |
 | 40 | 仓库结构优化（索引规则补漏 + 存量清账） | §3.3 补适用范围与五类豁免；46 份 README/REPORT 正文零丢失并入同名索引（逐行核验 0 缺失）；E2 16→0、新增 E6/E7 全仓检查归零 | [小循环 40](../History/CircleLog/log.md#loop40) |
 | 41 | 先让 LLM 认识人（关于人的知识放哪、怎么更新） | `USER.md` 填为唯一真源 + `AGENTS §1.6` 定读取时机；另实测「上下文注入机制」（六层输入 / `read_when` 实证 / 4,137 次调用曲线：地板 34,582→峰值 215,336）；附带确定「留痕单一通道」并清空 `.workbuddy/memory/` | [小循环 41](../History/CircleLog/log.md#loop41) |
+| 42 | 处决速度表达语法 | 三档取向 × 三单位成片；**已沉淀技能 `Skills/exec-speed-grammar/`（只改速率）**；站点还原为无原声 BGM 版，原声试验留档；附评审页工具 Tool/review | [小循环 42](../History/CircleLog/log.md#loop42) |

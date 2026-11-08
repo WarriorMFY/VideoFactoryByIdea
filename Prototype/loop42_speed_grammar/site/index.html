@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>处决动作的多级镜头速度表达</title>
+<style>
+  :root{
+    --bg:#0a0908; --card:#141210; --card2:#1a1715; --line:#2a2521;
+    --tx:#ece7e1; --tx2:#8d8681; --gold:#c9a35a; --red:#d94f45; --green:#8aa15c;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--tx);font-family:system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;padding:0 20px 80px}
+  .wrap{max-width:1120px;margin:0 auto}
+  header{padding:56px 0 28px;border-bottom:1px solid var(--line);margin-bottom:36px}
+  .kicker{font-size:12px;letter-spacing:.22em;color:var(--gold);text-transform:uppercase;margin-bottom:14px}
+  h1{font-size:clamp(26px,4vw,40px);font-weight:650;letter-spacing:-.01em;line-height:1.2}
+  .sub{color:var(--tx2);font-size:15px;margin-top:12px;max-width:660px}
+  .meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+  .tag{font-size:12px;color:var(--tx2);border:1px solid var(--line);border-radius:999px;padding:4px 12px}
+  h2{font-size:15px;font-weight:600;letter-spacing:.06em;color:var(--tx2);margin:44px 0 16px;display:flex;align-items:center;gap:12px}
+  h2::after{content:"";flex:1;height:1px;background:var(--line)}
+  .hero{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  .poster{position:relative;cursor:pointer;aspect-ratio:16/9;background:#000;overflow:hidden}
+  .poster img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
+  .poster:hover img{transform:scale(1.02)}
+  .poster::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 50%,rgba(0,0,0,.15),rgba(0,0,0,.55));transition:opacity .3s}
+  .poster .play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:2;width:64px;height:64px;border-radius:50%;border:1px solid rgba(255,255,255,.5);background:rgba(10,9,8,.45);display:grid;place-items:center;backdrop-filter:blur(4px);transition:transform .25s,border-color .25s}
+  .poster:hover .play{transform:translate(-50%,-50%) scale(1.08);border-color:var(--gold)}
+  .poster .play svg{width:20px;height:20px;fill:var(--tx);margin-left:3px}
+  video{width:100%;display:block;background:#000;aspect-ratio:16/9}
+  .body{padding:18px 20px 20px}
+  .row{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+  .title{font-size:17px;font-weight:600}
+  .dur{font-size:12px;color:var(--tx2);font-variant-numeric:tabular-nums}
+  .desc{color:var(--tx2);font-size:13.5px;margin-top:8px}
+  .chain{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+  .step{font-size:11.5px;font-variant-numeric:tabular-nums;border-radius:6px;padding:3px 9px;background:var(--card2);border:1px solid var(--line);color:var(--tx2)}
+  .step.hit{color:#f0b8b3;border-color:#4a2522;background:#241312}
+  .step.fast{color:#c8d6a3;border-color:#333d26;background:#1a2015}
+  .step.slow{color:#b9c8dd;border-color:#2b3442;background:#171c24}
+  .dl{display:inline-flex;align-items:center;gap:7px;margin-top:16px;font-size:13px;color:var(--gold);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .2s}
+  .dl:hover{border-color:var(--gold)}
+  .dl svg{width:14px;height:14px;fill:currentColor}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:border-color .25s}
+  .card:hover{border-color:#3b342d}
+  .accentA{border-top:2px solid #7d8fa3}
+  .accentB{border-top:2px solid var(--red)}
+  .accentC{border-top:2px solid var(--gold)}
+  .accentD{border-top:2px solid var(--green)}
+  details{margin-top:40px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:0 20px}
+  summary{cursor:pointer;padding:18px 0;font-size:14px;color:var(--tx);font-weight:550;list-style:none;display:flex;justify-content:space-between;align-items:center}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"＋";color:var(--tx2);font-weight:400}
+  details[open] summary::after{content:"－"}
+  details ol{padding:0 0 20px 20px;color:var(--tx2);font-size:13.5px}
+  details li{margin-bottom:9px}
+  details li b{color:var(--tx);font-weight:550}
+  footer{margin-top:56px;padding-top:22px;border-top:1px solid var(--line);color:#6b6560;font-size:12px;line-height:1.8}
+  footer a{color:#8d8681}
+  code{font-family:ui-monospace,Consolas,monospace;font-size:11.5px;color:#9a938c}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="kicker">loop42 · 语法实验</div>
+    <h1>处决动作的多级镜头速度表达</h1>
+    <p class="sub">用同一批处决素材，验证「镜头分级 × 速度分层」能不能把力度演出来。三条合集均为「快杀 → 标准 → 仪式级」递进，只换速度策略。当前版本：无原声，主推合成 BGM 版。</p>
+    <div class="meta">
+      <span class="tag">3 个处决单位</span>
+      <span class="tag">1080p · 60fps</span>
+      <span class="tag">快杀 2.28s / 标准 3.65s / 仪式级 5.81s</span>
+      <span class="tag">源片《处决！处决！处决！》BV1ydx26rEWv</span>
+    </div>
+  </header>
+
+<h2>音乐版 · 主推</h2>
+  <div class="hero">
+    <div class="poster" data-src="media/b_bgm.mp4" data-poster="media/b_bgm.jpg">
+        <img src="media/b_bgm.jpg" alt="B 重击 + BGM 封面" loading="lazy">
+        <div class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+      </div>
+    <div class="body">
+      <div class="row">
+        <span class="title">B 重击 + BGM</span>
+        <span class="dur">13.82s</span>
+      </div>
+      <p class="desc">四级速度递进 + 120 BPM 鼓组：三个重击精确落在命中层起点，慢放窗内鼓点全部抽掉、只留低频——画面减速时听觉同步变空。</p>
+      <div class="chain"><span class="step">① 起手 1.0x</span><span class="step slow">② 蓄势 0.65x</span><span class="step hit">③ 命中 0.3x + 推近 + 拖影</span><span class="step fast">④ 余韵 1.8x</span></div>
+      <a class="dl" href="media/b_bgm.mp4" download="setB_重击_bgm.mp4">
+        <svg viewBox="0 0 24 24"><path d="M12 16l-6-6h4V4h4v6h4l-6 6zm-8 2h16v2H4z"/></svg>
+        下载原片 · 33.1 MB
+      </a>
+    </div>
+  </div>
+
+  <h2>三组取向对比</h2>
+  <div class="grid">
+
+    <div class="card accentA">
+      <div class="poster" data-src="media/a_restrained.mp4" data-poster="media/a_restrained.jpg">
+        <img src="media/a_restrained.jpg" alt="A · 克制 封面" loading="lazy">
+        <div class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+      </div>
+      <div class="body">
+        <div class="row">
+          <span class="title">A · 克制</span>
+          <span class="dur">11.30s</span>
+        </div>
+        <p class="desc">只有命中减速，不推近、无拖影。适合叙事片，重量感靠节奏差而非花招。</p>
+        <div class="chain"><span class="step">1.0x</span><span class="step">1.0x</span><span class="step hit">0.5x</span><span class="step fast">1.5x</span></div>
+        <a class="dl" href="media/a_restrained.mp4" download="setA_克制.mp4">
+        <svg viewBox="0 0 24 24"><path d="M12 16l-6-6h4V4h4v6h4l-6 6zm-8 2h16v2H4z"/></svg>
+        下载 · 29.6 MB
+      </a>
+      </div>
+    </div>
+
+    <div class="card accentB">
+      <div class="poster" data-src="media/b_heavy.mp4" data-poster="media/b_heavy.jpg">
+        <img src="media/b_heavy.jpg" alt="B · 重击 封面" loading="lazy">
+        <div class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+      </div>
+      <div class="body">
+        <div class="row">
+          <span class="title">B · 重击</span>
+          <span class="dur">13.82s</span>
+        </div>
+        <p class="desc">四级递进，命中推近一级加 3 帧拖影。重量感最强，也最容易过火。</p>
+        <div class="chain"><span class="step">1.0x</span><span class="step slow">0.65x</span><span class="step hit">0.3x</span><span class="step fast">1.8x</span></div>
+        <a class="dl" href="media/b_heavy.mp4" download="setB_重击.mp4">
+        <svg viewBox="0 0 24 24"><path d="M12 16l-6-6h4V4h4v6h4l-6 6zm-8 2h16v2H4z"/></svg>
+        下载 · 32.8 MB
+      </a>
+      </div>
+    </div>
+
+    <div class="card accentC">
+      <div class="poster" data-src="media/c_compress.mp4" data-poster="media/c_compress.jpg">
+        <img src="media/c_compress.jpg" alt="C · 抽时 封面" loading="lazy">
+        <div class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+      </div>
+      <div class="body">
+        <div class="row">
+          <span class="title">C · 抽时</span>
+          <span class="dur">9.22s</span>
+        </div>
+        <p class="desc">整体压缩，命中只微减速，余韵 2.5x 甩掉。集锦向，密度优先。</p>
+        <div class="chain"><span class="step">1.2x</span><span class="step">1.0x</span><span class="step hit">0.6x</span><span class="step fast">2.5x</span></div>
+        <a class="dl" href="media/c_compress.mp4" download="setC_抽时.mp4">
+        <svg viewBox="0 0 24 24"><path d="M12 16l-6-6h4V4h4v6h4l-6 6zm-8 2h16v2H4z"/></svg>
+        下载 · 26.4 MB
+      </a>
+      </div>
+    </div>
+
+  </div>
+
+  <h2>对照 · 单段细看（4 秒原型）</h2>
+  <div class="grid">
+
+    <div class="card">
+      <div class="poster" data-src="media/v2_annotated.mp4" data-poster="media/v2_annotated.jpg">
+        <img src="media/v2_annotated.jpg" alt="主提案 · 带镜标注 封面" loading="lazy">
+        <div class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+      </div>
+      <div class="body">
+        <div class="row">
+          <span class="title">主提案 · 带镜标注</span>
+          <span class="dur">4.25s</span>
+        </div>
+        <p class="desc">4 镜 4 速，每镜左上角标注层级与速度，读语法用。</p>
+        
+        <a class="dl" href="media/v2_annotated.mp4" download="u01_v2_annotated.mp4">
+        <svg viewBox="0 0 24 24"><path d="M12 16l-6-6h4V4h4v6h4l-6 6zm-8 2h16v2H4z"/></svg>
+        下载 · 9.7 MB
+      </a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="poster" data-src="media/v0.mp4" data-poster="media/v0.jpg">
+        <img src="media/v0.jpg" alt="对照 · 原样直出 封面" loading="lazy">
+        <div class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+      </div>
+      <div class="body">
+        <div class="row">
+          <span class="title">对照 · 原样直出</span>
+          <span class="dur">3.65s</span>
+        </div>
+        <p class="desc">未做任何速度处理的原始处决单位，比较基准。</p>
+        
+        <a class="dl" href="media/v0.mp4" download="u01_v0_baseline.mp4">
+        <svg viewBox="0 0 24 24"><path d="M12 16l-6-6h4V4h4v6h4l-6 6zm-8 2h16v2H4z"/></svg>
+        下载 · 7.0 MB
+      </a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="poster" data-src="media/v1_slow.mp4" data-poster="media/v1_slow.jpg">
+        <img src="media/v1_slow.jpg" alt="反例 · 整段 0.5x 封面" loading="lazy">
+        <div class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+      </div>
+      <div class="body">
+        <div class="row">
+          <span class="title">反例 · 整段 0.5x</span>
+          <span class="dur">7.30s</span>
+        </div>
+        <p class="desc">「只慢不放」：全程慢放把 3.65s 拖成 7.3s，重量感被摊薄，反而没有重击。</p>
+        
+        <a class="dl" href="media/v1_slow.mp4" download="u01_v1_uniform_slow.mp4">
+        <svg viewBox="0 0 24 24"><path d="M12 16l-6-6h4V4h4v6h4l-6 6zm-8 2h16v2H4z"/></svg>
+        下载 · 10.9 MB
+      </a>
+      </div>
+    </div>
+
+  </div>
+
+  <h2>留档 · 原声试验版（本轮不采用）</h2>
+  <div class="grid">
+
+    <div class="card">
+      <div class="poster" data-src="media/b_orig.mp4" data-poster="media/b_orig.jpg">
+        <img src="media/b_orig.jpg" alt="B 重击 · 源片原声 封面" loading="lazy">
+        <div class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+      </div>
+      <div class="body">
+        <div class="row">
+          <span class="title">B 重击 · 源片原声</span>
+          <span class="dur">13.84s</span>
+        </div>
+        <p class="desc">音效随镜头速度同步变速（atempo 保音高），命中窗峰值比起手窗高 6–8 dB。此路已撤回主推，仅留作日后做音效时的对照样本。</p>
+        
+        <a class="dl" href="media/b_orig.mp4" download="setB_重击_原声.mp4">
+        <svg viewBox="0 0 24 24"><path d="M12 16l-6-6h4V4h4v6h4l-6 6zm-8 2h16v2H4z"/></svg>
+        下载 · 33.1 MB
+      </a>
+      </div>
+    </div>
+
+  </div>
+
+  <details>
+    <summary>速度语法 · 七条（第八条原声结论留档，不在本版执行）</summary>
+    <ol>
+      <li><b>景别越近，速度越极端。</b>全景/中景层 1.0–1.8x 中性偏快，命中特写层 0.3x 极端慢放；速度差本身制造层级感。</li>
+      <li><b>慢放只给命中。</b>整段均匀慢放会把重量感摊薄——慢放必须稀缺。</li>
+      <li><b>慢→快的骤变借切点发生。</b>特写 0.3x 收在原生切点前，下一镜借同一切点跳全景并提速 1.8x：景别与速度同时反向跳变，鞭打感最烈。</li>
+      <li><b>余韵加速是清理。</b>收招站桩对表达无贡献，1.8–2.5x 压掉，把注意力还给下一刀。</li>
+      <li><b>变速窗口必须避开原生切点 ±2 帧。</b>升格段混入切后帧，会变成「特写框里的全景」跳变——速度越慢，错位放大越狠。</li>
+      <li><b>推近量随原片景别自适应。</b>原片已是特写时轻推（1536×864 窗），中景才推到 1280×720；一律重推会贴脸。</li>
+      <li><b>BGM 节奏与速度分层同构。</b>慢放窗抽掉鼓点只留低频，命中点放次低频冲击，形成「满→空→重击」循环。</li>
+      <li>（留档）<b>力度七成在音效。</b>原声命中窗比起手窗 RMS +6.1dB / Peak +7.6dB——本版不使用原声，此结论仅备查。</li>
+    </ol>
+  </details>
+
+  <footer>
+    实验产物，非成片。源片《👹 处决！处决！处决！》BV1ydx26rEWv（UP：余掌事），版权归原作者，此处按研究 / 评论引用。速度参数全部由本仓库工具链生成，可复现：<code>Prototype/loop42_speed_grammar</code>。
+  </footer>
+
+</div>
+<script>
+  document.querySelectorAll('.poster').forEach(el => {
+    el.addEventListener('click', () => {
+      const v = document.createElement('video');
+      v.src = el.dataset.src;
+      if (el.dataset.poster) v.poster = el.dataset.poster;
+      v.controls = true; v.autoplay = true; v.playsInline = true;
+      el.replaceWith(v);
+      v.play().catch(() => {});
+    }, { once: true });
+  });
+</script>
+</body>
+</html>

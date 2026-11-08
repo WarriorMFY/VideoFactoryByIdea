@@ -1,0 +1,57 @@
+{
+  "kicker": "loopNN · 简短轮次名",
+  "title": "页面大标题",
+  "lead": "一句话说清这轮在验证什么、怎么分组，人第一眼就该看懂。",
+  "tags": ["产物数量", "分辨率 · 帧率", "源片出处 / 授权方式"],
+  "heroKicker": "主推",
+  "hero": {
+    "file": "主推视频.mp4",
+    "slug": "hero_main",
+    "title": "主推条目名",
+    "posterAt": 0.95,
+    "desc": "为什么值得先看这条。数据支撑写在这里。",
+    "steps": [
+      { "text": "① 起手 1.0x" },
+      { "text": "② 蓄势 0.65x", "kind": "slow" },
+      { "text": "③ 命中 0.3x", "kind": "hit" },
+      { "text": "④ 余韵 1.8x", "kind": "fast" }
+    ]
+  },
+  "sections": [
+    {
+      "name": "分组名（对比 / 对照 / 单段细看 …）",
+      "items": [
+        {
+          "file": "A条目.mp4",
+          "slug": "a_case",
+          "title": "A · 某取向",
+          "posterAt": 1.0,
+          "accent": "A",
+          "desc": "这条的差异点与适用场景。",
+          "steps": [
+            { "text": "1.0x" },
+            { "text": "0.5x", "kind": "hit" }
+          ]
+        },
+        {
+          "file": "B条目.mp4",
+          "slug": "b_case",
+          "title": "B · 另一取向",
+          "posterAt": 2.0,
+          "accent": "B",
+          "desc": "同上。posterAt 不写则取 35% 处。"
+        }
+      ]
+    }
+  ],
+  "notes": {
+    "summary": "结论 / 语法 / 待确认事项",
+    "open": false,
+    "items": [
+      "<b>第一条结论。</b>解释与数据。",
+      "第二条。items 是 HTML 片段，可用 <b> 与 <code>。"
+    ]
+  },
+  "footer": "来源与授权声明。可复现路径：<code>Prototype/loopNN_xxx</code>。",
+  "shareLink": null
+}

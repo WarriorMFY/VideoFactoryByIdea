@@ -10,7 +10,8 @@
 | [capability-packaging](capability-packaging/SKILL.md) | 把一条已验证的能力链打包成可独立运行的目录包（三条硬判据 + 七步流程 + 七条静默失败坑） | 「打包出去 / 迁移到新目录 / 做成独立包」 | 175 行 + checklist |
 | [edit-craft-scouting](edit-craft-scouting/SKILL.md) | 感知平台内剪辑见长的作品 → 自研最小实验 → 工具化，含三判据选种与视野纪律 | 「学某个 UP/流派的剪辑技术 / 拆解剪辑手法」 | 234 行 + checklist |
 | [essay-film-production](essay-film-production/SKILL.md) | 散文影像生产：语音驱动时间轴、8 类技术落点、三级音频、版式卡三约束、QC 六组 | 「做一部独立短片 / 散文影像 / 无解说氛围片」 | 151 行 + spec-schema + qc-checklist |
-| [exec-extract](exec-extract/SKILL.md) | 从处决合集/实机源片全量抽取**完整处决单位**（五层解剖 + 边界判据 + 60fps 纪律 + 入库） | 「处决抽帧 / 抽处决 / 处决入库 / 处决切片」 | 137 行 |
+| [exec-extract](exec-extract/SKILL.md) | 从处决合集/实机源片全量抽取**完整处决单位**（五层解剖 + 边界判据 + 60fps 纪律 + 入库） | 「处决抽帧 / 抽处决 / 处决入库 / 处决切片」 | 178 行 |
+| [exec-speed-grammar](exec-speed-grammar/SKILL.md) | 对已切好的处决镜头**只改速率**：按层角色配速（1.0/0.65/0.3/1.8），三档取向 + 四查验收；音效/挑素材/重构图明确归他处 | 「速度语法 / 变速剪辑 / 慢放重击 / 速度分层 / speed ramp」 | 138 行 + recipes |
 | [versus-edit](versus-edit/SKILL.md) | 双源对比剪辑流：语义对位五维清单 + 扫描到出片的流程 + 版式选择 | 「做对比视频 / A vs B / 对位剪辑」 | 85 行 |
 
 ## 命名与发现机制
@@ -20,7 +21,7 @@
 - 细节点到为止，细节放 `references/`，SKILL.md 只留主干；
 - **自动发现的前提**：WorkBuddy 只扫 `.workbuddy/skills/`。本目录是版本化唯一真源，`.workbuddy/skills/<名>` 是指向本目录的**目录联接**（junction），同一份文件、无副本。**新增技能必须补一条同样的链接**，否则不会被加载。
 
-## 现有联接状态（2026-11-07 核对）
+## 现有联接状态（2026-11-08 核对）
 
 | 技能 | 联接 |
 |---|---|
@@ -28,6 +29,7 @@
 | edit-craft-scouting | ✅ |
 | essay-film-production | 本轮补齐（此前缺失，技能不会被自动发现） |
 | exec-extract | ✅ |
+| exec-speed-grammar | ✅ loop42 收工补齐（junction） |
 | versus-edit | ✅ |
 
 ## 校验

@@ -1,0 +1,98 @@
+{
+  "generatedAt": "2026-11-08T07:03:17.786Z",
+  "config": "F:\\AgentWorkArea\\WorkBuddy\\VideoFactory\\Prototype\\loop42_speed_grammar\\review.json",
+  "output": "F:\\AgentWorkArea\\WorkBuddy\\VideoFactory\\Prototype\\loop42_speed_grammar\\site",
+  "itemCount": 8,
+  "totalBytes": 191376019,
+  "shareLink": "https://epa-digest-v2-review.app.workbuddy.host/?sharecode=CSWHUE2KPA",
+  "items": [
+    {
+      "slug": "b_bgm",
+      "source": "setB_重击_bgm.mp4",
+      "link": "media/b_bgm.mp4",
+      "poster": "media/b_bgm.jpg",
+      "title": "B 重击 + BGM",
+      "duration": 13.816667,
+      "sizeBytes": 34696775,
+      "resolution": "1920x1080",
+      "linked": "hardlink"
+    },
+    {
+      "slug": "a_restrained",
+      "source": "setA_克制.mp4",
+      "link": "media/a_restrained.mp4",
+      "poster": "media/a_restrained.jpg",
+      "title": "A · 克制",
+      "duration": 11.3,
+      "sizeBytes": 31030913,
+      "resolution": "1920x1080",
+      "linked": "hardlink"
+    },
+    {
+      "slug": "b_heavy",
+      "source": "setB_重击.mp4",
+      "link": "media/b_heavy.mp4",
+      "poster": "media/b_heavy.jpg",
+      "title": "B · 重击",
+      "duration": 13.816667,
+      "sizeBytes": 34344880,
+      "resolution": "1920x1080",
+      "linked": "hardlink"
+    },
+    {
+      "slug": "c_compress",
+      "source": "setC_抽时.mp4",
+      "link": "media/c_compress.mp4",
+      "poster": "media/c_compress.jpg",
+      "title": "C · 抽时",
+      "duration": 9.216667,
+      "sizeBytes": 27684001,
+      "resolution": "1920x1080",
+      "linked": "hardlink"
+    },
+    {
+      "slug": "v2_annotated",
+      "source": "u01_v2_annotated.mp4",
+      "link": "media/v2_annotated.mp4",
+      "poster": "media/v2_annotated.jpg",
+      "title": "主提案 · 带镜标注",
+      "duration": 4.25,
+      "sizeBytes": 10162218,
+      "resolution": "1920x1080",
+      "linked": "hardlink"
+    },
+    {
+      "slug": "v0",
+      "source": "u01_v0_baseline.mp4",
+      "link": "media/v0.mp4",
+      "poster": "media/v0.jpg",
+      "title": "对照 · 原样直出",
+      "duration": 3.65,
+      "sizeBytes": 7329294,
+      "resolution": "1920x1080",
+      "linked": "hardlink"
+    },
+    {
+      "slug": "v1_slow",
+      "source": "u01_v1_uniform_slow.mp4",
+      "link": "media/v1_slow.mp4",
+      "poster": "media/v1_slow.jpg",
+      "title": "反例 · 整段 0.5x",
+      "duration": 7.3,
+      "sizeBytes": 11432283,
+      "resolution": "1920x1080",
+      "linked": "hardlink"
+    },
+    {
+      "slug": "b_orig",
+      "source": "setB_重击_原声.mp4",
+      "link": "media/b_orig.mp4",
+      "poster": "media/b_orig.jpg",
+      "title": "B 重击 · 源片原声",
+      "duration": 13.837696,
+      "sizeBytes": 34695655,
+      "resolution": "1920x1080",
+      "linked": "hardlink"
+    }
+  ]
+}
