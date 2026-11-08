@@ -27,7 +27,7 @@
 | 4 | 双语逐词高亮 | L3 | — | `subtitle/make_subs.mjs`（karaoke） | loop5 · loop10 | 词级时间来自 ASR，识别错则高亮错 |
 | 5 | 人工校对回写 | L3 | — | `subtitle/apply_review.mjs` | loop8 | 靠人改，无质量预估 |
 | 6 | 内容分诊 | L1 | — | `subtitle/classify_content.mjs` | loop11 | 启发式、单片段调参 |
-| 7 | 镜头重加工 | L2 | — | `ops/recam.mjs` | loop33 · loop34 | 单机位 2D，无真视差 |
+| 7 | 镜头重加工 | L2 | `exec-speed-grammar` · `exec-seam-stitch` | `ops/recam.mjs` | loop33 · loop34 · loop42 · loop43 | 单机位 2D，无真视差；速率与选序有判据，但推近量/转场/版式仍靠人判 |
 | 8 | 拆解与研究 | L2 | `exec-extract` | `ops/exec_bound.mjs` · `ops/exec_extract.mjs` | loop37 · loop38 | 提议需人眼复核；只覆盖动作/节奏 |
 | 9 | 对比剪辑 | L2 | `versus-edit` | `ops/vs_split.mjs` · `ops/vs_curate.mjs` | loop35 · loop36 | 只对位不给结论；差异未量化 |
 | 10 | 包装与交付 | L2 | `essay-film-production` | `ops/make_cover.mjs` · `ops/render_cards.mjs` · `ops/make_episode.mjs` | loop12 · loop15 · loop23 | 竖屏 / 多比例模板缺 |
@@ -35,7 +35,7 @@
 
 **读法与欠账**
 
-- **11 格里只有 3 格有判据出处**（第 8/9/10 格），另外 8 格的位置是宣称——没有一份文档写清"这一格怎么算达标"。
+- **11 格里只有 4 格有判据出处**（第 7/8/9/10 格），另外 7 格的位置是宣称——没有一份文档写清"这一格怎么算达标"。第 7 格是本轮新补的（loop42 `exec-speed-grammar` 管速率、loop43 `exec-seam-stitch` 管选序），此前为空。
 - `edit-craft-scouting` 与 `capability-packaging` 不在任何格子里：它们是**元技能**——一个管"怎么造新格子"（感知→自研实验→工具化），一个管"怎么把格子搬走"（打包成独立目录）。Skill 因此分两类：**格子技能**（某格判据）与**元技能**（怎么造格 / 怎么搬格）。
 - 通道上还**缺一格**：11 格全是加工（删、译、包、发），没有一格是"决定讲什么"。见建议走向 B。
 
