@@ -29,6 +29,17 @@
  *   6) 分区 .drop-list-v2-item 是单级（新版无二级），点击必须派发真实 MouseEvent；
  *   7) 封面的"完成"是 div.button.submit 不是 button；4:3 裁完还会弹 16:9 同步确认；
  *   8) "立即投稿"第一次点击可能被残留遮罩吃掉 → 用 bbox 中心发真实鼠标点击，再校验结果文案。
+ *   9) **创作声明是必填项（2026-11 实测）**：不传 --decl 时表单可填完、dry-run 也过（dry-run 不点投稿），
+ *      但真投稿会被「请添加创作声明」拦下，ok=false 且文案埋在页面 toast 文本里，只看 errors=[] 会误判。
+ *      常用值「内容无需标注」（无 AI 生成/无商业推广/无虚构演绎时选它），下拉选项按 .bcc-option 文本精确匹配。
+ *  10) **`delete` 命令已失效（2026-11 实测）**：`POST member.bilibili.com/x/web/archives/del` 返回 404 HTML
+ *      （接口改版）。且稿件管理页的 ⋮（.more-btn）click handler 在无头下无响应（DOM 零变化）。
+ *      可行路径：从行元素向上找 `__vue__`，调组件方法 `openDeleteBox()`（内部先 getArchiveDelRisk 再弹框）；
+ *      但确认环节触发**极验滑块**——不绕过验证码，改用 `Workspace/run/delete_bv_headful.mjs`
+ *      开有头窗口由人工拖滑块，脚本轮询列表检测删除完成。
+ *  11) **换号 = 换 profile 目录**（脚本硬编码 Workspace/run/bili_profile，无 --profile 参数）：
+ *      先把现有目录改名存档（如 bili_profile_B_326452892），再把目标号的 profile 复制/移动成 bili_profile；
+ *      换完先跑 `status` 核对 UID 再投稿。已知两个号：草履虫爱剪辑 3747573749779036 / 为做真实的自己许诺 326452892。
  *
  * 产物：History/publish/bilibili/runs/<时间戳>_<命令>/（截图 + 日志 + 回执），进 History 留痕；
  *       登录态（Playwright profile）留在 Workspace/run/bili_profile（临时、不入库）。

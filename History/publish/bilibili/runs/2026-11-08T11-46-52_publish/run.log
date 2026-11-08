@@ -1,0 +1,27 @@
+[11:46:53] 浏览器 msedge｜profile=F:\AgentWorkArea\WorkBuddy\VideoFactory\Workspace\run\bili_profile
+[11:46:53] 已登录 UID=326452892
+[11:47:01] 草稿恢复弹窗 → 选「不用了」（从空表单开始，避免串上次的标题/标签/多P）
+[11:47:01] 投稿页 file input × 3
+[11:47:01] 已挂载 final50_bgm.mp4（127.3MB），等转码/表单
+[11:47:01] 上传 0%  0.0MB/s
+[11:47:04] 上传 12%  4.6MB/s
+[11:47:07] 上传 37%  10.0MB/s
+[11:47:10] 上传 53%  7.2MB/s
+[11:47:13] 上传 71%  7.3MB/s
+[11:47:16] 上传 88%  7.2MB/s
+[11:47:19] 表单就绪（18s）
+[11:47:19] 标题 OK（24 字）
+[11:47:19] 简介 OK：最终老父亲选择给暴躁儿子去去火。52 秒，十连处决，一脚一脚踹到收尾。 【卡点处…
+[11:47:19] 标签第 1 轮：多余 [BGM,音乐,生活记录] 缺 [影之刃零,卡点处决,混剪,动作游戏,高能,游戏剪辑,去去火]
+[11:47:30] 标签 OK（7）：影之刃零 / 卡点处决 / 混剪 / 动作游戏 / 高能 / 游戏剪辑 / 去去火
+[11:47:30] 分区已是「游戏」
+[11:47:32] 封面已传入，等裁剪界面
+[11:47:36] 封面第 1 步：完成
+[11:47:39] 封面完成
+[11:47:39] 表单回读 {"title":"最终老父亲选择给暴躁儿子去去火｜影之刃零卡点处决","zone":"游戏","decl":null,"descLen":202,"coverSet":true}
+[11:47:40] 已点投稿
+[11:47:45] 诊断 tidRewrite: {}
+[11:47:45] 诊断 reqs: []
+[11:47:45] 诊断 add 相关请求: [{"url":"https://member.bilibili.com/x/vupre/web/archive/human/type2/list?t=1794138415848&x-bili-locale-json=%7B%22c_locale%22:%7B%22langua","status":200,"dur":48},{"url":"https://member.bilibili.com/x/vupre/web/archive/adorder/list?t=1794138415874&x-bili-locale-json=%7B%22c_locale%22:%7B%22language%2","status":200,"dur":134},{"url":"https://member.bilibili.com/x/vupre/web/archive/precheck?content=final50_bgm&check_item=1&t=1794138421166&x-bili-locale-json=%7B%2","status":200,"dur":49},{"url":"https://member.bilibili.com/x/vupre/web/archive/types/predict?t=1794138421167&x-bili-locale-json=%7B%22c_locale%22:%7B%22language%","status":200,"dur":192},{"url":"https://member.bilibili.com/x/vupre/web/archive/aicover/taskquery?cid=43437788183&filename=n261108s37ra4gv1qmy06218osj2tjnz&source","status":200,"dur":93},{"url":"https://cnsh-cos-upcdntx.esheep.com/ugcfxever/n261108s37ra4gv1qmy06218osj2tjnz.mp4.d/bfb00dc3-6d46-4a6a-b562-11784ca15fd3-1.part?X","status":200,"dur":4621},{"url":"https://member.bilibili.com/x/vupre/web/archive/videocheck?t=1794138425128&x-bili-locale-json=%7B%22c_locale%22:%7B%22language%22:","status":200,"dur":72},{"url":"https://member.bilibili.com/x/vupre/web/archive/types/upload?upload_id=326452892_1794138421036_8667&filename=n261108s37ra4gv1qmy06","status":200,"dur":57},{"url":"https://member.bilibili.com/x/vupre/web/archive/types/predict?t=1794138429938&x-bili-locale-json=%7B%22c_locale%22:%7B%22language%","status":200,"dur":389},{"url":"https://member.bilibili.com/x/vupre/web/archive/precheck?content=final50_bgm&check_item=2&t=1794138439289&x-bili-locale-json=%7B%2","status":200,"dur":46}]
+[11:47:45] 投稿返回 ok=false errors=[]
+[11:47:45] FATAL 投稿未成功，见截图/回执： 1。 191 /2000 定时发布 (可选择距离当前最早≥5分钟/最晚≤15天的时间，花火、预约、互动视频稿件不可修改/取消) 加入合集 合集功能可用于收集整理系列性稿件 开通合集功能需满足权益中心等级达Lv2，您可前往创作中心-权益中心查看相关数据 商业推广 增加商业推广信息 更多设置 （含声明与权益、视频元素、互动管理等） 存草稿 立即投稿 Σ( ° △ °|||) 请添加创作声明 遇到问题

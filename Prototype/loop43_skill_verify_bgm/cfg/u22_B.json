@@ -1,0 +1,10 @@
+{
+  "source": { "in": 0, "dur": 5.0 },
+  "out": { "w": 1920, "h": 1080, "fps": 60, "crf": 19 },
+  "shots": [
+    { "t": [0, 1.2],    "speed": 1.0,  "cam": { "type": "full" } },
+    { "t": [1.2, 2.0],  "speed": 0.65, "cam": { "type": "full" } },
+    { "t": [2.0, 2.6],  "speed": 0.3,  "cam": { "type": "full" } },
+    { "t": [2.6, 5.0],  "speed": 1.8,  "cam": { "type": "full" } }
+  ]
+}

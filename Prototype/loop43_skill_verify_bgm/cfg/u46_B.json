@@ -1,0 +1,11 @@
+{
+  "source": { "in": 0, "dur": 5.8, "file": "u46_ext.mp4" },
+  "out": { "w": 1920, "h": 1080, "fps": 60, "crf": 19 },
+  "shots": [
+    { "t": [0, 1.0],    "speed": 1.0,  "cam": { "type": "full" } },
+    { "t": [1.0, 1.8],  "speed": 0.65, "cam": { "type": "full" } },
+    { "t": [1.8, 2.3],  "speed": 0.3,  "cam": { "type": "full" } },
+    { "t": [2.3, 4.21], "speed": 1.8,  "cam": { "type": "full" } },
+    { "t": [4.21, 5.8], "speed": 1.0,  "cam": { "type": "full" }, "note": "finale：踹击完成+站立渐暗+「致命」字定格（源片 168.36-169.95，常速）" }
+  ]
+}

@@ -1,0 +1,29 @@
+[12:30:26] 浏览器 msedge｜profile=F:\AgentWorkArea\WorkBuddy\VideoFactory\Workspace\run\bili_profile
+[12:30:26] 已登录 UID=3747573749779036
+[12:30:41] 未见草稿恢复弹窗（干净进入）
+[12:30:41] 投稿页 file input × 3
+[12:30:41] 已挂载 final50_bgm.mp4（127.3MB），等转码/表单
+[12:30:41] 上传 0%  0.0MB/s
+[12:30:44] 上传 11%  1.8MB/s
+[12:30:47] 上传 31%  8.0MB/s
+[12:30:50] 上传 50%  8.2MB/s
+[12:30:53] 上传 69%  7.4MB/s
+[12:30:56] 上传 86%  7.3MB/s
+[12:30:59] 表单就绪（18s）
+[12:30:59] 标题 OK（24 字）
+[12:30:59] 简介 OK：最终老父亲选择给暴躁儿子去去火。52 秒，十连处决，一脚一脚踹到收尾。 【卡点处…
+[12:30:59] 标签第 1 轮：多余 [BGM,音乐,生活记录] 缺 [影之刃零,卡点处决,混剪,动作游戏,高能,游戏剪辑,去去火]
+[12:31:11] 标签 OK（7）：影之刃零 / 卡点处决 / 混剪 / 动作游戏 / 高能 / 游戏剪辑 / 去去火
+[12:31:11] 分区已是「游戏」
+[12:31:12] 创作声明 = 内容无需标注
+[12:31:15] 封面已传入，等裁剪界面
+[12:31:18] 封面第 1 步：完成
+[12:31:21] 封面完成
+[12:31:21] 表单回读 {"title":"最终老父亲选择给暴躁儿子去去火｜影之刃零卡点处决","zone":"游戏","decl":"内容无需标注","descLen":202,"coverSet":true}
+[12:31:22] 已点投稿
+[12:31:22] [net] add 请求 POST https://member.bilibili.com/x/vu/web/add/v3?web_location=333.1024&t=1794141082139&csrf=56111a1092fb7aa0a481be2
+[12:31:22] [net] add 请求体: {"cover":"https://archive.biliimg.com/bfs/archive/410f9dbe08064e114812b2560b06fa2ae671a6a0.jpg","cover43":"https://archive.biliimg.com/bfs/archive/b015c3b1fbe50b33f8a13d198bbb71dad547baca.jpg","ai_cover":0,"is_ab_cover":0,"ab_cover_info":null,"title":"最终老父亲选择给暴躁儿子去去火｜影之刃零卡点处决","copyright":3,"creation_statement":{"id":-1},"human_type2":1008,"tid":231,"tag":"影之刃零,卡点处决,混剪,动作游戏,高能,游戏剪辑,去去火","desc":"最终老父亲选择给暴躁儿子去去火。52 秒，十连处决，一脚一脚踹到收尾。\n\n【卡点处决原创】选序、变速、卡点全部自制——10 个处决单位拼成一条链，不加转场特效，接缝全靠尾手匹配；变速只改速率，不动画面。\n\nBGM：Volatile Reaction — Kevin MacLeod (incompetech.com)，CC BY 4.0\n\n一健三连，想看更长的合集评论区扣个 1。\n","dynamic":"","recreate":0,"interactive":0,"videos":[{"filename":"n261108s32x7lngnqd47ha2pxg7tr2tw","title":"最终老父亲选择给暴躁儿子去去火｜影之刃零卡点处决","desc":"","cid":43438837219}],"act_reserve_create":0,"act_reserve_cr
+[12:31:22] [net] add 响应 200: {"code":0,"message":"OK","ttl":1,"data":{"aid":117580819923099,"bvid":"BV1UpWJ6aEgM"}}
+[12:31:27] 投稿返回 ok=true errors=[]
+[12:31:31] 已上线 https://www.bilibili.com/video/BV1UpWJ6aEgM/
+[12:31:31] 回执 F:\AgentWorkArea\WorkBuddy\VideoFactory\History\publish\bilibili\runs\2026-11-08T12-30-25_publish\receipt.json

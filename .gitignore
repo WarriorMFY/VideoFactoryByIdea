@@ -57,3 +57,25 @@ History/runs/materials/_probe_*.log
 
 # 古谱生成原图（成品已裁剪入库，原图大且水印已除）
 Prototype/loop28_weapon_breakdown/plates_raw/
+
+# 探针逐帧原料（关键凭证 *_vstack.png / grid_*.png 已入库；逐帧图单张 1–3MB，可由 ffmpeg 按时间戳重抽）
+Prototype/**/probe/**/f_*.png
+Prototype/**/probe/**/[Ss][0-9]_[0-9]*.png
+
+# 尾手卡原始帧与带字中间件（编号网格 grid_tail/open.png 已入库，单帧由源片重抽）
+Prototype/loop43_skill_verify_bgm/probe/seam_lib/u*_open.png
+Prototype/loop43_skill_verify_bgm/probe/seam_lib/u*_tail.png
+Prototype/loop43_skill_verify_bgm/probe/seam_lib/tmp/
+
+# 评审站产物（媒体为硬链接，index.html / manifest 由 Tool/review/review_page.mjs 生成；线上另有链接）
+Prototype/**/site_*/
+
+# BGM 候选曲（外部素材，来源/授权/误差表已记 Tool/audio/audio.md 与报告，可再下载）
+Prototype/**/bgm_cand/
+
+# recam 中间构建目录（每条命令重建）
+Prototype/**/recam_build/
+
+# 封面底图与字体本地副本（底图从成片抽帧、字体从系统复制；成品 cover_A.* 入库）
+Prototype/loop43_skill_verify_bgm/cover/base_*.png
+Prototype/loop43_skill_verify_bgm/cover/simhei.ttf

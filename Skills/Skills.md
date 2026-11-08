@@ -12,6 +12,7 @@
 | [essay-film-production](essay-film-production/SKILL.md) | 散文影像生产：语音驱动时间轴、8 类技术落点、三级音频、版式卡三约束、QC 六组 | 「做一部独立短片 / 散文影像 / 无解说氛围片」 | 151 行 + spec-schema + qc-checklist |
 | [exec-extract](exec-extract/SKILL.md) | 从处决合集/实机源片全量抽取**完整处决单位**（五层解剖 + 边界判据 + 60fps 纪律 + 入库） | 「处决抽帧 / 抽处决 / 处决入库 / 处决切片」 | 178 行 |
 | [exec-speed-grammar](exec-speed-grammar/SKILL.md) | 对已切好的处决镜头**只改速率**：按层角色配速（1.0/0.65/0.3/1.8），三档取向 + 四查验收；音效/挑素材/重构图明确归他处 | 「速度语法 / 变速剪辑 / 慢放重击 / 速度分层 / speed ramp」 | 138 行 + recipes |
+| [exec-seam-stitch](exec-seam-stitch/SKILL.md) | 处决单位拼合集：**尾手卡选序**（尾帧×首帧姿态/色调相容矩阵）+ 硬切拼接 + 逐缝 ±2 帧验收，无缝三条件与接缝三级 | 「无缝衔接 / 处决合集 / 单位拼接 / 接缝跳感 / 选序」 | 130 行 |
 | [versus-edit](versus-edit/SKILL.md) | 双源对比剪辑流：语义对位五维清单 + 扫描到出片的流程 + 版式选择 | 「做对比视频 / A vs B / 对位剪辑」 | 85 行 |
 
 ## 命名与发现机制
@@ -29,6 +30,7 @@
 | edit-craft-scouting | ✅ |
 | essay-film-production | 本轮补齐（此前缺失，技能不会被自动发现） |
 | exec-extract | ✅ |
+| exec-seam-stitch | ✅ loop43 新建（junction） |
 | exec-speed-grammar | ✅ loop42 收工补齐（junction） |
 | versus-edit | ✅ |
 

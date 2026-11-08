@@ -48,6 +48,7 @@ node Tool\Git\gitnet.mjs clone WarriorMFY/VideoFactoryByIdea
 | `ops/` | 要看市场、要交付、要发布、要追踪反馈、要定及格线 | [`ops/ops.md`](ops/ops.md) — `recon_bilibili`（B 站侦查）、`make_episode`（造样片素材）、`make_cover`（封面）、`publish_bilibili`（扫码登录/上传/填表/封面/投稿/回执）、`watch_feedback`（采集→诊断→规划一条龙：`collect_feedback` / `track_feedback` / `plan_next_loop`）、`collect_creator_stats`（平台判卷：完播率等，T+1）、`bench_peers`（赛道基线与新稿水位） |
 | `check/` | 要自检：仓库有没有违规、技能有没有腐化、画面运动有没有退化 | [`check/check.md`](check/check.md) — `repo_sync_check`（日志/索引/清单三件套自洽）、`check_skill`（Skills 腐化检查）、`kb_audit`（Ken Burns 匀速度量）。**与 acceptance/ 的分界：acceptance 跑用例证明对，check 扫全量看坏没坏** |
 | `review/` | 要把本轮产物发给人看 / 给在线评审链接 | [`review/review.md`](review/review.md) — `review_page.mjs`（配置驱动生成单页评审站：自动探测时长、抽封面、硬链接、渲染；发布本身走 `workbuddy_sites_deploy`，需人工授权） |
+| `audio/` | 要动声音：补原声、BGM 卡点、混音 | [`audio/audio.md`](audio/audio.md) — `bgm_fit.mjs`（卡点对齐器：任意候选曲对成片命中点出误差表，选型判据可量化）。`rebuild_audio.mjs`（逐镜变速重建原声）暂在 `Prototype/loop42_speed_grammar/`，验证后迁入 |
 | `lib/` | 要改脚本的公共层 | [`lib/lib.md`](lib/lib.md) — 子进程调用封装（fd 重定向）、fontconfig、SRT/CSV/单位规范化 |
 | `Git/` | 准备提交、clone/pull 卡住、克隆第三方项目 | [`Git/Git.md`](Git/Git.md) — §0 本地提交纪律与核对（何时能提交见 AGENTS §1.4）；§1 起 `gitnet.mjs`：端点学习 + 无进展看门狗 + 镜像回退 |
 | 环境约束 | 遇到"为什么跑不通" | [`env/env.md`](env/env.md) — 出网/管道/字体/模型源等实测坑 |

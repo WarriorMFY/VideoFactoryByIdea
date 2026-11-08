@@ -1,0 +1,102 @@
+{
+  "kicker": "loop43 · 无缝衔接实验 + 两技能全量验收",
+  "title": "处决剪辑 · 50s 成片与验收报告",
+  "lead": "10 个单位按尾手卡选序拼成 51.13s 成片：冷绿开局、一路升温到火海收尾。9 条接缝零转场级，exec-speed-grammar 四查全过，exec-seam-stitch 逐缝取证。",
+  "tags": ["52.72s · 10 单位", "1920×1080 · 60fps", "9 接缝 / 12 命中点", "0.3x 占比 33.2%"],
+  "heroKicker": "主推",
+  "hero": {
+    "file": "final50_bgm.mp4",
+    "slug": "hero_final50_bgm",
+    "title": "final50 · BGM 版（主推，52.72s）",
+    "posterAt": 3.4,
+    "desc": "BGM：Volatile Reaction（Kevin MacLeod / CC BY 4.0），offset +0.240s 对齐。结尾已按人工反馈补 finale 段：u46 踹击完成→站立渐暗→「致命」书法字定格（源片 168.36–169.95 常速），成片以「致命」字收尾。",
+    "steps": [
+      { "text": "① 竹林开盘 1.0x" },
+      { "text": "② 蓄势 0.65x", "kind": "slow" },
+      { "text": "③ 命中 0.3x", "kind": "hit" },
+      { "text": "④ 收招 1.8x", "kind": "fast" }
+    ]
+  },
+  "sections": [
+    {
+      "name": "成片对照",
+      "items": [
+        {
+          "file": "final50_compile.mp4",
+          "slug": "final50_nobgm",
+          "title": "final50 · 无声版（52.72s）",
+          "posterAt": 3.4,
+          "accent": "A",
+          "desc": "同一条链的无音轨版本。垫原声或后期配音效时用这条——速度语法本身不含音效职责（音效与 BGM 归音频通道）。"
+        },
+        {
+          "file": "seam_match_v2_compile.mp4",
+          "slug": "v2_chain",
+          "title": "v2 链（前 5 单位，28.97s）",
+          "posterAt": 5.9,
+          "accent": "B",
+          "desc": "final50 的前段。首发无缝发现即在此链 S1（u05→u17 的原始版）位置复证；S4 暖系相接（u17→u39）为跳切反例的修正结果。"
+        },
+        {
+          "file": "seam_match_compile.mp4",
+          "slug": "v1_chain",
+          "title": "v1 链（留档，含反例缝，25.82s）",
+          "posterAt": 16.3,
+          "accent": "D",
+          "desc": "故意保留的证伪凭证：16.33s 处 u17→u11 是暖橙↔灰绿色调断裂的跳切缝，其速度曲线与无缝缝完全相同——反证「速度是必要非充分条件」。"
+        }
+      ]
+    },
+    {
+      "name": "新段单看（本轮的 5 个新单位）",
+      "items": [
+        {
+          "file": "out_u40_B.mp4",
+          "slug": "u40",
+          "title": "u40 · 红川染血（5.38s，0.3x 占 31.0%）",
+          "posterAt": 2.2,
+          "accent": "A",
+          "desc": "标准 4.80s 单镜，四层 1.0 / 0.9 / 0.5 / 2.4。白袍人物在红川中挥杀，命中窗收窄到 0.5s 以控慢放占比。"
+        },
+        {
+          "file": "out_u46_B.mp4",
+          "slug": "u46",
+          "title": "u46 · 火海巨兽终局（6.55s，含 finale 补帧）",
+          "posterAt": 2.1,
+          "accent": "C",
+          "desc": "全片收尾。前 4.97s 同旧版；新增 finale 段 1.59s 常速：踹击完成→站立渐暗→「致命」书法字定格。此前源片提取窗 4.21s 恰好把这段全截掉（loop38 曾记录「脚未落地属源片缺陷」，实为提取窗不足）。"
+        },
+        {
+          "file": "out_u41_B.mp4",
+          "slug": "u41",
+          "title": "u41 · 红川石阶（3.32s，0.3x 占 35.2%）",
+          "posterAt": 1.3,
+          "accent": "B",
+          "desc": "与 u40 同场景连续——这正是 S6 接缝被读作「同一空间的下一刻」的原因：同场景 + 同白袍人物，比色调匹配更强的判据。"
+        },
+        {
+          "file": "out_u45_B.mp4",
+          "slug": "u45",
+          "title": "u45 · 红室贯杀（2.73s，0.3x 占 36.5%）",
+          "posterAt": 1.0,
+          "accent": "D",
+          "desc": "快杀 2.28s，单出慢放占比超标（36.5%），进合集后被稀释回 34.2%——盲区④「快杀进合集稀释」判据的正面实测。"
+        }
+      ]
+    }
+  ],
+  "notes": {
+    "summary": "两技能全量验收读数 + BGM 结论 + 待确认",
+    "open": false,
+    "items": [
+      "<b>人工反馈修正（finale 补帧）：</b>u46 尾部原被 4.21s 提取窗截断——踹击完成后「站立渐暗 + 「致命」书法字」整段演出都没进片。从源片重提 5.80s 窗口，新增 finale 层（4.21–5.80 @1.0x 常速），成片以「致命」字定格收尾，总长 51.13 → 52.72s。",
+      "<b>exec-speed-grammar 四查全过。</b>时长：10 单位输出 vs 逐层理论值误差全部 ≤0.01s；接缝：9 缝全部取证；变速窗：10 单位 0 切点冲突；画面：0.3x 合集占比 <b>33.2% ≤ 35%</b>。",
+      "<b>exec-seam-stitch 9 缝零转场级。</b>S1/S2/S4 顺 · S3 良好 · S5/S7/S8/S9 弱匹配（同色系、明度有差）· S6 无缝~顺（红川同场景，白袍人物连续）。硬纪律核对：不加过渡特效（concat 直拼）、选序只认帧画面不认元数据。",
+      "<b>BGM 是尽力而为口径。</b>17 首候选实测，Volatile Reaction 最优：3/12 PASS（误差 27 / −11 / 20 ms），均值 176ms，最大 492ms。命中点间距互不成整数比（穷举 100–180 BPM 无公共拍长），任何固定 BPM 曲都追不上非线性变速时间轴——精确卡点须走音效补点。",
+      "<b>授权：</b>Volatile Reaction — Kevin MacLeod (incompetech.com)，CC BY 4.0，对外发布须署名；该曲有 YouTube Content ID 登记，商业发布建议换平台曲库曲目。",
+      "<b>待确认：</b>① 重点看 S5–S9 五条新缝的动态观感；② 4 个技能盲区是否修入 exec-speed-grammar；③ 音效补点路线是否启动。"
+    ]
+  },
+  "footer": "源片 46 单位（<code>Prototype/loop38_exec_extract/clips1080p60/</code>）· 复现：<code>Prototype/loop43_skill_verify_bgm/</code>（报告第九节）· 技能：<code>Skills/exec-speed-grammar</code> + <code>Skills/exec-seam-stitch</code>",
+  "shareLink": "https://epa-digest-v2-review.app.workbuddy.host/?sharecode=CSWHUE2KPA"
+}
