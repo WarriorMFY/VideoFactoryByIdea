@@ -27,7 +27,7 @@ node Tool/ops/exec_extract.mjs scan   <src> [outDir]        # 全片动势曲线
 node Tool/ops/exec_extract.mjs sheets <src> [outDir] [--step 1] --grid 5x4   # 带时间码缩略图网格（人工枚举）
 node Tool/ops/exec_extract.mjs strip  <src> <t0> <t1> <n> [--out x.png]      # 边界取证条带
 node Tool/ops/exec_extract.mjs refine <catalog_raw.json>               # 粗估→局部动势包络收敛（仅适合稀疏处决片）
-node Tool/ops/exec_extract.mjs export <catalog_final.json>             # 批量出片+缩略图+catalog.csv+index.html
+node Tool/ops/exec_extract.mjs export <catalog_final.json> [dir] [1920x1080]  # 目录可给绝对路径（loop44）
 ```
 
 ## 流程（按源片形态二选一）
@@ -78,6 +78,14 @@ node Tool/ops/exec_extract.mjs export <catalog_final.json>             # 批量�
 
 ## 产出物（export）
 
+**目录结构是技能的交付契约**（loop44 立规）：导出目录必须由 `uNN.mp4` + `uNN.jpg` + `uNN.ass`（每单位三件套）
+加根目录 `catalog.csv` + `index.html` 组成，`N = 单位数`，合计 `3N+2` 个文件。export 末尾自带**结构自检**：
+缺任何一项直接 throw（不许静默交付残缺目录），多余文件只告警。目标目录可用**绝对路径**（如
+`Material/<题材>/<素材类>`），相对路径按 catalog 所在目录解析。
+
+> 落地形态（目录形状、素材类注册表、入账方式）**只认** [`Material/docs/模板规范.md`](../../Material/docs/模板规范.md)；
+> 本文只管抽帧产出物的形状，两边冲突以它为准。合规自查：`node Tool/check/material_layout.mjs`。
+
 - `clips/uNN.mp4`：1280×720 / CRF18（export 第三参可指定分辨率与目录：`export <catalog> clips1080 1920x1080`，HUD 字号/边距随宽度等比缩放，1080p 时源片零缩放画质最佳） / **整幅原始构图**（默认不裁）/ 左上角编号+场景、右上角源时间码、底部节拍标注（ASS HUD）；`unit.crop:true` 时按 cropX/cropY 裁窗
 - `clips/uNN.jpg`：中位帧缩略图
 - `clips/catalog.csv`：id/kind/scene/move/t/dur/beat/note/res/fps/file（可直接导入资料库）
@@ -90,7 +98,7 @@ node Tool/ops/exec_extract.mjs archive <catalog.json> [--clips clips1080p60] [--
         [--src 源片] [--source-url 出处] [--attribution 署名] [--license 授权] [--bvid BV号] [--run 批次名]
 ```
 
-- 把 **原始源片 + 处决镜头片段 + 关键帧** 一并登记进 `Material/manifest.jsonl`，文件落到 `Material/library/{video,image}/`
+- 把 **原始源片 + 处决镜头片段** 登记进 `Material/manifest.jsonl`，实体落 `Material/<题材>/`（源片在题材层 `源片/`）；**不再落 `Material/library/`**（v1 起弃用扁平库），形状见 `Material/docs/模板规范.md`
 - 与 `collect_material.mjs register` 同一账本格式（id=sha256 前 10 位、tier=L0、ai_generated=false），
   `--source-url/--attribution/--license` 必须如实填，衍生素材的授权默认「版权归原作者 · 研究/评论引用」
 - **按 sha256 去重**，可重复执行（幂等）；回执写 `History/runs/materials/<run>.json`（新增/跳过/字节/错误明细）
@@ -106,7 +114,10 @@ node Tool/ops/exec_extract.mjs archive <catalog.json> [--clips clips1080p60] [--
 ## 已知资产
 
 - 影之刃零处决合集全量清单：`Prototype/loop38_exec_extract/`（46 单位：仪式级 4/标准 28/快杀 14；5 个 verified + 41 个 cut-verified；目录索引见该目录下 `loop38_exec_extract.md`）
-- 已归档资产：`Material/library/`（源片 1 + 处决镜头 46 + 关键帧 138，tags 可检索；账本 `Material/manifest.jsonl`）
+- 已归档资产（loop38，历史）：`library/` 平铺落位（源片 1 + 处决镜头 46 + 关键帧 138）；该批实体在 2026-11-08 素材库清理中丢失，
+  账本已重建为题材目录版（见下），关键帧尚未重建
+- **按题材归档（loop44 起）**：`Material/影之刃零/`（`源片/` 1 + `处决镜头/` 46 单位 140 文件，结构 = 本文「产出物」契约；
+  索引 `Material/影之刃零/影之刃零.md`）。新题材照此开目录，实体不入库、索引入库
 - 边界规则完整论证：`Prototype/loop37_exec_bound/loop37_exec_bound.md`
 
 ### 60fps 源（帧级取证首选）
@@ -163,7 +174,7 @@ node Tool/ops/exec_extract.mjs archive <catalog.json> [--clips --frames --src --
 #### 首个验证案例（loop38）
 
 - 源片：《👹 处决！处决！处决！》BV1ydx26rEWv（UP 余掌事），1080P60 / 173.035s / 10381 帧
-- 产出：46 个处决单位（仪式级 4 / 标准 25 / 快杀 17），46 条 1080p60 片段 + 138 张关键帧（起手/命中/收招）
+- 产出：46 个处决单位（仪式级 4 / 标准 28 / 快杀 14），46 条 1080p60 片段 + 138 张关键帧（起手/命中/收招）
 - 边界置信度：5 条逐帧 verified，41 条 cut-verified（边界=真实剪辑切点），1 条存疑（火海巨兽终局疑剧情演出）
 - 已知局限：该合集为快剪结构，源片在击杀后 0.1–0.2s 即切镜，**收招落地帧在源片里不存在**，无法补回；
   需要完整收招的素材应换长镜头实机源

@@ -1,4 +1,4 @@
-# check/ — 自检工具（查仓库 / 查技能 / 查画质）
+# check/ — 自检工具（查仓库 / 查技能 / 查素材库模板 / 查画质）
 
 > 一句话：**判断"当前状态合不合规、有没有退化"**的工具，只读、只报，不改任何文件。
 > 上级：[`../Tool.md`](../Tool.md)｜判据来源：[`../../AGENTS.md`](../../AGENTS.md) §2.5 / §3.2 / §3.3
@@ -20,12 +20,16 @@
 |---|---|---|---|
 | `repo_sync_check.mjs` | 仓库三件套自洽：日志条目 / 索引回链 / 目录清单行，外加时间线 | `AGENTS §2.5`（日志）、`§3.3`（索引） | `node Tool/check/repo_sync_check.mjs [--json] [--strict]` |
 | `check_skill.mjs` | `Skills/` 是否腐化：frontmatter 完整性（`name` / 带触发条件的 `description`）、引用的仓库路径是否还存在、有没有混入大段实现代码 | `AGENTS §3.2` | `node Tool/check/check_skill.mjs [--json]` |
+| `git_size.mjs` | 仓库体积体检（loop46）：把 HEAD 跟踪文件分 4 档（K 必留 / A 零风险中间件 / B 取证图 / C 素材成片），算「移出能省多少」；`--csv` 出明细、`--drop-list`/`--keep-list` 出 filter-repo 用的路径清单 | `History/runs/git-rewrite/git-rewrite.md` | `node Tool/check/git_size.mjs [--csv f] [--drop-list f] [--keep-list f]` |
+| `material_layout.mjs` | 素材库「入库目录模板」合规（v1，`kinds.json` 驱动）：`F1` 账本悬空 / `F2` 缺题材索引 / `F3` 不合 shape 声明 / `F4` 清单缺件或行数不符 / `F5` 缺核对页 / `F6` 题材层缺源片或命名不合规 / `F7` 有实体无账或 `path` 与字段不同源 / `F8` 账本字段越界 / `F9` 素材类未注册；告警 `W1` 规格或命名偏离、`W2` 缺 gitignore 排除、`W3` declared 类已有实体 | `Material/docs/模板规范.md` + `Material/kinds.json` | `node Tool/check/material_layout.mjs [--quiet] [--json]` |
 | `kb_audit.sh` | 摘要片/散文片的 **Ken Burns 运动是否匀速**：中部裁切采样 → 帧间差 YAVG → 剔除转场窗口 → 算 mean / sd / CV / 顿挫次数（**CV 越小越匀速**） | 无判据，是度量；对照值见 `History/loops/loop15/plan.md`（同源 sd=0.2952 ↔ 随包 0.2978） | `bash Tool/check/kb_audit.sh <video.mp4> [标签]`，**须在仓库根执行**（脚本内是 `Workspace/…` 相对路径） |
 
 ## 读数怎么用
 
 - `repo_sync_check`：错误码 `E1` 断链 / `E2` 缺索引 / `E3` 目录缺清单行 / `E4` 有日志无目录 / `E5` 有产出无记录 / `E6` 全仓缺同名索引 / `E7` 目录内第二份说明文件；告警 `W1` 长期进行中 / `W2` 索引缺回链 / `W3` git 晚于日志 / `W4` 深层待懒迁移。**退出码 1 = 有错误**，`--strict` 时告警也算失败，可直接进 CI。
 - `check_skill`：已知 6 条误报——它把 SKILL.md 里的代码片段/表头当成路径解析（loop40 记录在案）。改造前，误报按已知问题读，别当成技能坏了。
+- `git_size`：**只读**，不改 git 状态；只统计 HEAD 里的跟踪文件。重写历史后应显示「A/B/C 全 0」，出现非 0 就说明又有中间产物溜进跟踪区（漏了 `.gitignore`）。历史物体积另看 `git count-objects -vH`，本工具看不见。
+- `material_layout`：规则见 `Material/docs/模板规范.md`，错误码逐个处置见 `Material/docs/校验口径.md`，样板目录 `Material/影之刃零/`。**加新素材类只改 `kinds.json`，不改代码**。`F7`（有实体无账）是唯一能抓住「手放进去不登记」的检查，别关掉。
 - `kb_audit`：只在"同源对照"时可信（同一段素材、两个渲染版本比 sd）。跨片比绝对值没有意义，因为运动幅度本身不同。
 
 ## 为什么单独一层（落位由来）

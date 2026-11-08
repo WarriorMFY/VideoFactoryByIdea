@@ -16,7 +16,15 @@ import { createRequire } from 'node:module';
 import { ROOT } from './ff.mjs';
 
 export const WORKSPACE = path.join(ROOT, 'Workspace');
-export const PROFILE_DIR = path.join(WORKSPACE, 'run', 'bili_profile');
+/**
+ * 登录态目录。**账号分工（2026-11-08 人工定界）**：
+ *   采集（下载/取样）=「为做真实的自己许诺」UID 326452892 → BILI_PROFILE=Workspace/run/bili_profile_B_326452892
+ *   发布（投稿）      =「草履虫爱剪辑」      UID 3747573749779036 → 默认 Workspace/run/bili_profile
+ * 不设 BILI_PROFILE 时走默认目录（=发布号），保持既有调用不变。
+ */
+export const PROFILE_DIR = process.env.BILI_PROFILE
+  ? path.resolve(ROOT, process.env.BILI_PROFILE)
+  : path.join(WORKSPACE, 'run', 'bili_profile');
 
 /** 候选模块目录（按优先级） */
 export function moduleDirs() {

@@ -51,6 +51,9 @@ History/runs/feedback/latest.json
 Material/library/*
 Material/quarantine/*
 Material/inbox/*
+# 按题材归档的素材实体（loop44 起）：同样只入库索引（Material/<题材>/*.md），片段/源片不入库
+Material/影之刃零/*
+!Material/影之刃零/*.md
 
 # ffprobe 临时日志（每次运行重生成）
 History/runs/materials/_probe_*.log
@@ -79,3 +82,16 @@ Prototype/**/recam_build/
 # 封面底图与字体本地副本（底图从成片抽帧、字体从系统复制；成品 cover_A.* 入库）
 Prototype/loop43_skill_verify_bgm/cover/base_*.png
 Prototype/loop43_skill_verify_bgm/cover/simhei.ttf
+
+# 媒体中间产物整体不入库（loop46：历史重写后只留 K 级；取证图/关键帧/对照片/ASR 中间件一律由源片重抽）
+Prototype/**/*.png
+Prototype/**/*.jpg
+Prototype/**/*.jpeg
+History/**/*.png
+History/**/*.jpg
+!History/publish/**/*.png
+History/loops/**/*.mp4
+History/**/*.pcm
+History/**/*.raw
+Prototype/**/*.raw
+Prototype/**/.probe/

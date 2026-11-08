@@ -137,10 +137,15 @@ const SKIP_DIRS = new Set(['node_modules', '.git', '.workbuddy', 'Workspace', 'H
 const DEPTH_LIMIT = 2; // 1 = 顶层目录，2 = 二级目录；更深层只统计（W4）
 const deepLeftovers = [];
 
+const NAV_EXEMPT = new Set(['docs', '_template']); // 分册容器 / 骨架：不作为导航单元要求同名索引
 const allowedExtra = (dirName, fileName) => {
   if (fileName === 'SKILL.md') return true; // §3.2 技能说明优先于同名规则
   if (dirName === 'Idea' && fileName === 'State.md') return true; // §3.3 唯一例外
   if (dirName === 'Material' && /^INDEX-.+\.md$/.test(fileName)) return true; // 账本的人读视图
+  // Material/docs：按问题分册的容器（渐进式披露），分册本身就是索引，不再要求并成 docs.md
+  if (dirName === 'docs') return true;
+  // Material/_template：骨架（复制源，不是导航单元），只放模板文件
+  if (dirName === '_template') return true;
   return false;
 };
 
@@ -171,7 +176,8 @@ const walk = (dir, rel, depth) => {
     .filter((e) => e.isDirectory() && !SKIP_DIRS.has(e.name) && !e.name.startsWith('.'));
   const extra = extraMd(dir, name);
   if (depth <= DEPTH_LIMIT) {
-    const isNav = (subs.length > 0 || extra.length > 0) && hasDocWithin(dir, 2);
+    // docs/_template 不参与导航单元判定：前者由上级 Material.md 路由，后者是复制源
+    const isNav = !NAV_EXEMPT.has(name) && (subs.length > 0 || extra.length > 0) && hasDocWithin(dir, 2);
     if (isNav && !exists(path.join(dir, `${name}.md`)) && !exists(path.join(dir, 'SKILL.md'))) {
       errors.push({ code: 'E6', msg: `${rel}/ 是导航单元但缺同名索引（应有 ${name}.md 或 SKILL.md）` });
     }

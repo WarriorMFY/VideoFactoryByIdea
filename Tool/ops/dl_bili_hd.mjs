@@ -4,8 +4,11 @@
  *
  * 原理：从 Playwright 持久化 profile（Workspace/run/bili_profile）取 cookie，
  *       调 playurl?fnval=16(dash)&qn=80 → 分别下载 1080p 视频流 + 音频流 → ffmpeg mux。
- * 用法：node Tool/ops/dl_bili_hd.mjs BV1xxx out.mp4 [qn]
+ * 用法：node Tool/ops/dl_bili_hd.mjs BV1xxx out.mp4 [qn]      # 缺省 qn=116（1080p60）
  *       qn: 80=1080p 112=1080p+ 116=1080p60(需大会员) 120=4K
+ * 账号纪律（2026-11-08 人工定）：采集走「为做真实的自己许诺」，先设
+ *       BILI_PROFILE=Workspace/run/bili_profile_B_326452892；不设则落到发布号目录（错号）。
+ *       无大会员时 playurl 会静默降级成 30fps（坑40），本脚本会打印实际流分辨率/帧率作证。
  */
 import fs from 'node:fs';
 import path from 'node:path';
@@ -18,7 +21,7 @@ const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
 const FF = path.join(process.cwd(), 'Workspace/deps/ffmpeg/ffmpeg.exe');
 const [bvid, out, qnArg] = process.argv.slice(2);
 if (!bvid || !out) { console.log('用法: dl_bili_hd.mjs BV out.mp4 [qn=80]'); process.exit(2); }
-const QN = +(qnArg || 80);
+const QN = +(qnArg || 116);
 
 // 1) 从持久化 profile 取 cookie
 const { ctx } = await launchProfile({ headless: true });
@@ -47,6 +50,7 @@ const videos = dash.video.sort((a, b) => b.id - a.id);
 const v = videos.find(x => x.id <= QN) || videos[videos.length - 1];
 const a = dash.audio.sort((x, y) => y.bandwidth - x.bandwidth)[0];
 console.log(`视频流: id=${v.id} ${v.width}x${v.height} ${v.frameRate}fps ${(v.bandwidth / 1e6).toFixed(2)}Mbps`);
+if (v.id < QN) console.log(`  ⚠ 实际档位 id=${v.id} 低于请求 qn=${QN}（账号无更高权限，已静默降级）`);
 console.log(`音频流: id=${a.id} ${(a.bandwidth / 1e3).toFixed(0)}kbps`);
 
 // 流式下载 + backupUrl 回退 + 重试（大文件整块 arrayBuffer 易 ECONNRESET）

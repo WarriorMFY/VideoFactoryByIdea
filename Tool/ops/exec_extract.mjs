@@ -46,6 +46,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import { execSync } from 'node:child_process';
+import { classifyLicense } from '../lib/license.mjs';
 
 const ROOT = path.resolve(import.meta.dirname, '../..');
 const FF = path.join(ROOT, 'Workspace/deps/ffmpeg/ffmpeg.exe');
@@ -225,7 +226,9 @@ function exportUnits(cfgPath, outArg, sizeArg) {
   const cfg = JSON.parse(fs.readFileSync(cfgPath, 'utf8'));
   const base = path.dirname(path.resolve(cfgPath));
   const src = path.resolve(base, cfg.src);
-  const outDir = path.join(base, outArg || cfg.outDir || 'clips');
+  // 目标目录：绝对路径原样用（loop44 起支持导出到仓库外/素材库），相对路径按 catalog 所在目录解析
+  const outArgRaw = outArg || cfg.outDir || 'clips';
+  const outDir = path.isAbsolute(outArgRaw) ? path.normalize(outArgRaw) : path.join(base, outArgRaw);
   fs.mkdirSync(outDir, { recursive: true });
   const [W, H] = sizeArg ? sizeArg.split('x').map(Number) : (cfg.size || [1280, 720]);
   const vdim = execSync(`${j(FP)} -v quiet -select_streams v -show_entries stream=width,height -of csv=p=0 ${j(src)}`).toString().trim().split(',');
@@ -307,6 +310,24 @@ ${cards}
 </div></body></html>`, 'utf8');
 
   console.log(`\n导出 ${rows.length} 条 → ${outDir}\n清单: catalog.csv / index.html`);
+
+  // ---------- 结构自检（loop44）----------
+  // 技能对「产出目录结构」负责：每个单位必须三件套（mp4/jpg/ass），目录根必须有 catalog.csv + index.html。
+  // 少一项即 throw（不许静默交付一个结构残缺的目录），多出来的文件只告警不拦。
+  const expect = ['catalog.csv', 'index.html'];
+  for (const u of cfg.units) {
+    const id = String(u.id).padStart(2, '0');
+    expect.push(`u${id}.mp4`, `u${id}.jpg`, `u${id}.ass`);
+  }
+  const actual = fs.readdirSync(outDir).filter(f => !f.startsWith('.'));
+  const missing = expect.filter(f => !actual.includes(f));
+  const extra = actual.filter(f => !expect.includes(f));
+  if (missing.length) {
+    console.error(`\n[结构自检] 失败：缺 ${missing.length} 项 → ${missing.slice(0, 10).join(', ')}${missing.length > 10 ? ' …' : ''}`);
+    throw new Error(`导出目录结构不完整（缺 ${missing.length}/${expect.length} 项）`);
+  }
+  console.log(`[结构自检] 通过：${expect.length}/${expect.length} 项齐备（${cfg.units.length} 单位 × mp4/jpg/ass + catalog.csv + index.html）`);
+  if (extra.length) console.log(`[结构自检] 提示：目录内另有 ${extra.length} 个非清单文件（${extra.slice(0, 5).join(', ')}${extra.length > 5 ? ' …' : ''}）`);
 }
 
 // ---------- 边界收敛：粗估 → 局部动势包络 → 切点吸附 ----------
@@ -394,14 +415,28 @@ async function archiveOne(file, opts, known, stat) {
   if (known.has(sha)) return { skipped: '已入库', file };
   const isVideo = p.dur > 0 && /\.(mp4|webm|mov|mkv|avi)$/i.test(file);
   const type = isVideo ? 'video' : 'image';
-  const dir = path.join(MATERIAL, 'library', type);
-  fs.mkdirSync(dir, { recursive: true });
-  const dest = path.join(dir, `${sha.slice(0, 8)}_${slugify(path.basename(file, path.extname(file)))}${path.extname(file)}`);
-  fs.copyFileSync(file, dest);
+  // 两种落位：默认复制进 library/（sha 命名，扁平）；--in-place 只登记、实体留在原处
+  // （loop44 起material 按题材分目录，实体不再进 library，避免同一份东西存两遍）
+  let dest;
+  if (opts.inPlace) {
+    dest = path.resolve(file);
+  } else {
+    const dir = path.join(MATERIAL, 'library', type);
+    fs.mkdirSync(dir, { recursive: true });
+    dest = path.join(dir, `${sha.slice(0, 8)}_${slugify(path.basename(file, path.extname(file)))}${path.extname(file)}`);
+    if (path.resolve(dest) !== path.resolve(file)) fs.copyFileSync(file, dest);
+  }
+  const licenseText = opts.license || '版权归原作者 · 研究/评论引用（非商业）';
+  const lic = classifyLicense(licenseText);
   const entry = {
-    id: sha.slice(0, 10), need: opts.need || '', run_id: opts.runId, tier: 'L0',
+    id: sha.slice(0, 10), need: opts.need || '', run_id: opts.runId,
+    // tier 是「采集代价」而非「库存位置」：外部版权片按授权类别落 L2，不再硬写 L0
+    tier: opts.tier || lic.tier,
+    // 四个定位字段：题材 / 素材类 / 单位号 / 场景与招式（原先都塞进 tags，查询没有稳定语义）
+    topic: opts.topic || '', kind: opts.kind || '', unit: opts.unit || '',
+    scene: opts.scene || '', move: opts.move || '',
     type, source: opts.source || 'bilibili-derivative', source_url: opts.sourceUrl || '', file_url: '',
-    license: opts.license || '版权归原作者 · 研究/评论引用（非商业）', license_raw: opts.attribution || '',
+    license: licenseText, license_class: lic.cls, license_raw: opts.licenseRaw || '',
     attribution: opts.attribution || '',
     width: p.w, height: p.h, duration: isVideo ? (p.dur || null) : null, codec: p.codec,
     bytes: fs.statSync(file).size, sha256: sha, path: path.relative(MATERIAL, dest).replace(/\\/g, '/'),
@@ -426,9 +461,10 @@ async function archiveToLibrary(cfgPath, opts) {
   // 1) 原始源片
   const srcFile = path.resolve(base, opts.src || cfg.src);
   const srcEntry = await archiveOne(srcFile, {
-    need: `${pack}·处决原始素材`, runId: opts.runId, source: 'bilibili',
-    sourceUrl: opts.sourceUrl, attribution: opts.attribution, license: opts.license,
-    tags: ['处决素材', pack, '源片', opts.resTag || '1080p60', opts.bvid || ''],
+    need: `${pack}·处决原始素材`, runId: opts.runId, inPlace: opts.inPlace, source: 'bilibili',
+    sourceUrl: opts.sourceUrl, attribution: opts.attribution, license: opts.license, licenseRaw: opts.licenseRaw,
+    topic: pack, kind: '源片',
+    tags: [pack, opts.resTag || '1080p60', opts.bvid || ''].filter(Boolean),
     note: `原始处决合集源片（${opts.bvid || ''}），本库全部处决镜头的母带`,
   }, known, stat);
   log.push(['源片', srcFile, srcEntry]);
@@ -441,9 +477,10 @@ async function archiveToLibrary(cfgPath, opts) {
       const id = String(u.id).padStart(2, '0');
       const f = path.join(clipsDir, `u${id}.mp4`);
       const r = await archiveOne(f, {
-        need: `${pack}·处决镜头`, runId: opts.runId,
-        sourceUrl: opts.sourceUrl, attribution: opts.attribution, license: opts.license,
-        tags: ['处决镜头', pack, u.kind || '未分级', u.scene || '', `u${id}`, '1080p60'],
+        need: `${pack}·处决镜头`, runId: opts.runId, inPlace: opts.inPlace,
+        sourceUrl: opts.sourceUrl, attribution: opts.attribution, license: opts.license, licenseRaw: opts.licenseRaw,
+        topic: pack, kind: '处决镜头', unit: `u${id}`, scene: u.scene || '', move: u.move || '',
+        tags: [pack, '处决镜头', u.kind || '未分级', '1080p60'].filter(Boolean),
         note: `#${id} ${u.scene || ''} · ${u.move || ''} · 源 [${u.t.toFixed(2)}, ${(u.t + u.dur).toFixed(2)}] ${u.dur.toFixed(2)}s`,
       }, known, stat);
       if (r?.skipped) stat.skip++;
@@ -462,9 +499,10 @@ async function archiveToLibrary(cfgPath, opts) {
       for (const ph of ['a', 'b', 'c']) {
         const f = path.join(framesDir, `u${id}_${ph}.png`);
         const r = await archiveOne(f, {
-          need: `${pack}·处决镜头帧`, runId: opts.runId,
-          sourceUrl: opts.sourceUrl, attribution: opts.attribution, license: opts.license,
-          tags: ['处决帧', pack, phase[ph], u.scene || '', `u${id}`, '1080p60'],
+          need: `${pack}·处决镜头帧`, runId: opts.runId, inPlace: opts.inPlace,
+          sourceUrl: opts.sourceUrl, attribution: opts.attribution, license: opts.license, licenseRaw: opts.licenseRaw,
+          topic: pack, kind: '关键帧', unit: `u${id}`, scene: u.scene || '', move: u.move || '',
+          tags: [pack, '关键帧', phase[ph], '1080p60'].filter(Boolean),
           note: `#${id} ${u.scene || ''} · ${phase[ph]}帧 @ ${tOf[ph].toFixed(2)}s · ${u.move || ''}`,
         }, known, stat);
         if (r?.skipped) stat.skip++;
@@ -516,9 +554,11 @@ if (mode === 'scan') {
     sourceUrl: arg('source-url', ''),
     attribution: arg('attribution', ''),
     license: arg('license', ''),
+    licenseRaw: arg('license-raw', ''),
     bvid: arg('bvid', ''),
     fps: Number(arg('fps', 0)),
     runId: arg('run', `exec_archive_${new Date().toISOString().replace(/[-:T]/g, '').slice(0, 14)}`),
+    inPlace: rest.includes('--in-place'),
   });
 } else {
   console.error('未知模式', mode);

@@ -31,6 +31,7 @@ import path from 'node:path';
 import { Readable } from 'node:stream';
 import { fileURLToPath } from 'node:url';
 import { ROOT, ffprobeJson } from '../lib/ff.mjs';
+import { classifyLicense } from '../lib/license.mjs';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const MATERIAL = path.join(ROOT, 'Material');
@@ -91,14 +92,7 @@ function resolveNeed(need) {
 }
 
 /* ---------------- 授权分类 ---------------- */
-function classifyLicense(s) {
-  const t = String(s || '').toLowerCase();
-  if (/public domain|publicdomain|cc0|cc 0|pdm|pd\b/.test(t)) return { cls: 'PD/CC0', tier: 'L1' };
-  if (/^cc[ -]by$|cc by [1-4]/.test(t) || /attribution[ ]*[1-4]/.test(t)) return { cls: 'CC BY', tier: 'L1' };
-  if (/nc|nd|non-free|fair use|©|copyright/.test(t)) return { cls: 'REVIEW', tier: 'L2' };
-  if (!t) return { cls: 'UNKNOWN', tier: 'L2' };
-  return { cls: t.toUpperCase(), tier: 'L2' }; // 其余（CC BY-SA 等共享边界）保守进 L2
-}
+// 实现抽到 ../lib/license.mjs（单一真源：exec_extract 也调它，判据见 Material/docs/授权与可发布.md）
 
 /* ---------------- 通用 fetch + 重试 ---------------- */
 async function jget(url, timeoutMs = 15000) {

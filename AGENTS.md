@@ -187,7 +187,7 @@
 | `History\` | 放过程留痕、日志、实验记录、机器产物（含 `CircleLog\log.md` 循环日志） |
 | `Tool\` | 放沉淀后的稳定脚本与配置（`Tool\Tool.md`） |
 | `Skills\` | 放可复用的方法论与作业流程（`SKILL.md` + `references/`）。**只写流程与判据，不复制工具实现**——分工、命名、自动发现见 §3.2 |
-| `Material\` | 放**本地素材**：源片、片段、关键帧。**实体只在磁盘、不入库**；入库的只有账本与人读索引。账本格式、去重、索引约定见 [`Material/Material.md`](Material/Material.md) |
+| `Material\` | 放**本地素材**：源片、片段、关键帧。**实体只在磁盘、不入库**；入库的只有账本、注册表与索引。入口 [`Material/Material.md`](Material/Material.md)，账本字段 / 目录形状 / 授权与校验见 `Material/docs/` 六册 |
 | `Workspace\` | 放临时工作区：第三方项目、依赖、缓存、临时脚本、数据集；可随时清理 |
 
 > **原则**：临时进 `Workspace\`，过程进 `History\`，反馈进 `Prototype\`，稳定进 `Tool\`，方法论进 `Skills\`，素材进 `Material\`（本地存放，不入库）。

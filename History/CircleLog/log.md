@@ -1038,3 +1038,41 @@
 | 待人工（收工后） | ① B 号旧稿 BV1qTWJ6kEuy 仍在线上，建议手机 App「创作中心→稿件管理」删除（App 端无滑块）；② 4 个 speed 技能盲区是否修入 `exec-speed-grammar/SKILL.md`；③ 发布后播放/完播数据待观察（`node Tool/ops/watch_feedback.mjs`） |
 | 增补动作 22 | 收工核对发现一处欠账并补正：`Idea/State.md` 通道第 7 格「镜头重加工」判据列原为「—」，而 loop42 的 `exec-speed-grammar`（只改速率）与 loop43 的 `exec-seam-stitch`（尾手选序）正是该格判据——补齐判据与凭证（loop42·loop43），堵点改写为「速率与选序有判据，推近量/转场/版式仍靠人判」；读法段「3 格有判据」同步改为 4 格。这符合 §1.2 的准入判据（动了某格的判据与堵点） |
 | 增补产物 16 | `Idea/State.md`（第 7 格补判据，有效判据格 3→4） |
+
+<a id="loop44"></a>
+
+## 小循环 44 · 素材仓库整理（处决镜头按 clips1080p60 结构落进 Material）
+
+| 项 | 内容 |
+| --- | --- |
+| 开始时间 | 2026-11-08 22:45 |
+| 初始目标 | 人指令（22:36）「更改目标，整理素材仓库，参考 `Prototype/loop38_exec_extract/clips1080p60` 的目录结构，调用处决抽取技能，对 BV1ydx26rEWv 进行提取，**一定保证最终目录结构与 clips1080p60 一致，如果无法保证需要修改处决抽取技能**，最后所有镜头保存到 `Material/影之刃零/处决镜头`」。判据三条：① 目标目录结构逐项对齐参考目录；② 走 `exec-extract` 技能而非手工复制；③ 技能给不出该结构就改技能 |
+| 结束结果 | 进行中 |
+| 结束时间 | 2026-11-08 22:58 |
+| 结束结果 | **判据 1/2/3 全过，待人工验收。** ① 结构一致：目标目录 140 文件 vs 参考 140，文件名集合完全相同，46 条片段 1920×1080@60fps 全同、时长最大差 0.000s，抽检 6 个文件（mp4/jpg/ass/csv/html）md5 逐字节相同；② 全程走 `exec-extract` 技能（复用 loop38 已核验的 46 单位边界，本轮执行导出+归档）；③ 技能改了 3 处才给得出该结构（绝对输出目录 / 导出后结构自检 `3N+2` / 归档 `--in-place`）。另顺带处理了素材库被清空后的账本悬空（见下） |
+| 动作 | ① 读参考目录与技能，定位到 `exportUnits` 用 `path.join(base, outArg)` 解析目标目录——绝对路径在 Windows 上会拼坏，这是"导不进 Material"的根因；② 改 exportUnits：绝对路径原样用；③ 加结构自检（缺项 throw）；④ 改 archive 支持 `--in-place`（只登记不复刻，避免题材目录 + library 双份）；⑤ 跑 export（46 单位 × 1080p60，6m32s，`[结构自检] 通过：140/140`）；⑥ 写 `probe/structure_diff.mjs` 比对两份目录（名称集合 + 逐片段 ffprobe + md5 抽检）；⑦ 源片 224MB 从 `Workspace/tmp` 复制进 `Material/影之刃零/源片/`（tmp 会被清）；⑧ 账本：备份 → 移除 185 条处决主题悬空记录 → 9 条外部素材标 `missing` → `archive --in-place` 重建 47 条；⑨ 新建 `Material/影之刃零/影之刃零.md` 索引，`Material.md` 目录表/存量/主题索引/铁律 4 同步；⑩ `.gitignore` 加 `Material/影之刃零/**`（只放索引入库）；⑪ 顺手修 SKILL.md 里与 catalog 对不上的分级数字（标准 25/快杀 17 → 28/14） |
+| 产物 | [`Prototype/loop44_material_lib/loop44_material_lib.md`](../../Prototype/loop44_material_lib/loop44_material_lib.md) · `structure_diff.md`（结构/哈希比对结论）· `probe/structure_diff.mjs` · **`Material/影之刃零/处决镜头/`**（140 文件）· `Material/影之刃零/源片/BV1ydx26rEWv_yzl_exec_1080p60.mp4` · `Material/影之刃零/影之刃零.md` · `History/runs/materials/loop44_exec_archive.json`（回执）· 改动的工具 `Tool/ops/exec_extract.mjs` / `Tool/lib/pw.mjs` / `Tool/ops/dl_bili_hd.mjs` / `Tool/ops/ops.md` / `Skills/exec-extract/SKILL.md` |
+| 人工反馈 | 22:38「所有素材采集都要使用『为做真实的自己许诺』账号，默认为 1080p 60fps，发布走『草履虫爱剪辑』账号」→ 落为 `Tool/ops/ops.md` 的「账号分工（硬约束）」+ `Tool/lib/pw.mjs` 读 `BILI_PROFILE` 环境变量（不设则回默认发布号目录）+ `dl_bili_hd.mjs` 缺省 qn 改 116、降级时告警。**实测采集号 qn=116 返回 quality=116，dash 有 1920×1080@60 三档 → 该纪律可执行**（uid 326452892） |
+| 待人工 | ① `Material/library|briefs|inbox|quarantine` 在 22:30 前后被清空（非本轮动作），若为误删需要你确认是否从回收站/备份恢复；② 9 条外部素材记录标了 `missing`，要不要按 `file_url` 重采；③ 关键帧 138 张是否也要按同样规则落进 `Material/影之刃零/`（本轮只落了镜头与源片） |
+| 增补动作（模板沉淀） | 22:54 人指令「`Material/影之刃零/处决镜头` 是以后素材入库的模板目录，把相关规则沉淀到素材库相关文档」。重读现场发现两处变化：① 人已把 `源片/` 移进 `处决镜头/` 里（模板形状定为「素材类目录内含源片」）；② `Material/manifest.jsonl` 已被删除（连同上一段善后的 56 条）。处置：① 按实际目录用 `archive --in-place` 重建账本（47 条，源片路径改为 `影之刃零/处决镜头/源片/…`）；② 重写 `Material/Material.md`——新增「入库目录模板（定版）」树状图 + 素材类硬规则 7 条 + 入库五步 + 铁律扩到 6 条（新增「实体搬动必须改账本」「一层题材一层素材类」）；③ `影之刃零/影之刃零.md` 改写为模板样板（源片移到目录树内）；④ 新增校验器 `Tool/check/material_layout.mjs`（F1 账本悬空 / F2 缺题材索引 / F3 断号与三件套缺件 / F4 清单缺件或行数不符 / F5 缺核对页 / F6 源片缺失或命名无 BV 号 / F7 有实体无账；W1 母版非 1080p60 / W2 缺 gitignore 排除），首跑 `✓ 全部合规`；⑤ `Tool/check/check.md` 登记该工具，`Skills/exec-extract/SKILL.md` 加一句「落地形态只认 Material.md，冲突以它为准」 |
+| 增补产物（模板沉淀） | [`Material/Material.md`](../../Material/Material.md)（入库模板 + 硬规则 + 五步）· [`Material/影之刃零/影之刃零.md`](../../Material/影之刃零/影之刃零.md)（样板索引）· [`Tool/check/material_layout.mjs`](../../Tool/check/material_layout.mjs) · `Tool/check/check.md` · `.gitignore`（`Material/影之刃零/*` + `!…/*.md`）· `Material/manifest.jsonl`（47 条重建） |
+| 增补动作（模板 v1 分层） | 23:02 人定「素材库也要遵循渐进式披露，现在的规则只是抛砖引玉」→ 采纳"L0 入口 + L1 分册 + 机器注册表"结构，按此改造：① `Material.md` 从 115 行压到 40 行（只留定位/树/六条任务路由/3 条铁律/现状），细则全部搬进 `Material/docs/` 六册，每册首行写「读到这里就够，除非…」给退出条件；② 新建 `Material/kinds.json` 素材类注册表（shape = `units`/`files`/`source`），**加新素材类只改 JSON，不改校验器**——v0 把「处决镜头」形状写死，关键帧类一入库就会被误报"没有 uNN.mp4"；③ `material_layout.mjs` 重写为注册表驱动：F1–F9 + W1–W3（新增 F8 账本字段越界、F9 类未注册、W3 declared 类已有实体），源片检查移到**题材层**；④ 源片上提：`影之刃零/处决镜头/源片/` → `影之刃零/源片/`（同一母带会被切成多类素材，逐类存 = 224MB×类数）；⑤ 授权分类抽成 `Tool/lib/license.mjs` 单一真源，`collect_material` 与 `exec_extract` 共用，`archive` 不再硬写 `tier=L0`（外部版权片应为 L2），新增 `license_class`/`topic`/`kind`/`unit`/`scene`/`move` 六个字段；⑥ 账本按新字段重建 47 条（批次 `loop44b_exec_rearchive`，备份 `manifest_before_loop44b.jsonl`），`tags` 只留受控词，场景/单位号从 tags 迁到字段；⑦ `repo_sync_check` 为 `docs/`、`_template/` 加导航豁免（分册容器不是导航单元）；⑧ `_template/题材名.md` 骨架 + `AGENTS.md`/`Skills/exec-extract`/`Tool/check/check.md` 指向同步 |
+| 增补产物（模板 v1 分层） | [`Material/Material.md`](../../Material/Material.md)（L0，40 行）· [`Material/kinds.json`](../../Material/kinds.json) · `Material/docs/`（[模板规范](../../Material/docs/模板规范.md) / [字段字典](../../Material/docs/字段字典.md) / [标签词表](../../Material/docs/标签词表.md) / [入库操作](../../Material/docs/入库操作.md) / [授权与可发布](../../Material/docs/授权与可发布.md) / [校验口径](../../Material/docs/校验口径.md)）· `Material/_template/题材名.md` · [`Tool/lib/license.mjs`](../../Tool/lib/license.mjs) · 改动：`material_layout.mjs`（重写）/ `exec_extract.mjs` / `collect_material.mjs` / `repo_sync_check.mjs` / `check.md` |
+| 增补读数（模板 v1 分层） | `node Tool/check/material_layout.mjs` → `✓ 全部合规`（1 题材 · 3 类注册 · 47 条账本）；`repo_sync_check` E7 由 6 条清零，余 E5 7（历史欠账 loop32–38）、W2 1、W4 1。**刻意留白**（连触发条件写进文档）：发布前授权 gate、成片→素材血缘表、近重复检测、关键帧迁入（`kinds.json` 已标 `declared`）；**刻意不做** `_meta.json`（gitignore 只放行 `*.md`，且信息本属题材索引） |
+
+<a id="loop46"></a>
+
+## 小循环 46 · 仓库瘦身：重写历史，只留 K 级
+
+| 项 | 内容 |
+| --- | --- |
+| 开始时间 | 2026-11-08 23:21 |
+| 初始目标 | 人指令（23:21）「当前 git 仓库有多大」→ 算出三口径（.git 1.6GB / 跟踪 1251.4MB·3537 文件 / 工作区 22GB）→ 出分级清单（K 必留 / A 零风险 / B 取证图 / C 素材成片）。人定（23:28）「彻底挡位，只留 K 级挡位」 |
+| 判据 | ① `.git` 显著缩小且 `git fsck` 无错；② 保留集 = K 级 2323 文件，内容逐字节不变；③ 工作区 1201.6MB 实体一个不能少（历史重写不许删文件）；④ 提交历史可追溯到 loop43 收工，空提交可剪 |
+| 结束结果 | **四条全过。** `.git` 1.6 GB → **39 MB**（-97.6%）；跟踪 **1251.4MB/3537 → 49.75MB/2323**；`git fsck` 零输出；提交 114 → 108（6 个只动媒体的提交被剪空）；1201.6MB 媒体实体全部留在磁盘原位（逐条抽查 max 44.6MB 的 `硬核的半佛仙人_early.mp4`、`frames1080p60/u01_a.png` 均在） |
+| 动作 | ① 写体积体检器（后落 `Tool/check/git_size.mjs`，只读体检：按 4 档分类、出 CSV/移出清单/保留清单）；② 量到三个反直觉事实——`.git` 里 320MB 是「提交过又被删」的历史垃圾、`tier` 与授权混用（上轮已修）、`filter-repo` 未装（`pip install git-filter-repo` 后可用）；③ `git clone --mirror` 到 `WorkBuddy/_rewrite46.git`（硬链接，不占额外空间）；④ 第一遍 `--invert-paths` 按 1214 条移出清单过滤 → 剩 367MB，**发现漏项**：只按 HEAD 路径列清单，历史里那些「已从 HEAD 消失的旧路径」（`case_A_synth/source.mp4`、旧 `qc_*.png`）过滤不到；⑤ 第二遍改 `--paths-from-file keep46.txt`（只保留）→ 38MB，才是真「只留 K 级」；⑥ `--replace-refs delete-no-add` 确保不留 replace ref（否则旧对象仍可达、体积不降）；⑦ 校验：fsck 零错、树 2323 文件、tip 提交信息一致 → 换 `.git`（旧件整份移到 `WorkBuddy/_git_backup_before_rewrite46`，同卷 rename 不花时间）；⑧ 重建配置（`core.bare=false`、origin/mirror 远端、分支跟踪、user）→ `git reset` 重建索引（**mixed**，不动工作区）→ 27 行改动与重写前完全一致；⑨ `.gitignore` 补 9 条（`Prototype/**/*.png|jpg|jpeg`、`History/**/*.png|jpg` + `!History/publish/**/*.png`、`History/loops/**/*.mp4`、`*.pcm|*.raw`、`.probe/`），否则 1200 个文件会以未跟踪身份刷屏；⑩ 存 `commit-map.tsv` 与 `git-rewrite.md` |
+| 产物 | [`History/runs/git-rewrite/git-rewrite.md`](git-rewrite.md)（旧→新哈希换算 + 远端状态 + 遗留）· [`commit-map.tsv`](git-rewrite/commit-map.tsv)（119 条对照）· [`Tool/check/git_size.mjs`](../../Tool/check/git_size.mjs)（体检器，四档判定可复跑）· `.gitignore`（+9 条） |
+| 读数 | `.git` 39 MB · HEAD 49.75 MB / 2323 文件 · 108 提交 · `git fsck` 0 错 · 工作区未跟踪项 0（媒体已全部被忽略） |
+| 关键教训 | ① **按 HEAD 路径列表过滤 ≠ 清干净历史**，必须反过来「只保留」才彻底（第一遍漏了 329MB）；② `--replace-refs` 默认策略会让旧对象继续可达，体积不降；③ 温和做法（`git rm --cached` + gc）**不会缩小 .git**，历史可达就无法回收——想让 clone 变小只有重写一条路；④ `git reset`（mixed）是换 .git 后重建索引的安全动作，`--hard` 会删掉那 1200 个实体 |
+| 待人工 | ① 旧 `.git` 备份 1.6GB 在 `WorkBuddy\_git_backup_before_rewrite46`，验证无碍后手动删；② 本轮**未提交**（27 行改动含 loop44/45 的素材库分层与本次 `.gitignore`），等你发话；③ 若要把新历史推到远端，`main`/`browser-publish` 都得重推（远端仍在旧世界 `f3c03be`） |
+
