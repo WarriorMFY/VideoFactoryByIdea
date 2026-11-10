@@ -1,0 +1,18 @@
+# 依赖与运行态（可随时删，bootstrap 重建）
+Workspace/deps/
+Workspace/cache/
+Workspace/run/
+node_modules/
+
+# 运行回执与临时产物
+History/runs/
+History/publish/
+out/
+*.log
+*.pcm
+*.raw
+_concat.txt
+
+# 系统
+.DS_Store
+Thumbs.db

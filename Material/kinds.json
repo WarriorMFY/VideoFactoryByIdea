@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "updated": "2026-11-08",
+  "note": "素材类注册表（机器读的单一真源）。新增一类素材，必须先在这里声明 shape，material_layout 按声明校验；说明见 docs/模板规范.md。",
+  "shapes": {
+    "units": "按单位号组织：uNN + 每单位套件 + 根目录清单件。适合「一源片切成 N 个可引用单位」的素材（处决镜头）。",
+    "files": "自由命名：只要求命名符合 namePattern、根目录清单件齐备、账本条目数与文件数一致。适合帧/图/音效等无单位语义的素材（关键帧）。",
+    "source": "母带：放题材层 源片/，不进素材类目录，单独入账。"
+  },
+  "kinds": {
+    "源片": {
+      "shape": "source",
+      "naming": "<来源标识>_<短名>_<规格>.mp4",
+      "sourcePattern": "^(BV[0-9A-Za-z]{10}|LOCAL[0-9]{8})_",
+      "status": "active"
+    },
+    "处决镜头": {
+      "shape": "units",
+      "unitPattern": "^u\\d{2}$",
+      "perUnit": ["mp4", "jpg", "ass"],
+      "rootFiles": ["catalog.csv", "index.html"],
+      "producer": "Tool/ops/exec_extract.mjs export",
+      "masterSpec": {
+        "width": 1920,
+        "height": 1080,
+        "fps": ["60", "60000/1001"],
+        "pixFmt": "yuv420p"
+      },
+      "status": "active"
+    },
+    "关键帧": {
+      "shape": "files",
+      "namePattern": "^u\\d{2}_[abc]\\.png$",
+      "rootFiles": [],
+      "producer": "Tool/ops/exec_extract.mjs archive（frames 段）",
+      "status": "declared",
+      "note": "已声明未启用：138 张仍留在 Prototype/loop38_exec_extract/frames1080p60/，未迁入 Material。迁入前不要把它当已合规的类。"
+    }
+  }
+}
