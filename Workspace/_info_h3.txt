@@ -1,0 +1,182 @@
+﻿{
+  "webappId": "2085304953094107137",
+  "nodeCount": 16,
+  "nodes": [
+    {
+      "nodeId": "250",
+      "nodeName": "CR Prompt Text",
+      "fieldName": "prompt",
+      "fieldValue": "涓€闀滃埌搴曚綆绌虹幆缁曟粦琛岄暅澶达紝榛忓湡浜屾鍏冨皯濂虫偓娴湪钃澗榛忓湡浜戞捣涔嬩笂锛岄暱鍙戙€佺罕瑁欎负钃澗榛忓湡濉戝舰锛岀粏纰庢槦鍏夐粡鍦熼绮掔紦缂撻钀斤紝闀滃ご鐜粫涓讳綋缂撴參鍓嶇Щ锛岀敱鍏ㄦ櫙鐜粫鎷夎繎鑷充汉鐗╃壒鍐欙紝娣＄传銆佹祬钃濇ⅵ骞绘笎鍙橀厤鑹诧紝榛忓湡浜戞湹鏌旇蒋钃澗锛屼汉鐗╄。鎽嗗彂涓濊交鏌旈鍔紝绔嬩綋鏌斿厜锛岀┖鐏垫氮婕紝瀹氭牸鐢婚潰涓濇粦娴佺晠锛屼汉鐗╂牱璨屽叏绋嬬粺涓€銆?,
+      "fieldData": "[\"STRING\", {\"default\": \"prompt\", \"multiline\": true}]",
+      "fieldType": "STRING",
+      "description": "杈撳叆鏂囨湰",
+      "descriptionCn": null,
+      "descriptionEn": null
+    },
+    {
+      "nodeId": "115",
+      "nodeName": "ResolutionSelector",
+      "fieldName": "aspect_ratio",
+      "fieldValue": "4:3 (Standard)",
+      "fieldData": "[\"COMBO\", {\"default\": \"1:1 (Square)\", \"options\": [\"1:1 (Square)\", \"2:3 (Portrait Photo)\", \"3:2 (Photo)\", \"3:4 (Portrait Standard)\", \"4:3 (Standard)\", \"9:16 (Portrait Widescreen)\", \"16:9 (Widescreen)\", \"21:9 (Ultrawide)\"], \"tooltip\": \"The aspect ratio for the output dimensions.\", \"multiselect\": false}]",
+      "fieldType": "LIST",
+      "description": "璁剧疆姣斾緥",
+      "descriptionCn": null,
+      "descriptionEn": null
+    },
+    {
+      "nodeId": "225",
+      "nodeName": "ImpactSwitch",
+      "fieldName": "select",
+      "fieldValue": "1",
+      "fieldData": "[{\"name\":\"input2\",\"index\":2,\"description\":\"720P\",\"fastIndex\":2},{\"name\":\"input1\",\"index\":1,\"description\":\"480P\",\"fastIndex\":1}]",
+      "fieldType": "SWITCH",
+      "description": "鍒嗚鲸鐜?,
+      "descriptionCn": null,
+      "descriptionEn": null
+    },
+    {
+      "nodeId": "205",
+      "nodeName": "ImpactSwitch",
+      "fieldName": "select",
+      "fieldValue": "11",
+      "fieldData": "[{\"name\":\"input9\",\"index\":9,\"description\":\"13s\",\"fastIndex\":9},{\"name\":\"input8\",\"index\":8,\"description\":\"12s\",\"fastIndex\":8},{\"name\":\"input7\",\"index\":7,\"description\":\"11s\",\"fastIndex\":7},{\"name\":\"input6\",\"index\":6,\"description\":\"10s\",\"fastIndex\":6},{\"name\":\"input5\",\"index\":5,\"description\":\"9s\",\"fastIndex\":5},{\"name\":\"input4\",\"index\":4,\"description\":\"8s\",\"fastIndex\":4},{\"name\":\"input3\",\"index\":3,\"description\":\"7s\",\"fastIndex\":3},{\"name\":\"input2\",\"index\":2,\"description\":\"6s\",\"fastIndex\":2},{\"name\":\"input1\",\"index\":1,\"description\":\"5s\",\"fastIndex\":1},{\"name\":\"input10\",\"index\":10,\"description\":\"14s\",\"fastIndex\":10},{\"name\":\"input11\",\"index\":11,\"description\":\"15s\",\"fastIndex\":11}]",
+      "fieldType": "SWITCH",
+      "description": "鏃堕暱锛堢锛?,
+      "descriptionCn": null,
+      "descriptionEn": null
+    },
+    {
+      "nodeId": "247",
+      "nodeName": "LoadAudio",
+      "fieldName": "audio",
+      "fieldValue": "None",
+      "fieldData": "[\"COMBO\", {\"options\": [\"None\"], \"multiselect\": false, \"audio_upload\": true}]",
+      "fieldType": "AUDIO",
+      "description": "涓婁紶闊抽1锛堥€夊～锛?,
+      "descriptionCn": null,
+      "descriptionEn": null
+    },
+    {
+      "nodeId": "248",
+      "nodeName": "LoadAudio",
+      "fieldName": "audio",
+      "fieldValue": "None",
+      "fieldData": "[\"COMBO\", {\"options\": [\"None\"], \"multiselect\": false, \"audio_upload\": true}]",
+      "fieldType": "AUDIO",
+      "description": "涓婁紶闊抽2锛堥€夊～锛?,
+      "descriptionCn": null,
+      "descriptionEn": null
+    },
+    {
+      "nodeId": "249",
+      "nodeName": "LoadAudio",
+      "fieldName": "audio",
+      "fieldValue": "None",
+      "fieldData": "[\"COMBO\", {\"options\": [\"None\"], \"multiselect\": false, \"audio_upload\": true}]",
+      "fieldType": "AUDIO",
+      "description": "涓婁紶闊抽3锛堥€夊～锛?,
+      "descriptionCn": null,
+      "descriptionEn": null
+    },
+    {
+      "nodeId": "231",
+      "nodeName": "LoadImage",
+      "fieldName": "image",
+      "fieldValue": "None",
+      "fieldData": "[[\"example.png\", \"None\", \"example.png\", \"keep_this_dic\"], {\"image_upload\": true}]",
+      "fieldType": "IMAGE",
+      "description": "涓婁紶鍥惧儚1锛堥€夊～锛?,
+      "descriptionCn": null,
+      "descriptionEn": null
+    },
+    {
+      "nodeId": "232",
+      "nodeName": "LoadImage",
+      "fieldName": "image",
+      "fieldValue": "None",
+      "fieldData": "[[\"example.png\", \"None\", \"example.png\", \"keep_this_dic\"], {\"image_upload\": true}]",
+      "fieldType": "IMAGE",
+      "description": "涓婁紶鍥惧儚2锛堥€夊～锛?,
+      "descriptionCn": null,
+      "descriptionEn": null
+    },
+    {
+      "nodeId": "233",
+      "nodeName": "LoadImage",
+      "fieldName": "image",
+      "fieldValue": "None",
+      "fieldData": "[[\"example.png\", \"None\", \"example.png\", \"keep_this_dic\"], {\"image_upload\": true}]",
+      "fieldType": "IMAGE",
+      "description": "涓婁紶鍥惧儚3锛堥€夊～锛?,
+      "descriptionCn": null,
+      "descriptionEn": null
+    },
+    {
+      "nodeId": "234",
+      "nodeName": "LoadImage",
+      "fieldName": "image",
+      "fieldValue": "None",
+      "fieldData": "[[\"example.png\", \"None\", \"example.png\", \"keep_this_dic\"], {\"image_upload\": true}]",
+      "fieldType": "IMAGE",
+      "description": "涓婁紶鍥惧儚4锛堥€夊～锛?,
+      "descriptionCn": null,
+      "descriptionEn": null
+    },
+    {
+      "nodeId": "235",
+      "nodeName": "LoadImage",
+      "fieldName": "image",
+      "fieldValue": "None",
+      "fieldData": "[[\"example.png\", \"None\", \"example.png\", \"keep_this_dic\"], {\"image_upload\": true}]",
+      "fieldType": "IMAGE",
+      "description": "涓婁紶鍥惧儚5锛堥€夊～锛?,
+      "descriptionCn": null,
+      "descriptionEn": null
+    },
+    {
+      "nodeId": "236",
+      "nodeName": "LoadImage",
+      "fieldName": "image",
+      "fieldValue": "None",
+      "fieldData": "[[\"example.png\", \"None\", \"example.png\", \"keep_this_dic\"], {\"image_upload\": true}]",
+      "fieldType": "IMAGE",
+      "description": "涓婁紶鍥惧儚6锛堥€夊～锛?,
+      "descriptionCn": null,
+      "descriptionEn": null
+    },
+    {
+      "nodeId": "237",
+      "nodeName": "LoadImage",
+      "fieldName": "image",
+      "fieldValue": "None",
+      "fieldData": "[[\"example.png\", \"None\", \"example.png\", \"keep_this_dic\"], {\"image_upload\": true}]",
+      "fieldType": "IMAGE",
+      "description": "涓婁紶鍥惧儚7锛堥€夊～锛?,
+      "descriptionCn": null,
+      "descriptionEn": null
+    },
+    {
+      "nodeId": "238",
+      "nodeName": "LoadImage",
+      "fieldName": "image",
+      "fieldValue": "None",
+      "fieldData": "[[\"example.png\", \"None\", \"example.png\", \"keep_this_dic\"], {\"image_upload\": true}]",
+      "fieldType": "IMAGE",
+      "description": "涓婁紶鍥惧儚8锛堥€夊～锛?,
+      "descriptionCn": null,
+      "descriptionEn": null
+    },
+    {
+      "nodeId": "239",
+      "nodeName": "LoadImage",
+      "fieldName": "image",
+      "fieldValue": "None",
+      "fieldData": "[[\"example.png\", \"None\", \"example.png\", \"keep_this_dic\"], {\"image_upload\": true}]",
+      "fieldType": "IMAGE",
+      "description": "涓婁紶鍥惧儚9锛堥€夊～锛?,
+      "descriptionCn": null,
+      "descriptionEn": null
+    }
+  ]
+}

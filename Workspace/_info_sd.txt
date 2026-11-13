@@ -1,0 +1,39 @@
+﻿{
+  "webappId": "2046794551444119554",
+  "nodeCount": 3,
+  "nodes": [
+    {
+      "nodeId": "18",
+      "nodeName": "RH_RhartImageG2TextToImage",
+      "fieldName": "aspectRatio",
+      "fieldValue": "4:3",
+      "fieldData": "[[\"empty\", \"3:2\", \"1:1\", \"2:3\", \"5:4\", \"4:5\", \"16:9\", \"9:16\", \"21:9\", \"3:4\", \"4:3\"], {\"default\": \"empty\"}]",
+      "fieldType": "LIST",
+      "description": "璁剧疆姣斾緥",
+      "descriptionCn": null,
+      "descriptionEn": "Set ratio"
+    },
+    {
+      "nodeId": "18",
+      "nodeName": "RH_RhartImageG2TextToImage",
+      "fieldName": "resolution",
+      "fieldValue": "1k",
+      "fieldData": "[[\"1k\", \"2k\", \"4k\"], {\"default\": \"1k\"}]",
+      "fieldType": "LIST",
+      "description": "鍒嗚鲸鐜?,
+      "descriptionCn": null,
+      "descriptionEn": "Resolution"
+    },
+    {
+      "nodeId": "18",
+      "nodeName": "RH_RhartImageG2TextToImage",
+      "fieldName": "prompt",
+      "fieldValue": "runninghub 脳 璋烽洦鑺傛皵闈為仐鐨奖娴锋姤鏂囨\n涓昏瑙夋枃妗圽n涓婃柟灞呬腑锛歀ANDI POSTER DESIGN\n宸︿笂鑻辨枃锛欸uyu Diary\n涓棿澶у瓧锛氳胺闆ㄣ兓闆ㄧ敓鐧捐胺\n涓棿灏忓瓧锛欰dvanced plant pairing\n宸︿笅灏忓瓧锛氭槬闆ㄦ鼎鐢帮紝璋风敓涓囩墿\n搴曢儴鑻辨枃锛歊ain nourishes the fields, grains thrive in spring, inheriting the shadow puppetry heritage\n鍙充笅瑙掑皬鏍囷細art鈥憀andi\n搴曢儴鐗堟潈锛毬?026 runninghub All rights reserved. 闈為仐鐨奖鑹烘湳鑱斿悎鍛堢幇\n鑱斿姩涓婚 slogan锛堥€傞厤娴锋姤瑙掕惤 / 寤跺睍浣跨敤锛塡nrunninghub 韪忔槬琛屻兓璋烽洦鐨奖鏄犵櫨璋穃n闈為仐鐨奖鎵垮彜闊碉紝璋烽洦娑︾敯璧存柊绋媆n闆ㄧ敓涓囩墿锛岀毊褰变紶鎯咃紝runninghub 浼村洓瀛?,
+      "fieldData": "[\"STRING\", {\"default\": \"\", \"multiline\": true}]",
+      "fieldType": "STRING",
+      "description": "杈撳叆鏂囨湰",
+      "descriptionCn": null,
+      "descriptionEn": "Input text"
+    }
+  ]
+}

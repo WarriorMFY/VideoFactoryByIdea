@@ -10,6 +10,7 @@
       4. 主表严格两列，实例卡无 <> 残留
       5. composite 的 references 九槽位齐全、必填非空、type 匹配
       6. 表格行内无审美判断词
+      7. 正文只允许四段结构（frontmatter / 一级标题 / 轴说明 / 单张主表），出现二级标题或多张主表即报错
 
 .EXAMPLE
     powershell -NoProfile -File .\Doc\Cards\00-spec\validate.ps1
@@ -85,6 +86,14 @@ foreach ($c in $rows) {
     if ($stem -eq 'card' -and $c.File.DirectoryName) { $stem = $c.File.Directory.Name }
     if (-not $c.Tpl -and $nm -ne $stem) { Bad $nm ("name 与文件名或入库目录名不一致: " + $c.File.Name) }
 
+    # 正文结构只允许四段：frontmatter + 一级标题 + 轴说明（引用块）+ 单张主表
+    $h1  = [regex]::Matches($c.Text, '(?m)^#\s+\S').Count
+    $h2  = [regex]::Matches($c.Text, '(?m)^##\s+\S').Count
+    $sep = [regex]::Matches($c.Text, '(?m)^\|\s*-{3,}').Count
+    if ($h2 -gt 0) { Bad $nm ("卡内出现 $h2 个二级标题，不允许附加章节") }
+    if ($h1 -ne 1) { Bad $nm ("一级标题应为 1 个，实际 $h1 个") }
+    if ($sep -ne 1) { Bad $nm ("主表数量应为 1，实际 $sep 个") }
+
     $ln = 0
     foreach ($line in ($c.Text -split "\r?\n")) {
         $ln++
@@ -103,9 +112,11 @@ foreach ($c in $rows) {
 $names = @($cards.Keys)
 foreach ($c in $rows) {
     if ($BASIC -notcontains $c.Type) { continue }
+    # 先剔除自身 name，避免名称包含关系（如 xxx-v2 含 xxx）被误判为外链
+    $body = $c.Text.Replace($c.Name, '')
     foreach ($other in $names) {
         if ($other -eq $c.Name) { continue }
-        if ($c.Text -match [regex]::Escape($other)) {
+        if ($body -match [regex]::Escape($other)) {
             Bad $c.Name ("零外链违规，出现卡名: " + $other)
         }
     }

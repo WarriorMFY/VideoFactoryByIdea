@@ -1,0 +1,24 @@
+00-spec/card-spec.md -> 一、frontmatter 字段 / 二、description 两段式 / 三、严格两列表格 / 四、硬约束 / 五、通用校验
+00-spec/reference-graph.md -> 一、单一真相源 / 二、九槽位映射 / 三、角色位解析 / 四、装配算法 / 五、锚点对齐 / 六、校验矩阵
+10-templates/01-figure.template.md -> 填写要点 / 校验
+10-templates/02-face.template.md -> SSS 与表面参数（第 4 行必须填满） / 填写要点 / 校验
+10-templates/05-camera.template.md -> 镜头参数 / 填写要点 / 校验
+10-templates/06-voiceover.template.md -> 音频参数 / 填写要点 / 校验
+10-templates/07-ui.template.md -> 渲染与遮罩 / 填写要点 / 校验
+10-templates/08-time-scale.template.md -> 时间参数 / 填写要点 / 校验
+10-templates/09-anti.template.md -> 反向词注入 / 填写要点 / 校验
+10-templates/10-composite.template.md -> 槽位与装配 / 填写要点 / 校验
+10-templates/11-prompt.template.md -> 一、主体词库 / 二、环境词库 / 三、光影词库 / 四、画风词库 / 五、意境词库 / 六、反向词库 / 填写要点 / 校验
+50-composite/prompt-lexicons/prompt-core.md -> 一、主体词库 / 二、环境词库 / 三、光影词库 / 四、画风词库 / 五、意境词库 / 六、反向词库 / 填写要点 / 校验
+90-cases/shield-sword-finisher/_index.md -> 一、卡片清单 / 二、角色位解析 / 三、时间轴对齐 / 四、装配顺序 / 五、本用例验证的约束
+90-cases/shield-sword-finisher/anti-shield-finisher-plastic.md -> 反向词注入 / 填写要点 / 校验
+90-cases/shield-sword-finisher/camera-shield-sword-thrust.md -> 镜头参数 / 填写要点 / 校验
+90-cases/shield-sword-finisher/composite-shield-sword-finisher.md -> 槽位与装配 / 填写要点 / 校验
+90-cases/shield-sword-finisher/face-shield-swordsman.md -> SSS 与表面参数（第 4 行必须填满） / 填写要点 / 校验
+90-cases/shield-sword-finisher/figure-light-enemy.md -> 填写要点 / 校验
+90-cases/shield-sword-finisher/figure-shield-swordsman.md -> 填写要点 / 校验
+90-cases/shield-sword-finisher/prompt-final.md -> 一、正向 Prompt / 二、反向 Prompt / 三、分卡映射 / 四、未进入 Prompt 的卡 / 五、复用说明
+90-cases/shield-sword-finisher/time-scale-shield-finisher.md -> 时间参数 / 填写要点 / 校验
+90-cases/shield-sword-finisher/ui-shield-finisher.md -> 渲染与遮罩 / 填写要点 / 校验
+90-cases/shield-sword-finisher/voiceover-shield-finisher.md -> 音频参数 / 填写要点 / 校验
+README.md -> 一、目录结构 / 二、11 种卡片 / 三、三条硬约束 / 四、装配流程 / 五、新增一张卡 / 六、自动化校验
