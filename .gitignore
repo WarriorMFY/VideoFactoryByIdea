@@ -1,1 +1,4 @@
 # Workspace 已纳入版本管理，其中的送验脚本与 Prompt 快照是验收证据的一部分
+
+# Tool/_deps 是本机依赖缓存（cv2 / Pillow / numpy），由 Tool/setup_deps.py 重建，不入库
+Tool/_deps/
