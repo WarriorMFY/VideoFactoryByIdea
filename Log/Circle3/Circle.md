@@ -4,15 +4,15 @@
 | --- | --- |
 | 开始时间 | 2026-11-14 |
 | 结束时间 | 2026-11-14 |
-| 最终判定 | **通过**（用户人工验收裁定）· **仅 Seedance2.0-Mini** · 卡片**不入库**，见 §11 |
+| 最终判定 | **通过**（用户人工验收裁定）· **仅 Seedance2.0-Mini** · 卡片**已入库**（2026-11-14 用户指令，见 §12）；§11 为收尾当时状态，保留不改 |
 | 目标卡 | `execution-shield-bash-throat-thrust-3f` |
 | type | `action` |
 | 来源 | 用户在对话中直接提供的待入库卡片原文（无 Doc 源卡） |
 | 卡片副本 | `Log/Circle3/execution-shield-bash-throat-thrust-3f.md` |
-| 卡片 hash | `E9DD877F4114`（SHA256 前 12 位，2889 字节 / 20 行） |
-| 入库目标 | **无** —— 收尾判定不入库；`RAG/actions/` 未创建，理由见 §11.3 |
+| 卡片 hash | `E9DD877F4114`（SHA256 前 12 位，2889 字节 / 20 行；入库后 `card.md` 同值） |
+| 入库目标 | `RAG/actions/execution-shield-bash-throat-thrust-3f/`（**已创建**，见 §12）；§11.3 的「不入库」已被后续用户指令覆盖 |
 | 人工验收 | **通过（用户裁定）**：**仅 Seedance2.0-Mini**，动作对齐度 90%；对照组 Minimax H3 RH Enhanced 仅 60% · 见 §10 |
-| 当前阶段 | **已结束（归档）** · 2026-11-14，见 §11 |
+| 当前阶段 | **已结束（归档 + 入库）** · 2026-11-14，见 §11 / §12 |
 
 ## 闸门检查
 
@@ -316,3 +316,55 @@ EXIT=1
 #### 11.7 本轮边界
 
 未改卡片、未改 `Skill/` / `Doc/` / `RAG/` / `AGENTS.md` / `Tool/`，未创建 `RAG/actions/`，未跑 L1 / L2 / 五项逐项判定，未开新循环，未下助理验收判定（§10 为用户裁定）。
+
+---
+
+### 12 · 用户指令入库（2026-11-14，「入库卡片」）
+
+#### 12.1 指令与理解
+
+§11 收尾之后，用户明确发话「入库卡片」。按 `AGENTS.md`「RAG 必须经我验收通过才入库」与 §10 已下达的人工验收通过，执行为：**把卡片搬入 `RAG/actions/execution-shield-bash-throat-thrust-3f/` 并提交本地 git**。§11 全文是「结束归档」当时的状态记录，**保留不改**；本节为之后新指令的处置，覆盖 §11.3 的「不入库」。
+
+§11.3 曾要求入库前先裁定三项前置是改卡、改规范还是保留例外，用户本轮未指定。按唯一不需要额外授权、且不破坏「卡片为唯一真相」的路径执行：**不改卡、不改规范、保留例外**，并把所有缺项如实写入 `evidence.md`，不伪造 PASS。
+
+#### 12.2 落盘清单
+
+| 文件 | 来源 | 校验 |
+| --- | --- | --- |
+| `card.md` | `Log/Circle3/execution-shield-bash-throat-thrust-3f.md` 逐字复制 | `cmp` 一致，hash 仍 `E9DD877F4114` |
+| `prompt.txt` | §7 送验快照 `output/l4-card-verbatim.mp4.prompt.txt` | 与 `card.md` 逐字一致，同 hash |
+| `evidence.md` | 本轮新建 | 见 12.3 |
+| `01-pass-canvas-seedance-mini.png` | `Log/Circle3/evidence/acceptance-canvas-2120453733843251202.png` | 逐字节复制 |
+| `02-control-minimax-h3-60pct.png` | `Log/Circle3/evidence/control-group-model-minimax-h3.png` | 逐字节复制 |
+
+`RAG/actions/` 此前不存在，本轮首次创建；`type=action → actions` 符合 `RAG/README.md` §1「其余同此规则」。第二张图未命名 `fail-`——它是对照组证据而非模型偏差图，标成偏差会歪曲事实。
+
+#### 12.3 例外：准入四条仍缺三条
+
+`RAG/README.md` §2 要求「四条缺一不可」，入库后重跑实测：
+
+| 条件 | 实测 |
+| --- | --- |
+| 结构关 | `validate.ps1 -Root RAG/actions/...` → **FAIL 2 项**（`name` 未以 `action-` 开头、附加章节 `## 关键帧列表`），0 WARN |
+| 编译自检 | **`check_prompt.py` 在仓库中不存在**（全仓搜索为空），无法执行；`verify_prompt.py` 对三帧卡报 `卡片缺帧: K3,K4`，EXIT=1 |
+| 出图验证 | 五项逐项判定**未做**；本轮为视频人工对齐度，「卡片 → 图片先对齐」闸门未满足 |
+| 口头确认 | **有**（人工验收通过 + 入库指令） |
+
+另 `RAG/README.md` §3 要求的运行时指纹缺 4 项（webappId、实例类型、Task ID、结果 URL），因 rhTV 画布需登录、公开接口 `403 TOKEN_MISSION`，助理无法回读。`evidence.md` 全部如实留空，没有补写或倒推。
+
+**故本条为「用户指令入库的例外」，不是常规准入通过**，规范本身未被修改或放宽。
+
+#### 12.4 唯一真相与两条承接判据
+
+卡片全轮 + 入库过程**一字未改**，原稿自带的 frontmatter 无缩进、`武器/接触=` 键名、`## 关键帧列表` 附加章节、K1 的 `**` 全部保留。改卡会变 hash 并使证据失效，故不修。
+
+| 判据 | 状态 |
+| --- | --- |
+| 卡片 → 图片先对齐，再允许 → 视频 | **仍未满足**，本次入库不改写、不推翻该判据 |
+| 卡片是最终真相，也是唯一真相 | **本地侧闭合**（§7 到请求、§9 到 HTTP body），**外部侧仍缺**：画布输入无法回读，无法确认画布 Prompt 是否等于本卡原文 |
+
+「**仅 Seedance2.0-Mini**（90%）；对照组 Minimax H3 RH Enhanced 仅 60%」按用户「必须强调」原话写入 `evidence.md` 第一节，仍只作本轮结论，**不外推、不升格为全局规范**。§9 的 `1014` 权限结论未被本次验收或入库推翻。
+
+#### 12.5 边界
+
+未改 `card.md` 之外的任何既有文件规则：`AGENTS.md`、`Skill/`、`Tool/`、`Doc/Cards/00-spec/`、`RAG/README.md` 一字未动；本卡无 Doc 源卡，`RAG/README.md` §6 的「Doc 顶部标注已入库」不适用。未跑 L1 / L2 / 五项逐项判定，未重跑送验，未开新循环，未下助理验收判定。按 `AGENTS.md` 提交本地 git，**未 push**；远程引用仍只有 `origin/CardMethod`。
