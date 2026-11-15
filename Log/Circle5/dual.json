@@ -1,0 +1,80 @@
+{
+  "dual1": {
+    "fps": 24.0,
+    "frames": 124,
+    "width": 960,
+    "height": 544,
+    "duration": 5.17,
+    "mean": 8.33,
+    "peak": 26.88,
+    "peak_t": 3.17,
+    "video": "Log/Circle5/output/dual-1.mp4",
+    "sheet": "Log/Circle5/output/_dual1_sheet.png",
+    "strip": "Log/Circle5/output/_dual1_strip.png"
+  },
+  "dual2": {
+    "fps": 24.0,
+    "frames": 124,
+    "width": 960,
+    "height": 544,
+    "duration": 5.17,
+    "mean": 7.53,
+    "peak": 48.28,
+    "peak_t": 4.17,
+    "video": "Log/Circle5/output/dual-2.mp4",
+    "sheet": "Log/Circle5/output/_dual2_sheet.png",
+    "strip": "Log/Circle5/output/_dual2_strip.png"
+  },
+  "dual3": {
+    "fps": 24.0,
+    "frames": 124,
+    "width": 960,
+    "height": 544,
+    "duration": 5.17,
+    "mean": 7.92,
+    "peak": 31.0,
+    "peak_t": 2.96,
+    "video": "Log/Circle5/output/dual-3.mp4",
+    "sheet": "Log/Circle5/output/_dual3_sheet.png",
+    "strip": "Log/Circle5/output/_dual3_strip.png"
+  },
+  "dual4": {
+    "fps": 24.0,
+    "frames": 124,
+    "width": 960,
+    "height": 544,
+    "duration": 5.17,
+    "mean": 7.44,
+    "peak": 28.46,
+    "peak_t": 4.17,
+    "video": "Log/Circle5/output/dual-4.mp4",
+    "sheet": "Log/Circle5/output/_dual4_sheet.png",
+    "strip": "Log/Circle5/output/_dual4_strip.png"
+  },
+  "dual5": {
+    "fps": 24.0,
+    "frames": 124,
+    "width": 960,
+    "height": 544,
+    "duration": 5.17,
+    "mean": 10.01,
+    "peak": 31.86,
+    "peak_t": 2.17,
+    "video": "Log/Circle5/output/dual-5.mp4",
+    "sheet": "Log/Circle5/output/_dual5_sheet.png",
+    "strip": "Log/Circle5/output/_dual5_strip.png"
+  },
+  "dual6": {
+    "fps": 24.0,
+    "frames": 124,
+    "width": 960,
+    "height": 544,
+    "duration": 5.17,
+    "mean": 7.86,
+    "peak": 26.28,
+    "peak_t": 2.75,
+    "video": "Log/Circle5/output/dual-6.mp4",
+    "sheet": "Log/Circle5/output/_dual6_sheet.png",
+    "strip": "Log/Circle5/output/_dual6_strip.png"
+  }
+}

@@ -6,7 +6,7 @@
   L2-1.2 关键词扫描（前/后/左/右 空间称谓，供人工判 FAIL 取证）
 
 用法：python final_check.py <card.md> [<card2.md> ...]
-输出：stdout 摘要 + Log/Circle4/l1_final.json
+输出：stdout 摘要；仅当被检查卡位于 Log/Circle4 或显式 --json 时才落 json（避免覆盖他处记录）
 """
 import hashlib
 import json
@@ -210,11 +210,22 @@ def check(path):
 
 
 def main(argv):
-    cards = [Path(a) for a in argv[1:]] or sorted(
+    json_out = None
+    args, it = [], iter(argv[1:])
+    for a in it:
+        if a == "--json":
+            json_out = Path(next(it))
+        else:
+            args.append(a)
+    cards = [Path(a) for a in args] or sorted(
         (ROOT / "Log" / "Circle4").glob("execution-counter-straight-strike*.md")
     )
     out = [check(c) for c in cards]
-    OUT.write_text(json.dumps(out, ensure_ascii=False, indent=2), encoding="utf-8")
+    base = (ROOT / "Log" / "Circle4").resolve()
+    if json_out is None and all(c.resolve().parent == base for c in cards):
+        json_out = OUT
+    if json_out is not None:
+        json_out.write_text(json.dumps(out, ensure_ascii=False, indent=2), encoding="utf-8")
     for r in out:
         print("=" * 66)
         print(f"{r['card']}  sha12={r['sha256_12']}  {r['chars']} 字 / {r['lines']} 行")
