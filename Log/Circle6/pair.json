@@ -1,0 +1,41 @@
+{
+  "pair1": {
+    "fps": 24.0,
+    "frames": 124,
+    "width": 960,
+    "height": 544,
+    "duration": 5.17,
+    "mean": 1.51,
+    "peak": 2.45,
+    "peak_t": 3.75,
+    "video": "Log/Circle6/output/pair-1.mp4",
+    "sheet": "Log/Circle6/output/_pair1_sheet.png",
+    "strip": "Log/Circle6/output/_pair1_strip.png"
+  },
+  "pair2": {
+    "fps": 24.0,
+    "frames": 124,
+    "width": 960,
+    "height": 544,
+    "duration": 5.17,
+    "mean": 3.87,
+    "peak": 11.65,
+    "peak_t": 4.17,
+    "video": "Log/Circle6/output/pair-2.mp4",
+    "sheet": "Log/Circle6/output/_pair2_sheet.png",
+    "strip": "Log/Circle6/output/_pair2_strip.png"
+  },
+  "bamboo1": {
+    "fps": 24.0,
+    "frames": 124,
+    "width": 960,
+    "height": 544,
+    "duration": 5.17,
+    "mean": 1.87,
+    "peak": 5.11,
+    "peak_t": 4.17,
+    "video": "Log/Circle6/output/bamboo-1.mp4",
+    "sheet": "Log/Circle6/output/_bamboo1_sheet.png",
+    "strip": "Log/Circle6/output/_bamboo1_strip.png"
+  }
+}
