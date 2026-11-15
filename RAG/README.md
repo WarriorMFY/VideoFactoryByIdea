@@ -1,114 +1,85 @@
-# RAG · 卡片库入库规则
+# RAG · 入库规则
 
-> 本目录只收经过出图验证、并由用户口头确认的卡片。
-> 未验收的草稿留在 `Doc/` 与 `Log/`，不进这里。
+> 只收入库卡：出图／出片验证 + 用户口头确认，两条缺一不可。草稿留在 `Log/`。
+> 卡片格式归 `Doc/Cards/spec.md`；本文件只管入库、存证、失效。
 
-## 一、目录结构
-
-每张卡一个目录：
+## 一、目录
 
 ```text
-RAG/<type 复数>/
-  └─ <卡片名>/
-      ├─ card.md                  卡片本体，唯一真相，检索入口
-      ├─ evidence.md              验收证据：运行时指纹 + 逐项判定
-      ├─ prompt.txt               当次送验的 Prompt 原文
-      ├─ 01-pass-<载体>.<png|mp4> 通过证据（图或成片），验收依据
-      └─ 02-fail-<问题>.<png|mp4> 已知偏差图，可选
+RAG/<类型复数>/<卡片名>/
+  ├─ card.md                  唯一副本，检索入口
+  ├─ evidence.md              运行时指纹 + 逐项判定
+  ├─ prompt.txt               送验 Prompt 原文
+  ├─ 01-pass-<载体>.<png|mp4> 通过证据
+  └─ 02-fail-<问题>.<png|mp4> 已知偏差，可选
 ```
 
-`type` 与子目录对应：`style → styles`、`figure → figures`，其余同此规则。
+目录名按卡片类型起复数，**不设枚举**（spec 已取消 `type` 约束）。现有 `actions/`、`styles/`；派生镜头卡进基础卡下 `cameras/`（§六）。`card.md` 内 `name` 须等于所在目录名。
 
-## 二、准入条件
+## 二、准入
 
-> **2026-11-15 用户裁定：前两条停用，不再作为准入门槛。**
-> `validate.ps1` 校验的是 `Doc/Cards` 旧规范（要求 frontmatter 含 `type`、name 以 `type-` 开头），与 `Skill/interactive-action-card-validation` 的「frontmatter 恰好 2 键」直接互斥；`check_prompt.py` 在仓库中不存在。两项均予停用，不删除、留档备查。
-> **2026-11-16 追记**：`validate.ps1` 已随 `Doc/Cards/00-spec/` 在 Circle7 规格重构中删除，现规格只有 `Doc/Cards/spec.md`。停用一事自此无对象可停，两行仍留档。
-
-| 条件 | 说明 | 状态 |
-| --- | --- | --- |
-| 结构关 | `validate.ps1` PASS | **停用**（2026-11-15） |
-| 编译自检 | `check_prompt.py` PASS，Prompt 短语与对应表双向穷举一致 | **停用**（2026-11-15） |
-| 出图／出片验证 | 实跑出图或出片，逐项判定 | 有效 |
-| 口头确认 | 用户明确说通过 | 有效 |
-
-现行**两条缺一不可**：出图／出片验证、口头确认。停用的两条如需恢复，须用户单独发话。
-
-## 三、证据必须可复现
-
-`evidence.md` 必须包含运行时指纹，缺任意一项则证据无效：
-
-| 项 | 说明 |
+| 条件 | 说明 |
 | --- | --- |
-| 平台与应用 | 如 RunningHub / 全能图片G-2.0-文生图 |
-| webappId | 应用标识 |
-| 实例类型 | lite / default / plus |
-| 出图时间 | 日期 |
-| Task ID | 可回查 |
-| 结果 URL | 原始地址 |
-| Prompt | 文件名与段数 |
-| 卡片 hash | card.md 的 SHA256 前 12 位 |
+| 出片／出图验证 | 实跑并逐项判定，不得只看静帧推断动态 |
+| 口头确认 | 用户明确说通过 |
 
-## 四、卡片版本与证据绑定
+`spec.md` 符合性**只自检、不拦截**——入库前跑一次，结果记进 `evidence.md`。库内已有不符项且不能改：
 
-证据里的卡片 hash 是卡片的指纹。
+- `actions/execution-shield-bash-throat-thrust-3f`：`description` 的竖线块内容未缩进，严格 YAML 取不到值。Circle3 定「逐字复制、不改一字」，改则破 `E9DD877F4114`。
+- `styles/style-dark-fantasy` 与上卡：带 `type`／`scope`／`level`／`source` 额外键。spec 允许，但 `Skill/interactive-action-card-validation` 格式项 5 仍要「恰好 2 键」，用它校验动作卡会 FAIL——**待对齐**。
 
-**卡片任何一行改动，hash 即变，旧证据自动失效**，必须重跑出图并重新确认，不能沿用旧图。
+原「结构关 `validate.ps1`」「编译自检 `check_prompt.py`」两条已停用且失效：前者随 `00-spec/` 在 Circle7 删除，后者仓库中本就不存在。恢复须用户单独发话。
 
-这是防止「卡片 v3 配 v1 的图」的唯一手段。
+## 三、证据
 
-计算命令：
+`evidence.md` 缺任一项即无效：平台与应用、webappId、实例类型（lite／default／plus）、出图／出片时间、Task ID、结果 URL、Prompt 文件名与段数、卡片 hash（SHA256 前 12 位）。
 
-```powershell
-(Get-FileHash 'RAG/styles/<卡片名>/card.md' -Algorithm SHA256).Hash
+媒体不入 git（§四末），这些指纹是唯一能重建证据的凭据。
+
+## 四、版本与失效
+
+**卡片任何一行改动，hash 即变，旧证据自动失效**，必须重跑重确认。这是防止「卡 v3 配 v1 的图」的唯一手段。
+
+```bash
+python -c "import hashlib,pathlib;print(hashlib.sha256(pathlib.Path('RAG/<路径>/card.md').read_bytes()).hexdigest()[:12].upper())"
 ```
 
-## 五、图片命名
+必须按**字节**算：库内多数 `card.md` 是 CRLF，`read_text()` 再 encode 会得到不同值（实测 `81404DCD4E58` 与 `7018DEDFAB75`）。
 
-| 前缀 | 含义 | 是否可删 |
-| --- | --- | --- |
-| `pass-` | 验收依据 | 不可删 |
-| `fail-` | 已知偏差，记录模型边界 | 可删，但等于丢掉一条边界知识 |
+媒体命名：`pass-` 不可删，`fail-` 只留代表性一张，视频沿用同一前缀与序号。**2026-11-15 起图片与视频不入 git**，根 `.gitignore` 已屏蔽，`pass-`／`fail-` 只留本地磁盘。
 
-一张卡至少一张 `pass-`，`fail-` 只留代表性的一张。视频类证据沿用同一前缀（`01-pass-<载体>.mp4`），命名与图一致。
+## 五、单一副本
 
-> **2026-11-15 起：图片与视频不入 git。** 根 `.gitignore` 已统一屏蔽图片／视频扩展名，`pass-` / `fail-` 图与成片只留在本地磁盘，随仓库克隆不会带过去。可复现的依据改为 `evidence.md` 里的运行时指纹（webappId、Task ID、卡片 hash、Prompt 快照）＋ `prompt.txt`，必要时按指纹重跑取回同一形状的证据。
+`Doc/Cards` 自 Circle7 起只有 `spec.md` 与 `Template/`，不存实例卡，故 `RAG` 的 `card.md` 是唯一持久形态。
 
-## 六、单一真相源
+入库前原件在 `Log/` 的，**不原地加标注**（加行即破 hash），由 `Log/Circle<N>/` 的 `Circle.md`（摘要）与 `log.md`（全文）记路径，`evidence.md` 留一行。原件被删（如 Circle7 删掉的镜头卡 `Doc/` 副本），在 `evidence.md` 末尾加追记、写历史提交号，不动正文。
 
-`RAG` 里的 `card.md` 是唯一副本。**2026-11-16 Circle7 起，`Doc/Cards` 只放 `spec.md` 与 `Template/`，不再存放任何实例卡**——所以不存在「两处各自演化」的问题，入库即为此卡唯一存在形态。
+## 六、派生卡与独立卡
 
-若入库前原件在工作日志目录（`Log/`），**不原地加标注**——加行会改 hash，库内 `card.md` 的指纹当场失效。改由入库日志（`Log/Circle<N>/Circle.md`）记录入库路径，并在 `evidence.md` 的「入库位置」一行留痕。
-
-## 七、派生卡（2026-11-15 起）
-
-**一对一派生卡收在基础卡的子目录里，不另建顶层目录。**
+一对一派生卡收在基础卡子目录，不建顶层目录——路径即声明绑定，顶层默认「可复用通用资产」；检索只收基础卡 `card.md`，派生卡为附件；基础卡 hash 一变，派生卡全废。目录名与派生卡 `name` 一致、不随版本改名；库内只留当前版，历史版归档 `Log/Circle<N>/archive/`，在 `evidence.md`「派生链」表留痕。
 
 ```text
-RAG/<type 复数>/<基础卡名>/
-  ├─ card.md                      基础卡，仍是唯一检索入口
-  ├─ evidence.md
-  ├─ prompt.txt
-  ├─ 01-pass-…
-  └─ cameras/                     派生卡子目录，按类型命名
-      └─ <派生卡名>/
-          ├─ card.md
-          ├─ evidence.md
-          ├─ prompt.txt
-          └─ 01-pass-…
+RAG/<类型复数>/<基础卡名>/
+  ├─ card.md / evidence.md / prompt.txt / 01-pass-…
+  └─ cameras/<派生卡名>/
+      └─ card.md / evidence.md / prompt.txt / 01-pass-…
 ```
 
-| 规则 | 说明 |
-| --- | --- |
-| 为什么放子目录 | 派生卡是一对一派生物，路径即声明绑定关系。顶层目录默认表示「可复用通用资产」，把绑定卡放上去会让检索命中不可复用的东西 |
-| 目录名 | 与派生卡内 `name` 一致，**不随版本改名**（改名即破 hash，全部实测件失效） |
-| 检索 | 只有基础卡的 `card.md` 进索引；派生卡为附件，不进 |
-| 失效 | 基础卡 hash 一变，派生卡全部失效，必须重跑 |
-| 版本 | 库内每个派生目录只保留当前版；历史版归档到 `Log/Circle<N>/archive/`，在派生卡 `evidence.md` 的「派生链」表里留痕 |
-| 顶层 `cameras/` | 暂不创建。将来出现不绑定任何基础卡的通用镜头卡时再开，与子目录形态并存 |
+**判据看内容不看命名**：引用某张基础卡的具体帧号／动作节点／接触点 → 派生卡；只描述自身维度、换动作换镜头都不必改本卡 → 独立卡，进顶层。Circle6 实测支持后者：场景卡环境五要素 3/3 条兑现 5/5、动作链 3/3 全过，属独立卡，将来入库开 `RAG/scenes/`（未入库，目录暂不建）。顶层 `cameras/` 同理暂不建。
 
-首个实例：`actions/execution-counter-straight-strike-v2/cameras/camera-aux-counter-straight-strike-v2/`（`EDB11AB333B3`，v3.2 删表后；实测件产自 v3.1 `6839884B436B`）。
+首个派生实例：`actions/execution-counter-straight-strike-v2/cameras/camera-aux-counter-straight-strike-v2/`（`EDB11AB333B3`，实测件产自 v3.1 `6839884B436B`）。
 
-## 八、检索范围（暂缓）
+## 七、入库清单
 
-索引只收 `card.md`，`evidence.md`、`prompt.txt`、图片均为附件，不参与语义检索。索引方案待建，本期不实施。
+| 路径 | 卡 | hash |
+| --- | --- | --- |
+| `actions/execution-counter-straight-strike-v2/` | 防反·拨开推掌 v2（5 帧） | `3292E2510FB9` |
+| `actions/execution-counter-straight-strike-v2/cameras/camera-aux-counter-straight-strike-v2/` | 派生镜头卡 v3.2 | `EDB11AB333B3` |
+| `actions/execution-shield-bash-throat-thrust-3f/` | 盾击·锁喉·贯胸（3 帧） | `E9DD877F4114` |
+| `styles/style-dark-fantasy/` | 暗黑奇幻（画风） | `81404DCD4E58` |
+
+hash 以实际文件为准，不符先重算再改表。
+
+## 八、检索（暂缓）
+
+索引只收 `card.md`，`evidence.md`、`prompt.txt`、媒体均为附件，不参与语义检索。方案待建。

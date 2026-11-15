@@ -2,69 +2,67 @@
 
 | 项 | 值 |
 | --- | --- |
-| 开始时间 | 2026-11-16 00:15 |
-| 结束时间 | 进行中 |
-| 目标 | 重构 `Doc/Cards` 的规格与目录结构：规格只留元信息＋两列表格，目录只留 `spec.md` ＋ `Template/` |
-| 现状 | 规格与目录均已落地：`Doc/Cards` 下只剩 `spec.md` 与 `Template/`（11 份模板），32 个旧文件删除 |
-| 详细日志 | 循环结束时本文件压缩为摘要，全文转存 `log.md` |
+| 开始 / 结束 | 2026-11-16 00:15 → 00:30 |
+| 一句话 | 把 `Doc/Cards` 从「11 种卡片类型 + 九槽位装配契约 + 校验脚本」压成「元信息 + 两列表格」，目录只留 `spec.md` 与 `Template/`；连带把 `RAG` 入库规则重写并精简到 85 行 |
+| 性质 | **规格轮**：全程无模型投喂、无出片，不产卡片、不产视频 |
+| 详细日志 | `log.md`（87 行，原文逐字转存） |
 
-## 0 · 用户给定（不在本轮讨论内）
+## 1 · 做了什么
 
-| # | 指令 | 出处 |
+| 阶段 | 动作 | 结果 |
 | --- | --- | --- |
-| 1 | 元卡片结构信息只定义两样：**元信息（name, desc）＋列表（自变量＋因变量）** | 00:15 |
-| 2 | 元信息**严格校验**；列表**只校验两列**，内容由各卡自己定义 | 00:15 |
-| 3 | **其他规格全部置空** | 00:15 |
-| 4 | `Doc/Cards` 最终只保留 **`spec.md`** ＋ **`Template/`**（存放各基础模板卡） | 00:15 |
-| 5 | 现有 18 张实例卡：**方案 C，全部删除，只从 git 历史查** | 00:17 |
+| 规格 | 新写 `Doc/Cards/spec.md`，四节 | 元信息严格校验（`name` 一致性与字符规则、`description` 非空 ≤200）；表格只校验两列；`Template/` 全豁免；其余全部置空 |
+| 目录 | 11 份模板 `git mv` 到 `Template/`，删旧目录 | 删 32 个文件：`00-spec`（含 `validate.ps1`）、`20-assets`、`30-behavior`、`40-control`、`50-composite`、`90-cases` 14 个、`README.md`、`10-templates` |
+| 实例卡 | 用户裁定方案 C | 18 张全删，只留 git 历史；`Doc/Cards` 终态 12 个文件 |
+| 不留坏引用 | 改 8 处路径／提法 | `smoke_test.py`、`Tool/README.md`、`Template/10-composite.md`、两份 `evidence.md`、`_verify_prompt.py` |
+| `RAG/README.md` | 全量改写后精简 | 117 → 167 → **85 行**；修 3 处硬错，补「spec 只自检不拦截」、派生／独立判据、入库清单 |
 
-## 1 · 已落地的规格（`Doc/Cards/spec.md`，四节）
+## 2 · 定的规矩
 
-| 节 | 内容 |
+| 项 | 内容 |
 | --- | --- |
-| 一、元信息 | `name` 必填、与卡片标识一致（独立文件取文件名，`<name>/card.md` 取目录名）、`^[a-z0-9][a-z0-9-]*$`、3–64 字符；`description` 必填、非空、≤ 200 字符。其余键允许出现但不校验 |
-| 二、表格 | 至少一张；每数据行恰好 2 列；表头与行内容不校验 |
-| 三、模板豁免 | `Template/` 下全部文件豁免本规格全部校验 |
-| 四、置空清单 | `type` 枚举与前缀、各类型必填键、description 两段式、表格格式细则（表头模板/行序号/`键=值；`）、零外链、角色位、审美词、量纲、九槽位引用契约与装配算法、校验脚本 |
+| 硬约束只剩两条 | 元信息（`name`、`description`）＋ 每行恰好 2 列的表格。其余 `type` 枚举、必填键、格式细则、九槽位契约、零外链全部废止 |
+| `name` 判法 | 与卡片标识一致：独立文件取文件名，`<name>/card.md` 取目录名。不这么写，RAG 四张卡会全违规 |
+| 模板豁免 | 按**目录**不按 `is_template` 标记：在 `Template/` 内即免检。理由：标记会忘，位置不会说谎 |
+| 实例卡不入 `Doc` | `Doc/Cards` 只有规格与模板，`RAG` 的 `card.md` 是唯一持久形态 |
+| 派生还是独立 | 看内容不看命名：引用了基础卡的具体帧号／接触点 → 派生，进子目录；只描述自身维度 → 独立，进顶层 |
 
-## 2 · 已落地的目录
-
-```
-Doc/Cards/
-├── spec.md
-└── Template/       11 份（01-figure … 11-prompt，去掉 .template 中缀）
-```
-
-删除的 32 个文件：`00-spec/`（`card-spec.md`、`reference-graph.md`、`validate.ps1`）、`20-assets/`（含 2 张场景卡）、`30-behavior/`（含镜头卡原件）、`40-control/`、`50-composite/`、`90-cases/`（14 个）、`README.md`、`10-templates/`。
-
-## 3 · 连带修正（不留静默坏引用）
-
-| 位置 | 处理 |
-| --- | --- |
-| `Tool/smoke_test.py` | 删去 `validate_ps1` 检查与 `vdetail` 提取器，改留一行注释 |
-| `Tool/README.md` | 「两个已知事实」改为一条，并说明校验脚本已删 |
-| `RAG/README.md` §2 | 追加 2026-11-16 注记：`validate.ps1` 已随重构删除，停用一事无对象 |
-| `RAG/README.md` §6 | 改写为「`card.md` 是唯一副本，`Doc/Cards` 不再存实例」 |
-| `Template/10-composite.md` | 指向 `00-spec/reference-graph.md` 的句子改为「旧引用契约已废止」 |
-| `RAG/.../cameras/.../evidence.md` | 模板路径补现址；加注原件已删、`card.md` 为唯一副本 |
-| `RAG/actions/execution-shield-bash-throat-thrust-3f/evidence.md` | 末尾加 Circle7 追记，声明 `00-spec/` 已不存在，原文陈述保留为当时记录 |
-| `Workspace/_verify_prompt.py` | 加失效说明（依赖已删的 90-cases 卡片） |
-
-## 4 · 新规格体检（自写一次性检查，未落盘为脚本）
+## 3 · 落地校验
 
 | 对象 | 结果 |
 | --- | --- |
-| `Template/` 11 份（豁免 name） | 全部 OK：description 非空、表格两列 |
-| `RAG` 入库卡 4 份 | 3 PASS；1 FAIL：`execution-shield-bash-throat-thrust-3f` **description 判缺失** |
-| `Doc/Cards/spec.md` | 无 frontmatter（本文件是规格非卡片，已在正文首行声明） |
+| `Template/` 11 份（豁免 name） | **11/11 OK**，`description` 非空、表格两列 |
+| `RAG` 入库卡 4 份 | **3 PASS / 1 FAIL**：`execution-shield-bash-throat-thrust-3f` 的 `description` 竖线块未缩进，严格 YAML 取不到值 |
+| 不豁免模板时 | **11/11 FAIL**，全部只卡 `name`（`figure-<slug>` ≠ `01-figure`）——这是豁免存在的实证 |
+| `RAG/README.md` | 6 个代码块闭合、2 张表列数一致；16 个关键信息点精简后无丢失 |
 
-**关于那条 FAIL**：该卡 frontmatter 的 `description: |` 与 `source:` 子项都没缩进，严格 YAML 下块标量取不到值，属畸形写法而非文案缺失。它在 Circle3 是「逐字复制、不改一字」的例外入库件，hash `E9DD877F4114` 记载于 evidence；改它就破指纹，故**不擅改**，只登记。
+那条 FAIL 不修：该卡是 Circle3「逐字复制、不改一字」的例外入库件，改则破 hash `E9DD877F4114`。
 
-## 5 · 待定
+## 4 · 硬结论
+
+1. **规格要么能被一条命令跑，要么会退化成文档装饰。** 旧规范 121 行、配 `validate.ps1` 仍报 35 项 FAIL；新规格两条，靠一次 YAML 解析就能全判。
+2. **「停用」不等于「删除」。** 脚本删了、准入表仍写「停用」，就是死引用——RAG README 原本正是这样。
+3. **数字型与结构型规则越少，卡越好写；但索引性质的规则不能省。** `name` 一致性看着琐碎，省掉就等于放弃「按名字找卡」。
+4. **hash 必须按字节算。** 库内多数 `card.md` 是 CRLF，`read_text()` 再 encode 会得到不同指纹（`81404DCD4E58` vs `7018DEDFAB75`）。
+5. **辅助卡独立不独立，判据是内容而不是名字。** Circle6 的场景卡不引用任何动作节点，属独立卡；Circle5 的镜头卡引用了 K0–K4，属派生卡。
+
+## 5 · 待优化
 
 | # | 事项 | 状态 |
 | --- | --- | --- |
-| 1 | `Template/` 下 11 份模板是否按新规格重写（现 frontmatter 仍带 `type`、`is_template`，新规格允许但不校验） | 未定 |
-| 2 | 是否补一个符合新规格的校验脚本（用户此前停用过 `validate.ps1`，本轮未建） | 未定 |
-| 3 | `execution-shield-bash-throat-thrust-3f` 的畸形 frontmatter 是否修（修即破 hash） | 未定 |
-| 4 | 场景卡（土场、竹林）已按 C 删除，仅存于 git 历史 `c06e3bb`；是否要重新落成 RAG 实例 | 未定 |
+| 1 | `Skill/interactive-action-card-validation` 格式项 5 「恰好 2 键」与 spec「其余键不校验」冲突 | 未对齐 |
+| 2 | `Template/` 11 份模板是否按新规格重写（现仍带 `type`、`is_template`、五元组键序） | 未定 |
+| 3 | 是否补一份符合新规格的校验脚本（旧版已删，本轮只用手写一次性检查） | 未定 |
+| 4 | `execution-shield-bash-throat-thrust-3f` 畸形 frontmatter 是否修（修即破 hash） | 未定 |
+| 5 | 场景卡（土场、竹林）只在 git 历史 `c06e3bb`；是否重落为 RAG 实例、开 `scenes/` | 未定 |
+
+## 6 · 产物
+
+| 类型 | 路径 |
+| --- | --- |
+| 规格 | `Doc/Cards/spec.md`（4 节） |
+| 模板 | `Doc/Cards/Template/01-figure.md` … `11-prompt.md`（11 份，去掉 `.template` 中缀） |
+| 规则 | `RAG/README.md`（85 行，新增 §七 入库清单） |
+| 脚本 | `Tool/smoke_test.py` 删 validate 检查 |
+| 日志 | 本文件（摘要）、`log.md`（全文） |
+| 提交 | `073a0f2`（规格与目录重构）＋ 收尾提交（RAG README 改写与精简） |
