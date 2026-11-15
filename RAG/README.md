@@ -106,7 +106,7 @@ RAG/<type 复数>/<基础卡名>/
 | 版本 | 库内每个派生目录只保留当前版；历史版归档到 `Log/Circle<N>/archive/`，在派生卡 `evidence.md` 的「派生链」表里留痕 |
 | 顶层 `cameras/` | 暂不创建。将来出现不绑定任何基础卡的通用镜头卡时再开，与子目录形态并存 |
 
-首个实例：`actions/execution-counter-straight-strike-v2/cameras/camera-aux-counter-straight-strike-v2/`（`6839884B436B`）。
+首个实例：`actions/execution-counter-straight-strike-v2/cameras/camera-aux-counter-straight-strike-v2/`（`EDB11AB333B3`，v3.2 删表后；实测件产自 v3.1 `6839884B436B`）。
 
 ## 八、检索范围（暂缓）
 

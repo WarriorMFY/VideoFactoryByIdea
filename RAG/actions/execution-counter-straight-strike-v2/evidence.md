@@ -144,7 +144,7 @@ K0／K1 的现行对照**以 L4 抽帧替代**，不是 L3 单帧原图。若要
 
 | 子目录 | 卡片 | hash | 状态 |
 | --- | --- | --- | --- |
-| `cameras/camera-aux-counter-straight-strike-v2/` | 一对一派生辅助镜头（一卡一绑版 v3.1） | `6839884B436B` | **当前版**，镜头侧已通过 |
+| `cameras/camera-aux-counter-straight-strike-v2/` | 一对一派生辅助镜头（一卡一绑版 v3.2，已删镜头参数表） | `EDB11AB333B3` | **当前版**，镜头侧已通过（实测件产自 v3.1 `6839884B436B`） |
 
 - 派生卡自带 `card.md` / `evidence.md` / `prompt.txt` / 通过件，结构与本目录同构。
 - 本卡的 `card.md` 仍是唯一检索入口；派生卡为附件，不进索引。
@@ -156,7 +156,7 @@ K0／K1 的现行对照**以 L4 抽帧替代**，不是 L3 单帧原图。若要
 - **已入库**（2026-11-15 17:46）：本目录即库内位置；`card.md` 由 `Log/Circle4/execution-counter-straight-strike-v2.md` 逐字节复制，搬入后 `cmp` 一致、重算 hash 仍 `3292E2510FB9`，并对库内副本复跑 `final_check.py`：§0 PASS、L1 5/5 PASS、L2-1.2 空间称谓 0 命中。
 - **L3 的 K0／K1 未补单帧**：用户裁定以 L4 抽帧替代，不额外消耗出图积分；四层证据中 L3 只有 K2／K3／K4 三帧有效，第五节已如实标注。
 - 未改卡、未改技能；`RAG/README.md` 仅按用户 17:38 裁定更新 §2（两项停用）、17:40 追加 §5 图片不入 git 的说明、22:17 追加 §7「派生卡」目录约定，其余章节未动；`Skill/`、`Tool/`、`AGENTS.md` 未动。
-- **派生卡入本目录 `cameras/`**（2026-11-15 22:17）：`cameras/camera-aux-counter-straight-strike-v2/`（`6839884B436B`），本卡 `card.md` 一字未改。
+- **派生卡入本目录 `cameras/`**（2026-11-15 22:17）：`cameras/camera-aux-counter-straight-strike-v2/`（22:27 删参数表后为 `EDB11AB333B3`），本卡 `card.md` 一字未改。
 - **图片与视频不入 git**（2026-11-15 仓库约定）：`01-pass-l4-v3a.mp4`、两张 png 只在本地留存，随克隆不带过去；复现依据为第二、五节的指纹与 `prompt.txt`。
 - 旧版六轮视频不进本目录，留在 `Log/Circle4/output/`。
 - 按 `AGENTS.md` 只提交本地 git，不 push。
