@@ -1,0 +1,159 @@
+{
+  "card": "Log/Circle4/execution-martial-arts-single-palm-push.md",
+  "skill": "Skill/action-card-validation-v2/SKILL.md",
+  "sha256_12": "4DFC9F492DF2",
+  "bytes": 5165,
+  "lines": 19,
+  "checks": [
+    {
+      "id": "1",
+      "name": "四段结构",
+      "pass": true,
+      "detail": {
+        "frontmatter": true,
+        "h1": 1,
+        "h2": 0,
+        "h2_lines": [],
+        "table_separators": 1,
+        "axis_quote_lines": 1
+      }
+    },
+    {
+      "id": "2",
+      "name": "两列",
+      "pass": true,
+      "detail": {
+        "table_lines": 7,
+        "bad": []
+      }
+    },
+    {
+      "id": "3",
+      "name": "左列帧号",
+      "pass": true,
+      "detail": {
+        "frames": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "format_ok": true,
+        "continuous_from_0": true
+      }
+    },
+    {
+      "id": "4",
+      "name": "右列五元组",
+      "pass": true,
+      "detail": {
+        "expected": [
+          "角色",
+          "武器接触",
+          "目标",
+          "位移",
+          "同步"
+        ],
+        "frames": [
+          {
+            "lineno": 15,
+            "left": "K0 / 起势对峙 / 0%",
+            "keys": [
+              "角色",
+              "武器接触",
+              "目标",
+              "位移",
+              "同步"
+            ],
+            "missing": [],
+            "unknown": [],
+            "pass": true
+          },
+          {
+            "lineno": 16,
+            "left": "K1 / 来拳入位 / 25%",
+            "keys": [
+              "角色",
+              "武器接触",
+              "目标",
+              "位移",
+              "同步"
+            ],
+            "missing": [],
+            "unknown": [],
+            "pass": true
+          },
+          {
+            "lineno": 17,
+            "left": "K2 / 拨开来拳 / 50%",
+            "keys": [
+              "角色",
+              "武器接触",
+              "目标",
+              "位移",
+              "同步"
+            ],
+            "missing": [],
+            "unknown": [],
+            "pass": true
+          },
+          {
+            "lineno": 18,
+            "left": "K3 / 上步推掌 / 75%",
+            "keys": [
+              "角色",
+              "武器接触",
+              "目标",
+              "位移",
+              "同步"
+            ],
+            "missing": [],
+            "unknown": [],
+            "pass": true
+          },
+          {
+            "lineno": 19,
+            "left": "K4 / 按胸压制 / 100%",
+            "keys": [
+              "角色",
+              "武器接触",
+              "目标",
+              "位移",
+              "同步"
+            ],
+            "missing": [],
+            "unknown": [],
+            "pass": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "5",
+      "name": "元信息字段",
+      "pass": true,
+      "detail": {
+        "allowed": [
+          "name",
+          "description",
+          "source"
+        ],
+        "found": [
+          "name",
+          "description",
+          "source"
+        ],
+        "extra": [],
+        "missing": [],
+        "indented_subkeys": [
+          "url",
+          "note"
+        ],
+        "note": "顶格书写的 source 子键按顶层键计；缩进子键另列于 indented_subkeys"
+      }
+    }
+  ],
+  "verdict": "PASS",
+  "fail_checks": []
+}

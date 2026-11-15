@@ -1,0 +1,108 @@
+{
+  "layer": "L4-batch",
+  "card": "execution-counter-straight-strike-v2.md",
+  "card_sha12": "17C04B158729",
+  "purpose": "同一 prompt 连跑 3 轮 + 既有基线 1 轮，做逐帧批量对照，量化各帧描述的复现稳定性",
+  "spec": "480P / 5s / 16:9，通道 2085304953094107137（MiniMax H3）",
+  "prompt": "prompt-l4-cs.txt，809 字，4 轮逐字同一份（快照 VERBATIM_OK 4/4）",
+  "rounds": [
+    {
+      "round": "b1",
+      "task_id": "2121892318318657537",
+      "video": "output/l4-cs5-b1.mp4",
+      "elapsed": "65s",
+      "style": "现代舞蹈室／教室，镜面墙、白地胶；A 黑衣黑裤（胸前 logo），B 黑 T＋浅卡其裤＋白鞋",
+      "metrics": {"size": "960x544", "fps": 24, "frames": 124, "duration": 5.17, "energy_mean": 2.06, "energy_peak": 3.3, "peak_at": "4.17s"},
+      "frame_verdicts": [
+        {"frame": "K0", "verdict": "PASS", "observed": "相对而立、双脚站立、B 双拳在身前、无接触；间距偏大（约 1.5 臂），A 抬手位置偏高", "gap": "间距略大于「约一臂」"},
+        {"frame": "K1", "verdict": "FAIL", "observed": "B 直臂出拳成立；A 竖掌举在来拳上方，掌与前臂之间有明显空隙，全程未接触", "gap": "「拳面顶住小臂中段」不成立——根本没有接触"},
+        {"frame": "K2", "verdict": "FAIL", "observed": "A 的手始终在来拳上方，未贴住；B 手臂未被带离中线、躯干未歪斜、胸前未敞开", "gap": "拨开与带偏双双不成立"},
+        {"frame": "K3", "verdict": "PARTIAL", "observed": "A 直臂推出，手抵 B 上胸偏锁骨；B 后仰成立；命中瞬间双脚仍着地", "gap": "部位偏高（非胸口正中）；命中瞬间未离地，离地推迟到 3.5s 之后"},
+        {"frame": "K4", "verdict": "PARTIAL", "observed": "B 后仰→臀坐地→躺地；A 收势站定；无接触、拉开距离成立", "gap": "没有横飞腾空，是「被打得坐倒」而非「击飞」"}
+      ],
+      "summary": {"PASS": 1, "PARTIAL": 2, "FAIL": 2}
+    },
+    {
+      "round": "b2",
+      "task_id": "2121892616625946626",
+      "video": "output/l4-cs5-b2.mp4",
+      "elapsed": "60s",
+      "style": "古装武侠，草原＋积云天空；A 红袍束发，B 绿袍束发",
+      "metrics": {"size": "960x544", "fps": 24, "frames": 124, "duration": 5.17, "energy_mean": 2.59, "energy_peak": 4.59, "peak_at": "2.83s"},
+      "frame_verdicts": [
+        {"frame": "K0", "verdict": "PASS", "observed": "相对而立、间距约一臂、双脚站立、重心居中、A 双掌抬起掌心朝向 B、B 双拳在身前、无接触——7 项全中", "gap": "无"},
+        {"frame": "K1", "verdict": "PARTIAL", "observed": "B 直臂出拳，A 竖掌在外侧迎挡，前臂贴到掌沿", "gap": "接触点在前臂外侧而非「拳面顶住小臂中段」"},
+        {"frame": "K2", "verdict": "PARTIAL", "observed": "A 掌前推／拍击，B 上身后倾退让，2.2s 胸前空档短暂暴露", "gap": "没有「贴住来拳向外侧拨开」的带偏轨迹，只有推／拍"},
+        {"frame": "K3", "verdict": "PASS", "observed": "A 掌推中 B 上胸并贴住；B 猛烈后仰；3.3s 起双脚离地、3.7s 完全腾空", "gap": "无"},
+        {"frame": "K4", "verdict": "PASS", "observed": "B 腾空近水平后飞、四肢松展；约 4.0s 臀背着地，5.1s 仰躺；A 双掌前伸收势站定、拉开距离", "gap": "「扬尘」仍未见明确形态"}
+      ],
+      "summary": {"PASS": 3, "PARTIAL": 2, "FAIL": 0}
+    },
+    {
+      "round": "b3",
+      "task_id": "2121892890266521602",
+      "video": "output/l4-cs5-b3.mp4",
+      "elapsed": "60s",
+      "style": "纯白棚拍，无环境参照；两人同款黑长袍，A/B 只能靠站位区分",
+      "metrics": {"size": "960x544", "fps": 24, "frames": 124, "duration": 5.17, "energy_mean": 2.3, "energy_peak": 5.39, "peak_at": "3.12s"},
+      "frame_verdicts": [
+        {"frame": "K0", "verdict": "PASS", "observed": "相对而立、间距约一臂余、双脚站立、A 竖掌、B 握拳、无接触", "gap": "两人服装同色，主体归属可辨性差"},
+        {"frame": "K1", "verdict": "PARTIAL", "observed": "B 直臂出拳，A 竖掌迎挡，1.6s 掌与前臂似有接触", "gap": "接触不稳，仍是「掌在上方」而非「小臂中段被顶住」"},
+        {"frame": "K2", "verdict": "PASS", "observed": "2.2s A 前臂／掌横扫，把 B 的手臂向上外侧拨起，B 手臂离开中线、胸前敞开、上身侧转", "gap": "无——四轮中唯一一次「向外侧拨开」成形"},
+        {"frame": "K3", "verdict": "PARTIAL", "observed": "A 掌推中 B 上胸，B 猛烈后仰，3.7s 双脚离地", "gap": "离地幅度小、腾空不及一轮身高，更像踉跄后倒"},
+        {"frame": "K4", "verdict": "PARTIAL", "observed": "B 臀坐地→双手撑地→仰躺；A 站定收势、无接触成立", "gap": "A 的「掌心前伸」未出现，手已落回腰侧"}
+      ],
+      "summary": {"PASS": 2, "PARTIAL": 3, "FAIL": 0}
+    },
+    {
+      "round": "base",
+      "task_id": "2121889732089839617",
+      "video": "output/l4-cs5-480p-5s.mp4",
+      "elapsed": "75s",
+      "style": "纯灰背景，黑衣，无环境细节",
+      "metrics": {"size": "960x544", "fps": 24, "frames": 124, "duration": 5.17, "energy_mean": 1.55, "energy_peak": 2.91, "peak_at": "4.12s"},
+      "frame_verdicts": [
+        {"frame": "K0", "verdict": "PASS", "observed": "七项全中（§87.4）", "gap": "无"},
+        {"frame": "K1", "verdict": "PARTIAL", "observed": "出拳与挡停成立；A 是「掌托」而非竖立小臂迎拳", "gap": "小臂中段被顶住未明确成立"},
+        {"frame": "K2", "verdict": "PARTIAL", "observed": "带偏、敞开、侧转成立；形态是下压／抓带", "gap": "无「向外侧拨」"},
+        {"frame": "K3", "verdict": "PASS", "observed": "自中线推出、掌心朝向、后仰、双脚离地；但接触点记为「上胸」", "gap": "部位为上胸而非胸口正中"},
+        {"frame": "K4", "verdict": "PASS", "observed": "倒飞、松展、余势、无接触、拉开距离、砸地触地、收势定格", "gap": "扬尘未画出"}
+      ],
+      "summary": {"PASS": 3, "PARTIAL": 2, "FAIL": 0}
+    }
+  ],
+  "stability": [
+    {"frame": "K0 起势对峙", "hit": "4/4 PASS", "note": "最稳定的一帧；唯一偏差是 b1 间距偏大"},
+    {"frame": "K1 攻击与格挡", "hit": "0/4 完全成立（4 PARTIAL/FAIL）", "note": "「拳面顶住小臂中段」四轮都没有稳定出现，实际形态是「竖掌在来拳上方/外侧迎挡」"},
+    {"frame": "K2 拨开门户", "hit": "1/4 成形（b3）", "note": "唯一成形的外拨出现在 b3；其余为下压/抓带/推拍，b1 干脆未接触"},
+    {"frame": "K3 推掌命中", "hit": "2/4 PASS", "note": "后仰 4/4 成立；但接触点 4/4 都落在上胸/锁骨下方，「胸口正中」零命中；离地时机 2/4 落在命中瞬间"},
+    {"frame": "K4 击飞与收势", "hit": "2/4 PASS", "note": "终态 4/4 成立（B 一律倒地、A 一律站定、一律无接触）；差异在幅度：横飞（b2/基线）↔ 坐倒（b1/b3）"},
+    {"frame": "扬尘", "hit": "0/4", "note": "四轮均无可见扬尘"},
+    {"frame": "规格与时长", "hit": "4/4 完全一致", "note": "960x544 / 24fps / 124 帧 / 5.17s，零方差"},
+    {"frame": "一镜到底", "hit": "4/4", "note": "均无切镜、无跳帧、K0→K4 顺序正确"},
+    {"frame": "风格", "hit": "4 轮 4 种", "note": "纯灰／舞蹈室／古装草原／白棚；轮内一致、轮间不可控"}
+  ],
+  "energy": {
+    "structure": "四轮一致：前 1–2s 低平 → 2.5s 起抬升 → 峰值落在 2.8–4.2s → 落地缓降",
+    "mean_range": "1.55–2.59",
+    "peak_range": "2.91–5.39",
+    "note": "b1 动作偏小（无击飞）故均值最低；b3 峰值最高但腾空幅度最小，说明峰值反映的是「手势＋身体晃动」而非飞行动能"
+  },
+  "aggregate": {"PASS": 9, "PARTIAL": 9, "FAIL": 2, "rounds": 4, "frames_per_round": 5},
+  "conclusions": [
+    "通道侧零方差：四轮规格、时长、帧数完全一致，一镜到底与帧序全部成立——不确定性全在语义层，不在通道层。",
+    "K1「拳面顶住小臂中段」四轮零命中，实际一律画成「竖掌在来拳上方或外侧迎挡」。该描述要求的是「受击面」而非「施动动作」，模型优先按后者演。",
+    "K2「向外侧拨开」四轮仅 1 轮成形，与 §84／§87 的单帧＋序列结论一致，现在有 4 个独立样本：该动作在当前写法下不可稳定实现。",
+    "K3「胸口正中」四轮零命中，稳定落在上胸／锁骨下方。这不是误差，是模型对「胸口正中」的默认读数偏高——卡应改「上胸」而不是继续加压。",
+    "K4 终态四项（B 倒地、A 站定、无接触、拉开距离）四轮 4/4 成立；只有飞行动作幅度波动大，属可接受的范围差异。",
+    "「扬尘」四轮 0/4，属固定欠账，应删。",
+    "风格四轮四样但各轮内自洽——卡内不含风格句，风格由通道随机决定；若要稳定风格，只能在外层加风格句，卡不必改。"
+  ],
+  "suggestions": [
+    {"target": "K1", "suggestion": "把「防御手小臂中段被拳面顶住」改为「防御手掌心／掌根抵住主体B的拳面」，或改为「防御手竖立，主体的来拳打在防御手前臂上」", "reason": "四轮都是竖掌迎挡，写「小臂被顶住」等于每轮都欠一项"},
+    {"target": "K2", "suggestion": "删「向外侧」或改「把主体B的手臂压向斜下方」", "reason": "4 轮仅 1 轮外拨，其余为下压/抓带"},
+    {"target": "K3", "suggestion": "「胸口正中」改「上胸」", "reason": "4 轮全部打在上胸/锁骨下方，零例外"},
+    {"target": "K4", "suggestion": "删「扬尘」", "reason": "4 轮 0 命中"}
+  ],
+  "boundary": "未改卡、未改技能；出片 3 条；新增 l4-cs5-b1/b2/b3.mp4、l4_batch.json、l4_batch_result.json、analyze_l4_batch.py、strip_l4.py、crop_l4.py 及拼图。"
+}

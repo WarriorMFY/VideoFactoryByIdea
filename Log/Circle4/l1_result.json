@@ -1,0 +1,186 @@
+{
+  "card": "Log/Circle4/execution-martial-arts-single-palm-push.md",
+  "sha256_12": "05FC37313E69",
+  "bytes": 2557,
+  "chars": 1094,
+  "lines": 21,
+  "checks": [
+    {
+      "id": "L1-1",
+      "name": "四段结构",
+      "pass": false,
+      "detail": {
+        "frontmatter": true,
+        "h1_count": 1,
+        "h2_count": 1,
+        "h2_lines": [
+          "## 关键帧列表"
+        ],
+        "table_separator_count": 1,
+        "axis_quote_lines": 1,
+        "axis_quote_text": [
+          "> **【空间基准声明】**：本卡中所有身体左右侧描述，均以**主体A/主体B自身躯干的解剖学视角（第一人称）**为准。"
+        ],
+        "pass": false
+      }
+    },
+    {
+      "id": "L1-2",
+      "name": "两列 + 左列 K{n}/阶段/进度% + 右列五元组定序",
+      "pass": false,
+      "detail": {
+        "expected_keys": [
+          "角色",
+          "武器接触",
+          "目标",
+          "位移",
+          "同步"
+        ],
+        "frame_sequence": [
+          0,
+          1,
+          2
+        ],
+        "sequence_continuous_from_0": true,
+        "frames": [
+          {
+            "lineno": 19,
+            "left": "K0 / 迎击拨防 / 0%",
+            "left_format_ok": true,
+            "column_count": 2,
+            "keys_in_order": [
+              "角色",
+              "(无等号)",
+              "武器/接触",
+              "目标",
+              "位移",
+              "同步"
+            ],
+            "unknown_keys": [
+              "(无等号)",
+              "武器/接触"
+            ],
+            "missing_keys": [
+              "武器接触"
+            ],
+            "key_order_ok": false,
+            "pass": false
+          },
+          {
+            "lineno": 20,
+            "left": "K1 / 上步推掌一击 / 50%",
+            "left_format_ok": true,
+            "column_count": 2,
+            "keys_in_order": [
+              "角色",
+              "武器/接触",
+              "目标",
+              "位移",
+              "同步"
+            ],
+            "unknown_keys": [
+              "武器/接触"
+            ],
+            "missing_keys": [
+              "武器接触"
+            ],
+            "key_order_ok": false,
+            "pass": false
+          },
+          {
+            "lineno": 21,
+            "left": "K2 / 按胸压制收势 / 100%",
+            "left_format_ok": true,
+            "column_count": 2,
+            "keys_in_order": [
+              "角色",
+              "武器/接触",
+              "目标",
+              "位移",
+              "同步"
+            ],
+            "unknown_keys": [
+              "武器/接触"
+            ],
+            "missing_keys": [
+              "武器接触"
+            ],
+            "key_order_ok": false,
+            "pass": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "L1-4",
+      "name": "连贯词（一气呵成声明 vs 真实停顿词）",
+      "pass": true,
+      "detail": {
+        "declarations_found": [
+          "一气呵成",
+          "同一拍",
+          "不回收",
+          "不落定"
+        ],
+        "pause_words_found": [],
+        "negated_phrases_removed": [
+          "未停顿"
+        ],
+        "posture_words_found": [
+          "落定"
+        ],
+        "note": "姿态词按 SKILL 不报错；否定式（未停顿）先剔除，不算真实停顿"
+      }
+    }
+  ],
+  "advisory": {
+    "L1-3": {
+      "name": "主体前缀（部位/武器须带归属）",
+      "note": "客观候选：短语含部位或器械词但未出现 主体A/主体B。承前省略是否算违规由日志人工判定，不自动计 FAIL。",
+      "naked_candidates": [
+        {
+          "lineno": 19,
+          "phrase": "双手抬起作防守势"
+        },
+        {
+          "lineno": 19,
+          "phrase": "右拳伸出"
+        },
+        {
+          "lineno": 20,
+          "phrase": "重心完全压在左腿"
+        },
+        {
+          "lineno": 20,
+          "phrase": "左手"
+        },
+        {
+          "lineno": 20,
+          "phrase": "左脚"
+        },
+        {
+          "lineno": 21,
+          "phrase": "左手收于腰际"
+        }
+      ],
+      "count": 6
+    },
+    "spec_layer": {
+      "note": "来自 Doc/Cards/00-spec/card-spec.md 与 validate.ps1，不计入 SKILL L1 四条判定",
+      "name": "execution-martial-arts-single-palm-push",
+      "type": "action",
+      "name_has_type_prefix": false,
+      "intro_char_count": 84,
+      "intro_limit": 40,
+      "frontmatter_unindented_lines": [
+        6,
+        7
+      ]
+    }
+  },
+  "verdict": "FAIL",
+  "fail_checks": [
+    "L1-1",
+    "L1-2"
+  ]
+}

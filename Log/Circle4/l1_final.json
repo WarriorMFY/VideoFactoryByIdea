@@ -1,0 +1,58 @@
+[
+  {
+    "card": "execution-counter-straight-strike-v2.md",
+    "sha256_12": "3292E2510FB9",
+    "bytes": 3183,
+    "chars": 1268,
+    "lines": 16,
+    "trigger": {
+      "subjects": [
+        "A",
+        "B"
+      ],
+      "subject_count": 2,
+      "cross_subject_terms": [
+        "接触",
+        "格挡",
+        "推击",
+        "推中",
+        "撞",
+        "拨"
+      ]
+    },
+    "L1": [
+      {
+        "id": "1",
+        "name": "主体结构",
+        "verdict": "PASS",
+        "reason": "H1=1 / H2=1 / 引用=1 / 表=1"
+      },
+      {
+        "id": "2",
+        "name": "两列",
+        "verdict": "PASS",
+        "reason": "6 行全部 2 列"
+      },
+      {
+        "id": "3",
+        "name": "左列帧号",
+        "verdict": "PASS",
+        "reason": "K0–K4，进度 [0, 10, 40, 70, 100]"
+      },
+      {
+        "id": "4",
+        "name": "右列五元组",
+        "verdict": "PASS",
+        "reason": "5 帧键序均为 角色→武器/接触→目标→位移→同步"
+      },
+      {
+        "id": "5",
+        "name": "元信息",
+        "verdict": "PASS",
+        "reason": "恰好 2 键：name / description"
+      }
+    ],
+    "spatial_hits": [],
+    "L1_verdict": "PASS"
+  }
+]

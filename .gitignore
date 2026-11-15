@@ -2,3 +2,26 @@
 
 # Tool/_deps 是本机依赖缓存（cv2 / Pillow / numpy），由 Tool/setup_deps.py 重建，不入库
 Tool/_deps/
+
+# 图片与视频统一不入库，只入文档（2026-11-15 用户裁定）
+# 理由：二进制证据体积大、diff 无意义、克隆成本高；证据正文与指纹写进 evidence.md / prompt.txt
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.gif
+*.bmp
+*.tif
+*.tiff
+*.heic
+*.avif
+*.svg
+*.psd
+*.mp4
+*.mov
+*.m4v
+*.webm
+*.avi
+*.mkv
+*.flv
+*.wmv
