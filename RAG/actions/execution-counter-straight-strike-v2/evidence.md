@@ -14,6 +14,8 @@
 | 卡片版本 | v2 改后版：K0 防御手退回胸前、K1 改为「迎拳与格挡」 |
 | 不采用的版本 | 归档件 `archive/execution-counter-straight-strike-v2.20261115-1721.pre-k1fix.md`，hash `17C04B158729`，**不入库** |
 | 已知偏差 | 3 条（K1 接触高度、K2 拨开、K4 扬尘），见第六节；**均未改卡** |
+| 入库位置 | `RAG/actions/execution-counter-straight-strike-v2/`（2026-11-15 17:46 搬入，用户指令「入库」） |
+| 目录命名 | 不加帧数后缀。加 `-5f` 须同步改卡内 `name`，hash 随之变化、本证据当场失效，故保持与 `name` 一致 |
 
 ## 二、运行时指纹（`RAG/README.md` §3）
 
@@ -138,6 +140,8 @@ K0／K1 的现行对照**以 L4 抽帧替代**，不是 L3 单帧原图。若要
 
 ## 八、边界
 
+- **已入库**（2026-11-15 17:46）：本目录即库内位置；`card.md` 由 `Log/Circle4/execution-counter-straight-strike-v2.md` 逐字节复制，搬入后 `cmp` 一致、重算 hash 仍 `3292E2510FB9`，并对库内副本复跑 `final_check.py`：§0 PASS、L1 5/5 PASS、L2-1.2 空间称谓 0 命中。
+- **L3 的 K0／K1 未补单帧**：用户裁定以 L4 抽帧替代，不额外消耗出图积分；四层证据中 L3 只有 K2／K3／K4 三帧有效，第五节已如实标注。
 - 未改卡、未改技能；`RAG/README.md` 仅按用户 17:38 裁定更新 §2（两项停用）、17:40 追加 §5 图片不入 git 的说明，其余章节未动；`Skill/`、`Tool/`、`AGENTS.md` 未动。
 - **图片与视频不入 git**（2026-11-15 仓库约定）：`01-pass-l4-v3a.mp4`、两张 png 只在本地留存，随克隆不带过去；复现依据为第二、五节的指纹与 `prompt.txt`。
 - 旧版六轮视频不进本目录，留在 `Log/Circle4/output/`。

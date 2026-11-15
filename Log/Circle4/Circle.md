@@ -4,14 +4,14 @@
 | --- | --- |
 | 开始时间 | 2026-11-14 17:03（17:07 指令将编号由 Circle5 改为 Circle4） |
 | 结束时间 | **2026-11-15 17:42**（用户指令「结束循环」） |
-| 最终判定 | 末段卡**通过（带偏差）**：§0 PASS / L1 5/5 / L2 8/8 / L3 三帧有效＋两帧替代 / L4 两轮 3 PASS·5 PARTIAL·2 FAIL。入库材料已备，**未入库**（目录名与 K0/K1 补图两项待用户定，见 §91） |
+| 最终判定 | 末段卡**通过（带偏差）**：§0 PASS / L1 5/5 / L2 8/8 / L3 三帧有效＋两帧替代 / L4 两轮 3 PASS·5 PARTIAL·2 FAIL。**已入库**（17:46，用户指令「入库」，见 §92） |
 | 目标卡（末段，§58 起） | `execution-counter-straight-strike-v2`（交互动作卡，防反·拨开推掌） |
 | 卡片副本（末段） | `Log/Circle4/execution-counter-straight-strike-v2.md`；改卡前归档 `Log/Circle4/archive/execution-counter-straight-strike-v2.20261115-1721.pre-k1fix.md` |
 | 卡片 hash（末段） | **`3292E2510FB9`**（3183 字节 / 16 行 / 1268 字符 / 5 帧）；改卡前 `17C04B158729` |
 | 目标卡（前段，§1–§57） | `execution-martial-arts-single-palm-push`，`type: action`（旧口径，17:38 已按 L1-5 删除） |
 | 卡片 hash（前段） | `4DFC9F492DF2`（5165 字节 / 19 行 / 5 帧）；历次 `83F7D3A2B5A3`、`903E7B1AB518`、`193DAACF1D47`、`A40FF04BB7C6`、`AACFFA95FAE1`、`5CD29D140E75`、`FFEEFEF5B671`、`869ECC22CE5F`、`05FC37313E69` |
-| 入库目标 | `RAG/actions/execution-counter-straight-strike-v2/`（**未创建**）；草稿 `Workspace/import-draft/execution-counter-straight-strike-v2/` |
-| 当前阶段 | **已结束**（阶段 90，17:42） |
+| 入库位置 | **`RAG/actions/execution-counter-straight-strike-v2/`**（2026-11-15 17:46 已搬入）；原草稿 `Workspace/import-draft/…` 已迁走并清空 |
+| 当前阶段 | **已结束并入库**（阶段 92，17:46） |
 | L1 判定（末段） | **PASS 5/5**（`final_check.py`，hash `3292E2510FB9`，无 FAIL） |
 | L2 判定（末段） | **PASS 8/8**（含 17:31 新增的 3.2 姿态重叠条款；2.1 留一处「掌心／前臂」双面词，未判 FAIL） |
 | L3 判定（末段） | K0／K1 原图因改卡作废，以 L4 抽帧替代；K2／K3／K4 有效 |
@@ -3684,3 +3684,41 @@ K1 把接触抬到高位后，K2 的「贴住来拳向外侧拨开」失去起�
 ### 91.4 提交范围
 
 按 `AGENTS.md`「循环结束自动提交到本地 git」，只提交本地，**不 push**。图片与视频按 17:40 裁定不入库，索引内媒体文件已全部移出（`git rm --cached`，磁盘保留）。
+
+## §92 入库（用户 17:46「入库」）
+
+### 92.1 两项待定的处理
+
+用户未单独裁定，按 §91 建议的默认方案执行，理由一并落盘：
+
+| 待定项 | 采用 | 理由 |
+| --- | --- | --- |
+| 目录名是否加 `-5f` | **不加**，用 `execution-counter-straight-strike-v2` | 与卡内 `name` 天然一致；加后缀须改 `name`，hash 随变，本轮全部证据当场失效 |
+| L3 的 K0／K1 是否补两张单帧 | **不补**，以 L4 抽帧替代 | 改卡后旧图作废属实，但 L4 两轮同 hash 已覆盖这两帧；补图约 22 积分且不改变字号结论 |
+
+### 92.2 搬入与复核
+
+| 步 | 结果 |
+| --- | --- |
+| 目标目录 | `RAG/actions/execution-counter-straight-strike-v2/`（新建） |
+| 迁入文件 | `card.md`、`evidence.md`、`prompt.txt`、`01-pass-l4-v3a.mp4`（892 KB）、`01-pass-l4-v3a-sheet.png`（537 KB）、`02-fail-k1-high-contact.png`（224 KB） |
+| 草稿清理 | `Workspace/import-draft/` 已空，两级目录删除 |
+| 逐字节核对 | `cmp card.md` 与 `Log/Circle4/execution-counter-straight-strike-v2.md` → **CMP_OK** |
+| hash 复算 | `3292E2510FB9`（3183 字节 / 16 行 / 1268 字符），与 evidence 一致 |
+| L1 复跑 | 对**库内副本**跑 `final_check.py`：§0 主体 2／交互词 6；L1 5/5 PASS；L2-1.2 空间称谓 0 命中 |
+
+### 92.3 规则文件同步
+
+| 文件 | 改动 |
+| --- | --- |
+| `RAG/README.md` §1 | 结构树由 `.png` 放宽为 `.<png|mp4>`，容纳视频类证据 |
+| `RAG/README.md` §5 | 补一句「视频类证据沿用同一前缀」 |
+| `RAG/README.md` §6 | 补一条：原件在 `Log/` 而非 `Doc/` 时**不原地加「已入库」标注**——加行即改 hash、库内指纹失效；改由本日志与 `evidence.md` 的「入库位置」留痕 |
+| `evidence.md` §1 | 新增「入库位置」「目录命名」两行 |
+| `evidence.md` §8 | 首条改为「已入库」并记录复核结果；补「L3 K0／K1 未补单帧」一条 |
+
+### 92.4 未随本次入库的事
+
+- 卡片本体一字未改，`Log/Circle4/execution-counter-straight-strike-v2.md` 保持 hash `3292E2510FB9`，未加任何标注。
+- 三条已知偏差（K1 接触高度、K2 拨开、K4 扬尘）与风格轮间不可控，原样留在 `evidence.md` §6，未改卡。
+- §74.3 三条未落地规则、3.2 详规指针错位两项仍为跨轮遗留，本次未处理。
