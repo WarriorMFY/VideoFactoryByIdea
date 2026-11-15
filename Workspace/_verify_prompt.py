@@ -2,6 +2,12 @@ import re
 import sys
 from pathlib import Path
 
+# 本脚本比对「Prompt 第 3 行」与「卡片 K2 原文」，依赖 Circle2 的卡片
+# `Doc/Cards/90-cases/shield-sword-finisher/action-shield-sword-thrust-v2.md`。
+# 该卡片已随 Circle7 规格重构删除（Doc/Cards 只留 spec.md + Template/），
+# 本脚本因此失效，留作历史工具：要复跑请先从 git 历史（c06e3bb 之前）取回卡片，
+# 并把下面 CARD 指回原路径。
+
 sys.stdout.reconfigure(encoding="utf-8")
 
 CARD = Path("Doc/Cards/90-cases/shield-sword-finisher/action-shield-sword-thrust-v2.md")

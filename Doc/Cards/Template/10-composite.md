@@ -43,7 +43,7 @@ references:
 | `ui` | `ui` / 选填 |
 | `anti` | `anti` / 选填 |
 
-装配顺序见 `00-spec/reference-graph.md` 第四节。
+装配顺序由本卡自行约定；`Doc/Cards` 仅保留 `spec.md` 与本目录，旧引用契约已废止。
 
 ## 填写要点
 

@@ -23,7 +23,7 @@ PROMPT = ROOT / "Log/Circle2/prompt.txt"
 CARD_V2 = ROOT / "Log/Circle2/action-shield-sword-thrust-v2.md"
 VIDEO = ROOT / "Log/Circle2/output/l4-v2.mp4"
 STUB = TOOL / "stub_runner.py"
-VALIDATE = ROOT / "Doc/Cards/00-spec/validate.ps1"
+VALIDATE_REMOVED = "原 Doc/Cards/00-spec/validate.ps1 已随 Circle7 规格重构删除"
 
 results = []
 
@@ -112,18 +112,7 @@ def main():
             ok=lambda r: r.returncode == 0 and (t / "sheet.png").is_file(),
             detail=last_line)
 
-    def vdetail(r):
-        for line in reversed(r.stdout.splitlines()):
-            if ("FAIL" in line or "PASS" in line) and "::" not in line:
-                return "可执行 → " + line.strip()[:90]
-        return "rc={}, 输出 {} 字节".format(r.returncode, len(r.stdout))
-
-    ps_cmd = ("[Console]::OutputEncoding=[System.Text.Encoding]::UTF8; "
-              "& '{}'; exit $LASTEXITCODE").format(VALIDATE)
-    run("validate_ps1",
-        ["powershell.exe", "-NoProfile", "-Command", ps_cmd],
-        ok=lambda r: r.returncode in (0, 1) and bool(r.stdout.strip()),
-        detail=vdetail, soft=True)
+    # 旧 `validate_ps1` 检查与 `vdetail` 提取器已移除：旧规范与校验脚本随 Circle7 规格重构废止，现规格见 Doc/Cards/spec.md
 
     if a.online:
         run("account",

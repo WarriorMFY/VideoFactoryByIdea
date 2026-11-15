@@ -122,7 +122,7 @@
 | 项 | 变化 |
 | --- | --- |
 | 本卡 | 删 `## 镜头参数` 整节（小节标题 + 6 行表 = 11 行），H1 版本号改 v3.2，`6839884B436B` → `EDB11AB333B3`；2139 B / 31 行 → 1926 B / 20 行 |
-| 模板 `Doc/Cards/10-templates/05-camera.template.md` | 同步删该节与校验项「镜头参数表六字段非空」，否则下一张镜头卡会重新长出来 |
+| 模板 `Doc/Cards/10-templates/05-camera.template.md`（Circle7 重构后为 `Doc/Cards/Template/05-camera.md`） | 同步删该节与校验项「镜头参数表六字段非空」，否则下一张镜头卡会重新长出来 |
 | 投递体 | 2226 → 2095 字符；镜头卡占投递体 39.6%，删表让出约 5.9% |
 | 结构判定 | L1-1 / L1-3 由 FAIL 转 PASS（见 4.1） |
 | 动作卡 | 一字未改，仍 `3292E2510FB9` |
@@ -143,6 +143,7 @@
 
 - 动作卡一字未改，`RAG/actions/execution-counter-straight-strike-v2/card.md` 仍为 `3292E2510FB9`；其 `evidence.md` 仅新增「派生卡」一节，其余未动。
 - 镜头卡原件仍在 `Doc/Cards/30-behavior/cameras/camera-aux-counter-straight-strike-v2.md`，与入库件逐字节一致；按 README §6 **不原地加「已入库」标注**（加行即破 hash）。
+- **2026-11-16 追记**：该原件已随 Circle7 规格重构（`Doc/Cards` 只留 `spec.md` + `Template/`）删除，本目录 `card.md` 自此为唯一副本；原件内容见 git 历史 `c06e3bb`。
 - 图片与视频不入 git（2026-11-15 仓库约定）：`01-pass-dual4.mp4`、`01-pass-dual4-strip.png`、`02-fail-morph-random.mp4` 只在本地留存，复现靠第三节指纹与 `prompt.txt`。
 - 未入库的历史版本留在 `Log/Circle5/archive/` 与 `Log/Circle5/output/`。
 - 按 `AGENTS.md` 只提交本地 git，不 push。

@@ -23,6 +23,7 @@ RAG/<type 复数>/
 
 > **2026-11-15 用户裁定：前两条停用，不再作为准入门槛。**
 > `validate.ps1` 校验的是 `Doc/Cards` 旧规范（要求 frontmatter 含 `type`、name 以 `type-` 开头），与 `Skill/interactive-action-card-validation` 的「frontmatter 恰好 2 键」直接互斥；`check_prompt.py` 在仓库中不存在。两项均予停用，不删除、留档备查。
+> **2026-11-16 追记**：`validate.ps1` 已随 `Doc/Cards/00-spec/` 在 Circle7 规格重构中删除，现规格只有 `Doc/Cards/spec.md`。停用一事自此无对象可停，两行仍留档。
 
 | 条件 | 说明 | 状态 |
 | --- | --- | --- |
@@ -75,9 +76,9 @@ RAG/<type 复数>/
 
 ## 六、单一真相源
 
-`RAG` 里的 `card.md` 是唯一真相。`Doc/` 里那份是历史草稿，入库后必须在顶部标注「已入库」并指向本目录，避免两处各自演化。
+`RAG` 里的 `card.md` 是唯一副本。**2026-11-16 Circle7 起，`Doc/Cards` 只放 `spec.md` 与 `Template/`，不再存放任何实例卡**——所以不存在「两处各自演化」的问题，入库即为此卡唯一存在形态。
 
-若原件在工作日志目录（`Log/`）**或正式卡目录（`Doc/Cards/`）**，**不原地加标注**——加行会改 hash，库内 `card.md` 的指纹当场失效。改由入库日志（`Log/Circle<N>/Circle.md`）记录入库路径，并在 `evidence.md` 的「入库位置」一行留痕。
+若入库前原件在工作日志目录（`Log/`），**不原地加标注**——加行会改 hash，库内 `card.md` 的指纹当场失效。改由入库日志（`Log/Circle<N>/Circle.md`）记录入库路径，并在 `evidence.md` 的「入库位置」一行留痕。
 
 ## 七、派生卡（2026-11-15 起）
 

@@ -99,3 +99,5 @@
 ## 十、检索
 
 按 `RAG/README.md` §7，索引只收 `card.md`；`evidence.md`、`prompt.txt`、两张 png 均为附件，不参与语义检索。索引方案待建，本期不实施。
+
+> **2026-11-16 追记（Circle7）**：本文件中提到的 `Doc/Cards/00-spec/`（`card-spec.md`、`reference-graph.md`、`validate.ps1`）已随规格重构全部删除，现规格仅为 `Doc/Cards/spec.md`（元信息 + 两列表格）。以上陈述保留为当时状态记录，不再指向现存文件。

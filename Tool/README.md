@@ -14,7 +14,8 @@
 `_deps/` 是本机依赖缓存，**不入库**（见 `.gitignore`），换机器跑一次 `setup_deps.py` 即可。
 `smoke_test.py` 会自动把 `_deps` 注入 `PYTHONPATH`，无需手工设置。
 
-两个已知事实，冒烟时不算失败：
+一条已知事实，冒烟时不算失败：
 
-- `validate.ps1` 当前报 35 项 FAIL，全是「卡内附加章节 / 主表数量」，属 Circle2 已记录的历史欠债；冒烟只判它能否执行。
 - `runninghub_app.py --check` 以 `remainMoney` 判余额，会误报 `no_balance`；真实额度看 `account.py` 的 `remainPoint`。`--run` 不调用 `--check`，不受影响。
+
+`smoke_test.py` 原先还跑一遍 `validate.ps1`。该脚本连同 `Doc/Cards/00-spec/` 已在 Circle7 规格重构中删除，现规格只有 `Doc/Cards/spec.md`（元信息 + 两列表格），冒烟不再做结构校验。
