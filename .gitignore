@@ -1,4 +1,10 @@
-# Workspace 已纳入版本管理，其中的送验脚本与 Prompt 快照是验收证据的一部分
+# Workspace 是本地临时工作区（探查脚本、Prompt 快照、输出缓存），不入库（2026-11-16 用户裁定）
+# 需要长期留存的脚本移入 Tool/，需要留存的证据移入 RAG/<卡>/ 或 Log/<Circle>/
+Workspace/
+
+# 字节码不入库
+__pycache__/
+*.pyc
 
 # Tool/_deps 是本机依赖缓存（cv2 / Pillow / numpy），由 Tool/setup_deps.py 重建，不入库
 Tool/_deps/
