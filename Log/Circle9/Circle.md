@@ -20,3 +20,8 @@
 | 时点 | 动作 | 结果 |
 | --- | --- | --- |
 | 18:56 | 新建目录，记录起点 | 本文件 |
+| 18:57 | 确认上一步中断遗留的 `git rm --cached Workspace` | 82 个文件已离开索引，磁盘 83 个保留 |
+| 18:57 | 改 `.gitignore` | 首行注释改为「本地临时工作区，不入库」并加 `Workspace/`；新增 `__pycache__/`、`*.pyc` |
+| 18:57 | 删 `Log/Circle8/__pycache__/run_portrait.cpython-312.pyc` | 随 Circle8 误入的字节码清除 |
+| 18:58 | 提交 `ad96466` | 82 D（Workspace）+ 1 D（pyc）+ `.gitignore`，无新增 |
+| 18:59 | `git add RAG` 补 10 个媒体 | 4 条 mp4 + 6 张 png，约 9 MB，索引与 11-16「RAG 内全部入库」对齐 |
