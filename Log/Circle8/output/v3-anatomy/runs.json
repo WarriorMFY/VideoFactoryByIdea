@@ -1,0 +1,24 @@
+{
+  "dir": "v3-anatomy",
+  "prompt_chars": 1225,
+  "runs": [
+    {
+      "tag": "r",
+      "image": "portrait-r.png",
+      "info": {
+        "task": "2122213007105937410",
+        "charged": "10.87",
+        "file": "portrait-r.png"
+      }
+    },
+    {
+      "tag": "s",
+      "image": "portrait-s.png",
+      "info": {
+        "task": "2122213165835190273",
+        "charged": "12.22",
+        "file": "portrait-s.png"
+      }
+    }
+  ]
+}

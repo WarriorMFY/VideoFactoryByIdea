@@ -25,3 +25,7 @@ Tool/_deps/
 *.mkv
 *.flv
 *.wmv
+
+# RAG 例外：卡片库所有文件都入 git（含图片与视频，2026-11-16 用户裁定）
+# 其余目录（Log／Workspace）下的媒体仍不入库
+!RAG/**

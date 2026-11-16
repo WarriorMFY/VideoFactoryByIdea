@@ -1,0 +1,335 @@
+[
+  {
+    "id": "R1.外形.1",
+    "part": "整体轮廓",
+    "key": "外形",
+    "claim": "窄肩长颈、头部前倾约10°、肩线平直",
+    "metric": "M1",
+    "rule1_side": false,
+    "measurable": false
+  },
+  {
+    "id": "R1.比例.1",
+    "part": "整体轮廓",
+    "key": "比例",
+    "claim": "肩宽约2.2头高、颈长0.35头高、下颌到锁骨0.5头高",
+    "metric": "M4",
+    "rule1_side": false,
+    "measurable": true
+  },
+  {
+    "id": "R1.颜色.1",
+    "part": "整体轮廓",
+    "key": "颜色",
+    "claim": "亚麻灰60°/18%为底、皮革褐25°/22%、黄铜40°/55%点缀",
+    "metric": "M3",
+    "rule1_side": false,
+    "measurable": true
+  },
+  {
+    "id": "R1.材质.1",
+    "part": "整体轮廓",
+    "key": "材质",
+    "claim": "粗织亚麻、鞣制牛皮、氧化黄铜",
+    "metric": "M1",
+    "rule1_side": false,
+    "measurable": false
+  },
+  {
+    "id": "R1.特征.1",
+    "part": "整体轮廓",
+    "key": "特征",
+    "claim": "右侧下颌至耳根被布条斜向压住",
+    "metric": "M1",
+    "rule1_side": true,
+    "measurable": false
+  },
+  {
+    "id": "R1.特征.2",
+    "part": "整体轮廓",
+    "key": "特征",
+    "claim": "剪影左右不对称",
+    "metric": "M1",
+    "rule1_side": true,
+    "measurable": false
+  },
+  {
+    "id": "R2.外形.1",
+    "part": "头骨与脸型",
+    "key": "外形",
+    "claim": "长方脸、颧弓外扩、下巴方正",
+    "metric": "M1",
+    "rule1_side": false,
+    "measurable": false
+  },
+  {
+    "id": "R2.比例.1",
+    "part": "头骨与脸型",
+    "key": "比例",
+    "claim": "脸长1.4头高、脸宽0.75头高、下颌角外翻约120°",
+    "metric": "M4",
+    "rule1_side": false,
+    "measurable": true
+  },
+  {
+    "id": "R2.颜色.1",
+    "part": "头骨与脸型",
+    "key": "颜色",
+    "claim": "肤色黄褐30°/62%",
+    "metric": "M3",
+    "rule1_side": false,
+    "measurable": true
+  },
+  {
+    "id": "R2.颜色.2",
+    "part": "头骨与脸型",
+    "key": "颜色",
+    "claim": "颧部再暗5%",
+    "metric": "M3",
+    "rule1_side": false,
+    "measurable": true
+  },
+  {
+    "id": "R2.材质.1",
+    "part": "头骨与脸型",
+    "key": "材质",
+    "claim": "皮肤哑光、T区微油",
+    "metric": "M1",
+    "rule1_side": false,
+    "measurable": false
+  },
+  {
+    "id": "R2.特征.1",
+    "part": "头骨与脸型",
+    "key": "特征",
+    "claim": "右侧颧骨上方有鸡蛋大的旧烧伤",
+    "metric": "M1",
+    "rule1_side": true,
+    "measurable": false
+  },
+  {
+    "id": "R2.特征.2",
+    "part": "头骨与脸型",
+    "key": "特征",
+    "claim": "表面光滑反光",
+    "metric": "M1",
+    "rule1_side": false,
+    "measurable": false
+  },
+  {
+    "id": "R3.外形.1",
+    "part": "眼部与眉弓",
+    "key": "外形",
+    "claim": "眉弓低平、眼窝浅、内眦略下垂",
+    "metric": "M1",
+    "rule1_side": false,
+    "measurable": false
+  },
+  {
+    "id": "R3.比例.1",
+    "part": "眼部与眉弓",
+    "key": "比例",
+    "claim": "眼裂长约0.32脸宽、两眼间距0.36脸宽",
+    "metric": "M4",
+    "rule1_side": false,
+    "measurable": true
+  },
+  {
+    "id": "R3.颜色.1",
+    "part": "眼部与眉弓",
+    "key": "颜色",
+    "claim": "虹膜深褐20°/25%、巩膜象牙白",
+    "metric": "M3",
+    "rule1_side": false,
+    "measurable": true
+  },
+  {
+    "id": "R3.材质.1",
+    "part": "眼部与眉弓",
+    "key": "材质",
+    "claim": "角膜高光锐利、下眼睑有细纹",
+    "metric": "M1",
+    "rule1_side": false,
+    "measurable": false
+  },
+  {
+    "id": "R3.特征.1",
+    "part": "眼部与眉弓",
+    "key": "特征",
+    "claim": "右眼上睑一道纵疤把眉毛切断",
+    "metric": "M1",
+    "rule1_side": true,
+    "measurable": false
+  },
+  {
+    "id": "R3.特征.2",
+    "part": "眼部与眉弓",
+    "key": "特征",
+    "claim": "右眼是唯一露出布外的五官",
+    "metric": "M1",
+    "rule1_side": true,
+    "measurable": false
+  },
+  {
+    "id": "R4.外形.1",
+    "part": "鼻口与下颌",
+    "key": "外形",
+    "claim": "鼻梁直、鼻头圆钝、唇薄而紧抿",
+    "metric": "M1",
+    "rule1_side": false,
+    "measurable": false
+  },
+  {
+    "id": "R4.比例.1",
+    "part": "鼻口与下颌",
+    "key": "比例",
+    "claim": "鼻长0.33脸高、鼻翼宽0.28脸宽、唇厚0.08脸高",
+    "metric": "M4",
+    "rule1_side": false,
+    "measurable": true
+  },
+  {
+    "id": "R4.颜色.1",
+    "part": "鼻口与下颌",
+    "key": "颜色",
+    "claim": "鼻头与唇色偏红10°/45%",
+    "metric": "M3",
+    "rule1_side": false,
+    "measurable": true
+  },
+  {
+    "id": "R4.材质.1",
+    "part": "鼻口与下颌",
+    "key": "材质",
+    "claim": "鼻翼毛孔可见、唇部干裂起皮",
+    "metric": "M1",
+    "rule1_side": false,
+    "measurable": false
+  },
+  {
+    "id": "R4.特征.1",
+    "part": "鼻口与下颌",
+    "key": "特征",
+    "claim": "下唇左侧一道白色旧疤",
+    "metric": "M1",
+    "rule1_side": true,
+    "measurable": false
+  },
+  {
+    "id": "R4.特征.2",
+    "part": "鼻口与下颌",
+    "key": "特征",
+    "claim": "嘴角自然下垂",
+    "metric": "M1",
+    "rule1_side": false,
+    "measurable": false
+  },
+  {
+    "id": "R5.外形.1",
+    "part": "皮肤与须发",
+    "key": "外形",
+    "claim": "短发贴头皮、下颌胡茬断续",
+    "metric": "M1",
+    "rule1_side": false,
+    "measurable": false
+  },
+  {
+    "id": "R5.比例.1",
+    "part": "皮肤与须发",
+    "key": "比例",
+    "claim": "发际线距眉弓0.5脸高、鬓角连至耳根",
+    "metric": "M4",
+    "rule1_side": false,
+    "measurable": true
+  },
+  {
+    "id": "R5.颜色.1",
+    "part": "皮肤与须发",
+    "key": "颜色",
+    "claim": "发色近黑0°/8%、胡茬青灰",
+    "metric": "M3",
+    "rule1_side": false,
+    "measurable": true
+  },
+  {
+    "id": "R5.材质.1",
+    "part": "皮肤与须发",
+    "key": "材质",
+    "claim": "发丝粗硬、皮肤干燥起屑",
+    "metric": "M1",
+    "rule1_side": false,
+    "measurable": false
+  },
+  {
+    "id": "R5.特征.1",
+    "part": "皮肤与须发",
+    "key": "特征",
+    "claim": "右鬓角有一撮灰白",
+    "metric": "M1",
+    "rule1_side": true,
+    "measurable": false
+  },
+  {
+    "id": "R5.特征.2",
+    "part": "皮肤与须发",
+    "key": "特征",
+    "claim": "胡须在下巴处断成两簇",
+    "metric": "M1",
+    "rule1_side": false,
+    "measurable": false
+  },
+  {
+    "id": "R6.外形.1",
+    "part": "衣领与配饰",
+    "key": "外形",
+    "claim": "立领对襟、右肩单侧加厚护片",
+    "metric": "M1",
+    "rule1_side": true,
+    "measurable": false
+  },
+  {
+    "id": "R6.比例.1",
+    "part": "衣领与配饰",
+    "key": "比例",
+    "claim": "立领高0.25头高、护片盖住肩宽1/3",
+    "metric": "M4",
+    "rule1_side": false,
+    "measurable": true
+  },
+  {
+    "id": "R6.颜色.1",
+    "part": "衣领与配饰",
+    "key": "颜色",
+    "claim": "领口内衬赭红15°/35%、护片铁灰0°/30%",
+    "metric": "M3",
+    "rule1_side": false,
+    "measurable": true
+  },
+  {
+    "id": "R6.材质.1",
+    "part": "衣领与配饰",
+    "key": "材质",
+    "claim": "麻衬里、熟铁铆钉、粗麻缝线",
+    "metric": "M1",
+    "rule1_side": false,
+    "measurable": false
+  },
+  {
+    "id": "R6.特征.1",
+    "part": "衣领与配饰",
+    "key": "特征",
+    "claim": "颈侧挂黄铜圆规一副",
+    "metric": "M1",
+    "rule1_side": false,
+    "measurable": false
+  },
+  {
+    "id": "R6.特征.2",
+    "part": "衣领与配饰",
+    "key": "特征",
+    "claim": "链子垂到锁骨",
+    "metric": "M1",
+    "rule1_side": false,
+    "measurable": false
+  }
+]

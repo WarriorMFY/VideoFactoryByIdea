@@ -1,0 +1,42 @@
+{
+  "dir": "v2-narrow",
+  "prompt_chars": 1225,
+  "runs": [
+    {
+      "tag": "n",
+      "image": "portrait-n.png",
+      "info": {
+        "task": "2122203767855337474",
+        "charged": "11.5",
+        "file": "portrait-n.png"
+      }
+    },
+    {
+      "tag": "o",
+      "image": "portrait-o.png",
+      "info": {
+        "task": "2122203996906283010",
+        "charged": "11.62",
+        "file": "portrait-o.png"
+      }
+    },
+    {
+      "tag": "p",
+      "image": "portrait-p.png",
+      "info": {
+        "task": "2122210272805617666",
+        "charged": "11.35",
+        "file": "portrait-p.png"
+      }
+    },
+    {
+      "tag": "q",
+      "image": "portrait-q.png",
+      "info": {
+        "task": "2122210477860945922",
+        "charged": "10.87",
+        "file": "portrait-q.png"
+      }
+    }
+  ]
+}

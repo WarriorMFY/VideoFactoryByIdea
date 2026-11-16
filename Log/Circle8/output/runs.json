@@ -1,0 +1,26 @@
+{
+  "app_id": "2046794551444119554",
+  "instance": "default",
+  "settings": {
+    "18:aspectRatio": "3:4",
+    "18:resolution": "1k"
+  },
+  "prompt_chars": 880,
+  "prompt_file": "prompt-portrait-shared.txt",
+  "card_sha256_12": "4752433CEC66",
+  "runs": [
+    {
+      "tag": "a",
+      "task": "2122136884850413569",
+      "charged": "11.35",
+      "file": "portrait-a.png"
+    },
+    {
+      "tag": "b",
+      "task": "2122137094892769281",
+      "charged": "11.17",
+      "file": "portrait-b.png"
+    }
+  ],
+  "charged_total": 22.52
+}

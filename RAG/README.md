@@ -14,7 +14,7 @@ RAG/<类型复数>/<卡片名>/
   └─ 02-fail-<问题>.<png|mp4> 已知偏差，可选
 ```
 
-目录名按卡片类型起复数，**不设枚举**（spec 已取消 `type` 约束）。现有 `actions/`、`styles/`；派生镜头卡进基础卡下 `cameras/`（§六）。`card.md` 内 `name` 须等于所在目录名。
+目录名按卡片类型起复数，**不设枚举**（spec 已取消 `type` 约束）。现有 `actions/`、`styles/`、`portraits/`；派生镜头卡进基础卡下 `cameras/`（§六）。`card.md` 内 `name` 须等于所在目录名。
 
 ## 二、准入
 
@@ -34,7 +34,7 @@ RAG/<类型复数>/<卡片名>/
 
 `evidence.md` 缺任一项即无效：平台与应用、webappId、实例类型（lite／default／plus）、出图／出片时间、Task ID、结果 URL、Prompt 文件名与段数、卡片 hash（SHA256 前 12 位）。
 
-媒体不入 git（§四末），这些指纹是唯一能重建证据的凭据。
+媒体自 2026-11-16 起随卡片一并入库（§四末）；指纹仍逐项保留，用于在换机、换克隆后核对媒体是否被替换。
 
 ## 四、版本与失效
 
@@ -46,7 +46,7 @@ python -c "import hashlib,pathlib;print(hashlib.sha256(pathlib.Path('RAG/<路径
 
 必须按**字节**算：库内多数 `card.md` 是 CRLF，`read_text()` 再 encode 会得到不同值（实测 `81404DCD4E58` 与 `7018DEDFAB75`）。
 
-媒体命名：`pass-` 不可删，`fail-` 只留代表性一张，视频沿用同一前缀与序号。**2026-11-15 起图片与视频不入 git**，根 `.gitignore` 已屏蔽，`pass-`／`fail-` 只留本地磁盘。
+媒体命名：`pass-` 不可删，`fail-` 只留代表性一张，视频沿用同一前缀与序号。**2026-11-16 起 RAG 内所有文件都入 git**（含图片与视频），根 `.gitignore` 已加 `!RAG/**` 例外；`Log/`、`Workspace/` 下的媒体仍不入库。
 
 ## 五、单一副本
 
@@ -69,6 +69,8 @@ RAG/<类型复数>/<基础卡名>/
 
 首个派生实例：`actions/execution-counter-straight-strike-v2/cameras/camera-aux-counter-straight-strike-v2/`（`EDB11AB333B3`，实测件产自 v3.1 `6839884B436B`）。
 
+**一对一主副卡不收进 `cameras/`**：不设中间分组目录，副卡目录直接挂在主卡下，目录名即副卡 `name`。首个主副实例：`portraits/figure-symmetric-cartographer/portrait-fixed-variables/`（副卡 `21903F58A6EB`，主卡 `631A7C6F1914`），两者共用同一份 `prompt.txt` 与同一批样张。
+
 ## 七、入库清单
 
 | 路径 | 卡 | hash |
@@ -77,6 +79,7 @@ RAG/<类型复数>/<基础卡名>/
 | `actions/execution-counter-straight-strike-v2/cameras/camera-aux-counter-straight-strike-v2/` | 派生镜头卡 v3.2 | `EDB11AB333B3` |
 | `actions/execution-shield-bash-throat-thrust-3f/` | 盾击·锁喉·贯胸（3 帧） | `E9DD877F4114` |
 | `styles/style-dark-fantasy/` | 暗黑奇幻（画风） | `81404DCD4E58` |
+| `portraits/figure-symmetric-cartographer/` | 对称正脸肖像（主，6 行）+ `portrait-fixed-variables/` 固定变量（副，11 条） | `631A7C6F1914` / `21903F58A6EB` |
 
 hash 以实际文件为准，不符先重算再改表。
 

@@ -1,0 +1,96 @@
+{
+  "dir": "v3-fixed10",
+  "prompt_chars": 1225,
+  "runs": [
+    {
+      "tag": "01",
+      "image": "portrait-01.png",
+      "info": {
+        "task": "2122215034326306818",
+        "charged": "11.17",
+        "file": "portrait-01.png"
+      }
+    },
+    {
+      "tag": "02",
+      "image": "portrait-02.png",
+      "info": {
+        "task": "2122215208696119298",
+        "charged": "11.5",
+        "file": "portrait-02.png"
+      }
+    },
+    {
+      "tag": "03",
+      "image": "portrait-03.png",
+      "info": {
+        "task": "2122215442813771777",
+        "charged": "10.72",
+        "file": "portrait-03.png"
+      }
+    },
+    {
+      "tag": "04",
+      "image": "portrait-04.png",
+      "info": {
+        "task": "2122215572782669825",
+        "charged": "11.17",
+        "file": "portrait-04.png"
+      }
+    },
+    {
+      "tag": "05",
+      "image": "portrait-05.png",
+      "info": {
+        "task": "2122215756187000834",
+        "charged": "10.6",
+        "file": "portrait-05.png"
+      }
+    },
+    {
+      "tag": "06",
+      "image": "portrait-06.png",
+      "info": {
+        "task": "2122215874999050242",
+        "charged": "11.5",
+        "file": "portrait-06.png"
+      }
+    },
+    {
+      "tag": "07",
+      "image": "portrait-07.png",
+      "info": {
+        "task": "2122216128033030146",
+        "charged": "11.5",
+        "file": "portrait-07.png"
+      }
+    },
+    {
+      "tag": "08",
+      "image": "portrait-08.png",
+      "info": {
+        "task": "2122216367049629697",
+        "charged": "11.35",
+        "file": "portrait-08.png"
+      }
+    },
+    {
+      "tag": "09",
+      "image": "portrait-09.png",
+      "info": {
+        "task": "2122216598084485122",
+        "charged": "11.5",
+        "file": "portrait-09.png"
+      }
+    },
+    {
+      "tag": "10",
+      "image": "portrait-10.png",
+      "info": {
+        "task": "2122216845560995841",
+        "charged": "10.9",
+        "file": "portrait-10.png"
+      }
+    }
+  ]
+}
