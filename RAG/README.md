@@ -14,7 +14,7 @@ RAG/<类型复数>/<卡片名>/
   └─ 02-fail-<问题>.<png|mp4> 已知偏差，可选
 ```
 
-目录名按卡片类型起复数，**不设枚举**（spec 已取消 `type` 约束）。现有 `actions/`、`styles/`、`portraits/`；派生镜头卡进基础卡下 `cameras/`（§六）。`card.md` 内 `name` 须等于所在目录名。
+目录名按卡片类型起复数，**不设枚举**（spec 已取消 `type` 约束）。现有 `actions/`、`styles/`、`portraits/`（只写脸）、`stylings/`（造型：服装＋体态＋构图＋机位＋动作，判据见 §六）；派生镜头卡进基础卡下 `cameras/`（§六）。`card.md` 内 `name` 须等于所在目录名。
 
 ## 二、准入
 
@@ -71,6 +71,8 @@ RAG/<类型复数>/<基础卡名>/
 
 **一对一主副卡不收进 `cameras/`**：不设中间分组目录，副卡目录直接挂在主卡下，目录名即副卡 `name`。首个主副实例：`portraits/figure-symmetric-cartographer/portrait-fixed-variables/`（副卡 `21903F58A6EB`，主卡 `631A7C6F1914`），两者共用同一份 `prompt.txt` 与同一批样张。
 
+**肖像卡与造型卡分家（2026-11-17）**：只写脸的进 `portraits/`——骨相、比例、五官、肤质，脸以外一条不写；卡面只要出现**服装、体态、构图、机位、动作**中任何一项，就进 `stylings/`。这五项都是「造型怎么呈现」，机位尤其如此：同一个人换机位就是另一套造型效果，把它判出卡外等于让「造型」只剩衣服。两个实例正好卡在两侧：`portraits/figure-symmetric-cartographer/` 六行全是部位，无一字服装机位；`stylings/figure-fullbody-pretty-casual/` 里服装三行、体态、构图、机位、动作各一行。
+
 ## 七、入库清单
 
 | 路径 | 卡 | hash |
@@ -80,6 +82,7 @@ RAG/<类型复数>/<基础卡名>/
 | `actions/execution-shield-bash-throat-thrust-3f/` | 盾击·锁喉·贯胸（3 帧） | `E9DD877F4114` |
 | `styles/style-dark-fantasy/` | 暗黑奇幻（画风） | `81404DCD4E58` |
 | `portraits/figure-symmetric-cartographer/` | 对称正脸肖像（主，6 行）+ `portrait-fixed-variables/` 固定变量（副，11 条） | `631A7C6F1914` / `21903F58A6EB` |
+| `stylings/figure-fullbody-pretty-casual/` | 全身站姿造型（服装＋体态＋构图＋机位＋动作；desc 内含「肤白貌美大长腿」的量化定义） | `BE7673985F89` |
 
 hash 以实际文件为准，不符先重算再改表。
 

@@ -8,6 +8,8 @@ __pycache__/
 
 # Tool/_deps 是本机依赖缓存（cv2 / Pillow / numpy），由 Tool/setup_deps.py 重建，不入库
 Tool/_deps/
+# Tool/_deps_cv4 只为 Haar 级联补的 opencv 4.12（cv2 5.0 已移除 CascadeClassifier），同样不入库
+Tool/_deps_cv4/
 
 # 图片与视频统一不入库，只入文档（2026-11-15 用户裁定）
 # 理由：二进制证据体积大、diff 无意义、克隆成本高；证据正文与指纹写进 evidence.md / prompt.txt
