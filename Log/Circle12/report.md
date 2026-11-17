@@ -3,7 +3,7 @@
 > 被测组合：`terrain-huangfeng-valley`（地貌卡，近景取样 4 行）＋ `camera-ground-static-closeup`（新写镜头卡）
 > 通道：图片 `2046794551444119554`（G-2.0，16:9／1k）；视频 `2085304953094107137`（MiniMax H3 加速版，16:9／480P／5s）
 > 预算：64.98 / 60 积分（原定 50，经用户两次追加；超 4.98，均事前告知），4 个任务
-> 产物：`文生图/terrain-huangfeng-valley-near/v1/`、`文生视频/terrain-huangfeng-valley-near/v1|v2|v3/`；总览 `preview.png`
+> 产物：`terrain-huangfeng-valley-near/chain-01-precheck/image/`、`terrain-huangfeng-valley-near/chain-02-near-a|chain-03-near-b|chain-04-near-c/video/`；总览 `preview-p1.png`
 
 ## 一、实验设计
 
