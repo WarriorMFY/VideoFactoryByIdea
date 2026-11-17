@@ -1,0 +1,55 @@
+{
+  "start_remain": 346.33,
+  "budget": 100.0,
+  "started_at": "2026-11-17 10:18:18",
+  "items": [
+    {
+      "ts": "2026-11-17 10:20:32",
+      "tag": "a",
+      "charged": 11.2,
+      "note": "prompt-v1-image.txt"
+    },
+    {
+      "ts": "2026-11-17 10:21:36",
+      "tag": "b",
+      "charged": 11.05,
+      "note": "prompt-v1-image.txt"
+    },
+    {
+      "ts": "2026-11-17 10:22:47",
+      "tag": "c",
+      "charged": 11.35,
+      "note": "prompt-v1-image.txt"
+    },
+    {
+      "ts": "2026-11-17 10:24:13",
+      "tag": "d",
+      "charged": 11.62,
+      "note": "prompt-v2-image.txt"
+    },
+    {
+      "ts": "2026-11-17 10:26:00",
+      "tag": "e",
+      "charged": 11.65,
+      "note": "prompt-v3-image.txt"
+    },
+    {
+      "ts": "2026-11-17 10:27:13",
+      "tag": "f",
+      "charged": 11.65,
+      "note": "prompt-v3-image.txt"
+    },
+    {
+      "ts": "2026-11-17 10:30:34",
+      "tag": "v3-a",
+      "charged": 23.63,
+      "note": "prompt-v3-video.txt (205:select=5 实际出9s)"
+    },
+    {
+      "ts": "2026-11-17 10:34:30",
+      "tag": "v3-b",
+      "charged": 17.0,
+      "note": "prompt-v3-video-lock.txt 5s 强镜头锁（用户批准超额）"
+    }
+  ]
+}
