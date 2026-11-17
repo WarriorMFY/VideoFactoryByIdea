@@ -21,7 +21,7 @@ RAG/<类型复数>/<卡片名>/
 | 条件 | 说明 |
 | --- | --- |
 | 出片／出图验证 | 实跑并逐项判定，不得只看静帧推断动态 |
-| 口头确认 | 用户明确说通过 |
+| 口头确认 | 用户明确说通过；执行口径见 `Skill/card-experiment-chain/reference/judging.md` 的「人工验收」 |
 
 `spec.md` 符合性**只自检、不拦截**——入库前跑一次，结果记进 `evidence.md`。库内已有不符项且不能改：
 
@@ -33,6 +33,8 @@ RAG/<类型复数>/<卡片名>/
 ## 三、证据
 
 `evidence.md` 缺任一项即无效：平台与应用、webappId、实例类型（lite／default／plus）、出图／出片时间、Task ID、结果 URL、Prompt 文件名与段数、卡片 hash（SHA256 前 12 位）。
+
+入库前的运行记录放在实验链的 `manifest.json`，字段见 `Skill/card-experiment-chain/reference/archive.md`；本节只规定入库本自己的 `evidence.md`。
 
 媒体自 2026-11-16 起随卡片一并入库（§四末）；指纹仍逐项保留，用于在换机、换克隆后核对媒体是否被替换。
 
@@ -50,7 +52,7 @@ python -c "import hashlib,pathlib;print(hashlib.sha256(pathlib.Path('RAG/<路径
 
 ## 五、单一副本
 
-`Doc/Cards` 自 Circle7 起只有 `spec.md` 与 `Template/`，不存实例卡，故 `RAG` 的 `card.md` 是唯一持久形态。
+`Doc/Cards` 只有 `spec.md`（元卡模板已移入 `Skill/card-experiment-chain/templates/meta/`），不存实例卡，故 `RAG` 的 `card.md` 是唯一持久形态。
 
 入库前原件在 `Log/` 的，**不原地加标注**（加行即破 hash），由 `Log/Circle<N>/` 的 `Circle.md`（摘要）与 `log.md`（全文）记路径，`evidence.md` 留一行。原件被删（如 Circle7 删掉的镜头卡 `Doc/` 副本），在 `evidence.md` 末尾加追记、写历史提交号，不动正文。
 
