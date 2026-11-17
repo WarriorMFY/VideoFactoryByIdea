@@ -1,0 +1,94 @@
+{
+  "skill": "card-experiment-chain",
+  "version": "v0.1",
+  "circle": "Circle13",
+  "family": "demo",
+  "chain": "chain-01-smoke",
+  "cards": [
+    {
+      "role": "main",
+      "file": "card-instance.md",
+      "sha1": "c57aecbce4bd",
+      "chars": 420
+    },
+    {
+      "role": "fixed",
+      "file": "card-fixed.md",
+      "sha1": "8751ac4a3bf8",
+      "chars": 24
+    },
+    {
+      "role": "anti",
+      "file": "card-anti.md",
+      "sha1": "c2a47e7fa968",
+      "chars": 8
+    }
+  ],
+  "delivery": {
+    "mode": "full",
+    "file": "video/prompt-video.txt",
+    "chars": 476,
+    "aux_share": 7.6,
+    "order": [
+      "fixed",
+      "anti",
+      "main"
+    ]
+  },
+  "runs": [
+    {
+      "stage": "still",
+      "app": "2046794551444119554",
+      "nodes": [
+        "18:prompt",
+        "18:aspectRatio=16:9",
+        "18:resolution=1k"
+      ],
+      "task_id": "2122703002912641025",
+      "charged": 11.32,
+      "bal_before": 19354.32,
+      "bal_after": 19343.0
+    },
+    {
+      "stage": "video",
+      "app": "2085304953094107137",
+      "nodes": [
+        "250:prompt",
+        "115:aspect_ratio=16:9 (Widescreen)",
+        "225:select=1",
+        "205:select=1"
+      ],
+      "task_id": "2122703251211243522",
+      "charged": 12.75,
+      "bal_before": 19343.0,
+      "bal_after": 19330.25
+    }
+  ],
+  "outputs": [
+    {
+      "file": "image/smoke.png",
+      "bytes": 797458,
+      "sha256": "5643537bbc1a37e1",
+      "w": 1360,
+      "h": 768
+    },
+    {
+      "file": "video/smoke.mp4",
+      "bytes": 905541,
+      "sha256": "e73d170dbc88c5a9",
+      "dur": 5.17,
+      "w": 960,
+      "h": 544
+    }
+  ],
+  "cuts": [],
+  "verdict": {
+    "coverage": 0.875,
+    "pass": null,
+    "graded_by": "human",
+    "notes": [
+      "冒烟测试：只验链路，不验模型能力",
+      "cuts 空：diff.py 缺 cv2，未做切点扫描"
+    ]
+  }
+}

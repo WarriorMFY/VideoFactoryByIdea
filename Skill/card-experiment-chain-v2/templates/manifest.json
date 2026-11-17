@@ -1,0 +1,28 @@
+{
+  "skill": "card-experiment-chain",
+  "version": "v0.1",
+  "circle": null,
+  "family": null,
+  "chain": null,
+  "cards": [
+    { "role": "main", "file": "card-instance.md", "sha1": null, "chars": null },
+    { "role": "fixed", "file": "card-fixed.md", "sha1": null, "chars": null },
+    { "role": "anti", "file": "card-anti.md", "sha1": null, "chars": null }
+  ],
+  "delivery": {
+    "mode": "full",
+    "file": "video/prompt-video.txt",
+    "chars": null,
+    "aux_share": null,
+    "order": ["fixed", "anti", "main"]
+  },
+  "runs": [],
+  "outputs": [],
+  "cuts": [],
+  "verdict": {
+    "coverage": null,
+    "pass": null,
+    "graded_by": "human",
+    "notes": []
+  }
+}
