@@ -81,11 +81,38 @@ Prompt 组装 `make_prompt.py`：`[VERIFY]` 固定变量块（固定远景、地
 ## 09 追加强镜头锁对照（11:34–11:36，用户批准超额）
 
 - 用户裁定：追加 1 条、暂不入库。
-- `make_prompt.py` 新增 `LOCK_HEAD`，输出 `prompt-v3-video-lock.txt`（310 字）：机位固定不动、无航拍、无前进后退、无推拉摇移、无变焦、无剪辑。
+- `make_prompt.py` 新增 `LOCK_HEAD`，输出 `prompt-v3-video-lock.txt`（310 字，重组后为 `文生视频/…/prompt-lock.txt`）：机位固定不动、无航拍、无前进后退、无推拉摇移、无变焦、无剪辑。
 - `run_video.py` 支持第 3 参数传时长索引，修正 `205:select=1`→5 秒（v3-a 误传 5 得到 9 秒）。
 - v3-b：Task 2122518240646356994，90s，5.17s／960×544／124 帧，实扣 17.00（余额 254.18→237.18）。
 - 画面：群山黄枫林＋双瀑布＋远雪山＋中景一块平坦谷底草地；**仍有横移**，无灵药田、无泉眼、无动物、无巨树盘根。
 - 对齐度：v3-a 50%、v3-b 57%。两版均不达 70%。
 - 归因：镜头锁措辞无效＋小要素零命中，且图片通道同卡 2/2 命中 → 按 M5 判**模型边界**，不归因卡片。
 - 总花费 109.15／100，超 9.15（用户已批准）。结束条件成立，本轮结案。
+
+## 10 产物按段重组 + 总览预览图（11:45）
+
+用户要求：循环目录按「文生图／文生视频」分类，内部再按「单个卡片流水线」分类，并出预览图。
+
+新结构（脚本仍在根目录，产物全部下沉）：
+
+```
+Log/Circle11/
+├─ Circle.md / log.md / report.md / spec.md / ledger.json / preview.png
+├─ *.py（credit / make_prompt / run_still / run_video / frames / probe_nodes / make_preview）
+├─ 文生图/terrain-huangfeng-valley/
+│   ├─ v1/ card.md + prompt-image.txt + 01-a／02-b／03-c.png（各带 .prompt.txt 快照）
+│   ├─ v2/ card.md + prompt-image.txt + 01-d.png
+│   └─ v3/ card.md + prompt-image.txt + 01-e／02-f.png
+└─ 文生视频/terrain-huangfeng-valley/
+    ├─ card.md（v3 副本）+ prompt-weak.txt + prompt-lock.txt
+    ├─ 01-v3-a.mp4／02-v3-b.mp4（各带 .prompt.txt 快照）+ 对应 -strip.png
+    └─ _diag/ 诊断帧（v3-a-f0、v3-a-f180、v3-b-mid）
+```
+
+- 原 `archive/`、`output/` 撤除；`archive/card-v1.md` → `文生图/…/v1/card.md`。
+- 删两个未送验的视频变体 prompt（`archive/prompt-v1-video.txt`、`prompt-v2-video.txt`），避免被当成“跑过的证据”。
+- `make_preview.py` 生成 `preview.png`（1452×1400）：上半文生图 6 样本，下半文生视频 2 条各 3 帧；标签按分数上色（100% 绿、70–99% 黄、<70% 红）。
+- `report.md`／`spec.md` 内的旧路径同步改为新路径。
+- `Circle.md` 新增「六、目录」小节；预览图仅存本地（`Log/` 下媒体按 .gitignore 不入库）。
+- 注意：`make_prompt.py`／`run_still.py`／`run_video.py` 内部仍按旧路径读写（根目录 `prompt-*.txt`、`output/`），本轮未改代码；下轮复用前需按卡目录改路径参数。
 

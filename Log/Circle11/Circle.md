@@ -6,7 +6,7 @@
 | 结束时间 | 2026-11-17 11:36 |
 | 一句话 | 无人值守卡片训练第一轮：定义地貌卡元卡片、实例化「修仙世界黄枫谷」，文生图三版迭代到 100%，文生视频两版 50%／57% 未达标，判为模型边界 |
 | 结束原因 | 积分消耗 109.15 已超 100（超支 9.15 经用户口头批准追加强镜头锁对照） |
-| 交付 | 元卡 `Doc/Cards/Template/12-terrain.md`；实例卡 v1–v3（v1 已归档）；图片段 6 样本、视频段 2 样本；`report.md` 含两张逐项对齐表 |
+| 交付 | 元卡 `Doc/Cards/Template/12-terrain.md`；实例卡 v1–v3；图片段 6 样本、视频段 2 样本；`report.md` 含两张逐项对齐表；总览图 `preview.png` |
 | 入库 | 未入 RAG（用户裁定：等视频段补齐再入 `RAG/terrains/`） |
 | 详细日志 | `log.md`（全过程）＋`report.md`（报告）＋`spec.md`（规格） |
 
@@ -53,3 +53,19 @@
 | 文生视频 16:9／480P／9s | 23.63 | 1 | 23.63 |
 | 文生视频 16:9／480P／5s | 17.00 | 1 | 17.00 |
 | **合计** | | **8** | **109.15** |
+
+## 六、目录（按段 → 单卡流水线 → 版本）
+
+```
+Log/Circle11/
+├─ Circle.md·log.md·report.md·spec.md·ledger.json·preview.png
+├─ *.py（credit·make_prompt·run_still·run_video·frames·probe_nodes·make_preview）
+├─ 文生图/terrain-huangfeng-valley/
+│  ├─ v1/ card.md + prompt-image.txt + 01-a·02-b·03-c.png  71/71/79%
+│  ├─ v2/ card.md + prompt-image.txt + 01-d.png            93%
+│  └─ v3/ card.md + prompt-image.txt + 01-e·02-f.png       100/100%
+└─ 文生视频/terrain-huangfeng-valley/
+   ├─ card.md（v3 副本）+ prompt-weak.txt + prompt-lock.txt
+   ├─ 01-v3-a.mp4（9s·50%）、02-v3-b.mp4（5s·57%）+ 帧条
+   └─ _diag/ 诊断帧
+```
