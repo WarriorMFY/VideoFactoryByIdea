@@ -22,7 +22,7 @@ import runninghub as rh  # noqa: E402
 
 HERE = Path(__file__).resolve().parent
 LEDGER = HERE / "ledger.json"
-BUDGET = 30.0  # 2026-11-17 15:45 用户要求「镜头覆盖表跑一次」，按一条 5s + 波动取 30
+BUDGET = 60.0  # 原设 30；2026-11-17 17:05 用户批准跑三镜切分 9s（预估 22.61），加至 60
 
 
 def api_key():

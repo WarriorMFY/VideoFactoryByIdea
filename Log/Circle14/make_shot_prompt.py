@@ -1,7 +1,9 @@
-"""Circle14 从「完整地貌卡 + 镜头覆盖表」派生一条 shot 的送验 prompt。
+"""Circle14 从「设定卡 + 镜头覆盖卡」派生一条 shot 的送验 prompt。
 
-与 Circle13 的差别：不再先写一张裁切卡，而是读完整卡 card.md + shots.md，
-按覆盖表列出的维度名逐字取原文——卡不动，镜头覆盖层才是可变量。
+单一真相源：
+  card.md         设定卡（7 行，不改）
+  card-shots.md   镜头覆盖卡（按景别层切 shot，给出逐字可送验的行写法）
+  card-camera.md  镜头卡（四帧五元组）
 
 用法：python Log/Circle14/make_shot_prompt.py S2
 输出：文生视频/terrain-huangfeng-valley/<shot>/prompt-video.txt
@@ -16,10 +18,10 @@ CARD_DIR = CARD / "文生视频" / "terrain-huangfeng-valley"
 
 VIDEO_HEAD = "画面为一帧近景实拍，一镜到底。"
 TAIL = "画面内无人物、无文字、无水印。"
-VISIBLE = ("尺度与格局", "地形骨架", "气候带", "水系", "植被带", "动物种群", "灵脉与异常")
 
 
 def rows(path):
+    """两列表格（用于设定卡与镜头卡）。"""
     out = []
     for line in path.read_text(encoding="utf-8").splitlines():
         s = line.strip()
@@ -31,21 +33,32 @@ def rows(path):
     return out
 
 
-def shot_plan(path):
-    """覆盖表是 6 列：shot / 用途 / 景别层 / 覆盖维度 / 时长 / 状态。"""
-    plan = {}
-    for line in path.read_text(encoding="utf-8").splitlines():
-        s = line.strip()
-        if not s.startswith("|") or set(s) <= set("|- "):
-            continue
-        cells = [c.strip() for c in s.strip("|").split("|")]
-        if len(cells) >= 4 and re.fullmatch(r"S\d+", cells[0]):
-            plan[cells[0]] = cells[3]
-    return plan
-
-
 def strip_keys(text):
     return re.sub(r"(景别|机位|运镜|焦点|切换)=", "", text)
+
+
+def load_shots(path):
+    """解析 card-shots.md 的分节结构：## S1 · 谷底近岸 / 表格字段 / **行写法** 列表。"""
+    shots = {}
+    cur = None
+    for line in path.read_text(encoding="utf-8").splitlines():
+        s = line.strip()
+        m = re.match(r"^##\s+(S\d+)\b", s)
+        if m:
+            cur = {"name": m.group(1), "fields": {}, "rows": []}
+            shots[cur["name"]] = cur
+            continue
+        if cur is None:
+            continue
+        if s.startswith("|"):
+            cells = [c.strip() for c in s.strip("|").split("|")]
+            if len(cells) == 2:
+                cur["fields"][cells[0]] = cells[1]
+            continue
+        m = re.match(r"^-\s*([^：:]+)[：:]\s*(.+)$", s)
+        if m and not s.startswith("- ["):
+            cur["rows"].append((m.group(1).strip(), m.group(2).strip()))
+    return shots
 
 
 def main():
@@ -53,27 +66,29 @@ def main():
         raise SystemExit(__doc__)
     shot = sys.argv[1]
 
-    table = shot_plan(CARD_DIR / "shots.md")
-    if shot not in table:
-        raise SystemExit("覆盖表里没有 shot %s，现有：%s" % (shot, list(table)))
-    dims = [d.strip() for d in re.split(r"[、,＋+]", table[shot]) if d.strip()]
+    shots = load_shots(CARD_DIR / "card-shots.md")
+    if shot not in shots:
+        raise SystemExit("覆盖卡里没有 %s，现有：%s" % (shot, list(shots)))
+    plan = shots[shot]
+    dims = [k for k, _ in plan["rows"]]
     print("SHOT", shot, "DIMS", dims)
+    if not plan["rows"]:
+        raise SystemExit("覆盖卡该 shot 下没有行写法")
+    if len(plan["rows"]) > 3:
+        raise SystemExit("该 shot 超过 3 行，超出单条容量")
 
-    cam = rows(CARD_DIR / "card-camera.md")
+    cam_file = plan["fields"].get("外挂镜头卡", "").strip().strip("`")
+    if not cam_file or "缺失" in cam_file:
+        raise SystemExit("该 shot 未指定可用的外挂镜头卡：%r" % cam_file)
+    print("CAMERA_CARD", cam_file)
+
+    cam = rows(CARD_DIR / cam_file)
     states = [v for _, v in cam if "景别" in v]
     if not states or len(set(states)) != 1:
         raise SystemExit("镜头卡四帧状态不一致，或未找到镜头状态行")
     cam_state = strip_keys(states[0])
 
-    card = {k: v for k, v in rows(CARD_DIR / "card.md") if k in VISIBLE}
-    missing = [d for d in dims if d not in card]
-    if missing:
-        raise SystemExit("card.md 里找不到这些维度：%s" % missing)
-    picked = [(d, card[d]) for d in sorted(dims, key=VISIBLE.index)]
-    for d, _ in picked:
-        print("  ROW", d)
-
-    core = "。".join(v.rstrip("。") for _, v in picked) + "。"
+    core = "。".join(v.rstrip("。") for _, v in plan["rows"]) + "。"
     body = "镜头：" + cam_state + "\n" + core + "\n" + TAIL
     out_dir = CARD_DIR / shot
     out_dir.mkdir(parents=True, exist_ok=True)
