@@ -1,6 +1,6 @@
 """Circle12 文生视频：组合 prompt → MiniMax H3 加速版，480P / 5s / 16:9。
 
-用法：python Log/Circle12/run_video.py near-a [prompt文件] [时长索引]
+用法：python Log/Circle12/Tool/run_video.py near-a [prompt文件] [时长索引]
 输出落在 prompt 文件所在目录。
 """
 import os
@@ -10,8 +10,8 @@ import sys
 from pathlib import Path
 
 sys.stdout.reconfigure(encoding="utf-8")
-ROOT = Path(__file__).resolve().parents[2]
-HERE = Path(__file__).resolve().parent
+ROOT = Path(__file__).resolve().parents[3]
+HERE = Path(__file__).resolve().parents[1]
 os.environ["PYTHONPATH"] = str(ROOT / "Skill" / "RHclaw" / "runninghub" / "scripts")
 os.environ["PYTHONUTF8"] = "1"
 os.environ["PYTHONIOENCODING"] = "utf-8"

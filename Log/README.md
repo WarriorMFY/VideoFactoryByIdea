@@ -19,10 +19,11 @@ Circle<id>/
 │     │  ├─ <tag>.mp4
 │     │  └─ <tag>.mp4.prompt.txt
 │     └─ _diag/               诊断帧
-└─ Circle.md / log.md / report.md / ledger.json / 脚本 / preview-*.png
+└─ Circle.md / log.md / report.md / ledger.json
+|——Tool\放临时工具脚本
 ```
 
-1. **一个 `chain-<NN>-<tag>/` 就是一次「固定卡 → 生图 → 生视频」的完整记录**：链内自带本次用到的卡快照和每一步的 prompt 快照，不跨链引用文件。
+1. **一个 `chain-<NN>-<tag>/` 就是一次「固定卡 → 生图 → 生视频」的完整记录**：链内自带本次用到的卡快照和每一步的 prompt 快照，不跨链引用文件。(可以只是文生图或文生视频或者组合)
 2. **旧卡不删**：卡改版就另开一条 chain，或把旧卡复制进新链；确实要删卡，必须用户明确说。
 3. 链内样本按提交顺序编号：`01-`、`02-`……；一条链只有一个 tag，所有产物共用。
 4. 图段、视频段分开放 `image/`、`video/`，方便一眼看出这条链走到哪一步。
@@ -30,8 +31,10 @@ Circle<id>/
 ## 循环根目录只留
 
 - 记录：`Circle.md`、`log.md`、`report.md`、`spec.md`、`ledger.json`、`pipeline-*.md`
-- 脚本：`make_prompt*.py`、`run_still.py`、`run_video.py`、`credit.py`、`frames.py`、`make_preview*.py`
 - 全轮预览：`preview-*.png`（跨链对照，不属于任何单链）
+
+## Tool
+- 脚本：`make_prompt*.py`、`run_still.py`、`run_video.py`、`credit.py`、`frames.py`、`make_preview*.py` 放Tool下
 
 ## 禁止
 

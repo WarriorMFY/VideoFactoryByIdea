@@ -6,7 +6,7 @@
 
 [已废弃] 本脚本抽取字段重拼句子，违反 AGENTS.md 的直送规则，仅用于复现阶段 2 历史产物。
 
-用法：python Log/Circle12/make_prompt.py <卡名>/<链>（如 terrain-huangfeng-valley-near-shore/chain-01-a1）
+用法：python Log/Circle12/Tool/make_prompt.py <卡名>/<链>（如 terrain-huangfeng-valley-near-shore/chain-01-a1）
 输出：<卡名>/<链>/video/prompt-video.txt
 """
 import re
@@ -14,7 +14,7 @@ import sys
 from pathlib import Path
 
 sys.stdout.reconfigure(encoding="utf-8")
-CARD = Path(__file__).resolve().parent
+CARD = Path(__file__).resolve().parents[1]
 VISIBLE = ("水系", "植被带", "动物种群", "灵脉与异常")
 
 VIDEO_HEAD = "画面为一帧近景实拍，一镜到底。"

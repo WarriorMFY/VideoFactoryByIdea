@@ -5,7 +5,7 @@
 
 [已废弃] 本脚本抽取字段重拼句子，违反 AGENTS.md 的直送规则，仅用于复现阶段 1 历史产物；新卡一律整卡拼接。
 
-用法：python Log/Circle12/make_prompt_near.py [chain-02-near-a|chain-03-near-b|chain-04-near-c]
+用法：python Log/Circle12/Tool/make_prompt_near.py [chain-02-near-a|chain-03-near-b|chain-04-near-c]
 输出：terrain-huangfeng-valley-near/<chain>/video/prompt-near-video.txt
       chain-02 额外写 chain-01-precheck/image/prompt-near-image.txt
 """
@@ -14,7 +14,7 @@ import sys
 from pathlib import Path
 
 sys.stdout.reconfigure(encoding="utf-8")
-CARD = Path(__file__).resolve().parent
+CARD = Path(__file__).resolve().parents[1]
 VID_DIR = CARD / "terrain-huangfeng-valley-near"
 IMG_DIR = VID_DIR / "chain-01-precheck" / "image"
 VISIBLE = ("水系", "植被带", "动物种群", "灵脉与异常")

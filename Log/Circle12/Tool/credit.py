@@ -1,8 +1,8 @@
 """Circle12 积分账本：预算 50，用于地貌卡视频段近景补验。
 
 用法：
-  python Log/Circle12/credit.py status
-  python Log/Circle12/credit.py add <tag> <charged> [note]
+  python Log/Circle12/Tool/credit.py status
+  python Log/Circle12/Tool/credit.py add <tag> <charged> [note]
 
 口径：
   - 余额以 remainPoint 为准（Tool/account.py 同源）
@@ -14,13 +14,13 @@ import sys
 import time
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(ROOT / "Skill" / "RHclaw" / "runninghub" / "scripts"))
 sys.stdout.reconfigure(encoding="utf-8")
 
 import runninghub as rh  # noqa: E402
 
-HERE = Path(__file__).resolve().parent
+HERE = Path(__file__).resolve().parents[1]
 LEDGER = HERE / "ledger.json"
 BUDGET = 220.0  # 三次追加：60（13:50）+ 100（14:55）+ 60（17:05）；以 ledger.json 里的 budget 为准
 

@@ -1,8 +1,8 @@
 """Circle12 文生图：组合 prompt → G-2.0 通道出图（16:9 横构图）。
 
 用法：
-  python Log/Circle12/run_still.py near-precheck                 # 读 terrain-huangfeng-valley-near/chain-01-precheck/image/prompt-near-image.txt
-  python Log/Circle12/run_still.py near-precheck 16:9 terrain-huangfeng-valley-near/chain-01-precheck/image/prompt-near-image.txt
+  python Log/Circle12/Tool/run_still.py near-precheck                 # 读 terrain-huangfeng-valley-near/chain-01-precheck/image/prompt-near-image.txt
+  python Log/Circle12/Tool/run_still.py near-precheck 16:9 terrain-huangfeng-valley-near/chain-01-precheck/image/prompt-near-image.txt
 
 输出落在 prompt 文件所在目录（Log/README.md 的段／卡片／版本纪律）。
 """
@@ -10,7 +10,7 @@ import hashlib
 import sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(ROOT / "Skill" / "RHclaw" / "runninghub" / "scripts"))
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 sys.stdout.reconfigure(encoding="utf-8")
@@ -18,7 +18,7 @@ sys.stdout.reconfigure(encoding="utf-8")
 import runninghub_app as app  # noqa: E402
 from runninghub import require_api_key, poll_task  # noqa: E402
 
-HERE = Path(__file__).resolve().parent
+HERE = Path(__file__).resolve().parents[1]
 APP_ID = "2046794551444119554"
 INSTANCE = "default"
 

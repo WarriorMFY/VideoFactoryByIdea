@@ -1,6 +1,6 @@
 """Circle13 预览图：同一条地貌卡按「行数 × 时长」裁切后的画面容量对照。
 
-用法：python Log/Circle12/make_preview_p2.py
+用法：python Log/Circle12/Tool/make_preview_p2.py
 输出：Log/Circle12/preview-p2.png
 """
 import sys
@@ -10,7 +10,7 @@ import cv2
 from PIL import Image, ImageDraw, ImageFont, ImageOps
 
 sys.stdout.reconfigure(encoding="utf-8")
-HERE = Path(__file__).resolve().parent
+HERE = Path(__file__).resolve().parents[1]
 V = HERE
 OUT = HERE / "preview-p2.png"
 

@@ -1,6 +1,6 @@
 """Circle12 预览图：同 prompt 图片 vs 视频 v1（静态写法） vs v2（动态写法）。
 
-用法：python Log/Circle12/make_preview.py
+用法：python Log/Circle12/Tool/make_preview.py
 输出：Log/Circle12/preview-p1.png
 """
 import sys
@@ -10,7 +10,7 @@ import cv2
 from PIL import Image, ImageDraw, ImageFont, ImageOps
 
 sys.stdout.reconfigure(encoding="utf-8")
-HERE = Path(__file__).resolve().parent
+HERE = Path(__file__).resolve().parents[1]
 CARD = "terrain-huangfeng-valley-near"
 IMG = HERE / CARD / "chain-01-precheck" / "image" / "near-precheck.png"
 V1 = HERE / CARD / "chain-02-near-a" / "video" / "near-a.mp4"

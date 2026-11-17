@@ -1,6 +1,6 @@
 """Circle14 预览图：S2 空镜失败样本 + 三镜切分三段各取一帧。
 
-用法：python Log/Circle12/make_preview_p3.py
+用法：python Log/Circle12/Tool/make_preview_p3.py
 输出：Log/Circle12/preview-p3.png（4 格横排）
 """
 import sys
@@ -10,7 +10,7 @@ import cv2
 from PIL import Image, ImageDraw, ImageFont, ImageOps
 
 sys.stdout.reconfigure(encoding="utf-8")
-HERE = Path(__file__).resolve().parent
+HERE = Path(__file__).resolve().parents[1]
 CARD = HERE / "terrain-huangfeng-valley"
 
 GOOD = (46, 160, 67)

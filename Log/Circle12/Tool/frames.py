@@ -11,7 +11,7 @@ import numpy as np
 from PIL import Image
 
 sys.stdout.reconfigure(encoding="utf-8")
-HERE = Path(__file__).resolve().parent
+HERE = Path(__file__).resolve().parents[1]
 
 src = Path(sys.argv[1]) if len(sys.argv) > 1 else HERE / "output" / "v3-a.mp4"
 if not src.is_absolute():
