@@ -1,69 +1,64 @@
-"""Circle14 从「镜头-地貌合一卡」派生一条切镜 prompt。
+"""三卡直送：固定变量卡 → 反向卡 → 主卡，三份正文逐字节入投。
 
-一张卡同时给镜头（逐段五元组）与地貌（逐段覆盖的维度行写法），
-按段顺序拼接，段标签只写进度区间，文本本身逐字取自卡内。
+口径（同 Circle6 / Circle10）：只去 YAML frontmatter，整段正文原样拼入，
+不解析字段、不抽行、不改写句子、不增减标点；顺序＝辅助卡在前、主卡在后。
+写盘后断言三段正文原样出现且顺序正确。
 
 用法：python Log/Circle14/make_prompt_camseq.py
 输出：文生视频/terrain-huangfeng-valley/camseq/prompt-video.txt
 """
-import re
 import sys
 from pathlib import Path
 
 sys.stdout.reconfigure(encoding="utf-8")
-CARD = Path(__file__).resolve().parent
-CARD_DIR = CARD / "文生视频" / "terrain-huangfeng-valley"
-SRC = CARD_DIR / "card-camseq.md"
+HERE = Path(__file__).resolve().parent
+CARD_DIR = HERE / "文生视频" / "terrain-huangfeng-valley"
 OUT = CARD_DIR / "camseq" / "prompt-video.txt"
 
-HEAD = "画面为实拍视频，段间硬切，段内机位不动。"
-TAIL = "画面内无人物、无文字、无水印。"
-KEYS = ("景别", "机位", "运镜", "焦点", "切换")
+CARDS = (
+    ("【固定变量卡】", CARD_DIR / "card-fixed-variables.md"),
+    ("【反向卡】", CARD_DIR / "card-anti.md"),
+    ("【主卡】", CARD_DIR / "card-camseq.md"),
+)
 
 
-def segments(path):
-    out = []
-    for line in path.read_text(encoding="utf-8").splitlines():
-        s = line.strip()
-        if not s.startswith("|") or set(s) <= set("|- "):
-            continue
-        cells = [c.strip() for c in s.strip("|").split("|")]
-        if len(cells) != 2 or not cells[0].startswith("镜头段"):
-            continue
-        body = cells[1]
-        prog = re.search(r"进度＝([^；]+)", body)
-        vals = []
-        for k in KEYS:
-            m = re.search(k + r"＝([^；]+)", body)
-            if not m:
-                raise SystemExit("段缺字段 %s：%s" % (k, cells[0]))
-            vals.append(m.group(1))
-        cover = body.split("覆盖＝", 1)[1] if "覆盖＝" in body else ""
-        if "沿用" in cover:
-            print("SKIP", cells[0], "落幅沿用上一段，不重复送")
-            continue
-        rows = re.findall(r"「([^」]+)」", cover)
-        if not rows:
-            raise SystemExit("段没有可送的覆盖行：%s" % cells[0])
-        if len(rows) > 3:
-            raise SystemExit("段超过 3 行：%s（%d 行）" % (cells[0], len(rows)))
-        out.append((prog.group(1) if prog else "", vals, rows))
-    return out
+def body(path):
+    """只剥 YAML frontmatter，其余一字不动。"""
+    lines = path.read_text(encoding="utf-8").splitlines()
+    if lines and lines[0].strip() == "---":
+        for i in range(1, len(lines)):
+            if lines[i].strip() == "---":
+                return "\n".join(lines[i + 1:]).strip("\n")
+    return "\n".join(lines).strip("\n")
 
 
 def main():
-    segs = segments(SRC)
-    if not segs:
-        raise SystemExit("没有可送的镜头段")
-    lines = [HEAD]
-    for i, (prog, vals, rows) in enumerate(segs, 1):
-        head = "第%d段（%s）：" % (i, prog) if prog else "第%d段：" % i
-        lines.append(head + "；".join(vals) + "。画面：" + "。".join(r.rstrip("。") for r in rows) + "。")
-    lines.append(TAIL)
-    OUT.parent.mkdir(parents=True, exist_ok=True)
-    OUT.write_text("\n".join(lines) + "\n", encoding="utf-8")
-    print("SEGMENTS", len(segs), "ROWS", [len(r) for _, _, r in segs])
-    print("OUT", OUT.relative_to(CARD), len(OUT.read_text(encoding="utf-8")), "chars")
+    parts = []
+    bodies = []
+    for tag, path in CARDS:
+        text = body(path)
+        if not text:
+            raise SystemExit("卡正文为空：" + str(path))
+        bodies.append(text)
+        parts.append(tag + "\n" + text)
+    pos = "\n\n".join(parts) + "\n"
+
+    out = OUT
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(pos, encoding="utf-8")
+
+    back = out.read_text(encoding="utf-8")
+    for (tag, path), text in zip(CARDS, bodies):
+        assert text in back, "正文未完整出现：" + path.name
+    order = [back.index(t) for t, _ in CARDS]
+    assert order == sorted(order), "卡序错误"
+    assert back.startswith("【固定变量卡】"), "固定变量卡未在前"
+
+    print("FIXED", len(bodies[0]), "ANTI", len(bodies[1]), "MAIN", len(bodies[2]))
+    print("OUT_LEN", len(back), "字符")
+    print("VERBATIM_OK True")
+    print("NO_REWRITE True")
+    print("OUT", out.relative_to(HERE))
     return 0
 
 

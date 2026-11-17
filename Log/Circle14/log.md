@@ -76,3 +76,21 @@
 - 本节产出：`card-camseq.md`、`make_prompt_camseq.py`、`make_preview.py`、`camseq/{prompt-video.txt, 01-camseq-9s.mp4, 01-camseq-9s.mp4.prompt.txt, 01-camseq-9s-strip.png}`
 - 诊断帧：`文生视频/terrain-huangfeng-valley/_diag/camseq-*.png`（不入库）
 - 未入 RAG：卡尚需用户验收
+
+## 五、直送重构：卡不做转换，额外提示走伴生卡（17:05–17:25）
+
+触发：用户判定「没按卡给的时间切」是大问题，并重申所有卡片直送、额外提示只走「固定变量卡 / 反向卡」、禁止转换。
+
+定位：上一版 `make_prompt_camseq.py` 用正则抽取字段再重拼句子，`时长＝` 整列没被读——实际 prompt 413 字里 0 处秒数，模型只拿到三个百分比。**时序漂移的直接原因是脚本转换，不是模型抗命。**
+
+处置：
+
+1. 主卡 `card-camseq.md` 重写：时间只留秒数（0.0–2.7 / 2.7–6.0 / 6.0–9.0），删百分比、删段 04、删成本/通道/分辨率、焦点「中景山脊」改「谷腹中部的山脊」、「切换」写成「本段内无切换，于 N 秒处硬切至…」。
+2. 新增 `card-fixed-variables.md`：画幅、质感、光照、色彩、稳定、对焦、排除，8 条固定语句，主卡不重复。
+3. 新增 `card-anti.md`：六类风险（人物误入、文字水印、景别漂移、切点丢失、镜头漂移、画风漂移）＋反向词注入槽位。
+4. `make_prompt_camseq.py` 改为纯拼接：只剥 frontmatter，三份正文逐字节入投，顺序＝固定变量卡 → 反向卡 → 主卡，写盘后断言三段原样出现且顺序正确，不再有任何字段解析。
+5. 删除 `card-shots.md`：派生层本身就是一次转换，违反直送；S1/S2 的实测已在第一节留档。
+6. 同步 `pipeline-terrain-to-video.md` 的分工与送验两行。
+
+产物：`camseq/prompt-video.txt` 2492 字（固定变量 584 / 反向 1117 / 主卡 767），秒数已在正文 L70–L72。
+
