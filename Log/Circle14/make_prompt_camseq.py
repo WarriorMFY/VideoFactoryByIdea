@@ -55,6 +55,10 @@ def main():
     assert back.startswith("【固定变量卡】"), "固定变量卡未在前"
 
     print("FIXED", len(bodies[0]), "ANTI", len(bodies[1]), "MAIN", len(bodies[2]))
+    aux = len(bodies[0]) + len(bodies[1])
+    ratio = 100.0 * aux / len(bodies[2])
+    print("AUX_SHARE %.1f%%（上限 10%%，见 AGENTS.md 规则）" % ratio)
+    assert ratio <= 10.0, "伴生卡总长超过主卡 10%%：%.1f%%" % ratio
     print("OUT_LEN", len(back), "字符")
     print("VERBATIM_OK True")
     print("NO_REWRITE True")
