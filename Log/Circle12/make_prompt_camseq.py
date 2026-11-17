@@ -4,16 +4,16 @@
 不解析字段、不抽行、不改写句子、不增减标点；顺序＝辅助卡在前、主卡在后。
 写盘后断言三段正文原样出现且顺序正确。
 
-用法：python Log/Circle14/make_prompt_camseq.py
-输出：文生视频/terrain-huangfeng-valley/camseq/prompt-video.txt
+用法：python Log/Circle12/make_prompt_camseq.py
+输出：terrain-huangfeng-valley/chain-02-camseq/video/prompt-video.txt
 """
 import sys
 from pathlib import Path
 
 sys.stdout.reconfigure(encoding="utf-8")
 HERE = Path(__file__).resolve().parent
-CARD_DIR = HERE / "文生视频" / "terrain-huangfeng-valley"
-OUT = CARD_DIR / "camseq" / "prompt-video.txt"
+CARD_DIR = HERE / "terrain-huangfeng-valley" / "chain-02-camseq"
+OUT = CARD_DIR / "video" / "prompt-video.txt"
 
 CARDS = (
     ("【固定变量卡】", CARD_DIR / "card-fixed-variables.md"),

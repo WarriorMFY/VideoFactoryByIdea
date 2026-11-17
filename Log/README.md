@@ -1,38 +1,40 @@
 # Log 目录纪律
 
-> 只规定一件事：一个循环目录内部怎么摆产物。
+> 只规定两件事：一个循环目录内部怎么摆产物；什么算一次记录。
 > 循环本身的规则（开始／结束、Circle.md 必填项、摘要与提交）见仓库 `AGENTS.md`。
 
 ## 分层
 
 ```
 Circle<id>/
-├─ 文生图/<卡片 name>/v1|v2|v3/…
-└─ 文生视频/<卡片 name>/v1|v2|… 或 01-<tag>/
+├─ <卡片 name>/               第一层：一次试验的卡片家族
+│  └─ chain-<NN>-<tag>/       第二层：一次完整流水链（一条记录）
+│     ├─ card*.md             该次送验用到的全部卡（快照）
+│     ├─ image/               该链的图段（没有就不建）
+│     │  ├─ prompt-image.txt
+│     │  ├─ <tag>.png
+│     │  └─ <tag>.png.prompt.txt
+│     ├─ video/               该链的视频段
+│     │  ├─ prompt-video.txt
+│     │  ├─ <tag>.mp4
+│     │  └─ <tag>.mp4.prompt.txt
+│     └─ _diag/               诊断帧
+└─ Circle.md / log.md / report.md / ledger.json / 脚本 / preview-*.png
 ```
 
-1. 第一层按段分：`文生图/`、`文生视频/`，互不混放。
-2. 第二层按单卡流水线分，目录名 = 卡片 `name`（如 `terrain-huangfeng-valley`）。
-3. 第三层按版本分：`v1/`、`v2/`…；一个版本对应该版卡片文本的全部样本。
-
-## 每版目录内放什么
-
-| 文件 | 说明 |
-| --- | --- |
-| `card.md` | 该版卡片全文，旧版不删，保留可追溯 |
-| `prompt-image.txt` / `prompt-video.txt` | 该版送验 prompt 正文 |
-| `NN-<tag>.png`／`NN-<tag>.mp4` | 样本，按提交顺序编号 |
-| `NN-<tag>.png.prompt.txt`／`NN-<tag>.mp4.prompt.txt` | 该样本实际发送的 prompt 快照 |
-
-同一版本内文本完全相同的 prompt 快照可以只留一份正文（`prompt-*.txt`），但每个样本仍必须留自己的 `.prompt.txt`。
+1. **一个 `chain-<NN>-<tag>/` 就是一次「固定卡 → 生图 → 生视频」的完整记录**：链内自带本次用到的卡快照和每一步的 prompt 快照，不跨链引用文件。
+2. **旧卡不删**：卡改版就另开一条 chain，或把旧卡复制进新链；确实要删卡，必须用户明确说。
+3. 链内样本按提交顺序编号：`01-`、`02-`……；一条链只有一个 tag，所有产物共用。
+4. 图段、视频段分开放 `image/`、`video/`，方便一眼看出这条链走到哪一步。
 
 ## 循环根目录只留
 
-- 记录：`Circle.md`、`log.md`、`report.md`、`spec.md`、`ledger.json`
-- 脚本：`make_prompt.py`、`run_still.py`、`run_video.py`、`credit.py`、`frames.py` 等流水线工具
-- 单卡目录内的诊断帧放该卡下的 `_diag/`，不放根目录
+- 记录：`Circle.md`、`log.md`、`report.md`、`spec.md`、`ledger.json`、`pipeline-*.md`
+- 脚本：`make_prompt*.py`、`run_still.py`、`run_video.py`、`credit.py`、`frames.py`、`make_preview*.py`
+- 全轮预览：`preview-*.png`（跨链对照，不属于任何单链）
 
 ## 禁止
 
-- 不在循环根目录建 `output/`、`archive/`、`frames/` 一类通用倾倒目录；产物一律落到「段／卡片／版本」三级之内。
+- 不在循环根目录建 `output/`、`archive/`、`frames/` 一类通用倾倒目录。
 - 不把未送验的 prompt 变体与送验过的快照混放；从未提交过任务的变体直接删除。
+- 不在族目录（`<卡片 name>/`）下直接放样本或卡：族目录只装 chain。

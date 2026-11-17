@@ -3,9 +3,11 @@
 只取近景能覆盖的 4 行：水系 / 植被带 / 动物种群 / 灵脉与异常。
 尺度与格局 / 地形骨架 / 气候带 不送——近景里不可见，送了会把画面拉回航拍。
 
-用法：python Log/Circle12/make_prompt_near.py [v1|v2]
-输出：文生视频/terrain-huangfeng-valley-near/<ver>/prompt-near-video.txt
-      仅 v1 额外写 文生图/terrain-huangfeng-valley-near/v1/prompt-near-image.txt
+[已废弃] 本脚本抽取字段重拼句子，违反 AGENTS.md 的直送规则，仅用于复现阶段 1 历史产物；新卡一律整卡拼接。
+
+用法：python Log/Circle12/make_prompt_near.py [chain-02-near-a|chain-03-near-b|chain-04-near-c]
+输出：terrain-huangfeng-valley-near/<chain>/video/prompt-near-video.txt
+      chain-02 额外写 chain-01-precheck/image/prompt-near-image.txt
 """
 import re
 import sys
@@ -13,8 +15,8 @@ from pathlib import Path
 
 sys.stdout.reconfigure(encoding="utf-8")
 CARD = Path(__file__).resolve().parent
-VID_DIR = CARD / "文生视频" / "terrain-huangfeng-valley-near"
-IMG_DIR = CARD / "文生图" / "terrain-huangfeng-valley-near" / "v1"
+VID_DIR = CARD / "terrain-huangfeng-valley-near"
+IMG_DIR = VID_DIR / "chain-01-precheck" / "image"
 VISIBLE = ("水系", "植被带", "动物种群", "灵脉与异常")
 
 IMAGE_HEAD = "画面为一帧近景实拍照片。"
@@ -39,8 +41,8 @@ def strip_keys(text):
 
 
 def main():
-    ver = sys.argv[1] if len(sys.argv) > 1 else "v1"
-    cam = rows(VID_DIR / "card-camera.md")
+    ver = sys.argv[1] if len(sys.argv) > 1 else "chain-02-near-a"
+    cam = rows(VID_DIR / ver / "card-camera.md")
     states = [v for _, v in cam if "景别" in v]
     if not states:
         raise SystemExit("镜头卡没有可用的镜头状态行")
@@ -59,8 +61,8 @@ def main():
     lens = "镜头：" + cam_state
     body = lens + "\n" + core + "\n" + TAIL
 
-    jobs = [("video", VIDEO_HEAD, VID_DIR / ver)]
-    if ver == "v1":
+    jobs = [("video", VIDEO_HEAD, VID_DIR / ver / "video")]
+    if ver == "chain-02-near-a":
         jobs.append(("image", IMAGE_HEAD, IMG_DIR))
     for suffix, head, folder in jobs:
         folder.mkdir(parents=True, exist_ok=True)

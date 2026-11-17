@@ -4,8 +4,10 @@
 按固定顺序（水系 → 植被带 → 动物种群 → 灵脉与异常）逐字拼进去。
 裁切到 2 行的卡就送 2 行——这是本轮的自变量。
 
-用法：python Log/Circle13/make_prompt.py <卡片目录名> [ver]
-输出：文生视频/<卡名>/<ver>/prompt-video.txt
+[已废弃] 本脚本抽取字段重拼句子，违反 AGENTS.md 的直送规则，仅用于复现阶段 2 历史产物。
+
+用法：python Log/Circle12/make_prompt.py <卡名>/<链>（如 terrain-huangfeng-valley-near-shore/chain-01-a1）
+输出：<卡名>/<链>/video/prompt-video.txt
 """
 import re
 import sys
@@ -38,10 +40,9 @@ def strip_keys(text):
 def main():
     if len(sys.argv) < 2:
         raise SystemExit(__doc__)
-    card_name = sys.argv[1]
-    ver = sys.argv[2] if len(sys.argv) > 2 else "v1"
-    card_dir = CARD / "文生视频" / card_name
-    out_dir = card_dir / ver
+    name = sys.argv[1] if len(sys.argv) > 1 else "terrain-huangfeng-valley-near-shore/chain-01-a1"
+    card_dir = CARD / name
+    out_dir = card_dir / "video"
 
     cam = rows(card_dir / "card-camera.md")
     states = [v for _, v in cam if "景别" in v]
@@ -52,7 +53,7 @@ def main():
     cam_state = strip_keys(states[0])
     print("CAMERA", cam_state)
 
-    table = rows(out_dir / "card.md")
+    table = rows(card_dir / "card.md")
     picked = [(k, v) for k, v in table if k in VISIBLE]
     order = {k: i for i, k in enumerate(VISIBLE)}
     picked.sort(key=lambda kv: order[kv[0]])

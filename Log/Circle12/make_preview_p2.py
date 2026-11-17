@@ -11,7 +11,7 @@ from PIL import Image, ImageDraw, ImageFont, ImageOps
 
 sys.stdout.reconfigure(encoding="utf-8")
 HERE = Path(__file__).resolve().parent
-V = HERE / "文生视频"
+V = HERE
 OUT = HERE / "preview-p2.png"
 
 CELL_W, CELL_H, PAD, GAP, LABEL_H, ROW_GAP = 440, 249, 24, 12, 26, 30
@@ -44,15 +44,15 @@ def grab(path, idx):
 
 def main():
     cells = [
-        (fit(grab(V / "terrain-huangfeng-valley-near-shore" / "v1" / "a1.mp4", 60)),
+        (fit(grab(V / "terrain-huangfeng-valley-near-shore" / "chain-01-a1" / "video" / "a1.mp4", 60)),
          "A1v1 · 2 行 5s · 75%（药垄有；泉眼只剩溪面）", BAD),
-        (fit(grab(V / "terrain-huangfeng-valley-near-shore" / "v2" / "a1v2.mp4", 60)),
+        (fit(grab(V / "terrain-huangfeng-valley-near-shore" / "chain-02-a1v2" / "video" / "a1v2.mp4", 60)),
          "A1v2 · 2 行 5s · 100%（潭加回：泉眼上涌＋气泡）", GOOD),
-        (fit(grab(V / "terrain-huangfeng-valley-under-maple" / "v1" / "a2.mp4", 40)),
+        (fit(grab(V / "terrain-huangfeng-valley-under-maple" / "chain-01-a2" / "video" / "a2.mp4", 40)),
          "A2 · 2 行 5s · 100%（狐伏卧 鹤振翅 盘根）", GOOD),
-        (fit(grab(V / "terrain-huangfeng-valley-near-3row" / "v1" / "c3.mp4", 60)),
+        (fit(grab(V / "terrain-huangfeng-valley-near-3row" / "chain-01-c3" / "video" / "c3.mp4", 60)),
          "C3 · 3 行 5s · 100%（泉眼＋药垄＋盘根同框）", GOOD),
-        (fit(grab(V / "terrain-huangfeng-valley-near-full" / "v1" / "b9.mp4", 130)),
+        (fit(grab(V / "terrain-huangfeng-valley-near-full" / "chain-01-b9" / "video" / "b9.mp4", 130)),
          "B9 · 4 行 9s · 75%（盘根丢；景别掉到中远景）", MID),
     ]
     cols = 3

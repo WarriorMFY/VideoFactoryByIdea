@@ -6,7 +6,7 @@
 | 结束时间 | 未结束（等用户指令） |
 | 预算 | 220（60＋100＋60 三次追加）；实际 194.18，余额 53.90 |
 | 一句话 | 从「近景镜头卡能不能把小要素画出来」验到「一条卡靠三镜切分能不能整卡全展示」，最近一次 7/7＝100% |
-| 结构 | 三个阶段；原 Circle13／Circle14 已于 17:55 合并进来，阶段标题见 log.md |
+| 结构 | 三个阶段；原 Circle13／Circle14 已于 17:55 并入。目录按 `<卡名>/chain-<NN>-<tag>/` 摆：一条链＝一次「卡 → 图 → 视频」完整记录，旧卡随链保留 |
 
 ## 阶段 1 · 近景镜头卡 × 小要素（11:52–14:35）
 
@@ -42,7 +42,13 @@
 
 ## 交付（`Log/Circle12/`）
 
-- 图：`文生图/terrain-huangfeng-valley-near/v1/near-precheck.png`
-- 视频 10 条：`terrain-huangfeng-valley-near/{v1,v2,v3}`、`-near-shore/{v1,v2}`、`-under-maple/v1`、`-near-3row/v1`、`-near-full/v1`、`terrain-huangfeng-valley/{S2,camseq}`
-- 预览：`preview-p1.png`（阶段 1）、`preview-p2.png`（阶段 2）、`preview-p3.png`（阶段 3）
-- 卡：`terrain-huangfeng-valley/` 下 `card.md`、`card-camera.md`、`card-camseq.md`、`card-fixed-variables.md`、`card-anti.md`；根目录 `pipeline-terrain-to-video.md`
+- 一条链一个目录，共 11 条：
+  - `terrain-huangfeng-valley-near/`：`chain-01-precheck`（图）、`chain-02-near-a`、`chain-03-near-b`、`chain-04-near-c`
+  - `terrain-huangfeng-valley-near-shore/`：`chain-01-a1`、`chain-02-a1v2`
+  - `terrain-huangfeng-valley-under-maple/chain-01-a2`
+  - `terrain-huangfeng-valley-near-3row/chain-01-c3`
+  - `terrain-huangfeng-valley-near-full/chain-01-b9`
+  - `terrain-huangfeng-valley/chain-01-s2`、`chain-02-camseq`
+- 每条链内：`card*.md`（卡快照，旧卡不删）+ `image/` 或 `video/`（prompt 正文、样本、样本 prompt 快照）+ `_diag/`
+- 全轮预览：`preview-p1.png`（阶段 1）、`preview-p2.png`（阶段 2）、`preview-p3.png`（阶段 3）
+- 方法卡：根目录 `pipeline-terrain-to-video.md`

@@ -11,7 +11,7 @@ from PIL import Image, ImageDraw, ImageFont, ImageOps
 
 sys.stdout.reconfigure(encoding="utf-8")
 HERE = Path(__file__).resolve().parent
-CARD = HERE / "文生视频" / "terrain-huangfeng-valley"
+CARD = HERE / "terrain-huangfeng-valley"
 
 GOOD = (46, 160, 67)
 BAD = (200, 60, 60)
@@ -33,13 +33,13 @@ def grab(mp4, t):
 
 
 cells = [
-    (grab(CARD / "S2" / "01-s2-fox-crane.mp4", 4.0),
+    (grab(CARD / "chain-01-s2" / "video" / "01-s2-fox-crane.mp4", 4.0),
      "S2 覆盖表（设定语言）· 5s", "0.5/2＝25%｜林地空镜，运镜锁失效", BAD),
-    (grab(CARD / "camseq" / "01-camseq-9s.mp4", 1.0),
+    (grab(CARD / "chain-02-camseq" / "video" / "01-camseq-9s.mp4", 1.0),
      "三镜切分 · 段1 远景 · 0–5.58s", "尺度 3/3｜三层山脊＋雪线＋谷底田畴", GOOD),
-    (grab(CARD / "camseq" / "01-camseq-9s.mp4", 6.5),
+    (grab(CARD / "chain-02-camseq" / "video" / "01-camseq-9s.mp4", 6.5),
      "三镜切分 · 段2 近景 · 5.58–7.58s", "水系 2/2｜潭心泉眼翻泡＋岸边药垄", GOOD),
-    (grab(CARD / "camseq" / "01-camseq-9s.mp4", 8.3),
+    (grab(CARD / "chain-02-camseq" / "video" / "01-camseq-9s.mp4", 8.3),
      "三镜切分 · 段3 近景 · 7.58–9.42s", "动物 2/2｜狐伏卧抬头＋鹤石上振翅", GOOD),
 ]
 

@@ -1,8 +1,8 @@
 """Circle12 文生图：组合 prompt → G-2.0 通道出图（16:9 横构图）。
 
 用法：
-  python Log/Circle12/run_still.py near-precheck                 # 读文生图/…/v1/prompt-near-image.txt
-  python Log/Circle12/run_still.py near-precheck 16:9 文生图/terrain-huangfeng-valley-near/v1/prompt-near-image.txt
+  python Log/Circle12/run_still.py near-precheck                 # 读 terrain-huangfeng-valley-near/chain-01-precheck/image/prompt-near-image.txt
+  python Log/Circle12/run_still.py near-precheck 16:9 terrain-huangfeng-valley-near/chain-01-precheck/image/prompt-near-image.txt
 
 输出落在 prompt 文件所在目录（Log/README.md 的段／卡片／版本纪律）。
 """
@@ -39,7 +39,7 @@ def build_nodes(api_key, prompt, ratio):
 def main():
     tag = sys.argv[1] if len(sys.argv) > 1 else "near-precheck"
     ratio = sys.argv[2] if len(sys.argv) > 2 else "16:9"
-    name = sys.argv[3] if len(sys.argv) > 3 else "文生图/terrain-huangfeng-valley-near/v1/prompt-near-image.txt"
+    name = sys.argv[3] if len(sys.argv) > 3 else "terrain-huangfeng-valley-near/chain-01-precheck/image/prompt-near-image.txt"
     src = Path(name) if Path(name).is_absolute() else HERE / name
     if not src.exists():
         raise SystemExit("prompt 不存在: " + str(src))

@@ -20,7 +20,7 @@ m = re.search(r"apikey:\s*(\S+)", (ROOT / "AGENTS.md").read_text(encoding="utf-8
 os.environ["RUNNINGHUB_API_KEY"] = m.group(1)
 
 tag = sys.argv[1] if len(sys.argv) > 1 else "near-a"
-name = sys.argv[2] if len(sys.argv) > 2 else "文生视频/terrain-huangfeng-valley-near/prompt-near-video.txt"
+name = sys.argv[2] if len(sys.argv) > 2 else "terrain-huangfeng-valley-near/chain-02-near-a/video/prompt-near-video.txt"
 src = Path(name) if Path(name).is_absolute() else HERE / name
 if not src.exists():
     raise SystemExit("prompt 不存在: " + str(src))
