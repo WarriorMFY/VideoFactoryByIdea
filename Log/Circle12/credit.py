@@ -22,7 +22,7 @@ import runninghub as rh  # noqa: E402
 
 HERE = Path(__file__).resolve().parent
 LEDGER = HERE / "ledger.json"
-BUDGET = 60.0  # 原定 50；2026-11-17 13:50 用户批准追加，用于跑“动态小要素版”第二条视频
+BUDGET = 220.0  # 三次追加：60（13:50）+ 100（14:55）+ 60（17:05）；以 ledger.json 里的 budget 为准
 
 
 def api_key():

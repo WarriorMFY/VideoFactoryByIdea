@@ -1,32 +1,85 @@
 {
   "start_remain": 237.18,
-  "budget": 60.0,
+  "budget": 220.0,
   "started_at": "2026-11-17 13:35:30",
   "items": [
     {
       "ts": "2026-11-17 13:37:44",
       "tag": "near-precheck",
       "charged": 10.9,
-      "note": "prompt-near-image.txt"
+      "note": "prompt-near-image.txt",
+      "phase": "1"
     },
     {
       "ts": "2026-11-17 13:39:38",
       "tag": "near-a",
       "charged": 24.33,
-      "note": "prompt-near-video.txt 5s 480P（视频通道 24.33，高于文档区间）"
+      "note": "prompt-near-video.txt 5s 480P（视频通道 24.33，高于文档区间）",
+      "phase": "1"
     },
     {
       "ts": "2026-11-17 13:47:49",
       "tag": "near-b",
       "charged": 11.22,
-      "note": "prompt-near-video.txt v2 动态小要素版（本次仅 11.22，同参数第三次跳档）"
+      "note": "prompt-near-video.txt v2 动态小要素版（本次仅 11.22，同参数第三次跳档）",
+      "phase": "1"
     },
     {
       "ts": "2026-11-17 14:33:01",
       "tag": "near-c",
       "charged": 18.53,
-      "note": "prompt-near-video.txt v3 灵药田换词（药垄）"
+      "note": "prompt-near-video.txt v3 灵药田换词（药垄）",
+      "phase": "1"
+    },
+    {
+      "ts": "2026-11-17 15:10:37",
+      "tag": "p2-a1",
+      "charged": 13.94,
+      "note": "near-shore 2 行 5s（余额差 183.10-169.16，未回传 chargedPoint）",
+      "phase": "2"
+    },
+    {
+      "ts": "2026-11-17 15:12:42",
+      "tag": "p2-a2",
+      "charged": 15.64,
+      "note": "under-maple 2 行 5s（余额差 169.16-153.52）",
+      "phase": "2"
+    },
+    {
+      "ts": "2026-11-17 15:15:14",
+      "tag": "p2-b9",
+      "charged": 22.61,
+      "note": "9s 全 4 行（余额差 153.52-130.91）",
+      "phase": "2"
+    },
+    {
+      "ts": "2026-11-17 15:17:25",
+      "tag": "p2-a1v2",
+      "charged": 14.45,
+      "note": "near-shore v2 两行 5s（潭加回，余额差 130.91-116.46）",
+      "phase": "2"
+    },
+    {
+      "ts": "2026-11-17 15:19:42",
+      "tag": "p2-c3",
+      "charged": 18.87,
+      "note": "3 行 5s 上界测试（余额差 116.46-97.59）",
+      "phase": "2"
+    },
+    {
+      "ts": "2026-11-17 16:09:39",
+      "tag": "p3-s2",
+      "charged": 19.21,
+      "note": "S2 覆盖表派生（完整卡原文）5s，余额差 97.59-78.38",
+      "phase": "3"
+    },
+    {
+      "ts": "2026-11-17 16:23:02",
+      "tag": "p3-camseq-9s",
+      "charged": 24.48,
+      "note": "三镜切分 9s，余额差 78.38-53.90",
+      "phase": "3"
     }
   ],
-  "note": "2026-11-17 13:50 用户批准追加至 60，用于跑动态小要素版"
+  "note": "预算三次追加：60（13:50 批，原 Circle12）+ 100（14:55 批，原 Circle13）+ 60（17:05 批，原 Circle14）。记录合计 194.18；余额 237.18→53.90 实测 183.28，差 10.90 出现在阶段 1 与阶段 2 之间（疑似退款），未归因。"
 }

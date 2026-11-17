@@ -1,7 +1,7 @@
 """Circle13 预览图：同一条地貌卡按「行数 × 时长」裁切后的画面容量对照。
 
-用法：python Log/Circle13/make_preview.py
-输出：Log/Circle13/preview.png
+用法：python Log/Circle12/make_preview_p2.py
+输出：Log/Circle12/preview-p2.png
 """
 import sys
 from pathlib import Path
@@ -12,7 +12,7 @@ from PIL import Image, ImageDraw, ImageFont, ImageOps
 sys.stdout.reconfigure(encoding="utf-8")
 HERE = Path(__file__).resolve().parent
 V = HERE / "文生视频"
-OUT = HERE / "preview.png"
+OUT = HERE / "preview-p2.png"
 
 CELL_W, CELL_H, PAD, GAP, LABEL_H, ROW_GAP = 440, 249, 24, 12, 26, 30
 BG, FG, DIM = (18, 20, 24), (236, 238, 242), (150, 156, 166)

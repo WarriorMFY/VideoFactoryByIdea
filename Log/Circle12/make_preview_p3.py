@@ -1,7 +1,7 @@
 """Circle14 预览图：S2 空镜失败样本 + 三镜切分三段各取一帧。
 
-用法：python Log/Circle14/make_preview.py
-输出：Log/Circle14/preview.png（4 格横排）
+用法：python Log/Circle12/make_preview_p3.py
+输出：Log/Circle12/preview-p3.png（4 格横排）
 """
 import sys
 from pathlib import Path
@@ -54,6 +54,6 @@ for i, (im, t1, t2, color) in enumerate(cells):
     d.text((x + 10, 9), t1, font=title, fill=(255, 255, 255))
     d.text((x + 10, 33), t2, font=sub, fill=color)
 
-out = HERE / "preview.png"
+out = HERE / "preview-p3.png"
 canvas.save(out)
 print("OUT", out.relative_to(HERE), canvas.size)
