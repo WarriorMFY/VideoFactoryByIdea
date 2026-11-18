@@ -1,0 +1,55 @@
+{
+  "start_remain": 19168.25,
+  "budget": 60.0,
+  "started_at": "2026-11-18 09:03:33",
+  "items": [
+    {
+      "ts": "2026-11-18 09:06:41",
+      "tag": "f31-62-93",
+      "charged": 12.58,
+      "note": "prompt-video.txt",
+      "bal_before": 19168.25,
+      "bal_after": 19155.67
+    },
+    {
+      "ts": "2026-11-18 09:08:29",
+      "tag": "f20-50-80",
+      "charged": 12.75,
+      "note": "prompt-video.txt",
+      "bal_before": 19155.67,
+      "bal_after": 19142.92
+    },
+    {
+      "ts": "2026-11-18 09:25:39",
+      "tag": "f31-62-93-r2",
+      "charged": 12.58,
+      "note": "prompt-video.txt",
+      "bal_before": 19142.92,
+      "bal_after": 19130.34
+    },
+    {
+      "ts": "2026-11-18 16:38:42",
+      "tag": "boat-poling-5s",
+      "charged": 22.27,
+      "note": "card-action.md",
+      "bal_before": 19130.34,
+      "bal_after": 19108.07
+    },
+    {
+      "ts": "2026-11-18 17:02:34",
+      "tag": "wide-216f-r1",
+      "charged": 49.47,
+      "note": "prompt-video.txt",
+      "bal_before": 19108.07,
+      "bal_after": 19058.6
+    },
+    {
+      "ts": "2026-11-18 17:29:45",
+      "tag": "baby-mama-r1",
+      "charged": 29.92,
+      "note": "prompt-video.txt",
+      "bal_before": 19058.6,
+      "bal_after": 19028.68
+    }
+  ]
+}
