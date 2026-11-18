@@ -198,3 +198,34 @@ python -m pip install --target Tool/_deps_matte --upgrade -i <清华镜像> remb
 - 提交策略：只提交本循环路径（`Log/Circle17/`、`Skill/image-matte/`、`Skill/pixel-anchor/`、`Tool/matte.py`、`Tool/matte_models.py`、`Tool/anchor.py`、`.gitignore` 中 `Tool/_deps_matte/` 那一行）。
   其他会话的在途改动（`AGENTS.md`、`Skill/card-experiment-chain-v2/reference/channels.md`、`Tool/README.md`、`Tool/setup_deps.py`、`Skill/FetchVideoFrame/`、`Log/Circle16/`、`Log/Circle15/`）**一律未纳入**，避免把别人的半成品一起提交。
 - 结束时间：2026-11-18 22:48。
+
+## 八、结轮后补办：Meta 规则 5「自包含」整改（22:52–23:10）
+
+用户对遗留第 1 条答复「1. 执行」，即采纳**把实现搬进技能树、`Tool/` 只留启动器**（不是接受例外）。
+
+**改动**
+
+| 文件 | 变更 |
+| --- | --- |
+| `Skill/image-matte/scripts/matte.py` | 新增（复制自 `Tool/matte.py`），头段改为 `_repo_root()` 向上查找含 `Skill`+`Tool` 的目录 + `CARDSTUDIO_MATTE_DEPS` 可覆盖 |
+| `Skill/image-matte/scripts/matte_models.py` | 新增（复制自 `Tool/matte_models.py`），同上路径改造 |
+| `Skill/image-matte/scripts/run.py` | 删除（旧的转调启动器，已由实现本体取代） |
+| `Skill/pixel-anchor/scripts/anchor.py` | 新增（复制自 `Tool/anchor.py`），`DEPS`/`DEPS_MATTE` 改为 `_repo_root()` + `CARDSTUDIO_DEPS`/`CARDSTUDIO_MATTE_DEPS` 覆盖 |
+| `Tool/matte.py`、`Tool/matte_models.py`、`Tool/anchor.py` | 压成 16 行薄启动器：定位技能脚本 + `subprocess` 透传参数，不含算法 |
+| `Skill/image-matte/SKILL.md`、`Skill/pixel-anchor/SKILL.md` | 调用命令与资产表全部改指技能内脚本；补「自包含口径」一段 |
+
+**自包含口径（本次裁定的落地解释）**：技能只引用**本技能树内的源码与文档**；rembg/onnxruntime/OpenCV
+与 `.onnx` 权重属运行时缓存，继续由 `Tool/_deps`、`Tool/_deps_matte` 提供（且可被两个环境变量覆盖），
+不算对技能外源码的引用——否则 340MB 权重得在两个技能里各存一份。
+
+**验证（全部通过）**
+
+- 四个入口 `--help`（技能内 `matte.py`／`anchor.py`，Tool 两个启动器）均正常出用法，说明定位无误。
+- `Tool/matte_models.py list`：`u2net`、`isnet-general-use` 正确显示 ✓，说明模型目录解析对了。
+- 抠图功能回归：技能内 `matte.py` 跑 isnet，模型载入 2.6s、单图 2.27s、前景 34.0%，与改造前一致。
+- 度量回归：`score` 输出 `mask_iou 0.9644 / halo_ratio 1.075 / orb 0.2649`，与记录值吻合（`halo_ratio` 精确对齐 1.075）。
+
+**未处理**
+
+- `Tool/README.md` 第 14–15 行仍把 `matte.py` 描述为"工业级抠图"本体；该文件另一会话有未提交改动，不并入别人工作，留待其提交后再补一句"启动器"。
+- 本轮改动**未 git 提交**——纪律是"只在结轮提交"，本项属结轮后补办，随下一轮结轮一并提交（用户可随时要求即时提交）。

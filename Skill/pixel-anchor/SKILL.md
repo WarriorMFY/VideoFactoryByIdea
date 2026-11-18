@@ -19,13 +19,14 @@
 ## 一条命令
 
 ```
-python Tool/anchor.py compose --anchor mecha.png --plate plate.png --out first.png
-python Tool/anchor.py masks  --src shot.png --boxes '[{"name":"机甲","box":[0.25,0.04,0.76,1.0]}]' --outdir anchors
-python Tool/anchor.py score  --anchor mecha.png --frame first.png --rematte
-python Tool/anchor.py pair   --video shot.mp4 --outdir shots
+python Skill/pixel-anchor/scripts/anchor.py compose --anchor mecha.png --plate plate.png --out first.png
+python Skill/pixel-anchor/scripts/anchor.py masks  --src shot.png --boxes '[{"name":"机甲","box":[0.25,0.04,0.76,1.0]}]' --outdir anchors
+python Skill/pixel-anchor/scripts/anchor.py score  --anchor mecha.png --frame first.png --rematte
+python Skill/pixel-anchor/scripts/anchor.py pair   --video shot.mp4 --outdir shots
 ```
 
 坐标全部用 0–1 比例；换分辨率不用改参数。抠图本身走 `Skill/image-matte`。
+`Tool/anchor.py` 只是兼容旧调用的薄启动器，实现与文档都在本技能内。
 
 ## 三条通过线
 
@@ -37,6 +38,9 @@ python Tool/anchor.py pair   --video shot.mp4 --outdir shots
 
 ## 资产
 
+- `scripts/anchor.py` — 实现本体（compose / masks / score / pair 四个子命令）
 - `reference/anchors.md` — 四类锚点、优先级、锚点预算（硬锚/软锚）、冲突处理、合规
 - `reference/measured.md` — 实测数字、失败案例、已知缺陷
-- 实现：`Tool/anchor.py`（compose / masks / score / pair 四个子命令）
+
+**自包含口径**：技能只引用本技能树内的文件；第三方依赖（OpenCV/rembg/onnxruntime）与模型权重属运行时缓存，
+由仓库 `Tool/_deps`、`Tool/_deps_matte` 提供（可用 `CARDSTUDIO_DEPS` / `CARDSTUDIO_MATTE_DEPS` 覆盖），不算对技能外源码的引用。

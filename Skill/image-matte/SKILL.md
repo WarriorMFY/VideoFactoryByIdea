@@ -17,9 +17,10 @@ description: 从一张图里抠出主体、去掉背景，出透明底 PNG。用
 
 ## 怎么调
 ```bash
-python Skill/image-matte/scripts/run.py <图或目录> [-o 输出] [--model isnet-general-use] [--bg white|#RRGGBB] [--crop] [--json]
+python Skill/image-matte/scripts/matte.py <图或目录> [-o 输出] [--model isnet-general-use] [--bg white|#RRGGBB] [--crop] [--json]
 ```
 参数与模型选择见 `reference/models.md`；边界与必失败场景见 `reference/limits.md`。
+`Tool/matte.py`、`Tool/matte_models.py` 只是兼容旧调用的薄启动器，实现与文档都在本技能内。
 
 ## 通过线
 1. **无背景色残留**：边缘没有白边、绿边、灰边。
@@ -31,6 +32,10 @@ python Skill/image-matte/scripts/run.py <图或目录> [-o 输出] [--model isne
 ## 资产
 | 文件 | 用途 |
 | --- | --- |
-| `scripts/run.py` | 启动器，转调仓库工具 `Tool/matte.py`（依赖与模型在 `Tool/_deps_matte/`） |
+| `scripts/matte.py` | 实现本体：抠图 CLI（rembg + ONNX） |
+| `scripts/matte_models.py` | 从国内镜像拉取模型权重（`list` / `fetch`） |
 | `reference/models.md` | 七类模型的体积、速度、擅长与不擅长 |
 | `reference/limits.md` | 必失败场景与处置口径 |
+
+**自包含口径**：技能只引用本技能树内的文件；依赖（rembg / onnxruntime）与模型权重属运行时缓存，
+由仓库 `Tool/_deps_matte/` 提供（可用环境变量 `CARDSTUDIO_MATTE_DEPS` 覆盖），不算对技能外源码的引用。

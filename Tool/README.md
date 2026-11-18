@@ -9,9 +9,14 @@
 | `smoke_test.py --online` | 额外查账号余额与 L3/L4 通道节点（只读、需网络） | `python Tool/smoke_test.py --online` |
 | `stub_runner.py` | `run_l3/l4.py` 的零成本替身，验证参数构造与节点覆盖，不烧积分 | 经 `--runner Tool/stub_runner.py` 调用 |
 | `account.py` | 账户原始字段查询，以 `remainPoint` 为可用积分 | `python Tool/account.py` |
-| `setup_deps.py` | 重建 `_deps`（cv2 / Pillow / numpy） | `python Tool/setup_deps.py` |
+| `setup_deps.py` | 重建 `_deps`（cv2 / Pillow / numpy / FFmpeg） | `python Tool/setup_deps.py` |
+| `ffmpeg.py` | FFmpeg 9.0.2 静态二进制入口（无损流拷贝切段、转码、格式探测） | `python Tool/ffmpeg.py -version` |
+| `matte.py` | 工业级自动抠图（rembg + ONNX），图→透明底 PNG，可 `--crop` 裁外接框、`--json` 出统计 | `python Tool/matte.py <图或目录> -o <目录>` |
+| `matte_models.py` | 抠图模型权重下载（走国内镜像，GitHub 直连不通） | `python Tool/matte_models.py list` / `fetch <名>` |
 
 `_deps/` 是本机依赖缓存，**不入库**（见 `.gitignore`），换机器跑一次 `setup_deps.py` 即可。
+`_deps_matte/` 同理：装 rembg / onnxruntime 与抠图模型（约 340MB），**不入库**；换机器用
+`python -m pip install --target Tool/_deps_matte rembg onnxruntime` + `matte_models.py fetch all` 重建。
 `smoke_test.py` 会自动把 `_deps` 注入 `PYTHONPATH`，无需手工设置。
 
 一条已知事实，冒烟时不算失败：
