@@ -1,0 +1,11 @@
+{
+  "tag": "s3",
+  "task_id": "2123059069119057922",
+  "trim_to": "1.6",
+  "prompt": "prompts/s3.txt",
+  "image": "keys/S3-first-f252.png",
+  "charged": 38.08,
+  "bal_before": 18891.49,
+  "bal_after": 18853.41,
+  "file": "out\\s3.mp4"
+}

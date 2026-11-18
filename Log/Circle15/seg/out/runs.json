@@ -1,0 +1,35 @@
+[
+  {
+    "tag": "s1",
+    "task_id": "2123056841272549377",
+    "trim_to": "4.4",
+    "prompt": "prompts/s1.txt",
+    "image": "keys/S1-first-f0.png",
+    "charged": 42.33,
+    "bal_before": 18980.23,
+    "bal_after": 18937.9,
+    "file": "out\\s1.mp4"
+  },
+  {
+    "tag": "s2",
+    "task_id": "2123057910929117185",
+    "trim_to": "4.0",
+    "prompt": "prompts/s2.txt",
+    "image": "keys/S2-first-f132.png",
+    "charged": 46.41,
+    "bal_before": 18937.9,
+    "bal_after": 18891.49,
+    "file": "out\\s2.mp4"
+  },
+  {
+    "tag": "s3",
+    "task_id": "2123059069119057922",
+    "trim_to": "1.6",
+    "prompt": "prompts/s3.txt",
+    "image": "keys/S3-first-f252.png",
+    "charged": 38.08,
+    "bal_before": 18891.49,
+    "bal_after": 18853.41,
+    "file": "out\\s3.mp4"
+  }
+]

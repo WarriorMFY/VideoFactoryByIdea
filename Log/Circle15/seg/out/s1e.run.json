@@ -1,0 +1,12 @@
+{
+  "tag": "s1e",
+  "task_id": "2123067002175324162",
+  "trim_to": "4.4",
+  "mp": "0.92",
+  "prompt": "prompts/s1e.txt",
+  "image": "keys/S1-first-f0.png",
+  "charged": 36.55,
+  "bal_before": 18853.41,
+  "bal_after": 18816.86,
+  "file": "out\\s1e.mp4"
+}

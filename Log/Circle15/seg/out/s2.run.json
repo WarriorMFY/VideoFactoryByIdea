@@ -1,0 +1,11 @@
+{
+  "tag": "s2",
+  "task_id": "2123057910929117185",
+  "trim_to": "4.0",
+  "prompt": "prompts/s2.txt",
+  "image": "keys/S2-first-f132.png",
+  "charged": 46.41,
+  "bal_before": 18937.9,
+  "bal_after": 18891.49,
+  "file": "out\\s2.mp4"
+}
