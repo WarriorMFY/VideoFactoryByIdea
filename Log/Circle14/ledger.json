@@ -50,6 +50,14 @@
       "note": "prompt-video.txt",
       "bal_before": 19058.6,
       "bal_after": 19028.68
+    },
+    {
+      "ts": "2026-11-18 17:58:23",
+      "tag": "gun-biu-r1",
+      "charged": 26.18,
+      "note": "prompt-video.txt",
+      "bal_before": 19028.68,
+      "bal_after": 19002.5
     }
   ]
 }
