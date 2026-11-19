@@ -15,7 +15,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 PROMPT = ROOT / "Log" / "Circle4" / "prompt-l4.txt"
-RUNNER = "Skill/RHClaw/runninghub/scripts/runninghub.py"
+RUNNER = "Skill/hub/generation/runninghub/scripts/runninghub.py"
 ENDPOINT = "rhart-video/sparkvideo-2.0-mini/text-to-video"
 
 

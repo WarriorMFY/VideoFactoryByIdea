@@ -1,7 +1,7 @@
 # RAG · 入库规则
 
 > 只收入库卡：出图／出片验证 + 用户口头确认，两条缺一不可。草稿留在 `Log/`。
-> 卡片格式归 `Doc/Cards/spec.md`；本文件只管入库、存证、失效。
+> 本文件只管归档规则：入库、存证、失效、目录判据。卡片内部怎么写不归这里管。
 
 ## 一、目录
 
@@ -14,19 +14,19 @@ RAG/<类型复数>/<卡片名>/
   └─ 02-fail-<问题>.<png|mp4> 已知偏差，可选
 ```
 
-目录名按卡片类型起复数，**不设枚举**（spec 已取消 `type` 约束）。现有 `actions/`、`styles/`、`portraits/`（只写脸）、`stylings/`（造型：服装＋体态＋构图＋机位＋动作，判据见 §六）；派生镜头卡进基础卡下 `cameras/`（§六）。`card.md` 内 `name` 须等于所在目录名。
+目录名按卡片类型起复数，**不设枚举**。现有 `actions/`、`styles/`、`portraits/`（只写脸）、`stylings/`（造型：服装＋体态＋构图＋机位＋动作，判据见 §六）；派生镜头卡进基础卡下 `cameras/`（§六）。`card.md` 内 `name` 须等于所在目录名。
 
 ## 二、准入
 
 | 条件 | 说明 |
 | --- | --- |
 | 出片／出图验证 | 实跑并逐项判定，不得只看静帧推断动态 |
-| 口头确认 | 用户明确说通过；执行口径见 `Skill/card-experiment-chain/reference/judging.md` 的「人工验收」 |
+| 口头确认 | 用户明确说通过（不接受 AI 自判） |
 
-`spec.md` 符合性**只自检、不拦截**——入库前跑一次，结果记进 `evidence.md`。库内已有不符项且不能改：
+格式自检**只记录、不拦截**——入库时由制卡方对一遍，结果记进 `evidence.md`。库内已有已知偏差且不能改（改则破 hash）：
 
 - `actions/execution-shield-bash-throat-thrust-3f`：`description` 的竖线块内容未缩进，严格 YAML 取不到值。Circle3 定「逐字复制、不改一字」，改则破 `E9DD877F4114`。
-- `styles/style-dark-fantasy` 与上卡：带 `type`／`scope`／`level`／`source` 额外键。spec 允许，但 `Skill/interactive-action-card-validation` 格式项 5 仍要「恰好 2 键」，用它校验动作卡会 FAIL——**待对齐**。
+- `styles/style-dark-fantasy` 与上卡：带 `type`／`scope`／`level`／`source` 额外键，验收侧已接受为白名单（2026-11-19 对齐）。
 
 原「结构关 `validate.ps1`」「编译自检 `check_prompt.py`」两条已停用且失效：前者随 `00-spec/` 在 Circle7 删除，后者仓库中本就不存在。恢复须用户单独发话。
 
@@ -34,7 +34,7 @@ RAG/<类型复数>/<卡片名>/
 
 `evidence.md` 缺任一项即无效：平台与应用、webappId、实例类型（lite／default／plus）、出图／出片时间、Task ID、结果 URL、Prompt 文件名与段数、卡片 hash（SHA256 前 12 位）。
 
-入库前的运行记录放在实验链的 `manifest.json`，字段见 `Skill/card-experiment-chain/reference/archive.md`；本节只规定入库本自己的 `evidence.md`。
+入库前的运行记录留在实验链自己的 `manifest.json` 里；本节只规定入库本自己的 `evidence.md`。
 
 媒体自 2026-11-16 起随卡片一并入库（§四末）；指纹仍逐项保留，用于在换机、换克隆后核对媒体是否被替换。
 
@@ -52,9 +52,11 @@ python -c "import hashlib,pathlib;print(hashlib.sha256(pathlib.Path('RAG/<路径
 
 ## 五、单一副本
 
-`Doc/Cards` 只有 `spec.md`（元卡模板已移入 `Skill/card-experiment-chain/templates/meta/`），不存实例卡，故 `RAG` 的 `card.md` 是唯一持久形态。
+`Doc/` 不存实例卡，故 `RAG` 的 `card.md` 是唯一持久形态。
 
 入库前原件在 `Log/` 的，**不原地加标注**（加行即破 hash），由 `Log/Circle<N>/` 的 `Circle.md`（摘要）与 `log.md`（全文）记路径，`evidence.md` 留一行。原件被删（如 Circle7 删掉的镜头卡 `Doc/` 副本），在 `evidence.md` 末尾加追记、写历史提交号，不动正文。
+
+存量卡内对已删路径的历史引用（`stylings/figure-fullbody-pretty-casual` 的 `card.md:25` 与 `evidence.md:44`）**不追改**——改则破 hash。
 
 ## 六、派生卡与独立卡
 

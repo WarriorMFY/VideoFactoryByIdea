@@ -11,7 +11,7 @@ from pathlib import Path
 sys.stdout.reconfigure(encoding="utf-8")
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[2]
-os.environ["PYTHONPATH"] = str(ROOT / "Skill" / "RHClaw" / "runninghub" / "scripts")
+os.environ["PYTHONPATH"] = str(ROOT / "Skill" / "hub" / "generation" / "runninghub" / "scripts")
 os.environ["PYTHONUTF8"] = "1"
 os.environ["PYTHONIOENCODING"] = "utf-8"
 
@@ -32,7 +32,7 @@ print("PROMPT", src.name, "CHARS", len(prompt), "BYTES", len(prompt.encode("utf-
 
 cmd = [
     sys.executable,
-    str(ROOT / "Skill" / "RHClaw" / "runninghub" / "scripts" / "runninghub_app.py"),
+    str(ROOT / "Skill" / "hub" / "generation" / "runninghub" / "scripts" / "runninghub_app.py"),
     "--run", "2085304953094107137",
     "--node", "250:prompt=" + prompt,
     "--node", "115:aspect_ratio=3:4 (Portrait Standard)",

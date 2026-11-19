@@ -1,6 +1,10 @@
 # Workspace 是本地临时工作区（探查脚本、Prompt 快照、输出缓存），不入库（2026-11-16 用户裁定）
-# 需要长期留存的脚本移入 Tool/，需要留存的证据移入 RAG/<卡>/ 或 Log/<Circle>/
+# 需要长期留存的工具移入 Skill/<技能>/scripts/，需要留存的证据移入 RAG/<卡>/ 或 Log/<Circle>/
 Workspace/
+
+# 凭据不入库：模板见 Skill/hub/generation/runninghub/credential.example.txt
+Skill/**/credential.txt
+Skill/**/.env
 
 # 字节码不入库
 __pycache__/

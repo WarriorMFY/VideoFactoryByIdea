@@ -10,7 +10,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]
-sys.path.insert(0, str(ROOT / "Skill" / "card-experiment-chain-v2" / "scripts"))
+sys.path.insert(0, str(ROOT / "Skill" / "chain" / "card-experiment" / "scripts"))
 sys.stdout.reconfigure(encoding="utf-8")
 
 import rh_api  # noqa: E402

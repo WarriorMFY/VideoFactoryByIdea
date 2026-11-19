@@ -1,26 +1,36 @@
-# Tool — 长期复用的工具
+# Tool · 公共层
 
-按 `AGENTS.md`，`Tool/` 对 LLM 只读；本次按用户指令创建，之后改动需用户发话。
-所有脚本都从仓库根解析路径，可在任意目录调用。
+> 本目录只放**与系统、第三方包打交道**的公共工具——它们不知道 `Skill/` 的存在。
+> 单技能专用的工具一律放该技能自己的 `scripts/`。分层与引用规则见根 `AGENTS.md`。
 
 | 工具 | 用途 | 命令 |
 | --- | --- | --- |
-| `smoke_test.py` | 一键无费用冒烟：Prompt 一致性 → L3/L4 送验链路(stub) → 抽帧 → 校验器 | `python Tool/smoke_test.py` |
-| `smoke_test.py --online` | 额外查账号余额与 L3/L4 通道节点（只读、需网络） | `python Tool/smoke_test.py --online` |
-| `stub_runner.py` | `run_l3/l4.py` 的零成本替身，验证参数构造与节点覆盖，不烧积分 | 经 `--runner Tool/stub_runner.py` 调用 |
-| `account.py` | 账户原始字段查询，以 `remainPoint` 为可用积分 | `python Tool/account.py` |
+| `ffmpeg.py` | FFmpeg 静态二进制入口（无损流拷贝切段、转码、格式探测） | `python Tool/ffmpeg.py -version` |
 | `setup_deps.py` | 重建 `_deps`（cv2 / Pillow / numpy / FFmpeg） | `python Tool/setup_deps.py` |
-| `ffmpeg.py` | FFmpeg 9.0.2 静态二进制入口（无损流拷贝切段、转码、格式探测） | `python Tool/ffmpeg.py -version` |
-| `matte.py` | 工业级自动抠图（rembg + ONNX），图→透明底 PNG，可 `--crop` 裁外接框、`--json` 出统计 | `python Tool/matte.py <图或目录> -o <目录>` |
-| `matte_models.py` | 抠图模型权重下载（走国内镜像，GitHub 直连不通） | `python Tool/matte_models.py list` / `fetch <名>` |
 
-`_deps/` 是本机依赖缓存，**不入库**（见 `.gitignore`），换机器跑一次 `setup_deps.py` 即可。
-`_deps_matte/` 同理：装 rembg / onnxruntime 与抠图模型（约 340MB），**不入库**；换机器用
-`python -m pip install --target Tool/_deps_matte rembg onnxruntime` + `matte_models.py fetch all` 重建。
-`smoke_test.py` 会自动把 `_deps` 注入 `PYTHONPATH`，无需手工设置。
+所有脚本都从仓库根解析路径，可在任意目录调用。
 
-一条已知事实，冒烟时不算失败：
+## 缓存
 
-- `runninghub_app.py --check` 以 `remainMoney` 判余额，会误报 `no_balance`；真实额度看 `account.py` 的 `remainPoint`。`--run` 不调用 `--check`，不受影响。
+`_deps/` 与 `_deps_matte/` 是本机依赖缓存，**不入库**（见 `.gitignore`），换机器跑一次 `setup_deps.py` 即可。
 
-`smoke_test.py` 原先还跑一遍 `validate.ps1`。该脚本连同 `Doc/Cards/00-spec/` 已在 Circle7 规格重构中删除，现规格只有 `Doc/Cards/spec.md`（元信息 + 两列表格），冒烟不再做结构校验。
+`_deps_matte/` 装 rembg / onnxruntime 与抠图模型（约 340MB），重建方式：
+`python -m pip install --target Tool/_deps_matte rembg onnxruntime`，再用
+`Skill/hub/editing/cut/image-matte/scripts/matte_models.py fetch all` 拉权重。
+
+## 已迁出（2026-11-19）
+
+按分层规则（公共层不得引用 Skill），原在 `Tool/` 的 6 个脚本已归位：
+
+| 原路径 | 现位置 |
+| --- | --- |
+| `smoke_test.py`、`stub_runner.py` | `Skill/meta/smoke-test/scripts/`（作用于技能本身，归 meta 桶） |
+| `account.py` | `Skill/hub/generation/runninghub/scripts/`（单通道账户接口） |
+| `anchor.py` | 删除；实现本就在 `Skill/hub/editing/pixel-anchor/scripts/` |
+| `matte.py`、`matte_models.py` | 删除；实现本就在 `Skill/hub/editing/cut/image-matte/scripts/` |
+
+## 已知事实
+
+`runninghub_app.py --check` 以 `remainMoney`（钱包现金）判余额，会误报 `no_balance`；
+真实可用额度看 `Skill/hub/generation/runninghub/scripts/account.py` 打印的 `remainPoint`。
+`--run` 不调用 `--check`，不受影响。

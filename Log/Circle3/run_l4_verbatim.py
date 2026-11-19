@@ -15,7 +15,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 CARD = ROOT / "Log/Circle3/execution-shield-bash-throat-thrust-3f.md"
-RUNNER = ROOT / "Skill/RHClaw/runninghub/scripts/runninghub_app.py"
+RUNNER = ROOT / "Skill/hub/generation/runninghub/scripts/runninghub_app.py"
 OUT = ROOT / "Log/Circle3/output/l4-card-verbatim.mp4"
 APP = "2085304953094107137"
 PROMPT_NODE = "250:prompt"

@@ -15,7 +15,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]
-SKILL = ROOT / "Skill" / "card-experiment-chain-v2" / "scripts"
+SKILL = ROOT / "Skill" / "chain" / "card-experiment" / "scripts"
 sys.path.insert(0, str(SKILL))
 
 import cv2  # noqa: E402

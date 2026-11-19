@@ -22,7 +22,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 CARD = ROOT / "Log/Circle3/execution-shield-bash-throat-thrust-3f.md"
-RUNNER = ROOT / "Skill/RHClaw/runninghub/scripts/runninghub.py"
+RUNNER = ROOT / "Skill/hub/generation/runninghub/scripts/runninghub.py"
 OUT = ROOT / "Log/Circle3/output/l4-seedance-mini.mp4"
 ENDPOINT = "rhart-video/sparkvideo-2.0-mini/text-to-video"
 PARAMS = ["resolution=480p", "duration=5", "ratio=16:9"]

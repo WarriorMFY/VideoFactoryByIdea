@@ -10,7 +10,7 @@ import time
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]
-sys.path.insert(0, str(ROOT / "Skill" / "RHclaw" / "runninghub" / "scripts"))
+sys.path.insert(0, str(ROOT / "Skill" / "hub" / "generation" / "runninghub" / "scripts"))
 sys.stdout.reconfigure(encoding="utf-8")
 
 import runninghub as rh  # noqa: E402
@@ -24,7 +24,7 @@ def api_key() -> str:
     key = os.environ.get("RUNNINGHUB_API_KEY", "").strip()
     if key:
         return key
-    cred = ROOT / "Skill" / "card-experiment-chain-v2" / "credential.txt"
+    cred = ROOT / "Skill" / "chain" / "card-experiment" / "credential.txt"
     for line in cred.read_text(encoding="utf-8").splitlines():
         if line.startswith("RUNNINGHUB_API_KEY="):
             return line.split("=", 1)[1].strip()
