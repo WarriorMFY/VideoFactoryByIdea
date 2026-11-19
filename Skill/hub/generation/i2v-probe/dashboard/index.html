@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>i2v-probe · 首帧+提示词 对照实验台</title>
+<style>
+  :root{
+    --bg:#0e1116; --panel:#151a21; --panel2:#1b222b; --line:#272f3a;
+    --tx:#e6edf3; --mu:#8b98a8; --dim:#5d6875;
+    --ok:#4cc9b0; --warn:#e3b341; --bad:#f85149; --acc:#58a6ff;
+    --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--tx);
+       font:14px/1.55 -apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif}
+  .wrap{max-width:1180px;margin:0 auto;padding:26px 22px 60px}
+
+  header{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;
+         padding-bottom:16px;border-bottom:1px solid var(--line)}
+  h1{margin:0;font-size:19px;font-weight:600;letter-spacing:.3px}
+  h1 span{color:var(--acc)}
+  .sub{color:var(--mu);font-size:12.5px;margin-top:3px}
+  .tally{display:flex;gap:22px;text-align:right}
+  .tally b{display:block;font:600 17px/1.2 var(--mono)}
+  .tally i{font-style:normal;color:var(--dim);font-size:11.5px}
+
+  .anchor{display:flex;gap:18px;align-items:center;margin:18px 0 8px;
+          background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px}
+  .thumb{width:132px;height:74px;border-radius:6px;overflow:hidden;flex:none;
+         background:#000;border:1px solid var(--line);position:relative}
+  .thumb img{width:100%;height:100%;object-fit:cover;display:block;opacity:.95}
+  .thumb.ph{display:flex;align-items:center;justify-content:center;color:var(--dim);font-size:11px}
+  .chips{display:flex;flex-wrap:wrap;gap:7px}
+  .chip{font:11.5px/1 var(--mono);color:var(--mu);background:var(--panel2);
+        border:1px solid var(--line);border-radius:5px;padding:5px 8px;white-space:nowrap}
+  .chip b{color:var(--tx);font-weight:500}
+  .anchor .meta{font-size:12px;color:var(--dim);margin-top:7px}
+  .anchor .meta b{color:var(--mu);font-weight:400}
+
+  .bar{display:flex;gap:8px;align-items:center;margin:18px 0 14px;flex-wrap:wrap}
+  .tab{font-size:12.5px;color:var(--mu);border:1px solid var(--line);background:transparent;
+       border-radius:999px;padding:6px 13px;cursor:pointer}
+  .tab.on{color:var(--tx);border-color:#3a4656;background:var(--panel2)}
+  .tab:hover{color:var(--tx)}
+  .spacer{flex:1}
+  .mode{font:11.5px/1 var(--mono);color:var(--dim)}
+  .mode.demo{color:var(--warn)}
+  label.load{font-size:12.5px;color:var(--acc);cursor:pointer;border:1px dashed #2f4d70;
+             border-radius:6px;padding:6px 11px}
+  label.load:hover{background:#132030}
+  input[type=file]{display:none}
+
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(336px,1fr));gap:13px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 15px;
+        cursor:pointer;transition:border-color .12s,transform .12s}
+  .card:hover{border-color:#3a4656;transform:translateY(-1px)}
+  .card.sel{border-color:var(--acc)}
+  .ch{display:flex;align-items:center;gap:9px;margin-bottom:8px}
+  .gid{font:600 12px/1 var(--mono);color:#0e1116;background:var(--mu);
+       border-radius:4px;padding:4px 7px}
+  .g1 .gid{background:#5d6875} .g2 .gid{background:#6f93b5} .g3 .gid{background:#a8863f}
+  .gname{font-size:13.5px;font-weight:500}
+  .band{margin-left:auto;font:11px/1 var(--mono);padding:4px 7px;border-radius:4px;
+        color:#0e1116;background:#39414d}
+  .band.静{background:#4a5563;color:#c9d1d9} .band.微{background:var(--ok)}
+  .band.中{background:var(--warn)} .band.大{background:#d97b3a} .band.na{background:#39414d;color:#8b98a8}
+  .prompt{font-size:12.5px;color:var(--mu);height:38px;overflow:hidden;margin-bottom:11px}
+  .row{display:flex;align-items:center;gap:10px}
+  .kpi{display:flex;gap:14px;flex:1}
+  .kpi div{min-width:0}
+  .kpi b{display:block;font:600 13px/1.25 var(--mono)}
+  .kpi b small{color:var(--dim);font-size:10px;font-weight:400}
+  .kpi i{font-style:normal;color:var(--dim);font-size:10.5px;letter-spacing:.2px}
+  .spark{width:78px;height:26px;flex:none;opacity:.9}
+  .verdict{margin-top:10px;padding-top:9px;border-top:1px dashed var(--line);
+           font-size:12px;color:var(--mu)}
+  .verdict em{font-style:normal;color:var(--tx)}
+
+  .drawer{position:fixed;top:0;right:0;height:100%;width:430px;max-width:92vw;
+          background:#111720;border-left:1px solid var(--line);padding:22px;
+          transform:translateX(102%);transition:transform .18s ease;overflow-y:auto;z-index:9}
+  .drawer.open{transform:none}
+  .drawer h2{font-size:15px;margin:0 0 4px}
+  .drawer .close{position:absolute;top:14px;right:16px;color:var(--dim);cursor:pointer;
+                 font-size:18px;line-height:1}
+  .kv{display:grid;grid-template-columns:88px 1fr;gap:5px 10px;font-size:12.5px;margin:14px 0 16px}
+  .kv span{color:var(--dim)} .kv b{font-weight:400;font-family:var(--mono);color:var(--mu);
+                                  word-break:break-all}
+  .zone{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;margin:8px 0 16px}
+  .zone div{aspect-ratio:1;display:flex;align-items:center;justify-content:center;
+            border-radius:5px;font:600 12px var(--mono)}
+  .full{font-size:12.5px;color:var(--mu);background:var(--panel);border:1px solid var(--line);
+        border-radius:7px;padding:11px 12px;white-space:pre-wrap;margin:6px 0 16px}
+  .hint{font-size:11.5px;color:var(--dim);margin-top:8px}
+  footer{margin-top:26px;padding-top:14px;border-top:1px solid var(--line);
+         font-size:11.5px;color:var(--dim);display:flex;gap:16px;flex-wrap:wrap}
+  code{font-family:var(--mono);color:var(--mu)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div>
+      <h1>i2v-probe <span>·</span> 首帧 + 提示词 → 视频</h1>
+      <div class="sub">锚固定，只换提示词；一格一格测这条通道能做到哪</div>
+    </div>
+    <div class="tally">
+      <div><b id="tRuns">—</b><i>已跑</i></div>
+      <div><b id="tCost">—</b><i>积分</i></div>
+      <div><b id="tLock">—</b><i>锁住率</i></div>
+    </div>
+  </header>
+
+  <section class="anchor">
+    <div class="thumb ph" id="thumb">锚图</div>
+    <div style="flex:1">
+      <div class="chips">
+        <span class="chip">webapp <b>2113790012012720129</b></span>
+        <span class="chip">首帧 <b>140:image</b></span>
+        <span class="chip">提示词 <b>142:value</b></span>
+        <span class="chip">时长 <b>133:value · 5.0s</b></span>
+        <span class="chip"><b>3:4</b> · <b>0.6</b> MP</span>
+        <span class="chip">≈ <b>21.4</b> 积分/条</span>
+      </div>
+      <div class="meta">锚 <b id="anchorSha">待定</b> · 同组内必须逐字节一致 · 换锚即另开一组</div>
+    </div>
+  </section>
+
+  <div class="bar">
+    <button class="tab on" data-f="all">全部</button>
+    <button class="tab" data-f="g1">底噪</button>
+    <button class="tab" data-f="g2">可动域内</button>
+    <button class="tab" data-f="g3">可动域外</button>
+    <span class="spacer"></span>
+    <span class="mode demo" id="mode">演示数据</span>
+    <label class="load">载入 experiments.jsonl<input type="file" id="file" multiple accept=".jsonl,.json"></label>
+  </div>
+
+  <div class="grid" id="grid"></div>
+
+  <footer>
+    <span>判据：<code>reference/judging.md</code></span>
+    <span>矩阵：<code>reference/matrix.md</code></span>
+    <span>数字先于眼睛：全幅均值会稀释局部事件（9.88 vs 26.25）</span>
+  </footer>
+</div>
+
+<aside class="drawer" id="drawer">
+  <span class="close" id="close">×</span>
+  <h2 id="dTitle">—</h2>
+  <div class="sub" id="dSub">—</div>
+  <div class="kv" id="dKv"></div>
+  <div style="font-size:12px;color:var(--dim);margin-bottom:4px">终态九宫格（drift_max）</div>
+  <div class="zone" id="dZone"></div>
+  <div style="font-size:12px;color:var(--dim);margin-bottom:4px">提示词全文</div>
+  <div class="full" id="dPrompt">—</div>
+  <div class="hint" id="dHint"></div>
+</aside>
+
+<script>
+// ---------- 演示数据（实跑后由 experiments.jsonl + metrics.json 覆盖） ----------
+const DEMO = [
+  {id:"P0-静止", group:"P0", layer:1, name:"静止（底噪）", band:"静",
+   ncc:0.993, motion:1.4, mzone:5, drift:1.9, charged:21.42,
+   prompt:"画面完全静止，镜头不动，人物不动，只有极轻微空气扰动。",
+   verdict:"底噪 ≈1.4：这是这条通道的物理下限，后面判「动了」必须显著超过它。"},
+  {id:"M1-大动", group:"M1", layer:2, name:"动作幅度 · 大", band:"大",
+   ncc:0.986, motion:31.7, mzone:6, drift:26.4, charged:21.70,
+   prompt:"男子从画面左侧走到右侧，位移约占画宽三分之一，脚步与衣摆随之摆动，走到右侧后停住。",
+   verdict:"大步幅跟随成立，锚仍锁住；位移略小于要求，收在画宽的 0.26。"},
+  {id:"M3-推", group:"M3", layer:2, name:"镜头运动 · 缓推", band:"中",
+   ncc:0.971, motion:11.2, mzone:5, drift:14.8, charged:20.86,
+   prompt:"镜头缓慢推近，越过桌沿推至人物面部特写，构图中心落在眼睛上。",
+   verdict:"缓推部分实现：有轻微推近，但幅度不足以到达特写，首帧锚在压制运镜。"},
+  {id:"X1-断裂", group:"X1", layer:3, name:"结构完整性 · 断裂", band:"微",
+   ncc:0.981, motion:5.6, mzone:9, drift:6.1, charged:21.90,
+   prompt:"木栏板被重物撞断，断口垂下，随后整块落地碎裂成数段。",
+   verdict:"结构事件被降级为「倾斜」：能倒不能断，与 Circle15 结论一致。"},
+  {id:"X2-换物", group:"X2", layer:3, name:"内容替换 · 石像", band:"微",
+   ncc:0.977, motion:3.2, mzone:5, drift:4.7, charged:21.50,
+   prompt:"画面中的男子缓慢变成一尊石像，皮肤转为粗糙岩面，衣着与姿态保持不动。",
+   verdict:"只到「表面质变」，身份未替换：构图与轮廓被锚完全绑住。"}
+];
+
+let RUNS = DEMO.slice();
+let FILTER = "all";
+let SEL = null;
+
+const $ = s => document.querySelector(s);
+const bandCls = b => ["静","微","中","大"].includes(b) ? b : "na";
+const clamp = (v,a,b) => Math.max(a,Math.min(b,v));
+const colorFor = v => {
+  const t = clamp(v/30,0,1);
+  const c1=[42,52,64], c2=[227,179,65];
+  return `rgb(${c1.map((x,i)=>Math.round(x+(c2[i]-x)*t)).join(",")})`;
+};
+
+// 稳定伪随机：同一张卡每次渲染形状不变
+function rnd(seed){ let x = 0; for(const ch of String(seed)) x = (x*31 + ch.charCodeAt(0)) % 9973;
+  return () => { x = (x*1103515245 + 12345) % 2147483648; return x / 2147483648; }; }
+
+function spark(series, level, seed){
+  const w=78, h=26, n=14, r = rnd(seed||"x");
+  const vals = series && series.length ? series : Array.from({length:n},(_,i)=>
+    Math.max(0, (level||4)*(.55+.45*Math.sin(i*0.85))*(0.65+0.6*r())));
+  const m = Math.max(1, ...vals);
+  const pts = vals.map((v,i)=>{
+    const x = (i/(vals.length-1))*w;
+    const y = h - clamp(v/m,0,1)*(h-4) - 2;
+    return `${x.toFixed(1)},${y.toFixed(1)}`;
+  });
+  return `<svg class="spark" viewBox="0 0 ${w} ${h}" preserveAspectRatio="none">
+    <polyline points="${pts.join(" ")}" fill="none" stroke="#4cc9b0" stroke-width="1.6"
+      stroke-linejoin="round" stroke-linecap="round" opacity=".85"/></svg>`;
+}
+
+function visible(){
+  if(FILTER==="all") return RUNS;
+  return RUNS.filter(r => String(r.layer) === FILTER.slice(1));
+}
+
+function render(){
+  const list = visible();
+  $("#grid").innerHTML = list.map(r => `
+    <div class="card g${r.layer}${SEL===r.id?" sel":""}" data-id="${r.id}">
+      <div class="ch">
+        <span class="gid">${r.group||"—"}</span>
+        <span class="gname">${r.name||r.id}</span>
+        <span class="band ${bandCls(r.band)}">${r.band||"—"}</span>
+      </div>
+      <div class="prompt">${r.prompt||""}</div>
+      <div class="row">
+        <div class="kpi">
+          <div><b>${r.ncc!=null?Number(r.ncc).toFixed(3):"—"}</b><i>ANCHOR NCC</i></div>
+          <div><b>${r.motion!=null?Number(r.motion).toFixed(1):"—"}<small>·格${r.mzone||"?"}</small></b><i>MOTION MAX</i></div>
+          <div><b>${r.drift!=null?Number(r.drift).toFixed(1):"—"}</b><i>DRIFT MAX</i></div>
+        </div>
+        ${spark(r.series, r.motion, r.id)}
+      </div>
+      <div class="verdict">${r.verdict ? "<em>判定</em> "+r.verdict : "<em>未跑</em> 先按 matrix.md 排组"}</div>
+    </div>`).join("") || `<div style="color:var(--dim);padding:20px">该层暂无实验</div>`;
+
+  $("#grid").querySelectorAll(".card").forEach(el => el.onclick = () => openDrawer(el.dataset.id));
+
+  const done = RUNS.filter(r=>r.motion!=null);
+  $("#tRuns").textContent = done.length;
+  $("#tCost").textContent = RUNS.reduce((s,r)=>s+(Number(r.charged)||0),0).toFixed(1);
+  const locked = done.filter(r=>Number(r.ncc)>=0.95).length;
+  $("#tLock").textContent = done.length ? Math.round(locked/done.length*100)+"%" : "—";
+  const withSha = RUNS.find(r=>r.anchor_sha1);
+  $("#anchorSha").textContent = withSha ? withSha.anchor_sha1.slice(0,10) : "待定（演示）";
+}
+
+function openDrawer(id){
+  const r = RUNS.find(x=>x.id===id); if(!r) return;
+  SEL = id; render();
+  $("#dTitle").textContent = `${r.group||"—"} · ${r.name||r.id}`;
+  $("#dSub").textContent = r.id;
+  const kv = [
+    ["锚强度", r.ncc!=null ? `${Number(r.ncc).toFixed(3)}　${r.ncc>=0.95?"锁住":r.ncc>=0.90?"松动":"锚失效"}` : "—"],
+    ["运动峰", r.motion!=null ? `${Number(r.motion).toFixed(1)}　格 ${r.mzone}　档 ${r.band}` : "—"],
+    ["终态漂移", r.drift!=null ? Number(r.drift).toFixed(1) : "—"],
+    ["时长", r.dur_measured ? `${r.dur_measured}s / 请求 ${r.dur_requested||"—"}s` : "—"],
+    ["任务号", r.task_id || "—"],
+    ["实扣", r.charged!=null ? Number(r.charged).toFixed(2)+" 积分" : "—"],
+    ["prompt sha1", r.prompt_sha1 ? r.prompt_sha1.slice(0,12) : "—"]
+  ];
+  $("#dKv").innerHTML = kv.map(([k,v])=>`<span>${k}</span><b>${v}</b>`).join("");
+  const zm = r.zone_drift;
+  $("#dZone").innerHTML = (zm && zm.length===9 ? zm : Array(9).fill(null))
+    .map((v,i)=> v!=null
+      ? `<div style="background:${colorFor(v)};color:#0e1116">${Number(v).toFixed(1)}</div>`
+      : `<div style="background:#1e2731;color:#5d6875">${i+1}</div>`).join("");
+  $("#dPrompt").textContent = r.prompt || "—";
+  $("#dHint").textContent = r.verdict ? "定性：" + r.verdict : "未跑：先按 matrix.md 排组，再跑 probe.py。";
+  $("#drawer").classList.add("open");
+}
+
+$("#close").onclick = () => { $("#drawer").classList.remove("open"); SEL=null; render(); };
+document.querySelectorAll(".tab").forEach(t => t.onclick = () => {
+  document.querySelectorAll(".tab").forEach(x=>x.classList.remove("on"));
+  t.classList.add("on"); FILTER = t.dataset.f; render();
+});
+
+$("#file").onchange = async e => {
+  const files = [...e.target.files];
+  const runs = {}, metrics = {};
+  for(const f of files){
+    const txt = await f.text();
+    try{
+      if(f.name.endsWith(".jsonl")){
+        txt.split(/\r?\n/).filter(Boolean).forEach(line=>{
+          const r = JSON.parse(line);
+          if(r && r.id) Object.assign(runs[r.id] = runs[r.id] || {}, r);
+        });
+      }else{
+        const m = JSON.parse(txt);
+        if(m && m.id) metrics[m.id] = m;
+      }
+    }catch(err){ console.warn("跳过", f.name, err); }
+  }
+  const layerOf = g => (g||"").startsWith("P") ? 1 : (g||"").startsWith("X") ? 3 : 2;
+  const NAME = {"P0":"静止（底噪）","P1":"介质微动","M1":"动作幅度","M2":"主体数量","M3":"镜头运动",
+                "M4":"时间尺度","M5":"因果链","X1":"结构完整性","X2":"内容替换","X3":"新增元素",
+                "X4":"文字符号","X5":"环境重构"};
+  RUNS = Object.values(runs).map(r=>{
+    const m = metrics[r.id] || {};
+    return Object.assign({}, r, {
+      layer: layerOf(r.group),
+      name: r.label || NAME[r.group] || r.id,
+      band: m.motion_band || "—",
+      ncc: m.anchor_ncc != null ? m.anchor_ncc : null,
+      motion: m.motion_max != null ? m.motion_max : null,
+      mzone: m.motion_zone != null ? m.motion_zone : null,
+      drift: m.drift_max != null ? m.drift_max : null,
+      zone_drift: m.zone_drift,
+      series: (m.series||[]).map(s=>Math.max.apply(null, s.zones)),
+      dur_measured: m.dur_measured, dur_requested: m.dur_requested,
+      verdict: r.verdict || ""
+    });
+  }).sort((a,b)=>String(a.id).localeCompare(String(b.id)));
+  $("#mode").textContent = `实数据 ${RUNS.length} 条`;
+  $("#mode").classList.remove("demo");
+  render();
+};
+
+render();
+</script>
+</body>
+</html>

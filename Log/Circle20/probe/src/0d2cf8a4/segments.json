@@ -1,0 +1,253 @@
+{
+  "video": "F:\\AgentWorkArea\\WorkBuddy\\CardStudio\\Log\\Circle20\\probe\\src\\0d2cf8a4\\src.mp4",
+  "fps": 30.0,
+  "total_frames": 3603,
+  "scanned": 120.0,
+  "cut_threshold": 0.3,
+  "cuts": [
+    4.4,
+    8.4,
+    15.3,
+    18.4,
+    18.9,
+    19.0,
+    19.1,
+    19.2,
+    19.9,
+    20.0,
+    20.5,
+    20.8,
+    20.9,
+    21.1,
+    21.3,
+    26.1,
+    27.4,
+    27.5,
+    27.6,
+    27.7,
+    27.8,
+    27.9,
+    28.0,
+    28.1,
+    28.2,
+    28.3,
+    28.4,
+    28.5,
+    28.6,
+    28.7,
+    30.3,
+    36.6,
+    40.0,
+    43.7,
+    48.6,
+    52.3,
+    56.3,
+    57.7,
+    60.5,
+    65.0,
+    67.4,
+    71.5,
+    75.0,
+    76.8,
+    88.9,
+    103.7,
+    106.1,
+    109.5,
+    111.2
+  ],
+  "segments": [
+    {
+      "seg": "S01",
+      "start": 0.0,
+      "end": 4.4,
+      "dur": 4.4,
+      "anchor": "anchors/S01_f0.png",
+      "move_pct_per_s": 0.88,
+      "quality": {
+        "laplacian": 65.7,
+        "mean": 78.8,
+        "std": 34.6,
+        "flag": "ok",
+        "w": 1280,
+        "h": 720
+      }
+    },
+    {
+      "seg": "S02",
+      "start": 8.4,
+      "end": 15.3,
+      "dur": 6.9,
+      "anchor": "anchors/S02_f0.png",
+      "move_pct_per_s": 0.91,
+      "quality": {
+        "laplacian": 112.3,
+        "mean": 74.9,
+        "std": 33.4,
+        "flag": "ok",
+        "w": 1280,
+        "h": 720
+      }
+    },
+    {
+      "seg": "S03",
+      "start": 26.1,
+      "end": 27.4,
+      "dur": 1.3,
+      "anchor": "anchors/S03_f0.png",
+      "move_pct_per_s": 57.13,
+      "quality": {
+        "laplacian": 43.6,
+        "mean": 126.0,
+        "std": 52.5,
+        "flag": "模糊",
+        "w": 1280,
+        "h": 720
+      }
+    },
+    {
+      "seg": "S04",
+      "start": 30.3,
+      "end": 36.6,
+      "dur": 6.3,
+      "anchor": "anchors/S04_f0.png",
+      "move_pct_per_s": 6.4,
+      "quality": {
+        "laplacian": 24.9,
+        "mean": 86.6,
+        "std": 45.5,
+        "flag": "模糊",
+        "w": 1280,
+        "h": 720
+      }
+    },
+    {
+      "seg": "S05",
+      "start": 43.7,
+      "end": 48.6,
+      "dur": 4.9,
+      "anchor": "anchors/S05_f0.png",
+      "move_pct_per_s": 15.94,
+      "quality": {
+        "laplacian": 62.4,
+        "mean": 79.0,
+        "std": 35.1,
+        "flag": "ok",
+        "w": 1280,
+        "h": 720
+      }
+    },
+    {
+      "seg": "S06",
+      "start": 52.3,
+      "end": 56.3,
+      "dur": 4.0,
+      "anchor": "anchors/S06_f0.png",
+      "move_pct_per_s": 42.18,
+      "quality": {
+        "laplacian": 58.9,
+        "mean": 92.3,
+        "std": 36.7,
+        "flag": "模糊",
+        "w": 1280,
+        "h": 720
+      }
+    },
+    {
+      "seg": "S07",
+      "start": 60.5,
+      "end": 65.0,
+      "dur": 4.5,
+      "anchor": "anchors/S07_f0.png",
+      "move_pct_per_s": 24.2,
+      "quality": {
+        "laplacian": 12.5,
+        "mean": 97.8,
+        "std": 49.1,
+        "flag": "模糊",
+        "w": 1280,
+        "h": 720
+      }
+    },
+    {
+      "seg": "S08",
+      "start": 67.4,
+      "end": 71.5,
+      "dur": 4.1,
+      "anchor": "anchors/S08_f0.png",
+      "move_pct_per_s": 8.72,
+      "quality": {
+        "laplacian": 64.8,
+        "mean": 106.2,
+        "std": 49.4,
+        "flag": "ok",
+        "w": 1280,
+        "h": 720
+      }
+    },
+    {
+      "seg": "S09",
+      "start": 76.8,
+      "end": 82.85,
+      "dur": 6.05,
+      "anchor": "anchors/S09_f0.png",
+      "move_pct_per_s": 3.79,
+      "quality": {
+        "laplacian": 30.1,
+        "mean": 108.1,
+        "std": 47.2,
+        "flag": "模糊",
+        "w": 1280,
+        "h": 720
+      }
+    },
+    {
+      "seg": "S10",
+      "start": 88.9,
+      "end": 96.3,
+      "dur": 7.4,
+      "anchor": "anchors/S10_f0.png",
+      "move_pct_per_s": 9.03,
+      "quality": {
+        "laplacian": 36.5,
+        "mean": 98.0,
+        "std": 41.1,
+        "flag": "模糊",
+        "w": 1280,
+        "h": 720
+      }
+    },
+    {
+      "seg": "S11",
+      "start": 106.1,
+      "end": 109.5,
+      "dur": 3.4,
+      "anchor": "anchors/S11_f0.png",
+      "move_pct_per_s": 0.26,
+      "quality": {
+        "laplacian": 29.4,
+        "mean": 102.3,
+        "std": 44.1,
+        "flag": "模糊",
+        "w": 1280,
+        "h": 720
+      }
+    },
+    {
+      "seg": "S12",
+      "start": 111.2,
+      "end": 120.0,
+      "dur": 8.8,
+      "anchor": "anchors/S12_f0.png",
+      "move_pct_per_s": 0.69,
+      "quality": {
+        "laplacian": 43.7,
+        "mean": 100.0,
+        "std": 41.7,
+        "flag": "模糊",
+        "w": 1280,
+        "h": 720
+      }
+    }
+  ],
+  "dropped": 16
+}

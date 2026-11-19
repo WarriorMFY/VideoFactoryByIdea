@@ -1,0 +1,23 @@
+{
+  "id": "S08-P0-01",
+  "group": "P0",
+  "ts": "2026-11-19 23:34:13",
+  "webapp": "2113790012012720129",
+  "params": {
+    "dur": 5.0,
+    "aspect_ratio": "16:9 (Widescreen)",
+    "megapixels": "0.6"
+  },
+  "prompt": "同一古装女子、同一怀中竖抱琵琶的构图与同一青绿水色背景，写实电影质感，镜头固定不动。\n\n动作：她原本平视微笑，笑意慢慢扩大、露出牙齿，随后开口说话，头部随语气轻轻点动两下；说到末尾笑意收住，视线仍旧停在画面左外。\n\n不要切镜，不要改变景别，不要更换琵琶形制，不要让第二个人入画，不要出现文字。",
+  "prompt_sha1": "1a7109e18c81b9ac5237acf847b32655e0a3af82",
+  "anchor": "F:\\AgentWorkArea\\WorkBuddy\\CardStudio\\Log\\Circle20\\probe\\runs\\S08-P0-01\\anchor.png",
+  "anchor_sha1": "49a0259619a43d1798500a9775f3d9ad9d070859",
+  "task_id": "2123439724835332098",
+  "charged": 22.1,
+  "file": "F:\\AgentWorkArea\\WorkBuddy\\CardStudio\\Log\\Circle20\\probe\\runs\\S08-P0-01\\out.mp4",
+  "status": "ok",
+  "note": "0d2cf8a4/S08",
+  "video_id": "0d2cf8a4",
+  "seg_id": "S08",
+  "wall": "130s"
+}

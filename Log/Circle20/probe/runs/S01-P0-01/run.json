@@ -1,0 +1,23 @@
+{
+  "id": "S01-P0-01",
+  "group": "P0",
+  "ts": "2026-11-19 22:50:43",
+  "webapp": "2113790012012720129",
+  "params": {
+    "dur": 5.0,
+    "aspect_ratio": "16:9 (Widescreen)",
+    "megapixels": "0.6"
+  },
+  "prompt": "在3帧时，斗战胜佛背着金箍棒，逐渐进入镜头，最终走到大佛下面",
+  "prompt_sha1": "53ec61ade185fa2d586236bd97bc3795800bcc3a",
+  "anchor": "F:\\AgentWorkArea\\WorkBuddy\\CardStudio\\Log\\Circle20\\probe\\runs\\S01-P0-01\\anchor.png",
+  "anchor_sha1": "3423cbe5b0bd092e105bfc0706d52667116d598f",
+  "task_id": "2123428778456862721",
+  "charged": 22.27,
+  "file": "F:\\AgentWorkArea\\WorkBuddy\\CardStudio\\Log\\Circle20\\probe\\runs\\S01-P0-01\\out.mp4",
+  "status": "ok",
+  "note": "0d2cf8a4/S01",
+  "video_id": "0d2cf8a4",
+  "seg_id": "S01",
+  "wall": "131s"
+}

@@ -1,0 +1,23 @@
+{
+  "id": "S05-P0-01",
+  "group": "P0",
+  "ts": "2026-11-19 23:29:33",
+  "webapp": "2113790012012720129",
+  "params": {
+    "dur": 5.0,
+    "aspect_ratio": "16:9 (Widescreen)",
+    "megapixels": "0.6"
+  },
+  "prompt": "同一湖面上的中式水榭，同一隔着前景枝叶的框景构图、同一青绿冷调与薄雾，写实电影质感，镜头固定不动。\n\n动作：一个白衣人从水榭门内跨出来，站在廊下片刻，然后沿廊道向右下方走，身影越来越小，最后停在临水的石阶上侧身面向湖面。同时湖面的雾带自左向右缓慢漂移，前景的枝叶与几片花瓣在风里轻摆。建筑本体不动。\n\n不要切镜，不要推近，不要让人物放大成中近景，不要改变屋顶形制，不要出现文字。",
+  "prompt_sha1": "395141355792ec551efb626ffefeb99162aee920",
+  "anchor": "F:\\AgentWorkArea\\WorkBuddy\\CardStudio\\Log\\Circle20\\probe\\runs\\S05-P0-01\\anchor.png",
+  "anchor_sha1": "b1241d894df3b5a71325d238457968df8787b7da",
+  "task_id": "2123438553471078401",
+  "charged": 22.1,
+  "file": "F:\\AgentWorkArea\\WorkBuddy\\CardStudio\\Log\\Circle20\\probe\\runs\\S05-P0-01\\out.mp4",
+  "status": "ok",
+  "note": "0d2cf8a4/S05",
+  "video_id": "0d2cf8a4",
+  "seg_id": "S05",
+  "wall": "130s"
+}

@@ -42,3 +42,5 @@
 - `pixel-anchor/` 挂在 `editing/` 根：它是 editing 侧唯一的「合 + 量」，成员不足 2，不建 `compose/`。
 - `pixel-anchor` 的 `masks` 与 `score --rematte` 借本地抠图模型，输出确定，仍属 `editing/`，不跨桶。
 - 出图出片一律经 `generation/runninghub/`，这是全库唯一网络出口。
+- `generation/i2v-probe/` 挂在 `generation/` 根：只做「首帧+提示词→视频」的单步对照实验与度量，**不是第二个网络出口**——提交仍转发给 `runninghub/scripts/runninghub_app.py`。
+- `generation/wf-firstlast/` 挂在 `generation/` 根：自带整份工作流图直跑「首帧+尾帧→视频」，**不是第二个网络出口**——凭证复用 `runninghub/scripts/rh_credential.py`；它是唯一一条不经 webapp 的生成路径，改图/改参数写在图里而非常量里。

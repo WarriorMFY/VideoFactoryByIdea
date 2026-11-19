@@ -383,12 +383,16 @@ def cmd_run(args):
 
     data = submit_task(api_key, webapp_id, node_list, args.instance_type or "default")
     task_id = str(data["taskId"])
+    print(f"TASK_ID:{task_id}")  # 纪律：留 task 号（i2v-probe 与账本都靠这一行）
 
     final = poll_task(api_key, task_id)
     results = final.get("results")
 
     usage = final.get("usage") or {}
     consume_money = usage.get("consumeMoney") or usage.get("thirdPartyConsumeMoney")
+    if consume_money is None:  # 积分账户：金额字段为空，实扣在 chargedPoint
+        consume_money = usage.get("chargedPoint") or next(
+            (r.get("chargedPoint") for r in results if r.get("chargedPoint")), None)
     task_cost_time = usage.get("taskCostTime")
 
     if not results:
