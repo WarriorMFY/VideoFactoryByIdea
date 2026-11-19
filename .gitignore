@@ -2,8 +2,7 @@
 # 需要长期留存的工具移入 Skill/<技能>/scripts/，需要留存的证据移入 RAG/<卡>/ 或 Log/<Circle>/
 Workspace/
 
-# 凭据不入库：模板见 Skill/hub/generation/runninghub/credential.example.txt
-Skill/**/credential.txt
+# 凭据：credential.txt 按用户要求入库（含明文 key，勿推公开远端）；模板见同目录 credential.example.txt
 Skill/**/.env
 
 # 字节码不入库
