@@ -26,6 +26,7 @@ CMP = PROBE / "cmp"
 SKILL = ROOT / "Skill" / "hub" / "generation" / "i2v-probe" / "scripts"
 PROBE_PY = SKILL / "probe.py"
 MEASURE_PY = SKILL / "measure.py"
+RETIME_PY = SKILL / "retime.py"
 SEGMENT_PY = CONSOLE / "segment.py"
 FFMPEG = ROOT / "Tool" / "ffmpeg.py"
 
@@ -112,18 +113,38 @@ def work_ingest(jid: str, path: Path, secs: float):
 
 
 # ---------------------------------------------------------------- run
+def retime_gen(gen: Path, target: float, run_dir: Path, jid: str) -> Path:
+    """把生成片的时间轴压到 target 秒，内容不丢。
+
+    通道最短只出 5s（实际 124 帧 / 5.167s），源段常更短。原来用 `-t` 硬裁，尾部 0.77s
+    的动作被扔掉，动作只演到 88%。这里改成重采样：全部 124 帧压进 target 秒。
+
+    `out.mp4` 保持原速 —— 度量只吃它；`retimed.mp4` 只给对照视图看。
+    """
+    out = run_dir / "retimed.mp4"
+    code = run_cmd([sys.executable, str(RETIME_PY), "--gen", str(gen),
+                    "--target", f"{target:.4f}", "--mode", "zone",
+                    "--metrics", str(run_dir / "metrics.json"), "--out", str(out)], jid)
+    if code == 0 and out.exists():
+        job_log(jid, f"变速对齐 → retimed.mp4（目标 {target:.2f}s，内容全保留）")
+        return out
+    job_log(jid, "变速失败，退回裁切")
+    return gen
+
+
 def build_cmp(src_video: Path, start: float, dur: float, gen: Path, out_mp4: Path,
               jid: str) -> bool:
     W, H = 480, 270
+    # shortest=1：生成路已被 retime 对齐到段长，这里不再二次 -t 裁它，取短即可
     vf = (f"[0:v]scale={W}:{H}:force_original_aspect_ratio=decrease,"
           f"pad={W}:{H}:(ow-iw)/2:(oh-ih)/2,setsar=1,fps=24[a];"
           f"[1:v]scale={W}:{H}:force_original_aspect_ratio=decrease,"
           f"pad={W}:{H}:(ow-iw)/2:(oh-ih)/2,setsar=1,fps=24[b];"
-          f"[a][b]hstack=inputs=2[v]")
+          f"[a][b]hstack=inputs=2:shortest=1[v]")
     out_mp4.parent.mkdir(parents=True, exist_ok=True)
     code = run_cmd([sys.executable, str(FFMPEG), "-y",
                     "-ss", f"{start:.3f}", "-t", f"{dur:.3f}", "-i", str(src_video),
-                    "-t", f"{dur:.3f}", "-i", str(gen),
+                    "-i", str(gen),
                     "-filter_complex", vf, "-map", "[v]", "-an",
                     "-c:v", "libx264", "-crf", "20", "-pix_fmt", "yuv420p",
                     str(out_mp4)], jid)
@@ -160,8 +181,19 @@ def work_run(jid: str, vid: str, seg: str, prompt: str, group: str, note: str):
         run_cmd([sys.executable, str(MEASURE_PY), "--run", str(run_dir)], jid)
         metrics = jload(run_dir / "metrics.json", {}) or {}
         gen = Path(rec.get("file") or run_dir / "out.mp4")
+        # 源段比生成长 → 硬裁丢尾；改成把生成片压到段时长，124 帧全用上
+        seg_dur = float(s["dur"])
+        gen_cmp = gen
+        if gen.exists():
+            try:
+                gd = float(metrics.get("dur_measured") or 0)
+            except (TypeError, ValueError):
+                gd = 0.0
+            target = min(seg_dur, gd) if gd > 0 else seg_dur
+            if target > 0.5:
+                gen_cmp = retime_gen(gen, target, run_dir, jid)
         cmp_mp4 = CMP / f"{rid}.mp4"
-        ok = build_cmp(SRC / vid / "src.mp4", s["start"], min(s["dur"], dur), gen, cmp_mp4, jid)
+        ok = build_cmp(SRC / vid / "src.mp4", s["start"], min(s["dur"], dur), gen_cmp, cmp_mp4, jid)
         job_log(jid, f"对照视图 {'已出' if ok else '失败'}：{cmp_mp4.name}")
         job_done(jid, {"run": rec, "metrics": metrics, "seg": s, "vid": vid,
                        "cmp": f"/probe/cmp/{cmp_mp4.name}" if ok else None,

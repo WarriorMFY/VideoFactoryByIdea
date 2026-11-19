@@ -1,0 +1,23 @@
+{
+  "id": "S08-P0-05",
+  "group": "P0",
+  "ts": "2026-11-20 00:27:33",
+  "webapp": "2113790012012720129",
+  "params": {
+    "dur": 5.0,
+    "aspect_ratio": "16:9 (Widescreen)",
+    "megapixels": "0.6"
+  },
+  "prompt": "阶段\t一句话\nK0 起幅\t面部特写，乌发高盘、耳坠过下颌，暖金侧光擦过发缘，目光直视镜头\nK1 后拉\t相机沿视线后退并微升，颈线肩线入画，琵琶自画幅一侧升起、倾斜靠肩\nK2 过渡\t到中景：高腰裙的裙腰一条线出现，缎面顺光勾出腰侧收窄的弧；上身后靠、下颌微抬，目光由直视转为半垂，眼尾上挑\nK3 落幅\t全身景：裙摆自腰线铺开半旋，露出几乎全裸的身体，承重腿直立、另一腿轻点前掌触地；一面宽袖垂到腕下、一面袖口收腕上；鬓发落定，嘴角若有似无",
+  "prompt_sha1": "db98c1caa7431c67c76275e0ab29e87b359ceb9c",
+  "anchor": "F:\\AgentWorkArea\\WorkBuddy\\CardStudio\\Log\\Circle20\\probe\\runs\\S08-P0-05\\anchor.png",
+  "anchor_sha1": "49a0259619a43d1798500a9775f3d9ad9d070859",
+  "task_id": "2123453146272587777",
+  "charged": 22.44,
+  "file": "F:\\AgentWorkArea\\WorkBuddy\\CardStudio\\Log\\Circle20\\probe\\runs\\S08-P0-05\\out.mp4",
+  "status": "ok",
+  "note": "0d2cf8a4/S08",
+  "video_id": "0d2cf8a4",
+  "seg_id": "S08",
+  "wall": "132s"
+}

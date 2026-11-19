@@ -92,6 +92,11 @@
   .res{display:grid;grid-template-columns:1fr 300px;gap:12px}
   .card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:13px 14px}
   .card video{width:100%;border-radius:7px;display:block;background:#000}
+  .vtab{display:flex;gap:6px;margin:6px 0 6px}
+  .vtab button{font:11px var(--mono);padding:4px 10px;border-radius:99px;cursor:pointer;
+    background:transparent;border:1px solid var(--line);color:var(--dim)}
+  .vtab button.on{background:#1f4a44;border-color:#2c6a60;color:#c9f2ea}
+  .vtab button:disabled{opacity:.35;cursor:not-allowed}
   .lbl{display:flex;justify-content:space-between;font:11px var(--mono);color:var(--dim);margin:4px 0 2px}
   .kpi{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px}
   .kpi div{background:var(--panel2);border:1px solid var(--line);border-radius:7px;padding:7px 9px}
@@ -391,6 +396,7 @@ function renderRuns(){
   if (!list.length) { $("#runs").innerHTML = '<div class="empty">还没有实验记录</div>'; return; }
   $("#runs").innerHTML = list.map(r => {
     const m = r.metrics || {};
+    const gd = m.dur_measured ? m.dur_measured.toFixed(2) + "s" : "";
     return `
     <div class="card">
       <div class="rt"><b>${r.id}</b><span class="pill">${r.group || ""}</span>
@@ -401,8 +407,12 @@ function renderRuns(){
       <div class="res">
         <div>
           <div class="lbl"><span>左 源段 ｜ 右 生成</span><span>${r.cmp ? "" : (r.live ? "对照未生成" : "")}</span></div>
-          ${r.cmp || r.gen
-            ? `<video src="${r.cmp || r.gen}" controls preload="metadata"></video>`
+          ${r.cmp || r.gen ? `
+            <div class="vtab">
+              <button class="${r.cmp ? "on" : ""}" data-i="cmp" ${r.cmp ? "" : "disabled"}>对照 · 对齐后</button>
+              <button class="${r.cmp ? "" : "on"}" data-i="gen" ${r.gen ? "" : "disabled"}>原始生成${gd ? " · " + gd : ""}</button>
+            </div>
+            <video data-cmp="${r.cmp || ""}" data-gen="${r.gen || ""}" src="${r.cmp || r.gen}" controls preload="metadata"></video>`
             : `<div class="empty" style="border:1px dashed var(--line);border-radius:7px;padding:38px 12px;text-align:center">
                  这一条的 anchor/out.mp4 已被后一次同名实验覆盖，视频不可追</div>`}
           <div class="kpi">
@@ -419,6 +429,27 @@ function renderRuns(){
       </div>
     </div>`;
   }).join("");
+  bindVTabs();
+}
+
+// 对照片（变速对齐）／原始生成片（原速）之间切换，尽量保持播放位置
+function bindVTabs(){
+  $("#runs").querySelectorAll(".vtab").forEach(tab => {
+    tab.querySelectorAll("button").forEach(b => b.onclick = () => {
+      if (b.disabled) return;
+      const card = tab.closest(".card"), v = card.querySelector("video");
+      const src = v.dataset[b.dataset.i];
+      if (!src) return;
+      const t = v.currentTime, wasPlaying = !v.paused && !v.ended;
+      tab.querySelectorAll("button").forEach(x => x.classList.toggle("on", x === b));
+      v.addEventListener("loadedmetadata", () => {
+        if (t > 0) v.currentTime = Math.min(t, Math.max(0, (v.duration || t) - 0.05));
+        if (wasPlaying) v.play().catch(() => {});
+      }, { once: true });
+      v.src = src;
+      v.load();
+    });
+  });
 }
 
 (async () => {
