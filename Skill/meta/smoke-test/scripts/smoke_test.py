@@ -30,24 +30,19 @@ STUB = SCRIPTS / "stub_runner.py"
 results = []
 
 
-def api_key_from_agents():
-    for line in (ROOT / "AGENTS.md").read_text(encoding="utf-8").splitlines():
-        if "apikey" in line.lower() and ":" in line:
-            k = line.split(":", 1)[1].strip()
-            if k:
-                return k
-    return None
-
-
 def child_env():
     e = os.environ.copy()
     if DEPS.is_dir():
         e["PYTHONPATH"] = str(DEPS) + (os.pathsep + e["PYTHONPATH"] if e.get("PYTHONPATH") else "")
     e["PYTHONUTF8"] = "1"
     if not e.get("RUNNINGHUB_API_KEY"):
-        k = api_key_from_agents()
-        if k:
-            e["RUNNINGHUB_API_KEY"] = k
+        sys.path.insert(0, str(RH))
+        try:
+            import rh_credential
+        except ImportError:
+            return e
+        if rh_credential.CRED.exists():
+            e["RUNNINGHUB_API_KEY"] = rh_credential.load_key()
     return e
 
 

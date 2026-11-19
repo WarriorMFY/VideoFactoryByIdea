@@ -23,7 +23,7 @@
 三条配套判据：
 
 1. **生成／剪辑的分界**从「模型 vs 算法」改为「同一输入重跑输出是否唯一」——不唯一（采样）归 generation，唯一（确定性重组）归 editing。看采样不看模型，未来本地跑扩散模型也不会失效。
-2. **凭据单点**：`Skill/hub/generation/runninghub/credential.txt` 全库唯一，链侧 `credential.py` 只做 6 行转发。
+2. **凭据单点**：`Skill/hub/generation/runninghub/credential.txt` 全库唯一，链侧 `credential.py` 只做 6 行转发（收尾补丁：`smoke_test.py` 也从「去 `AGENTS.md` 找 apikey」改走 `rh_credential`，全库现无第二处读 key 的代码）。
 3. **技能自包含**：样本进 `meta/smoke-test/fixtures/`，不再读 `Log/` 历史文件；产物写到当轮 `Log/Circle<N>/` 属输出，不算引用。
 
 ### 二、卡片与模型对齐度（本轮迁移固化的既有实测，非本轮新跑）
