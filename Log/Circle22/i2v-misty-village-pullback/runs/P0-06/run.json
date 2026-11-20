@@ -1,0 +1,21 @@
+{
+  "id": "P0-06",
+  "group": "P0",
+  "ts": "2026-11-20 12:44:19",
+  "webapp": "2113790012012720129",
+  "params": {
+    "dur": 5.0,
+    "aspect_ratio": "21:9 (Ultrawide)",
+    "megapixels": "0.6"
+  },
+  "prompt": "# 镜头卡 · 持续后拉（124 帧单镜）\n\n| 自变量轴（帧号 / 阶段 / 进度） | 因变量轴（可观测镜头描述） |\n| --- | --- |\n| 第 0 帧 / 起幅 / 0% | 与起始帧一致 |\n| 第 1–124 帧 / 后拉 / 1–100% | 镜头持续向后拉远，速度均匀，全程一镜，无切镜 |\n| 第 1–124 帧 / 景别 | 画面内主体随之后拉逐渐变小 |\n| 第 1–124 帧 / 主体 | 画面内主体保持不变 |\n| 第 124 帧 / 落幅 / 100% | 后拉停止，机位稳定 |\n| 辅助描述 / 06 | 角色的坐骑是一头老虎：黄褐皮毛、黑色横纹、长尾，不是马 |\n| 帧数 / 总长 | 124 帧（24fps），单镜 |",
+  "prompt_sha1": "6118e06bebf940f7b6c753f11ed2b8cf98a6c6bd",
+  "anchor": "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle22\\i2v-misty-village-pullback\\runs\\P0-06\\anchor.png",
+  "anchor_sha1": "c41b69ebef9f2d904db3ea5134ff90961fcfba8e",
+  "task_id": "2123638564108591105",
+  "charged": 22.95,
+  "file": "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle22\\i2v-misty-village-pullback\\runs\\P0-06\\out.mp4",
+  "status": "ok",
+  "note": "v4：镜头卡 + 辅助描述 坐骑是老虎",
+  "wall": "135s"
+}

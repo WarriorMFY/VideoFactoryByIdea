@@ -1,0 +1,9 @@
+[1:v]split=2[v1b][v1d];
+[1:a]asplit=2[a1b][a1d];
+[v1b]trim=0:2.583,setpts=PTS-STARTPTS,zoompan=z='1+3.2*max(0,time-1.70)/0.88':x='iw*0.33-(iw/zoom/2)':y='ih*0.52-(ih/zoom/2)':d=1:s=1216x512:fps=24,fade=t=out:st=2.50:d=0.083:color=white,setsar=1[vB];
+[a1b]atrim=0:2.583,asetpts=PTS-STARTPTS,afade=t=out:st=2.55:d=0.033[aB];
+[v1d]trim=2.583,setpts=PTS-STARTPTS,fade=t=in:st=0:d=0.13:color=black,setsar=1[vD];
+[a1d]atrim=2.583,asetpts=PTS-STARTPTS,afade=t=in:st=0:d=0.033[aD];
+[0:v]setsar=1[vA];[0:a]afade=t=out:st=5.134:d=0.033[aA];
+[2:v]fade=t=out:st=5.04:d=0.13:color=black,setsar=1[vC];[2:a]afade=t=out:st=5.134:d=0.033[aC];
+[vA][aA][vB][aB][vC][aC][vD][aD]concat=n=4:v=1:a=1[v][a]

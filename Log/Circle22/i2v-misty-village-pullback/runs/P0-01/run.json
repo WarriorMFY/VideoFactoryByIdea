@@ -1,0 +1,21 @@
+{
+  "id": "P0-01",
+  "group": "P0",
+  "ts": "2026-11-20 12:32:43",
+  "webapp": "2113790012012720129",
+  "params": {
+    "dur": 5.0,
+    "aspect_ratio": "21:9 (Ultrawide)",
+    "megapixels": "0.6"
+  },
+  "prompt": "# 镜头卡 · 雾谷骑马背影 · 持续后拉\n\n| 自变量轴 | 因变量轴 |\n| --- | --- |\n| 起幅 / 01 | 第 0 帧与起始帧一致：机位在骑马者背后偏高处的越肩视角，人物与马占画面左下大块，马颈自下缘伸入，剑柄与青灰背带压在背上，谷底村舍在画面中部，两侧松枝压住上缘 |\n| 运镜 / 02 | 机位沿首帧视线方向持续后拉，同时缓慢升高；后拉连贯，起段略缓、末段停稳；只有后拉与升高，无横向移动、无摇镜、无变焦、无切镜 |\n| 景别 / 03 | 从越肩近景连续过渡到大远景：人物与马从画面主体逐步缩小为画面左下的一小团背影，山谷、村舍、雾带、松林与山体所占比例随之增大 |\n| 主体 / 04 | 画面内人物与马保持首帧的朝向与姿态：始终背对镜头、不转身、不回头，人马位置不移动；只有衣袍下摆与鬃毛随山风轻摆，幅度很小 |\n| 新增区域 / 05 | 后拉露出的画外区域与首帧已有内容同光源、同色调、同透视地自然延伸：脚下山坡与松林向画幅边缘继续展开，谷底村舍、雾带与山脊按原有走向补全，不出现突兀的物体、建筑或现代元素 |\n| 落幅 / 06 | 后拉停止后机位稳定，画面保持大远景；山谷雾带仍在缓慢平移，人马位置与朝向不变；画面中不出现文字与字幕 |\n| 时长 / 07 | 单镜 5 秒，后拉贯穿全片，不出现第二个镜头 |",
+  "prompt_sha1": "20d7a3bb347ece02f0420bdc380b6b756eac9314",
+  "anchor": "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle22\\i2v-misty-village-pullback\\runs\\P0-01\\anchor.png",
+  "anchor_sha1": "c41b69ebef9f2d904db3ea5134ff90961fcfba8e",
+  "task_id": null,
+  "charged": null,
+  "file": null,
+  "status": "failed",
+  "note": "纯镜头卡：持续后拉，人物变小，主体不变",
+  "error": "{\"error\": \"NO_API_KEY\", \"message\": \"No API key configured\", \"steps\": [\"1. Register/login at https://www.runninghub.cn\", \"2. Create API Key at https://www.runninghub.cn/enterprise-api/sharedApi\", \"3. Recharge wallet at https://www.runninghub.cn/vip-rights/4\", \"4. Send the key in chat or add to ~/.openclaw/openclaw.json: skills.entries.runninghub.apiKey\"]}"
+}

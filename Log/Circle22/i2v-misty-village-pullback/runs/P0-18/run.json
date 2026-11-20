@@ -1,0 +1,21 @@
+{
+  "id": "P0-18",
+  "group": "P0",
+  "ts": "2026-11-20 18:03:41",
+  "webapp": "2113790012012720129",
+  "params": {
+    "dur": 7.0,
+    "aspect_ratio": "21:9 (Ultrawide)",
+    "megapixels": "0.6"
+  },
+  "prompt": "男人背上的兵器先泛起一层微光，光顺着杆身慢慢走一段。随后他翻身下虎，落地时带起一小片尘土。他回手在虎颈侧按了一下，虎低头蹭了蹭他的手心。男人转身朝村舍走去，虎跟在他侧边，一起走进屋前的巷子。",
+  "prompt_sha1": "7adfead1b557cc2fb0a4f8b39503fd0223f55e7e",
+  "anchor": "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle22\\i2v-misty-village-pullback\\runs\\P0-18\\anchor.png",
+  "anchor_sha1": "d4648866b0271437037c859a055d308d97913ef7",
+  "task_id": "2123718930941050882",
+  "charged": 36.72,
+  "file": "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle22\\i2v-misty-village-pullback\\runs\\P0-18\\out.mp4",
+  "status": "ok",
+  "note": "v18 7s：兵器泛光→下虎→人虎交互→进屋巷，锚=村口末帧",
+  "wall": "216s"
+}

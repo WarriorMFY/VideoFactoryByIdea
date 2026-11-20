@@ -1,0 +1,21 @@
+{
+  "id": "P0-17",
+  "group": "P0",
+  "ts": "2026-11-20 17:19:43",
+  "webapp": "2113790012012720129",
+  "params": {
+    "dur": 5.0,
+    "aspect_ratio": "21:9 (Ultrawide)",
+    "megapixels": "0.6"
+  },
+  "prompt": "第一人称骑虎下山视角，虎在5s内完成自然跳跃下坡，视点就是骑者双眼，能看到前方坡面与每一处落点，不要让虎头盖住整个视野",
+  "prompt_sha1": "485767dd002dd91cfcd6c2d9a7f92d265c444d2f",
+  "anchor": "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle22\\i2v-misty-village-pullback\\runs\\P0-17\\anchor.png",
+  "anchor_sha1": "8616dd6a82372154eb2de00af4984fac61ea042f",
+  "task_id": "2123707863452049410",
+  "charged": 22.78,
+  "file": "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle22\\i2v-misty-village-pullback\\runs\\P0-17\\out.mp4",
+  "status": "ok",
+  "note": "v17：v16原句+视点=骑者双眼+能看到坡面与每处落点+虎头别盖满视野",
+  "wall": "134s"
+}

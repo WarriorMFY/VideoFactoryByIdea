@@ -1,0 +1,9 @@
+[1:v]split=2[v1s][v3s];
+[v1s]trim=0:2.5,setpts=PTS-STARTPTS[v1];
+[v3s]trim=2.5,setpts=PTS-STARTPTS[v3];
+[1:a]asplit=2[a1s][a3s];
+[a1s]atrim=0:2.5,asetpts=PTS-STARTPTS[a1];
+[a3s]atrim=2.5,asetpts=PTS-STARTPTS[a3];
+[0:v]setsar=1[sv0];[0:a]asetpts=PTS-STARTPTS[sa0];
+[2:v]setsar=1[sv2];[2:a]asetpts=PTS-STARTPTS[sa2];
+[sv0][sa0][v1][a1][sv2][sa2][v3][a3]concat=n=4:v=1:a=1[v][a]

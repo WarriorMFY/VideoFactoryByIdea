@@ -1,0 +1,2 @@
+file 'D:/Data/QoderWorkArea/CardVideoMethod/Log/Circle22/i2v-misty-village-pullback/runs/P0-07/out.mp4'
+file 'D:/Data/QoderWorkArea/CardVideoMethod/Log/Circle22/i2v-misty-village-pullback/runs/P0-11/out.mp4'

@@ -1,0 +1,21 @@
+{
+  "id": "P0-08",
+  "group": "P0",
+  "ts": "2026-11-20 13:01:15",
+  "webapp": "2113790012012720129",
+  "params": {
+    "dur": 5.0,
+    "aspect_ratio": "21:9 (Ultrawide)",
+    "megapixels": "0.6"
+  },
+  "prompt": "# 镜头卡 · 持续后拉（124 帧单镜）\n\n| 自变量轴（帧号 / 阶段 / 进度） | 因变量轴（可观测镜头描述） |\n| --- | --- |\n| 第 0 帧 / 起幅 / 0% | 与起始帧一致 |\n| 第 1–124 帧 / 后拉 / 1–100% | 镜头持续向后拉远，速度均匀，全程一镜，无切镜 |\n| 第 1–124 帧 / 景别 | 画面内主体随之后拉逐渐变小 |\n| 第 1–124 帧 / 主体 | 画面内主体保持不变 |\n| 第 124 帧 / 落幅 / 100% | 后拉停止，机位稳定 |\n| 辅助描述 / 06 | 角色的坐骑是一头老虎：暗褐偏黄的毛色，粗硬蓬乱的长毛带湿亮结缕感；背部与后躯宽厚，后腿粗壮撑地，粗尾自尾根自然下垂；背光下黑色横纹淡而不显，远看近乎一整片深褐毛面；不是马 |\n| 反向提示词 / 07 | 允许背景音乐（BGM）；禁止出现人声：不说话、不念白、不唱歌、不喊叫、无呼吸与喘息声 |\n| 帧数 / 总长 | 124 帧（24fps），单镜 |",
+  "prompt_sha1": "cb977034c097aedd2ea9f0a40100984c67e76588",
+  "anchor": "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle22\\i2v-misty-village-pullback\\runs\\P0-08\\anchor.png",
+  "anchor_sha1": "c41b69ebef9f2d904db3ea5134ff90961fcfba8e",
+  "task_id": "2123642818483412994",
+  "charged": 26.01,
+  "file": "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle22\\i2v-misty-village-pullback\\runs\\P0-08\\out.mp4",
+  "status": "ok",
+  "note": "v6：v5 + 反向提示词 允许BGM禁止人声",
+  "wall": "153s"
+}

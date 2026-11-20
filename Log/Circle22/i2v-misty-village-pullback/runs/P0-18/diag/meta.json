@@ -1,0 +1,97 @@
+{
+  "source": "Log\\Circle22\\i2v-misty-village-pullback\\runs\\P0-18\\out.mp4",
+  "downloaded": false,
+  "fps": 24.0,
+  "fps_assumed": false,
+  "duration": 7.292,
+  "size": [
+    1216,
+    512
+  ],
+  "range": [
+    0.0,
+    7.292
+  ],
+  "step": 0.5,
+  "stride": 1,
+  "frames": [
+    {
+      "file": "frames/f000000.png",
+      "frame": 0,
+      "time": 0.0
+    },
+    {
+      "file": "frames/f000012.png",
+      "frame": 12,
+      "time": 0.5
+    },
+    {
+      "file": "frames/f000024.png",
+      "frame": 24,
+      "time": 1.0
+    },
+    {
+      "file": "frames/f000036.png",
+      "frame": 36,
+      "time": 1.5
+    },
+    {
+      "file": "frames/f000048.png",
+      "frame": 48,
+      "time": 2.0
+    },
+    {
+      "file": "frames/f000060.png",
+      "frame": 60,
+      "time": 2.5
+    },
+    {
+      "file": "frames/f000072.png",
+      "frame": 72,
+      "time": 3.0
+    },
+    {
+      "file": "frames/f000084.png",
+      "frame": 84,
+      "time": 3.5
+    },
+    {
+      "file": "frames/f000096.png",
+      "frame": 96,
+      "time": 4.0
+    },
+    {
+      "file": "frames/f000108.png",
+      "frame": 108,
+      "time": 4.5
+    },
+    {
+      "file": "frames/f000120.png",
+      "frame": 120,
+      "time": 5.0
+    },
+    {
+      "file": "frames/f000132.png",
+      "frame": 132,
+      "time": 5.5
+    },
+    {
+      "file": "frames/f000144.png",
+      "frame": 144,
+      "time": 6.0
+    },
+    {
+      "file": "frames/f000156.png",
+      "frame": 156,
+      "time": 6.5
+    },
+    {
+      "file": "frames/f000168.png",
+      "frame": 168,
+      "time": 7.0
+    }
+  ],
+  "sheets": [
+    "sheet-01.png"
+  ]
+}
