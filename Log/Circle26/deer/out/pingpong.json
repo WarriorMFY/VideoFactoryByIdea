@@ -1,0 +1,13 @@
+{
+ "src": "Log\\Circle26\\deer\\out\\deer-3s.mp4",
+ "src_frames": 49,
+ "fps": 16.0,
+ "unit_frames": 96,
+ "loops": 10,
+ "out_fps": 16.0,
+ "seam_ncc": [
+  1.0,
+  0.9988
+ ],
+ "frame_ncc_median": 0.9999
+}
