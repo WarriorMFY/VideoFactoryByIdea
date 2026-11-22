@@ -1,0 +1,24 @@
+{
+  "id": "A2-写实尾帧",
+  "group": "A",
+  "ts": "2026-11-23 00:09:34",
+  "webapp": "2114585366186516481",
+  "params": {
+    "n": 2,
+    "aspect_ratio": "16:9 (Widescreen)"
+  },
+  "prompt": "这是同一处景的下一个镜头，改用写实动画背景的质感，不要手绘平涂。\n\n机位向前推过河面并降低，落到对岸河岸上贴地平视，朝向仍是原来那座村庄的方向。\n\n光：阴天，但云层有体积——云底压暗、云顶透亮，云隙里透出冷白的光，光从左上斜下来，山脊与岩面因此有明确的受光面和背光面，交界线是硬的。\n\n景：左中景是一座瓦顶小院，院墙、院门、院前那棵松都在，瓦片一片片叠着，墙面有雨痕和斑驳；中景偏右是河，收到画面右侧一窄条，水面有细碎反光和岸树倒影，那条双人小舟泊在近岸；远景是原来那三层圆钝的山脊，从左到右层层退远，近处那座山仍在左侧，岩面有清晰的切面和裂纹，石缝里长着苔与矮松；山谷里几带横向薄雾仍横在远山半腰。\n\n前景：湿润的土岸和一小片草，草叶一根根分得清，朝一个方向倒伏。\n\n空气透视：越远越淡、越灰、越蓝，近景颜色最实；暗部要沉，不要整体提亮。",
+  "prompt_sha1": "488d622e701ba80ec5cd562c04514993481b4a9a",
+  "ref": "F:\\AgentWorkArea\\WorkBuddy\\CardStudio\\Log\\Circle26\\anchor\\runs\\A2-写实尾帧\\ref.png",
+  "ref_sha1": "84297b2476802abbd622ea425c3732800d6cec79",
+  "task_id": "2124535780281114626",
+  "charged": 19.55,
+  "files": [
+    "F:\\AgentWorkArea\\WorkBuddy\\CardStudio\\Log\\Circle26\\anchor\\runs\\A2-写实尾帧\\out_1.png",
+    "F:\\AgentWorkArea\\WorkBuddy\\CardStudio\\Log\\Circle26\\anchor\\runs\\A2-写实尾帧\\out_2.png"
+  ],
+  "per_image": 9.78,
+  "status": "ok",
+  "note": "",
+  "wall": "115s"
+}

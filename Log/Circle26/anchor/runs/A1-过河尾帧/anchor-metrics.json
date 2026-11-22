@@ -1,0 +1,46 @@
+{
+ "ref": "A.png",
+ "L_drift": {
+  "out_1.png": 33.0,
+  "out_2.png": 50.4
+ },
+ "S_drift": {
+  "out_1.png": -59.7,
+  "out_2.png": -68.4
+ },
+ "rows": [
+  {
+   "file": "A.png",
+   "size": "882x457",
+   "ssim_vs_A": 1.0,
+   "ssim_vs_B": 0.3621,
+   "L": 71.1,
+   "S": 90.1,
+   "mist": 0.0,
+   "sharp": 1787.5,
+   "role": "首帧(锚)"
+  },
+  {
+   "file": "out_1.png",
+   "size": "1920x1088",
+   "ssim_vs_A": 0.2934,
+   "ssim_vs_B": 0.336,
+   "L": 104.1,
+   "S": 30.4,
+   "mist": 0.099,
+   "sharp": 609.3,
+   "role": "出图"
+  },
+  {
+   "file": "out_2.png",
+   "size": "1920x1088",
+   "ssim_vs_A": 0.2675,
+   "ssim_vs_B": 0.2934,
+   "L": 121.5,
+   "S": 21.7,
+   "mist": 0.146,
+   "sharp": 602.5,
+   "role": "出图"
+  }
+ ]
+}

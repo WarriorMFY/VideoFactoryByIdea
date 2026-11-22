@@ -1,0 +1,24 @@
+{
+  "id": "A1-过河尾帧",
+  "group": "A",
+  "ts": "2026-11-23 00:02:10",
+  "webapp": "2114585366186516481",
+  "params": {
+    "n": 2,
+    "aspect_ratio": "16:9 (Widescreen)"
+  },
+  "prompt": "同一地点的下一个镜头，画风一律不动：绢本设色青绿山水，矿物石青石绿加淡墨，低饱和冷灰，漫射的阴天光，天空是均匀的灰白雾色。\n\n机位向前推过河面并降低，落到对岸河岸上贴地平视，朝向仍是原来那座村庄的方向。\n\n画面从下往上：最下方四分之一是湿润的土岸和一小片压低的草叶，草叶用淡墨一两笔带过；左中景是同一座瓦顶小院，院墙、院门、院前那棵松都还在原位，只是近了许多，屋瓦用铁线描勾出；中景偏右是那条河，收到画面右侧一窄条，河面用淡墨横向细长笔触写出水纹，那条双人小舟已经划到右侧靠岸处静静泊着；远景是原来那三层圆钝的青绿山脊，从左到右层层退远、越来越淡，近处那座重皴的大山仍在左侧，山形轮廓与原来一丝一致；山谷里几带横向薄雾仍横在远山半腰，把山脚遮住。\n\n整体保持手绘动画的平面感，颜色只在原来那几支矿物色里取，不加大对比。",
+  "prompt_sha1": "8894c0c9fc6bbddb3e6ec74ad9bae5791fa101cc",
+  "ref": "F:\\AgentWorkArea\\WorkBuddy\\CardStudio\\Log\\Circle26\\anchor\\runs\\A1-过河尾帧\\ref.png",
+  "ref_sha1": "84297b2476802abbd622ea425c3732800d6cec79",
+  "task_id": "2124533923945074689",
+  "charged": 21.25,
+  "files": [
+    "F:\\AgentWorkArea\\WorkBuddy\\CardStudio\\Log\\Circle26\\anchor\\runs\\A1-过河尾帧\\out_1.png",
+    "F:\\AgentWorkArea\\WorkBuddy\\CardStudio\\Log\\Circle26\\anchor\\runs\\A1-过河尾帧\\out_2.png"
+  ],
+  "per_image": 10.62,
+  "status": "ok",
+  "note": "",
+  "wall": "125s"
+}
