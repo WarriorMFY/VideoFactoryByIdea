@@ -1,0 +1,16 @@
+{
+ "base": "Log/Circle26/base/fuchun-169-a.png",
+ "video": "Log/Circle26/out/runs/L2-水动-笔法/out.mp4",
+ "frames": 124,
+ "seam": 0.6494,
+ "fps_ncc": 0.9962,
+ "seam_ratio": 0.6518,
+ "drift_median": 2.67,
+ "drift_p99": 5.61,
+ "exit_ratio": 1.0,
+ "tail_slope": 0.000357,
+ "dir_first": 118.02383209135833,
+ "dir_last": 122.42682203409638,
+ "dir_gap": 4.4029899427380315,
+ "ok": false
+}

@@ -1,0 +1,16 @@
+{
+ "base": "Log/Circle26/base/fuchun-169-a.png",
+ "video": "Log/Circle26/out/runs/L1-水动/out.mp4",
+ "frames": 124,
+ "seam": 0.6775,
+ "fps_ncc": 0.9954,
+ "seam_ratio": 0.6807,
+ "drift_median": 2.9,
+ "drift_p99": 5.98,
+ "exit_ratio": 0.9965,
+ "tail_slope": 7.1e-05,
+ "dir_first": -13.084244785511002,
+ "dir_last": 5.427223885640308,
+ "dir_gap": 18.511468671151306,
+ "ok": false
+}

@@ -1,0 +1,13 @@
+{
+ "src": "Log\\Circle26\\out\\runs\\L2-水动-笔法\\out.mp4",
+ "frames_in": 124,
+ "xfade": 8,
+ "frames_unit": 116,
+ "fps": 24.0,
+ "loops": 3,
+ "seam_before": 0.9504,
+ "seam_after": 0.9995,
+ "fps_ncc": 0.9959,
+ "ratio_after": 1.0036,
+ "cross_check": 0.9995
+}

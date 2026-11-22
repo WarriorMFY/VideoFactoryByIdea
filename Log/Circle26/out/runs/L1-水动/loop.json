@@ -1,0 +1,13 @@
+{
+ "src": "Log\\Circle26\\out\\runs\\L1-水动\\out.mp4",
+ "frames_in": 124,
+ "xfade": 12,
+ "frames_unit": 112,
+ "fps": 24.0,
+ "loops": 3,
+ "seam_before": 0.976,
+ "seam_after": 0.9871,
+ "fps_ncc": 0.9948,
+ "ratio_after": 0.9923,
+ "cross_check": 0.9871
+}

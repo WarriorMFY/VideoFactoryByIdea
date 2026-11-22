@@ -1,0 +1,21 @@
+{
+  "id": "L2-水动-笔法",
+  "group": "LP",
+  "ts": "2026-11-22 22:18:53",
+  "webapp": "2113790012012720129",
+  "params": {
+    "dur": 5.0,
+    "aspect_ratio": "16:9 (Widescreen)",
+    "megapixels": "0.6"
+  },
+  "prompt": "江面以淡墨横向的细长笔触表现，水纹是水平方向拉长的短线，一道道自左向右缓慢推移。笔触的疏密与浓淡保持不变，水纹持续向右流动。到最后一帧，水纹仍在向右流动，波纹密度与第一帧相同。全画为水墨纸本，没有高光、没有反光、没有圆形波纹、没有同心环、没有白色亮线。远山、林木、山石、岸边松树保持原有的笔墨与位置。相机完全固定。",
+  "prompt_sha1": "66b06d02e9ca9a0db34698952ced4f10298cf048",
+  "anchor": "F:\\AgentWorkArea\\WorkBuddy\\CardStudio\\Log\\Circle26\\out\\runs\\L2-水动-笔法\\anchor.png",
+  "anchor_sha1": "4e3fbd22f84fde50685bd5596f14ff2daaf6467f",
+  "task_id": "2124507929808961537",
+  "charged": 18.53,
+  "file": "F:\\AgentWorkArea\\WorkBuddy\\CardStudio\\Log\\Circle26\\out\\runs\\L2-水动-笔法\\out.mp4",
+  "status": "ok",
+  "note": "",
+  "wall": "109s"
+}
