@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>香玉 · 关键帧工作台（原型）</title>
+<style>
+  :root {
+    --paper: #f5f1e8;
+    --card: #fffdf8;
+    --line: #d8cfbc;
+    --ink: #2b2b2b;
+    --ink-soft: #6b6353;
+    --zhu: #9c3b2e;
+    --aux: #3c4a5a;
+    --bg-soft: #efe9da;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+    background: var(--paper); color: var(--ink); font-size: 14px;
+  }
+  header {
+    padding: 12px 20px; border-bottom: 1px solid var(--line);
+    display: flex; align-items: baseline; gap: 14px; background: var(--card);
+  }
+  header h1 { font-size: 16px; margin: 0; font-weight: 600; }
+  header .sub { color: var(--ink-soft); font-size: 12px; }
+  main { display: flex; height: calc(100vh - 49px); }
+
+  /* 左栏树 */
+  aside {
+    width: 300px; border-right: 1px solid var(--line); overflow-y: auto;
+    padding: 10px 0; background: var(--card); flex-shrink: 0;
+  }
+  .node { cursor: pointer; user-select: none; }
+  .node-row {
+    display: flex; align-items: center; gap: 6px; padding: 6px 12px;
+    border-left: 3px solid transparent;
+  }
+  .node-row:hover { background: var(--bg-soft); }
+  .node.active > .node-row { border-left-color: var(--zhu); background: var(--bg-soft); }
+  .node.root > .node-row { font-weight: 600; }
+  .node.chapter > .node-row { font-weight: 600; padding-left: 22px; }
+  .node.leaf > .node-row { padding-left: 38px; font-weight: 400; }
+  .twist { width: 14px; text-align: center; color: var(--ink-soft); font-size: 11px; }
+  .node-title { flex: 1; }
+  .node-no { color: var(--ink-soft); font-size: 12px; width: 22px; }
+  .badge {
+    font-size: 11px; padding: 1px 7px; border-radius: 10px; flex-shrink: 0;
+  }
+  .badge.main { background: #eee3cf; color: #7a6230; }
+  .badge.aux { background: #dfe5ea; color: var(--aux); }
+  .dot { width: 7px; height: 7px; border-radius: 50%; background: #c9c0aa; flex-shrink: 0; }
+  .dot.has-img { background: var(--zhu); }
+  .children { display: none; }
+  .children.open { display: block; }
+
+  /* 右栏 */
+  section { flex: 1; overflow-y: auto; padding: 20px 26px; }
+  .panel-head { margin-bottom: 16px; }
+  .panel-head h2 { margin: 0 0 4px; font-size: 18px; }
+  .panel-head .meta-line { color: var(--ink-soft); font-size: 12px; }
+  .card {
+    background: var(--card); border: 1px solid var(--line); border-radius: 8px;
+    padding: 14px 16px; margin-bottom: 16px;
+  }
+  .card h3 { margin: 0 0 10px; font-size: 13px; color: var(--ink-soft); font-weight: 600; }
+  .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px 18px; }
+  .field label { display: block; font-size: 11px; color: var(--ink-soft); margin-bottom: 3px; }
+  .field .val { font-size: 13px; }
+  .voiceover {
+    border-left: 3px solid var(--line); padding: 6px 12px; color: var(--ink);
+    background: var(--bg-soft); border-radius: 0 6px 6px 0; margin-top: 8px;
+  }
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+  .chip { font-size: 11px; background: var(--bg-soft); border: 1px solid var(--line); border-radius: 10px; padding: 2px 9px; }
+  textarea {
+    width: 100%; border: 1px solid var(--line); border-radius: 6px; background: #fff;
+    padding: 10px; font-family: inherit; font-size: 13px; line-height: 1.7; resize: vertical;
+  }
+  textarea[readonly] { background: var(--bg-soft); color: var(--ink-soft); }
+  .prompt-block { margin-bottom: 12px; }
+  .prompt-block .label { font-size: 12px; color: var(--ink-soft); margin-bottom: 5px; }
+  .row-actions { display: flex; gap: 10px; align-items: center; margin-top: 12px; }
+  button {
+    border: 1px solid var(--ink); background: var(--ink); color: #fff; border-radius: 6px;
+    padding: 8px 16px; font-size: 13px; cursor: pointer;
+  }
+  button.secondary { background: transparent; color: var(--ink); }
+  button:hover { opacity: 0.88; }
+  .msg { font-size: 12px; color: var(--ink-soft); }
+  .msg.ok { color: #3d7a44; }
+  .msg.warn { color: var(--zhu); }
+  .radio-group { display: flex; gap: 14px; }
+  .radio-group label { display: flex; gap: 5px; align-items: center; cursor: pointer; }
+  .anchor-list, .rule-list { margin: 0; padding-left: 18px; line-height: 1.9; }
+  .asset-list { display: flex; flex-wrap: wrap; gap: 8px; }
+  .file-chip { font-size: 12px; background: var(--bg-soft); border: 1px dashed var(--line); border-radius: 6px; padding: 4px 10px; }
+  .hint { font-size: 11px; color: var(--ink-soft); margin-top: 6px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>香玉 · 关键帧工作台</h1>
+  <span class="sub">原型 · 过程数据落 Log/Circle23/Frame/frames/&lt;帧号&gt;/</span>
+</header>
+<main>
+  <aside id="tree"></aside>
+  <section id="pane"></section>
+</main>
+
+<script>
+const $ = (sel, el=document) => el.querySelector(sel);
+let TREE = null;
+let current = null; // {kind:'root'|'chapter'|'leaf', id, data}
+
+async function api(path, opts) {
+  const r = await fetch(path, opts);
+  return r.json();
+}
+
+/* ---------- 树 ---------- */
+function renderTree() {
+  const aside = $('#tree');
+  aside.innerHTML = '';
+
+  // 根
+  const root = nodeEl('root', 'root', '', TREE.root.title);
+  aside.appendChild(root);
+
+  TREE.chapters.forEach(ch => {
+    const chNode = nodeEl(ch.id, 'chapter', '', ch.title);
+    const twist = $('.twist', chNode);
+    twist.textContent = '▾';
+    const wrap = document.createElement('div');
+    wrap.className = 'children open';
+    ch.frames.forEach(no => {
+      const fid = 'frame_' + String(no).padStart(2, '0');
+      const f = TREE.frames[fid];
+      const leaf = nodeEl(fid, 'leaf', String(no).padStart(2, '0'), f.title);
+      wrap.appendChild(leaf);
+    });
+    chNode.appendChild(wrap);
+    chNode.addEventListener('click', e => {
+      if (e.target.closest('.node-row')) {
+        wrap.classList.toggle('open');
+        twist.textContent = wrap.classList.contains('open') ? '▾' : '▸';
+        select(ch.id, 'chapter', ch);
+      }
+    });
+    aside.appendChild(chNode);
+  });
+
+  // 叶子点击绑定（阻止冒泡到章节点，避免误触发折叠）
+  aside.querySelectorAll('.node.leaf').forEach(el => {
+    el.addEventListener('click', e => {
+      e.stopPropagation();
+      select(el.dataset.id, 'leaf');
+    });
+  });
+  aside.querySelectorAll('.node.root').forEach(el => {
+    el.addEventListener('click', () => select('root', 'root', TREE.root));
+  });
+}
+
+function nodeEl(id, kind, no, title) {
+  const el = document.createElement('div');
+  el.className = 'node ' + kind;
+  el.dataset.id = id;
+  const row = document.createElement('div');
+  row.className = 'node-row';
+  const twist = document.createElement('span');
+  twist.className = 'twist';
+  twist.textContent = kind === 'leaf' ? '' : '';
+  const noEl = document.createElement('span');
+  noEl.className = 'node-no';
+  noEl.textContent = no;
+  const titleEl = document.createElement('span');
+  titleEl.className = 'node-title';
+  titleEl.textContent = title;
+  row.append(twist, noEl, titleEl);
+  el.appendChild(row);
+  return el;
+}
+
+function markActive(id) {
+  document.querySelectorAll('.node').forEach(n => n.classList.remove('active'));
+  const el = document.querySelector(`.node[data-id="${id}"]`);
+  if (el) el.classList.add('active');
+}
+
+/* ---------- 选中 ---------- */
+async function select(id, kind, data) {
+  markActive(id);
+  current = { id, kind, data: data || null };
+  if (kind === 'leaf') {
+    const f = TREE.frames[id];
+    const chNode = document.querySelector(`.node.chapter[data-id="${f.chapter}"]`);
+    if (chNode) {
+      const wrap = chNode.querySelector('.children');
+      wrap.classList.add('open');
+      chNode.querySelector('.twist').textContent = '▾';
+    }
+    await renderLeaf(id);
+  }
+  else if (kind === 'chapter') renderChapter(data);
+  else renderRoot();
+}
+
+/* ---------- 根面板 ---------- */
+function renderRoot() {
+  const r = TREE.root;
+  $('#pane').innerHTML = `
+    <div class="panel-head">
+      <h2>${r.title}</h2>
+      <div class="meta-line">世界级锁定 · 非叶子节点，以下参数全片继承</div>
+    </div>
+    <div class="card">
+      <h3>主画风 · 没骨花鸟（全局提示词，只读）</h3>
+      <textarea readonly rows="5">${esc(r.global_prompt_main)}</textarea>
+    </div>
+    <div class="card">
+      <h3>辅助画风 · 暗调水墨（全局提示词，只读）</h3>
+      <textarea readonly rows="5">${esc(r.global_prompt_aux)}</textarea>
+    </div>
+    <div class="card">
+      <h3>三条世界锚点</h3>
+      <ul class="anchor-list">${r.anchors.map(a => `<li>${esc(a)}</li>`).join('')}</ul>
+    </div>
+    <div class="card">
+      <h3>组合禁令</h3>
+      <ul class="rule-list">${r.rules.map(a => `<li>${esc(a)}</li>`).join('')}</ul>
+    </div>`;
+}
+
+/* ---------- 章面板 ---------- */
+function renderChapter(ch) {
+  const nos = ch.frames.map(n => String(n).padStart(2, '0')).join('、');
+  $('#pane').innerHTML = `
+    <div class="panel-head">
+      <h2>${esc(ch.title)}</h2>
+      <div class="meta-line">本章帧号 ${nos} · 非叶子节点，只显示章级参数</div>
+    </div>
+    <div class="card">
+      <div class="grid">
+        <div class="field"><label>光位</label><div class="val">${esc(ch.light)}</div></div>
+        <div class="field"><label>留黑档</label><div class="val">${esc(ch.shadow)}</div></div>
+        <div class="field"><label>雾</label><div class="val">${esc(ch.mist)}</div></div>
+        <div class="field"><label>章眼帧</label><div class="val">${esc(ch.eye)}</div></div>
+      </div>
+    </div>
+    <div class="card">
+      <h3>本章帧清单</h3>
+      <div class="chips">${ch.frames.map(n => {
+        const fid = 'frame_' + String(n).padStart(2, '0');
+        const f = TREE.frames[fid];
+        return `<span class="chip" data-jump="${fid}">${String(n).padStart(2,'0')} ${esc(f.title)}</span>`;
+      }).join('')}</div>
+    </div>`;
+  $('#pane').querySelectorAll('[data-jump]').forEach(c => {
+    c.addEventListener('click', () => select(c.dataset.jump, 'leaf'));
+  });
+}
+
+/* ---------- 叶子面板 ---------- */
+async function renderLeaf(fid) {
+  const d = await api('/api/frame/' + fid);
+  current.data = d;
+  const f = d.tree, meta = d.meta;
+  const ch = TREE.chapters.find(c => c.id === f.chapter);
+  const globalPrompt = meta.style === 'aux' ? TREE.root.global_prompt_aux : TREE.root.global_prompt_main;
+
+  $('#pane').innerHTML = `
+    <div class="panel-head">
+      <h2>${String(f.no).padStart(2,'0')} · ${esc(f.title)}</h2>
+      <div class="meta-line">${esc(ch.title)} ｜ 状态：${esc(meta.status || 'draft')}</div>
+    </div>
+
+    <div class="card">
+      <div class="grid">
+        <div class="field"><label>语法 / 景别</label><div class="val">${esc(f.grammar)}</div></div>
+        <div class="field"><label>V1 人物占比</label><div class="val">${esc(f.V1)}</div></div>
+        <div class="field"><label>V2 机位高度</label><div class="val">${esc(f.V2)}</div></div>
+        <div class="field"><label>V3 主体位置</label><div class="val">${esc(f.V3)}</div></div>
+        <div class="field"><label>暖色</label><div class="val">${esc(f.warm)}</div></div>
+        <div class="field"><label>情绪值</label><div class="val">${f.emotion}</div></div>
+      </div>
+      <div class="field" style="margin-top:10px"><label>画面唯一点</label><div class="val">${esc(f.shot)}</div></div>
+      <div class="voiceover">${esc(f.voiceover)}</div>
+      <div class="chips">${(f.tags||[]).map(t => `<span class="chip">${esc(t)}</span>`).join('')}</div>
+    </div>
+
+    <div class="card">
+      <h3>画风归属</h3>
+      <div class="radio-group">
+        <label><input type="radio" name="style" value="main" ${meta.style!=='aux'?'checked':''}> 没骨（主）</label>
+        <label><input type="radio" name="style" value="aux" ${meta.style==='aux'?'checked':''}> 暗调水墨（辅）</label>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="prompt-block">
+        <div class="label">全局提示词（按画风继承，只读）</div>
+        <textarea readonly rows="5">${esc(globalPrompt)}</textarea>
+      </div>
+      <div class="prompt-block">
+        <div class="label">本帧提示词（可编辑，保存到 frames/${fid}/prompt.md）</div>
+        <textarea id="promptFrame" rows="7">${esc(d.prompt_frame)}</textarea>
+      </div>
+      <div class="prompt-block">
+        <div class="label">合并预览（全局＋本帧）</div>
+        <textarea readonly rows="5" id="preview"></textarea>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>帧备注 / 风险提示</h3>
+      <textarea id="note" rows="3">${esc(meta.note || '')}</textarea>
+    </div>
+
+    <div class="row-actions">
+      <button id="saveBtn">保存本帧</button>
+      <button id="genBtn" class="secondary">一键生成首帧图（RunningHub）</button>
+      <span id="msg" class="msg"></span>
+    </div>
+
+    <div class="card" style="margin-top:16px">
+      <h3>已落盘产物</h3>
+      <div class="asset-list">
+        ${d.images.length ? d.images.map(i => `<span class="file-chip">img/${esc(i)}</span>`).join('') : '<span class="hint">images/ 暂无文件</span>'}
+        ${d.videos.length ? d.videos.map(v => `<span class="file-chip">video/${esc(v)}</span>`).join('') : ''}
+      </div>
+      <div class="hint">产物预览与出图通道在下一轮接通；当前生成按钮为原型 stub，请求留档 last_request.json。</div>
+    </div>`;
+
+  const promptEl = $('#promptFrame'), noteEl = $('#note'), previewEl = $('#preview');
+  const syncPreview = () => {
+    const gp = document.querySelector('input[name=style]:checked').value === 'aux'
+      ? TREE.root.global_prompt_aux : TREE.root.global_prompt_main;
+    previewEl.value = gp + '\n\n' + promptEl.value;
+  };
+  promptEl.addEventListener('input', syncPreview);
+  document.querySelectorAll('input[name=style]').forEach(r => r.addEventListener('change', syncPreview));
+  syncPreview();
+
+  $('#saveBtn').addEventListener('click', async () => {
+    const style = document.querySelector('input[name=style]:checked').value;
+    const res = await api('/api/frame/' + fid, {
+      method: 'POST', headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({ meta: { style, note: noteEl.value, status: meta.status }, prompt_frame: promptEl.value })
+    });
+    current.data = res;
+    flash(`已保存到 frames/${fid}/`, 'ok');
+    refreshLeafBadge(fid, res);
+  });
+
+  $('#genBtn').addEventListener('click', async () => {
+    flash('原型阶段：正在提交 stub 请求…', '');
+    const res = await api('/api/generate/' + fid, {
+      method: 'POST', headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({ prompt: previewEl.value, style: document.querySelector('input[name=style]:checked').value })
+    });
+    flash(res.message, 'warn');
+  });
+}
+
+function refreshLeafBadge(fid, res) {
+  const el = document.querySelector(`.node[data-id="${fid}"] .node-row`);
+  if (!el) return;
+  let badge = el.querySelector('.badge');
+  if (!badge) { badge = document.createElement('span'); badge.className = 'badge'; el.appendChild(badge); }
+  badge.className = 'badge ' + res.meta.style;
+  badge.textContent = res.meta.style === 'aux' ? '水墨' : '没骨';
+}
+
+function flash(text, cls) {
+  const m = $('#msg');
+  m.textContent = text;
+  m.className = 'msg ' + (cls || '');
+}
+
+function esc(s) {
+  return String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+(async () => {
+  TREE = await api('/api/tree');
+  renderTree();
+  // 初始化叶子徽章
+  document.querySelectorAll('.node.leaf').forEach(el => {
+    const f = TREE.frames[el.dataset.id];
+    const badge = document.createElement('span');
+    badge.className = 'badge ' + f.style;
+    badge.textContent = f.style === 'aux' ? '水墨' : '没骨';
+    $('.node-row', el).appendChild(badge);
+  });
+  select('root', 'root', TREE.root);
+})();
+</script>
+</body>
+</html>
