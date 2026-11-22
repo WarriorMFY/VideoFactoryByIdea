@@ -1,0 +1,3 @@
+file 'F:/AgentWorkArea/WorkBuddy/CardStudio/Log/Circle25/xiangyu/out/runs/S1-花间见/out.mp4'
+file 'F:/AgentWorkArea/WorkBuddy/CardStudio/Log/Circle25/xiangyu/out/runs/S2-掘花/out.mp4'
+file 'F:/AgentWorkArea/WorkBuddy/CardStudio/Log/Circle25/xiangyu/out/runs/S3-复生/out.mp4'

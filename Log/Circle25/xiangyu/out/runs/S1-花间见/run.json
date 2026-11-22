@@ -1,0 +1,21 @@
+{
+  "id": "S1-花间见",
+  "group": "XY",
+  "ts": "2026-11-22 21:00:00",
+  "webapp": "2113790012012720129",
+  "params": {
+    "dur": 5.0,
+    "aspect_ratio": "3:4 (Portrait Standard)",
+    "megapixels": "0.6"
+  },
+  "prompt": "夜风自右侧吹入，前景花丛轻摇。花丛后的素衣女子缓缓侧身回望，衣袖与衣带随之扬起又落回。远处窗内的一豆灯火轻轻晃动一下。机位完全不动，月光方向保持不变。",
+  "prompt_sha1": "126dd8e5f7a60102f18f09b34ed5de6b6a3aa20d",
+  "anchor": "F:\\AgentWorkArea\\WorkBuddy\\CardStudio\\Log\\Circle25\\xiangyu\\out\\runs\\S1-花间见\\anchor.png",
+  "anchor_sha1": "5ad105f5b13f39cbe9c7ad8374c32b3b92e0c328",
+  "task_id": "2124488082022694914",
+  "charged": 21.42,
+  "file": "F:\\AgentWorkArea\\WorkBuddy\\CardStudio\\Log\\Circle25\\xiangyu\\out\\runs\\S1-花间见\\out.mp4",
+  "status": "ok",
+  "note": "",
+  "wall": "126s"
+}

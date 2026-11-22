@@ -1,0 +1,21 @@
+{
+  "id": "S2-掘花",
+  "group": "XY",
+  "ts": "2026-11-22 21:02:15",
+  "webapp": "2113790012012720129",
+  "params": {
+    "dur": 5.0,
+    "aspect_ratio": "3:4 (Portrait Standard)",
+    "megapixels": "0.6"
+  },
+  "prompt": "枝头最后一片残白花瓣脱离枝梢，缓缓翻转着下落，落进土穴中央。一阵风掠过地面，尘土微微浮动，断根旁的碎瓣轻轻颤动。机位完全不动，天光保持将明未明。",
+  "prompt_sha1": "4e19ed065a58d3ac32702c6d6b8627e054fadde1",
+  "anchor": "F:\\AgentWorkArea\\WorkBuddy\\CardStudio\\Log\\Circle25\\xiangyu\\out\\runs\\S2-掘花\\anchor.png",
+  "anchor_sha1": "6bf9fd7cac4586bb6d37988683aefcd146d31f68",
+  "task_id": "2124488647117066242",
+  "charged": 17.51,
+  "file": "F:\\AgentWorkArea\\WorkBuddy\\CardStudio\\Log\\Circle25\\xiangyu\\out\\runs\\S2-掘花\\out.mp4",
+  "status": "ok",
+  "note": "",
+  "wall": "103s"
+}

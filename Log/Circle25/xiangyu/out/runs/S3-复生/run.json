@@ -1,0 +1,21 @@
+{
+  "id": "S3-复生",
+  "group": "XY",
+  "ts": "2026-11-22 21:04:07",
+  "webapp": "2113790012012720129",
+  "params": {
+    "dur": 5.0,
+    "aspect_ratio": "3:4 (Portrait Standard)",
+    "megapixels": "0.6"
+  },
+  "prompt": "土中的牡丹嫩芽缓缓抽高，两片初叶舒展开。芽端那缕墨线继续盘旋上升，轮廓内自下而上透出极淡的白与石绿，发髻最后成形。机位完全不动。",
+  "prompt_sha1": "31686bb5cca7fbe45c4f584dd6ec44a215639314",
+  "anchor": "F:\\AgentWorkArea\\WorkBuddy\\CardStudio\\Log\\Circle25\\xiangyu\\out\\runs\\S3-复生\\anchor.png",
+  "anchor_sha1": "e75e83b9a019ddf365fafdda391e9049d61c49f8",
+  "task_id": "2124489119202758658",
+  "charged": 17.68,
+  "file": "F:\\AgentWorkArea\\WorkBuddy\\CardStudio\\Log\\Circle25\\xiangyu\\out\\runs\\S3-复生\\out.mp4",
+  "status": "ok",
+  "note": "",
+  "wall": "104s"
+}

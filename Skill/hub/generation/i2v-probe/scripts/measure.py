@@ -15,6 +15,19 @@ import numpy as np
 ROWS, COLS = 3, 3
 
 
+def imread_u(p):
+    """Windows 下 cv2.imread 不认非 ASCII 路径，统一走 fromfile 解码。"""
+    buf = np.fromfile(str(p), dtype=np.uint8)
+    return cv2.imdecode(buf, cv2.IMREAD_COLOR) if buf.size else None
+
+
+def imwrite_u(p, img):
+    ok, buf = cv2.imencode(Path(p).suffix or ".png", img)
+    if ok:
+        Path(p).write_bytes(buf.tobytes())
+    return ok
+
+
 def gray(img):
     return cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
@@ -68,7 +81,10 @@ def main() -> int:
         print(f"视频不存在: {video_p}", file=sys.stderr)
         return 2
 
-    anchor = cv2.imread(str(anchor_p))
+    anchor = imread_u(anchor_p)
+    if anchor is None:
+        print(f"anchor.png 读不出来: {anchor_p}", file=sys.stderr)
+        return 2
     cap = cv2.VideoCapture(str(video_p))
     fps = cap.get(cv2.CAP_PROP_FPS) or 24.0
     total = int(cap.get(cv2.CAP_PROP_FRAME_COUNT) or 0)
@@ -144,7 +160,7 @@ def main() -> int:
             txt = f"{r * COLS + c + 1}:{drift[r][c]:.1f}"
             cv2.putText(vis, txt, (c * w // COLS + 6, r * h // ROWS + 22),
                         cv2.FONT_HERSHEY_SIMPLEX, 0.55, (255, 255, 255), 1, cv2.LINE_AA)
-    cv2.imwrite(str(run / "zones.png"), vis)
+    imwrite_u(run / "zones.png", vis)
 
     print(f"{metrics['id']}  ({metrics['group']})  {metrics['fps']}fps {metrics['frames']}帧 {metrics['dur_measured']}s")
     print(f"锚   anchor_ncc={metrics['anchor_ncc']}  {metrics['anchor_band']}")
