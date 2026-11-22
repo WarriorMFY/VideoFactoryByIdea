@@ -1,0 +1,28 @@
+{
+ "base": "Log/Circle26/base/fuchun-169-a.png",
+ "roi": {
+  "x0": 0,
+  "y0": 425,
+  "x1": 1700,
+  "y1": 790
+ },
+ "lam_x": 260.0,
+ "lam_y": 900.0,
+ "dur": 6.0,
+ "fps": 24.0,
+ "frames": 144,
+ "amp": 16.0,
+ "speed_px_s": 43.33,
+ "seam_ncc": 0.9983,
+ "fps_ncc": 0.9983,
+ "ratio": 1.0,
+ "ncc_to_src": [
+  0.8928,
+  0.8889,
+  0.892,
+  0.8926
+ ],
+ "sway": 0.0,
+ "sway_max": 0,
+ "cost": 0
+}

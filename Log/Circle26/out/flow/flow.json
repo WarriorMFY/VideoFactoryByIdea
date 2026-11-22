@@ -1,0 +1,23 @@
+{
+ "base": "Log/Circle26/base/fuchun-169-a.png",
+ "roi": {
+  "x0": 430,
+  "y0": 465,
+  "x1": 1180,
+  "y1": 745
+ },
+ "roi_size": [
+  750,
+  280
+ ],
+ "period_px": 550,
+ "tile_band": 200,
+ "dur": 12.0,
+ "fps": 24.0,
+ "frames": 288,
+ "speed_px_s": 45.83,
+ "seam_ncc": 0.9951,
+ "fps_ncc": 0.9947,
+ "ratio": 1.0004,
+ "cost": 0
+}
