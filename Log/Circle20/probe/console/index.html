@@ -103,6 +103,19 @@
   .kpi b{display:block;font:600 14px var(--mono)}
   .kpi i{font-style:normal;font-size:10px;color:var(--dim)}
   .zones{width:100%;border-radius:7px;margin-top:9px;border:1px solid var(--line)}
+  /* 人工批注：结果栏下面一块，自动保存 */
+  .note{margin-top:12px;border-top:1px dashed var(--line);padding-top:9px}
+  .nh{display:flex;justify-content:space-between;align-items:baseline;font:11px var(--mono);color:var(--dim)}
+  .nh b{color:var(--mu);font-weight:600;letter-spacing:.4px}
+  .ns{font-size:10.5px;color:var(--dim)}
+  .ns.dirty{color:var(--warn)}
+  .ns.done{color:var(--ok)}
+  .ns.bad{color:var(--bad)}
+  .nt{width:100%;box-sizing:border-box;margin-top:6px;min-height:62px;resize:vertical;
+      font:12.5px/1.65 var(--sans,system-ui);background:var(--panel2);border:1px solid var(--line);
+      border-radius:7px;padding:8px 10px;color:var(--tx);outline:none}
+  .nt:focus{border-color:#2c6a60}
+  .nt::placeholder{color:#4b5563}
   .empty{color:var(--dim);font-size:12.5px;padding:14px 0}
   .err{color:#f08c8c;font-size:12.5px}
   .runs{display:grid;gap:12px;margin-top:10px}
@@ -427,9 +440,16 @@ function renderRuns(){
           <div style="font-size:12px;color:var(--mu);max-height:96px;overflow:auto">${(r.prompt||"").slice(0,240)}</div>
         </div>
       </div>
+      <div class="note">
+        <div class="nh"><b>人工批注</b><span class="ns${r.note ? " done" : ""}" data-k="${r.key || ""}">${
+          r.note ? "已存 " + String(r.note.updated || "").slice(5, 16) : "尚未写"}</span></div>
+        <textarea class="nt" rows="3" data-k="${r.key || ""}" placeholder="看完对照视频写一句：哪一格在动、动了多大、和源片差在哪、像不像模型自己编的。Ctrl+Enter 立即保存。">${
+          esc(DRAFTS[r.key] !== undefined ? DRAFTS[r.key] : (r.note?.text || ""))}</textarea>
+      </div>
     </div>`;
   }).join("");
   bindVTabs();
+  bindNotes();
 }
 
 // 对照片（变速对齐）／原始生成片（原速）之间切换，尽量保持播放位置
@@ -449,6 +469,60 @@ function bindVTabs(){
       v.src = src;
       v.load();
     });
+  });
+}
+
+// ---- 人工批注：边写边存，refresh 重绘不丢草稿 ----
+const DRAFTS = {}, TIMERS = {};
+
+function esc(s){
+  return String(s == null ? "" : s).replace(/[&<>"]/g,
+    c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+}
+
+function noteStatus(k, txt, cls){
+  document.querySelectorAll(`.ns[data-k="${k}"]`).forEach(el => {
+    el.textContent = txt;
+    el.className = "ns" + (cls ? " " + cls : "");
+  });
+}
+
+function stashNote(k, text, updated){
+  // 同步回内存里的两份列表，免得下次重绘显示成「尚未写」
+  const put = arr => (arr || []).forEach(x => { if (x.key === k) x.note = text.trim() ? { text, updated } : null; });
+  put(STATE.runs); put(HISTORY);
+}
+
+async function pushNote(k, text){
+  if (!k) return;
+  noteStatus(k, "保存中…");
+  const res = await api("/api/note", {
+    method: "POST", headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ key: k, text })
+  });
+  if (res.error) { noteStatus(k, "保存失败：" + res.error, "bad"); return; }
+  if (!String(text).trim()) { delete DRAFTS[k]; noteStatus(k, "尚未写"); }
+  else { DRAFTS[k] = text; noteStatus(k, "已存 " + String(res.updated || "").slice(11), "done"); }
+  stashNote(k, text, res.updated);
+}
+
+function bindNotes(){
+  $("#runs").querySelectorAll(".nt").forEach(ta => {
+    const k = ta.dataset.k;
+    if (!k) return;
+    if (DRAFTS[k] !== undefined && ta.value !== DRAFTS[k]) ta.value = DRAFTS[k];
+    ta.oninput = () => {
+      DRAFTS[k] = ta.value;
+      noteStatus(k, "未保存", "dirty");
+      clearTimeout(TIMERS[k]);
+      TIMERS[k] = setTimeout(() => pushNote(k, ta.value), 900);
+    };
+    ta.onblur = () => { clearTimeout(TIMERS[k]); pushNote(k, ta.value); };
+    ta.onkeydown = ev => {
+      if (ev.key === "Enter" && (ev.ctrlKey || ev.metaKey)) {
+        ev.preventDefault(); clearTimeout(TIMERS[k]); pushNote(k, ta.value);
+      }
+    };
   });
 }
 

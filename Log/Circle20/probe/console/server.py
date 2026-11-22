@@ -23,6 +23,7 @@ PROBE = CONSOLE.parent                                  # Log/Circle20/probe
 SRC = PROBE / "src"
 RUNS = PROBE / "runs"
 CMP = PROBE / "cmp"
+NOTES = PROBE / "notes.json"          # 人工批注：{ key: {"text":…, "updated":…} }，key = task_id 或 id@ts
 SKILL = ROOT / "Skill" / "hub" / "generation" / "i2v-probe" / "scripts"
 PROBE_PY = SKILL / "probe.py"
 MEASURE_PY = SKILL / "measure.py"
@@ -357,7 +358,37 @@ class H(BaseHTTPRequestHandler):
                 jid, body.get("vid", ""), body.get("seg", ""), body.get("prompt", ""),
                 body.get("group", ""), body.get("note", "")), daemon=True).start()
             return self._json({"job": jid})
+        if u.path == "/api/note":
+            key = str(body.get("key") or "").strip()
+            if not key:
+                return self._json({"error": "missing key"}, 400)
+            return self._json(save_note(key, body.get("text", "")))
         self._json({"error": "no route"}, 404)
+
+
+def note_key(r: dict) -> str:
+    """一条实验的批注主键。用 task_id（每次提交唯一），缺失时退到 id@ts。"""
+    return str(r.get("task_id") or "") or f"{r.get('id')}@{r.get('ts')}"
+
+
+def load_notes() -> dict:
+    return jload(NOTES, {}) or {}
+
+
+def save_note(key: str, text: str) -> dict:
+    """整表读改写 + 原子替换。批注是人的话，宁可丢并发也不丢已有条目。"""
+    text = (text or "").strip()
+    with LOCK:
+        notes = load_notes()
+        if text:
+            notes[key] = {"text": text, "updated": time.strftime("%Y-%m-%d %H:%M:%S")}
+        else:
+            notes.pop(key, None)          # 清空即删，不留空壳
+        tmp = NOTES.with_suffix(".json.tmp")
+        tmp.parent.mkdir(parents=True, exist_ok=True)
+        tmp.write_text(json.dumps(notes, ensure_ascii=False, indent=1), encoding="utf-8")
+        tmp.replace(NOTES)
+    return {"ok": True, "key": key, "text": text, "updated": (notes.get(key) or {}).get("updated")}
 
 
 def _run_view(rid: str, r: dict) -> dict:
@@ -381,11 +412,16 @@ def state(vid: str):
         if cands:
             vid = cands[0].parent.name
     allrows = _read_jsonl(PROBE / "experiments.jsonl")
+    notes = load_notes()
     history = [_run_view(r.get("id") or "", r) for r in reversed(allrows)]
     for h in history:
-        h["key"] = f"{h.get('task_id') or ''}" or f"{h.get('id')}@{h.get('ts')}"
+        h["key"] = note_key(h)
+        h["note"] = notes.get(h["key"])
     rows = [r for r in allrows if not vid or r.get("video_id") == vid]
     runs = [_run_view(r.get("id") or "", r) for r in rows]
+    for r in runs:
+        r["key"] = note_key(r)
+        r["note"] = notes.get(r["key"])
     meta = jload(SRC / vid / "segments.json") if vid else None
     return {"vid": vid, "runs": runs, "history": history, "segments": meta}
 
