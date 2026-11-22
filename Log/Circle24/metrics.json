@@ -1,0 +1,28 @@
+{
+ "ref": "figure.png",
+ "ref_size": "307x235",
+ "ref_sharp": 736.5,
+ "runs": [
+  {
+   "file": "v1-flux3_1.png",
+   "size": "1664x1248",
+   "ssim_all": 0.9248,
+   "face_diff": 7.17,
+   "sharp": 404.9
+  },
+  {
+   "file": "v1-flux3_2.png",
+   "size": "1664x1248",
+   "ssim_all": 0.9092,
+   "face_diff": 6.06,
+   "sharp": 482.7
+  },
+  {
+   "file": "v2-g25.png",
+   "size": "1184x880",
+   "ssim_all": 0.8468,
+   "face_diff": 9.68,
+   "sharp": 520.0
+  }
+ ]
+}
