@@ -33,7 +33,8 @@ description: 按「AI 导演」七阶段把剧本拍成短片——拆卡、三�
 1. 每次实验都是 `proj/` 下的一个项目；**只把结论归档，过程留在当轮 `Log/Circle<N>/`**。
 2. 新规则只能由失败换来：先按 `reference/core.md` §9 分类，再决定写进哪一层。
 3. 一圈只加一个变量；台阶账记 `evidence/steps.md`，一行一圈。
+4. 结圈回写按 `reference/core.md` §9.5：事实进 §1–4、语义进 stage、一次性只留 Log；每圈 ≤3 条，每次改动在 `evidence/changelog.md` 留一行。**技能改过什么必须可追。**
 
 ## 资产
 
-`reference/core.md`（唯一数值源：锚/阈值/通道/边界/修复/声音/账/生长协议）｜`stages/` 七段｜`proj/` 已归档结论｜`evidence/steps.md` 台阶账｜`scripts/` 待补（gate / measure_anchor / measure_video / assemble / ledger）。读法：先本文件定位阶段，再只读该阶段 SKILL.md，数值一律回 `core.md`。
+`reference/core.md`（唯一数值源：锚/阈值/通道/边界/修复/声音/账/生长协议）｜`stages/` 七段｜`proj/` 已归档结论｜`evidence/steps.md` 台阶账｜`evidence/changelog.md` 改动流水｜`scripts/` 待补（gate / measure_anchor / measure_video / assemble / ledger）。读法：先本文件定位阶段，再只读该阶段 SKILL.md，数值一律回 `core.md`。
