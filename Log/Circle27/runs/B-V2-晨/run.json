@@ -1,0 +1,26 @@
+{
+  "id": "B-V2-晨",
+  "group": "B-V2",
+  "variable": "光线",
+  "level": "清晨柔光",
+  "ts": "2026-11-23 10:03:21",
+  "webapp": "2114585366186516481",
+  "params": {
+    "n": 2,
+    "aspect_ratio": "3:4 (Portrait Standard)"
+  },
+  "prompt": "把光线改为清晨柔光：左前方大面积柔光，光比小，阴影浅而柔。其余全部保持不变：构图与景别（全身站姿）、人物长相与发型、服装与姿态、浅灰背景、写实摄影画风与肤质。不要出现文字、水印、边框。",
+  "prompt_sha1": "d9c522f279b11ff728cfd09176b948bee1bf552b",
+  "anchor": "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle27\\runs\\B-V2-晨\\anchor.png",
+  "anchor_sha1": "c359846cef34ccca331a465ad27c569995ce51f3",
+  "task_id": "2124685214226800641",
+  "charged": 15.13,
+  "files": [
+    "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle27\\runs\\B-V2-晨\\out_1.png",
+    "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle27\\runs\\B-V2-晨\\out_2.png"
+  ],
+  "per_image": 7.57,
+  "status": "ok",
+  "note": "",
+  "wall": "89s"
+}

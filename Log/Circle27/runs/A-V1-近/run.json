@@ -1,0 +1,23 @@
+{
+  "id": "A-V1-近",
+  "group": "A-V1",
+  "variable": "景别",
+  "level": "近景",
+  "ts": "2026-11-23 09:46:07",
+  "webapp": "2114585366186516481",
+  "params": {
+    "n": 2,
+    "aspect_ratio": "16:9 (Widescreen)"
+  },
+  "prompt": "把景别改为近景：镜头大幅推近到溪边岩石与流水，黄叶树干局部入画，远处瀑布仍可辨。其余全部保持不变：同一处秋日山谷、同一棵黄叶大树与树根、同一道右侧瀑布、同一条溪流与岩石的位置关系、天空与云、光线方向与色温、写实摄影画风与颗粒质感、色彩与细节层次。不要新增或删除主体，不要出现文字、水印、边框。",
+  "prompt_sha1": "fa13e4ec6372a91648e062dfb98c341115c7765a",
+  "anchor": "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle27\\runs\\A-V1-近\\anchor.png",
+  "anchor_sha1": "8a4437475d7729ed04ea51df32d39143bdc03c05",
+  "task_id": "2124680901404348418",
+  "charged": null,
+  "files": [],
+  "per_image": null,
+  "status": "failed",
+  "note": "",
+  "error": "Uploading anchor.png...\nUploaded: api/9c0ba1dddd189efd2bbf88135492a79f809be5e657a33212087c938be2a58621.png\nSubmitting AI app task (webapp 2114585366186516481)...\nTASK_ID:2124680901404348418\nTask ID: 2124680901404348418\nWaiting for result.....{\"error\": \"TASK_FAILED\", \"message\": \"Task failed: [805] 工作流运行失败\"}"
+}

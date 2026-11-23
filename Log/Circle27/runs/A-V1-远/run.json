@@ -1,0 +1,26 @@
+{
+  "id": "A-V1-远",
+  "group": "A-V1",
+  "variable": "景别",
+  "level": "远景",
+  "ts": "2026-11-23 09:38:06",
+  "webapp": "2114585366186516481",
+  "params": {
+    "n": 2,
+    "aspect_ratio": "16:9 (Widescreen)"
+  },
+  "prompt": "把景别改为远景：镜头后退拉远，整片山谷与远山入画，大树与瀑布在画面中变小。其余全部保持不变：同一处秋日山谷、同一棵黄叶大树与树根、同一道右侧瀑布、同一条溪流与岩石的位置关系、天空与云、光线方向与色温、写实摄影画风与颗粒质感、色彩与细节层次。不要新增或删除主体，不要出现文字、水印、边框。",
+  "prompt_sha1": "c94aec74fdfbe0e20786e6fd2b3add7d25dbba24",
+  "anchor": "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle27\\runs\\A-V1-远\\anchor.png",
+  "anchor_sha1": "8a4437475d7729ed04ea51df32d39143bdc03c05",
+  "task_id": "2124678906224271361",
+  "charged": 17.0,
+  "files": [
+    "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle27\\runs\\A-V1-远\\out_1.png",
+    "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle27\\runs\\A-V1-远\\out_2.png"
+  ],
+  "per_image": 8.5,
+  "status": "ok",
+  "note": "",
+  "wall": "100s"
+}

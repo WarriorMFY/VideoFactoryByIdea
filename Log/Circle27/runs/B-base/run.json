@@ -1,0 +1,26 @@
+{
+  "id": "B-base",
+  "group": "B-base",
+  "variable": "基线",
+  "level": "保持原图",
+  "ts": "2026-11-23 09:56:51",
+  "webapp": "2114585366186516481",
+  "params": {
+    "n": 2,
+    "aspect_ratio": "3:4 (Portrait Standard)"
+  },
+  "prompt": "严格保持原图不变：人物长相、发型、服装、姿态、构图、光线、背景、画风全部照原样复刻；不要新增或删除任何内容，不要出现文字、水印、边框。",
+  "prompt_sha1": "2b413da199ed5ed9602bc61fbb5de59e5fc28fb0",
+  "anchor": "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle27\\runs\\B-base\\anchor.png",
+  "anchor_sha1": "c359846cef34ccca331a465ad27c569995ce51f3",
+  "task_id": "2124683585205260289",
+  "charged": 16.49,
+  "files": [
+    "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle27\\runs\\B-base\\out_1.png",
+    "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle27\\runs\\B-base\\out_2.png"
+  ],
+  "per_image": 8.24,
+  "status": "ok",
+  "note": "",
+  "wall": "97s"
+}

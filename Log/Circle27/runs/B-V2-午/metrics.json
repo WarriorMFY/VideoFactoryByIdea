@@ -1,0 +1,47 @@
+{
+ "anchor": {
+  "file": "anchor.png",
+  "size": "880x1184",
+  "luma_mean": 201.6,
+  "luma_std": 38.3,
+  "sat_mean": 10.8,
+  "lap_var": 111.4,
+  "face_ratio": null
+ },
+ "runs": [
+  {
+   "file": "out_1.png",
+   "size": "1248x1664",
+   "ncc_global": 0.9634,
+   "ssim_gray": 0.8986,
+   "edge_ssim": 0.8822,
+   "luma_mean": 198.5,
+   "d_luma_pct": -1.6,
+   "luma_std": 44.1,
+   "sat_mean": 14.9,
+   "d_sat_pct": 38.4,
+   "hist_l1": 0.841,
+   "lap_var": 185.8,
+   "face_ratio": null,
+   "face_ratio_x": null,
+   "face_ssim": null
+  },
+  {
+   "file": "out_2.png",
+   "size": "1248x1664",
+   "ncc_global": 0.94,
+   "ssim_gray": 0.8873,
+   "edge_ssim": 0.8778,
+   "luma_mean": 192.7,
+   "d_luma_pct": -4.4,
+   "luma_std": 43.4,
+   "sat_mean": 15.6,
+   "d_sat_pct": 44.4,
+   "hist_l1": 0.8248,
+   "lap_var": 174.4,
+   "face_ratio": null,
+   "face_ratio_x": null,
+   "face_ssim": null
+  }
+ ]
+}

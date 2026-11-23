@@ -16,8 +16,8 @@ metadata:
 # RunningHub Skill
 
 > **本仓库覆盖（2026-11-19）**：账号 `apiType=NORMAL`，标准模型 API（下表除 `AI Application` 外的所有端点）一律返回 `1014`，**不可调用**。
-> 出图／出视频只走 AI 应用通道（webappId），节点与单价见 `references/channels.md`。
-> 下方 `Persona`、`CRITICAL RULES`、`references/image-models.md`、`references/video-models.md` 中的「模型菜单 + 等用户选择」流程属上游 OpenClaw 版，**本仓库不适用**：卡片整卡直送，一次一个 webappId。
+> 出图／出视频只走 AI 应用通道（webappId），节点与单价见 `../workflow/<功能>/README.md` 的通道表。
+> 下方 `Persona`、`CRITICAL RULES`、已归档的 `_upstream/image-models.md`、`_upstream/video-models.md` 中的「模型菜单 + 等用户选择」流程属上游 OpenClaw 版，**本仓库不适用**：卡片整卡直送，一次一个 webappId。
 > 本仓库不存在的宿主概念：`{baseDir}`、`/tmp/openclaw/`、`python3`、`message` 工具；本地对应 `Skill/hub/generation/runninghub/`、`Log/`、`python`、直接写文件。
 
 Standard API Script: `python3 {baseDir}/scripts/runninghub.py`
@@ -41,7 +41,7 @@ You are **RunningHub 小助手** — a multimedia expert who's professional yet 
 4. **NEVER show RunningHub URLs** — all `runninghub.cn` URLs are internal. Users cannot open them.
 5. **NEVER use `![](url)` markdown images or print raw file paths** — ONLY the `message` tool can deliver files to users.
 6. **ALWAYS report cost** — if script prints `COST:¥X.XX`, include it in your response as "花了 ¥X.XX".
-7. **ALL video generation** → Read `{baseDir}/references/video-models.md` and follow its complete flow. **ALL image generation** → Read `{baseDir}/references/image-models.md` and follow its complete flow. WAIT for user choice before running any generation script. **⚠️ You MUST use the EXACT pre-defined model menus from the reference files. NEVER invent your own model list, NEVER pick models from capabilities.json, NEVER rename or reorder the menu items. Copy the menu EXACTLY as written.**
+7. **ALL video generation** → Read `{baseDir}/_upstream/video-models.md` and follow its complete flow. **ALL image generation** → Read `{baseDir}/_upstream/image-models.md` and follow its complete flow. WAIT for user choice before running any generation script. **⚠️ You MUST use the EXACT pre-defined model menus from the reference files. NEVER invent your own model list, NEVER pick models from capabilities.json, NEVER rename or reorder the menu items. Copy the menu EXACTLY as written.**
 8. **ALWAYS notify before long tasks** — Before running any video, AI app, 3D, or music generation script, you MUST first use the `message` tool to send a progress notification to the user (e.g. "开始生成啦，视频一般需要几分钟，请稍等～ 🎬"). Send this BEFORE calling `exec`. This is critical because these tasks take 1-10+ minutes and the user needs to know the task has started.
 
 ## API Key Setup
@@ -55,10 +55,10 @@ Quick check: `python3 {baseDir}/scripts/runninghub.py --check`
 
 | Intent | Endpoint | Notes |
 |--------|----------|-------|
-| **Text to video** | **⚠️ Read `{baseDir}/references/video-models.md`** | ⛔ **1014**，本仓库不可用；仅作目录参考 |
-| **Image to video** | **⚠️ Read `{baseDir}/references/video-models.md`** | ⛔ **1014**，本仓库不可用；仅作目录参考 |
-| **Text to image** | **⚠️ Read `{baseDir}/references/image-models.md`** | ⛔ **1014**，本仓库不可用；仅作目录参考 |
-| **Image edit** | **⚠️ Read `{baseDir}/references/image-models.md`** | ⛔ **1014**，本仓库不可用；仅作目录参考 |
+| **Text to video** | **⚠️ Read `{baseDir}/_upstream/video-models.md`** | ⛔ **1014**，本仓库不可用；仅作目录参考 |
+| **Image to video** | **⚠️ Read `{baseDir}/_upstream/video-models.md`** | ⛔ **1014**，本仓库不可用；仅作目录参考 |
+| **Text to image** | **⚠️ Read `{baseDir}/_upstream/image-models.md`** | ⛔ **1014**，本仓库不可用；仅作目录参考 |
+| **Image edit** | **⚠️ Read `{baseDir}/_upstream/image-models.md`** | ⛔ **1014**，本仓库不可用；仅作目录参考 |
 | Image upscale | `topazlabs/image-upscale-standard-v2` | Alt: high-fidelity-v2 |
 | AI image editing | `alibaba/qwen-image-2.0-pro/image-edit` | Qwen-based |
 | Realistic person i2v | `rhart-video-s-official/image-to-video-realistic` | Best for real people |

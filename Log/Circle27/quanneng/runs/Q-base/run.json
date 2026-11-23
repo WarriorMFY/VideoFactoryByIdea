@@ -1,0 +1,25 @@
+{
+  "id": "Q-base",
+  "group": "Q-base",
+  "variable": "基线",
+  "level": "保持原图",
+  "ts": "2026-11-23 13:12:06",
+  "wf_id": "2027204046305628162",
+  "mode": "workflow-json-direct",
+  "params": {
+    "seed": 42,
+    "aspectRatio": "3:4",
+    "resolution": "2k"
+  },
+  "prompt": "严格保持原图不变：人物长相、发型、服装、姿态、构图、光线、背景、画风全部照原样复刻；不要新增或删除任何内容，不要出现文字、水印、边框。",
+  "prompt_sha1": "2b413da199ed5ed9602bc61fbb5de59e5fc28fb0",
+  "anchor": "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle27\\quanneng\\runs\\Q-base\\anchor.png",
+  "anchor_sha1": "c359846cef34ccca331a465ad27c569995ce51f3",
+  "task_id": "2124732722009296898",
+  "charged": 75.5,
+  "files": [
+    "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle27\\quanneng\\runs\\Q-base\\out.png"
+  ],
+  "status": "ok",
+  "wall": "63s"
+}

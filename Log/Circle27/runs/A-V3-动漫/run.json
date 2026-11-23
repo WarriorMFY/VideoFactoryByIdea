@@ -1,0 +1,23 @@
+{
+  "id": "A-V3-动漫",
+  "group": "A-V3",
+  "variable": "画风",
+  "level": "动漫赛璐璐",
+  "ts": "2026-11-23 09:55:32",
+  "webapp": "2114585366186516481",
+  "params": {
+    "n": 2,
+    "aspect_ratio": "16:9 (Widescreen)"
+  },
+  "prompt": "把画风改为日式动漫赛璐璐：清晰线稿，平涂色块，简洁高光与阴影，色彩明快。其余全部保持不变：构图与景别、山谷与大树、瀑布与溪流的位置、岩石分布、光线方向与明暗关系、主体形状与细节层次。不要新增或删除主体，不要出现文字、水印、边框。",
+  "prompt_sha1": "c642eb848e86de89a330d5f7ffeddba3c1135c48",
+  "anchor": "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle27\\runs\\A-V3-动漫\\anchor.png",
+  "anchor_sha1": "8a4437475d7729ed04ea51df32d39143bdc03c05",
+  "task_id": "2124683269600665601",
+  "charged": null,
+  "files": [],
+  "per_image": null,
+  "status": "failed",
+  "note": "",
+  "error": "Uploading anchor.png...\nUploaded: api/9c0ba1dddd189efd2bbf88135492a79f809be5e657a33212087c938be2a58621.png\nSubmitting AI app task (webapp 2114585366186516481)...\nTASK_ID:2124683269600665601\nTask ID: 2124683269600665601\nWaiting for result...........{\"error\": \"TASK_FAILED\", \"message\": \"Task failed: [805] 工作流运行失败\"}"
+}

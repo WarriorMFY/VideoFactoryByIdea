@@ -1,0 +1,26 @@
+{
+  "id": "B-V3-平静",
+  "group": "B-V3",
+  "variable": "表情",
+  "level": "平静",
+  "ts": "2026-11-23 10:08:12",
+  "webapp": "2114585366186516481",
+  "params": {
+    "n": 2,
+    "aspect_ratio": "3:4 (Portrait Standard)"
+  },
+  "prompt": "把表情改为平静：眼神平视，嘴角自然放松，不笑。其余全部保持不变：构图与景别、人物长相与五官骨相、发型、服装与姿态、浅灰背景、光线方向与色温、写实摄影画风。不要出现文字、水印、边框。",
+  "prompt_sha1": "59037852de45ce990369db242f20a8f3b411ea1e",
+  "anchor": "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle27\\runs\\B-V3-平静\\anchor.png",
+  "anchor_sha1": "c359846cef34ccca331a465ad27c569995ce51f3",
+  "task_id": "2124686438082760706",
+  "charged": 16.32,
+  "files": [
+    "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle27\\runs\\B-V3-平静\\out_1.png",
+    "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle27\\runs\\B-V3-平静\\out_2.png"
+  ],
+  "per_image": 8.16,
+  "status": "ok",
+  "note": "",
+  "wall": "96s"
+}

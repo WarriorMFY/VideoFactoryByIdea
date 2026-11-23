@@ -1,6 +1,6 @@
 # 首帧图生视频通道
 
-一条通道吃透即可。机械参数（webappId、节点真名、积分区间、换通道纪律）的唯一维护处是 `Skill/hub/generation/runninghub/references/channels.md` §三；本文件只留本链实测与坑，两边不一致先改 hub。
+一条通道吃透即可。机械参数（webappId、节点真名、积分区间）的唯一维护处是 `Skill/hub/generation/workflow/image-to-video/README.md` 的通道表；换通道纪律见 `Skill/hub/generation/runninghub/references/channels.md` §三。本文件只留本链实测与坑，两边不一致先改 hub。
 
 ## 通道
 
@@ -17,7 +17,7 @@
 
 ## 实测价（2026-11）
 
-单价区间与浮动规律以 `Skill/hub/generation/runninghub/references/channels.md` §三 为准（本链实测 16:9·0.6MP·5s 约 22 积分），估价按上限算。
+单价区间与浮动规律以 `Skill/hub/generation/workflow/image-to-video/README.md` 的通道表为准（本链实测 16:9·0.6MP·5s 约 22 积分），估价按上限算。
 
 ## 已知限制
 

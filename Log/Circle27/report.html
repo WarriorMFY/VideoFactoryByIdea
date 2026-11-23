@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Circle27 · 锚图对照报告（Flux3 图生图）</title>
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 14px/1.6 "Segoe UI", "Microsoft YaHei", system-ui, sans-serif;
+         color: #1c2430; background: #eef1f4; }
+  header { background: #16202c; color: #e8edf3; padding: 26px 32px 20px; }
+  header h1 { margin: 0 0 6px; font-size: 21px; font-weight: 650; letter-spacing: .3px; }
+  header .meta { margin: 2px 0; color: #9fb0c2; font-size: 13px; }
+  header .conclusion { margin: 12px 0 0; padding: 10px 14px; background: #22303f; border-left: 3px solid #d9a441;
+                        border-radius: 4px; font-size: 13.5px; }
+  nav { position: sticky; top: 0; z-index: 5; background: #ffffffdd; backdrop-filter: blur(6px);
+         padding: 10px 32px; border-bottom: 1px solid #d8dee5; font-size: 13px; }
+  nav a { color: #245a9c; text-decoration: none; margin-right: 4px; }
+  nav a:hover { text-decoration: underline; }
+  main { padding: 8px 32px 60px; max-width: 1560px; margin: 0 auto; }
+  section { margin-top: 32px; }
+  section h2 { font-size: 16px; margin: 0 0 12px; padding: 8px 0 8px 12px; border-left: 4px solid #245a9c;
+                background: #ffffff; border-radius: 0 4px 4px 0; }
+  .card { background: #fff; border: 1px solid #dfe4ea; border-radius: 8px; padding: 12px 14px 12px;
+           margin-bottom: 16px; box-shadow: 0 1px 2px #0000000a; }
+  .card.failed { background: #f7f8fa; border-style: dashed; }
+  .card-head { display: flex; align-items: baseline; gap: 10px; margin-bottom: 10px; }
+  .lvl { font-weight: 650; font-size: 14.5px; }
+  .tag { color: #245a9c; background: #e8f0fb; padding: 1px 8px; border-radius: 10px; font-size: 12.5px; }
+  .bad { color: #b3261e; background: #fdecea; padding: 1px 8px; border-radius: 10px; font-size: 12.5px; }
+  .cost { margin-left: auto; color: #6b7785; font-size: 12.5px; }
+  img.sheet { display: block; width: 100%; height: auto; max-height: 560px; object-fit: contain;
+               background: #f2f4f6; border: 1px solid #e3e7ec; border-radius: 6px; }
+  .metrics { margin-top: 8px; font-size: 12.5px; color: #44505e; background: #f6f8fa;
+              border-radius: 4px; padding: 6px 10px; }
+  .prompt { margin-top: 8px; font-size: 13px; color: #3d4954; background: #faf7ef;
+             border-left: 3px solid #d9a441; border-radius: 0 4px 4px 0; padding: 8px 12px; }
+  .plabel { display: inline-block; margin-right: 8px; padding: 0 6px; font-size: 11.5px; font-weight: 650;
+             color: #8a6420; background: #f3e8cf; border-radius: 3px; }
+  footer { padding: 24px 32px; color: #7d8894; font-size: 12.5px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Circle27 · 锚图对照报告</h1>
+  <p class="meta">Flux3 图像编辑（webapp 2114585366186516481）｜每条 = 合成对照图【锚图 | out_1 | out_2】+ 输入提示词</p>
+  <p class="meta">15 条成功 / 5 条 805 失败（未扣费）｜实扣 252.45 / 600 积分｜2026-11-23</p>
+  <p class="conclusion">结论：大信号可用（黄昏逆光、人物景别推近、表情）；细节光线与风景景别无效；
+  身份保持不可用（基线也换脸）；画风三档 805 未测成。</p>
+</header>
+<nav><a href="#A-base">A-base</a> · <a href="#A-V1">A-V1</a> · <a href="#A-V2">A-V2</a> · <a href="#A-V3">A-V3</a> · <a href="#B-base">B-base</a> · <a href="#B-V1">B-V1</a> · <a href="#B-V2">B-V2</a> · <a href="#B-V3">B-V3</a></nav>
+<main>
+  <section id="A-base">
+    <h2>A-base · 基线 · 保持原图（风景）</h2>
+    <article class="card">
+      <div class="card-head"><span class="lvl">A-base</span><span class="tag">保持</span>
+        <span class="cost">实扣 20.91</span></div>
+      <img class="sheet" src="runs/A-base/sheet.png" alt="A-base：锚图 | out_1 | out_2" loading="lazy">
+      <div class="metrics">out_1.png：ncc 0.784 · ssim 0.318 · edge 0.182 · Δluma -10.7% · Δsat +9.5% · hist 0.141 ‖ out_2.png：ncc 0.819 · ssim 0.397 · edge 0.232 · Δluma -4.7% · Δsat +5.0% · hist 0.125</div><div class="prompt"><span class="plabel">输入提示词</span>严格保持原图不变：构图、主体、位置关系、光线、画风、色彩与细节全部照原样复刻；不要新增或删除任何内容，不要出现文字、水印、边框。</div>
+    </article>
+  </section>
+  <section id="A-V1">
+    <h2>A-V1 · 变量 = 景别（风景）</h2>
+    <article class="card">
+      <div class="card-head"><span class="lvl">A-V1-远</span><span class="tag">景别 = 远景</span>
+        <span class="cost">实扣 17.00</span></div>
+      <img class="sheet" src="runs/A-V1-远/sheet.png" alt="A-V1-远：锚图 | out_1 | out_2" loading="lazy">
+      <div class="metrics">out_1.png：ncc 0.837 · ssim 0.353 · edge 0.204 · Δluma -7.2% · Δsat +1.3% · hist 0.153 ‖ out_2.png：ncc 0.733 · ssim 0.249 · edge 0.141 · Δluma -6.9% · Δsat +1.8% · hist 0.128</div><div class="prompt"><span class="plabel">输入提示词</span>把景别改为远景：镜头后退拉远，整片山谷与远山入画，大树与瀑布在画面中变小。其余全部保持不变：同一处秋日山谷、同一棵黄叶大树与树根、同一道右侧瀑布、同一条溪流与岩石的位置关系、天空与云、光线方向与色温、写实摄影画风与颗粒质感、色彩与细节层次。不要新增或删除主体，不要出现文字、水印、边框。</div>
+    </article>
+    <article class="card">
+      <div class="card-head"><span class="lvl">A-V1-中</span><span class="tag">景别 = 中景</span>
+        <span class="cost">实扣 15.98</span></div>
+      <img class="sheet" src="runs/A-V1-中/sheet.png" alt="A-V1-中：锚图 | out_1 | out_2" loading="lazy">
+      <div class="metrics">out_1.png：ncc 0.737 · ssim 0.218 · edge 0.132 · Δluma -15.3% · Δsat +4.8% · hist 0.156 ‖ out_2.png：ncc 0.666 · ssim 0.218 · edge 0.116 · Δluma -14.4% · Δsat +2.5% · hist 0.111</div><div class="prompt"><span class="plabel">输入提示词</span>把景别改为中景：镜头推近到溪谷中段，黄叶大树与右侧瀑布占据画面主要位置。其余全部保持不变：同一处秋日山谷、同一棵黄叶大树与树根、同一道右侧瀑布、同一条溪流与岩石的位置关系、天空与云、光线方向与色温、写实摄影画风与颗粒质感、色彩与细节层次。不要新增或删除主体，不要出现文字、水印、边框。</div>
+    </article>
+    <article class="card failed">
+      <div class="card-head"><span class="lvl">A-V1-近</span><span class="bad">805 工作流失败（未扣费）</span>
+        <span class="cost">实扣 —</span></div><div class="prompt"><span class="plabel">输入提示词</span>把景别改为近景：镜头大幅推近到溪边岩石与流水，黄叶树干局部入画，远处瀑布仍可辨。其余全部保持不变：同一处秋日山谷、同一棵黄叶大树与树根、同一道右侧瀑布、同一条溪流与岩石的位置关系、天空与云、光线方向与色温、写实摄影画风与颗粒质感、色彩与细节层次。不要新增或删除主体，不要出现文字、水印、边框。</div>
+    </article>
+  </section>
+  <section id="A-V2">
+    <h2>A-V2 · 变量 = 光线（风景）</h2>
+    <article class="card">
+      <div class="card-head"><span class="lvl">A-V2-晨</span><span class="tag">光线 = 清晨柔光</span>
+        <span class="cost">实扣 17.68</span></div>
+      <img class="sheet" src="runs/A-V2-晨/sheet.png" alt="A-V2-晨：锚图 | out_1 | out_2" loading="lazy">
+      <div class="metrics">out_1.png：ncc 0.821 · ssim 0.314 · edge 0.178 · Δluma -1.0% · Δsat -5.0% · hist 0.255 ‖ out_2.png：ncc 0.833 · ssim 0.336 · edge 0.183 · Δluma -5.6% · Δsat -4.1% · hist 0.266</div><div class="prompt"><span class="plabel">输入提示词</span>把光线改为清晨柔光：左侧低角度暖白日光，光比小，阴影边缘柔和。其余全部保持不变：构图与景别、山谷与大树、瀑布与溪流、岩石分布、写实摄影画风、色彩关系与细节层次。不要新增或删除主体，不要出现文字、水印、边框。</div>
+    </article>
+    <article class="card">
+      <div class="card-head"><span class="lvl">A-V2-午</span><span class="tag">光线 = 正午硬光</span>
+        <span class="cost">实扣 18.53</span></div>
+      <img class="sheet" src="runs/A-V2-午/sheet.png" alt="A-V2-午：锚图 | out_1 | out_2" loading="lazy">
+      <div class="metrics">out_1.png：ncc 0.805 · ssim 0.288 · edge 0.164 · Δluma -10.3% · Δsat +2.6% · hist 0.261 ‖ out_2.png：ncc 0.712 · ssim 0.217 · edge 0.127 · Δluma -11.1% · Δsat +0.0% · hist 0.285</div><div class="prompt"><span class="plabel">输入提示词</span>把光线改为正午硬光：顶光直射，光比大，阴影短而边缘锐利，高光更亮。其余全部保持不变：构图与景别、山谷与大树、瀑布与溪流、岩石分布、写实摄影画风、色彩关系与细节层次。不要新增或删除主体，不要出现文字、水印、边框。</div>
+    </article>
+    <article class="card">
+      <div class="card-head"><span class="lvl">A-V2-昏</span><span class="tag">光线 = 黄昏逆光</span>
+        <span class="cost">实扣 17.34</span></div>
+      <img class="sheet" src="runs/A-V2-昏/sheet.png" alt="A-V2-昏：锚图 | out_1 | out_2" loading="lazy">
+      <div class="metrics">out_1.png：ncc 0.787 · ssim 0.260 · edge 0.162 · Δluma -37.3% · Δsat +27.3% · hist 0.342 ‖ out_2.png：ncc 0.730 · ssim 0.257 · edge 0.154 · Δluma -33.8% · Δsat +27.2% · hist 0.404</div><div class="prompt"><span class="plabel">输入提示词</span>把光线改为黄昏逆光：太阳在画面右后方低角度照射，暖橙轮廓光，阴影拉长，整体色温偏暖。其余全部保持不变：构图与景别、山谷与大树、瀑布与溪流、岩石分布、写实摄影画风、色彩关系与细节层次。不要新增或删除主体，不要出现文字、水印、边框。</div>
+    </article>
+  </section>
+  <section id="A-V3">
+    <h2>A-V3 · 变量 = 画风（风景）</h2>
+    <article class="card failed">
+      <div class="card-head"><span class="lvl">A-V3-水墨</span><span class="bad">805 工作流失败（未扣费）</span>
+        <span class="cost">实扣 —</span></div><div class="prompt"><span class="plabel">输入提示词</span>把画风改为中国传统水墨画：宣纸质感，墨色浓淡分层，细笔勾勒山石树木，留白，去掉照片质感。其余全部保持不变：构图与景别、山谷与大树、瀑布与溪流的位置、岩石分布、光线方向与明暗关系、主体形状与细节层次。不要新增或删除主体，不要出现文字、水印、边框。</div>
+    </article>
+    <article class="card failed">
+      <div class="card-head"><span class="lvl">A-V3-油画</span><span class="bad">805 工作流失败（未扣费）</span>
+        <span class="cost">实扣 —</span></div><div class="prompt"><span class="plabel">输入提示词</span>把画风改为古典油画：厚涂笔触，颜料肌理，色彩浓郁，边缘带笔触感。其余全部保持不变：构图与景别、山谷与大树、瀑布与溪流的位置、岩石分布、光线方向与明暗关系、主体形状与细节层次。不要新增或删除主体，不要出现文字、水印、边框。</div>
+    </article>
+    <article class="card failed">
+      <div class="card-head"><span class="lvl">A-V3-动漫</span><span class="bad">805 工作流失败（未扣费）</span>
+        <span class="cost">实扣 —</span></div><div class="prompt"><span class="plabel">输入提示词</span>把画风改为日式动漫赛璐璐：清晰线稿，平涂色块，简洁高光与阴影，色彩明快。其余全部保持不变：构图与景别、山谷与大树、瀑布与溪流的位置、岩石分布、光线方向与明暗关系、主体形状与细节层次。不要新增或删除主体，不要出现文字、水印、边框。</div>
+    </article>
+  </section>
+  <section id="B-base">
+    <h2>B-base · 基线 · 保持原图（人物）</h2>
+    <article class="card">
+      <div class="card-head"><span class="lvl">B-base</span><span class="tag">保持原图</span>
+        <span class="cost">实扣 16.49</span></div>
+      <img class="sheet" src="runs/B-base/sheet.png" alt="B-base：锚图 | out_1 | out_2" loading="lazy">
+      <div class="metrics">out_1.png：ncc 0.890 · ssim 0.859 · edge 0.856 · Δluma -0.7% · Δsat +37.2% · hist 0.775 ‖ out_2.png：ncc 0.917 · ssim 0.894 · edge 0.888 · Δluma +1.3% · Δsat +41.4% · hist 0.883</div><div class="prompt"><span class="plabel">输入提示词</span>严格保持原图不变：人物长相、发型、服装、姿态、构图、光线、背景、画风全部照原样复刻；不要新增或删除任何内容，不要出现文字、水印、边框。</div>
+    </article>
+  </section>
+  <section id="B-V1">
+    <h2>B-V1 · 变量 = 景别（人物）</h2>
+    <article class="card failed">
+      <div class="card-head"><span class="lvl">B-V1-七分身</span><span class="bad">805 工作流失败（未扣费）</span>
+        <span class="cost">实扣 —</span></div><div class="prompt"><span class="plabel">输入提示词</span>把景别改为七分身：镜头推近，画面下缘裁到大腿中部，人物占据画面更大比例。其余全部保持不变：同一人物、同一张脸与发型、同一套白色针织上衣与浅蓝牛仔裤、同一姿态与手插口袋动作、同一浅灰摄影棚背景、同一光线、写实摄影画风与肤质。不要出现文字、水印、边框。</div>
+    </article>
+    <article class="card">
+      <div class="card-head"><span class="lvl">B-V1-半身</span><span class="tag">景别 = 半身</span>
+        <span class="cost">实扣 18.02</span></div>
+      <img class="sheet" src="runs/B-V1-半身/sheet.png" alt="B-V1-半身：锚图 | out_1 | out_2" loading="lazy">
+      <div class="metrics">out_1.png：ncc 0.421 · ssim 0.754 · edge 0.793 · Δluma -2.9% · Δsat +66.1% · hist 0.855 ‖ out_2.png：ncc 0.340 · ssim 0.736 · edge 0.790 · Δluma -4.5% · Δsat +88.4% · hist 0.798</div><div class="prompt"><span class="plabel">输入提示词</span>把景别改为半身：镜头继续推近，画面下缘裁到腰胯，人物上半身占据画面主要区域。其余全部保持不变：同一人物、同一张脸与发型、同一套白色针织上衣与浅蓝牛仔裤、同一姿态与手插口袋动作、同一浅灰摄影棚背景、同一光线、写实摄影画风与肤质。不要出现文字、水印、边框。</div>
+    </article>
+    <article class="card">
+      <div class="card-head"><span class="lvl">B-V1-胸像</span><span class="tag">景别 = 胸像</span>
+        <span class="cost">实扣 17.85</span></div>
+      <img class="sheet" src="runs/B-V1-胸像/sheet.png" alt="B-V1-胸像：锚图 | out_1 | out_2" loading="lazy">
+      <div class="metrics">out_1.png：ncc 0.063 · ssim 0.541 · edge 0.663 · Δluma -20.0% · Δsat +273.9% · hist 0.913 ‖ out_2.png：ncc 0.005 · ssim 0.603 · edge 0.719 · Δluma -13.5% · Δsat +251.7% · hist 0.719</div><div class="prompt"><span class="plabel">输入提示词</span>把景别改为胸像：镜头大幅推近，画面下缘裁到胸口，头部与肩部占据画面主体。其余全部保持不变：同一人物、同一张脸与发型、同一套白色针织上衣与浅蓝牛仔裤、同一姿态与手插口袋动作、同一浅灰摄影棚背景、同一光线、写实摄影画风与肤质。不要出现文字、水印、边框。</div>
+    </article>
+  </section>
+  <section id="B-V2">
+    <h2>B-V2 · 变量 = 光线（人物）</h2>
+    <article class="card">
+      <div class="card-head"><span class="lvl">B-V2-晨</span><span class="tag">光线 = 清晨柔光</span>
+        <span class="cost">实扣 15.13</span></div>
+      <img class="sheet" src="runs/B-V2-晨/sheet.png" alt="B-V2-晨：锚图 | out_1 | out_2" loading="lazy">
+      <div class="metrics">out_1.png：ncc 0.881 · ssim 0.852 · edge 0.860 · Δluma -4.7% · Δsat +216.1% · hist 0.896 ‖ out_2.png：ncc 0.862 · ssim 0.866 · edge 0.875 · Δluma -10.3% · Δsat +280.5% · hist 0.903</div><div class="prompt"><span class="plabel">输入提示词</span>把光线改为清晨柔光：左前方大面积柔光，光比小，阴影浅而柔。其余全部保持不变：构图与景别（全身站姿）、人物长相与发型、服装与姿态、浅灰背景、写实摄影画风与肤质。不要出现文字、水印、边框。</div>
+    </article>
+    <article class="card">
+      <div class="card-head"><span class="lvl">B-V2-午</span><span class="tag">光线 = 正午硬光</span>
+        <span class="cost">实扣 15.13</span></div>
+      <img class="sheet" src="runs/B-V2-午/sheet.png" alt="B-V2-午：锚图 | out_1 | out_2" loading="lazy">
+      <div class="metrics">out_1.png：ncc 0.963 · ssim 0.899 · edge 0.882 · Δluma -1.6% · Δsat +38.4% · hist 0.841 ‖ out_2.png：ncc 0.940 · ssim 0.887 · edge 0.878 · Δluma -4.4% · Δsat +44.4% · hist 0.825</div><div class="prompt"><span class="plabel">输入提示词</span>把光线改为正午硬光：顶部硬光，鼻下与下颌阴影清晰，光比大。其余全部保持不变：构图与景别（全身站姿）、人物长相与发型、服装与姿态、浅灰背景、写实摄影画风与肤质。不要出现文字、水印、边框。</div>
+    </article>
+    <article class="card">
+      <div class="card-head"><span class="lvl">B-V2-昏</span><span class="tag">光线 = 黄昏逆光</span>
+        <span class="cost">实扣 14.79</span></div>
+      <img class="sheet" src="runs/B-V2-昏/sheet.png" alt="B-V2-昏：锚图 | out_1 | out_2" loading="lazy">
+      <div class="metrics">out_1.png：ncc 0.778 · ssim 0.756 · edge 0.876 · Δluma -39.9% · Δsat +606.2% · hist 0.932 ‖ out_2.png：ncc 0.821 · ssim 0.794 · edge 0.864 · Δluma -31.3% · Δsat +491.5% · hist 0.945</div><div class="prompt"><span class="plabel">输入提示词</span>把光线改为黄昏逆光：右后方低角度暖光，发丝与肩线出现暖橙轮廓光，正面略暗。其余全部保持不变：构图与景别（全身站姿）、人物长相与发型、服装与姿态、浅灰背景、写实摄影画风与肤质。不要出现文字、水印、边框。</div>
+    </article>
+  </section>
+  <section id="B-V3">
+    <h2>B-V3 · 变量 = 表情（人物）</h2>
+    <article class="card">
+      <div class="card-head"><span class="lvl">B-V3-平静</span><span class="tag">表情 = 平静</span>
+        <span class="cost">实扣 16.32</span></div>
+      <img class="sheet" src="runs/B-V3-平静/sheet.png" alt="B-V3-平静：锚图 | out_1 | out_2" loading="lazy">
+      <div class="metrics">out_1.png：ncc 0.949 · ssim 0.881 · edge 0.875 · Δluma +0.6% · Δsat +13.9% · hist 0.855 ‖ out_2.png：ncc 0.971 · ssim 0.910 · edge 0.907 · Δluma +1.1% · Δsat +14.5% · hist 0.780</div><div class="prompt"><span class="plabel">输入提示词</span>把表情改为平静：眼神平视，嘴角自然放松，不笑。其余全部保持不变：构图与景别、人物长相与五官骨相、发型、服装与姿态、浅灰背景、光线方向与色温、写实摄影画风。不要出现文字、水印、边框。</div>
+    </article>
+    <article class="card">
+      <div class="card-head"><span class="lvl">B-V3-微笑</span><span class="tag">表情 = 微笑</span>
+        <span class="cost">实扣 14.11</span></div>
+      <img class="sheet" src="runs/B-V3-微笑/sheet.png" alt="B-V3-微笑：锚图 | out_1 | out_2" loading="lazy">
+      <div class="metrics">out_1.png：ncc 0.975 · ssim 0.910 · edge 0.905 · Δluma -0.0% · Δsat +14.4% · hist 0.857 ‖ out_2.png：ncc 0.937 · ssim 0.876 · edge 0.874 · Δluma +1.6% · Δsat +2.1% · hist 0.831</div><div class="prompt"><span class="plabel">输入提示词</span>把表情改为微笑：嘴角上扬，眼神柔和。其余全部保持不变：构图与景别、人物长相与五官骨相、发型、服装与姿态、浅灰背景、光线方向与色温、写实摄影画风。不要出现文字、水印、边框。</div>
+    </article>
+    <article class="card">
+      <div class="card-head"><span class="lvl">B-V3-惊讶</span><span class="tag">表情 = 惊讶</span>
+        <span class="cost">实扣 17.17</span></div>
+      <img class="sheet" src="runs/B-V3-惊讶/sheet.png" alt="B-V3-惊讶：锚图 | out_1 | out_2" loading="lazy">
+      <div class="metrics">out_1.png：ncc 0.961 · ssim 0.903 · edge 0.900 · Δluma +1.3% · Δsat +21.5% · hist 0.848 ‖ out_2.png：ncc 0.933 · ssim 0.874 · edge 0.875 · Δluma +0.2% · Δsat +19.7% · hist 0.878</div><div class="prompt"><span class="plabel">输入提示词</span>把表情改为惊讶：眉毛抬起，眼睛睁大，嘴唇微张。其余全部保持不变：构图与景别、人物长相与五官骨相、发型、服装与姿态、浅灰背景、光线方向与色温、写实摄影画风。不要出现文字、水印、边框。</div>
+    </article>
+  </section>
+</main>
+<footer>合成图与提示词原件：runs/&lt;id&gt;/（sheet.png / prompt.txt / metrics.json）· 完整结论见 实验报告单.md</footer>
+</body>
+</html>

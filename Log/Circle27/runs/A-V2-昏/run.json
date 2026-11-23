@@ -1,0 +1,26 @@
+{
+  "id": "A-V2-昏",
+  "group": "A-V2",
+  "variable": "光线",
+  "level": "黄昏逆光",
+  "ts": "2026-11-23 09:51:06",
+  "webapp": "2114585366186516481",
+  "params": {
+    "n": 2,
+    "aspect_ratio": "16:9 (Widescreen)"
+  },
+  "prompt": "把光线改为黄昏逆光：太阳在画面右后方低角度照射，暖橙轮廓光，阴影拉长，整体色温偏暖。其余全部保持不变：构图与景别、山谷与大树、瀑布与溪流、岩石分布、写实摄影画风、色彩关系与细节层次。不要新增或删除主体，不要出现文字、水印、边框。",
+  "prompt_sha1": "9210f71f33310ee25d1ed7b13a8362a1af61322f",
+  "anchor": "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle27\\runs\\A-V2-昏\\anchor.png",
+  "anchor_sha1": "8a4437475d7729ed04ea51df32d39143bdc03c05",
+  "task_id": "2124682146655469570",
+  "charged": 17.34,
+  "files": [
+    "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle27\\runs\\A-V2-昏\\out_1.png",
+    "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle27\\runs\\A-V2-昏\\out_2.png"
+  ],
+  "per_image": 8.67,
+  "status": "ok",
+  "note": "",
+  "wall": "102s"
+}

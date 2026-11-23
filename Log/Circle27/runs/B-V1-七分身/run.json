@@ -1,0 +1,23 @@
+{
+  "id": "B-V1-七分身",
+  "group": "B-V1",
+  "variable": "景别",
+  "level": "七分身",
+  "ts": "2026-11-23 09:58:41",
+  "webapp": "2114585366186516481",
+  "params": {
+    "n": 2,
+    "aspect_ratio": "3:4 (Portrait Standard)"
+  },
+  "prompt": "把景别改为七分身：镜头推近，画面下缘裁到大腿中部，人物占据画面更大比例。其余全部保持不变：同一人物、同一张脸与发型、同一套白色针织上衣与浅蓝牛仔裤、同一姿态与手插口袋动作、同一浅灰摄影棚背景、同一光线、写实摄影画风与肤质。不要出现文字、水印、边框。",
+  "prompt_sha1": "efd352b9858cebf8688c6b3c2194109c7318f263",
+  "anchor": "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle27\\runs\\B-V1-七分身\\anchor.png",
+  "anchor_sha1": "c359846cef34ccca331a465ad27c569995ce51f3",
+  "task_id": "2124684040450822146",
+  "charged": null,
+  "files": [],
+  "per_image": null,
+  "status": "failed",
+  "note": "",
+  "error": "Uploading anchor.png...\nUploaded: api/7ac9cf824f1272326509cf62df2d729669ee6c897784c84405fb90dc1c82ecc6.png\nSubmitting AI app task (webapp 2114585366186516481)...\nTASK_ID:2124684040450822146\nTask ID: 2124684040450822146\nWaiting for result......{\"error\": \"TASK_FAILED\", \"message\": \"Task failed: [805] 工作流运行失败\"}"
+}

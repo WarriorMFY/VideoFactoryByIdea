@@ -1,0 +1,25 @@
+{
+  "id": "Q-A-V1-中",
+  "group": "Q-A-V1",
+  "variable": "景别",
+  "level": "中景",
+  "ts": "2026-11-23 13:32:47",
+  "wf_id": "2027204046305628162",
+  "mode": "workflow-json-direct",
+  "params": {
+    "seed": 42,
+    "aspectRatio": "16:9",
+    "resolution": "1k"
+  },
+  "prompt": "把景别改为中景：镜头推近到溪谷中段，黄叶大树与右侧瀑布占据画面主要位置。其余全部保持不变：同一处秋日山谷、同一棵黄叶大树与树根、同一道右侧瀑布、同一条溪流与岩石的位置关系、天空与云、光线方向与色温、写实摄影画风与颗粒质感、色彩与细节层次。不要新增或删除主体，不要出现文字、水印、边框。",
+  "prompt_sha1": "e696de740171ead981555a4fbfb64f664ca10c2a",
+  "anchor": "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle27\\quanneng\\runs\\Q-A-V1-中\\anchor.png",
+  "anchor_sha1": "8a4437475d7729ed04ea51df32d39143bdc03c05",
+  "task_id": "2124737923231481857",
+  "charged": 50.26,
+  "files": [
+    "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle27\\quanneng\\runs\\Q-A-V1-中\\out.png"
+  ],
+  "status": "ok",
+  "wall": "48s"
+}

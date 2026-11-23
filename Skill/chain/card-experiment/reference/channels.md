@@ -1,6 +1,6 @@
 # 通道与节点（本链默认值）
 
-> 机械参数的唯一维护处是 `Skill/hub/generation/runninghub/references/channels.md`（webappId、节点真名、档位、单价区间、换通道纪律）。本文件只留**本链脚本的默认值**与踩过的坑；两边不一致先改 hub，再改这里。
+> 机械参数的唯一维护处是 `Skill/hub/generation/workflow/` 下各功能 README 的通道表（webappId、节点真名、档位、单价区间）；换通道纪律见 `Skill/hub/generation/runninghub/references/channels.md` §三。本文件只留**本链脚本的默认值**与踩过的坑；两边不一致先改 hub，再改这里。
 > 观察类结论（帧数实测、切点实际落在何处、积分落在哪个区间等）走 `evidence/`，人工验收后才写。
 > 账号 `apiType=NORMAL`，标准模型 API 一律报 `1014`（仅企业级共享 Key）；出图出视频全部走 AI 应用通道，实例 `default`（24G）。
 
@@ -12,7 +12,7 @@
 | 文生视频 | `2085304953094107137` | `250:prompt`、`115:aspect_ratio`、`225:select=1`（480P）、`205:select=1`（5s） |
 | 首帧图生视频 | `2113790012012720129` | `140:image`（首帧）、`142:value`（prompt）、`133:value`（秒）、`115:megapixels=0.6` |
 
-三条通道的完整节点表、画幅枚举（`1:1`／`2:3`／`3:2`／`3:4`／`4:3`／`9:16`／`16:9`／`21:9`）、`231`–`239` 多参图位与 `247`–`249` 音频位语义（未验）、单价区间，见 hub 的 `references/channels.md`。
+三条通道的完整节点表、画幅枚举（`1:1`／`2:3`／`3:2`／`3:4`／`4:3`／`9:16`／`16:9`／`21:9`）、`231`–`239` 多参图位与 `247`–`249` 音频位语义（未验）、单价区间，见 `Skill/hub/generation/workflow/` 下 text-to-image、text-to-video、image-to-video 的 README 通道表。
 
 ## 三个坑
 

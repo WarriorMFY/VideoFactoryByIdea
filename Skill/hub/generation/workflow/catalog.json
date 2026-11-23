@@ -1,0 +1,872 @@
+[
+ {
+  "task": "image-to-video",
+  "count": 72,
+  "sample": "rhart-video/sparkvideo-2.0/image-to-video",
+  "sample_cn": "Seedance2.0/图生视频",
+  "modality": "IMAGE:firstFrameUrl, IMAGE:lastFrameUrl",
+  "with_media": 72,
+  "endpoints": [
+   "rhart-video/sparkvideo-2.0/image-to-video",
+   "rhart-video/sparkvideo-2.0-fast/image-to-video",
+   "alibaba/wan-2.7/image-to-video",
+   "rhart-video-s/image-to-video-pro-deprecated",
+   "pixverse-v6/image-to-video",
+   "alibaba/wan-2.5-preview/image-to-video",
+   "bytedance/seedance-2.0-global/image-to-video",
+   "bytedance/seedance-2.0-global-fast/image-to-video",
+   "rhart-video-v3.1-lite-official/image-to-video",
+   "alibaba/happyhorse-1.0/image-to-video",
+   "kling-v3-4k/image-to-video",
+   "kling-video-o3-4k/image-to-video",
+   "skyreels-v4/image-to-video-std",
+   "skyreels-v4/image-to-video-fast",
+   "gemini-omni-flash/image-to-video",
+   "rhart-video-s/image-to-video-asyn",
+   "pixverse-v5.5/image-to-video",
+   "rhart-video-r/gen4-turbo-official/image-to-video",
+   "rhart-video-r/gen4-turbo/image-to-video",
+   "vidu/image-to-video-q3-pro-fast",
+   "pixverse-v5.6/image-to-video",
+   "higgsfield/dop/image-to-video",
+   "rhart-video-v3.1-lite/image-to-video",
+   "pixverse-c1/image-to-video",
+   "alibaba/wan-2.7-spicy/image-to-video",
+   "rhart-video-g-official/image-to-video-v1.5",
+   "alibaba/happyhorse-1.1/image-to-video",
+   "rhart-video/sparkvideo-2.0-mini/image-to-video",
+   "bytedance/seedance-2.0-global-mini/image-to-video",
+   "kling-v3-turbo-std/image-to-video",
+   "kling-v3-turbo-pro/image-to-video",
+   "kling-v2.6-std/image-to-video",
+   "minimax/hailuo-h3/image-to-video",
+   "rhart-video-flux3/image-to-video",
+   "minimax/hailuo-h3/regeneration-image-to-video",
+   "bytedance/seedance-2.5-token/image-to-video",
+   "bytedance/seedance-2.5-global-token/image-to-video",
+   "alibaba/wan-3.0/image-to-video",
+   "youchuan/image-to-video",
+   "seedance-v1.5-pro/image-to-video-fast",
+   "seedance-v1.5-pro/image-to-video",
+   "alibaba/wan-2.6/image-to-video-flash",
+   "alibaba/wan-2.6/image-to-video",
+   "vidu/image-to-video-q2-turbo",
+   "vidu/image-to-video-q2-pro-fast",
+   "vidu/image-to-video-q2-pro",
+   "vidu/image-to-video-q3-turbo",
+   "vidu/image-to-video-q3-pro",
+   "minimax/hailuo-2.3-fast-pro/image-to-video",
+   "minimax/hailuo-2.3-fast/image-to-video",
+   "minimax/hailuo-2.3/image-to-video-pro",
+   "minimax/hailuo-2.3/i2v-standard",
+   "minimax/hailuo-02/i2v-standard",
+   "minimax/hailuo-02/i2v-pro",
+   "rhart-video-g-official/image-to-video",
+   "rhart-video-g/image-to-video",
+   "rhart-video-v3.1-fast-official/image-to-video",
+   "rhart-video-v3.1-pro-official/image-to-video",
+   "rhart-video-v3.1-fast/image-to-video",
+   "rhart-video-v3.1-pro/image-to-video",
+   "kling-v2.5-turbo-std/image-to-video",
+   "kling-v2.5-turbo-pro/image-to-video",
+   "kling-v2.6-pro/image-to-video",
+   "kling-video-o1/image-to-video",
+   "kling-video-o3-std/image-to-video",
+   "kling-video-o3-pro/image-to-video",
+   "kling-v3.0-std/image-to-video",
+   "kling-v3.0-pro/image-to-video",
+   "rhart-video-s-official/image-to-video-realistic",
+   "rhart-video-s-official/image-to-video-pro",
+   "rhart-video-s-official/image-to-video",
+   "rhart-video-s/image-to-video"
+  ]
+ },
+ {
+  "task": "text-to-video",
+  "count": 60,
+  "sample": "rhart-video/sparkvideo-2.0/text-to-video",
+  "sample_cn": "Seedance2.0/文生视频",
+  "modality": "(text only)",
+  "with_media": 3,
+  "endpoints": [
+   "rhart-video/sparkvideo-2.0/text-to-video",
+   "rhart-video/sparkvideo-2.0-fast/text-to-video",
+   "alibaba/wan-2.7/text-to-video",
+   "rhart-video-s/text-to-video-pro-deprecated",
+   "pixverse-v6/text-to-video",
+   "alibaba/wan-2.5-preview/text-to-video",
+   "bytedance/seedance-2.0-global/text-to-video",
+   "bytedance/seedance-2.0-global-fast/text-to-video",
+   "rhart-video-v3.1-lite-official/text-to-video",
+   "alibaba/happyhorse-1.0/text-to-video",
+   "kling-v3-4k/text-to-video",
+   "kling-video-o3-4k/text-to-video",
+   "skyreels-v4/text-to-video-std",
+   "kling-v2.5-turbo-std/text-to-video",
+   "skyreels-v4/text-to-video-fast",
+   "gemini-omni-flash/text-to-video",
+   "pixverse-v5.5/text-to-video",
+   "rhart-video/ltx-2/text-to-video-lora",
+   "vidu/text-to-video-q3-pro-fast",
+   "pixverse-v5.6/text-to-video",
+   "rhart-video-v3.1-lite/text-to-video",
+   "pixverse-c1/text-to-video",
+   "alibaba/happyhorse-1.1/text-to-video",
+   "rhart-video/sparkvideo-2.0-mini/text-to-video",
+   "bytedance/seedance-2.0-global-mini/text-to-video",
+   "kling-v3-turbo-std/text-to-video",
+   "kling-v3-turbo-pro/text-to-video",
+   "kling-v2.6-std/text-to-video",
+   "minimax/hailuo-h3/text-to-video",
+   "rhart-video-flux3/text-to-video",
+   "minimax/hailuo-h3/regeneration-text-to-video",
+   "bytedance/seedance-2.5-token/text-to-video",
+   "bytedance/seedance-2.5-global-token/text-to-video",
+   "rhart-video-g-official/text-to-video-v1.5",
+   "seedance-v1.5-pro/text-to-video-fast",
+   "seedance-v1.5-pro/text-to-video",
+   "alibaba/wan-2.6/text-to-video",
+   "vidu/text-to-video",
+   "vidu/text-to-video-q3-turbo",
+   "vidu/text-to-video-q3-pro",
+   "minimax/hailuo-2.3/t2v-standard",
+   "minimax/hailuo-02/t2v-standard",
+   "minimax/hailuo-2.3/t2v-pro",
+   "minimax/hailuo-02/t2v-pro",
+   "rhart-video-g-official/text-to-video",
+   "rhart-video-g/text-to-video",
+   "rhart-video-v3.1-fast-official/text-to-video",
+   "rhart-video-v3.1-pro-official/text-to-video",
+   "rhart-video-v3.1-fast/text-to-video",
+   "rhart-video-v3.1-pro/text-to-video",
+   "kling-v2.5-turbo-pro/text-to-video",
+   "kling-v2.6-pro/text-to-video",
+   "kling-video-o1/text-to-video",
+   "kling-video-o3-std/text-to-video",
+   "kling-video-o3-pro/text-to-video",
+   "kling-v3.0-std/text-to-video",
+   "kling-v3.0-pro/text-to-video",
+   "rhart-video-s-official/text-to-video-pro",
+   "rhart-video-s-official/text-to-video",
+   "rhart-video-s/text-to-video"
+  ]
+ },
+ {
+  "task": "text-to-image",
+  "count": 42,
+  "sample": "alibaba/qwen-image-2.0-pro/text-to-image",
+  "sample_cn": "千问2.0Pro-文生图",
+  "modality": "(text only)",
+  "with_media": 9,
+  "endpoints": [
+   "alibaba/qwen-image-2.0-pro/text-to-image",
+   "alibaba/qwen-image-2.0/text-to-image",
+   "alibaba/wan-2.7/text-to-image",
+   "alibaba/wan-2.7/text-to-image-pro",
+   "alibaba/wan-2.5-preview/text-to-image",
+   "rhart-image-g-2/text-to-image",
+   "rhart-image-g-1.5/text-to-image-[Deprecated]",
+   "rhart-image-g-2-official/text-to-image",
+   "rhart-image-x-official/text-to-image",
+   "youchuan/text-to-image-v81",
+   "rhart-imagine-image-quality/text-to-image",
+   "bytedance/jimeng-4.6/text-to-image",
+   "luma/uni-1/text-to-image",
+   "luma/uni-1-max/text-to-image",
+   "rhart-image-n-g31-flash-lite/text-to-image",
+   "rhart-image-n-g31-flash-lite-official/text-to-image",
+   "youchuan/text-to-image-v82",
+   "seedream-v5-pro/text-to-image",
+   "dola-Seedream-5.0-pro/text-to-image",
+   "alibaba/qwen-image-3.0-pro/text-to-image",
+   "alibaba/qwen-image-3.0/text-to-image",
+   "youchuan/text-to-image-v8.2-fast",
+   "youchuan/text-to-image-v8.2-turbo",
+   "rhart-image-g-1.5-official/text-to-image",
+   "rhart-image-n-g31-flash-official/text-to-image",
+   "youchuan/text-to-image-niji6",
+   "youchuan/text-to-image-v61",
+   "youchuan/text-to-image-v6",
+   "youchuan/text-to-image-niji7",
+   "youchuan/text-to-image-v7",
+   "rhart-image-g/text-to-image",
+   "rhart-image-v1-official/text-to-image",
+   "rhart-image-v1/text-to-image",
+   "seedream-v4/text-to-image",
+   "seedream-v4.5/text-to-image",
+   "seedream-v5-lite/text-to-image",
+   "rhart-image-n-pro-official/text-to-image-ultra",
+   "rhart-image-n-pro-official/text-to-image",
+   "rhart-image-n-g31-flash/text-to-image",
+   "rhart-image-g-4/text-to-image",
+   "rhart-image-g-3/text-to-image",
+   "rhart-image-n-pro/text-to-image"
+  ]
+ },
+ {
+  "task": "image-to-image",
+  "count": 35,
+  "sample": "rhart-image-n-g31-flash-official/image-to-image",
+  "sample_cn": "全能图片V2-图生图-官方稳定版",
+  "modality": "IMAGE:imageUrls*14",
+  "with_media": 35,
+  "endpoints": [
+   "rhart-image-n-g31-flash-official/image-to-image",
+   "rhart-image-g-1.5-official/image-to-image",
+   "rhart-image-v1-official/edit",
+   "rhart-image-g/image-to-image",
+   "alibaba/wan-2.7/image-edit",
+   "alibaba/wan-2.7/image-edit-pro",
+   "alibaba/wan-2.5-preview/image-to-image",
+   "rhart-image-g-2/image-to-image",
+   "rhart-image-g-2-official/image-to-image",
+   "rhart-image-x-official/edit",
+   "rhart-imagine-image-quality/edit",
+   "bytedance/jimeng-4.6/image-to-image",
+   "higgsfield/soul/image-to-image",
+   "luma/uni-1/image-to-image",
+   "luma/uni-1/image-edit",
+   "luma/uni-1-max/image-to-image",
+   "luma/uni-1-max/image-edit",
+   "rhart-image-n-g31-flash-lite/image-to-image",
+   "rhart-image-n-g31-flash-lite-official/image-to-image",
+   "seedream-v5-pro/image-to-image",
+   "dola-Seedream-5.0-pro/image-to-image",
+   "alibaba/qwen-image-3.0-pro/image-edit",
+   "alibaba/qwen-image-3.0/image-edit",
+   "alibaba/qwen-image-2.0/image-edit",
+   "alibaba/qwen-image-2.0-pro/image-edit",
+   "rhart-image-v1/edit",
+   "seedream-v4/image-to-image",
+   "seedream-v4.5/image-to-image",
+   "seedream-v5-lite/image-to-image",
+   "rhart-image-n-pro-official/edit-ultra",
+   "rhart-image-n-pro-official/edit",
+   "rhart-image-n-g31-flash/image-to-image",
+   "rhart-image-g-4/image-to-image",
+   "rhart-image-g-3/image-to-image",
+   "rhart-image-n-pro/edit"
+  ]
+ },
+ {
+  "task": "reference-to-video",
+  "count": 25,
+  "sample": "kling-video-o1-std/refrence-to-video",
+  "sample_cn": "可灵参考生视频o1",
+  "modality": "IMAGE:imageUrls*7, VIDEO:videoUrl",
+  "with_media": 22,
+  "endpoints": [
+   "kling-video-o1-std/refrence-to-video",
+   "vidu/reference-to-video-q2",
+   "seedance-v1-lite/reference-to-video",
+   "vidu/reference-to-video-q2-pro",
+   "rhart-video-v3.1-pro-official/reference-to-video",
+   "kling-video-o3-std/reference-to-video",
+   "kling-video-o3-pro/reference-to-video",
+   "alibaba/wan-2.6/reference-to-video-flash",
+   "alibaba/wan-2.6/reference-to-video",
+   "vidu/reference-to-video-q3",
+   "vidu/reference-to-video-q3-mix",
+   "alibaba/wan-2.7/reference-to-video",
+   "rhart-video-g-official/reference-to-video",
+   "kling-video-o3-4k/reference-to-video",
+   "alibaba/happyhorse-1.0/reference-to-video",
+   "skyreels-v4/omni-reference-std",
+   "skyreels-v4/omni-reference-fast",
+   "rhart-video-v3.1-fast-official/reference-to-video",
+   "skyreels-v3/reference-to-video",
+   "pixverse-c1/reference-to-video",
+   "vidu/reference-to-video-q3-ad",
+   "alibaba/happyhorse-1.1/reference-to-video",
+   "vidu/reference-to-video-q3-drama",
+   "rhart-video-g-official/reference-to-video-v1.5",
+   "alibaba/wan-3.0/reference-to-video"
+  ]
+ },
+ {
+  "task": "music-generation",
+  "count": 19,
+  "sample": "rhart-audio/suno-v5.5/single",
+  "sample_cn": "suno-single-v5.5",
+  "modality": "(text only)",
+  "with_media": 2,
+  "endpoints": [
+   "rhart-audio/suno-v5.5/single",
+   "rhart-audio/suno-v5.5/custom",
+   "rhart-audio/suno/lyrics",
+   "rhart-audio/suno-v5/single",
+   "rhart-audio/suno-v5/custom",
+   "rhart-audio/suno-v4.5/single",
+   "rhart-audio/suno-v4.5/custom",
+   "mureka-ai/mureka-v7.6/generate-song",
+   "mureka-ai/mureka-o2/generate-song",
+   "mureka-ai/mureka-v8/generate-song",
+   "mureka-ai/mureka-v9/generate-song",
+   "mureka-ai/mureka-v7.6/generate-bgm",
+   "mureka-o2/instrumental-generate",
+   "mureka-ai/mureka-v8/generate-bgm",
+   "mureka-ai/mureka-v9/generate-bgm",
+   "minimax/music-2.6",
+   "minimax/music-cover",
+   "minimax/music-cover-preprocess",
+   "rhart-audio/text-to-audio/music-2.5"
+  ]
+ },
+ {
+  "task": "image-upscale",
+  "count": 13,
+  "sample": "topazlabs/image-upscale-high-fidelity-v3",
+  "sample_cn": "topazlabs图像放大High Fidelity V3",
+  "modality": "IMAGE:imageUrl",
+  "with_media": 13,
+  "endpoints": [
+   "topazlabs/image-upscale-high-fidelity-v3",
+   "topazlabs/image-upscale-detail-faces",
+   "topazlabs/image-upscale-transparent",
+   "topazlabs/image-gigapixel-standard-2",
+   "topazlabs/image-gigapixel-low-resolution-2",
+   "topazlabs/image-gigapixel-art-and-cgi",
+   "topazlabs/image-gigapixel-high-fidelity-2",
+   "topazlabs/image-gigapixel-text-and-shapes",
+   "topazlabs/image-upscale-text-refine",
+   "topazlabs/image-upscale-cgi",
+   "topazlabs/image-upscale/low-resolution-v2",
+   "topazlabs/image-upscale-high-fidelity-v2",
+   "topazlabs/image-upscale-standard-v2"
+  ]
+ },
+ {
+  "task": "multimodal-video",
+  "count": 12,
+  "sample": "rhart-video/sparkvideo-2.0/multimodal-video",
+  "sample_cn": "Seedance2.0/全能参考视频",
+  "modality": "IMAGE:imageUrls*9, VIDEO:videoUrls*3, AUDIO:audioUrls*3",
+  "with_media": 12,
+  "endpoints": [
+   "rhart-video/sparkvideo-2.0/multimodal-video",
+   "rhart-video/sparkvideo-2.0-fast/multimodal-video",
+   "bytedance/seedance-2.0-global/multimodal-video",
+   "bytedance/seedance-2.0-global-fast/multimodal-video",
+   "rhart-video/sparkvideo-2.0/multimodal-video-star",
+   "rhart-video/sparkvideo-2.0/multimodal-video-star-fast",
+   "rhart-video/sparkvideo-2.0-mini/multimodal-video",
+   "bytedance/seedance-2.0-global-mini/multimodal-video",
+   "minimax/hailuo-h3/multimodal-to-video",
+   "minimax/hailuo-h3/regeneration-multimodal-to-video",
+   "bytedance/seedance-2.5-token/multimodal-video",
+   "bytedance/seedance-2.5-global-token/multimodal-video"
+  ]
+ },
+ {
+  "task": "start-end-to-video",
+  "count": 10,
+  "sample": "vidu/start-end-to-video-q2-pro",
+  "sample_cn": "Vidu-首尾帧生视频-q2-pro",
+  "modality": "IMAGE:firstImageUrl, IMAGE:lastImageUrl",
+  "with_media": 10,
+  "endpoints": [
+   "vidu/start-end-to-video-q2-pro",
+   "vidu/start-end-to-video-q2-turbo",
+   "kling-video-o1/start-to-end",
+   "rhart-video-v3.1-fast/start-end-to-video",
+   "rhart-video-v3.1-pro/start-end-to-video",
+   "vidu/start-end-to-video-q2-pro-fast",
+   "vidu/start-end-to-video-q3-turbo",
+   "vidu/start-end-to-video-q3-pro",
+   "rhart-video-v3.1-lite-official/start-end-to-video",
+   "vidu/start-end-to-video-q3-pro-fast"
+  ]
+ },
+ {
+  "task": "text-to-speech",
+  "count": 10,
+  "sample": "kling-lip-sync/tts",
+  "sample_cn": "可灵对口型-语音合成",
+  "modality": "(text only)",
+  "with_media": 0,
+  "endpoints": [
+   "kling-lip-sync/tts",
+   "bytedance/doubao-seed-tts-2.0",
+   "alibaba/qwen3-tts-flash",
+   "alibaba/qwen3-tts-instruct-flash",
+   "rhart-audio/text-to-audio/speech-2.6-turbo",
+   "rhart-audio/text-to-audio/speech-2.6-hd",
+   "rhart-audio/text-to-audio/speech-02-turbo",
+   "rhart-audio/text-to-audio/speech-2.8-turbo",
+   "rhart-audio/text-to-audio/speech-02-hd",
+   "rhart-audio/text-to-audio/speech-2.8-hd"
+  ]
+ },
+ {
+  "task": "video-edit",
+  "count": 10,
+  "sample": "kling-video-o1-std/edit-video",
+  "sample_cn": "可灵视频编辑o1",
+  "modality": "IMAGE:imageUrls*7, VIDEO:videoUrl",
+  "with_media": 10,
+  "endpoints": [
+   "kling-video-o1-std/edit-video",
+   "rhart-video-g-official/edit-video",
+   "kling-video-o3-std/video-edit",
+   "kling-video-o3-pro/video-edit",
+   "alibaba/wan-2.7/video-edit",
+   "alibaba/happyhorse-1.0/video-edit",
+   "gemini-omni-flash/video-edit",
+   "rhart-video-r/gen4-aleph-official/video-to-video",
+   "skyreels-v3/video-restyling",
+   "rhart-video-flux3/video-to-video"
+  ]
+ },
+ {
+  "task": "image-to-3d",
+  "count": 8,
+  "sample": "hitem3d-v15/image-to-3d",
+  "sample_cn": "hitem3d-v15/image-to-3d",
+  "modality": "IMAGE:imageUrl",
+  "with_media": 8,
+  "endpoints": [
+   "hitem3d-v15/image-to-3d",
+   "hitem3d-v2/image-to-3d",
+   "hitem3d-portrait-v21/image-to-3d",
+   "hitem3d-portrait-v20/image-to-3d",
+   "hitem3d-portrait-v15/image-to-3d",
+   "hitem3d-v21/image-to-3d",
+   "meshy6/image-to-3d",
+   "hunyuan3d-v3.1/image-to-3d"
+  ]
+ },
+ {
+  "task": "image-to-text",
+  "count": 8,
+  "sample": "rhart-text-g-3-flash-preview/image-to-text",
+  "sample_cn": "rhart-text-g-3-flash-preview/image-to-text",
+  "modality": "IMAGE:imageUrl",
+  "with_media": 8,
+  "endpoints": [
+   "rhart-text-g-3-flash-preview/image-to-text",
+   "rhart-text-g-3-pro-preview/image-to-text",
+   "rhart-text-g-25-flash/image-to-text",
+   "rhart-text-g-25-pro/image-to-text",
+   "rhart-text-g-3-pro-preview-cv/image-to-text",
+   "rhart-text-g-25-flash-cv/image-to-text",
+   "rhart-text-g-3-flash-preview-cv/image-to-text",
+   "rhart-text-g-25-pro-cv/image-to-text"
+  ]
+ },
+ {
+  "task": "other",
+  "count": 8,
+  "sample": "kling-elements",
+  "sample_cn": "kling-elements",
+  "modality": "IMAGE:imageUrl, IMAGE:elementReferList*3",
+  "with_media": 7,
+  "endpoints": [
+   "kling-elements",
+   "kling-lip-sync/identify-face",
+   "rhart-text-qwen-27b/chat",
+   "marble/upload-media-asset",
+   "mureka-ai/files-upload",
+   "mureka-ai/stem-song",
+   "mureka-ai/recognize-song",
+   "mureka-ai/describe-song"
+  ]
+ },
+ {
+  "task": "video-extend",
+  "count": 7,
+  "sample": "rhart-video-v3.1-fast-official/video-extend",
+  "sample_cn": "全能视频V3.1-fast-视频扩展-官方稳定版",
+  "modality": "VIDEO:video",
+  "with_media": 7,
+  "endpoints": [
+   "rhart-video-v3.1-fast-official/video-extend",
+   "rhart-video-v3.1-pro-official/video-extend",
+   "alibaba/wan-2.7/video-extend",
+   "pixverse-v6/extend",
+   "rhart-video-g-official/video-extend",
+   "skyreels-v3/single-shot-video-extension",
+   "skyreels-v3/shot-switching-video-extension"
+  ]
+ },
+ {
+  "task": "multi-image-to-3d",
+  "count": 6,
+  "sample": "hitem3d-v15/multi-image-to-3d",
+  "sample_cn": "hitem3d-v15/multi-image-to-3d",
+  "modality": "IMAGE:frontImageUrl, IMAGE:backImageUrl, IMAGE:leftImageUrl, IMAGE:rightImageUrl",
+  "with_media": 6,
+  "endpoints": [
+   "hitem3d-v15/multi-image-to-3d",
+   "hitem3d-v2/multi-image-to-3d",
+   "hitem3d-portrait-v21/multi-image-to-3d",
+   "hitem3d-portrait-v20/multi-image-to-3d",
+   "hitem3d-portrait-v15/multi-image-to-3d",
+   "hitem3d-v21/multi-image-to-3d"
+  ]
+ },
+ {
+  "task": "image-other",
+  "count": 5,
+  "sample": "rhart-image/f-dev",
+  "sample_cn": "f-dev",
+  "modality": "(text only)",
+  "with_media": 3,
+  "endpoints": [
+   "rhart-image/f-dev",
+   "rhart-image/f-dev-lora",
+   "rhart-image-g-1.5/edit-[Deprecated]",
+   "image-enhance/hypir-ultra",
+   "image-enhance/hypir-balance"
+  ]
+ },
+ {
+  "task": "motion-control",
+  "count": 5,
+  "sample": "kling-v2.6-std/motion-control",
+  "sample_cn": "kling-v2.6-std-动作控制",
+  "modality": "IMAGE:imageUrl, VIDEO:videoUrl",
+  "with_media": 4,
+  "endpoints": [
+   "kling-v2.6-std/motion-control",
+   "kling-v2.6-pro/motion-control",
+   "kling-v3.0-std/motion-control",
+   "kling-v3.0-pro/motion-control",
+   "kling-v3.0-4k/motion-control"
+  ]
+ },
+ {
+  "task": "video-other",
+  "count": 5,
+  "sample": "minimax/hailuo-02/standard",
+  "sample_cn": "海螺-02-标准",
+  "modality": "IMAGE:firstImageUrl, IMAGE:lastImageUrl",
+  "with_media": 5,
+  "endpoints": [
+   "minimax/hailuo-02/standard",
+   "minimax/hailuo-02/pro",
+   "minimax/hailuo-02/fast",
+   "bytedance/dreamactor-v2",
+   "kling-elements-advanced"
+  ]
+ },
+ {
+  "task": "video-upscale",
+  "count": 5,
+  "sample": "rhart-video/video-upscaler",
+  "sample_cn": "RH视频超分",
+  "modality": "VIDEO:videoUrl",
+  "with_media": 5,
+  "endpoints": [
+   "rhart-video/video-upscaler",
+   "topazlabs/video-upscale",
+   "topazlabs/video-proteus",
+   "topazlabs/video-starlight",
+   "topazlabs/video-astra"
+  ]
+ },
+ {
+  "task": "text-to-text",
+  "count": 4,
+  "sample": "rhart-text-g-3-flash-preview/text-to-text",
+  "sample_cn": "rhart-text-g-3-flash-preview/text-to-text",
+  "modality": "(text only)",
+  "with_media": 0,
+  "endpoints": [
+   "rhart-text-g-3-flash-preview/text-to-text",
+   "rhart-text-g-3-pro-preview/text-to-text",
+   "rhart-text-g-25-flash/text-to-text",
+   "rhart-text-g-25-pro/text-to-text"
+  ]
+ },
+ {
+  "task": "video-to-text",
+  "count": 4,
+  "sample": "rhart-text-g-3-flash-preview/video-to-text",
+  "sample_cn": "rhart-text-g-3-flash-preview/video-to-text",
+  "modality": "VIDEO:videoUrl",
+  "with_media": 4,
+  "endpoints": [
+   "rhart-text-g-3-flash-preview/video-to-text",
+   "rhart-text-g-3-pro-preview/video-to-text",
+   "rhart-text-g-25-flash/video-to-text",
+   "rhart-text-g-25-pro/video-to-text"
+  ]
+ },
+ {
+  "task": "image-to-world",
+  "count": 3,
+  "sample": "marble-1.0/image-to-world",
+  "sample_cn": "marble-1.0 单图生3D世界",
+  "modality": "(text only)",
+  "with_media": 0,
+  "endpoints": [
+   "marble-1.0/image-to-world",
+   "marble-1.1/image-to-world",
+   "marble-1.1-plus/image-to-world"
+  ]
+ },
+ {
+  "task": "lip-sync-video",
+  "count": 3,
+  "sample": "kling-lip-sync/lip-sync-video",
+  "sample_cn": "可灵对口型-视频生成",
+  "modality": "AUDIO:audioUrl",
+  "with_media": 3,
+  "endpoints": [
+   "kling-lip-sync/lip-sync-video",
+   "kling-v2-ai-avatar-standard/image-audio-to-video",
+   "kling-v2-ai-avatar-pro/image-audio-to-video"
+  ]
+ },
+ {
+  "task": "multi-image-to-world",
+  "count": 3,
+  "sample": "marble-1.0/multi-image-to-world",
+  "sample_cn": "marble-1.0 多图生3D世界",
+  "modality": "(text only)",
+  "with_media": 0,
+  "endpoints": [
+   "marble-1.0/multi-image-to-world",
+   "marble-1.1/multi-image-to-world",
+   "marble-1.1-plus/multi-image-to-world"
+  ]
+ },
+ {
+  "task": "prompt-enhance",
+  "count": 3,
+  "sample": "minimax/hailuo-h3/context-ir-multimodal",
+  "sample_cn": "MiniMax-H3-Context-IR 多模态增强提示词",
+  "modality": "IMAGE:imageUrls*9, VIDEO:videoUrls*3, AUDIO:audioUrls*3",
+  "with_media": 2,
+  "endpoints": [
+   "minimax/hailuo-h3/context-ir-multimodal",
+   "minimax/hailuo-h3/context-ir-text",
+   "minimax/hailuo-h3/context-ir-image"
+  ]
+ },
+ {
+  "task": "text-to-world",
+  "count": 3,
+  "sample": "marble-1.0/text-to-world",
+  "sample_cn": "marble-1.0 文生3D世界",
+  "modality": "(text only)",
+  "with_media": 0,
+  "endpoints": [
+   "marble-1.0/text-to-world",
+   "marble-1.1/text-to-world",
+   "marble-1.1-plus/text-to-world"
+  ]
+ },
+ {
+  "task": "video-to-world",
+  "count": 3,
+  "sample": "marble-1.0/video-to-world",
+  "sample_cn": "marble-1.0 视频生3D世界",
+  "modality": "(text only)",
+  "with_media": 0,
+  "endpoints": [
+   "marble-1.0/video-to-world",
+   "marble-1.1/video-to-world",
+   "marble-1.1-plus/video-to-world"
+  ]
+ },
+ {
+  "task": "video-transition",
+  "count": 3,
+  "sample": "pixverse-v6/transition",
+  "sample_cn": "PixVerse V6 转场",
+  "modality": "IMAGE:firstImageUrl, IMAGE:endImageUrl",
+  "with_media": 3,
+  "endpoints": [
+   "pixverse-v6/transition",
+   "pixverse-v5.5-transition",
+   "pixverse-c1/transition"
+  ]
+ },
+ {
+  "task": "image-layer-decomposition",
+  "count": 2,
+  "sample": "seedream-v5-pro/layer-decomposition",
+  "sample_cn": "seedream-v5-pro-图层拆分",
+  "modality": "IMAGE:imageUrl",
+  "with_media": 2,
+  "endpoints": [
+   "seedream-v5-pro/layer-decomposition",
+   "dola-Seedream-5.0-pro/layer-decomposition"
+  ]
+ },
+ {
+  "task": "lyrics-generation",
+  "count": 2,
+  "sample": "mureka-ai/generate-lyrics",
+  "sample_cn": "Mureka 歌词生成",
+  "modality": "(text only)",
+  "with_media": 0,
+  "endpoints": [
+   "mureka-ai/generate-lyrics",
+   "mureka-ai/extend-lyrics"
+  ]
+ },
+ {
+  "task": "short-play-video",
+  "count": 2,
+  "sample": "vidu/short-play-q3-drama",
+  "sample_cn": "Vidu Q3 Drama 短剧成片",
+  "modality": "IMAGE:uploadImageUrl",
+  "with_media": 1,
+  "endpoints": [
+   "vidu/short-play-q3-drama",
+   "vidu/short-play-q3-ad"
+  ]
+ },
+ {
+  "task": "song-extend",
+  "count": 2,
+  "sample": "mureka-ai/mureka-v7.6/extend-song",
+  "sample_cn": "mureka-v7.6 短歌延长",
+  "modality": "AUDIO:fileUrl",
+  "with_media": 2,
+  "endpoints": [
+   "mureka-ai/mureka-v7.6/extend-song",
+   "mureka-ai/mureka-v8/extend-song"
+  ]
+ },
+ {
+  "task": "text-to-3d",
+  "count": 2,
+  "sample": "meshy6/text-to-3d",
+  "sample_cn": "Meshy 6 文生 3D",
+  "modality": "IMAGE:textureImageUrl",
+  "with_media": 1,
+  "endpoints": [
+   "meshy6/text-to-3d",
+   "hunyuan3d-v3.1/text-to-3d"
+  ]
+ },
+ {
+  "task": "upload-character",
+  "count": 2,
+  "sample": "rhart-video-s/sora-upload-character",
+  "sample_cn": "全能视频S-角色上传-低价渠道版",
+  "modality": "VIDEO:videoUrl",
+  "with_media": 2,
+  "endpoints": [
+   "rhart-video-s/sora-upload-character",
+   "rhart-video-s-official/sora-upload-character"
+  ]
+ },
+ {
+  "task": "video-effects",
+  "count": 2,
+  "sample": "pixverse-v5.5-effects",
+  "sample_cn": "PixVerse V5.5 特效",
+  "modality": "IMAGE:imageUrl",
+  "with_media": 2,
+  "endpoints": [
+   "pixverse-v5.5-effects",
+   "pixverse-v6/effects"
+  ]
+ },
+ {
+  "task": "video-subtitle-erase",
+  "count": 2,
+  "sample": "volc-subtitle-erase/video",
+  "sample_cn": "火山字幕擦除-视频字幕擦除（标准版）",
+  "modality": "VIDEO:videoUrl",
+  "with_media": 2,
+  "endpoints": [
+   "volc-subtitle-erase/video",
+   "volc-subtitle-erase-pro/video"
+  ]
+ },
+ {
+  "task": "video-translate",
+  "count": 2,
+  "sample": "volc-drama/video-translate",
+  "sample_cn": "火山短剧-视频翻译",
+  "modality": "VIDEO:videoUrl",
+  "with_media": 1,
+  "endpoints": [
+   "volc-drama/video-translate",
+   "volc-drama/serial-video-translate"
+  ]
+ },
+ {
+  "task": "voice-clone",
+  "count": 2,
+  "sample": "mureka-ai/vocal-clone",
+  "sample_cn": "Mureka 人声克隆",
+  "modality": "AUDIO:fileUrl",
+  "with_media": 2,
+  "endpoints": [
+   "mureka-ai/vocal-clone",
+   "rhart-audio/text-to-audio/voice-clone"
+  ]
+ },
+ {
+  "task": "audio-generation",
+  "count": 1,
+  "sample": "bytedance/doubao-seed-audio-1.0",
+  "sample_cn": "Doubao-音频生成-1.0",
+  "modality": "AUDIO:audio_url*3, IMAGE:image_url",
+  "with_media": 1,
+  "endpoints": [
+   "bytedance/doubao-seed-audio-1.0"
+  ]
+ },
+ {
+  "task": "video-denoise",
+  "count": 1,
+  "sample": "topazlabs/video-denoise",
+  "sample_cn": "topazlabs视频降噪Denoise",
+  "modality": "VIDEO:videoUrl",
+  "with_media": 1,
+  "endpoints": [
+   "topazlabs/video-denoise"
+  ]
+ },
+ {
+  "task": "video-draft-enhance",
+  "count": 1,
+  "sample": "rhart-video-flux3/draft-enhance",
+  "sample_cn": "FLUX 3 Video 草稿增强",
+  "modality": "(text only)",
+  "with_media": 0,
+  "endpoints": [
+   "rhart-video-flux3/draft-enhance"
+  ]
+ },
+ {
+  "task": "video-fps-increase",
+  "count": 1,
+  "sample": "rhart-video/video-fps-increaser",
+  "sample_cn": "RH视频帧率增强",
+  "modality": "VIDEO:videoUrl",
+  "with_media": 1,
+  "endpoints": [
+   "rhart-video/video-fps-increaser"
+  ]
+ },
+ {
+  "task": "video-frame-interpolation",
+  "count": 1,
+  "sample": "topazlabs/video-frame-interpolation",
+  "sample_cn": "topazlabs视频补帧Frame Interpolation",
+  "modality": "VIDEO:videoUrl",
+  "with_media": 1,
+  "endpoints": [
+   "topazlabs/video-frame-interpolation"
+  ]
+ },
+ {
+  "task": "voice-design",
+  "count": 1,
+  "sample": "minimax/voice-design",
+  "sample_cn": "minimax-音色设计",
+  "modality": "(text only)",
+  "with_media": 0,
+  "endpoints": [
+   "minimax/voice-design"
+  ]
+ }
+]

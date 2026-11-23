@@ -1,0 +1,26 @@
+{
+  "id": "A-V2-晨",
+  "group": "A-V2",
+  "variable": "光线",
+  "level": "清晨柔光",
+  "ts": "2026-11-23 09:46:53",
+  "webapp": "2114585366186516481",
+  "params": {
+    "n": 2,
+    "aspect_ratio": "16:9 (Widescreen)"
+  },
+  "prompt": "把光线改为清晨柔光：左侧低角度暖白日光，光比小，阴影边缘柔和。其余全部保持不变：构图与景别、山谷与大树、瀑布与溪流、岩石分布、写实摄影画风、色彩关系与细节层次。不要新增或删除主体，不要出现文字、水印、边框。",
+  "prompt_sha1": "ad3e8096b7cda5b750789c2e93368aa664cccea9",
+  "anchor": "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle27\\runs\\A-V2-晨\\anchor.png",
+  "anchor_sha1": "8a4437475d7729ed04ea51df32d39143bdc03c05",
+  "task_id": "2124681080379498498",
+  "charged": 17.68,
+  "files": [
+    "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle27\\runs\\A-V2-晨\\out_1.png",
+    "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle27\\runs\\A-V2-晨\\out_2.png"
+  ],
+  "per_image": 8.84,
+  "status": "ok",
+  "note": "",
+  "wall": "104s"
+}

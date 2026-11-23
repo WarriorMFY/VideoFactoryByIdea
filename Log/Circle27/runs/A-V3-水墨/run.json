@@ -1,0 +1,23 @@
+{
+  "id": "A-V3-水墨",
+  "group": "A-V3",
+  "variable": "画风",
+  "level": "水墨",
+  "ts": "2026-11-23 09:53:06",
+  "webapp": "2114585366186516481",
+  "params": {
+    "n": 2,
+    "aspect_ratio": "16:9 (Widescreen)"
+  },
+  "prompt": "把画风改为中国传统水墨画：宣纸质感，墨色浓淡分层，细笔勾勒山石树木，留白，去掉照片质感。其余全部保持不变：构图与景别、山谷与大树、瀑布与溪流的位置、岩石分布、光线方向与明暗关系、主体形状与细节层次。不要新增或删除主体，不要出现文字、水印、边框。",
+  "prompt_sha1": "3eb2c027f1757602522a77b3a0019b8f5e8e7c11",
+  "anchor": "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle27\\runs\\A-V3-水墨\\anchor.png",
+  "anchor_sha1": "8a4437475d7729ed04ea51df32d39143bdc03c05",
+  "task_id": "2124682679483072514",
+  "charged": null,
+  "files": [],
+  "per_image": null,
+  "status": "failed",
+  "note": "",
+  "error": "Uploading anchor.png...\nUploaded: api/9c0ba1dddd189efd2bbf88135492a79f809be5e657a33212087c938be2a58621.png\nSubmitting AI app task (webapp 2114585366186516481)...\nTASK_ID:2124682679483072514\nTask ID: 2124682679483072514\nWaiting for result........{\"error\": \"TASK_FAILED\", \"message\": \"Task failed: [805] 工作流运行失败\"}"
+}
