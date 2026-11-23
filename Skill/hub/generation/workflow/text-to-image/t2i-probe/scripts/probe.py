@@ -9,6 +9,7 @@
 import argparse
 import hashlib
 import json
+import os
 import subprocess
 import sys
 from datetime import datetime
@@ -29,6 +30,23 @@ def find_app() -> Path:
 
 
 APP = find_app()
+
+
+def api_env() -> dict:
+    """凭据唯一源在 runninghub/credential.txt；只注入子进程环境，不上命令行。
+
+    同时强制子进程 UTF-8：runninghub_app.py 内部用 subprocess 调 curl，
+    Windows 默认 GBK 解码 UTF-8 响应会崩（实测 2026-11-23）。
+    """
+    env = os.environ.copy()
+    env["PYTHONUTF8"] = "1"
+    env["PYTHONIOENCODING"] = "utf-8"
+    if env.get("RUNNINGHUB_API_KEY", "").strip():
+        return env
+    sys.path.insert(0, str(APP.parent))
+    import rh_credential  # noqa: E402
+    env["RUNNINGHUB_API_KEY"] = rh_credential.load_key()
+    return env
 
 
 def main() -> int:
@@ -117,7 +135,8 @@ def main() -> int:
         print(f"[probe] 提交 {a.id}（{a.group}）{a.ar} {a.res}", flush=True)
         tail = []
         proc = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
-                                text=True, encoding="utf-8", errors="replace", bufsize=1)
+                                text=True, encoding="utf-8", errors="replace", bufsize=1,
+                                env=api_env())
         for line in proc.stdout:
             line = line.rstrip()
             print("  " + line, flush=True)

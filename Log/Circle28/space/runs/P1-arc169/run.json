@@ -1,0 +1,26 @@
+{
+  "id": "P1-arc169",
+  "group": "P1",
+  "variable": "排查",
+  "level": "ar16x9",
+  "ts": "2026-11-23 17:01:36",
+  "webapp": "2114585366186516481",
+  "params": {
+    "n": 2,
+    "aspect_ratio": "16:9 (Widescreen)"
+  },
+  "prompt": "保持画面的一切画风不变：光影方向与氛围、青蓝夜色对暖橙灯光、湿石板路的反光质感、雨丝密度与方向、灯笼样式与悬挂位置，全部照原样。只调整构图：镜头后退拉宽，铺子门前的湿石板街面露出更多空间，檐下空出可供人物站立的区域（画面中下部），远处街巷拱桥与灯火保留在画面深处。不要新增人物，不要删除灯笼与花盆，不要出现文字、水印、边框。",
+  "prompt_sha1": "bf1597e5ff6383c380f942ce574884fb99ee3500",
+  "anchor": "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle28\\space\\runs\\P1-arc169\\anchor.png",
+  "anchor_sha1": "8bbfc642414b98798c9c1d35ef7be196989eb541",
+  "task_id": "2124790466892488706",
+  "charged": 22.44,
+  "files": [
+    "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle28\\space\\runs\\P1-arc169\\out_1.png",
+    "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle28\\space\\runs\\P1-arc169\\out_2.png"
+  ],
+  "per_image": 11.22,
+  "status": "ok",
+  "note": "",
+  "wall": "132s"
+}

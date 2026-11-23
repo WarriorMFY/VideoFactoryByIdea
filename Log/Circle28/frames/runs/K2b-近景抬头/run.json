@@ -1,0 +1,26 @@
+{
+  "id": "K2b-近景抬头",
+  "group": "K2b",
+  "variable": "镜2关键帧",
+  "level": "抬头强化",
+  "ts": "2026-11-23 17:47:02",
+  "webapp": "2114585366186516481",
+  "params": {
+    "n": 2,
+    "aspect_ratio": "2:3 (Portrait Photo)"
+  },
+  "prompt": "保持同一人物的长相、发须、深灰粗布长衫和提灯完全不变。镜头推近成近景，取景到腰部以上：人物在檐下停步，下巴明显抬起，双眼望向画面斜上方的雨幕，视线完全离开镜头、不看观众，神情安静而专注；脸的一半被暖橙灯光照亮、一半沉在青蓝夜色里；背景是同一条雨夜老街的木格门窗与串挂红灯笼，大幅虚化；细密雨丝斜落，灯笼光晕轻微晃动。不改变画风与色调。不要出现文字、水印、边框。",
+  "prompt_sha1": "ac36322e9a6ba052a65e7ab5ac57a08976962714",
+  "anchor": "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle28\\frames\\runs\\K2b-近景抬头\\anchor.png",
+  "anchor_sha1": "68b968c9b90b1064168c20ac61fc4905616c7607",
+  "task_id": "2124801923600306178",
+  "charged": 25.33,
+  "files": [
+    "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle28\\frames\\runs\\K2b-近景抬头\\out_1.png",
+    "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle28\\frames\\runs\\K2b-近景抬头\\out_2.png"
+  ],
+  "per_image": 12.66,
+  "status": "ok",
+  "note": "K1锁定帧out_2派生-强化抬头",
+  "wall": "149s"
+}

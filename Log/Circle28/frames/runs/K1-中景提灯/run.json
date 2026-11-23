@@ -1,0 +1,26 @@
+{
+  "id": "K1-中景提灯",
+  "group": "K1",
+  "variable": "镜1关键帧",
+  "level": "首抽",
+  "ts": "2026-11-23 17:12:50",
+  "webapp": "2114585366186516481",
+  "params": {
+    "n": 2,
+    "aspect_ratio": "2:3 (Portrait Photo)"
+  },
+  "prompt": "保持人物的长相、发须、深灰粗布长衫、提灯的手势完全不变。把镜头拉远成中景：人物提着一盏红灯笼，站在灯笼铺门前的湿石板路上，身前是檐下空地，身后是敞开的木格门窗与满铺暖橙灯笼光；画面右侧是雨夜的江南老街，串挂的红灯笼沿街延伸，湿地面反光，细密雨丝，远处拱桥与灯火模糊。构图留出人物行走的空间，不要改变画风与色调（青蓝夜色对暖橙灯光）。不要出现文字、水印、边框。",
+  "prompt_sha1": "89cde01a103e3ef020df4f3b9def33ab80bb54c1",
+  "anchor": "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle28\\frames\\runs\\K1-中景提灯\\anchor.png",
+  "anchor_sha1": "c494ae0a379397d32a85bf7d87a45808a321c08f",
+  "task_id": "2124793302330081282",
+  "charged": 27.37,
+  "files": [
+    "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle28\\frames\\runs\\K1-中景提灯\\out_1.png",
+    "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle28\\frames\\runs\\K1-中景提灯\\out_2.png"
+  ],
+  "per_image": 13.69,
+  "status": "ok",
+  "note": "",
+  "wall": "161s"
+}

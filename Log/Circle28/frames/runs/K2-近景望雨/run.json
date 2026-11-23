@@ -1,0 +1,23 @@
+{
+  "id": "K2-近景望雨",
+  "group": "K2",
+  "variable": "镜2关键帧",
+  "level": "首抽",
+  "ts": "2026-11-23 17:16:17",
+  "webapp": "2114585366186516481",
+  "params": {
+    "n": 2,
+    "aspect_ratio": "2:3 (Portrait Photo)"
+  },
+  "prompt": "保持同一人物的长相、发须、深灰长衫和提灯完全不变。镜头推近成近景，取景到腰部以上：人物在檐下停步，抬头望向雨幕，神情安静；脸的一半被暖橙灯光照亮、一半沉在青蓝夜色里；背景是同一条雨夜老街的木格门窗与串挂红灯笼，大幅虚化；细密雨丝斜落，灯笼光晕轻微晃动。不改变画风与色调。不要出现文字、水印、边框。",
+  "prompt_sha1": "51bc03ae6a67601075293fefd1634b8d774be73f",
+  "anchor": "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle28\\frames\\runs\\K2-近景望雨\\anchor.png",
+  "anchor_sha1": "89b63b85a15e7d757f891ad95d4c009e8c01dd10",
+  "task_id": "2124794226490433538",
+  "charged": null,
+  "files": [],
+  "per_image": null,
+  "status": "failed",
+  "note": "",
+  "error": "Uploading anchor.png...\nUploaded: api/7f5890096bb24569d12d7a0cdb84c8f27261669faf37fac2600e5c3099acc974.png\nSubmitting AI app task (webapp 2114585366186516481)...\nTASK_ID:2124794226490433538\nTask ID: 2124794226490433538\nWaiting for result...........{\"error\": \"TASK_FAILED\", \"message\": \"Task failed: [805] 工作流运行失败\"}"
+}

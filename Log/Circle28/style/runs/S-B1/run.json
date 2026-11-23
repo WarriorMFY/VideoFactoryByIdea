@@ -1,0 +1,25 @@
+{
+  "id": "S-B1",
+  "group": "S-路线B",
+  "variable": "官流重绘",
+  "level": "A1升级",
+  "ts": "2026-11-23 16:48:25",
+  "wf_id": "2027204046305628162",
+  "mode": "workflow-json-direct",
+  "params": {
+    "seed": 42,
+    "aspectRatio": "3:4",
+    "resolution": "1k"
+  },
+  "prompt": "以原图为构图依据重绘为电影级质感：保持灯笼铺、青石板路、雨丝、暖橙灯光的位置关系不变；加深夜景光影层次（暗部更干净、灯笼高光更凝聚），湿地面反光更细腻，雨丝更细密有方向感；电影胶片调色（青蓝夜色对暖橙光源），轻微胶片颗粒。不要新增或删除主体，不要出现文字、水印、边框。",
+  "prompt_sha1": "94a3b767061e93f75c4b16c06d33ece3882240ed",
+  "anchor": "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle28\\style\\runs\\S-B1\\anchor.png",
+  "anchor_sha1": "73743a68ea25b6fdd189a8ad2ef49f281a827b2b",
+  "task_id": "2124787154147311618",
+  "charged": 50.17,
+  "files": [
+    "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle28\\style\\runs\\S-B1\\out.png"
+  ],
+  "status": "ok",
+  "wall": "42s"
+}

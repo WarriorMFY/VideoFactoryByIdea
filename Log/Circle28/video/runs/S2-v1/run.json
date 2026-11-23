@@ -1,0 +1,21 @@
+{
+  "id": "S2-v1",
+  "group": "S2",
+  "ts": "2026-11-23 18:04:39",
+  "webapp": "2113790012012720129",
+  "params": {
+    "dur": 5.0,
+    "aspect_ratio": "3:4 (Portrait Standard)",
+    "megapixels": "0.6"
+  },
+  "prompt": "人物保持原样，站在檐下缓缓抬起头，下巴抬起，双眼望向天空落下的雨，视线向上；雨丝斜落，灯笼光晕轻微晃动，背景光斑柔和闪烁；镜头固定或极轻微上摇，人物长相、发须、服装、灯笼与首帧一致，画风色调不变，不要出现文字、水印、边框，不要新增人物，人物不要移动位置。",
+  "prompt_sha1": "56fa7ff811ff805c6dac498b44456d7b0b2f42b2",
+  "anchor": "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle28\\video\\runs\\S2-v1\\anchor.png",
+  "anchor_sha1": "2159bda15caf15cb810abe2ef28f4ffae4bbfb47",
+  "task_id": "2124806350293925890",
+  "charged": 22.78,
+  "file": "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle28\\video\\runs\\S2-v1\\out.mp4",
+  "status": "ok",
+  "note": "镜2抬头望雨-首抽",
+  "wall": "134s"
+}

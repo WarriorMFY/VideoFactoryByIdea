@@ -1,0 +1,68 @@
+{
+ "ref": "space-anchor-locked.png",
+ "runs": [
+  {
+   "case": "P0-双图 out_1",
+   "size": "1184x1760",
+   "ssim_vs_space": 0.5012,
+   "ssim_vs_k1": 0.6345,
+   "sharp": 138.4
+  },
+  {
+   "case": "P0-双图 out_2",
+   "size": "1184x1760",
+   "ssim_vs_space": 0.4591,
+   "ssim_vs_k1": 0.7254,
+   "sharp": 154.7
+  },
+  {
+   "case": "K1b-门口跨出 out_1",
+   "size": "1184x1760",
+   "ssim_vs_space": 0.5643,
+   "ssim_vs_k1": 0.6764,
+   "sharp": 152.3
+  },
+  {
+   "case": "K1b-门口跨出 out_2",
+   "size": "1184x1760",
+   "ssim_vs_space": 0.5206,
+   "ssim_vs_k1": 1.0,
+   "sharp": 134.5
+  },
+  {
+   "case": "K2b-单图抬头(漂移)",
+   "size": "1184x1760",
+   "ssim_vs_space": 0.2578,
+   "ssim_vs_k1": 0.2953,
+   "sharp": 23.3
+  },
+  {
+   "case": "K2c-双图 out_1",
+   "size": "1184x1760",
+   "ssim_vs_space": 0.2631,
+   "ssim_vs_k1": 0.2965,
+   "sharp": 50.9
+  },
+  {
+   "case": "K2c-双图 out_2",
+   "size": "1184x1760",
+   "ssim_vs_space": 0.2809,
+   "ssim_vs_k1": 0.3178,
+   "sharp": 53.9
+  },
+  {
+   "case": "K1-单图 out_1",
+   "size": "1184x1760",
+   "ssim_vs_space": 0.2166,
+   "ssim_vs_k1": 0.242,
+   "sharp": 110.4
+  },
+  {
+   "case": "K2-单图 out_1",
+   "size": "1184x1760",
+   "ssim_vs_space": 0.2393,
+   "ssim_vs_k1": 0.2745,
+   "sharp": 45.1
+  }
+ ]
+}

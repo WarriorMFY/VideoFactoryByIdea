@@ -1,0 +1,21 @@
+{
+  "id": "S1-v2",
+  "group": "S1",
+  "ts": "2026-11-23 18:01:06",
+  "webapp": "2113790012012720129",
+  "params": {
+    "dur": 5.0,
+    "aspect_ratio": "3:4 (Portrait Standard)",
+    "megapixels": "0.6"
+  },
+  "prompt": "人物保持原样，身体和视线始终朝向画面左侧的老街纵深，不要转身面对镜头，不要看观众；提灯缓慢向前迈出一步，随即停在檐下站定；雨丝持续斜落，灯笼轻微晃动，湿地面反光稳定；镜头固定，不推不摇不转，人物长相、发须、服装、灯笼与首帧一致，青蓝夜色与暖橙灯光的画风色调不变，不要出现文字、水印、边框，不要新增人物。",
+  "prompt_sha1": "edba2a659edecba3ea2b463475254287910d5f00",
+  "anchor": "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle28\\video\\runs\\S1-v2\\anchor.png",
+  "anchor_sha1": "2dc64304dda1d69280579e9eb908431633956fad",
+  "task_id": "2124805453421707265",
+  "charged": 27.2,
+  "file": "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle28\\video\\runs\\S1-v2\\out.mp4",
+  "status": "ok",
+  "note": "镜1二抽-身体朝街不看镜头",
+  "wall": "160s"
+}
