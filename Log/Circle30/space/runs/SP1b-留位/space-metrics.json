@@ -1,0 +1,31 @@
+{
+  "anchor": {
+    "h": 1448,
+    "w": 1086,
+    "lap_var": 715.7,
+    "sat_mean": 163.6,
+    "val_mean": 83.9
+  },
+  "candidates": {
+    "out_1.png": {
+      "h": 1760,
+      "w": 1184,
+      "lap_var": 496.3,
+      "sat_mean": 139.9,
+      "val_mean": 69.9,
+      "lap_ratio": 0.693,
+      "sat_ratio": 0.855,
+      "band_ok": true
+    },
+    "out_2.png": {
+      "h": 1760,
+      "w": 1184,
+      "lap_var": 701.8,
+      "sat_mean": 157.9,
+      "val_mean": 68.5,
+      "lap_ratio": 0.981,
+      "sat_ratio": 0.965,
+      "band_ok": true
+    }
+  }
+}

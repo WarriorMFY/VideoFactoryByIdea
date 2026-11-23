@@ -1,0 +1,71 @@
+{
+  "space": "F:\\AgentWorkArea\\WorkBuddy\\CardStudio\\Log\\Circle30\\space\\space-anchor-locked.png",
+  "portrait": "F:\\AgentWorkArea\\WorkBuddy\\CardStudio\\Log\\Circle30\\portrait\\portrait-anchor-locked.png",
+  "note": "face_ncc 的人脸框为人工给（BOXES），非检测器输出",
+  "runs": {
+    "K1-抹纸": {
+      "out_1.png": {
+        "size": [
+          1184,
+          1760
+        ],
+        "ssim_vs_space": 0.4066,
+        "mirror_ncc": -0.137,
+        "face_ncc_vs_portrait": -0.1174,
+        "face_box": [
+          0.26,
+          0.12,
+          0.44,
+          0.28
+        ]
+      },
+      "out_2.png": {
+        "size": [
+          1184,
+          1760
+        ],
+        "ssim_vs_space": 0.4313,
+        "mirror_ncc": -0.1499,
+        "face_ncc_vs_portrait": 0.1454,
+        "face_box": [
+          0.26,
+          0.12,
+          0.44,
+          0.28
+        ]
+      }
+    },
+    "K2-压边": {
+      "out_1.png": {
+        "size": [
+          1184,
+          1760
+        ],
+        "ssim_vs_space": 0.2745,
+        "mirror_ncc": 0.3518,
+        "face_ncc_vs_portrait": -0.0498,
+        "face_box": [
+          0.22,
+          0.09,
+          0.57,
+          0.41
+        ]
+      },
+      "out_2.png": {
+        "size": [
+          1184,
+          1760
+        ],
+        "ssim_vs_space": 0.3042,
+        "mirror_ncc": -0.106,
+        "face_ncc_vs_portrait": 0.1897,
+        "face_box": [
+          0.22,
+          0.09,
+          0.57,
+          0.41
+        ]
+      }
+    }
+  }
+}

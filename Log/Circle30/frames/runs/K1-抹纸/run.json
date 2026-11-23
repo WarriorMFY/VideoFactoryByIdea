@@ -1,0 +1,24 @@
+{
+  "id": "K1-抹纸",
+  "group": "K",
+  "ts": "2026-11-23 23:03:06",
+  "webapp": "2114585366186516481",
+  "params": {
+    "n": 2,
+    "aspect_ratio": "2:3 (Portrait Photo)"
+  },
+  "prompt": "图1 是房间与光线，图2 是人物。保持图1 的酒坊布局、砖地、木架、窗户与左后斜光完全不变；把图2 的老人放进画面左侧，站在木台旁，蓝布围裙、白粗布内衫，袖口卷到小臂。\n他侧身朝右对着桌上的陶坛，低头，右手掌心覆在坛口的红纸上，正从中心向外抹平；左手扶着桌沿。\n中景，齐腰机位，人物大腿以上与整只坛入画；红纸靠镜头一侧的翘边还在。\n布面油画写实质感，暗部沉褐黑，明暗交界线清晰。\n画面里不要出现文字、招牌。",
+  "prompt_sha1": "fb71da8285c3f16580fb4d9b24b899f9508570b7",
+  "ref": "F:\\AgentWorkArea\\WorkBuddy\\CardStudio\\Log\\Circle30\\frames\\runs\\K1-抹纸\\ref.png",
+  "ref_sha1": "cd2d9fa6b1e6aa2fbe4d3631ed5f295c6f91147a",
+  "task_id": "2124881450326253570",
+  "charged": 20.4,
+  "files": [
+    "F:\\AgentWorkArea\\WorkBuddy\\CardStudio\\Log\\Circle30\\frames\\runs\\K1-抹纸\\out_1.png",
+    "F:\\AgentWorkArea\\WorkBuddy\\CardStudio\\Log\\Circle30\\frames\\runs\\K1-抹纸\\out_2.png"
+  ],
+  "per_image": 10.2,
+  "status": "ok",
+  "note": "",
+  "wall": "120s"
+}

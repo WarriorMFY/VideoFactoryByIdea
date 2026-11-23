@@ -1,0 +1,24 @@
+{
+  "id": "K2-压边",
+  "group": "K",
+  "ts": "2026-11-23 23:05:41",
+  "webapp": "2114585366186516481",
+  "params": {
+    "n": 2,
+    "aspect_ratio": "2:3 (Portrait Photo)"
+  },
+  "prompt": "图1 是房间与光线，图2 是人物。保持图1 的光向与画风；机位沿同一轴推近，只取坛口与人物上半身。\n把图2 的老人放进画面：他低头看坛口，下颌与颈线在画内；右手掌根压住红纸翘起的边，向下碾，手指不动；红纸贴住坛口，纸面压出一道暗痕。\n近景，人物肩部到坛口为主；背景是虚化的酒坊土墙与木架。\n布面油画写实质感，暗部沉褐黑，明暗交界线清晰。\n画面里不要出现文字、招牌。",
+  "prompt_sha1": "08a3ffcfbc46729e9d057aa51ad7cd7610942c5c",
+  "ref": "F:\\AgentWorkArea\\WorkBuddy\\CardStudio\\Log\\Circle30\\frames\\runs\\K2-压边\\ref.png",
+  "ref_sha1": "cd2d9fa6b1e6aa2fbe4d3631ed5f295c6f91147a",
+  "task_id": "2124882097016627201",
+  "charged": 15.98,
+  "files": [
+    "F:\\AgentWorkArea\\WorkBuddy\\CardStudio\\Log\\Circle30\\frames\\runs\\K2-压边\\out_1.png",
+    "F:\\AgentWorkArea\\WorkBuddy\\CardStudio\\Log\\Circle30\\frames\\runs\\K2-压边\\out_2.png"
+  ],
+  "per_image": 7.99,
+  "status": "ok",
+  "note": "",
+  "wall": "94s"
+}

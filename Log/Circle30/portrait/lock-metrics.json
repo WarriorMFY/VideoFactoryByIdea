@@ -1,0 +1,10 @@
+{
+  "portrait": "portrait-anchor-locked.png",
+  "source_run": "runs/P1-正脸/out.png",
+  "task_id": "2124880178684583938",
+  "charged": 16.3,
+  "ncc": null,
+  "ncc_status": "待 04 关键帧合成后落数（core §1 目标 ≥0.75，本技能首次实测）",
+  "fullbody_ref": "fullbody-ref.png（task 2124881077213552642，11.68）",
+  "note": "全身与胸像不是同一人（两次独立采样），全身仅作服装/身形参考，不进双图位"
+}
