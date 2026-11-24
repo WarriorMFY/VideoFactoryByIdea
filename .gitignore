@@ -39,6 +39,17 @@ Tool/_deps_matte/
 *.flv
 *.wmv
 
+# Web 工具运行时垃圾：无头浏览器 profile、旧版生成产物、临时截图
+Tool/director-editor/_shot-profile/
+Tool/director-editor/_sp*/
+Tool/director-editor/_t2i/
+Tool/director-editor/_shot-*.png
+Tool/director-editor/_crop-*.png
+
+# Projects/ 是「一项目一目录」的运行时数据（project.json / assets / t2i/runs），
+# 目录可由用户在任意盘指定；仓库内的 Projects/ 只是默认落点，不当源码入库
+Projects/
+
 # RAG 例外：卡片库所有文件都入 git（含图片与视频，2026-11-16 用户裁定）
 # 其余目录（Log／Workspace）下的媒体仍不入库
 !RAG/**

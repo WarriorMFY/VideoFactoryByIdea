@@ -10,6 +10,16 @@
 
 所有脚本都从仓库根解析路径，可在任意目录调用。
 
+## 应用（非依赖层，例外登记）
+
+| 应用 | 用途 | 启动 |
+| --- | --- | --- |
+| `director-editor/` | 导演编辑台：网页控制台，按项目目录读写 `project.json`，挂图 / 上锁 / 走 t2i 通道 | `cd Tool/director-editor && python serve.py`（默认 8347） |
+
+它按用户令放在 `Tool/` 下长期开发（2026-11-24 由 `Workspace/director-editor/` 迁入）。
+**注意它并不符合上面的分层约束**：`serve.py` 会调 `Skill/hub/generation/...` 的 t2i 通道脚本，
+是有意为之的例外，不要再拿“公共层不得引用 Skill”去套它。
+
 ## 缓存
 
 `_deps/` 与 `_deps_matte/` 是本机依赖缓存，**不入库**（见 `.gitignore`），换机器跑一次 `setup_deps.py` 即可。

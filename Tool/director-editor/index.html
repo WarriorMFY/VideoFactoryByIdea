@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>导演编辑台 · 原型</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<aside>
+  <div class="brand">
+    <strong>DIRECTOR</strong>
+    <span>导演编辑台 · v0.10</span>
+  </div>
+
+  <div class="side-actions">
+    <button id="btn-new" class="btn primary">+ 新项目</button>
+  </div>
+
+  <div id="project-list" class="project-list"></div>
+
+  <div class="side-foot">
+    一个项目 = 一个目录，<b>可指到任意位置</b>（别的盘、NAS 都行）。<br>
+    项目头点目录胶囊即可改；映射记在
+    <span class="mono">Workspace/Projects/_index.json</span>。<br>
+    目录里：<span class="mono">project.json</span> 是唯一真源、<span class="mono">script.md</span> 派生、
+    图在 <span class="mono">assets/</span>、生成物在 <span class="mono">t2i/</span>。<br>
+    每次改动自动存盘；浏览器只记当前项目与 tab。<br>
+    <button id="btn-reset" class="btn small" style="margin-top:8px">从磁盘重载</button>
+  </div>
+</aside>
+
+<main>
+  <div id="head" class="proj-head"></div>
+  <div id="tabs" class="tabs"></div>
+  <div id="panel" class="panel"></div>
+</main>
+
+<div id="toast"></div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
