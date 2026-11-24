@@ -1,0 +1,18 @@
+{
+  "id": "A1-engineer",
+  "group": "A1",
+  "ts": "2026-11-24 13:09:11",
+  "webapp": "2046794551444119554",
+  "params": {
+    "aspect_ratio": "3:4",
+    "resolution": "1k"
+  },
+  "prompt": "Full-body character portrait of a NASApunk flight engineer standing in a bright white spacecraft assembly hall, neutral stance, three-quarter view, holding a clipboard in one hand. He wears a white technical coverall with NASA orange high-visibility harness straps, an orange NASA logo patch on the chest, amber-lens safety goggles hanging around his neck, a printed ID badge clipped to the harness. Short dark hair, light stubble, calm expression, mid-30s, athletic build.\n\nBackground: matte white ceramic panels, neatly bundled orange cable harnesses, soft depth of field, out of focus.\n\nLighting: high-key cool white overhead light, warm orange rim light from a status panel, clean soft shadows.\n\nPhotorealistic, 50mm lens, eye level, sharp focus on the engineer, muted NASApunk color palette: white, NASA orange, deep blue, gold, neutral gray. No neon, no cyberpunk, no rust, no grime, no dark moody lighting, no dramatic pose.",
+  "prompt_sha1": "882cb017ed2da9021eabb6d3e2cb433f545f3522",
+  "task_id": "2125094362760314881",
+  "charged": 12.58,
+  "file": "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle32\\anchors\\runs\\A1-engineer\\out.png",
+  "status": "ok",
+  "note": "",
+  "wall": "164s"
+}

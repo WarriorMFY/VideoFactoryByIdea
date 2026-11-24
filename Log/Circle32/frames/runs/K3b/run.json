@@ -1,0 +1,24 @@
+{
+  "id": "K3b",
+  "group": "K",
+  "ts": "2026-11-24 16:13:45",
+  "webapp": "2114585366186516481",
+  "params": {
+    "n": 2,
+    "aspect_ratio": "16:9 (Widescreen)"
+  },
+  "prompt": "全局参考图1 机位不动。门合到只留一道窄缝，缝里漏冷白光；门框两盏灯灭。\n生成图1 = 参考图2 的人背对镜头，身体中线正对门缝，侧着身，手抬向门缝、未碰但快碰到。生成图2= 参考图2 的人背对镜头，双手已经与门缝接触，正在尝试奋力打开门。",
+  "prompt_sha1": "437f1f6dbbe34aee9c97d2185bdbd36b07ff6c3f",
+  "ref": "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle32\\frames\\runs\\K3b\\ref.png",
+  "ref_sha1": "febed8710b99932d5ea31ce7ef26f67244e40e74",
+  "task_id": "2125140850521624577",
+  "charged": 21.93,
+  "files": [
+    "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle32\\frames\\runs\\K3b\\out_1.png",
+    "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle32\\frames\\runs\\K3b\\out_2.png"
+  ],
+  "per_image": 10.96,
+  "status": "ok",
+  "note": "",
+  "wall": "129s"
+}

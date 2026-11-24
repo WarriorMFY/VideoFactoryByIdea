@@ -1,0 +1,18 @@
+{
+  "id": "A2b-ovs",
+  "group": "A2b",
+  "ts": "2026-11-24 13:49:02",
+  "webapp": "2046794551444119554",
+  "params": {
+    "aspect_ratio": "16:9",
+    "resolution": "1k"
+  },
+  "prompt": "Interior of a NASApunk launch control room, camera placed behind and to the left of the operator's standing position, three-quarter over-the-shoulder view. The control console is seen from its left end at roughly 45 degrees: its sloped top surface carries a green-text CRT monitor, four circular dial gauges and a row of toggle switches under red protective covers; its vertical front face carries engraved white labels. The console fills the right half of the frame; the lower left foreground is open steel deck with yellow-black safety lines, deliberately leaving room for an operator to stand at the console.\n\nBeyond the console, a white ceramic-paneled corridor with neatly bundled orange cable harnesses held by metal clamps, amber warning stripe decals and a square airlock door recedes into depth, the airlock sitting center-right of frame. Overhead: exposed but tidy piping, industrial work lamps, truss beams.\n\nLighting: high-key cool white overhead lighting, warm orange practical glow from the panel, clean soft shadows, bright and evenly lit.\n\nPhotorealistic architectural photography, extremely detailed, wide 24mm lens, deep focus, no people, no readable long sentence text, muted NASApunk palette: white, NASA orange, deep blue, gold foil, neutral gray. No neon, no cyberpunk, no rust, no grime, no night.",
+  "prompt_sha1": "aa2f3e55faeb01567018adb8c1550841d1d4611d",
+  "task_id": "2125104391550885889",
+  "charged": 10.72,
+  "file": "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle32\\anchors\\runs\\A2b-ovs\\out.png",
+  "status": "ok",
+  "note": "",
+  "wall": "42s"
+}

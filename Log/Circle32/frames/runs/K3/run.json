@@ -1,0 +1,24 @@
+{
+  "id": "K3",
+  "group": "K",
+  "ts": "2026-11-24 16:04:44",
+  "webapp": "2114585366186516481",
+  "params": {
+    "n": 2,
+    "aspect_ratio": "16:9 (Widescreen)"
+  },
+  "prompt": "图1 机位不动。门合到只留一道窄缝，缝里漏冷白光；门框两盏灯灭。\n图2 的人身体中线正对门缝，侧着身，手抬向门缝、未碰但快碰到。",
+  "prompt_sha1": "c924155a51a9f7eff8baf5de9dce2a3cd660d7d1",
+  "ref": "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle32\\frames\\runs\\K3\\ref.png",
+  "ref_sha1": "febed8710b99932d5ea31ce7ef26f67244e40e74",
+  "task_id": "2125138596804644866",
+  "charged": 39.1,
+  "files": [
+    "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle32\\frames\\runs\\K3\\out_1.png",
+    "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle32\\frames\\runs\\K3\\out_2.png"
+  ],
+  "per_image": 19.55,
+  "status": "ok",
+  "note": "",
+  "wall": "230s"
+}

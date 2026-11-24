@@ -1,0 +1,27 @@
+{
+ "ref": "ref.png",
+ "ref_size": "1920x1088",
+ "ref_sharp": 631.0,
+ "face_box": [
+  0.23,
+  0.22,
+  0.77,
+  0.94
+ ],
+ "runs": [
+  {
+   "file": "out_1.png",
+   "size": "1920x1088",
+   "ssim_all": 0.508,
+   "face_diff": 32.61,
+   "sharp": 676.9
+  },
+  {
+   "file": "out_2.png",
+   "size": "1920x1088",
+   "ssim_all": 0.5566,
+   "face_diff": 22.48,
+   "sharp": 601.9
+  }
+ ]
+}

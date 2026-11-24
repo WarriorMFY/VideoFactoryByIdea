@@ -1,0 +1,18 @@
+{
+  "id": "A3b-aerial",
+  "group": "A3b",
+  "ts": "2026-11-24 13:28:27",
+  "webapp": "2046794551444119554",
+  "params": {
+    "aspect_ratio": "16:9",
+    "resolution": "1k"
+  },
+  "prompt": "Aerial photograph of an entire NASApunk rocket launch complex, seen from high altitude in a tilted three-quarter bird's-eye view about 45 degrees down, the launch site filling and dominating the frame. Center: a white lattice launch tower with NASA orange accent panels, a white rocket with orange NASA markings standing on the pad, thin white vapor venting from its base. Surrounding the pad: a fan of pale concrete apron with yellow safety lines and orange-white blast markings, a tall white water tower, spherical propellant tanks wrapped in crinkled gold MLI foil, tidy pipe runs on low steel trestles, matte white ceramic-paneled service buildings with deep blue trim, an access road with small white trucks, perimeter fencing, distant lightning masts. Outer edges: flat coastal marsh, straight canals, scattered service yards.\n\nLighting: soft overcast daylight, even illumination, clean shadows, subtle warm glow from pad floodlights.\n\nPhotorealistic aerial photography, extremely detailed, wide 24mm lens, deep focus, no people, no readable long text, muted NASApunk palette: white, NASA orange, deep blue, gold foil, neutral gray. No neon, no cyberpunk, no rust, no grime, no night, no explosion, no smoke column, no motion blur.",
+  "prompt_sha1": "8c513e7659a1dd6be5f3efb3ad376def04a31754",
+  "task_id": "2125099211883249666",
+  "charged": 11.5,
+  "file": "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle32\\anchors\\runs\\A3b-aerial\\out.png",
+  "status": "ok",
+  "note": "",
+  "wall": "92s"
+}

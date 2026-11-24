@@ -1,0 +1,18 @@
+{
+  "id": "A2-indoor",
+  "group": "A2",
+  "ts": "2026-11-24 13:10:58",
+  "webapp": "2046794551444119554",
+  "params": {
+    "aspect_ratio": "16:9",
+    "resolution": "1k"
+  },
+  "prompt": "Empty interior of a NASApunk launch control room opening into a white spacecraft corridor, wide 24mm one-point perspective down the center. Foreground: analog control console with a green-text CRT monitor, circular dial gauges, rows of toggle switches under red protective covers, small orange indicator lamps. Middle ground: white ceramic-paneled corridor with neatly bundled orange cable harnesses held by metal clamps, amber warning stripe decals, printed barcode labels, square airlock door with handrails, steel grating floor with yellow-black safety lines. Overhead: exposed but tidy piping, industrial work lamps, truss beams.\n\nLighting: high-key cool white overhead lighting, small warm orange practical lamps, clean shadows, bright and evenly lit.\n\nPhotorealistic architectural photography, extremely detailed, wide 24mm lens, deep focus, no people, no readable long text, muted NASApunk palette: white, NASA orange, deep blue, gold foil, neutral gray. No neon, no cyberpunk, no rust, no grime, no dark lighting, no night.",
+  "prompt_sha1": "60f330ad0f065c94367c7f08e13d0c3b1c3d2c09",
+  "task_id": "2125094809860526081",
+  "charged": 11.8,
+  "file": "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle32\\anchors\\runs\\A2-indoor\\out.png",
+  "status": "ok",
+  "note": "",
+  "wall": "111s"
+}

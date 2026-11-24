@@ -1,0 +1,18 @@
+{
+  "id": "A3-outdoor",
+  "group": "A3",
+  "ts": "2026-11-24 13:12:12",
+  "webapp": "2046794551444119554",
+  "params": {
+    "aspect_ratio": "16:9",
+    "resolution": "1k"
+  },
+  "prompt": "Exterior NASApunk launch complex seen from a steel observation platform, wide 24mm view. Foreground: galvanized steel guard railing and grating platform edge, a small orange warning lamp on the rail post, a folded aluminum clipboard resting on the rail. Middle ground: wide concrete apron, a launch tower painted white with NASA orange accents, a white rocket with orange NASA markings standing on the pad, thin white vapor venting from its base. Background: cool overcast gray-blue sky, distant truss towers, floodlight masts.\n\nLighting: large soft overcast daylight, subtle warm glow from pad floodlights, clean shadows.\n\nPhotorealistic, extremely detailed, wide 24mm lens, no people, muted NASApunk palette: white, NASA orange, deep blue, gold, neutral gray. No neon, no cyberpunk, no rust, no dark moody lighting, no night, no explosion.",
+  "prompt_sha1": "b49236e6f4ff448b25c87fc05f1121bf8be1c9f8",
+  "task_id": "2125095121228877825",
+  "charged": 11.65,
+  "file": "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle32\\anchors\\runs\\A3-outdoor\\out.png",
+  "status": "ok",
+  "note": "",
+  "wall": "102s"
+}
