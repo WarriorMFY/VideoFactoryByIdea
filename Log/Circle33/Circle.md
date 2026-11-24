@@ -5,7 +5,7 @@
 | 开始时间 | 2026-11-24 |
 | 结束时间 | 未结束 |
 | 目标 | 参考圈 32 的工作流（剧本 → 风格 → 锚图 → 分镜 → 合成），做一个网页端导演编辑工具：左侧项目列表、右侧项目视图区，每个项目固定 5 个 tab |
-| 状态 | **进行中**（2026-11-24 23:05 起为 v0.10 图片锁定版） |
+| 状态 | **进行中**（2026-11-24 23:15 起为 v0.11 三分目录版） |
 
 ## 需求拆解（来自用户指令）
 
@@ -18,16 +18,20 @@
 
 `Tool/director-editor/`（2026-11-24 23:07 由 `Workspace/director-editor/` 迁入，用户令「以后在这里开发」）：
 
-| 文件 | 作用 |
-| --- | --- |
-| `index.html` | 骨架：侧栏 + 主区 + tab |
-| `styles.css` | 深色工作台样式（琥珀强调色，贴合 NASApunk 片子的视觉） |
-| `data.js` | 种子数据：圈 32（NASApunk 30s）与圈 31（锈日 25s）两个项目，按 5 tab 的结构填 |
-| `app.js` | 状态、渲染、图片挂载 / 锁定、通道选择 |
-| `serve.py` | 本地服务：静态 + 项目目录 + 选图 / 上锁 + t2i 转发 |
-| `_smoke.js` | 74 项无浏览器断言（`--old` 另测旧格式） |
+2026-11-24 23:15 起按 `html/` `script/` `doc/` 三分（用户令「分 doc, script, html 三个子目录」）：
 
-零依赖前端 + `serve.py`（标准库）后端。启动：`cd Tool/director-editor && python serve.py`（默认 8347）。
+| 目录 | 文件 | 作用 |
+| --- | --- | --- |
+| `html/` | `index.html` | 骨架：侧栏 + 主区 + tab |
+| `html/` | `styles.css` | 深色工作台样式（琥珀强调色，贴合 NASApunk 片子的视觉） |
+| `html/` | `data.js` | 种子数据：圈 32（NASApunk 30s）与圈 31（锈日 25s）两个项目 |
+| `html/` | `app.js` | 状态、渲染、图片挂载 / 锁定、通道选择 |
+| `script/` | `serve.py` | 本地服务：静态（根=html/）+ 项目目录 + 选图 / 上锁 + t2i 转发 |
+| `script/` | `_smoke.js` | 74 项无浏览器断言（`--old` 另测旧格式） |
+| `doc/` | `前端设计.md` `后端设计.md` | 分层设计说明（截图不入工具目录） |
+
+零依赖前端 + `serve.py`（标准库）后端。启动：`cd Tool/director-editor && python script/serve.py`（默认 8347）。
+冒烟：`node script/_smoke.js`（在 `Tool/director-editor` 下跑）。
 
 **落盘快照**：`Log/Circle33/editor/`（2026-11-24 与当时的 Workspace 同步的 5 个文件：`index.html` / `styles.css` / `data.js` / `app.js` / `_smoke.js`）。Log 只记当时，后续改动只进 `Tool/director-editor/`；快照在副本目录里重跑冒烟可通过。
 
@@ -119,3 +123,22 @@
   - `serve.py` 的 `REPO = ROOT.parents[1]` 在 `Tool/` 下仍解析到仓库根（Tool/director-editor → Tool → 仓库根），`PROJ_ROOT`、通道脚本路径全部照旧，实测 `probe_exists=True`。
   - 副作用：`Tool/` 不入 `.gitignore`（原先 `Workspace/` 整目录忽略），工具源码从此**可被 git 跟踪**；本次未提交（纪律：只在结轮提交）。
   - 验证：新目录下 `_smoke.js` 74 项 + `--old` 6 项全 PASS；服务从新目录启动，`/api/health.root` 已指向 `Tool/director-editor`，`/`、`/app.js`、`/projfile/c32/...` 均 200。
+- 2026-11-24 23:12 本地提交 `99ffdf6`（用户令「提交到本地，但继续循环」）：工具迁入 `Tool/` 后首次入库，9 文件 +3685 行；`.gitignore` 补 4 类运行时垃圾（`_shot-profile/`、`_t2i/`、临时截图、`Projects/`）。
+- 2026-11-24 23:15 目录三分（用户令「对 director-edit 目录进行划分，分 doc, script, html 三个子目录」）。
+  - `html/`：`index.html` `app.js` `styles.css` `data.js`；`script/`：`serve.py` `_smoke.js`；`doc/`：`README.md`。
+  - `serve.py` 路径分层：`SCRIPT = __file__.parent`、`ROOT = SCRIPT.parent`、`WEB = ROOT/"html"`、`REPO = ROOT.parents[1]`（仍指向仓库根）；`SimpleHTTPRequestHandler(directory=WEB)`，`__forbidden__` 也改到 `WEB`；`/api/health` 新增 `web` 字段。静态根变成 `html/` 后 `/serve.py`、`/script/serve.py`、`/doc/README.md` 全 404，源码不暴露。
+  - `_smoke.js` 改 `require("../html/data.js")` / `require("../html/app.js")`，必须在 `Tool/director-editor` 下跑。
+  - 清掉 `_shot-profile/`（19MB 无头浏览器垃圾）与 4 张过期截图；`_t2i/`（3.9MB 旧产物）暂留待删，23:17 用户令后删除。
+  - 验证：`node script/_smoke.js` 74 项 + `--old` 6 项全 PASS；`/api/health` 报 version 0.11、`web` 指向 `html/`；`/`、`/app.js`、`/styles.css`、`/data.js` 200；`/projfile/c32/assets/indoor-angle.png` 200/3.88MB；截图页面正常（顶部 v0.11）。
+- 2026-11-24 23:19 截图移出工具目录（用户令「doc 下的 shots 移动到你自己得工作区目录，这些放工具里面干啥」）：`doc/shots/` 6 张 → `Workspace/director-editor/shots/`，工具内只留 `doc/README.md`；规则写进 README —— 截图与无头浏览器临时 profile 一律放 `Workspace/director-editor/`，不再进 `Tool/`。
+- 2026-11-24 23:25 工具根加 `README.md`（用户令「只放目录树，并说明三个目录的关系，doc > script > html，不超过 100 字」）：只留目录树 + 一句分层律「doc（稳定性、抽象性）> script > html：越往上越稳、越抽象，依赖只向下」，汉字 34 个。根 README 不参与静态服务（静态根是 `html/`），`/README.md` 404。
+- 2026-11-24 23:32 `doc/README.md` 拆成两份设计文档（用户令「拆分出来，目录约定删掉，其他归类到后端设计.md 以及前端设计.md」）：
+  - 删掉「目录约定」整节（目录树已上移到工具根 `README.md`，不再重复）；截图位置那句规则并入「与运行无关」的说明，不再占正文。
+  - `doc/后端设计.md`（73 行）：启动与路径分层、一项目一目录布局（含 assets/uplock/t2i 三区）、12 条接口表、写盘（前端整份 PUT，服务端无 mtime 比对 → 多标签页覆盖列为已知风险）、护栏（越界/拒盘根/.py 屏蔽/no-store/选图四态）、t2i 通道表与二次校验、冒烟命令。
+  - `doc/前端设计.md`（54 行）：布局与快捷键、状态三层（磁盘真源 / localStorage 只存 ui+folds / 内存）、三种卡（风格/锚图/分镜）、图位语义、活指针引用、提示词继承规则、生成条三处确认、锁钉与点击冒泡。
+  - 交叉引用同步：`Tool/README.md` 指向两份新文档；`Log` 目录表相应改写。
+- 2026-11-25 00:32 数据模型分层定稿，落 `doc/数据模型.md`（当前只含锚图，用户令「只留一个数据模型-锚图」）：
+  - 五层框架（用户定）：基础层（图/视频/文本）/ 业务层（剧本/锚图/分镜/短剧）/ 管理层（项目）/ 大模型层（通道 + 参数即抽象提示词）/ 审计层（一致性）。基础层三者相互独立、无出边，只有被别人引用——据此否掉 `Video → Image`，封面改由引用方持有（`Film.coverImageId`）。
+  - 业务层关系定为「一条主链 + 一个旁挂池」：剧本 → 分镜是唯一派生（只存 `sceneId`，不复制正文）；锚图 ⇢ 分镜 N—N 消费，锚图是分镜的**并行输入**不是下游；分镜 → 短剧 N—N 有序选片；剧本 ↔ 锚图无结构边，只有 cast 软对应（靠审计层反查）。推论：锚图无 `seq`；短剧是只读视图，故可退化为 `Project.artifacts[]`。
+  - `doc/数据模型.md` 只留锚图：6 字段（`id / kind / name / imageId / promptId / refs[]`）、4 条边（→Image、→Text、→Anchor 自引用、`Shot.anchorRefs` 入边）、3 条约定（无顺序 / 弱引用不级联 / 参数不落锚图）。按用户令先后删掉 `projectId` 与 `paramsId`：归属由 `project.json` 决定，参数属于生成动作。
+  - 其余四层（含 `Video` 不指向 `Image`、封面归 `Film`）只在对话中定论，未落盘。

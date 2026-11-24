@@ -47,8 +47,11 @@ from datetime import datetime
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent
-REPO = ROOT.parents[1]  # Tool/director-editor -> 仓库根
+SCRIPT = Path(__file__).resolve().parent        # Tool/director-editor/script（本文件所在）
+ROOT = SCRIPT.parent                             # Tool/director-editor（应用根）
+WEB = ROOT / "html"                              # 静态页面根：index.html / app.js / styles.css / data.js
+DOC = ROOT / "doc"                               # 文档与截图，不进静态服务
+REPO = ROOT.parents[1]                           # Tool/director-editor -> 仓库根
 PROJ_ROOT = REPO / "Workspace" / "Projects"  # 默认根 + 索引/回收站所在地
 INDEX = PROJ_ROOT / "_index.json"
 TRASH = PROJ_ROOT / "_trash"
@@ -342,10 +345,10 @@ def scan_projects():
 
 
 class Handler(SimpleHTTPRequestHandler):
-    server_version = "DirectorConsole/0.10"
+    server_version = "DirectorConsole/0.11"
 
     def __init__(self, *a, **kw):
-        super().__init__(*a, directory=str(ROOT), **kw)
+        super().__init__(*a, directory=str(WEB), **kw)
 
     def log_message(self, fmt, *args):
         sys.stderr.write("[console] %s\n" % (fmt % args))
@@ -360,7 +363,7 @@ class Handler(SimpleHTTPRequestHandler):
         clean = urllib.parse.unquote(path.split("?")[0].split("#")[0])
         # 源码与中间文件一律不给（服务端逻辑不该被页面拉走）
         if clean.lower().endswith((".py", ".pyc", ".tmp")):
-            return str(ROOT / "__forbidden__")
+            return str(WEB / "__forbidden__")
         if clean.startswith("/projects/"):
             target = (PROJ_ROOT / clean[len("/projects/"):]).resolve()
             return str(target) if is_under(target, PROJ_ROOT.resolve()) else str(ROOT / "__forbidden__")
@@ -369,7 +372,7 @@ class Handler(SimpleHTTPRequestHandler):
             pid, _, sub = rest.partition("/")
             d = dir_of(pid)
             if not d or not sub:
-                return str(ROOT / "__forbidden__")
+                return str(WEB / "__forbidden__")
             target = (d / sub).resolve()
             return str(target) if is_under(target, d.resolve()) else str(ROOT / "__forbidden__")
         return super().translate_path(path)
@@ -399,12 +402,13 @@ class Handler(SimpleHTTPRequestHandler):
             return self._json({
                 "ok": True,
                 "root": str(ROOT),
+                "web": str(WEB),
                 "proj_root": str(PROJ_ROOT),
                 "index": str(INDEX),
                 "indexed": len(load_index()),
                 "probe_exists": PROBE.exists(),
                 "webapp": WEBAPP,
-                "version": "0.10",
+                "version": "0.11",
             })
         if path == "/api/state":
             return self._json({"ok": True, "root": str(PROJ_ROOT), "projects": scan_projects()})
@@ -753,7 +757,7 @@ class Handler(SimpleHTTPRequestHandler):
 def main():
     PROJ_ROOT.mkdir(parents=True, exist_ok=True)
     srv = ThreadingHTTPServer(("127.0.0.1", PORT), Handler)
-    print("导演编辑台 v0.10 → http://localhost:%d/" % PORT)
+    print("导演编辑台 v0.11 → http://localhost:%d/" % PORT)
     print("项目根：%s（%d 个，索引 %d 条）" % (PROJ_ROOT, len(scan_projects()), len(load_index())))
     print("项目目录：可指到任意位置（盘根与系统目录已挡）")
     print("通道：%s（%s）" % (WEBAPP, "已找到 probe.py" if PROBE.exists() else "缺 probe.py"))

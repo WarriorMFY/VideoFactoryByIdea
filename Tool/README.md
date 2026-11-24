@@ -14,9 +14,10 @@
 
 | 应用 | 用途 | 启动 |
 | --- | --- | --- |
-| `director-editor/` | 导演编辑台：网页控制台，按项目目录读写 `project.json`，挂图 / 上锁 / 走 t2i 通道 | `cd Tool/director-editor && python serve.py`（默认 8347） |
+| `director-editor/` | 导演编辑台：网页控制台，按项目目录读写 `project.json`，挂图 / 上锁 / 走 t2i 通道 | `cd Tool/director-editor && python script/serve.py`（默认 8347） |
 
 它按用户令放在 `Tool/` 下长期开发（2026-11-24 由 `Workspace/director-editor/` 迁入）。
+内部按 `html/`（前端）/ `script/`（服务端与测试）/ `doc/`（设计文档）三分，设计说明见 `director-editor/doc/前端设计.md` 与 `doc/后端设计.md`。
 **注意它并不符合上面的分层约束**：`serve.py` 会调 `Skill/hub/generation/...` 的 t2i 通道脚本，
 是有意为之的例外，不要再拿“公共层不得引用 Skill”去套它。
 

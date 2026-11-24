@@ -1,5 +1,6 @@
 /* 无浏览器冒烟测试：用假 DOM + 假服务端跑 data.js + app.js。
-   用法：node _smoke.js            验收磁盘化后的新版
+   用法：node script/_smoke.js      验收磁盘化后的新版（在 Tool/director-editor 下执行）
+        node script/_smoke.js --old  验收旧格式 project.json
          node _smoke.js --old     验收旧格式 project.json（缺 styles / anchorGroups）也能渲染
 
    app.js 已改成「磁盘为准」：启动时 GET /api/state，空则把种子 POST 落盘。
@@ -133,8 +134,8 @@ function click(action, extra = {}) {
 }
 
 (async () => {
-  require("./data.js");
-  require("./app.js");
+  require("../html/data.js");
+  require("../html/app.js");
   await tick(60); // 等 boot() 落盘 + 首屏渲染
 
   if (OLD) {
