@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>导演编辑台 · 原型</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<aside>
+  <div class="brand">
+    <strong>DIRECTOR</strong>
+    <span>导演编辑台 · v0.1</span>
+  </div>
+
+  <div class="side-actions">
+    <button id="btn-new" class="btn primary">+ 新项目</button>
+  </div>
+
+  <div id="project-list" class="project-list"></div>
+
+  <div class="side-foot">
+    数据存浏览器 localStorage；图片只在本次会话内临时挂载。<br>
+    <button id="btn-reset" class="btn small" style="margin-top:8px">恢复种子数据</button>
+  </div>
+</aside>
+
+<main>
+  <div id="head" class="proj-head"></div>
+  <div id="tabs" class="tabs"></div>
+  <div id="panel" class="panel"></div>
+</main>
+
+<div id="toast"></div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
