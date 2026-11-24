@@ -1,0 +1,24 @@
+{
+  "id": "K4",
+  "group": "K",
+  "ts": "2026-11-24 11:14:58",
+  "webapp": "2114585366186516481",
+  "params": {
+    "n": 2,
+    "aspect_ratio": "16:9 (Widescreen)"
+  },
+  "prompt": "图2的机器人站在图1的厂房内，身体微侧向画面右，右手掌心朝上抬至胸前高度，一道青色天光从屋顶破口落下正好照进掌心，掌面锈迹与指节被照亮，细小的锈屑在光柱中浮起；胸口指示灯与面罩内暖橙光都亮着，中近景侧四分之三、略带俯角，背景是虚化的锈蚀钢梁与青色光柱，保持图1的色调与胶片颗粒，墙面素净无文字",
+  "prompt_sha1": "611b2d43a8e12695f72dd1e2d9187becb4ae5d35",
+  "ref": "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle31\\frames\\runs\\K4\\ref.png",
+  "ref_sha1": "e99f7cb7f63fdcc7a8d9e4b1c25357186b5c23d9",
+  "task_id": "2125065635426947073",
+  "charged": 24.48,
+  "files": [
+    "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle31\\frames\\runs\\K4\\out_1.png",
+    "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle31\\frames\\runs\\K4\\out_2.png"
+  ],
+  "per_image": 12.24,
+  "status": "ok",
+  "note": "A1+A2 双图；抬掌接光",
+  "wall": "144s"
+}

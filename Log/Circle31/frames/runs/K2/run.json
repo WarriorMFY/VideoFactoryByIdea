@@ -1,0 +1,24 @@
+{
+  "id": "K2",
+  "group": "K",
+  "ts": "2026-11-24 10:35:37",
+  "webapp": "2114585366186516481",
+  "params": {
+    "n": 2,
+    "aspect_ratio": "16:9 (Widescreen)"
+  },
+  "prompt": "图2的机器人位于图1的厂房内，正坐在满是尘土与碎砖的地面上，左手撑地、身体前倾，双膝弯曲准备起身，头部低垂，胸口指示灯熄灭，中全景略高机位，能看清全身，背景是锈蚀钢梁与破口天光，保持图1的色调与胶片颗粒，墙面素净无文字",
+  "prompt_sha1": "a51069ef8e54bbcb166cfe5abdd35cbc1b68b095",
+  "ref": "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle31\\frames\\runs\\K2\\ref.png",
+  "ref_sha1": "e99f7cb7f63fdcc7a8d9e4b1c25357186b5c23d9",
+  "task_id": "2125055746508021762",
+  "charged": 20.4,
+  "files": [
+    "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle31\\frames\\runs\\K2\\out_1.png",
+    "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle31\\frames\\runs\\K2\\out_2.png"
+  ],
+  "per_image": 10.2,
+  "status": "ok",
+  "note": "",
+  "wall": "120s"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "M2",
+  "group": "M",
+  "ts": "2026-11-24 10:45:36",
+  "webapp": "2113790012012720129",
+  "params": {
+    "dur": 5.0,
+    "aspect_ratio": "16:9 (Widescreen)",
+    "megapixels": "0.6"
+  },
+  "prompt": "机器人左手撑地，缓慢坐起，身体前倾，屈膝，再缓缓站直，最后双臂自然下垂站定；外壳上的尘土随之滑落，动作迟缓沉重，镜头固定不动",
+  "prompt_sha1": "9716900eafba981362129fff21879a598bbb7018",
+  "anchor": "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle31\\video\\runs\\M2\\anchor.png",
+  "anchor_sha1": "c1cae0bec0c05e3dfeaac94134330ca5a4616b3b",
+  "task_id": "2125058253984587778",
+  "charged": 18.87,
+  "file": "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle31\\video\\runs\\M2\\out.mp4",
+  "status": "ok",
+  "note": "",
+  "wall": "111s"
+}

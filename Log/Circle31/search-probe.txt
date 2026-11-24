@@ -1,0 +1,38 @@
+﻿
+=== tag tree  /api/portal/tag/tree
+   {} -> 301 must not be null
+
+=== template tags  /api/portal/template/tags
+   {} -> 404 NOT_FOUND
+   {'type': 'workflow'} -> 404 NOT_FOUND
+
+=== search workflow  /api/search/workflow
+   {'current': 1, 'size': 10, 'keyword': '瑙嗛鐢熻棰?} total=93314 n=10
+    fields: id,name,desc,systemWorkflow,publishTime,timestamp,preview,owner,statisticsInfo,nodeCount,liked,covers,tags,labels,seq,homeShow
+    - Minimax H3 Image 鏂囩敓鍥?鍙嶆帹鐢熷浘 | 2125054672699478018
+    - 娓呴路浜鸿劯鍙傝€冨浘 | 2125061170020315137
+    - 娴疯灪H3 浜虹墿鏇挎崲涓撶敤娴?| 2125038480706326530
+   {'current': 1, 'size': 10, 'searchKey': '瑙嗛鐢熻棰?} total=93314 n=10
+    fields: id,name,desc,systemWorkflow,publishTime,timestamp,preview,owner,statisticsInfo,nodeCount,liked,covers,tags,labels,seq,homeShow
+    - Minimax H3 Image 鏂囩敓鍥?鍙嶆帹鐢熷浘 | 2125054672699478018
+    - 娓呴路浜鸿劯鍙傝€冨浘 | 2125061170020315137
+    - 娴疯灪H3 浜虹墿鏇挎崲涓撶敤娴?| 2125038480706326530
+   {'current': 1, 'size': 10, 'name': '瑙嗛鐢熻棰?} total=93314 n=10
+    fields: id,name,desc,systemWorkflow,publishTime,timestamp,preview,owner,statisticsInfo,nodeCount,liked,covers,tags,labels,seq,homeShow
+    - Minimax H3 Image 鏂囩敓鍥?鍙嶆帹鐢熷浘 | 2125054672699478018
+    - 娓呴路浜鸿劯鍙傝€冨浘 | 2125061170020315137
+    - 娴疯灪H3 浜虹墿鏇挎崲涓撶敤娴?| 2125038480706326530
+
+=== model list  /api/portal/model/list
+   {'current': 1, 'size': 10} total=62650 n=10
+    fields: id,resourceName,resourceType,systemResource,createTime,version,imageSize,posterUrl,thumbnailUrl,labels,sourceType,originAuthor,sourceUrl,businessType,owner,statisticsInfo,tags,versions,state,desc
+    - None | 2125085004760965121
+    - None | 2125084688812429313
+    - None | 2125084393046892546
+
+=== search model  /api/search/model
+   {'current': 1, 'size': 10, 'keyword': 'video'} total=62650 n=10
+    fields: id,resourceName,resourceType,systemResource,createTime,version,imageSize,posterUrl,thumbnailUrl,labels,sourceType,originAuthor,sourceUrl,businessType,owner,statisticsInfo,tags,versions,state,desc
+    - None | 2125085004760965121
+    - None | 2125084688812429313
+    - None | 2125084393046892546

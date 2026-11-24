@@ -1,0 +1,21 @@
+{
+  "id": "M3",
+  "group": "M",
+  "ts": "2026-11-24 10:47:47",
+  "webapp": "2113790012012720129",
+  "params": {
+    "dur": 5.0,
+    "aspect_ratio": "16:9 (Widescreen)",
+    "megapixels": "0.6"
+  },
+  "prompt": "机器人站定不动，头部缓缓抬起约二十度，横向传感器正对镜头，天光在头壳边缘形成轮廓光；尘埃缓慢飘过，镜头极缓慢推近",
+  "prompt_sha1": "6dc89af44b6a1ecf01276bf63b5873f3a2264214",
+  "anchor": "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle31\\video\\runs\\M3\\anchor.png",
+  "anchor_sha1": "87eede7c8276d863f5fe0f9569c951922a9415f2",
+  "task_id": "2125058792617103361",
+  "charged": 18.7,
+  "file": "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle31\\video\\runs\\M3\\out.mp4",
+  "status": "ok",
+  "note": "",
+  "wall": "110s"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "M1",
+  "group": "M",
+  "ts": "2026-11-24 10:43:01",
+  "webapp": "2113790012012720129",
+  "params": {
+    "dur": 5.0,
+    "aspect_ratio": "16:9 (Widescreen)",
+    "megapixels": "0.6"
+  },
+  "prompt": "机器人静静侧躺在地上，前两秒完全静止；随后胸口圆形指示灯缓缓亮起暖橙色光，右手食指轻微抽动一下；尘土在光柱中缓慢飘浮，镜头固定不动，画面极其安静",
+  "prompt_sha1": "dc055129b77bca879b9aa4f8dda88f440a055c1f",
+  "anchor": "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle31\\video\\runs\\M1\\anchor.png",
+  "anchor_sha1": "733a2592436c5f78c20534959cf120ba83284c09",
+  "task_id": "2125057597462765569",
+  "charged": 23.8,
+  "file": "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle31\\video\\runs\\M1\\out.mp4",
+  "status": "ok",
+  "note": "",
+  "wall": "140s"
+}

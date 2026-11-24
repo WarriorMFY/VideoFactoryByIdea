@@ -1,0 +1,24 @@
+{
+  "id": "K3",
+  "group": "K",
+  "ts": "2026-11-24 10:38:08",
+  "webapp": "2114585366186516481",
+  "params": {
+    "n": 2,
+    "aspect_ratio": "16:9 (Widescreen)"
+  },
+  "prompt": "图2的机器人已在图1的厂房内站定，全身直立，双臂自然下垂，头部正面朝向镜头，胸前指示灯熄灭，近景略低机位，天光从背后破口落下在肩头形成轮廓光，地面有薄尘，保持图1的色调与胶片颗粒，墙面素净无文字",
+  "prompt_sha1": "43cc6840f089f912bba1f87b2f8852550f7abe99",
+  "ref": "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle31\\frames\\runs\\K3\\ref.png",
+  "ref_sha1": "e99f7cb7f63fdcc7a8d9e4b1c25357186b5c23d9",
+  "task_id": "2125056372281401346",
+  "charged": 21.25,
+  "files": [
+    "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle31\\frames\\runs\\K3\\out_1.png",
+    "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle31\\frames\\runs\\K3\\out_2.png"
+  ],
+  "per_image": 10.62,
+  "status": "ok",
+  "note": "",
+  "wall": "125s"
+}

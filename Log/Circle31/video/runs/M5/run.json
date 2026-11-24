@@ -1,0 +1,21 @@
+{
+  "id": "M5",
+  "group": "M",
+  "ts": "2026-11-24 11:22:44",
+  "webapp": "2113790012012720129",
+  "params": {
+    "dur": 5.0,
+    "aspect_ratio": "16:9 (Widescreen)",
+    "megapixels": "0.6"
+  },
+  "prompt": "机器人保持抬步姿态，只向前挪半步便停住，前脚落地后不再前进，身体略前倾；逆光在机身锈迹边缘勾出一层亮边，脚下尘土缓慢落下，面罩暖橙光微亮，镜头完全固定，不推不跟",
+  "prompt_sha1": "3ab231d2dcad0574790771f38fbe6ed050331264",
+  "anchor": "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle31\\video\\runs\\M5\\anchor.png",
+  "anchor_sha1": "97743f03510319fd8e1f59f329c40af58b9b6767",
+  "task_id": "2125067584310304770",
+  "charged": 18.02,
+  "file": "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle31\\video\\runs\\M5\\out.mp4",
+  "status": "ok",
+  "note": "K5 迈半步逆光；固定机位",
+  "wall": "106s"
+}

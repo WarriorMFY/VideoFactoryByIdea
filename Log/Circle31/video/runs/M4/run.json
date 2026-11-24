@@ -1,0 +1,21 @@
+{
+  "id": "M4",
+  "group": "M",
+  "ts": "2026-11-24 11:20:22",
+  "webapp": "2113790012012720129",
+  "params": {
+    "dur": 5.0,
+    "aspect_ratio": "16:9 (Widescreen)",
+    "megapixels": "0.6"
+  },
+  "prompt": "机器人站定不动，仅右手掌心缓缓向上微抬，掌心上方细小的光点慢慢浮起又飘散，青色天光落在手背与指节上；胸口指示灯与面罩暖橙光保持亮着，尘埃缓慢飘过光柱，镜头完全固定，不推不摇",
+  "prompt_sha1": "4c790b05c524e5c21b5cca6be4f7002ac0bcb329",
+  "anchor": "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle31\\video\\runs\\M4\\anchor.png",
+  "anchor_sha1": "f2310a60e0f2c9e93f91418cb5be7404ddbadf5f",
+  "task_id": "2125066989855801345",
+  "charged": 21.76,
+  "file": "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle31\\video\\runs\\M4\\out.mp4",
+  "status": "ok",
+  "note": "K4 接光；固定机位",
+  "wall": "128s"
+}

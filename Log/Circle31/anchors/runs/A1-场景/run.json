@@ -1,0 +1,18 @@
+{
+  "id": "A1-场景",
+  "group": "A",
+  "ts": "2026-11-24 10:30:50",
+  "webapp": "2046794551444119554",
+  "params": {
+    "aspect_ratio": "16:9",
+    "resolution": "1k"
+  },
+  "prompt": "复古未来主义风格的废弃厂房内部，倒塌的锈蚀钢梁，屋顶破口漏下一束青绿天光，尘埃在光柱中漂浮，地面薄尘与碎砖，远处墙面素净无任何文字与标识，暖橙色锈迹与青绿冷光对比，胶片颗粒质感，轻微扫描线，电影宽银幕构图，空无一人",
+  "prompt_sha1": "f5c7a84b655cac446933e21e0acdb37998bd21a5",
+  "task_id": "2125054511411318785",
+  "charged": 10.75,
+  "file": "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle31\\anchors\\runs\\A1-场景\\out.png",
+  "status": "ok",
+  "note": "",
+  "wall": "41s"
+}

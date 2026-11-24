@@ -45,4 +45,4 @@
 - `generation/workflow/image-to-video/i2v-probe/` 挂在 `generation/workflow/` 功能子树：只做「首帧+提示词→视频」的单步对照实验与度量，**不是第二个网络出口**——提交仍转发给 `runninghub/scripts/runninghub_app.py`。
 - `generation/workflow/image-to-video/wf-firstlast/` 挂在 `generation/workflow/` 功能子树：自带整份工作流图直跑「首帧+尾帧→视频」，**不是第二个网络出口**——凭证复用 `runninghub/scripts/rh_credential.py`；它是唯一一条不经 webapp 的生成路径，改图/改参数写在图里而非常量里。
 - `generation/workflow/image-to-image/flux3-edit/` 挂在 `generation/workflow/` 功能子树：只做「参考图+编辑提示词→图」的单步对照实验与度量（保真 vs 改动量），**不是第二个网络出口**——提交仍转发给 `runninghub/scripts/runninghub_app.py`，webappId `2114585366186516481`。
-- `generation/workflow/` 挂在 `generation/` 根：按功能归类的总目录——接口菜单与判据（五类，234 端点；架构×权重归属三象限、价格带、本账号通道）+ 实验台技能（`text-to-image/`：t2i-probe；`image-to-image/`：i2i-probe、flux3-edit；`text-to-video/`：t2v-probe；`image-to-video/`：i2v-probe、wf-firstlast），**不是网络出口**。
+- `generation/workflow/` 挂在 `generation/` 根：按功能归类的总目录——接口菜单与判据（五类，234 端点；架构×权重归属三象限、价格带、本账号通道）+ 实验台技能（`text-to-image/`：t2i-probe；`image-to-image/`：i2i-probe、flux3-edit；`text-to-video/`：t2v-probe；`image-to-video/`：i2v-probe、wf-firstlast；`video-to-video/`：仅菜单，调研态无技能），**不是网络出口**。

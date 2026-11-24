@@ -1,0 +1,546 @@
+{
+ "code": 0,
+ "msg": "success",
+ "errorMessages": null,
+ "data": {
+  "records": [
+   {
+    "id": "2109907990638850050",
+    "name": "YZ金鱼-MiniMax H3 终极篇-文武双全",
+    "desc": "视频地址：https://www.bilibili.com/video/BV1LKJm6VELc/?spm_id_from=0.0.search-card.all.click&amp;vd_source=acbc4fd0610ec0529cc3c194ed00e4b0",
+    "systemWorkflow": false,
+    "publishTime": "2026-10-14T12:57:45.000+00:00",
+    "timestamp": "1791982665000",
+    "preview": null,
+    "owner": {
+     "id": "1895752239757856770",
+     "avatar": "https://rh-images.xiaoyaoyou.com/0bda426bcfea2b97ff263ebac2036b97/a2b25955667dfb44cc2873f8b8114e90",
+     "name": "YZ_金鱼"
+    },
+    "statisticsInfo": {
+     "likeCount": "374",
+     "downloadCount": "0",
+     "useCount": "34582",
+     "pv": "0",
+     "collectCount": "1048"
+    },
+    "nodeCount": null,
+    "liked": 0,
+    "covers": [
+     {
+      "id": "2110354376991797249",
+      "objName": null,
+      "url": "https://rh-images.xiaoyaoyou.com/0bda426bcfea2b97ff263ebac2036b97/2026-10-14/9d22304277f102a7d6278b47b70f6c1b.jpg",
+      "thumbnailUri": "https://rh-images.xiaoyaoyou.com/0bda426bcfea2b97ff263ebac2036b97/2026-10-14/9d22304277f102a7d6278b47b70f6c1b.jpg?imageMogr2/format/jpeg/ignore-error/1",
+      "imageWidth": "880",
+      "imageHeight": "1184"
+     }
+    ],
+    "tags": [
+     {
+      "id": "1871131343570333697",
+      "name": "视频生视频",
+      "nameEn": "IOS",
+      "labels": "Video-to-Video"
+     }
+    ],
+    "labels": "视频生视频",
+    "seq": "1792070010",
+    "homeShow": null
+   },
+   {
+    "id": "2120355697408954370",
+    "name": "minimax_h3_image_t2i-文生图",
+    "desc": "minimax_h3_image_t2i-文生图",
+    "systemWorkflow": false,
+    "publishTime": "2026-11-11T03:32:03.000+00:00",
+    "timestamp": "1794367923000",
+    "preview": null,
+    "owner": {
+     "id": "2013421139631808514",
+     "avatar": "https://rh-images.xiaoyaoyou.com/8e2bd8ecb961ec4ce65b61119d0b38fc/887812ab83176d57a9a1b693a5b7dda5",
+     "name": "taoxiangyoushu"
+    },
+    "statisticsInfo": {
+     "likeCount": "1",
+     "downloadCount": "0",
+     "useCount": "1456",
+     "pv": "0",
+     "collectCount": "7"
+    },
+    "nodeCount": null,
+    "liked": 0,
+    "covers": [
+     {
+      "id": "2120358875793805314",
+      "objName": null,
+      "url": "https://rh-images.xiaoyaoyou.com/8e2bd8ecb961ec4ce65b61119d0b38fc/2026-11-11/83c2c4f64bc4f03a64665374aaef8bac.png",
+      "thumbnailUri": "https://rh-images.xiaoyaoyou.com/8e2bd8ecb961ec4ce65b61119d0b38fc/2026-11-11/83c2c4f64bc4f03a64665374aaef8bac.png?imageMogr2/format/jpg/ignore-error/1",
+      "imageWidth": "1536",
+      "imageHeight": "2720"
+     }
+    ],
+    "tags": [
+     {
+      "id": "1871131140800901121",
+      "name": "文生图",
+      "nameEn": "IOS",
+      "labels": "Text-to-Image"
+     }
+    ],
+    "labels": "文生图",
+    "seq": "1794391612",
+    "homeShow": null
+   },
+   {
+    "id": "2105695202211098626",
+    "name": "ki_MiniMax H3_多参selflift双采分镜硬控流",
+    "desc": "ki_MiniMax H3_多参selflift双采分镜硬控流,加入sol attention稀疏注意力加速，速度比单采版本快很多，效果方面还是单采更好一点，不在4K屏上看不太出差距。",
+    "systemWorkflow": false,
+    "publishTime": "2026-11-08T11:59:05.000+00:00",
+    "timestamp": "1794139145000",
+    "preview": null,
+    "owner": {
+     "id": "2014808080931627009",
+     "avatar": "https://rh-images.xiaoyaoyou.com/0a33cf3a21d8da6cef36812d08f309a8/b0eea102d0e950016b7e385872d89cf0",
+     "name": "建则ki"
+    },
+    "statisticsInfo": {
+     "likeCount": "12",
+     "downloadCount": "0",
+     "useCount": "1048",
+     "pv": "0",
+     "collectCount": "37"
+    },
+    "nodeCount": null,
+    "liked": 0,
+    "covers": [
+     {
+      "id": "2119399309807542273",
+      "objName": null,
+      "url": "https://rh-images.xiaoyaoyou.com/0a33cf3a21d8da6cef36812d08f309a8/2026-11-08/984ab7f9b1a3fc4d80a1547181ff8b02.jpg",
+      "thumbnailUri": "https://rh-images.xiaoyaoyou.com/0a33cf3a21d8da6cef36812d08f309a8/2026-11-08/984ab7f9b1a3fc4d80a1547181ff8b02.jpg?imageMogr2/format/jpeg/ignore-error/1",
+      "imageWidth": "1536",
+      "imageHeight": "2048"
+     }
+    ],
+    "tags": [
+     {
+      "id": "1871131343570333697",
+      "name": "视频生视频",
+      "nameEn": "IOS",
+      "labels": "Video-to-Video"
+     },
+     {
+      "id": "1871131236846268418",
+      "name": "图生视频",
+      "nameEn": "IOS",
+      "labels": "Image-to-Video"
+     },
+     {
+      "id": "1871131343570333705",
+      "name": "写实",
+      "nameEn": null,
+      "labels": "Realistic"
+     }
+    ],
+    "labels": "视频生视频,图生视频,写实",
+    "seq": "1794305447",
+    "homeShow": null
+   },
+   {
+    "id": "2119421820494508033",
+    "name": "【MiniMax-H3 Remix】FeiHou Easy H3 人物替换长视频一键自动化工作流v3",
+    "desc": "🎬 【MiniMax-H3 Remix】FeiHou Easy H3 人物替换 长视频 一键自动化 工作流 v3上传一段视频和人物图，就能把视频里的人换成你的角色，也能做动作迁移 ✨🎭 人物替换：Viggle Remake 换人，保留原视频的镜头、动作、表情和口型🎞️ 长视频不劣化：上下文窗口整段替换，一镜到底的长视频也不会越跑越糊🤖 AI 写分镜：配合 feihou-h3-motion-ultra skill，提示词和参数都写进分镜 md，拖进去点运行✂️ 自动分段 + 自动拼接：一次运行跑...",
+    "systemWorkflow": false,
+    "publishTime": "2026-11-18T01:48:56.000+00:00",
+    "timestamp": "1794966536000",
+    "preview": null,
+    "owner": {
+     "id": "1892780921614139394",
+     "avatar": "https://rh-images.xiaoyaoyou.com/default_head_icon.png",
+     "name": "小肥猴"
+    },
+    "statisticsInfo": {
+     "likeCount": "38",
+     "downloadCount": "0",
+     "useCount": "1789",
+     "pv": "0",
+     "collectCount": "102"
+    },
+    "nodeCount": null,
+    "liked": 0,
+    "covers": [
+     {
+      "id": "2122870846225207298",
+      "objName": null,
+      "url": "https://rh-images.xiaoyaoyou.com/926d26eb16c029c582457dd740d7ae52/2026-11-18/52f7fac3ad1351c647e376c8c88c511f.jpg",
+      "thumbnailUri": "https://rh-images.xiaoyaoyou.com/926d26eb16c029c582457dd740d7ae52/2026-11-18/52f7fac3ad1351c647e376c8c88c511f.jpg?imageMogr2/format/jpeg/ignore-error/1",
+      "imageWidth": "1536",
+      "imageHeight": "2048"
+     }
+    ],
+    "tags": [
+     {
+      "id": "1871131343570333697",
+      "name": "视频生视频",
+      "nameEn": "IOS",
+      "labels": "Video-to-Video"
+     },
+     {
+      "id": "1871151331064672258",
+      "name": "动作迁移",
+      "nameEn": null,
+      "labels": "Motion Transfer"
+     },
+     {
+      "id": "1871151561491345412",
+      "name": "视频换脸",
+      "nameEn": null,
+      "labels": "Video Face Swap"
+     }
+    ],
+    "labels": "视频生视频,动作迁移,视频换脸",
+    "seq": "-1794144513",
+    "homeShow": null
+   },
+   {
+    "id": "2124393676393771010",
+    "name": "H3渐进采样，SD2.5仿生流！真影视级",
+    "desc": " 参考图提示词工程文件+整合包：https://my.feishu.cn/wiki/SkTuwaMOUipTjQk6K6icotXwnzeB站主页：https://www.bilibili.com/video/BV1wgnR61E8Dyoutube主页：https://www.youtube.com/@%E5%90%83%E7%8C%AA%E4%BE%A0233",
+    "systemWorkflow": false,
+    "publishTime": "2026-11-22T07:05:22.000+00:00",
+    "timestamp": "1795331122000",
+    "preview": null,
+    "owner": {
+     "id": "1936087970787069953",
+     "avatar": "https://rh-images.xiaoyaoyou.com/f6ab9f6d1815074ead955328d98ff912/25d9ebb1e8f85aea839ee776022908a9",
+     "name": "CZX233"
+    },
+    "statisticsInfo": {
+     "likeCount": "3",
+     "downloadCount": "0",
+     "useCount": "435",
+     "pv": "0",
+     "collectCount": "9"
+    },
+    "nodeCount": null,
+    "liked": 0,
+    "covers": [
+     {
+      "id": "2124398820049121281",
+      "objName": null,
+      "url": "https://rh-images.xiaoyaoyou.com/f6ab9f6d1815074ead955328d98ff912/2026-11-22/8cb96a7bae9e53a08c51167dd2a66fe3.mp4",
+      "thumbnailUri": "https://rh-images.xiaoyaoyou.com/f6ab9f6d1815074ead955328d98ff912/2026-11-22/8cb96a7bae9e53a08c51167dd2a66fe3.mp4?imageMogr2/format/jpeg/ignore-error/1",
+      "imageWidth": null,
+      "imageHeight": null
+     }
+    ],
+    "tags": [
+     {
+      "id": "1871151284327542785",
+      "name": "人物类特效",
+      "nameEn": null,
+      "labels": "Character Effects"
+     },
+     {
+      "id": "1871131289648361473",
+      "name": "文生视频",
+      "nameEn": "IOS",
+      "labels": "Text-to-Video"
+     },
+     {
+      "id": "1871131236846268418",
+      "name": "图生视频",
+      "nameEn": "IOS",
+      "labels": "Image-to-Video"
+     }
+    ],
+    "labels": "人物类特效,文生视频,图生视频",
+    "seq": "-1795329896",
+    "homeShow": null
+   },
+   {
+    "id": "2123069340651180034",
+    "name": "Qwen 2.1 换脸换头 2合1（支持多人）",
+    "desc": "最多支持7人同时换脸、换头，默认自动遮罩，手动遮罩时以手动遮罩为准；保持图1的朝向、光照、色温、眼神方向保持图2的人脸、表情/发型B站使用教程：https://www.bilibili.com/video/BV14PytzJEjM/模型、工作流、lora同步资源网盘 (不要全部下载，请按需下载，本期编号【015】)：https://pan.quark.cn/s/f04107736a00",
+    "systemWorkflow": false,
+    "publishTime": "2026-11-19T01:24:00.000+00:00",
+    "timestamp": "1795051440000",
+    "preview": null,
+    "owner": {
+     "id": "1959241033525714946",
+     "avatar": "https://rh-images.xiaoyaoyou.com/83b6ab85b9aeb2ee7d7af0a376e2aeaa/da80b8ab487e6a60592cb139c5af491e",
+     "name": "孤海AI"
+    },
+    "statisticsInfo": {
+     "likeCount": "12",
+     "downloadCount": "0",
+     "useCount": "375",
+     "pv": "0",
+     "collectCount": "23"
+    },
+    "nodeCount": null,
+    "liked": 0,
+    "covers": [
+     {
+      "id": "2123316651318931457",
+      "objName": null,
+      "url": "https://rh-images.xiaoyaoyou.com/83b6ab85b9aeb2ee7d7af0a376e2aeaa/2026-11-19/77d327c802a44973f234a4bb507d5a3d.jpg",
+      "thumbnailUri": "https://rh-images.xiaoyaoyou.com/83b6ab85b9aeb2ee7d7af0a376e2aeaa/2026-11-19/77d327c802a44973f234a4bb507d5a3d.jpg?imageMogr2/format/jpeg/ignore-error/1",
+      "imageWidth": "1152",
+      "imageHeight": "1536"
+     }
+    ],
+    "tags": [
+     {
+      "id": "1871150599074738178",
+      "name": "精修",
+      "nameEn": null,
+      "labels": "Retouching"
+     },
+     {
+      "id": "1871131773423579140",
+      "name": "换脸",
+      "nameEn": null,
+      "labels": "Face Swap"
+     },
+     {
+      "id": "1871131188657909761",
+      "name": "图生图",
+      "nameEn": "IOS",
+      "labels": "Image-to-Image"
+     }
+    ],
+    "labels": "精修,换脸,图生图",
+    "seq": "-1795014150",
+    "homeShow": null
+   },
+   {
+    "id": "1965613155776909313",
+    "name": "声音克隆IndexTTS2史上最强音色克隆带语气",
+    "desc": "声音克隆IndexTTS2史上最强音色克隆带语气",
+    "systemWorkflow": false,
+    "publishTime": "2026-11-22T08:11:53.000+00:00",
+    "timestamp": "1795335113000",
+    "preview": null,
+    "owner": {
+     "id": "1895005037720719361",
+     "avatar": "https://rh-images.xiaoyaoyou.com/c6a6bad1b4c4572da3b3d0815e12d690/879311ade46761af51f674db3e085042",
+     "name": "虾仁不瞎"
+    },
+    "statisticsInfo": {
+     "likeCount": "85",
+     "downloadCount": "0",
+     "useCount": "9489",
+     "pv": "0",
+     "collectCount": "326"
+    },
+    "nodeCount": null,
+    "liked": 0,
+    "covers": [
+     {
+      "id": "2048233779222814722",
+      "objName": null,
+      "url": "https://rh-images.xiaoyaoyou.com/c6a6bad1b4c4572da3b3d0815e12d690/2026-04-26/48a2501a0f7d484343709f17656c0606.png",
+      "thumbnailUri": "https://rh-images.xiaoyaoyou.com/c6a6bad1b4c4572da3b3d0815e12d690/2026-04-26/48a2501a0f7d484343709f17656c0606.png?imageMogr2/format/jpg/ignore-error/1",
+      "imageWidth": "896",
+      "imageHeight": "1152"
+     }
+    ],
+    "tags": [
+     {
+      "id": "1871132100528959491",
+      "name": "数字人",
+      "nameEn": null,
+      "labels": "D-Human"
+     },
+     {
+      "id": "1871151815242543105",
+      "name": "其他",
+      "nameEn": null,
+      "labels": "Other"
+     },
+     {
+      "id": "1871131396917686273",
+      "name": "音频生成",
+      "nameEn": "IOS",
+      "labels": "Audio Generation"
+     }
+    ],
+    "labels": "数字人,其他,音频生成",
+    "seq": "-1757473670",
+    "homeShow": null
+   },
+   {
+    "id": "2119770538099957762",
+    "name": "YZ金鱼-MOSS-文生图",
+    "desc": "视频地址：",
+    "systemWorkflow": false,
+    "publishTime": "2026-11-16T11:33:14.000+00:00",
+    "timestamp": "1794828794000",
+    "preview": null,
+    "owner": {
+     "id": "1895752239757856770",
+     "avatar": "https://rh-images.xiaoyaoyou.com/0bda426bcfea2b97ff263ebac2036b97/a2b25955667dfb44cc2873f8b8114e90",
+     "name": "YZ_金鱼"
+    },
+    "statisticsInfo": {
+     "likeCount": "20",
+     "downloadCount": "0",
+     "useCount": "1001",
+     "pv": "0",
+     "collectCount": "49"
+    },
+    "nodeCount": null,
+    "liked": 0,
+    "covers": [
+     {
+      "id": "2122291905974329346",
+      "objName": null,
+      "url": "https://rh-images.xiaoyaoyou.com/0bda426bcfea2b97ff263ebac2036b97/2026-11-16/9f41cf8abbc450abc1b20f75e18a8bf9.png",
+      "thumbnailUri": "https://rh-images.xiaoyaoyou.com/0bda426bcfea2b97ff263ebac2036b97/2026-11-16/9f41cf8abbc450abc1b20f75e18a8bf9.png?imageMogr2/format/jpg/ignore-error/1",
+      "imageWidth": "1086",
+      "imageHeight": "1448"
+     }
+    ],
+    "tags": [
+     {
+      "id": "1871131140800901121",
+      "name": "文生图",
+      "nameEn": "IOS",
+      "labels": "Text-to-Image"
+     },
+     {
+      "id": "1871131188657909761",
+      "name": "图生图",
+      "nameEn": "IOS",
+      "labels": "Image-to-Image"
+     }
+    ],
+    "labels": "文生图,图生图",
+    "seq": "1794909899",
+    "homeShow": null
+   },
+   {
+    "id": "2117592285784395778",
+    "name": "海螺H3视频编辑-人物替换V3-优化加速强化效果",
+    "desc": "AI画布 SHUO-Canvas:https://github.com/ashuoAI/SHUO-Canvas下载地址：https://github.com/ashuoAI/SHUO-Canvas/releases百度网盘下载:https://pan.baidu.com/s/1igcxiCGpAd_CFoj9Am2s-g 提取码:8848加入阿硕会员群，微信：yumengashuo**社群提供：**一、comfyui独家高级工作流二、AI画布-SHUO-Canvas授权码解锁进阶功能三、各种疑难问题解...",
+    "systemWorkflow": false,
+    "publishTime": "2026-11-17T11:53:21.000+00:00",
+    "timestamp": "1794916401000",
+    "preview": null,
+    "owner": {
+     "id": "1891844307257565186",
+     "avatar": "https://rh-images.xiaoyaoyou.com/71ea1a54c47729a6246e83fcdff2f139/e2b662f961bb033083188e49d197a906",
+     "name": "阿硕讲ai"
+    },
+    "statisticsInfo": {
+     "likeCount": "17",
+     "downloadCount": "0",
+     "useCount": "743",
+     "pv": "0",
+     "collectCount": "43"
+    },
+    "nodeCount": null,
+    "liked": 0,
+    "covers": [
+     {
+      "id": "2117592312107847681",
+      "objName": null,
+      "url": "https://rh-images.xiaoyaoyou.com/71ea1a54c47729a6246e83fcdff2f139/2026-08-27/a526cbd377fa357ada52986531a1ec5f.gif",
+      "thumbnailUri": "https://rh-images.xiaoyaoyou.com/71ea1a54c47729a6246e83fcdff2f139/2026-08-27/a526cbd377fa357ada52986531a1ec5f.gif?imageMogr2/format/webp/ignore-error/1",
+      "imageWidth": "600",
+      "imageHeight": "800"
+     }
+    ],
+    "tags": [
+     {
+      "id": "1871131289648361473",
+      "name": "文生视频",
+      "nameEn": "IOS",
+      "labels": "Text-to-Video"
+     },
+     {
+      "id": "1871131343570333697",
+      "name": "视频生视频",
+      "nameEn": "IOS",
+      "labels": "Video-to-Video"
+     },
+     {
+      "id": "1871131236846268418",
+      "name": "图生视频",
+      "nameEn": "IOS",
+      "labels": "Image-to-Video"
+     }
+    ],
+    "labels": "文生视频,视频生视频,图生视频",
+    "seq": "1795005335",
+    "homeShow": null
+   },
+   {
+    "id": "2109735475824123905",
+    "name": "【Work-Fisher】AI短剧制作全流程",
+    "desc": "粉丝福利：点击右上角头像-邀请码-填入邀请码，领1000RH币，每天登录还有100币邀请码：rh-v1270B站主页：https://space.bilibili.com/17919458?spm_id_from=333.1007.0.0Youtube主页：https://www.youtube.com/@Work-Fisher",
+    "systemWorkflow": false,
+    "publishTime": "2026-10-14T11:21:57.000+00:00",
+    "timestamp": "1791976917000",
+    "preview": null,
+    "owner": {
+     "id": "1952241019687493634",
+     "avatar": "https://rh-images.xiaoyaoyou.com/94a512f00465c9efed808e22daeb3841/8216426d8c5312f611077fb298b98445",
+     "name": "Work-Fisher"
+    },
+    "statisticsInfo": {
+     "likeCount": "133",
+     "downloadCount": "0",
+     "useCount": "8140",
+     "pv": "0",
+     "collectCount": "393"
+    },
+    "nodeCount": null,
+    "liked": 0,
+    "covers": [
+     {
+      "id": "2110330266081386498",
+      "objName": null,
+      "url": "https://rh-images.xiaoyaoyou.com/94a512f00465c9efed808e22daeb3841/2026-10-14/edd3cf744fac6439daea3deb406459ce.png",
+      "thumbnailUri": "https://rh-images.xiaoyaoyou.com/94a512f00465c9efed808e22daeb3841/2026-10-14/edd3cf744fac6439daea3deb406459ce.png?imageMogr2/format/jpg/ignore-error/1",
+      "imageWidth": "1776",
+      "imageHeight": "2368"
+     }
+    ],
+    "tags": [
+     {
+      "id": "1871131140800901121",
+      "name": "文生图",
+      "nameEn": "IOS",
+      "labels": "Text-to-Image"
+     },
+     {
+      "id": "1871131188657909761",
+      "name": "图生图",
+      "nameEn": "IOS",
+      "labels": "Image-to-Image"
+     },
+     {
+      "id": "1871131236846268418",
+      "name": "图生视频",
+      "nameEn": "IOS",
+      "labels": "Image-to-Video"
+     }
+    ],
+    "labels": "文生图,图生图,图生视频",
+    "seq": "1792070010",
+    "homeShow": null
+   }
+  ],
+  "size": "10",
+  "current": "1",
+  "total": "93319",
+  "pages": "9332",
+  "hasNext": true,
+  "hasPrevious": false,
+  "nextCursor": null
+ }
+}

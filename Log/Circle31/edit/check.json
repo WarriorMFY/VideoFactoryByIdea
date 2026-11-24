@@ -1,0 +1,28 @@
+{
+  "file": "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle31\\edit\\final.mp4",
+  "size": "1056x608",
+  "fps": 24.0,
+  "frames": 600,
+  "duration_s": 25.0,
+  "luma_min": 47.3,
+  "luma_max": 110.1,
+  "black_frames": 0,
+  "seams": {
+    "120": {
+      "mad": 32.6,
+      "neighbor_med": 0.26
+    },
+    "240": {
+      "mad": 53.73,
+      "neighbor_med": 1.91
+    },
+    "360": {
+      "mad": 72.46,
+      "neighbor_med": 2.49
+    },
+    "480": {
+      "mad": 42.27,
+      "neighbor_med": 2.1
+    }
+  }
+}

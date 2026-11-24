@@ -1,0 +1,24 @@
+{
+  "id": "K5",
+  "group": "K",
+  "ts": "2026-11-24 11:17:37",
+  "webapp": "2114585366186516481",
+  "params": {
+    "n": 2,
+    "aspect_ratio": "16:9 (Widescreen)"
+  },
+  "prompt": "图2的机器人站在图1的厂房内，侧身朝向画面左侧的青色光柱，刚迈出半步、前脚掌尚未落地，身体略前倾，逆光把全身锈迹轮廓勾亮，脚下尘土微微扬起；胸口指示灯亮着，全身入画，中远景低机位，背景是锈蚀钢架与满地碎砖，保持图1的色调与胶片颗粒，墙面素净无文字",
+  "prompt_sha1": "9e463822a566cbd163a8d34c14ce2bef2b06758b",
+  "ref": "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle31\\frames\\runs\\K5\\ref.png",
+  "ref_sha1": "e99f7cb7f63fdcc7a8d9e4b1c25357186b5c23d9",
+  "task_id": "2125066297673998338",
+  "charged": 21.76,
+  "files": [
+    "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle31\\frames\\runs\\K5\\out_1.png",
+    "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle31\\frames\\runs\\K5\\out_2.png"
+  ],
+  "per_image": 10.88,
+  "status": "ok",
+  "note": "A1+A2 双图；迈半步逆光",
+  "wall": "128s"
+}
