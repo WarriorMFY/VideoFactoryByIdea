@@ -1,0 +1,21 @@
+{
+  "id": "V10c-忐忑8s合并",
+  "group": "V10",
+  "ts": "2026-11-25 23:05:10",
+  "webapp": "2113790012012720129",
+  "params": {
+    "dur": 8.0,
+    "aspect_ratio": "16:9 (Widescreen)",
+    "megapixels": "0.6"
+  },
+  "prompt": "火箭发射控制中心，都不说话，只有后台广播在画外播报：“倒计时：5，4，3，2，1，点火”，镜头任意调度，重点是突出“工程师们十分忐忑紧张得感觉”，全程压抑而紧张。",
+  "prompt_sha1": "3c6da15cfc17cbb5273cf66bea8982a4ff880bf9",
+  "anchor": "F:\\AgentWorkArea\\WorkBuddy\\CardStudio\\Log\\Circle35\\i2v\\runs\\V10c-忐忑8s合并\\anchor.png",
+  "anchor_sha1": "1581f09f9c06e92ab8baf415eb766ba860a8a362",
+  "task_id": "2125606740417531905",
+  "charged": 42.5,
+  "file": "F:\\AgentWorkArea\\WorkBuddy\\CardStudio\\Log\\Circle35\\i2v\\runs\\V10c-忐忑8s合并\\out.mp4",
+  "status": "ok",
+  "note": "原话+在画外播报三字，取原话的镜头任意调度与改写版的干净音轨",
+  "wall": "250s"
+}

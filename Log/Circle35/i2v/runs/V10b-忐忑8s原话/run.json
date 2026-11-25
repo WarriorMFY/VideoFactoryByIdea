@@ -1,0 +1,21 @@
+{
+  "id": "V10b-忐忑8s原话",
+  "group": "V10",
+  "ts": "2026-11-25 22:56:58",
+  "webapp": "2113790012012720129",
+  "params": {
+    "dur": 8.0,
+    "aspect_ratio": "16:9 (Widescreen)",
+    "megapixels": "0.6"
+  },
+  "prompt": "火箭发射控制中心，都不说话，只有后台广播声“倒计时：5，4，3，2，1，点火”，镜头任意调度，重点是突出“工程师们十分忐忑紧张得感觉”，全程压抑而紧张。",
+  "prompt_sha1": "bb4143936cb11bd308fd4f9ae9f41dfbf65f4ecc",
+  "anchor": "F:\\AgentWorkArea\\WorkBuddy\\CardStudio\\Log\\Circle35\\i2v\\runs\\V10b-忐忑8s原话\\anchor.png",
+  "anchor_sha1": "1581f09f9c06e92ab8baf415eb766ba860a8a362",
+  "task_id": "2125604678208278529",
+  "charged": 36.72,
+  "file": "F:\\AgentWorkArea\\WorkBuddy\\CardStudio\\Log\\Circle35\\i2v\\runs\\V10b-忐忑8s原话\\out.mp4",
+  "status": "ok",
+  "note": "用户原话原样重跑，不加任何改写；用于对照 V10 的改写版",
+  "wall": "216s"
+}

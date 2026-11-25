@@ -1,0 +1,24 @@
+{
+  "id": "V4b-去最后排保留10人",
+  "group": "V4",
+  "ts": "2026-11-25 21:37:00",
+  "webapp": "2114585366186516481",
+  "params": {
+    "n": 2,
+    "aspect_ratio": "16:9 (Widescreen)"
+  },
+  "prompt": "参考图1，去掉最后排人像，保留至少10人，其他都不变",
+  "prompt_sha1": "f76743082df9b482da5773b0a8d51408699b86c5",
+  "ref": "F:\\AgentWorkArea\\WorkBuddy\\CardStudio\\Log\\Circle35\\i2i\\runs\\V4b-去最后排保留10人\\ref.png",
+  "ref_sha1": "7cce4e67916adac21c779b5ea316d274ad635b2f",
+  "task_id": "2125584556261330945",
+  "charged": 22.95,
+  "files": [
+    "F:\\AgentWorkArea\\WorkBuddy\\CardStudio\\Log\\Circle35\\i2i\\runs\\V4b-去最后排保留10人\\out_1.png",
+    "F:\\AgentWorkArea\\WorkBuddy\\CardStudio\\Log\\Circle35\\i2i\\runs\\V4b-去最后排保留10人\\out_2.png"
+  ],
+  "per_image": 11.47,
+  "status": "ok",
+  "note": "V4 报 805（1360 同尺寸此前两次成功，判定为通道偶发失败）后原参重试",
+  "wall": "135s"
+}

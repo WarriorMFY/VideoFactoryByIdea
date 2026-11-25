@@ -1,0 +1,21 @@
+{
+  "id": "V4-去最后排保留10人",
+  "group": "V4",
+  "ts": "2026-11-25 21:35:32",
+  "webapp": "2114585366186516481",
+  "params": {
+    "n": 2,
+    "aspect_ratio": "16:9 (Widescreen)"
+  },
+  "prompt": "参考图1，去掉最后排人像，保留至少10人，其他都不变",
+  "prompt_sha1": "f76743082df9b482da5773b0a8d51408699b86c5",
+  "ref": "F:\\AgentWorkArea\\WorkBuddy\\CardStudio\\Log\\Circle35\\i2i\\runs\\V4-去最后排保留10人\\ref.png",
+  "ref_sha1": "7cce4e67916adac21c779b5ea316d274ad635b2f",
+  "task_id": "2125584179398926338",
+  "charged": null,
+  "files": [],
+  "per_image": null,
+  "status": "failed",
+  "note": "第三次减人：改数量约束（至少10人），锚同上",
+  "error": "Uploading ref.png...\nUploaded: api/5a24b054fd7ab3615013b727d869818071203b52adb28a9ae25abcf860d49240.png\nSubmitting AI app task (webapp 2114585366186516481)...\nTASK_ID:2125584179398926338\nTask ID: 2125584179398926338\nWaiting for result..............{\"error\": \"TASK_FAILED\", \"message\": \"Task failed: [805] 工作流运行失败\"}"
+}

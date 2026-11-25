@@ -1,0 +1,24 @@
+{
+  "id": "V1b-减人三分之二",
+  "group": "V1",
+  "ts": "2026-11-25 20:54:42",
+  "webapp": "2114585366186516481",
+  "params": {
+    "n": 2,
+    "aspect_ratio": "16:9 (Widescreen)"
+  },
+  "prompt": "参考图1，其他不变只减少入图得人物数量，将远处模糊人像去掉三分之二",
+  "prompt_sha1": "63c3d198315f72bce5e2a8c7eab045f3133ab443",
+  "ref": "F:\\AgentWorkArea\\WorkBuddy\\CardStudio\\Log\\Circle35\\i2i\\runs\\V1b-减人三分之二\\ref.png",
+  "ref_sha1": "7cce4e67916adac21c779b5ea316d274ad635b2f",
+  "task_id": "2125573905698738178",
+  "charged": 20.91,
+  "files": [
+    "F:\\AgentWorkArea\\WorkBuddy\\CardStudio\\Log\\Circle35\\i2i\\runs\\V1b-减人三分之二\\out_1.png",
+    "F:\\AgentWorkArea\\WorkBuddy\\CardStudio\\Log\\Circle35\\i2i\\runs\\V1b-减人三分之二\\out_2.png"
+  ],
+  "per_image": 10.46,
+  "status": "ok",
+  "note": "V1 因 1672x941 输入报 [805] 工作流失败；本条把参考图等比缩到 1360x765 重试",
+  "wall": "123s"
+}

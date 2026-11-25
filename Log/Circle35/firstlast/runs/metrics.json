@@ -1,0 +1,45 @@
+{
+  "video": {
+    "w": 720,
+    "h": 400,
+    "frames": 161
+  },
+  "metrics": {
+    "resize": {
+      "first_vs_first": [
+        0.9817,
+        0.8969
+      ],
+      "first_vs_last": [
+        0.8416,
+        0.6156
+      ],
+      "last_vs_first": [
+        0.8101,
+        0.5779
+      ],
+      "last_vs_last": [
+        0.9724,
+        0.889
+      ]
+    },
+    "crop": {
+      "first_vs_first": [
+        0.891,
+        0.6986
+      ],
+      "first_vs_last": [
+        0.8203,
+        0.5816
+      ],
+      "last_vs_first": [
+        0.8912,
+        0.7271
+      ],
+      "last_vs_last": [
+        0.9719,
+        0.8873
+      ]
+    }
+  }
+}

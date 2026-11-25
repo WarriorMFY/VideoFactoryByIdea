@@ -1,0 +1,21 @@
+{
+  "id": "V1-减人三分之二",
+  "group": "V1",
+  "ts": "2026-11-25 20:52:43",
+  "webapp": "2114585366186516481",
+  "params": {
+    "n": 2,
+    "aspect_ratio": "16:9 (Widescreen)"
+  },
+  "prompt": "参考图1，其他不变只减少入图得人物数量，将远处模糊人像去掉三分之二",
+  "prompt_sha1": "63c3d198315f72bce5e2a8c7eab045f3133ab443",
+  "ref": "F:\\AgentWorkArea\\WorkBuddy\\CardStudio\\Log\\Circle35\\i2i\\runs\\V1-减人三分之二\\ref.png",
+  "ref_sha1": "e1ced229b3c5c72275715e8fe5597178139a8980",
+  "task_id": "2125573406723366914",
+  "charged": null,
+  "files": [],
+  "per_image": null,
+  "status": "failed",
+  "note": "",
+  "error": "Uploading ref.png...\nUploaded: api/98306f1391cd621199cc018a3b14eefaf44258bee37c116bde1a666b1e68e9ed.png\nSubmitting AI app task (webapp 2114585366186516481)...\nTASK_ID:2125573406723366914\nTask ID: 2125573406723366914\nWaiting for result................{\"error\": \"TASK_FAILED\", \"message\": \"Task failed: [805] 工作流运行失败\"}"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "V8-紧张到欢呼",
+  "channel": "wf-firstlast / Wan2.2-VACE-Fun 24 节点整图直传",
+  "workflow_placeholder_id": "1904136902449209346",
+  "start_node": "205",
+  "end_node": "204",
+  "first": "Log/Circle35/fix/V6-纪录片调色.png",
+  "last": "Log/Circle35/quanneng/runs/V7-欢呼雀跃/out.png",
+  "prompt_file": "Log/Circle35/prompts/V8-紧张到欢呼-首尾帧.txt",
+  "frames": 161,
+  "width": 720,
+  "out": "720x400 / 16fps / 10.06s / 990309 bytes",
+  "task_id": "2125592764799471618",
+  "charged": 33.49,
+  "wall": "205s",
+  "ts": "2026-11-25 22:12:58"
+}

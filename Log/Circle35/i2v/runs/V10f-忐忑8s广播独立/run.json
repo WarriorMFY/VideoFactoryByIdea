@@ -1,0 +1,21 @@
+{
+  "id": "V10f-忐忑8s广播独立",
+  "group": "V10",
+  "ts": "2026-11-25 23:37:24",
+  "webapp": "2113790012012720129",
+  "params": {
+    "dur": 8.0,
+    "aspect_ratio": "16:9 (Widescreen)",
+    "megapixels": "0.6"
+  },
+  "prompt": "火箭发射控制中心大厅，冷白顶光，屏幕蓝光作侧逆。\n镜头全程轻微手持晃动，呼吸感明显，像跟拍实录。不切镜。\n后台广播在画外播报：「倒计时：5，4，3，2，1，点火」。\n所有人站立仰视前方大屏，神情忐忑紧张、精神紧绷：有人屏住呼吸、咬住下唇、喉结吞咽、手指绞在一起、指节发白、肩膀绷直、下颌收紧，有人抬手摸了下工牌又放下。目光死死盯着大屏，不敢眨眼。\n气氛压抑而紧张，沉得让人透不过气。真实机构现场实录质感，低饱和冷调，颗粒可见。全程不要笑容、不要欢呼、不要鼓掌、不要转身，不要说话，不要出现字幕与水印。",
+  "prompt_sha1": "14bff239ba6d0a10e1c286f9c7b33ed1577c8ff1",
+  "anchor": "F:\\AgentWorkArea\\WorkBuddy\\CardStudio\\Log\\Circle35\\i2v\\runs\\V10f-忐忑8s广播独立\\anchor.png",
+  "anchor_sha1": "1581f09f9c06e92ab8baf415eb766ba860a8a362",
+  "task_id": "2125614851664596994",
+  "charged": 44.03,
+  "file": "F:\\AgentWorkArea\\WorkBuddy\\CardStudio\\Log\\Circle35\\i2v\\runs\\V10f-忐忑8s广播独立\\out.mp4",
+  "status": "ok",
+  "note": "用户版：广播单独成行、去掉全场不说话前缀、负面加不要说话",
+  "wall": "259s"
+}

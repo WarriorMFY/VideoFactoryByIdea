@@ -1,0 +1,24 @@
+{
+  "id": "V2-去远景人像",
+  "group": "V2",
+  "ts": "2026-11-25 21:04:01",
+  "webapp": "2114585366186516481",
+  "params": {
+    "n": 2,
+    "aspect_ratio": "16:9 (Widescreen)"
+  },
+  "prompt": "参考图1，去掉远景人像，其他都不变",
+  "prompt_sha1": "71207ba6f3ea95aa985091670433e91aaf301b45",
+  "ref": "F:\\AgentWorkArea\\WorkBuddy\\CardStudio\\Log\\Circle35\\i2i\\runs\\V2-去远景人像\\ref.png",
+  "ref_sha1": "7cce4e67916adac21c779b5ea316d274ad635b2f",
+  "task_id": "2125576252286009346",
+  "charged": 22.27,
+  "files": [
+    "F:\\AgentWorkArea\\WorkBuddy\\CardStudio\\Log\\Circle35\\i2i\\runs\\V2-去远景人像\\out_1.png",
+    "F:\\AgentWorkArea\\WorkBuddy\\CardStudio\\Log\\Circle35\\i2i\\runs\\V2-去远景人像\\out_2.png"
+  ],
+  "per_image": 11.13,
+  "status": "ok",
+  "note": "参考图为 1360x765 重采样版（1672 直传会报 805）；锚与原图一致",
+  "wall": "131s"
+}

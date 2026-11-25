@@ -1,0 +1,41 @@
+{
+ "2": {
+  "class_type": "LoadImage",
+  "inputs": {
+   "image": "placeholder.png"
+  },
+  "_meta": {
+   "title": "加载图像"
+  }
+ },
+ "5": {
+  "class_type": "SaveImage",
+  "inputs": {
+   "filename_prefix": "ComfyUI",
+   "images": [
+    "16",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "保存图像"
+  }
+ },
+ "16": {
+  "class_type": "RH_RhartImageNG31FlashOfficialImageToImage",
+  "inputs": {
+   "image1": [
+    "2",
+    0
+   ],
+   "seed": 42,
+   "skip_error": false,
+   "aspectRatio": "3:4",
+   "prompt": "严格保持原图不变：人物长相、发型、服装、姿态、构图、光线、背景、画风全部照原样复刻；不要新增或删除任何内容，不要出现文字、水印、边框。",
+   "resolution": "2k"
+  },
+  "_meta": {
+   "title": "RH 全能图片V2-图生图-官方稳定版"
+  }
+ }
+}

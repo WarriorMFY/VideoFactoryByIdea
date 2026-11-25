@@ -1,0 +1,21 @@
+{
+  "id": "V10-忐忑8s",
+  "group": "V10",
+  "ts": "2026-11-25 22:47:38",
+  "webapp": "2113790012012720129",
+  "params": {
+    "dur": 8.0,
+    "aspect_ratio": "16:9 (Widescreen)",
+    "megapixels": "0.6"
+  },
+  "prompt": "火箭发射控制中心大厅，深夜，冷白顶光，屏幕蓝光作侧逆。\n\n镜头缓慢横移并向前推近，掠过一排排工位与椅背，最终停在前排工程师的侧脸和身前紧握的手上；全程轻微手持晃动，呼吸感明显，像跟拍实录。不切镜。\n\n全场没有一个人说话，只有后台广播在画外播报：「倒计时：5，4，3，2，1，点火」。所有人站立仰视前方大屏，神情忐忑紧张、精神紧绷：屏住呼吸、咬住下唇、喉结吞咽、手指绞在一起、指节发白、肩膀绷直、下颌收紧，有人抬手摸了下工牌又放下。目光死死盯着大屏，不敢眨眼。\n\n气氛压抑而紧张，沉得让人透不过气。真实机构现场实录质感，低饱和冷调，颗粒可见。全程不要笑容、不要欢呼、不要鼓掌、不要转身，不要出现字幕与水印。",
+  "prompt_sha1": "ee70a9ca6b55bf98ad0eedf5de00ac5a57a6f618",
+  "anchor": "F:\\AgentWorkArea\\WorkBuddy\\CardStudio\\Log\\Circle35\\i2v\\runs\\V10-忐忑8s\\anchor.png",
+  "anchor_sha1": "1581f09f9c06e92ab8baf415eb766ba860a8a362",
+  "task_id": "2125602327602876417",
+  "charged": 36.21,
+  "file": "F:\\AgentWorkArea\\WorkBuddy\\CardStudio\\Log\\Circle35\\i2v\\runs\\V10-忐忑8s\\out.mp4",
+  "status": "ok",
+  "note": "首帧取 keyframes/01-紧张不安.png，突出忐忑压抑",
+  "wall": "213s"
+}
