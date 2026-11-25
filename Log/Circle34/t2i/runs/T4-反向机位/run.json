@@ -1,0 +1,20 @@
+{
+  "id": "T4-反向机位",
+  "group": "T1",
+  "ts": "2026-11-25 16:47:06",
+  "webapp": "2046794551444119554",
+  "params": {
+    "aspect_ratio": "16:9",
+    "resolution": "1k"
+  },
+  "prompt": "NASA朋克风格，航空发射总控现场，由单独一个总控制台与下方多排多列子控制台构成，镜头从主控制台看向子控制台，只有场地没有人，禁止组织Logo",
+  "prompt_sha1": "aaf1cb0f6a355246bb87e36729e70bdc8c6bb65c",
+  "task_id": "2125511587895926786",
+  "charged": 11.02,
+  "file": "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle34\\t2i\\runs\\T4-反向机位\\out.png",
+  "status": "ok",
+  "note": "",
+  "variable": "机位",
+  "baseline": "T3-NASA朋克-无Logo",
+  "wall": "62s"
+}

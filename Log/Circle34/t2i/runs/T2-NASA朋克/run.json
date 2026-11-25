@@ -1,0 +1,20 @@
+{
+  "id": "T2-NASA朋克",
+  "group": "T1",
+  "ts": "2026-11-25 16:32:45",
+  "webapp": "2046794551444119554",
+  "params": {
+    "aspect_ratio": "16:9",
+    "resolution": "1k"
+  },
+  "prompt": "NASA朋克风格，航空发射总控现场，由单独一个总控制台与下方多排多列子控制台构成，只有场地没有人",
+  "prompt_sha1": "7db0e49868480fc187accdb148546f3a65a584c6",
+  "task_id": "2125507975547412482",
+  "charged": 11.53,
+  "file": "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle34\\t2i\\runs\\T2-NASA朋克\\out.png",
+  "status": "ok",
+  "note": "",
+  "variable": "风格前缀",
+  "baseline": "T1-发射总控",
+  "wall": "95s"
+}

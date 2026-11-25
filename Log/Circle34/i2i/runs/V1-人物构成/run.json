@@ -1,0 +1,25 @@
+{
+  "id": "V1-人物构成",
+  "group": "V1",
+  "ts": "2026-11-25 16:52:58",
+  "webapp": "2114585366186516481",
+  "params": {
+    "n": 2,
+    "aspect_ratio": "16:9 (Widescreen)"
+  },
+  "prompt": "火箭即将发射现场，场地和镜头参考图1，下面只写人物构成。主工程师在主控制台，其他工程师们站在各自子控制台前，要求统一工装，有男有女，禁止出现组织logo",
+  "prompt_sha1": "91271e86686fe4ee220a88cfe6482e771d020595",
+  "ref": "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle34\\i2i\\runs\\V1-人物构成\\ref.png",
+  "ref_sha1": "2337fec31ec3f67568ca818676c0292f16d7a31a",
+  "task_id": "2125513068942426113",
+  "charged": 23.8,
+  "files": [
+    "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle34\\i2i\\runs\\V1-人物构成\\out_1.png",
+    "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle34\\i2i\\runs\\V1-人物构成\\out_2.png"
+  ],
+  "per_image": 11.9,
+  "status": "ok",
+  "note": "重跑：首次提交因 edit.py 不注入凭据报 NO_API_KEY",
+  "baseline": "T4-反向机位",
+  "wall": "140s"
+}

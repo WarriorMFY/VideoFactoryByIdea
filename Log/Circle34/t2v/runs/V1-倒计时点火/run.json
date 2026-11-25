@@ -1,0 +1,20 @@
+{
+  "id": "V1-倒计时点火",
+  "group": "V1",
+  "ts": "2026-11-25 17:27:37",
+  "webapp": "2085304953094107137",
+  "params": {
+    "dur": 5.0,
+    "dur_index": "1",
+    "res": "480p",
+    "aspect_ratio": "16:9 (Widescreen)"
+  },
+  "prompt": "控制室内，全场安静，只有“倒计时：5,4,3..”的广播声音，所有工程师原地起立，神情紧张，都不说话，注视眼前，在广播喊到“1”的瞬间，总工程师的手按下了点火按钮。",
+  "prompt_sha1": "df8fce573b4386d9dd3e5305c97297c8d63a8e63",
+  "task_id": "2125521787986071554",
+  "charged": 14.28,
+  "file": "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle34\\t2v\\runs\\V1-倒计时点火\\out.mp4",
+  "status": "ok",
+  "note": "",
+  "wall": "84s"
+}

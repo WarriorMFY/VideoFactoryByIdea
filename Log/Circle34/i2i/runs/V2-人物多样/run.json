@@ -1,0 +1,26 @@
+{
+  "id": "V2-人物多样",
+  "group": "V1",
+  "ts": "2026-11-25 16:58:20",
+  "webapp": "2114585366186516481",
+  "params": {
+    "n": 2,
+    "aspect_ratio": "16:9 (Widescreen)"
+  },
+  "prompt": "火箭即将发射现场，场地和镜头参考图1，下面只写人物构成。主工程师在主控制台，其他工程师们站在各自子控制台前，要求统一工装，有男有女，各种年龄，各种体型，尽量多样，禁止出现组织logo",
+  "prompt_sha1": "227a64e44a9db3acd15bf9f9dba40ecbd9051454",
+  "ref": "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle34\\i2i\\runs\\V2-人物多样\\ref.png",
+  "ref_sha1": "2337fec31ec3f67568ca818676c0292f16d7a31a",
+  "task_id": "2125514416840724482",
+  "charged": 46.07,
+  "files": [
+    "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle34\\i2i\\runs\\V2-人物多样\\out_1.png",
+    "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle34\\i2i\\runs\\V2-人物多样\\out_2.png"
+  ],
+  "per_image": 23.04,
+  "status": "ok",
+  "note": "",
+  "variable": "多样性",
+  "baseline": "V1-人物构成",
+  "wall": "271s"
+}

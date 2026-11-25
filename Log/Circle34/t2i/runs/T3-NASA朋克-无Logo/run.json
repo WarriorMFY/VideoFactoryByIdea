@@ -1,0 +1,20 @@
+{
+  "id": "T3-NASA朋克-无Logo",
+  "group": "T1",
+  "ts": "2026-11-25 16:39:31",
+  "webapp": "2046794551444119554",
+  "params": {
+    "aspect_ratio": "16:9",
+    "resolution": "1k"
+  },
+  "prompt": "NASA朋克风格，航空发射总控现场，由单独一个总控制台与下方多排多列子控制台构成，只有场地没有人，禁止出现组织Logo",
+  "prompt_sha1": "43357f18029d0fb33b3c9c2670c95650f5804b83",
+  "task_id": "2125509679240138754",
+  "charged": 10.93,
+  "file": "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle34\\t2i\\runs\\T3-NASA朋克-无Logo\\out.png",
+  "status": "ok",
+  "note": "",
+  "variable": "否定Logo",
+  "baseline": "T2-NASA朋克",
+  "wall": "54s"
+}

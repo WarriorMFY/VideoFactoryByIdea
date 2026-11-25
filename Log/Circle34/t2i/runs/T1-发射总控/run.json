@@ -1,0 +1,18 @@
+{
+  "id": "T1-发射总控",
+  "group": "T1",
+  "ts": "2026-11-25 16:28:55",
+  "webapp": "2046794551444119554",
+  "params": {
+    "aspect_ratio": "16:9",
+    "resolution": "1k"
+  },
+  "prompt": "航空发射总控现场，由单独一个总控制台与下方多排多列子控制台构成，只有场地没有人",
+  "prompt_sha1": "3f58a0258f7aec601f6ad91794a1688d27fda69f",
+  "task_id": "2125507012744937474",
+  "charged": 12.28,
+  "file": "D:\\Data\\QoderWorkArea\\CardVideoMethod\\Log\\Circle34\\t2i\\runs\\T1-发射总控\\out.png",
+  "status": "ok",
+  "note": "",
+  "wall": "143s"
+}
